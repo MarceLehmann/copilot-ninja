@@ -11,7 +11,6 @@
         <li><span class="metazeile__label">Zugang</span> {{{zugang_badge}}}</li>
         <li><span class="metazeile__label">Ausprobieren</span> <span>ca. {{dauer_min}} Min.</span></li>
       </ul>
-      <div class="tk__stempel">{{{stempel}}}</div>
     </header>
 
     <div class="tk-raster">
@@ -50,12 +49,11 @@
 
 {{{meister}}}{{{praxis}}}
     <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
-      <h2 id="h-quelle">Quelle und Prüfstatus</h2>
-      <ul class="quelle">{{{quellen}}}</ul>
-      <p class="pruefstatus" data-geprueft="{{geprueft_am}}" data-pruef-frist="{{frist}}">Entwurf, geprüft gegen die Dokumentation am {{geprueft_ch}}.</p>
+      <h2 id="h-quelle">Quellen</h2>
+      <p class="quelle">{{{quellen}}}</p>
 {{{ausgefuehrt}}}
-      <p class="klein">Was ich nicht belegen kann, steht hier nicht. Ändert Microsoft etwas, gilt die verlinkte Quelle. Nächste Prüfung: {{naechste_pruefung_ch}}.</p>
       <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Als geübt markieren</button></p>
+{{{kurs}}}
     </section>
 
     <section class="abschnitt" aria-labelledby="h-teilen">
@@ -74,7 +72,6 @@
     </section>
 
 {{{kette}}}
-{{{kurs}}}
     <nav class="blaettern" aria-label="Weitere Techniken">
 {{{blaettern}}}
     </nav>
@@ -86,7 +83,7 @@
         <p class="klein">Ausprobieren: ca. {{dauer_min}} Min.</p>
         <p><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="{{haupt_pre}}" data-nur-js>{{kopier_label}}</button></p>
         <p><button type="button" class="knopf knopf--klein" data-geuebt-knopf data-nur-js>Als geübt markieren</button></p>
-        <p class="klein"><a href="#quelle">Quelle und Prüfstatus</a></p>
+        <p class="klein"><a href="#quelle">Quellen</a></p>
       </div>
     </aside>
     </div>

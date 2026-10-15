@@ -110,9 +110,6 @@ function band(n) {
     : `<rect x="${(i * w).toFixed(1)}" y="606" width="${(w + 1).toFixed(1)}" height="24" fill="${c}"/>`);
   return `${teile.join('')}<rect x="0" y="605" width="1200" height="1.5" fill="#8A7F6C"/>`;
 }
-function stempel(x, y) {
-  return `<g transform="translate(${x} ${y}) rotate(-6)"><rect width="226" height="84" fill="#F4EFE6" stroke="#B4301A" stroke-width="4.5"/><rect x="7" y="7" width="212" height="70" fill="none" stroke="#B4301A" stroke-width="1.4"/><text x="113" y="45" text-anchor="middle" font-family="${DISPLAY}" font-weight="700" font-size="34" letter-spacing="4" fill="#B4301A">GEPRÜFT</text><text x="113" y="67" text-anchor="middle" font-family="${DISPLAY}" font-size="15.5" fill="#B4301A">gegen die Dokumentation</text></g>`;
-}
 function rahmen(inhalt, titel) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="${esc(titel)}">
 <title>${esc(titel)}</title>
@@ -153,7 +150,6 @@ function technikKarte(t) {
     if (nz.length > 4) warnungen.push(`${t.id}: Nutzen-Satz zu lang für die Karte`);
   }
   teile.push(tusch(902, 128, 290, BELT[t.guertel - 1]));
-  teile.push(stempel(880, 438));
   teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(adresse)}</text>`);
   teile.push(band(t.guertel));
   return rahmen(teile.join('\n'), `${istT ? 'Technik ' + pad2(t.nr) : 'Grundform'}: ${t.titel}. ${t.nutzen || ''}`.trim());
@@ -279,9 +275,9 @@ function fragenListe() {
     const g = GUERTEL[f.guertel - 1];
     const t = f.technik ? nachId[f.technik] : null;
     const quelle = f.quelle
-      ? `<p class="klein">Quelle: <a href="${esc(f.quelle.url)}" rel="noopener">${esc(f.quelle.titel)}</a>, Stand ${datumCH(f.geprueft_am)}.</p>${f.klasse === 'fakt' ? `\n          <a class="stempel stempel--klein" href="${esc(f.quelle.url)}" rel="noopener" data-geprueft="${f.geprueft_am}" data-pruef-frist="120"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="${f.geprueft_am}">${datumCH(f.geprueft_am)}</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a>` : ''}`
+      ? `<p class="klein">Quelle: <a href="${esc(f.quelle.url)}" rel="noopener">${esc(f.quelle.titel)}</a>, Stand ${datumCH(f.geprueft_am)}.</p>`
       : f.technik ? `<p class="klein">Aus Technik ${Number(f.technik.slice(1))}, ${esc(t ? t.titel : TECHNIK_NAMEN[f.technik] || '')}.</p>` : '';
-    return `      <li class="test__frage" id="frage-${f.id}"${f.klasse === 'fakt' ? ` data-geprueft="${f.geprueft_am}" data-pruef-frist="120"` : ''}>
+    return `      <li class="test__frage" id="frage-${f.id}">
         <p><span class="knoten" data-guertel-nr="${g.nr}">${esc(g.name)}</span></p>
         <h3>${esc(f.frage)}</h3>
         <ul class="arrow-list">${f.antworten.map(a => `<li>${esc(a)}</li>`).join('')}</ul>

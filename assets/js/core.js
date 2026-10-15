@@ -129,8 +129,11 @@
       liste.textContent = ''; aktiv = -1; feld.removeAttribute('aria-activedescendant');
       if (!daten) return;
       var n = norm(q).trim();
+      /* Jedes Wort muss vorkommen, in Titel, Klartitel, Moment oder Suchbegriffen (Excel, Offerte, Protokoll ...) */
+      var woerter = n ? n.split(/\s+/) : [];
       var treffer = daten.filter(function (t) {
-        return !n || norm([t.nr, t.titel, t.klartitel, t.moment].join(' ')).indexOf(n) > -1;
+        var heu = norm([t.nr, t.titel, t.klartitel, t.moment, t.s].join(' '));
+        return woerter.every(function (x) { return heu.indexOf(x) > -1; });
       }).slice(0, 12);
       treffer.forEach(function (t, i) {
         var li = d.createElement('li'), a = d.createElement('a'), nr = d.createElement('span'), ti = d.createElement('span'), kl = d.createElement('small');
@@ -297,20 +300,6 @@
     });
   }
 
-  /* Pruefstempel altern sichtbar: 120 Tage produktabhaengig, 400 Tage zeitlos (data-pruef-frist) */
-  function stempel(wurzel) {
-    var jetzt = Date.now();
-    alle('[data-geprueft]', wurzel).forEach(function (el) {
-      var t = Date.parse(el.getAttribute('data-geprueft') + 'T00:00:00');
-      if (isNaN(t)) return;
-      var frist = parseInt(el.getAttribute('data-pruef-frist'), 10) || 120;
-      var faellig = (jetzt - t) / 864e5 > frist;
-      el.classList.toggle('is-faellig', faellig);
-      var s = el.classList.contains('stempel') ? [el] : alle('.stempel', el);
-      s.forEach(function (x) { x.classList.toggle('stempel--faellig', faellig); });
-    });
-  }
-
   /* Filter der Technik-Wand, mit FLIP */
   function filter() {
     var box = d.querySelector('[data-filter]');
@@ -438,11 +427,11 @@
     dojo: dojo,
     speicher: speicher,
     kopierText: kopierText,
-    binden: function (el) { kopieren(el); schmiede(el); stempel(el); }
+    binden: function (el) { kopieren(el); schmiede(el); }
   };
 
   function los() {
-    theme(); bewegungSchalter(); navigation(); suche(); kopieren(); schmiede(); schnitt(); stempel(); filter(); tusch(); teilen();
+    theme(); bewegungSchalter(); navigation(); suche(); kopieren(); schmiede(); schnitt(); filter(); tusch(); teilen();
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', los); else los();
 })();

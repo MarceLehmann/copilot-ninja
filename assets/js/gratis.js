@@ -75,6 +75,28 @@
       return suche;
     }
 
+    /* Urteil oben im Ergebnis (Review 15.10.2026, H12): ein fetter Satz passend zu Konto und Abo, dazu der Knopf zu Copilot Chat */
+    function urteil(konto) {
+      var box = erg.querySelector('[data-check-urteil]'), chat = erg.querySelector('[data-check-chat]');
+      if (!box) return;
+      box.textContent = '';
+      var abo = wert('abo'), schl;
+      if (konto === 'k2') schl = 'privat';
+      else if (/^a[1-8]$/.test(abo)) schl = konto === 'k1' ? 'ja' : 'ja-konto';
+      else if (abo === 'a9') schl = 'anderes';
+      else schl = 'weiss';
+      var u = d.getElementById('check-saetze').content.querySelector('[data-urteil="' + schl + '"]');
+      if (u) {
+        u = u.cloneNode(true);
+        var name = u.querySelector('[data-abo]'), wahl = form.querySelector('input[name="abo"]:checked');
+        if (name && wahl && /^a[1-3]$/.test(abo)) name.textContent = wahl.parentNode.textContent.trim();
+        box.appendChild(u);
+      }
+      var mehr = konto !== 'k2' && vorhaben().some(function (v) { return /^v[2356]$/.test(v); });
+      if (mehr) { var z = d.getElementById('check-saetze').content.querySelector('[data-urteil="dazu"]'); if (z) box.appendChild(z.cloneNode(true)); }
+      if (chat) chat.hidden = konto === 'k2';
+    }
+
     function zeigen(fokus) {
       var ids = [], gruppen = {};
       alle('[data-check-gruppe]', erg).forEach(function (g) {
@@ -103,6 +125,7 @@
         setze('s-immer');
         vorhaben().forEach(setze);
       }
+      urteil(konto);
       var tg = gruppen.techniken;
       erg.hidden = false;
       if (konto !== 'k2' && tg) {
@@ -167,7 +190,20 @@
       if (erste) erste.focus();
     });
 
+    /* Von der Startseite: ?konto=k1 waehlt Frage 1 vor. Privat zeigt sofort das Ergebnis, sonst geht es mit Frage 2 weiter */
+    var vor = /[?&]konto=(k[1-3])(&|$)/.exec(w.location.search);
     if (hashLesen()) { privatModus(); zeigen(true); }
+    else if (vor) {
+      var k = form.querySelector('input[name="konto"][value="' + vor[1] + '"]');
+      if (k) {
+        k.checked = true; privatModus();
+        if (vor[1] === 'k2') zeigen(true);
+        else {
+          var f2 = form.querySelector('[data-frage="abo"]');
+          if (f2) { f2.scrollIntoView({ block: 'start' }); var e2 = f2.querySelector('input'); if (e2) e2.focus({ preventScroll: true }); }
+        }
+      }
+    }
     w.addEventListener('hashchange', function () { if (hashLesen()) { privatModus(); zeigen(true); } });
   }
 

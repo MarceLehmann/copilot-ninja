@@ -223,6 +223,30 @@
       });
     });
   }
+  /* Startseite: kompakte Karte, Rotation nur ueber Techniken ohne Zusatzlizenz bis zum orangen Guertel (wie FUER_START im Build) */
+  function heuteKompakt() {
+    var karten = alle('[data-heute-kompakt]');
+    if (!karten.length) return;
+    json('assets/data/tag.json').then(function (tag) {
+      if (!tag || !tag.reihenfolge || !tag.eintraege) return;
+      var f = tag.reihenfolge.filter(function (id) { var t = tag.eintraege[id]; return t && t.zugang === 'ohne-zl' && t.guertel <= 3; });
+      if (!f.length) return;
+      var n = tage(istIso(tag.start) ? tag.start : heuteIso(), heuteIso());
+      var id = f[((n % f.length) + f.length) % f.length], t = tag.eintraege[id];
+      karten.forEach(function (k) {
+        if (k.getAttribute('data-technik') === id) return;
+        var url = ROOT + 'techniken/' + t.slug + '/';
+        k.setAttribute('data-technik', id); k.setAttribute('data-guertel-nr', t.guertel);
+        var nr = k.querySelector('.tdk__nr'), a = k.querySelector('.tdk__titel a'), kl = k.querySelector('.tdk__titel small'), pr = k.querySelector('.tdk__problem'), kn = k.querySelector('.knoten'), kp = k.querySelector('.tdk__knopf');
+        if (nr) nr.textContent = nr2(t.nr);
+        if (a) { a.textContent = t.titel; a.href = url; }
+        if (kl) kl.textContent = 'Nr. ' + t.nr + ': ' + t.klartitel;
+        if (pr) pr.textContent = t.problem || t.nutzen || '';
+        if (kn) { kn.textContent = NAMEN[t.guertel - 1]; kn.setAttribute('data-guertel-nr', t.guertel); }
+        if (kp) kp.href = url;
+      });
+    });
+  }
   /* Zufallstechnik */
   function zufall() {
     alle('[data-zufall]').forEach(function (k) {
@@ -279,7 +303,7 @@
     });
     var braucht = d.querySelector('[data-naechster-schritt], [data-fortschritt], [data-dojo-stand], .dojo-liste') || s.selbsttest || Object.keys(s.geuebt).length;
     if (braucht) liste().then(function (L) { if (!L) return; var s2 = lesen(); zeigen(s2, stand(s2, L)); });
-    heute(); zufall(); vierWochen();
+    heute(); heuteKompakt(); zufall(); vierWochen();
     w.addEventListener('storage', function (e) { if (e.key === KEY || e.key === null) liste().then(function (L) { var s3 = lesen(); zeigen(s3, stand(s3, L)); }); });
   }
 

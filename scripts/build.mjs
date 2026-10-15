@@ -81,7 +81,9 @@ const MOMENTE = [['t01', 'Ich weiss nicht, was ich fragen soll.'], ['t11', 'Die 
 const ALTE_ANKER = ['notizen-zu-protokoll', 'antwort-auf-kundenmail', 'tabelle-pruefen', 'agent-interne-anleitungen', 'agent-anfragen-sortieren'];
 // Budgets in KB. Korrektur 15.10.2026: site.css 40 auf 46 (Schrift, Fokus, Hero, kompakter Pfad), core.js 20 auf 22,
 // dojo-seiten.js und dojo-extra.js neu gedeckelt, Schriftdateien gedeckelt. Ueber 120 Prozent bricht der Build ab.
-const BUDGET = { 'assets/css/site.css': 46, 'assets/css/technik.css': 6, 'assets/css/dojo.css': 6, 'assets/css/gratis.css': 8, 'assets/js/theme-init.js': 1, 'assets/js/core.js': 22, 'assets/js/dojo.js': 20, 'assets/js/dojo-seiten.js': 28, 'assets/js/dojo-extra.js': 9, 'assets/js/gratis.js': 9, 'assets/js/kompass.js': 5, 'assets/data/suche.json': 10, 'assets/fonts/dojo-display-600.woff2': 25, 'assets/fonts/dojo-display-700.woff2': 25, 'index.html': 60, 'templates/partials/tusch.svg': 4 };
+// Review 15.10.2026: site.css 46 auf 49 (Startseite mit Gratis-Check, Pfadzeilen, kompakter Technik des Tages),
+// gratis.js 9 auf 11 (Urteil im Ergebnis, Vorauswahl von der Startseite). Die Startseite selbst ist um ein Viertel kleiner.
+const BUDGET = { 'assets/css/site.css': 49, 'assets/css/technik.css': 6, 'assets/css/dojo.css': 6, 'assets/css/gratis.css': 8, 'assets/js/theme-init.js': 1, 'assets/js/core.js': 22, 'assets/js/dojo.js': 20, 'assets/js/dojo-seiten.js': 28, 'assets/js/dojo-extra.js': 9, 'assets/js/gratis.js': 11, 'assets/js/kompass.js': 5, 'assets/data/suche.json': 10, 'assets/fonts/dojo-display-600.woff2': 25, 'assets/fonts/dojo-display-700.woff2': 25, 'index.html': 60, 'templates/partials/tusch.svg': 4 };
 
 /* Aufruf */
 const ARGS = process.argv.slice(2);
@@ -288,7 +290,6 @@ const neuGrenze = (() => { const d = new Date(DATUM + 'T00:00:00Z'); d.setUTCDat
 const alleNeu = DABEI.length && DABEI.filter(t => t.datum_publiziert >= neuGrenze).length > DABEI.length / 2;
 const urlTechnik = (t) => `${BASE_URL}techniken/${t.slug}/`;
 const nrLabel = (t) => t.typ === 'technik' ? pad2(t.nr) : t.id.toUpperCase();
-const frist = (t) => t.klasse === 'zeitlos' ? 400 : 120;
 const mailtoBeitrag = 'mailto:' + KONTAKT + '?subject=' + encodeURIComponent('Technik für das Dojo') + '&body=' + encodeURIComponent('Titel der Technik:\n\nProblem, das sie löst:\n\nPrompt oder Anleitung:\n\nGrenzen:\n\nQuelle bei Microsoft Learn:\n\nDarf ich dich als Absender nennen? (ja oder nein)\n\nBitte keine Kunden-, Personen- oder Firmendaten im Prompt.');
 
 /* Gratis-Anker */
@@ -309,9 +310,6 @@ function zugangBadge(t, r, kurz = false) {
 }
 function artBadge(t) { const a = ART[t.art]; return a ? `<span class="art art--${t.art}">${a.icon}${a.name}</span>` : ''; }
 function knoten(n, text, extra = '') { return `<span class="knoten${extra}" data-guertel-nr="${n}">${esc(text)}</span>`; }
-function stempel(datum, fristTage, ziel, klasse = '') {
-  return render(partial('stempel'), { stempel_klasse: klasse ? ' ' + klasse : '', stempel_ziel: ziel, stempel_datum: datum, stempel_frist: fristTage, stempel_datum_ch: datumCH(datum) }, 'stempel');
-}
 function phSpan(name, hinweis) {
   const zeige = hinweis ? (/^z\.\s?B\./.test(hinweis) ? `[${name}, ${hinweis}]` : `[${name}, z. B. ${hinweis}]`) : `[${name}]`;
   return `<span class="ph" data-ph="${esc(name)}">${esc(zeige)}</span>`;
@@ -337,7 +335,7 @@ function textMitTeilen(text, hinweise) {
 }
 function herkunft(t) {
   const adresse = t.typ === 'technik' ? `${KURZ_BASIS}/${t.nr}` : urlTechnik(t);
-  return `Technik aus dem KMUpower Dojo: ${adresse}\nEntwurf, geprüft gegen die Dokumentation am ${datumCH(t.geprueft_am)}`;
+  return `Technik aus dem KMUpower Dojo: ${adresse}\nQuelle: Microsoft Learn, Stand ${datumCH(t.geprueft_am)}`;
 }
 function schmiedeHtml(t, praefixId, ebene = 'h3') {
   const felder = Object.entries(t._felder || {});
@@ -401,25 +399,19 @@ function schwelleHtml(ebene = 'h3', extra = '') {
 <p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt den Live-Kurs «${KURS_NAME}», Termine offen, Vormerken unverbindlich. ${KURS_EIGEN} <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">Zur Kursseite</a></p>
 </aside>`;
 }
-// Startseite: kompakter Pfad (Korrektur 15.10.2026). Je Guertel Leitwort, «Was du danach kannst», Anzahl und ein Beispiel.
-// Die volle Liste steht nur auf /techniken/.
+// Startseite: Guertelpfad als sieben Zeilen (Review 15.10.2026, Kapitel 5): Farbe, Name, Anzahl, ein Beispiel.
+// Die Schwelle ist nur eine Markierung zwischen Orange und Gruen. Die volle Liste steht auf /techniken/.
 function guertelpfadHtml(r) {
-  const stufe = (g) => {
+  const zeile = (g) => {
     const drin = sortiert.filter(t => t.guertel === g.nr);
     const tk = drin.filter(t => t.typ === 'technik');
     const bsp = tk[0] || drin[0];
     const anzahl = tk.length ? `${tk.length} ${tk.length === 1 ? 'Technik' : 'Techniken'}` : `${drin.length} ${drin.length === 1 ? 'Grundform' : 'Grundformen'}`;
-    return `<li class="pfad__stufe" data-guertel-nr="${g.nr}" id="pfad-${g.farbe}">
-<span class="pfad__linie" aria-hidden="true"></span><span class="pfad__punkt" aria-hidden="true"></span>
-<h3><span class="pfad__leitwort">Stufe ${g.nr}${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>${esc(g.name)}</h3>
-${g.kannst_du ? `<p class="pfad__kannst">${esc(g.kannst_du)}</p>` : ''}
-${drin.length ? `<p class="pfad__meta"><a href="${r}techniken/#${g.anker}">${anzahl}</a> <span>Zum Beispiel <a href="${r}techniken/${bsp.slug}/">${bsp.typ === 'technik' ? pad2(bsp.nr) + ' ' : ''}${esc(bsp.titel)}</a></span></p>` : `<p class="pfad__offen">${NOCH_NICHT}</p>`}
-<p class="fortschritt__text" data-fortschritt="${g.nr}" hidden></p>
-</li>`;
+    return `<li class="pfadzeile" data-guertel-nr="${g.nr}" id="pfad-${g.farbe}"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="${r}techniken/#${g.anker}">${esc(g.name)}</a><span class="pfadzeile__zahl">${drin.length ? anzahl : 'offen'}</span>${bsp ? `<a class="pfadzeile__bsp" href="${r}techniken/${bsp.slug}/">${bsp.typ === 'technik' ? pad2(bsp.nr) + ' ' : ''}${esc(bsp.titel)}</a>` : ''}<p class="fortschritt__text pfadzeile__stand" data-fortschritt="${g.nr}" hidden></p></li>`;
   };
-  return `<ol class="pfad pfad--kompakt">${GUERTEL.slice(0, 3).map(stufe).join('\n')}</ol>
-${schwelleHtml()}
-<ol class="pfad pfad--kompakt" start="4">${GUERTEL.slice(3).map(stufe).join('\n')}</ol>`;
+  const marke = MIT_AGENTS ? `<p class="pfadzeilen__schwelle"><strong>Die Schwelle.</strong> Ab hier baust du Agents. Die <a href="${LEARN_TESTVERSION}" rel="noopener">Testversion von Copilot Studio</a> reicht zum Üben.</p>\n` : '';
+  return `<ol class="pfadzeilen">${GUERTEL.slice(0, 3).map(zeile).join('\n')}</ol>
+${marke}<ol class="pfadzeilen" start="4">${GUERTEL.slice(3).map(zeile).join('\n')}</ol>`;
 }
 function vierWochenHtml(r, ebene) {
   const sub = ebene === 'h2' ? 'h3' : 'h4';
@@ -444,8 +436,11 @@ ${fehltWoche ? '' : '<p class="pfad-schluss">Nach vier Wochen hast du einen eige
 <p class="knopf-reihe nicht-drucken"><button type="button" class="knopf" data-wochen-ics data-nur-js>Vier Wochen in den Kalender, ab nächstem Montag</button></p>
 </div>`;
 }
-function heuteTechnik() {
-  const folge = (daten.tag_reihenfolge || []).filter(id => NACH_ID[id] && NACH_ID[id].typ === 'technik');
+// Startseite: Rotation nur ueber Techniken ohne Zusatzlizenz vom weissen bis zum orangen Guertel (Review 15.10.2026, H6).
+// Gleiche Regel in dojo.js (heuteKompakt). /heute/ behaelt die volle Rotation.
+const FUER_START = (t) => t && t.zugang === 'ohne-zl' && t.guertel <= 3;
+function heuteTechnik(nurStart = false) {
+  const folge = (daten.tag_reihenfolge || []).filter(id => NACH_ID[id] && NACH_ID[id].typ === 'technik' && (!nurStart || FUER_START(NACH_ID[id])));
   if (!folge.length) return null;
   const start = istIso(daten.tag_start) ? daten.tag_start : DATUM;
   const n = ((tageZwischen(start, DATUM) % folge.length) + folge.length) % folge.length;
@@ -462,6 +457,19 @@ function heuteHtml(t, r, ebene) {
 ${schmiedeHtml(t, 'heute', ebene === 'h2' ? 'h3' : 'h4')}
 ${rolleHtml(t, 'heute-text', (ART[t.art] || ART.pinselstrich).rolle, t.technik_text, true, (ART[t.art] || ART.pinselstrich).erfolg, (ART[t.art] || ART.pinselstrich).knopf)}
 <p><a class="knopf knopf--leise" href="${r}techniken/${t.slug}/">Ganze Technik mit Anleitung, Grenzen und Quelle</a></p>
+</article>`;
+}
+// Kompakte Karte der Technik des Tages auf der Startseite, ohne Formular. dojo.js tauscht die Felder nach lokalem Datum.
+function heuteKompaktHtml(t) {
+  if (!t) return `<p>${NOCH_NICHT}</p>`;
+  return `<article class="tdk" data-heute-kompakt data-technik="${t.id}" data-guertel-nr="${t.guertel}">
+<span class="tdk__nr" aria-hidden="true">${pad2(t.nr)}</span>
+<div class="tdk__inhalt">
+<h3 class="tdk__titel"><a href="techniken/${t.slug}/">${esc(t.titel)}</a><small>Nr. ${t.nr}: ${esc(t.klartitel)}</small></h3>
+<p class="tdk__problem">${esc(t.problem)}</p>
+<ul class="metazeile"><li>${knoten(t.guertel, gName(t.guertel))}</li><li>${zugangBadge(t, '', true)}</li></ul>
+<p><a class="knopf knopf--primaer knopf--klein tdk__knopf" href="techniken/${t.slug}/">Technik öffnen</a></p>
+</div>
 </article>`;
 }
 function filterHtml() {
@@ -608,19 +616,15 @@ ${render(partial('fuss'), ctx, 'fuss')}
 
 /* Seiten erzeugen */
 function baueStart() {
-  const heute = heuteTechnik();
+  const heute = heuteTechnik(true);
   const g1 = NACH_ID.g1;
+  // Zahl aus den Daten (Review 15.10.2026, H4): Agent Builder zaehlt mit, weil er ohne Zusatzlizenz laeuft
   const ohneZl = TECHNIKEN.filter(t => t.zugang === 'ohne-zl' || t.zugang === 'agent-builder').length;
   const bilanz = TECHNIKEN.length
-    ? `${ohneZl === TECHNIKEN.length ? 'Alle ' + ohneZl : ohneZl + ' der ' + TECHNIKEN.length} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a>`
-    : 'Viele Techniken laufen in Microsoft Copilot Chat. Ob Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist, zeigt der Gratis-Check.';
+    ? `          <p class="gcheck__zahl"><strong>${ohneZl === TECHNIKEN.length ? 'Alle ' + ohneZl : ohneZl + ' von ' + TECHNIKEN.length}</strong> Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a></p>`
+    : '          <p class="gcheck__zahl">Viele Techniken laufen in Microsoft Copilot Chat. Ob Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist, zeigt der Gratis-Check.</p>';
   const momente = MOMENTE.filter(([id]) => NACH_ID[id]).map(([id, satz]) => { const t = NACH_ID[id]; return `<li class="moment"><blockquote><p>«${esc(satz)}»</p></blockquote><a href="techniken/${t.slug}/"><span>Technik ${pad2(t.nr)}</span> ${esc(t.titel)}</a></li>`; });
-  const momenteHtml = momente.length ? `  <section class="sektion" aria-labelledby="h-momente">
-    <div class="wrap">
-      <div class="sektion__kopf"><span class="label">Vier Momente</span><h2 id="h-momente">Wann brauchst du es?</h2></div>
-      <ul class="momente">${momente.join('\n')}</ul>
-    </div>
-  </section>` : '';
+  const momenteHtml = momente.length ? `      <ul class="momente momente--start">${momente.join('\n')}</ul>` : '';
   const erste = TECHNIKEN[0] || sortiert[0];
   const auf = [heute, g1, ...momente.map((_, i) => NACH_ID[MOMENTE[i][0]]), ...TECHNIKEN];
   seite('index.html', {
@@ -630,16 +634,14 @@ function baueStart() {
     ogTitel: 'KMUpower Dojo: Übung schlägt Hype.',
     canonical: BASE_URL, banner: ohneFreigabe(auf.filter(Boolean)),
     jsonld: [LD_WEBSITE, LD_ORG],
-    jsExtra: ['assets/js/gratis.js'],
     daten: {
-      anzahl: ANZAHL, build_datum: DATUM,
+      anzahl: ANZAHL,
       erste_technik_url: erste ? `techniken/${erste.slug}/` : 'techniken/',
-      tusch_hero: tusch('ruhe', 'tusch--zeichnen'), tusch_dojo: tusch('ruhe'), tusch_zeigen: tusch('zeigen'), tusch_seite: tusch('lesend'),
+      tusch_hero: tusch('ruhe', 'tusch--zeichnen'), tusch_zeigen: tusch('zeigen'),
       schnitt_haken: schnittHaken(g1),
       schnitt_karte: schnittKarte(g1) || `<div class="schnitt"><p>${NOCH_NICHT}</p></div>`,
-      stempel_hero: stempel(STAND, 120, 'ueber/#methode', 'stempel--gross'),
-      heute_inhalt: heuteHtml(heute, '', 'h3'),
-      momente: momenteHtml, guertelpfad: guertelpfadHtml(''), bilanz_satz: bilanz,
+      heute_karte: heuteKompaktHtml(heute),
+      momente: momenteHtml, guertelpfad: guertelpfadHtml(''), bilanz,
       kurs_trainer: KURS_URL('start-trainer'), newsletter_trainer: NEWSLETTER_URL('start-trainer')
     }
   });
@@ -686,10 +688,9 @@ function baueTechnik(t, i) {
     </section>
 ` : t.kombo ? `    <p class="klein">Gehört zur Kombo «${esc(t.kombo)}».</p>
 ` : '';
-  // Kurs-Satz je Guertelgruppe (Korrektur 15.10.2026): Gruen und Blau bauen den ersten Agent, Braun und Schwarz fuehren ihn ein
-  const kursFrage = t.guertel <= 5 ? 'Du willst deinen ersten Agent mit Begleitung bauen?' : 'Du willst Agents mit Begleitung im eigenen Betrieb einführen?';
-  const kurs = t.guertel >= 4 ? `    <p class="kurs-satz">${kursFrage} Die Power Platform Academy führt den Live-Kurs «${KURS_NAME}», Termine offen. ${KURS_EIGEN} Die Kursseite empfiehlt eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026). <a href="${esc(KURS_URL(t.typ === 'technik' ? 'technik-' + t.nr : 'technik-' + t.id))}" rel="noopener">Kursseite ansehen</a></p>
-` : '';
+  // Eine dezente Kurszeile auf jeder Technik-Seite nach «Als geübt markieren» (Review 15.10.2026, H9), kein Banner
+  const kurs = `      <p class="kurs-zeile">Lieber mit Begleitung üben? <a href="${esc(KURS_URL(t.typ === 'technik' ? 'technik-' + t.nr : 'technik-' + t.id))}" rel="noopener">Live-Kurs «${KURS_NAME}» an der Power Platform Academy</a></p>`;
+  const alleQuellen = [{ url: t.quelle_url, titel: t.quelle_titel }, ...(t.weitere_quellen || [])];
   const blaettern = [vor ? `<a href="${r}techniken/${vor.slug}/" rel="prev"><span>Vorherige Technik</span>${nrLabel(vor)} ${esc(vor.titel)}</a>` : `<a href="${r}techniken/"><span>Zurück</span>Zur Technik-Wand</a>`,
     nach ? `<a href="${r}techniken/${nach.slug}/" rel="next"><span>Nächste Technik</span>${nrLabel(nach)} ${esc(nach.titel)}</a>` : `<a href="${r}techniken/"><span>Geschafft</span>Zur Technik-Wand</a>`].join('\n');
   const url = urlTechnik(t);
@@ -711,7 +712,6 @@ function baueTechnik(t, i) {
       nr_gross: t.typ === 'technik' ? pad2(t.nr) : `Grundform ${t.id.toUpperCase()}`, nr_klasse: t.typ === 'technik' ? '' : ' tk__nr--wort',
       titel: t.titel, klartitel: t.klartitel || '', moment: t.moment || '', problem: t.problem, dauer_min: t.dauer_min,
       art_badge: artBadge(t), zugang_badge: zugangBadge(t, r), zugang_text: t.zugang_text || (ZUGANG[t.zugang] || {}).kurz || '',
-      stempel: stempel(t.geprueft_am, frist(t), '#quelle'),
       schnitt_zeile: t.vorher ? `      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Vorher</p><div class="schnitt__vorher"><p class="schnitt__zitat">«${esc(t.vorher)}»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>` : '',
       schmiede: schmiedeHtml(t, 'technik'), rollen: rollenFuer(t, 'prompt'), rechner: rechnerHtml(t),
       so_nutzt: (t.so_nutzt_du_es || []).map(s => `<li>${esc(s)}</li>`).join(''),
@@ -726,9 +726,8 @@ function baueTechnik(t, i) {
 ` : '',
       praxis: t.praxis_notiz ? `    <section class="abschnitt" aria-labelledby="h-praxis"><h2 id="h-praxis">Aus der Praxis</h2><p class="praxis">${esc(t.praxis_notiz)}</p></section>
 ` : '',
-      quellen: [`<li><a href="${esc(t.quelle_url)}" rel="noopener">${esc(t.quelle_titel)}</a></li>`, ...(t.weitere_quellen || []).map(q => `<li><a href="${esc(q.url)}" rel="noopener">${esc(q.titel)}</a></li>`)].join(''),
-      geprueft_am: t.geprueft_am, geprueft_ch: datumCH(t.geprueft_am), frist: frist(t),
-      naechste_pruefung_ch: datumCH(daten.naechste_pruefung || ''),
+      // Quellen als eine Zeile (Review 15.10.2026, H1): Links zu Microsoft Learn und «Stand». Kein Pruefstempel, kein Termin.
+      quellen: `${alleQuellen.some(q => q.url.startsWith('https://learn.microsoft.com/')) && !alleQuellen.some(q => /^Microsoft Learn/.test(q.titel)) ? 'Microsoft Learn: ' : ''}${alleQuellen.map(q => `<a href="${esc(q.url)}" rel="noopener">${esc(q.titel)}</a>`).join(', ')}. Stand <time datetime="${t.geprueft_am}">${datumCH(t.geprueft_am)}</time>.`,
       ausgefuehrt: istIso(t.ausgefuehrt_am) ? `      <p class="pruefstatus">Einmal ausgeführt in Microsoft Copilot Chat am ${datumCH(t.ausgefuehrt_am)}. Ergebnisse können abweichen.</p>` : '',
       // LinkedIn: feed/?shareActive=true&text= fuellt den Post vor (share-offsite kann keinen Text). Rueckfall: core.js kopiert denselben Text
       linkedin_url: `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(`${t.teilen_text}\n\n${url}`)}`, url,
@@ -820,7 +819,7 @@ ${drin.length ? `<ul>${drin.map(t => `<li data-technik="${t.id}" data-guertel-nr
 
 /* Daten fuer Skripte, Sitemap, Feed, llms.txt, Kalender, robots */
 function baueDaten() {
-  const suche = { erzeugt: DATUM, eintraege: sortiert.map(t => ({ id: t.id, nr: t.nr, titel: t.titel, klartitel: t.klartitel, guertel: t.guertel, slug: t.slug, moment: t.moment || '' })) };
+  const suche = { erzeugt: DATUM, eintraege: sortiert.map(t => ({ id: t.id, nr: t.nr, titel: t.titel, klartitel: t.klartitel, guertel: t.guertel, slug: t.slug, moment: t.moment || '', s: (t.suchbegriffe || []).join(' ') })) };
   schreibe('assets/data/suche.json', JSON.stringify(suche));
   const folge = (daten.tag_reihenfolge || []).filter(id => NACH_ID[id] && NACH_ID[id].typ === 'technik');
   for (let i = 1; i < folge.length; i++) if (NACH_ID[folge[i]].guertel === NACH_ID[folge[i - 1]].guertel) warnung(`tag.json: ${folge[i - 1]} und ${folge[i]} haben denselben Gürtel an zwei Tagen hintereinander`);
@@ -828,7 +827,7 @@ function baueDaten() {
     start: istIso(daten.tag_start) ? daten.tag_start : DATUM,
     formel: 'Index = (Tage seit start nach lokalem Datum) modulo Anzahl, positiv gerechnet',
     reihenfolge: folge,
-    eintraege: Object.fromEntries(folge.map(id => { const t = NACH_ID[id]; return [id, { nr: t.nr, slug: t.slug, titel: t.titel, klartitel: t.klartitel, guertel: t.guertel, zugang: t.zugang, zugang_text: t.zugang_text || '', nutzen: t.nutzen || '', dauer_min: t.dauer_min }]; }))
+    eintraege: Object.fromEntries(folge.map(id => { const t = NACH_ID[id]; return [id, { nr: t.nr, slug: t.slug, titel: t.titel, klartitel: t.klartitel, guertel: t.guertel, zugang: t.zugang, zugang_text: t.zugang_text || '', nutzen: t.nutzen || '', problem: FUER_START(t) ? t.problem : '', dauer_min: t.dauer_min }]; }))
   };
   schreibe('assets/data/tag.json', JSON.stringify(tag));
   const maxGeprueft = (html) => [...html.matchAll(/data-geprueft="(\d{4}-\d{2}-\d{2})"/g)].map(m => m[1]).sort().pop();
@@ -862,10 +861,10 @@ function baueDaten() {
 ${feed.join('\n')}
 </feed>
 `);
-  const llms = [`# KMUpower Dojo`, '', `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch, vom weissen bis zum schwarzen Gürtel. Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation bei Microsoft Learn, mit Prüfdatum und Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.`, '',
-    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Prüfrhythmus, was die Seite nicht ist`, '',
-    '## Techniken', '', ...TECHNIKEN.map(t => `- [Nr. ${t.nr} ${t.titel}: ${t.klartitel}](${urlTechnik(t)}): ${t.nutzen || ''} Geprüft am ${datumCH(t.geprueft_am)}.`),
-    ...(GRUNDFORMEN.length ? ['', '## Grundformen', '', ...GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): geprüft am ${datumCH(t.geprueft_am)}.`)] : []), ''];
+  const llms = [`# KMUpower Dojo`, '', `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.`, '',
+    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Dojo-Regeln, was die Seite nicht ist`, '',
+    '## Techniken', '', ...TECHNIKEN.map(t => `- [Nr. ${t.nr} ${t.titel}: ${t.klartitel}](${urlTechnik(t)}): ${t.nutzen || ''} Stand ${datumCH(t.geprueft_am)}.`),
+    ...(GRUNDFORMEN.length ? ['', '## Grundformen', '', ...GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): Stand ${datumCH(t.geprueft_am)}.`)] : []), ''];
   schreibe('llms.txt', llms.join('\n'));
   const montag = (() => { let d = new Date((istIso(daten.tag_start) ? daten.tag_start : DATUM) + 'T00:00:00Z'); while (d.getUTCDay() !== 1) d.setUTCDate(d.getUTCDate() + 1); return d.toISOString().slice(0, 10).replace(/-/g, ''); })();
   const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//KMUpower//Dojo//DE', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT', 'UID:dojo-montag-technik-des-tages@kmupower.com',

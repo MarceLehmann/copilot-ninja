@@ -83,3 +83,8 @@ details.tabelle caption { position: absolute; width: 1px; height: 1px; overflow:
 .beispiele summary > span { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; }
 .beispiele .zugang { font-weight: 700; }
 #stufen:has(#nur-ohne:checked) [data-stufe="3"], #stufen:has(#nur-ohne:checked) [data-stufe="4"] { display: none; }
+/* Urteil oben im Ergebnis des Gratis-Checks (Review 15.10.2026, H12) */
+.urteil { margin: .75rem 0 1rem; font-size: 1.2rem; line-height: 1.4; }
+.urteil p { margin: 0 0 .5rem; }
+.urteil p:last-child { margin: 0; }
+.urteil__aktion { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin: 0 0 1.25rem; }

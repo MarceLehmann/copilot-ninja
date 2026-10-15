@@ -4,108 +4,74 @@
       <div>
         <p class="hero__eyebrow">Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.</p>
         <h1 id="h1"><span class="strich">Übung<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span> schlägt Hype.</h1>
+        <p class="hero__nutzen">Für vieles brauchst du keine Copilot-Lizenz. Microsoft Copilot Chat ist in deinem Microsoft-365-Abo oft schon dabei.</p>
 {{{schnitt_haken}}}
-        <p class="hero__lead">{{anzahl}} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle und Prüfdatum, ohne Anmeldung.</p>
+        <p class="hero__lead">{{anzahl}} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle, ohne Anmeldung.</p>
         <div class="knopf-reihe hero__knoepfe">
           <a class="knopf knopf--primaer" href="{{erste_technik_url}}">Erste Technik holen</a>
-          <a class="knopf" href="dojo/test/">Welcher Gürtel bist du?</a>
+          <a class="knopf" href="gratis/#check">Brauche ich eine Lizenz? 4 Fragen</a>
         </div>
         <p class="hero__zeile">Ich prüfe. Du übst. Was ich nicht belegen kann, steht hier nicht.<br><a href="ueber/">Marcel Lehmann</a></p>
       </div>
       <div class="hero__demo">
         <span class="hero__tusch">{{{tusch_hero}}}</span>
         {{{schnitt_karte}}}
-        <div class="hero__beweis">{{{stempel_hero}}}</div>
       </div>
     </div>
   </section>
 
-  <section class="sektion flaeche-2" aria-labelledby="h-heute">
+  <section class="sektion flaeche-2" id="gratis-check" aria-labelledby="h-gratis">
     <div class="wrap">
       <div class="sektion__kopf">
-        <span class="label">Technik des Tages</span>
-        <h2 id="h-heute">Eine Technik. Heute für alle dieselbe.</h2>
-        <p>Füll die Felder aus, kopier den Prompt, setz ihn in Microsoft Copilot Chat ein. Morgen wartet die nächste Technik.</p>
+        <span class="label">Gratis-Check</span>
+        <h2 id="h-gratis">Brauchst du Premium? Vier Fragen, dann weisst du es.</h2>
       </div>
-      <div class="heute">
-        <div data-heute data-heute-datum="{{build_datum}}">{{{heute_inhalt}}}</div>
-        <aside class="heute__seite" aria-label="Dein Weg">
-          <div class="naechster" data-naechster-schritt>
-            <h3>Dein nächster Schritt</h3>
-            <p>Markier eine Technik als geübt. Danach steht hier, welche Technik in deinem Gürtel als Nächstes wartet.</p>
-          </div>
-          <div class="heute__tusch" data-dojo-teaser>
-            {{{tusch_seite}}}
-            <p data-dojo-stand>Noch keine Technik geübt. Tusch wartet mit weissem Gürtel.</p>
-          </div>
-          <p class="klein"><a href="heute/">Technik des Tages als Lesezeichen</a><br><a href="kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a></p>
-        </aside>
+      <div class="gcheck">
+        <div class="gcheck__frage">
+          <p class="gcheck__titel" id="gcheck-frage"><span class="label">Frage 1 von 4</span>Wie meldest du dich bei Microsoft an?</p>
+          <ul class="kacheln" aria-labelledby="gcheck-frage">
+            <li><a class="kachel" href="gratis/?konto=k1#check">Mit Geschäfts- oder Schulkonto</a></li>
+            <li><a class="kachel" href="gratis/?konto=k2#check">Mit privatem Konto, zum Beispiel Outlook.com</a></li>
+            <li><a class="kachel" href="gratis/?konto=k3#check">Weiss nicht</a></li>
+          </ul>
+          <p><a class="knopf knopf--primaer" href="gratis/#check">Gratis-Check starten</a></p>
+        </div>
+        <div class="gcheck__bilanz">
+{{{bilanz}}}
+          <ul class="gcheck__bsp">
+            <li><a href="gratis/#stufe-bsp-offerten">Drei Offerten als PDF vergleichen</a><span class="zugang zugang--frei">Stufe 1: Copilot Chat</span></li>
+            <li><a href="gratis/#stufe-bsp-kundenmail">Antwort auf eine verärgerte Kundenmail</a><span class="zugang zugang--frei">Stufe 1: Copilot Chat</span></li>
+            <li><a href="gratis/#stufe-bsp-word-excel">Copilot direkt in Word oder Excel</a><span class="zugang zugang--lizenz">Stufe 3: Lizenz</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
+  <section class="sektion" aria-labelledby="h-momente">
+    <div class="wrap">
+      <div class="sektion__kopf"><span class="label">Vier Momente</span><h2 id="h-momente">Wann brauchst du es?</h2></div>
 {{{momente}}}
+      <div class="tdt">
+        <span class="label">Technik des Tages</span>
+{{{heute_karte}}}
+        <p><a class="knopf knopf--leise" href="kalender/montag.ics" download>Jeden Montag eine Technik, als Kalendertermin</a></p>
+      </div>
+    </div>
+  </section>
 
-  <section class="sektion" aria-labelledby="h-pfad" id="guertelpfad">
+  <section class="sektion flaeche-2" aria-labelledby="h-pfad" id="guertelpfad">
     <div class="wrap">
       <div class="sektion__kopf">
         <span class="label">Der Gürtelpfad</span>
         <h2 id="h-pfad">Sieben Gürtel. Vom ersten sauberen Prompt bis zum Agent im Betrieb.</h2>
-        <p>Unten viel Übung, oben wenige schwere Techniken. Der Gürtel zeigt, was du kannst. Ob du dafür eine Lizenz brauchst, steht auf jeder Technik.</p>
-        <p><a class="knopf" href="dojo/test/">Welcher Gürtel bist du? 7 Fragen</a></p>
       </div>
-      {{{guertelpfad}}}
-      <p><a class="knopf knopf--primaer" href="techniken/">Alle {{anzahl}} Techniken auf der Technik-Wand</a></p>
-    </div>
-  </section>
-
-  <section class="sektion nacht" aria-labelledby="h-regeln">
-    <div class="wrap">
-      <div class="sektion__kopf">
-        <span class="label">Haltung</span>
-        <h2 id="h-regeln">Die fünf Dojo-Regeln</h2>
+{{{guertelpfad}}}
+      <p class="pfadzeilen__dojo">Was du geübt hast, markierst du in <a href="dojo/">Mein Dojo</a>. Der Fortschritt bleibt auf deinem Gerät.</p>
+      <div class="knopf-reihe">
+        <a class="knopf knopf--primaer" href="dojo/test/">Wo stehst du? Selbsttest</a>
+        <a class="knopf" href="techniken/">Alle {{anzahl}} Techniken</a>
       </div>
-      <ol class="regeln">
-        <li>Prüfe, was du nicht selbst geschrieben hast.</li>
-        <li>Erfinde nichts. Was fehlt, ist offen.</li>
-        <li>Nutze zuerst, was du schon hast.</li>
-        <li>Übung vor Ausrüstung.</li>
-        <li>Jede Technik trägt ein Datum.</li>
-      </ol>
-      <p class="versprechen">Was ich nicht belegen kann, steht hier nicht. Darum trägt jede Technik einen Prüfstempel mit Quelle und Datum. Wird die Prüfung fällig, wird der Stempel grau.</p>
-    </div>
-  </section>
-
-  <section class="sektion" aria-labelledby="h-gratis">
-    <div class="wrap">
-      <div class="sektion__kopf">
-        <span class="label">Ausrüstung</span>
-        <h2 id="h-gratis">Nutze zuerst, was du schon hast.</h2>
-        <p>{{{bilanz_satz}}}</p>
-        <p>Mein bestes Beispiel: Den Agent Prompt Coach zählt Microsoft zu den Agents, die ohne Zusatzkosten in Copilot Chat enthalten sind. Mit ihm machst du aus deinem Style-Guide einen Prompt, und deine Texte kommen danach so heraus, wie dein Style-Guide es will. <a href="gratis/#stufe-bsp-prompt-coach">So mache ich es</a></p>
-      </div>
-      <div class="check" data-gratis-check="teaser" data-ziel="gratis/">
-        <p>Vier Fragen, und du weisst, ob Microsoft Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist. Jede Antwort mit Quelle bei Microsoft Learn.</p>
-        <p><a class="knopf" href="gratis/#check">Zum Gratis-Check</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="sektion flaeche-2" aria-labelledby="h-dojo">
-    <div class="wrap">
-      <div class="dojo-teaser">
-        {{{tusch_dojo}}}
-        <div>
-          <span class="label">Dein Dojo</span>
-          <h2 id="h-dojo">Markier, was du geübt hast.</h2>
-          <p class="lead">Dein Fortschritt bleibt auf deinem Gerät. Tusch trägt deinen Gürtel und bindet den nächsten um, sobald alle Techniken eines Gürtels geübt sind.</p>
-          <div class="knopf-reihe">
-            <a class="knopf" href="dojo/">Mein Dojo öffnen</a>
-            <a class="knopf knopf--leise" href="dojo/test/">Wo stehst du? Zum Selbsttest</a>
-          </div>
-        </div>
-      </div>
-      <p class="pfad-hinweis">Lieber mit Plan? Der <a href="techniken/#vier-wochen">Vier-Wochen-Pfad</a> führt dich in vier Wochen durch alle Gürtel, frei und ohne Anmeldung.</p>
     </div>
   </section>
 
@@ -113,26 +79,16 @@
     <div class="wrap trainer">
       <div>
         <span class="label">Der Trainer</span>
-        <h2 id="h-trainer">Hinter dem Dojo steht ein Mensch, der prüft.</h2>
-        <div class="warum">
-          <h3>Warum ich das Dojo baue</h3>
-          <p>Die Leute müssen wissen, was sie brauchen. Viele denken, sie brauchen bei Copilot Premium und können mit dem Standard nichts machen. Das stimmt oft nicht. <a href="ueber/#warum">Mehr dazu</a></p>
-        </div>
-        <div class="offene-karten">
-          <h3>Offene Karten</h3>
-          <p>Diese Seite ist gratis und bleibt es. Sie setzt keine Cookies und zählt dich nicht. Ich bin Trainer an der Power Platform Academy. Dort steht ein Live-Kurs mit Warteliste, die Termine sind noch offen. Wenn du nicht live üben willst, nimm die Techniken einfach mit.</p>
-        </div>
-        <p class="trainer__unterschrift">Marcel</p>
+        <h2 id="h-trainer">Hinter dem Dojo steht ein Mensch.</h2>
+        <p class="trainer__name">Marcel Lehmann</p>
+        <blockquote class="trainer__zitat"><p>Viele denken, sie brauchen Premium. Das stimmt oft nicht.</p></blockquote>
+        <p><a href="ueber/#warum">Warum ich das Dojo baue</a></p>
       </div>
       <div class="trainer__weg">
         {{{tusch_zeigen}}}
-        <p>Die Power Platform Academy führt den Live-Kurs «Copilot Ninja in 4 Wochen». Neue Termine sind noch offen, auf der Kursseite kannst du dich unverbindlich vormerken. Der Kurs hat einen eigenen Lehrplan und ist nicht die begleitete Fassung des Vier-Wochen-Pfads. Die Kursseite empfiehlt eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026).</p>
-        <p><a href="{{kurs_trainer}}" rel="noopener">Zur Kursseite der Academy</a></p>
-        <p>Jeden Montag ein Impuls zur Power Platform und Automatisierung: <a href="{{newsletter_trainer}}" rel="noopener">Newsletter KMUpower Impuls</a>.</p>
-        <div class="kasten">
-          <h3>Was diese Seite nicht ist</h3>
-          <p>Kein Angebot von Microsoft. Keine getesteten Rezepte: Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation. Keine Lizenzberatung: Für deinen Fall fragst du deine IT oder deinen Microsoft-Partner.</p>
-        </div>
+        <p>Lieber mit Begleitung? <a href="{{kurs_trainer}}" rel="noopener">Live-Kurs «Copilot Ninja in 4 Wochen» an der Power Platform Academy</a></p>
+        <p>Jeden Montag ein Impuls zur Power Platform und Automatisierung: <a href="{{newsletter_trainer}}" rel="noopener">Newsletter KMUpower Impuls</a></p>
+        <p class="klein">Das Dojo ist gratis, ohne Cookies und ohne Anmeldung.</p>
       </div>
     </div>
   </section>

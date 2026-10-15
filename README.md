@@ -1,6 +1,6 @@
 # KMUpower Dojo: Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio
 
-Statische Website (HTML, CSS, JavaScript) mit 25 Techniken und 5 Grundformen für Microsoft Copilot Chat und Copilot Studio, geordnet vom weissen bis zum schwarzen Gürtel. Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation bei Microsoft Learn, mit Quelle und Prüfdatum.
+Statische Website (HTML, CSS, JavaScript) mit 25 Techniken und 5 Grundformen für Microsoft Copilot Chat und Copilot Studio, geordnet vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn und den Stand (`geprueft_am`, auch als `dateModified` im JSON-LD). Prüfstempel gibt es nur noch einmal oben auf `/gratis/`, ohne Alterung (Review 15.10.2026). Feld `suchbegriffe` je Technik speist die Suche (Strg+K).
 
 Unabhängige Website von Marcel Lehmann (Handelsname KMUpower). Sie hat keine Verbindung zu Microsoft und wird von Microsoft weder betrieben noch unterstützt.
 
@@ -8,7 +8,7 @@ Unabhängige Website von Marcel Lehmann (Handelsname KMUpower). Sie hat keine Ve
 
 | Pfad | Inhalt |
 |---|---|
-| `/` | Startseite mit Technik des Tages, Gürtelpfad und Vier-Wochen-Pfad |
+| `/` | Startseite: Hero, Gratis-Check, Vier Momente mit Technik des Tages (nur ohne Zusatzlizenz), Gürtelpfad, Trainer |
 | `/techniken/` | alle Techniken nach Gürtel, mit Filter |
 | `/techniken/<slug>/` | eine Technik: Vorher und Nachher, Prompt zum Ausfüllen und Kopieren, Grenzen, Quelle |
 | `/1/` bis `/25/` | Kurzadressen, leiten auf die Technik mit dieser Nummer |
