@@ -59,13 +59,6 @@
       "founder": {
         "@type": "Person",
         "name": "Marcel Lehmann"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Weidstrasse 1",
-        "postalCode": "8320",
-        "addressLocality": "Fehraltorf",
-        "addressCountry": "CH"
       }
     }
   ]
@@ -137,7 +130,7 @@
           <a class="knopf knopf--primaer" href="techniken/erst-befragen-dann-schreiben/">Erste Technik holen</a>
           <a class="knopf" href="dojo/test/">Welcher Gürtel bist du?</a>
         </div>
-        <p class="hero__zeile">Ich prüfe. Du übst. Was ich nicht belegen kann, steht hier nicht.<br><a href="ueber/">Marcel Lehmann, Fehraltorf</a></p>
+        <p class="hero__zeile">Ich prüfe. Du übst. Was ich nicht belegen kann, steht hier nicht.<br><a href="ueber/">Marcel Lehmann</a></p>
       </div>
       <div class="hero__demo">
         <span class="hero__tusch"><span class="tusch tusch--ruhe tusch--zeichnen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span></span>
@@ -267,7 +260,7 @@ Anweisungen:
 <span class="label">Die Schwelle</span>
 <h3 id="schwelle-titel">Ab hier baust du Agents.</h3>
 <p>In der Testversion von Copilot Studio kannst du einen Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen (<a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Microsoft Learn</a>, Stand 13.10.2026). Alle Agent-Techniken stehen hier frei, ohne Anmeldung.</p>
-<p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt einen Live-Kurs über vier Wochen, Termine offen, Vormerken unverbindlich. Der Kurs hat einen eigenen Lehrplan und folgt nicht den Gürteln dieser Seite. <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=schwelle" rel="noopener">Zur Kursseite</a></p>
+<p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt den Live-Kurs «Copilot Ninja in 4 Wochen», Termine offen, Vormerken unverbindlich. Der Kurs hat einen eigenen Lehrplan und folgt nicht den Gürteln dieser Seite. <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=schwelle" rel="noopener">Zur Kursseite</a></p>
 </aside>
 <ol class="pfad pfad--kompakt" start="4"><li class="pfad__stufe" data-guertel-nr="4" id="pfad-gruen">
 <span class="pfad__linie" aria-hidden="true"></span><span class="pfad__punkt" aria-hidden="true"></span>
@@ -324,6 +317,7 @@ Anweisungen:
         <span class="label">Ausrüstung</span>
         <h2 id="h-gratis">Nutze zuerst, was du schon hast.</h2>
         <p>19 der 25 Techniken laufen ohne Zusatzlizenz, wenn dein Abo Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a></p>
+        <p>Mein bestes Beispiel: Den Agent Prompt Coach zählt Microsoft zu den Agents, die ohne Zusatzkosten in Copilot Chat enthalten sind. Mit ihm machst du aus deinem Style-Guide einen Prompt, und deine Texte kommen danach so heraus, wie dein Style-Guide es will. <a href="gratis/#stufe-bsp-prompt-coach">So mache ich es</a></p>
       </div>
       <div class="check" data-gratis-check="teaser" data-ziel="gratis/">
         <p>Vier Fragen, und du weisst, ob Microsoft Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist. Jede Antwort mit Quelle bei Microsoft Learn.</p>
@@ -355,20 +349,19 @@ Anweisungen:
       <div>
         <span class="label">Der Trainer</span>
         <h2 id="h-trainer">Hinter dem Dojo steht ein Mensch, der prüft.</h2>
-        <ul class="trainer__rollen">
-          <li>Marcel Lehmann, Inhaber von KMUpower, Einzelfirma in Fehraltorf, im UID-Register seit 01.01.2023</li>
-          <li>Trainer an der Power Platform Academy</li>
-          <li>Autor von powerplatformtip.com</li>
-        </ul>
+        <div class="warum">
+          <h3>Warum ich das Dojo baue</h3>
+          <p>Die Leute müssen wissen, was sie brauchen. Viele denken, sie brauchen bei Copilot Premium und können mit dem Standard nichts machen. Das stimmt oft nicht. <a href="ueber/#warum">Mehr dazu</a></p>
+        </div>
         <div class="offene-karten">
           <h3>Offene Karten</h3>
           <p>Diese Seite ist gratis und bleibt es. Sie setzt keine Cookies und zählt dich nicht. Ich bin Trainer an der Power Platform Academy. Dort steht ein Live-Kurs mit Warteliste, die Termine sind noch offen. Wenn du nicht live üben willst, nimm die Techniken einfach mit.</p>
         </div>
-        <p class="trainer__unterschrift">Marcel, Fehraltorf</p>
+        <p class="trainer__unterschrift">Marcel</p>
       </div>
       <div class="trainer__weg">
         <span class="tusch tusch--zeigen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span>
-        <p>Die Power Platform Academy führt den Live-Kurs «Copilot Citizen Developer» über vier Wochen. Neue Termine sind noch offen, auf der Kursseite kannst du dich unverbindlich vormerken. Der Kurs hat einen eigenen Lehrplan und ist nicht die begleitete Fassung des Vier-Wochen-Pfads. Die Kursseite empfiehlt eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026).</p>
+        <p>Die Power Platform Academy führt den Live-Kurs «Copilot Ninja in 4 Wochen». Neue Termine sind noch offen, auf der Kursseite kannst du dich unverbindlich vormerken. Der Kurs hat einen eigenen Lehrplan und ist nicht die begleitete Fassung des Vier-Wochen-Pfads. Die Kursseite empfiehlt eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026).</p>
         <p><a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=start-trainer" rel="noopener">Zur Kursseite der Academy</a></p>
         <p>Jeden Montag ein Impuls zur Power Platform und Automatisierung: <a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=start-trainer" rel="noopener">Newsletter KMUpower Impuls</a>.</p>
         <div class="kasten">
@@ -412,7 +405,6 @@ Anweisungen:
     <div class="fuss__recht">
       <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
       <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
-      <p>KMUpower, Einzelfirma Marcel Lehmann, Weidstrasse 1, 8320 Fehraltorf, Schweiz. UID CHE-296.591.945.</p>
       <p><a href="impressum/">Impressum</a>, <a href="datenschutz/">Datenschutz</a>, <a href="ueber/">Über das Dojo</a></p>
       <p>Keine Cookies, kein Tracking. Dein Fortschritt bleibt in deinem Browser. Die Reichweite wird nur über die Google Search Console und die Bing Webmaster Tools ausgewertet.</p>
     </div>

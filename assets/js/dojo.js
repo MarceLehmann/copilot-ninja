@@ -142,7 +142,7 @@
       box.textContent = '';
       box.appendChild(el(ebene, null, st.alle ? 'Alle Techniken geübt' : 'Dein nächster Schritt'));
       if (st.alle) {
-        box.appendChild(el('p', null, 'Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst: Die Power Platform Academy führt einen Live-Kurs über vier Wochen, Termine offen. Der Kurs hat einen eigenen Lehrplan.'));
+        box.appendChild(el('p', null, 'Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst: Die Power Platform Academy führt den Live-Kurs «Copilot Ninja in 4 Wochen», Termine offen. Der Kurs hat einen eigenen Lehrplan.'));
         var pa = el('p'); pa.appendChild(el('a', { href: KURS('naechster-schritt'), rel: 'noopener' }, 'Zur Kursseite')); box.appendChild(pa);
         return;
       }

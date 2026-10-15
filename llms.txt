@@ -1,6 +1,6 @@
 # KMUpower Dojo
 
-> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch, vom weissen bis zum schwarzen Gürtel. Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation bei Microsoft Learn, mit Prüfdatum und Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower, Fehraltorf), keine Verbindung zu Microsoft.
+> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch, vom weissen bis zum schwarzen Gürtel. Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation bei Microsoft Learn, mit Prüfdatum und Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.
 
 ## Seiten
 

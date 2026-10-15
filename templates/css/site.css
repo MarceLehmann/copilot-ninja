@@ -217,6 +217,8 @@ html:not(.js) [data-nur-js], html.js [data-ohne-js] { display: none !important; 
 .haken__nachher b { color: var(--k); }
 html.anim .haken__vorher path { stroke-dasharray: 1; animation: strich-zieht 600ms var(--ease-brush) 900ms backwards; }
 @media (min-width: 1024px) { .haken { display: none; } }
+/* Abnahme N6: der grosse Stempel ragt waehrend der Landung ueber den Rand. Kein waagrechtes Wischen auf dem Handy */
+.hero { overflow-x: clip; }
 .hero__beweis { position: relative; z-index: 3; display: flex; justify-content: flex-end; margin: -.4rem -.5rem 0 0; }
 @media (max-width: 767px) { .hero__knoepfe .knopf--primaer { flex: 1 1 100%; } .hero__knoepfe .knopf { flex: 1 1 auto; } }
 
@@ -367,6 +369,9 @@ a.chip { text-decoration: none; }
 .filter__zaehler { margin: 0; font-weight: 600; }
 .leer { display: flex; align-items: center; gap: 1.25rem; padding: 1.5rem; border: 1px dashed var(--line-strong); border-radius: var(--r-lg); }
 .leer .tusch { width: 60px; height: 80px; flex: none; }
+.leer > div { min-width: 0; flex: 1 1 12rem; }
+.leer h1 { overflow-wrap: break-word; hyphens: auto; }
+@media (max-width: 400px) { .leer { flex-wrap: wrap; padding: 1rem; } }
 .leer p { margin: 0 0 .5rem; }
 
 /* Guertelpfad */
@@ -430,8 +435,9 @@ a.chip { text-decoration: none; }
 .versprechen { margin-top: clamp(2rem, 1.5rem + 2vw, 3.5rem); font-size: 1.25rem; max-width: 40em; }
 .trainer { display: grid; gap: clamp(2rem, 1rem + 3vw, 4rem); }
 @media (min-width: 1024px) { .trainer { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
-.trainer__rollen { list-style: none; padding: 0; margin: 0 0 1.5rem; }
-.trainer__rollen li { padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.warum { margin: 0 0 1.5rem; padding-left: 1rem; border-left: 4px solid var(--line-strong); }
+.warum h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+.warum p { margin-bottom: 0; }
 .trainer__unterschrift { font-family: var(--font-display); font-stretch: 87.5%; font-size: 1.5rem; margin: 1.25rem 0 0; }
 .trainer__weg { position: relative; display: grid; gap: 1rem; align-content: start; }
 .trainer__weg .tusch { width: 70px; height: 93px; }

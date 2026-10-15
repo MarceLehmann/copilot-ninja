@@ -389,6 +389,8 @@ const NOCH_NICHT = 'Noch nicht freigegeben. Erscheint, sobald Marcel die Technik
 // Die Schwelle erscheint nur, wenn im Build Agent-Techniken (ab Gruen) stehen. Sonst folgte dem Kurshinweis nur
 // «Noch nicht freigegeben», und der Agent-Teil saehe aus wie hinter dem Kurs versteckt (Konzept 7.2).
 const MIT_AGENTS = DABEI.some(t => t.guertel >= 4);
+// Kursname laut Academy ab 15.10.2026 (Entscheid Marcel: Disclaimer reicht), URL bleibt copilot-expert
+const KURS_NAME = 'Copilot Ninja in 4 Wochen';
 const KURS_EIGEN = 'Der Kurs hat einen eigenen Lehrplan und folgt nicht den Gürteln dieser Seite.';
 function schwelleHtml(ebene = 'h3', extra = '') {
   if (!MIT_AGENTS) return '';
@@ -396,7 +398,7 @@ function schwelleHtml(ebene = 'h3', extra = '') {
 <span class="label">Die Schwelle</span>
 <${ebene} id="schwelle-titel">Ab hier baust du Agents.</${ebene}>
 <p>In der Testversion von Copilot Studio kannst du einen Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen (<a href="${LEARN_TESTVERSION}" rel="noopener">Microsoft Learn</a>, Stand 13.10.2026). Alle Agent-Techniken stehen hier frei, ohne Anmeldung.</p>
-<p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt einen Live-Kurs über vier Wochen, Termine offen, Vormerken unverbindlich. ${KURS_EIGEN} <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">Zur Kursseite</a></p>
+<p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt den Live-Kurs «${KURS_NAME}», Termine offen, Vormerken unverbindlich. ${KURS_EIGEN} <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">Zur Kursseite</a></p>
 </aside>`;
 }
 // Startseite: kompakter Pfad (Korrektur 15.10.2026). Je Guertel Leitwort, «Was du danach kannst», Anzahl und ein Beispiel.
@@ -570,7 +572,7 @@ function metaHtml(p) {
   return zeilen.join('\n');
 }
 const LD_WEBSITE = { '@type': 'WebSite', '@id': `${BASE_URL}#website`, name: 'KMUpower Dojo', url: BASE_URL, inLanguage: 'de-CH', description: 'Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio mit Quelle und Prüfdatum. Unabhängige Website ohne Verbindung zu Microsoft.', publisher: { '@id': 'https://kmupower.com/#organization' } };
-const LD_ORG = { '@type': 'Organization', '@id': 'https://kmupower.com/#organization', name: 'KMUpower', legalName: 'Marcel Lehmann (Handelsname KMUpower)', url: 'https://kmupower.com/', founder: { '@type': 'Person', name: 'Marcel Lehmann' }, address: { '@type': 'PostalAddress', streetAddress: 'Weidstrasse 1', postalCode: '8320', addressLocality: 'Fehraltorf', addressCountry: 'CH' } };
+const LD_ORG = { '@type': 'Organization', '@id': 'https://kmupower.com/#organization', name: 'KMUpower', legalName: 'Marcel Lehmann (Handelsname KMUpower)', url: 'https://kmupower.com/', founder: { '@type': 'Person', name: 'Marcel Lehmann' } };
 const LD_AUTOR = { '@type': 'Person', name: 'Marcel Lehmann', url: 'https://kmupower.com/', worksFor: { '@id': 'https://kmupower.com/#organization' } };
 function ldKrumen(teile) { return { '@type': 'BreadcrumbList', itemListElement: teile.map(([name, url], i) => ({ '@type': 'ListItem', position: i + 1, name, item: url })) }; }
 function seite(rel, p) {
@@ -686,7 +688,7 @@ function baueTechnik(t, i) {
 ` : '';
   // Kurs-Satz je Guertelgruppe (Korrektur 15.10.2026): Gruen und Blau bauen den ersten Agent, Braun und Schwarz fuehren ihn ein
   const kursFrage = t.guertel <= 5 ? 'Du willst deinen ersten Agent mit Begleitung bauen?' : 'Du willst Agents mit Begleitung im eigenen Betrieb einführen?';
-  const kurs = t.guertel >= 4 ? `    <p class="kurs-satz">${kursFrage} Die Power Platform Academy führt einen Live-Kurs über vier Wochen, Termine offen. ${KURS_EIGEN} Die Kursseite empfiehlt eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026). <a href="${esc(KURS_URL(t.typ === 'technik' ? 'technik-' + t.nr : 'technik-' + t.id))}" rel="noopener">Kursseite ansehen</a></p>
+  const kurs = t.guertel >= 4 ? `    <p class="kurs-satz">${kursFrage} Die Power Platform Academy führt den Live-Kurs «${KURS_NAME}», Termine offen. ${KURS_EIGEN} Die Kursseite empfiehlt eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026). <a href="${esc(KURS_URL(t.typ === 'technik' ? 'technik-' + t.nr : 'technik-' + t.id))}" rel="noopener">Kursseite ansehen</a></p>
 ` : '';
   const blaettern = [vor ? `<a href="${r}techniken/${vor.slug}/" rel="prev"><span>Vorherige Technik</span>${nrLabel(vor)} ${esc(vor.titel)}</a>` : `<a href="${r}techniken/"><span>Zurück</span>Zur Technik-Wand</a>`,
     nach ? `<a href="${r}techniken/${nach.slug}/" rel="next"><span>Nächste Technik</span>${nrLabel(nach)} ${esc(nach.titel)}</a>` : `<a href="${r}techniken/"><span>Geschafft</span>Zur Technik-Wand</a>`].join('\n');
@@ -859,7 +861,7 @@ function baueDaten() {
 ${feed.join('\n')}
 </feed>
 `);
-  const llms = [`# KMUpower Dojo`, '', `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch, vom weissen bis zum schwarzen Gürtel. Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation bei Microsoft Learn, mit Prüfdatum und Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower, Fehraltorf), keine Verbindung zu Microsoft.`, '',
+  const llms = [`# KMUpower Dojo`, '', `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch, vom weissen bis zum schwarzen Gürtel. Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation bei Microsoft Learn, mit Prüfdatum und Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.`, '',
     '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Prüfrhythmus, was die Seite nicht ist`, '',
     '## Techniken', '', ...TECHNIKEN.map(t => `- [Nr. ${t.nr} ${t.titel}: ${t.klartitel}](${urlTechnik(t)}): ${t.nutzen || ''} Geprüft am ${datumCH(t.geprueft_am)}.`),
     ...(GRUNDFORMEN.length ? ['', '## Grundformen', '', ...GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): geprüft am ${datumCH(t.geprueft_am)}.`)] : []), ''];
@@ -1023,7 +1025,7 @@ function abschluss() {
     if (/[\u2013\u2014]/.test(text)) melde(`${wo}: Gedankenstrich im Text`);
     if (/\u00df/.test(text)) melde(`${wo}: Eszett im Text`);
     if (/\p{Extended_Pictographic}/u.test(text)) melde(`${wo}: Emoji im Text`);
-    if (/copilot[\s-]ninja/i.test(html.replace(/https?:\/\/[^\s"'<>]+/g, '').replace(/\s(href|src)="\/[^"]*"/g, '').replace(/copilot-ninja-theme/g, '').split(KURZ_BASIS).join(''))) melde(`${wo}: «Copilot-Ninja» als Name`);
+    if (/copilot[\s-]ninja/i.test(html.replace(/https?:\/\/[^\s"'<>]+/g, '').replace(/\s(href|src)="\/[^"]*"/g, '').replace(/copilot-ninja-theme/g, '').split(KURS_NAME).join('').split(KURZ_BASIS).join(''))) melde(`${wo}: «Copilot-Ninja» als Name`);
   }
   for (const [datei, kb] of Object.entries(BUDGET)) {
     if (!gibtEs(datei)) continue;

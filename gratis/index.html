@@ -48,7 +48,7 @@
       "description": "Was Microsoft Copilot Chat ohne Zusatzlizenz enthält und was Lizenz oder Kapazität braucht. Jede Aussage mit Quelle bei Microsoft Learn und Prüfdatum.",
       "inLanguage": "de-CH",
       "datePublished": "2026-10-13",
-      "dateModified": "2026-10-13",
+      "dateModified": "2026-10-15",
       "isPartOf": {
         "@id": "https://marcelehmann.github.io/copilot-ninja/#website"
       },
@@ -76,7 +76,8 @@
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/preview-overview",
-        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview"
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide"
       ],
       "breadcrumb": {
         "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#krumen"
@@ -220,13 +221,6 @@
       "founder": {
         "@type": "Person",
         "name": "Marcel Lehmann"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Weidstrasse 1",
-        "postalCode": "8320",
-        "addressLocality": "Fehraltorf",
-        "addressCountry": "CH"
       }
     }
   ]
@@ -538,10 +532,23 @@
         </li>
       </ol>
 
-      <h3 id="h-stufen-beispiele">Zehn Aufgaben aus dem KMU-Alltag</h3>
-      <p>Tipp eine Aufgabe an, dann siehst du, warum diese Stufe reicht. Sechs von zehn gehen ohne Zusatzlizenz.</p>
+      <h3 id="h-stufen-beispiele">Elf Aufgaben aus dem KMU-Alltag</h3>
+      <p>Tipp eine Aufgabe an, dann siehst du, warum diese Stufe reicht. Sieben von elf gehen ohne Zusatzlizenz.</p>
       <label class="wahl stufen-filter"><input type="checkbox" id="nur-ohne">Nur zeigen, was ohne Zusatzlizenz geht</label>
       <ul class="beispiele prose" role="list" aria-labelledby="h-stufen-beispiele" data-geprueft="2026-10-15" data-pruef-frist="120">
+        <li data-stufe="1"><details class="faq" id="stufe-bsp-prompt-coach">
+          <summary><span>Texte nach deinem Style-Guide schreiben, mit dem Agent Prompt Coach<span class="zugang zugang--frei">Stufe 1: Copilot Chat</span></span></summary>
+          <p>Reicht, weil Microsoft den Agent Prompt Coach zu den Agents zählt, die ohne Zusatzkosten in Microsoft Copilot Chat enthalten sind. Du findest ihn unter m365.cloud.microsoft bei Agents, dann Alle Agents. Fehlt er dort, hat ihn deine IT vielleicht nicht freigegeben. Dateien hochladen und Diktieren gehören laut Microsoft zu Copilot Chat.</p>
+          <p>Mein bestes Beispiel. So mache ich es, das ist meine Erfahrung und kein Ablauf von Microsoft:</p>
+          <ol>
+            <li>Melde dich mit dem Geschäftskonto an, nicht mit dem privaten. Nur dann gilt der Schutz für Unternehmensdaten (<a href="#faq-gruenes-schild">grünes Schild</a>).</li>
+            <li>Öffne Prompt Coach und lade deinen Style-Guide oder deine Vorgaben hoch, zum Beispiel zur richtigen Ansprache oder zum Gendern.</li>
+            <li>Bitte ihn um einen Prompt, der sich an diese Vorgaben hält, und speichere den Prompt.</li>
+            <li>Danach schreibst oder diktierst du einfach drauflos und bekommst den Text so, wie dein Style-Guide es will. Den kopierst du in die Mail, das Dokument oder die Veröffentlichung.</li>
+          </ol>
+          <p><strong>Gut zu wissen:</strong> Prompt Coach liest deine Vorgaben einmal, beim Erstellen des Prompts, nicht bei jeder Nutzung neu. Ein Style-Guide ändert sich selten, darum spart das viel Zeit. Ändert er sich doch, lässt du den Prompt neu erstellen.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide" rel="noopener">Learn: m365-agents-admin-guide</a> (Prompt Coach ohne Zusatzkosten, Weg über Agents) und <a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">copilot/faq</a> (Datei-Upload, Diktieren), Stand 15.10.2026. Verwandte Technik: <a href="../techniken/eigenen-schreibstil-festhalten/">Nr. 11 Der Schattenschreiber</a></p>
+        </details></li>
         <li data-stufe="1"><details class="faq" id="stufe-bsp-kundenmail">
           <summary><span>Antwort auf eine verärgerte Kundenmail entwerfen<span class="zugang zugang--frei">Stufe 1: Copilot Chat</span></span></summary>
           <p>Reicht, weil Copilot Chat laut Microsoft Inhalte formuliert und umschreibt. Die Kundenmail fügst du als Text ein.</p>
@@ -946,6 +953,7 @@
             <li><time datetime="2026-10-13">13.10.2026</time>. Erste Prüfung aller Zeilen dieser Seite gegen Microsoft Learn.</li>
             <li><time datetime="2026-10-15">15.10.2026</time>. Nachprüfung einzelner Zeilen. Grünes Schild: Quelle ist jetzt copilot/privacy-and-protections, die FAQ-Seite nennt das Schild nicht. Neu: Agents für Word, Excel und PowerPoint im Chat (copilot/faq, copilot/manage). Neu in der Liste der Abos: Office 365 E1 Plus und Office 365 A1. Verbrauch: Agent-Flow-Aktionen 13 Copilot Credits pro 100, Quelle zum Verfall ungenutzter Credits ist billing-licensing, der Agent Usage Estimator nennt übertragbare Käufe. Mit Lizenz: Ratentabelle und Lizenzierungsseite nennen verschiedene Ausnahmen, beides steht jetzt in der Zeile.</li>
             <li><time datetime="2026-10-15">15.10.2026</time>. Neu: Abschnitt «Welche Stufe brauchst du?» mit vier Stufen und zehn Aufgaben, je mit Quelle. Gelesen am selben Tag: copilot/overview, copilot/agents, copilot/privacy-and-protections, microsoft-365-copilot-overview und copilot-studio-experience.</li>
+            <li><time datetime="2026-10-15">15.10.2026</time>. Neu: elfte Aufgabe «Texte nach deinem Style-Guide schreiben, mit dem Agent Prompt Coach». Belegt sind Prompt Coach ohne Zusatzkosten in Copilot Chat (m365-agents-admin-guide), Datei-Upload und Diktieren (copilot/faq). Der Ablauf ist als meine Erfahrung gekennzeichnet.</li>
           </ol>
         </div>
         <div id="methode">
@@ -953,7 +961,7 @@
           <p>Jede Aussage dieser Seite wird gegen die verlinkte Seite bei Microsoft Learn gelesen. Das Datum dieser Lesung steht im Stempel neben jeder Zeile. Die erste Prüfung war am <time datetime="2026-10-13">13.10.2026</time>, einzelne Zeilen wurden am <time datetime="2026-10-15">15.10.2026</time> nachgeprüft (siehe Prüfprotokoll). Die nächste Prüfung ist am <time datetime="2026-10-27">27.10.2026</time>, danach jedes Quartal.</p>
           <p>Liegt eine Prüfung mehr als 120 Tage zurück, wird der Stempel grau und sagt: «Prüfung fällig. Massgebend ist die verlinkte Quelle.» Ab dann gilt die verlinkte Quelle und nicht diese Seite.</p>
           <p>Preise stehen hier bewusst nicht, die aktuellen Preise nennt Microsoft auf den Produktseiten. Das ist keine Lizenzberatung: Verbindlich ist dein Vertrag, für deinen Fall fragst du deine IT oder deinen Microsoft-Partner.</p>
-          <p>Fehler gefunden oder ist eine Aussage veraltet? <a href="mailto:marcel.lehmann@kmupower.com?subject=Gratis-Seite%3A%20Korrektur">Schreib mir eine Mail</a>. Ich korrigiere oder streiche die Aussage und trage die Änderung im Prüfprotokoll ein. <a href="../ueber/">Marcel Lehmann, Fehraltorf</a></p>
+          <p>Fehler gefunden oder ist eine Aussage veraltet? <a href="mailto:marcel.lehmann@kmupower.com?subject=Gratis-Seite%3A%20Korrektur">Schreib mir eine Mail</a>. Ich korrigiere oder streiche die Aussage und trage die Änderung im Prüfprotokoll ein. <a href="../ueber/">Marcel Lehmann</a></p>
         </div>
       </div>
     </div>
@@ -970,7 +978,7 @@
         <a class="knopf knopf--primaer" href="../techniken/">Zur Technik-Wand</a>
         <a class="knopf" href="../dojo/test/">Welcher Gürtel bist du?</a>
       </p>
-      <p class="klein">Wenn du deinen ersten Agent mit Begleitung bauen willst: Die Power Platform Academy führt dazu einen Live-Kurs über vier Wochen. Termine sind noch offen, du kannst dich auf der <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=gratis-ende" rel="noopener">Kursseite der Academy</a> unverbindlich vormerken. Der Kurs beginnt mit Copilot in Word, Excel und PowerPoint, die Kursseite empfiehlt dafür eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026).</p>
+      <p class="klein">Wenn du deinen ersten Agent mit Begleitung bauen willst: Die Power Platform Academy führt dazu den Live-Kurs «Copilot Ninja in 4 Wochen». Termine sind noch offen, du kannst dich auf der <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=gratis-ende" rel="noopener">Kursseite der Academy</a> unverbindlich vormerken. Der Kurs beginnt mit Copilot in Word, Excel und PowerPoint, die Kursseite empfiehlt dafür eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026).</p>
     </div>
   </section>
 
@@ -1008,7 +1016,6 @@
     <div class="fuss__recht">
       <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
       <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
-      <p>KMUpower, Einzelfirma Marcel Lehmann, Weidstrasse 1, 8320 Fehraltorf, Schweiz. UID CHE-296.591.945.</p>
       <p><a href="../impressum/">Impressum</a>, <a href="../datenschutz/">Datenschutz</a>, <a href="../ueber/">Über das Dojo</a></p>
       <p>Keine Cookies, kein Tracking. Dein Fortschritt bleibt in deinem Browser. Die Reichweite wird nur über die Google Search Console und die Bing Webmaster Tools ausgewertet.</p>
     </div>
