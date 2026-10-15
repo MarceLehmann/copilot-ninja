@@ -1,0 +1,68 @@
+{
+  "hinweis": "Erzeugt von scripts/karten.mjs aus data/techniken.json. Nicht von Hand bearbeiten.",
+  "guertel": [
+    {
+      "nr": 1,
+      "farbe": "weiss",
+      "name": "Weisser Gürtel",
+      "kurz": "Weiss",
+      "leitwort": "Grundstellung",
+      "kannst_du": "Prompts mit Ziel, Kontext, Quelle und Erwartung schreiben und dich befragen lassen.",
+      "erreicht_satz": "Du sagst jetzt, was du willst, und lässt dich befragen."
+    },
+    {
+      "nr": 2,
+      "farbe": "gelb",
+      "name": "Gelber Gürtel",
+      "kurz": "Gelb",
+      "leitwort": "Zweiter Blick",
+      "kannst_du": "Entwürfe so anfordern und prüfen lassen, dass Fehler vor dem Versand auffallen.",
+      "erreicht_satz": "Du prüfst jetzt, bevor du sendest."
+    },
+    {
+      "nr": 3,
+      "farbe": "orange",
+      "name": "Oranger Gürtel",
+      "kurz": "Orange",
+      "leitwort": "Spurenlesen",
+      "kannst_du": "Dateien und Webquellen auswerten, jede Aussage mit Fundstelle.",
+      "erreicht_satz": "Du liest jetzt Spuren, jede mit Fundstelle."
+    },
+    {
+      "nr": 4,
+      "farbe": "gruen",
+      "name": "Grüner Gürtel",
+      "kurz": "Grün",
+      "leitwort": "Erster Schüler",
+      "kannst_du": "Den ersten eigenen Agent instruieren und prüfen.",
+      "erreicht_satz": "Du hast jetzt deinen ersten Schüler."
+    },
+    {
+      "nr": 5,
+      "farbe": "blau",
+      "name": "Blauer Gürtel",
+      "kurz": "Blau",
+      "leitwort": "Ablauf",
+      "kannst_du": "Einem Agent Schritte geben und festlegen, wann er an einen Menschen übergibt.",
+      "erreicht_satz": "Dein Agent kennt jetzt seinen Weg und seine Grenzen."
+    },
+    {
+      "nr": 6,
+      "farbe": "braun",
+      "name": "Brauner Gürtel",
+      "kurz": "Braun",
+      "leitwort": "Haushalt",
+      "kannst_du": "Daten sauber weitergeben und den Verbrauch eines Agents schätzen, bevor es teuer wird.",
+      "erreicht_satz": "Du weisst jetzt, was dein Agent verbraucht, bevor er läuft."
+    },
+    {
+      "nr": 7,
+      "farbe": "schwarz",
+      "name": "Schwarzer Gürtel",
+      "kurz": "Schwarz",
+      "leitwort": "Wache",
+      "kannst_du": "Agents im Betrieb überwachen und rechtzeitig abschalten.",
+      "erreicht_satz": "Du hältst jetzt Wache, auch wenn niemand am Agent arbeitet."
+    }
+  ]
+}

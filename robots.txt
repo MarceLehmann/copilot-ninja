@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /copilot-ninja/templates/
+Disallow: /copilot-ninja/scripts/
+Disallow: /copilot-ninja/data/
 
 Sitemap: https://marcelehmann.github.io/copilot-ninja/sitemap.xml

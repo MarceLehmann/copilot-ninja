@@ -1,0 +1,32 @@
+/* Druckansicht. Spickzettel der Technik-Wand auf ein bis zwei A4-Seiten, Technik-Seiten mit vollem Prompt. */
+@page { size: A4; margin: 12mm 12mm 14mm; }
+html, body { background: #fff !important; color: #000 !important; font-size: 10pt; line-height: 1.4; }
+body { padding: 0 !important; }
+.kopf, .menue, .suche, .skip, .filter, .leiste-unten, .knopf, .knopf-icon, .chip, .teilen, .schmiede, .schnitt__umschalter, .schnitt__strich, .rolle__knoepfe, .vorschau-banner, .tusch, [data-geuebt-knopf], [data-zufall], .nicht-drucken { display: none !important; }
+.nur-druck { display: block !important; }
+.sektion, .hero { padding-block: 4mm !important; }
+.nacht, .flaeche-2 { background: #fff !important; color: #000 !important; }
+.nacht::before { display: none !important; }
+a { color: #000 !important; text-decoration: none !important; }
+h1 { font-size: 18pt !important; } h2 { font-size: 13pt !important; } h3 { font-size: 11pt !important; }
+.stempel { transform: none !important; color: #000 !important; border-color: #000 !important; outline-color: #000 !important; box-shadow: none !important; font-size: 7pt !important; }
+pre.code { white-space: pre-wrap !important; font-size: 8.5pt !important; border: 1px solid #999; }
+.rolle { box-shadow: none !important; border-color: #000 !important; break-inside: avoid; }
+.teil { background: none !important; box-shadow: none !important; }
+.fuss { background: #fff !important; padding: 4mm 0 0 !important; font-size: 7pt; }
+.fuss__raster { display: none !important; }
+
+/* Technik-Wand als Spickzettel */
+html[data-seite="wand"] .sektion__kopf p, html[data-seite="wand"] .karte__nutzen, html[data-seite="wand"] .karte .zugang, html[data-seite="wand"] .karte .art, html[data-seite="wand"] .schwelle, html[data-seite="wand"] .wochen, html[data-seite="wand"] .pfad-schluss, html[data-seite="wand"] .beitragen, html[data-seite="wand"] .wand__pfad { display: none !important; }
+html[data-seite="wand"] .karten { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 1.5mm 4mm !important; }
+html[data-seite="wand"] .karte { display: grid !important; grid-template-columns: 9mm 1fr; gap: 0 2mm !important; padding: 1.2mm 0 !important; border: 0 !important; border-bottom: .3pt solid #999 !important; border-radius: 0 !important; break-inside: avoid; }
+html[data-seite="wand"] .karte__oben { grid-row: span 3; display: block; }
+html[data-seite="wand"] .karte__nr { font-size: 11pt !important; color: #000 !important; }
+html[data-seite="wand"] .karte__titel { font-size: 9.5pt !important; }
+html[data-seite="wand"] .karte__klartitel { font-size: 8.5pt; font-weight: 400; margin: 0; }
+html[data-seite="wand"] .karte__meta { padding: 0 !important; font-size: 7.5pt; color: #000 !important; }
+html[data-seite="wand"] .karte__kurz { display: inline !important; }
+html[data-seite="wand"] .guertel-abschnitt { padding: 2mm 0 0 !important; break-inside: auto; }
+html[data-seite="wand"] .guertel-abschnitt > h2 { margin: 0 0 1mm !important; }
+html[data-seite="wand"] .guertel-abschnitt > p { display: none !important; }
+html[data-seite="wand"] .druck-kopf { display: flex !important; justify-content: space-between; border-bottom: 1pt solid #000; padding-bottom: 2mm; margin-bottom: 2mm; font-size: 8pt; }

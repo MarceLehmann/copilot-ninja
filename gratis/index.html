@@ -1,84 +1,549 @@
 <!doctype html>
-<html lang="de-CH">
+<html lang="de-CH" data-seite="gratis">
 <head>
 <meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Was ist bei Microsoft Copilot gratis, was kostet? | KMUpower</title>
-<meta name="description" content="Was Microsoft Copilot Chat ohne Zusatzlizenz enthält und was Copilot Studio an Lizenz oder Kapazität braucht. Jede Zeile mit Quelle und Prüfdatum 13.10.2026.">
-<link rel="canonical" href="https://marcelehmann.github.io/copilot-ninja/gratis/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1115" media="(prefers-color-scheme: dark)">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="KMUpower Vorlagen">
+<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="KMUpower Dojo: neue Techniken" href="../feed.xml">
+<link rel="preload" href="../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/gratis.css">
+<link rel="stylesheet" href="../assets/css/druck.css" media="print">
+<script src="../assets/js/theme-init.js"></script>
+<script src="../assets/js/core.js" defer></script>
+<script src="../assets/js/dojo.js" defer></script>
+
+<meta name="robots" content="noindex">
+<meta name="dojo-build" content="testphase">
+<!-- /RAHMEN:HEAD -->
+<title>Ist Microsoft Copilot gratis? Was ohne Zusatzlizenz geht | KMUpower Dojo</title>
+<meta name="description" content="Microsoft Copilot Chat ist in vielen Microsoft-365-Geschäftsabos ohne Zusatzlizenz enthalten. Was geht, was nicht, je mit Quelle. Geprüft am 13.10.2026.">
+<link rel="canonical" href="https://marcelehmann.github.io/copilot-ninja/gratis/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KMUpower Dojo">
 <meta property="og:locale" content="de_CH">
-<meta property="og:title" content="Was ist bei Microsoft Copilot gratis, was kostet? | KMUpower">
-<meta property="og:description" content="Was Microsoft Copilot Chat ohne Zusatzlizenz enthält und was Copilot Studio an Lizenz oder Kapazität braucht. Jede Zeile mit Quelle und Prüfdatum 13.10.2026.">
+<meta property="og:title" content="Ist Microsoft Copilot gratis? Was ohne Zusatzlizenz geht">
+<meta property="og:description" content="Gratis-Check in vier Fragen, vier Mythen und jede Bedingung mit Quelle bei Microsoft Learn. Geprüft am 13.10.2026.">
 <meta property="og:url" content="https://marcelehmann.github.io/copilot-ninja/gratis/">
 <meta property="og:image" content="https://marcelehmann.github.io/copilot-ninja/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="KMUpower: Vorlagen für Microsoft Copilot mit Quelle">
+<meta property="og:image:alt" content="KMUpower Dojo: Übung schlägt Hype.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/app.js"></script>
+<script src="../assets/js/gratis.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Was ist bei Microsoft Copilot gratis, was kostet?",
-  "url": "https://marcelehmann.github.io/copilot-ninja/gratis/",
-  "description": "Was Microsoft Copilot Chat ohne Zusatzlizenz enthält und was Copilot Studio an Lizenz oder Kapazität braucht. Jede Zeile mit Quelle und Prüfdatum 13.10.2026.",
-  "inLanguage": "de-CH",
-  "dateModified": "2026-10-13",
-  "isPartOf": {
-    "@id": "https://marcelehmann.github.io/copilot-ninja/#website"
-  }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#seite",
+      "url": "https://marcelehmann.github.io/copilot-ninja/gratis/",
+      "name": "Ist Microsoft Copilot gratis? Was ohne Zusatzlizenz geht",
+      "description": "Was Microsoft Copilot Chat ohne Zusatzlizenz enthält und was Lizenz oder Kapazität braucht. Jede Aussage mit Quelle bei Microsoft Learn und Prüfdatum.",
+      "inLanguage": "de-CH",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://marcelehmann.github.io/copilot-ninja/#website"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "citation": [
+        "https://learn.microsoft.com/en-us/copilot/manage",
+        "https://learn.microsoft.com/en-us/copilot/overview",
+        "https://learn.microsoft.com/en-us/copilot/faq",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
+        "https://learn.microsoft.com/en-us/copilot/agents",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/preview-overview",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview"
+      ],
+      "breadcrumb": {
+        "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#krumen"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq",
+      "url": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq",
+      "inLanguage": "de-CH",
+      "isPartOf": {
+        "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#seite"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-chat-kostenlos",
+          "name": "Ist Microsoft Copilot Chat kostenlos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für berechtigte Nutzer ja, ohne Zusatzkosten. Bedingung sind die Anmeldung mit einem Geschäfts- oder Schulkonto und ein qualifizierendes Microsoft-365-Abonnement deiner Organisation."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-microsoft-konto",
+          "name": "Reicht ein Geschäftskonto (Entra) für Copilot Chat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Ein Entra-Konto allein ist keine Berechtigung, deine Organisation braucht ein qualifizierendes Abonnement. Ein persönliches Microsoft-Konto, zum Beispiel von Outlook.com, ist etwas anderes: Damit gelten die Enterprise-Schutzfunktionen nicht."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-mails-dateien",
+          "name": "Kann Copilot Chat ohne Lizenz meine Mails und Dateien lesen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nicht automatisch über Microsoft Graph. Du bringst Inhalte selbst ein, per Text oder Datei-Upload. In Outlook kann Copilot Chat laut Microsoft ohne Lizenz Mails, Kalender, Meetings, Chats und einen begrenzten Satz Dateien einbeziehen."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-word-excel",
+          "name": "Gibt es Copilot in Word und Excel gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Copilot direkt in Word, Excel, PowerPoint und OneNote nicht: Mit Microsoft Copilot Chat (Basic) gibt es dort keinen Zugang. In Microsoft Copilot Chat selbst gibt es laut Microsoft aber Agents für Word, Excel und PowerPoint, die Dokumente, Tabellen und Präsentationen direkt im Chat erstellen. Was davon bei dir verfügbar ist, hängt von Einstellungen und Lizenz ab."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-studio-testen",
+          "name": "Kann ich Copilot Studio kostenlos testen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, als Einzelperson mit Geschäfts- oder Schulkonto. Du kannst Agents bauen und im Testchat prüfen, aber nicht veröffentlichen. Private Mailadressen werden abgelehnt."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-agents",
+          "name": "Sind Agents in Copilot Chat gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Agents, die nur auf Anweisungen und öffentlichen Websites beruhen, sind ohne Zusatzkosten enthalten. Agents mit Daten aus SharePoint oder Graph-Connectors werden nach Verbrauch abgerechnet und sind für Copilot-Chat-Nutzer standardmässig aus."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-credit",
+          "name": "Was kostet ein Copilot Credit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Den Preis nennt diese Seite nicht, weil ich ihn nicht geprüft habe. Microsoft veröffentlicht Verbrauchsraten je Funktion, zum Beispiel 1 Copilot Credit für eine Classic Answer und 2 für eine Generative Answer. Die Raten können sich ändern."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-agent-nutzer",
+          "name": "Brauchen Nutzer eines veröffentlichten Agents eine eigene Lizenz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Der Betrieb verbraucht aber Kapazität deines Mandanten."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-training",
+          "name": "Werden meine Prompts zum Training verwendet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Laut Microsoft werden Prompts und Antworten nicht zum Training von Foundation Models verwendet. Websuchanfragen laufen separat über Bing mit eigenen Datenregeln. Das ist die Aussage von Microsoft und keine Bewertung für deinen Fall."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#faq-gruenes-schild",
+          "name": "Woran erkenne ich, dass der Unternehmensschutz aktiv ist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Am grünen Schild neben der Schaltfläche für einen neuen Chat («New Chat»). Laut Microsoft gilt dann Enterprise Data Protection für deine Prompts und Antworten."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/gratis/#krumen",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Start",
+          "item": "https://marcelehmann.github.io/copilot-ninja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ist Microsoft Copilot gratis?",
+          "item": "https://marcelehmann.github.io/copilot-ninja/gratis/"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/#website",
+      "name": "KMUpower Dojo",
+      "url": "https://marcelehmann.github.io/copilot-ninja/",
+      "inLanguage": "de-CH",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Weidstrasse 1",
+        "postalCode": "8320",
+        "addressLocality": "Fehraltorf",
+        "addressCountry": "CH"
+      }
+    }
+  ]
 }
 </script>
 </head>
 <body>
+<!-- RAHMEN:KOPF -->
 <a class="skip" href="#main">Zum Inhalt springen</a>
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="brand" href="../" aria-label="KMUpower, Vorlagen für Microsoft Copilot, Startseite">KMUpower<span class="brand-sub">Vorlagen für Microsoft Copilot</span></a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../" aria-label="KMUpower Dojo, Startseite"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></a>
     <nav class="nav" aria-label="Hauptnavigation">
       <ul>
-        <li><a href="../#dojo">Dojo</a></li>
-        <li><a href="../vorlagen/">Vorlagen</a></li>
-        <li><a href="../gratis/" aria-current="page">Gratis</a></li>
-        <li><a href="../ueber/">Autor</a></li>
+        <li><a href="../techniken/" data-nav="techniken">Techniken</a></li>
+        <li><a href="../gratis/" data-nav="gratis" aria-current="page">Gratis</a></li>
+        <li><a href="../dojo/" data-nav="dojo">Mein Dojo</a></li>
+        <li><a href="../ueber/" data-nav="ueber">Über</a></li>
       </ul>
     </nav>
-    <button type="button" class="theme-btn" data-theme-toggle aria-pressed="false" hidden>Dunkelmodus</button>
+    <div class="kopf__aktionen">
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Technik suchen" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Strg K</kbd></button>
+      <a class="knoten" href="../dojo/" data-guertelknoten aria-label="Mein Dojo, Weisser Gürtel"><span class="knoten__text">Weisser Gürtel</span></a>
+      <button type="button" class="knopf-icon" data-zufall aria-label="Zufällige Technik, die du noch nicht geübt hast" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
   </div>
 </header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Menü schliessen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menü">
+    <ul>
+      <li><a href="../techniken/">Techniken</a></li>
+      <li><a href="../gratis/" aria-current="page">Gratis</a></li>
+      <li><a href="../dojo/">Mein Dojo</a></li>
+      <li><a href="../ueber/">Über</a></li>
+      <li><a href="../heute/">Technik des Tages</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Technik suchen</h2>
+    <label for="suche-feld" class="sr-only">Suchbegriff</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Protokoll, Vertrag, Agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Suche schliessen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Treffer"></ul>
+  <p class="suche__leer" hidden>Keine Technik gefunden. Versuch es mit Protokoll, Vertrag oder Agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
 <main id="main">
-  <div class="wrap">
-    <section class="hero" aria-labelledby="h1">
-      <h1 id="h1">Was ist bei Microsoft Copilot gratis, was kostet?</h1>
-      <p class="lead">Jede Zeile hat eine Quelle bei Microsoft und ein Prüfdatum. Preise stehen hier bewusst nicht, weil ich sie nicht geprüft habe.</p>
-      <div class="belt" aria-hidden="true"></div>
-      <p class="stand"><strong>Geprüft am 13.10.2026.</strong> Nächste Prüfung: 27.10.2026. Ist das Datum älter als drei Monate, gilt die verlinkte Quelle.</p>
-    </section>
 
-    <section class="note" aria-labelledby="h-hinweis">
-      <h2 id="h-hinweis">Bitte beachten</h2>
-      <p>Microsoft ändert Funktionen und Bedingungen laufend. Im Zweifel gilt die verlinkte Quelle und nicht diese Seite. Das ist keine Lizenzberatung. Die aktuellen Preise nennt Microsoft auf den Produktseiten.</p>
-      <p>Microsoft hat Microsoft 365 Copilot in Microsoft Copilot umbenannt und Microsoft 365 Copilot Chat in Microsoft Copilot Chat (<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026). Auf Learn kommen noch beide Namen vor, ebenso auf der englischen Seite <a href="https://www.powerplatformtip.com/knowledge/copilot-studio-vs-m365-copilot/" rel="noopener">Copilot Studio vs Microsoft 365 Copilot vs Agent Builder</a> auf powerplatformtip.com (geprüft am 08.10.2026). Sie ordnet dieselben Fragen ein und erklärt, wann du von Chat zu Copilot Studio wechselst. Bei Abweichungen gilt der jüngere Stand und im Zweifel die Learn-Quelle.</p>
-    </section>
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <nav class="krumen" aria-label="Brotkrumen"><ol><li><a href="../">Start</a></li><li><a href="./" aria-current="page">Ist Microsoft Copilot gratis?</a></li></ol></nav>
+      <p class="meldung" data-von-gratis hidden>Du kommst über copilot.gratis. Hier ist die Antwort.</p>
+      <p class="hero__eyebrow">Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.</p>
+      <h1 id="h1">Ist Microsoft Copilot <span class="strich">gratis?<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span></h1>
+      <div class="antwort" data-geprueft="2026-10-13" data-pruef-frist="120">
+        <p>Teilweise: Microsoft Copilot Chat ist laut Microsoft ohne Zusatzlizenz enthalten, wenn du dich mit einem Geschäfts- oder Schulkonto anmeldest und deine Organisation ein qualifizierendes Microsoft-365-Abonnement hat, zum Beispiel Business Basic, Business Standard oder Business Premium. Copilot in Word, Excel und PowerPoint und der automatische Zugriff auf deine Mails und Dateien brauchen eine Lizenz.</p>
+        <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Microsoft Learn, copilot/manage</a> und <a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">copilot/overview</a>, geprüft am <time datetime="2026-10-13">13.10.2026</time>. Preise stehen hier nicht, weil ich sie nicht geprüft habe.</p>
+      </div>
+      <div class="hero__beweis"><a class="stempel stempel--gross" href="#methode" data-geprueft="2026-10-13" data-pruef-frist="120"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></div>
+      <p class="weiche" id="privat">Privat mit Outlook.com- oder Hotmail-Konto? Diese Seite behandelt Microsoft Copilot mit Geschäfts- oder Schulkonto. Zum privaten Angebot habe ich keine geprüfte Quelle, darum steht dazu hier nichts. Belegt ist nur: Mit einem persönlichen Microsoft-Konto gelten die Enterprise-Schutzfunktionen nicht (<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026).</p>
+      <nav class="knopf-reihe" aria-label="Auf dieser Seite">
+        <a class="knopf knopf--primaer" href="#check">Gratis-Check starten</a>
+        <a class="knopf" href="#mythen">Mythos oder belegt?</a>
+        <a class="knopf knopf--leise" href="#faq">Häufige Fragen</a>
+      </nav>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="h-zwei">
-      <h2 id="h-zwei">Zwei Dinge, die oft verwechselt werden</h2>
-      <ol class="prose">
-        <li>Ein Entra-Konto allein reicht für Copilot Chat nicht. Dein Mandant braucht ein qualifizierendes Microsoft-365-Abonnement (<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026).</li>
-        <li>Mit der kostenlosen Testversion von Copilot Studio kannst du Agents bauen und testen, aber nicht veröffentlichen. Der Betrieb braucht Lizenz oder Kapazität (<a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a>, Stand 13.10.2026).</li>
+  <section class="sektion flaeche-2" id="check" aria-labelledby="h-check">
+    <div class="wrap">
+      <div class="dojo-teaser">
+        <span class="tusch tusch--lesend" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span>
+        <div class="sektion__kopf">
+          <span class="label">Gratis-Check, vier Fragen</span>
+          <h2 id="h-check">Was hast du schon im Gürtel?</h2>
+          <p>Bevor du etwas kaufst, schau nach, was in deinem Abo steckt. Nach vier Fragen siehst du, was du laut Microsoft schon hast und was Lizenz oder Kapazität braucht. Dazu bekommst du die Techniken, mit denen du anfängst. Der Check läuft nur in deinem Browser. Er speichert nichts und sendet nichts.</p>
+        </div>
+      </div>
+
+      <div data-gratis-check="seite">
+        <p class="meldung" data-check-ohne-js data-ohne-js>Der Gratis-Check braucht JavaScript. Alle Antworten stehen auch im <a href="#nachschlagen">Nachschlagteil</a> weiter unten, jede mit Quelle.</p>
+
+        <form class="check" data-check-form aria-labelledby="h-check" novalidate data-nur-js>
+          <fieldset class="check__frage" data-frage="konto">
+            <legend><span class="label">Frage 1 von 4</span>Wie meldest du dich bei Microsoft an?</legend>
+            <div class="wahlen">
+              <label class="wahl"><input type="radio" name="konto" value="k1">Mit Geschäfts- oder Schulkonto</label>
+              <label class="wahl"><input type="radio" name="konto" value="k2">Mit privatem Microsoft-Konto, zum Beispiel Outlook.com</label>
+              <label class="wahl"><input type="radio" name="konto" value="k3">Weiss nicht</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="check__frage" data-frage="abo" aria-describedby="abo-hinweis">
+            <legend><span class="label">Frage 2 von 4</span>Welches Abonnement hat deine Firma?</legend>
+            <p class="klein" id="abo-hinweis">Varianten mit «(no Teams)» und «EEA (no Teams)» zählen laut Microsoft dazu. Die Auswahl ist ein Teil der Liste auf <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 15.10.2026.</p>
+            <div class="wahlen">
+              <label class="wahl"><input type="radio" name="abo" value="a1">Microsoft 365 Business Basic</label>
+              <label class="wahl"><input type="radio" name="abo" value="a2">Microsoft 365 Business Standard</label>
+              <label class="wahl"><input type="radio" name="abo" value="a3">Microsoft 365 Business Premium</label>
+              <label class="wahl"><input type="radio" name="abo" value="a4">Microsoft 365 E3, E5 oder E7</label>
+              <label class="wahl"><input type="radio" name="abo" value="a5">Microsoft 365 F1 oder F3</label>
+              <label class="wahl"><input type="radio" name="abo" value="a6">Office 365 E1, E1 Plus, E3, E5 oder F3</label>
+              <label class="wahl"><input type="radio" name="abo" value="a7">Teams Essentials, Teams Enterprise oder Teams EEA</label>
+              <label class="wahl"><input type="radio" name="abo" value="a8">Bildung oder Verwaltung (Microsoft 365 oder Office 365 A1, A3, A5, dazu Office 365 A1 Plus und G1, G3, G5)</label>
+              <label class="wahl"><input type="radio" name="abo" value="a9">Ein anderes</label>
+              <label class="wahl"><input type="radio" name="abo" value="a10">Weiss nicht</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="check__frage" data-frage="schild" aria-describedby="schild-hinweis">
+            <legend><span class="label">Frage 3 von 4</span>Siehst du in Microsoft Copilot Chat ein grünes Schild?</legend>
+            <p class="klein" id="schild-hinweis">Schau neben die Schaltfläche für einen neuen Chat. Laut Microsoft zeigt das grüne Schild, dass Enterprise Data Protection gilt. Das dauert zehn Sekunden. (<a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Learn: copilot/privacy-and-protections</a>, Stand 15.10.2026)</p>
+            <div class="wahlen">
+              <label class="wahl"><input type="radio" name="schild" value="s1">Ja, es ist da</label>
+              <label class="wahl"><input type="radio" name="schild" value="s2">Nein, kein Schild</label>
+              <label class="wahl"><input type="radio" name="schild" value="s3">Copilot Chat noch nie geöffnet</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="check__frage" data-frage="vorhaben">
+            <legend><span class="label">Frage 4 von 4</span>Was willst du tun? Mehrere Antworten möglich.</legend>
+            <div class="wahlen">
+              <label class="wahl"><input type="checkbox" name="vorhaben" value="v1">Texte schreiben, Dateien auswerten, im Web suchen, Bilder erzeugen</label>
+              <label class="wahl"><input type="checkbox" name="vorhaben" value="v2">Copilot direkt in Word, Excel oder PowerPoint nutzen</label>
+              <label class="wahl"><input type="checkbox" name="vorhaben" value="v3">Mails, Dateien und Meetings sollen von selbst einbezogen werden</label>
+              <label class="wahl"><input type="checkbox" name="vorhaben" value="v4">Einen eigenen Agent mit Wissen aus dem Web bauen</label>
+              <label class="wahl"><input type="checkbox" name="vorhaben" value="v5">Einen Agent mit Firmendaten aus SharePoint bauen</label>
+              <label class="wahl"><input type="checkbox" name="vorhaben" value="v6">Einen Agent in Copilot Studio bauen und veröffentlichen</label>
+            </div>
+          </fieldset>
+
+          <div class="knopf-reihe">
+            <button type="submit" class="knopf knopf--primaer">Meine Ausrüstung zeigen</button>
+          </div>
+        </form>
+
+        <div class="check__ergebnis" id="check-ergebnis" data-check-ergebnis tabindex="-1" aria-labelledby="h-ergebnis" data-geprueft="2026-10-13" data-pruef-frist="120" hidden>
+          <p><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></p>
+          <h3 id="h-ergebnis">Deine Ausrüstung</h3>
+          <div data-check-gruppe="hinweis" hidden><h4>Vorweg</h4><ul class="arrow-list" data-liste></ul></div>
+          <div data-check-gruppe="schon" hidden><h4>Das hast du laut Microsoft schon</h4><ul class="arrow-list" data-liste></ul></div>
+          <div data-check-gruppe="brauchst" hidden><h4>Dafür brauchst du Lizenz oder Kapazität</h4><ul class="arrow-list" data-liste></ul></div>
+          <div data-check-gruppe="it" hidden><h4>Diese Fragen stellst du deiner IT</h4><ul class="arrow-list" data-liste></ul></div>
+          <div data-check-gruppe="techniken" hidden><h4>Deine ersten Techniken</h4><ul class="arrow-list" data-liste></ul></div>
+          <p>Keine Lizenzberatung. Verbindlich ist dein Vertrag. Im Zweifel fragst du deine IT oder deinen Microsoft-Partner.</p>
+          <p>Ändert Microsoft etwas an diesen Bedingungen, steht es im <a href="#pruefprotokoll">Prüfprotokoll</a>. Jeden Montag ein Impuls zur Power Platform und Automatisierung gibt es mit dem <a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=gratis-check" rel="noopener">Newsletter KMUpower Impuls</a>.</p>
+          <div class="knopf-reihe">
+            <button type="button" class="knopf knopf--klein" data-check-teilen>Link zu diesem Ergebnis kopieren</button>
+            <button type="button" class="knopf knopf--leise" data-check-neu>Neu beginnen</button>
+          </div>
+          <p class="rolle__status" role="status" data-check-status></p>
+        </div>
+
+        <template id="check-saetze">
+          <li data-satz="k1" data-gruppe="schon">Du meldest dich mit einem Geschäfts- oder Schulkonto an. Das ist laut Microsoft die erste Bedingung für Microsoft Copilot Chat ohne Zusatzkosten. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="k2" data-gruppe="hinweis" data-ende>Diese Seite behandelt Microsoft Copilot mit Geschäfts- oder Schulkonto. Mit einem persönlichen Microsoft-Konto gelten die Enterprise-Schutzfunktionen laut Microsoft nicht. Für das private Angebot habe ich keine geprüfte Quelle. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="k3" data-gruppe="it">«Melde ich mich bei Microsoft 365 mit einem Geschäftskonto an?»</li>
+          <li data-satz="a-liste" data-gruppe="schon">Laut Microsoft ist Microsoft Copilot Chat ohne Zusatzlizenz enthalten, wenn du dich mit diesem Konto anmeldest und dein Abo dazu berechtigt. Admins können die Websuche abschalten. In einigen Märkten ist Copilot Chat nicht verfügbar. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, <a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">copilot/faq</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="a-anderes" data-gruppe="hinweis">Dein Abo steht nicht in dieser Auswahl. Die vollständige Liste der berechtigten Abonnements steht bei Microsoft. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="a-weiss" data-gruppe="it">«Welches Microsoft-365-Abonnement haben wir, und ist Copilot Chat für uns freigegeben?»</li>
+          <li data-satz="s1" data-gruppe="schon">Laut Microsoft zeigt das grüne Schild, dass Enterprise Data Protection für deine Prompts und Antworten gilt. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Learn: copilot/privacy-and-protections</a>, Stand 15.10.2026)</span></li>
+          <li data-satz="s2" data-gruppe="hinweis">Laut Microsoft erkennst du Enterprise Data Protection am grünen Schild. Fehlt es, frag deine IT, mit welchem Konto du angemeldet bist. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Learn: copilot/privacy-and-protections</a>, <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">copilot/manage</a>, Stand 15.10.2026)</span></li>
+          <li data-satz="s3" data-gruppe="hinweis">Öffne Microsoft Copilot Chat mit deinem Geschäftskonto und schau neben die Schaltfläche für einen neuen Chat. Dort zeigt laut Microsoft ein grünes Schild, dass Enterprise Data Protection gilt. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Learn: copilot/privacy-and-protections</a>, Stand 15.10.2026)</span></li>
+          <li data-satz="s-immer" data-gruppe="hinweis">Websuchanfragen laufen separat über Bing mit eigenen Datenregeln. <span class="klein">(<a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Learn: enterprise-data-protection</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="v1" data-gruppe="schon" data-techniken="t01 t09 t10">Chat mit Websuche, Datei-Upload und Bilderzeugung. Für Datei-Upload und Bilderzeugung gelten Limits, Zahlen nennen die geprüften Microsoft-Seiten nicht. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="v2" data-gruppe="brauchst" data-techniken="g1">Copilot in Word, Excel und PowerPoint braucht eine Lizenz. Mit Microsoft Copilot Chat (Basic) gibt es dort keinen Zugang. Im Chat selbst gibt es laut Microsoft Agents für Word, Excel und PowerPoint, die Dokumente, Tabellen und Präsentationen direkt im Chat erstellen. Was davon bei dir verfügbar ist, hängt von Einstellungen und Lizenz ab. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>, <a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">copilot/faq</a>, <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">copilot/manage</a>, Stand 15.10.2026)</span></li>
+          <li data-satz="v3" data-gruppe="brauchst" data-techniken="t04">Der automatische Zugriff über Microsoft Graph braucht eine Lizenz. Ohne Lizenz bringst du Inhalte selbst ein. In Outlook bezieht Copilot Chat eingeschränkt Mails, Kalender, Meetings, Chats und einen begrenzten Satz Dateien ein. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>, <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">microsoft-365-copilot-overview</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="v4" data-gruppe="schon" data-techniken="t14 t15 t16">Agents mit Anweisungen und öffentlichen Websites sind ohne Zusatzkosten enthalten. Der Agent Builder ist für Agents mit Wissen aus dem Web kostenlos nutzbar. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/agents" rel="noopener">Learn: copilot/agents</a>, <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience" rel="noopener">copilot-studio-experience</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="v5" data-gruppe="brauchst" data-techniken="t23">Agents mit Firmendaten aus SharePoint werden nach Verbrauch abgerechnet und sind für Copilot-Chat-Nutzer standardmässig aus. Dein Admin richtet dafür ein Copilot-Studio-Abonnement oder Pay-as-you-go ein. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/agents" rel="noopener">Learn: copilot/agents</a>, Stand 13.10.2026)</span></li>
+          <li data-satz="v6" data-gruppe="brauchst" data-techniken="t18 t19 t23">Veröffentlichen braucht Lizenz oder Kapazität. In der Testversion von Copilot Studio baust du Agents und prüfst sie im Testchat, veröffentlichen kannst du dort nicht. Nutzer eines veröffentlichten Agents brauchen keine eigene Lizenz, der Betrieb verbraucht Kapazität deines Mandanten. <span class="klein">(<a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a>, <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing" rel="noopener">requirements-licensing</a>, Stand 13.10.2026)</span></li>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <section class="sektion" id="ueberblick" aria-labelledby="h-ueberblick">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Auf einen Blick</span>
+        <h2 id="h-ueberblick">Was du schon hast. Was dazukommt.</h2>
+        <p>Jeder Punkt führt zu seiner Zeile im Nachschlagteil. Dort steht die Bedingung im Wortlaut, mit Quelle und Prüfdatum.</p>
+      </div>
+      <div class="spalten-zwei">
+        <div data-geprueft="2026-10-13" data-pruef-frist="120">
+          <p><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></p>
+          <h3>Ohne Zusatzlizenz, wenn dein Abo dazu berechtigt</h3>
+          <ul class="arrow-list">
+            <li><a href="#chat-ohne-zusatzlizenz">Chat mit Websuche, Datei-Upload und Bilderzeugung</a>, dazu Texte formulieren und umschreiben. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>)</span></li>
+            <li><a href="#agent-web">Agents mit Anweisungen und öffentlichen Websites</a>, standardmässig verfügbar. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/agents" rel="noopener">Learn: copilot/agents</a>)</span></li>
+            <li><a href="#agent-builder">Agent Builder im Chat</a>, kostenlos für Agents mit Wissen aus dem Web. <span class="klein">(<a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience" rel="noopener">Learn: copilot-studio-experience</a>)</span></li>
+            <li><a href="#datenschutz-edp">Enterprise Data Protection</a> für Prompts und Antworten bei Anmeldung mit Entra-Konto, ohne Aktion des Admins. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a>)</span></li>
+            <li><a href="#word-excel-powerpoint">Agents für Word, Excel und PowerPoint</a> direkt im Chat, je nach Einstellungen und Lizenz. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a>, Stand 15.10.2026)</span></li>
+            <li><a href="#organisationsdaten">In Outlook eingeschränkt</a>: Mails, Kalender, Meetings, Chats und ein begrenzter Satz Dateien. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>)</span></li>
+            <li><a href="#studio-testversion">Copilot Studio als Testversion</a>: Agents bauen und im Testchat prüfen. <span class="klein">(<a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a>)</span></li>
+          </ul>
+        </div>
+        <div data-geprueft="2026-10-13" data-pruef-frist="120">
+          <p><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></p>
+          <h3>Mit Lizenz oder Kapazität</h3>
+          <ul class="arrow-list">
+            <li><a href="#word-excel-powerpoint">Copilot in Word, Excel, PowerPoint und OneNote</a>. Mit Copilot Chat (Basic) gibt es dort keinen Zugang. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>)</span></li>
+            <li><a href="#organisationsdaten">Automatischer Zugriff über Microsoft Graph</a>, Work IQ und Semantic Indexing. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>)</span></li>
+            <li><a href="#priority-sprache">Priority Access und Sprachgespräch in Echtzeit</a>. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>, <a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">copilot/faq</a>)</span></li>
+            <li><a href="#agent-firmendaten">Agents mit Daten aus SharePoint oder Graph-Connectors</a>: Abrechnung nach Verbrauch, für Copilot-Chat-Nutzer standardmässig aus. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/agents" rel="noopener">Learn: copilot/agents</a>)</span></li>
+            <li><a href="#studio-betrieb">Einen Agent aus Copilot Studio veröffentlichen und betreiben</a>: Lizenz oder Kapazität in Copilot Credits. <span class="klein">(<a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing" rel="noopener">Learn: requirements-licensing</a>)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sektion flaeche-2" id="mythen" aria-labelledby="h-mythen">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Mythos oder belegt?</span>
+        <h2 id="h-mythen">Vier Sätze, die du sicher schon gehört hast.</h2>
+        <p>Jede Karte hat einen eigenen Link. Schick ihn weiter, wenn im Team wieder jemand den Mythos erzählt.</p>
+      </div>
+      <ul class="momente" role="list">
+        <li>
+        <article class="mythos" id="mythos-entra-konto" aria-labelledby="m-entra" data-geprueft="2026-10-13" data-pruef-frist="120">
+          <span class="mythos__label">Mythos</span>
+          <h3 class="mythos__aussage" id="m-entra">«Ein Entra-Konto reicht für Copilot Chat.»</h3>
+          <span class="mythos__label mythos__label--belegt">Belegt</span>
+          <p>Ein Entra-Konto allein ist keine Berechtigung. Microsoft Copilot Chat ist nur dann ohne Zusatzkosten dabei, wenn deine Organisation ein qualifizierendes Microsoft-365-Abonnement hat.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026. <a href="#mythos-entra-konto">Direktlink<span class="sr-only"> zum Mythos Entra-Konto</span></a></p>
+        </article>
+        </li>
+        <li>
+        <article class="mythos" id="mythos-testversion" aria-labelledby="m-test" data-geprueft="2026-10-13" data-pruef-frist="120">
+          <span class="mythos__label">Mythos</span>
+          <h3 class="mythos__aussage" id="m-test">«In der Testversion von Copilot Studio kannst du veröffentlichen.»</h3>
+          <span class="mythos__label mythos__label--belegt">Belegt</span>
+          <p>In der Testversion baust du Agents und prüfst sie im Testchat. Veröffentlichen geht nicht. Microsoft schreibt dazu: «You can't publish the agent.»</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a>, Stand 13.10.2026. <a href="#mythos-testversion">Direktlink<span class="sr-only"> zum Mythos Testversion</span></a></p>
+        </article>
+        </li>
+        <li>
+        <article class="mythos" id="mythos-mails" aria-labelledby="m-mails" data-geprueft="2026-10-13" data-pruef-frist="120">
+          <span class="mythos__label">Mythos</span>
+          <h3 class="mythos__aussage" id="m-mails">«Copilot Chat liest ohne Lizenz automatisch alle deine Mails.»</h3>
+          <span class="mythos__label mythos__label--belegt">Belegt</span>
+          <p>Ohne Lizenz greift Copilot Chat nicht automatisch über Microsoft Graph auf deine Daten zu. Du bringst Inhalte selbst ein, per Text oder Datei-Upload. In Outlook kann Copilot Chat eingeschränkt Mails, Kalender, Meetings, Chats und einen begrenzten Satz Dateien einbeziehen.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Learn: microsoft-365-copilot-overview</a> und <a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">copilot/overview</a>, Stand 13.10.2026. <a href="#mythos-mails">Direktlink<span class="sr-only"> zum Mythos Mails</span></a></p>
+        </article>
+        </li>
+        <li>
+        <article class="mythos" id="mythos-websuche" aria-labelledby="m-web" data-geprueft="2026-10-13" data-pruef-frist="120">
+          <span class="mythos__label">Mythos</span>
+          <h3 class="mythos__aussage" id="m-web">«Websuchanfragen sind genauso geschützt wie deine Prompts.»</h3>
+          <span class="mythos__label mythos__label--belegt">Belegt</span>
+          <p>Die Zusage der Enterprise Data Protection gilt für Prompts und Antworten. Websuchanfragen gehen an den Bing-Dienst und laufen unter eigenen Datenregeln. Laut Learn deckt das Data Protection Addendum sie nicht ab.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Learn: enterprise-data-protection</a> und <a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">copilot/faq</a>, Stand 13.10.2026. <a href="#mythos-websuche">Direktlink<span class="sr-only"> zum Mythos Websuche</span></a></p>
+        </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sektion nacht" aria-labelledby="h-dojo">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Dojo-Regel 3</span>
+        <h2 id="h-dojo">Nutze zuerst, was du schon hast.</h2>
+        <p>Ist Microsoft Copilot Chat in deinem Abo enthalten, liegt die Ausrüstung schon bereit. Was fehlt, ist Übung. Im KMUpower Dojo übst du mit Ninja-Techniken, vom weissen bis zum schwarzen Gürtel. Jede Technik trägt eine Quelle bei Microsoft Learn mit Prüfdatum. Ihr Badge sagt dir, ob sie ohne Zusatzlizenz läuft.</p>
+      </div>
+      <p>Die ersten drei Gürtel üben das Handwerk im Chat. Braucht eine Technik doch eine Lizenz, steht das auf ihrer Karte.</p>
+      <ol class="regeln">
+        <li><div><span class="knoten" data-guertel-nr="1">Weisser Gürtel</span><br><a href="../techniken/#weisser-guertel">Grundstellung</a><br><span class="klein">Prompts mit Ziel, Kontext, Quelle und Erwartung schreiben und dich befragen lassen.</span></div></li>
+        <li><div><span class="knoten" data-guertel-nr="2">Gelber Gürtel</span><br><a href="../techniken/#gelber-guertel">Zweiter Blick</a><br><span class="klein">Entwürfe so anfordern und prüfen lassen, dass Fehler vor dem Versand auffallen.</span></div></li>
+        <li><div><span class="knoten" data-guertel-nr="3">Oranger Gürtel</span><br><a href="../techniken/#oranger-guertel">Spurenlesen</a><br><span class="klein">Dateien und Webquellen auswerten, jede Aussage mit Fundstelle.</span></div></li>
       </ol>
-    </section>
+      <p class="versprechen">Ich prüfe. Du übst. Was ich nicht belegen kann, steht hier nicht.</p>
+      <p class="knopf-reihe">
+        <a class="knopf knopf--primaer" href="../dojo/test/">Welcher Gürtel bist du? 7 Fragen</a>
+        <a class="knopf" href="#techniken-ohne-zusatzlizenz">Techniken ohne Zusatzlizenz</a>
+        <a class="knopf knopf--leise" href="../kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a>
+      </p>
+    </div>
+  </section>
 
-    <section aria-labelledby="h-tab">
-      <h2 id="h-tab" class="sr-only">Übersicht nach Produkt</h2>
+  <section class="sektion" id="techniken-ohne-zusatzlizenz" aria-labelledby="h-techniken">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Erste Techniken</span>
+        <h2 id="h-techniken">Diese Techniken laufen ohne Zusatzlizenz.</h2>
+        <p>Voraussetzung ist ein Abo, das Microsoft Copilot Chat enthält. Techniken mit dem Badge «Agent Builder» nutzen nur Anweisungen und öffentliche Websites.</p>
+      </div>
+<details class="einklapp" data-mobil-zu open>
+<summary>Die Techniken ohne Zusatzlizenz anzeigen</summary>
+<!-- RAHMEN:GRATIS-TECHNIKEN -->
+<ul class="pfad__liste"><li class="karte-kompakt" data-technik="t01" data-guertel-nr="1"><span class="karte-kompakt__nr">01</span><a class="karte-kompakt__link" href="../techniken/erst-befragen-dann-schreiben/">Das Verhör</a><span class="klein">Lass dich befragen, bevor du schreibst</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t02" data-guertel-nr="1"><span class="karte-kompakt__nr">02</span><a class="karte-kompakt__link" href="../techniken/fachtext-in-klartext/">Die Klarschrift</a><span class="klein">Fachtext in Klartext, mit Verlustliste</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t03" data-guertel-nr="1"><span class="karte-kompakt__nr">03</span><a class="karte-kompakt__link" href="../techniken/folienbilder-einheitlicher-stil/">Der Tuschepinsel</a><span class="klein">Folienbilder in einem einheitlichen Stil</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t05" data-guertel-nr="2"><span class="karte-kompakt__nr">05</span><a class="karte-kompakt__link" href="../techniken/text-aus-empfaengersicht-angreifen/">Der Gegner im Spiegel</a><span class="klein">Den eigenen Text aus Sicht des Empfängers angreifen</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t06" data-guertel-nr="2"><span class="karte-kompakt__nr">06</span><a class="karte-kompakt__link" href="../techniken/entwurf-gegen-quelle-pruefen/">Das Falkenauge</a><span class="klein">Entwurf gegen Quelldokument prüfen</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t07" data-guertel-nr="2"><span class="karte-kompakt__nr">07</span><a class="karte-kompakt__link" href="../techniken/pre-mortem-fuer-projekte/">Der Blick vom Ende</a><span class="klein">Pre-Mortem für ein Projekt</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t09" data-guertel-nr="3"><span class="karte-kompakt__nr">09</span><a class="karte-kompakt__link" href="../techniken/offerten-vergleichen/">Das Offerten-Duell</a><span class="klein">Mehrere Offerten vergleichen</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t10" data-guertel-nr="3"><span class="karte-kompakt__nr">10</span><a class="karte-kompakt__link" href="../techniken/vertragsfristen-finden/">Die Fallgrube</a><span class="klein">Fristen und Verlängerungsfallen im Vertrag finden</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t11" data-guertel-nr="3"><span class="karte-kompakt__nr">11</span><a class="karte-kompakt__link" href="../techniken/eigenen-schreibstil-festhalten/">Der Schattenschreiber</a><span class="klein">Eigenen Schreibstil als Steckbrief festhalten</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t12" data-guertel-nr="3"><span class="karte-kompakt__nr">12</span><a class="karte-kompakt__link" href="../techniken/webrecherche-mit-quellen/">Die Fährte</a><span class="klein">Webrecherche mit Quellenpflicht</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t13" data-guertel-nr="3"><span class="karte-kompakt__nr">13</span><a class="karte-kompakt__link" href="../techniken/quiz-aus-reglement/">Das Dojo-Quiz</a><span class="klein">Quiz aus einem Reglement für neue Mitarbeitende</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t14" data-guertel-nr="4"><span class="karte-kompakt__nr">14</span><a class="karte-kompakt__link" href="../techniken/aus-chat-einen-agent-machen/">Der Abdruck</a><span class="klein">Aus dem besten Chat einen Agent machen</span><a class="zugang zugang--builder" href="../gratis/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Agent Builder, ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t15" data-guertel-nr="4"><span class="karte-kompakt__nr">15</span><a class="karte-kompakt__link" href="../techniken/agent-fuer-die-eigene-website/">Der Torwächter</a><span class="klein">Agent, der nur deine Website kennt</span><a class="zugang zugang--builder" href="../gratis/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Agent Builder, ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t16" data-guertel-nr="4"><span class="karte-kompakt__nr">16</span><a class="karte-kompakt__link" href="../techniken/agent-fuer-gespraechstraining/">Der Sparringspartner</a><span class="klein">Agent für Gesprächstraining</span><a class="zugang zugang--builder" href="../gratis/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Agent Builder, ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t17" data-guertel-nr="4"><span class="karte-kompakt__nr">17</span><a class="karte-kompakt__link" href="../techniken/agent-anweisungen-pruefen/">Die Schriftprobe</a><span class="klein">Agent-Anweisungen vor dem Test prüfen</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t18" data-guertel-nr="5"><span class="karte-kompakt__nr">18</span><a class="karte-kompakt__link" href="../techniken/testfragen-fuer-agents/">Die Gürtelprüfung</a><span class="klein">20 Testfragen für deinen Agent</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t21" data-guertel-nr="6"><span class="karte-kompakt__nr">21</span><a class="karte-kompakt__link" href="../techniken/power-automate-ausdruecke-erklaert/">Der Dolmetscher</a><span class="klein">Power-Automate-Ausdrücke mit Erklärung</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t22" data-guertel-nr="6"><span class="karte-kompakt__nr">22</span><a class="karte-kompakt__link" href="../techniken/text-anonymisieren/">Die Tarnkappe</a><span class="klein">Text anonymisieren, bevor er weitergeht</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="karte-kompakt" data-technik="t24" data-guertel-nr="7"><span class="karte-kompakt__nr">24</span><a class="karte-kompakt__link" href="../techniken/betriebsblatt-fuer-agents/">Der Ehrenkodex</a><span class="klein">Betriebsblatt mit Abschaltkriterien</span><a class="zugang zugang--frei" href="../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li></ul>
+<p><a class="knopf" href="../techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Alle Techniken ohne Zusatzlizenz auf der Technik-Wand</a></p>
+<!-- /RAHMEN:GRATIS-TECHNIKEN -->
+</details>
+    </div>
+  </section>
+
+  <section class="sektion flaeche-2" id="nachschlagen" aria-labelledby="h-nachschlagen">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Nachschlagteil</span>
+        <h2 id="h-nachschlagen">Jede Bedingung im Wortlaut.</h2>
+        <p>Microsoft ändert Funktionen und Bedingungen laufend. Im Zweifel gilt die verlinkte Quelle und nicht diese Seite. Jede Zeile hat einen eigenen Anker, auf den die Techniken verweisen.</p>
+      </div>
+
+      <details class="einklapp tabelle" data-mobil-zu open>
+      <summary>Microsoft Copilot Chat: jede Bedingung mit Quelle</summary>
       <div class="table-block">
         <table class="rtable" role="table">
           <caption>Microsoft Copilot Chat</caption>
@@ -92,65 +557,69 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-          <tr role="row">
+          <tr role="row" id="chat-ohne-zusatzlizenz" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Chat mit Websuche, Datei-Upload und Bilderzeugung</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Ohne Zusatzlizenz</span></td>
-            <td role="cell" data-label="Bedingung">Anmeldung mit Geschäfts-, Schul- oder Unikonto und ein qualifizierendes Microsoft-365-Abonnement. Ein Konto allein genügt nicht.</td>
+            <td role="cell" data-label="Bedingung">Anmeldung mit Geschäfts-, Schul- oder Unikonto und ein qualifizierendes Microsoft-365-Abonnement. Ein Konto allein genügt nicht. Enthalten sind auch Inhalte formulieren und umschreiben und mit Agents interagieren.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="qualifizierende-abos" data-geprueft="2026-10-15" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Qualifizierende Abonnements</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Voraussetzung</span></td>
-            <td role="cell" data-label="Bedingung">Unter anderem Microsoft 365 Business Basic, Business Standard, Business Premium, E3 und E5 sowie Office 365 E1. Die vollständige Liste steht bei Microsoft.</td>
+            <td role="cell" data-label="Bedingung">Unter anderem Microsoft 365 Business Basic, Business Standard, Business Premium, E3, E5, E7, F1, F3, A1, A3, A5, G3 und G5, Office 365 E1, E1 Plus, E3, E5, F3, G1, G3, G5, A1, A1 Plus, A3 und A5 sowie Teams Essentials, Teams Enterprise und Teams EEA. Die Varianten «(no Teams)» und «EEA (no Teams)» sind eingeschlossen. Die vollständige Liste steht bei Microsoft.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-15">15.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="organisationsdaten" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Zugriff auf Daten deines Mandanten (Microsoft Graph, Work IQ, Semantic Indexing)</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Eingeschränkt ohne Lizenz</span></td>
             <td role="cell" data-label="Bedingung">Ohne Microsoft-Copilot-Lizenz bringst du Inhalte selbst ein, zum Beispiel als Text oder per Datei-Upload. In Outlook und Teams bezieht Copilot Chat den Inhalt ein, den du geöffnet hast. In Outlook kann es ohne Lizenz zusätzlich E-Mails, Kalender, Meetings, Chats und einen begrenzten Satz Dateien einbeziehen (Microsoft nennt das «reduced graph grounding»). Der automatische Zugriff über Microsoft Graph, Work IQ und Semantic Indexing gehört zum lizenzierten Erlebnis.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Learn: microsoft-365-copilot-overview</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="word-excel-powerpoint" data-geprueft="2026-10-15" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Copilot in Word, Excel, PowerPoint und OneNote</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Nicht in Copilot Chat enthalten</span></td>
-            <td role="cell" data-label="Bedingung">Mit Copilot Chat (Basic) gibt es dort keinen Zugang. Mit Lizenz gibt es je nach Stufe Standard-Zugang oder vollen Zugang mit Priority Access.</td>
-            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Bedingung">Mit Copilot Chat (Basic) gibt es dort keinen Zugang. Mit Lizenz gibt es je nach Stufe Standard-Zugang oder vollen Zugang mit Priority Access. Im Chat selbst nennt Microsoft Agents für Word, Excel und PowerPoint, die Dokumente, Tabellen und Präsentationen direkt im Chat erstellen. Was davon verfügbar ist, hängt laut Microsoft von Einstellungen und Lizenz ab.</td>
+            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a></li></ul></td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-15">15.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="priority-sprache" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Priority Access und Echtzeit-Sprachgespräch</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Nur mit Lizenz</span></td>
             <td role="cell" data-label="Bedingung">Priority Access gibt es nur mit der Copilot-Lizenz. Das Sprachgespräch in Echtzeit ist lizenzierten Nutzern vorbehalten.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="datenschutz-edp" data-geprueft="2026-10-15" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Datenschutzzusagen (Enterprise Data Protection)</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Ohne Zusatzkosten</span></td>
-            <td role="cell" data-label="Bedingung">Gilt bei Anmeldung mit Entra-Konto für Prompts und Antworten, laut Microsoft ohne Aktion des Admins. Prompts und Antworten werden laut Microsoft nicht zum Training von Foundation Models verwendet. Websuchanfragen laufen separat über Bing mit eigenen Datenregeln. Das ist die Aussage von Microsoft und keine Bewertung für deinen Fall.</td>
-            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Learn: enterprise-data-protection</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Bedingung">Gilt bei Anmeldung mit Entra-Konto für Prompts und Antworten, laut Microsoft ohne Aktion des Admins. Erkennbar am grünen Schild neben der Schaltfläche für einen neuen Chat. Prompts und Antworten werden laut Microsoft nicht zum Training von Foundation Models verwendet. Websuchanfragen laufen separat über Bing mit eigenen Datenregeln. Das ist die Aussage von Microsoft und keine Bewertung für deinen Fall.</td>
+            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a></li><li><a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Learn: copilot/privacy-and-protections</a> (grünes Schild)</li><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Learn: enterprise-data-protection</a></li></ul></td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-15">15.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="standard-access" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Nutzung im Alltag</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Kapazitätsabhängig</span></td>
             <td role="cell" data-label="Bedingung">Der Zugang läuft als «standard access». Qualität und Leistung können schwanken, für Datei-Upload und Bilderzeugung gelten Limits. Zahlen nennt die geprüfte Seite nicht.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="verfuegbarkeit" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Verfügbarkeit</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Regional unterschiedlich</span></td>
             <td role="cell" data-label="Bedingung">In einigen Märkten ist Copilot Chat nicht zugänglich. Studierende unter 13 Jahren sind nicht berechtigt.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
           </tbody>
         </table>
       </div>
+      </details>
+
+      <details class="einklapp tabelle" data-mobil-zu open>
+      <summary>Agents in Microsoft Copilot Chat: jede Bedingung mit Quelle</summary>
       <div class="table-block">
         <table class="rtable" role="table">
           <caption>Agents in Microsoft Copilot Chat</caption>
@@ -164,33 +633,37 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-          <tr role="row">
+          <tr role="row" id="agent-web" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Agent auf Basis von Anweisungen und öffentlichen Websites</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Ohne Zusatzkosten</span></td>
             <td role="cell" data-label="Bedingung">Standardmässig verfügbar. Der Agent hat keinen Zugriff auf Daten deines Mandanten.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/agents" rel="noopener">Learn: copilot/agents</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="agent-firmendaten" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Agent mit Daten aus SharePoint oder Graph-Connectors</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Nach Verbrauch</span></td>
-            <td role="cell" data-label="Bedingung">Für Nutzer von Copilot Chat standardmässig aus. Admins müssen ein Copilot-Studio-Abonnement oder Pay-as-you-go einrichten.</td>
+            <td role="cell" data-label="Bedingung">Für Nutzer von Copilot Chat standardmässig aus. Admins müssen ein Copilot-Studio-Abonnement oder Pay-as-you-go einrichten. Mit Microsoft-Copilot-Lizenz kommt die Nutzung von Agents ohne Aktion des Admins dazu.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/copilot/agents" rel="noopener">Learn: copilot/agents</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="agent-builder" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Agent Builder im Chat</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Kostenlos für Web-Wissen</span></td>
             <td role="cell" data-label="Bedingung">Kostenlos nutzbar für Agents, die nur auf Wissen aus dem Web beruhen.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience" rel="noopener">Learn: copilot-studio-experience</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
           </tbody>
         </table>
       </div>
+      </details>
+
+      <details class="einklapp tabelle" data-mobil-zu open>
+      <summary>Copilot Studio für den Einstieg: jede Bedingung mit Quelle</summary>
       <div class="table-block">
         <table class="rtable" role="table">
-          <caption>Copilot Studio</caption>
+          <caption>Copilot Studio für den Einstieg</caption>
           <thead role="rowgroup">
             <tr role="row">
               <th scope="col" role="columnheader" class="col-fn">Funktion</th>
@@ -201,97 +674,244 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-          <tr role="row">
+          <tr role="row" id="studio-testversion" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Kostenlose Testversion</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Testen ohne Kosten</span></td>
-            <td role="cell" data-label="Bedingung">Für Einzelpersonen mit Geschäfts- oder Schulkonto. Private E-Mail-Adressen werden abgelehnt. Du kannst Agents erstellen und im Testchat prüfen, aber nicht veröffentlichen.</td>
+            <td role="cell" data-label="Bedingung">Für Einzelpersonen mit Geschäfts- oder Schulkonto. Private E-Mail-Adressen werden abgelehnt, Admins können die Selbstanmeldung deaktivieren. Du kannst Agents erstellen und im Testchat prüfen, aber nicht veröffentlichen.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
+          <tr role="row" id="studio-nach-ablauf" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Nach Ablauf der Testversion</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Verlängerbar</span></td>
-            <td role="cell" data-label="Bedingung">Die Verlängerung um 30 Tage ist möglich. Agents laufen danach noch bis zu 90 Tage weiter.</td>
+            <td role="cell" data-label="Bedingung">Die Verlängerung um 30 Tage ist möglich. Agents laufen danach noch bis zu 90 Tage weiter. Die Länge der ursprünglichen Testphase nennt die geprüfte Seite nicht.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
-            <th scope="row" role="rowheader" data-label="Funktion">Mit Copilot Studio arbeiten</th>
-            <td role="cell" data-label="Einordnung"><span class="tag">Lizenz oder Rolle nötig</span></td>
-            <td role="cell" data-label="Bedingung">Nötig ist eine von vier Konfigurationen: die Copilot-Studio-User-Lizenz (kostenlos, setzt aber ein Copilot-Credit-Pack-Abonnement des Mandanten voraus), die Rolle «Copilot Studio authors», eine Microsoft-365-Copilot-Lizenz oder die Testlizenz.</td>
-            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing" rel="noopener">Learn: billing-licensing</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
-          </tr>
-          <tr role="row">
+          <tr role="row" id="studio-betrieb" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Veröffentlichter Agent im Betrieb</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Kapazität in Copilot Credits</span></td>
             <td role="cell" data-label="Bedingung">Nutzer des Agents brauchen keine eigene Lizenz, der Betrieb verbraucht aber Kapazität des Mandanten. Bezug über Pay-as-you-go, Prepaid-Packs oder Prepurchase. Seit dem 1. September 2025 heisst die Einheit Copilot Credits statt Messages.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing" rel="noopener">Learn: requirements-licensing</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing" rel="noopener">Learn: billing-licensing</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
-          <tr role="row">
-            <th scope="row" role="rowheader" data-label="Funktion">Verbrauch je Funktion</th>
-            <td role="cell" data-label="Einordnung"><span class="tag">Raten veröffentlicht</span></td>
-            <td role="cell" data-label="Bedingung">Beispiele laut Microsoft: Classic Answer 1 Copilot Credit, Generative Answer 2. Die Raten können sich ändern. Den Preis pro Credit nennt die Seite nicht, deshalb steht er hier nicht.</td>
-            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Learn: requirements-messages-management</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
-          </tr>
-          <tr role="row">
-            <th scope="row" role="rowheader" data-label="Funktion">Mit Microsoft-Copilot-Lizenz</th>
-            <td role="cell" data-label="Einordnung"><span class="tag">Ohne Credit-Verbrauch, mit Fair-Use-Grenzen</span></td>
-            <td role="cell" data-label="Bedingung">Gilt für die Agent-Nutzung durch lizenzierte Mitarbeitende in Copilot Chat, Teams und SharePoint bei Classic Answers, Generative Answers und Graph Grounding.</td>
-            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing" rel="noopener">Learn: billing-licensing</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Learn: requirements-messages-management</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
-          </tr>
-          <tr role="row">
-            <th scope="row" role="rowheader" data-label="Funktion">Teams-Plan in ausgewählten Abonnements</th>
-            <td role="cell" data-label="Einordnung"><span class="tag">Eingeschränkt</span></td>
-            <td role="cell" data-label="Bedingung">Klassische Orchestrierung, Veröffentlichung nur in Teams, keine Premium-Connectors. Die volle Funktionalität braucht ein eigenständiges Copilot-Studio-Abonnement.</td>
-            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
-          </tr>
-          <tr role="row">
-            <th scope="row" role="rowheader" data-label="Funktion">Agents auf dem GitHub-Copilot-Harness</th>
-            <td role="cell" data-label="Einordnung"><span class="tag">Verbrauchsabhängig</span></td>
-            <td role="cell" data-label="Bedingung">Nutzen, Bauen, Testen und Auswerten kann laut Microsoft Copilot Credits verbrauchen. Der Harness ist eine Laufzeit von Copilot Studio und nicht der Dienst GitHub Copilot.</td>
-            <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/preview-overview" rel="noopener">Learn: Preview and test an agent (GitHub Copilot)</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview" rel="noopener">Learn: harnesses-overview</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
-          </tr>
-          <tr role="row">
+          <tr role="row" id="studio-gaeste" data-geprueft="2026-10-13" data-pruef-frist="120">
             <th scope="row" role="rowheader" data-label="Funktion">Gastbenutzer eines Mandanten</th>
             <td role="cell" data-label="Einordnung"><span class="tag">Kein Zugriff</span></td>
             <td role="cell" data-label="Bedingung">Gastbenutzer haben keinen Zugriff auf Copilot Studio.</td>
             <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing" rel="noopener">Learn: requirements-licensing</a></li></ul></td>
-            <td role="cell" data-label="Stand">13.10.2026</td>
+            <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
           </tr>
           </tbody>
         </table>
       </div>
-    </section>
+      </details>
 
-    <section class="section" aria-labelledby="h-mehr">
-      <h2 id="h-mehr">Weiterlesen</h2>
-      <ul class="arrow-list">
-        <li><a href="../vorlagen/">Vorlagen, die auf dieser Übersicht aufbauen</a></li>
-        <li><a href="https://www.powerplatformtip.com/knowledge/copilot-studio-vs-m365-copilot/" rel="noopener">Copilot Studio vs Microsoft 365 Copilot vs Agent Builder</a> (englisch, powerplatformtip.com)</li>
-        <li><a href="https://www.powerplatformtip.com/knowledge/ways-to-build-an-agent/" rel="noopener">Ways to Build an Agent in Microsoft 365</a> (englisch, powerplatformtip.com)</li>
-      </ul>
-    </section>
-  </div>
+      <details class="einklapp" id="studio-kapazitaet">
+        <summary>Für Maker und Entscheider: Kapazität und Copilot Credits</summary>
+        <div class="table-block">
+          <table class="rtable" role="table">
+            <caption>Copilot Studio: Lizenz, Kapazität und Verbrauch</caption>
+            <thead role="rowgroup">
+              <tr role="row">
+                <th scope="col" role="columnheader" class="col-fn">Funktion</th>
+                <th scope="col" role="columnheader" class="col-st">Einordnung</th>
+                <th scope="col" role="columnheader" class="col-bd">Bedingung</th>
+                <th scope="col" role="columnheader" class="col-q">Quelle</th>
+                <th scope="col" role="columnheader" class="col-d">Stand</th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+            <tr role="row" id="studio-arbeiten" data-geprueft="2026-10-13" data-pruef-frist="120">
+              <th scope="row" role="rowheader" data-label="Funktion">Mit Copilot Studio arbeiten</th>
+              <td role="cell" data-label="Einordnung"><span class="tag">Lizenz oder Rolle nötig</span></td>
+              <td role="cell" data-label="Bedingung">Nötig ist eine von vier Konfigurationen: die Copilot-Studio-User-Lizenz (kostenlos, setzt aber ein Copilot-Credit-Pack-Abonnement des Mandanten voraus), die Rolle «Copilot Studio authors», eine Microsoft-365-Copilot-Lizenz oder die Testlizenz.</td>
+              <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing" rel="noopener">Learn: billing-licensing</a></li></ul></td>
+              <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
+            </tr>
+            <tr role="row" id="studio-verbrauch" data-geprueft="2026-10-15" data-pruef-frist="120">
+              <th scope="row" role="rowheader" data-label="Funktion">Verbrauch je Funktion</th>
+              <td role="cell" data-label="Einordnung"><span class="tag">Raten veröffentlicht</span></td>
+              <td role="cell" data-label="Bedingung">Laut Microsoft: Classic Answer 1 Copilot Credit, Generative Answer 2, Agent Action 5, Tenant Graph Grounding 10, Agent-Flow-Aktionen 13 pro 100. Die Raten können sich ändern. Gekaufte Kapazität wird laut der Seite zur Lizenzierung monatlich durchgesetzt, ungenutzte Credits verfallen. Der Agent Usage Estimator schreibt, dass manche Käufe übertragbar sind. Massgebend ist dein Vertrag. Bei 125 Prozent des vorausbezahlten Kontingents werden Custom Agents deaktiviert, laufende Gespräche werden nicht unterbrochen. Den Preis pro Credit nennt die Seite nicht, deshalb steht er hier nicht.</td>
+              <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Learn: requirements-messages-management</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing" rel="noopener">Learn: billing-licensing</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator" rel="noopener">Learn: agent-usage-estimator</a></li></ul></td>
+              <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-15">15.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
+            </tr>
+            <tr role="row" id="studio-mit-lizenz" data-geprueft="2026-10-15" data-pruef-frist="120">
+              <th scope="row" role="rowheader" data-label="Funktion">Mit Microsoft-Copilot-Lizenz</th>
+              <td role="cell" data-label="Einordnung"><span class="tag">Ohne Credit-Verbrauch, mit Fair-Use-Grenzen</span></td>
+              <td role="cell" data-label="Bedingung">Gilt laut der Seite zur Lizenzierung für die Agent-Nutzung durch lizenzierte Mitarbeitende in Copilot Chat, Teams und SharePoint bei Classic Answers, Generative Answers und Graph Grounding. Die Ratentabelle nennt zusätzlich Agent Actions und Agent-Flow-Aktionen ohne Verbrauch, bei Agent Flows nur mit dem Auslöser «When an agent calls the flow». Microsoft ist hier nicht einheitlich.</td>
+              <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing" rel="noopener">Learn: billing-licensing</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Learn: requirements-messages-management</a></li></ul></td>
+              <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-15">15.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
+            </tr>
+            <tr role="row" id="studio-teams-plan" data-geprueft="2026-10-13" data-pruef-frist="120">
+              <th scope="row" role="rowheader" data-label="Funktion">Teams-Plan in ausgewählten Abonnements</th>
+              <td role="cell" data-label="Einordnung"><span class="tag">Eingeschränkt</span></td>
+              <td role="cell" data-label="Bedingung">Klassische Orchestrierung, Veröffentlichung nur in Teams, keine Premium-Connectors, keine generative Orchestrierung, nur Dataverse-for-Teams-Umgebungen. Die volle Funktionalität braucht ein eigenständiges Copilot-Studio-Abonnement.</td>
+              <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a></li></ul></td>
+              <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
+            </tr>
+            <tr role="row" id="studio-harness" data-geprueft="2026-10-13" data-pruef-frist="120">
+              <th scope="row" role="rowheader" data-label="Funktion">Agents auf dem GitHub-Copilot-Harness</th>
+              <td role="cell" data-label="Einordnung"><span class="tag">Verbrauchsabhängig</span></td>
+              <td role="cell" data-label="Bedingung">Nutzen, Bauen, Testen und Auswerten kann laut Microsoft Copilot Credits verbrauchen. Der Harness ist ein Framework von Copilot Studio und nicht der Dienst GitHub Copilot.</td>
+              <td role="cell" data-label="Quelle"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/preview-overview" rel="noopener">Learn: Preview and test an agent (GitHub Copilot)</a></li><li><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview" rel="noopener">Learn: harnesses-overview</a></li></ul></td>
+              <td role="cell" data-label="Stand"><a class="stempel stempel--klein" href="#methode"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-13">13.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <p>Was Copilot Credits kosten und welche Lizenzausnahmen gelten, steht auf <a href="https://powerplatformgovernance.com/de/posts/copilot-studio-credits-licence-exemptions-costs-and-deadlines-7b922a1f/" rel="noopener">powerplatformgovernance.com</a>. Wann du von Chat zu Copilot Studio wechselst, ordnet der Vergleich <a href="https://www.powerplatformtip.com/knowledge/copilot-studio-vs-m365-copilot/" rel="noopener">Copilot Studio vs Microsoft 365 Copilot vs Agent Builder</a> ein (englisch, powerplatformtip.com).</p>
+    </div>
+  </section>
+
+  <section class="sektion" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Häufige Fragen</span>
+        <h2 id="h-faq">Kurz gefragt, belegt beantwortet.</h2>
+        <p>Jede Antwort zuerst, die Quelle am Ende. Der Stand steht bei jeder Antwort.</p>
+      </div>
+      <div class="prose">
+        <details class="faq" id="faq-chat-kostenlos">
+          <summary>Ist Microsoft Copilot Chat kostenlos?</summary>
+          <p data-faq-antwort>Für berechtigte Nutzer ja, ohne Zusatzkosten. Bedingung sind die Anmeldung mit einem Geschäfts- oder Schulkonto und ein qualifizierendes Microsoft-365-Abonnement deiner Organisation.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026. Details: <a href="#qualifizierende-abos">qualifizierende Abonnements</a>.</p>
+        </details>
+        <details class="faq" id="faq-microsoft-konto">
+          <summary>Reicht ein Geschäftskonto (Entra) für Copilot Chat?</summary>
+          <p data-faq-antwort>Nein. Ein Entra-Konto allein ist keine Berechtigung, deine Organisation braucht ein qualifizierendes Abonnement.</p>
+          <p>Ein persönliches Microsoft-Konto, zum Beispiel von Outlook.com, ist etwas anderes. Damit gelten die Enterprise-Schutzfunktionen laut Microsoft nicht.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>, Stand 13.10.2026.</p>
+        </details>
+        <details class="faq" id="faq-mails-dateien">
+          <summary>Kann Copilot Chat ohne Lizenz meine Mails und Dateien lesen?</summary>
+          <p data-faq-antwort>Nicht automatisch über Microsoft Graph. Du bringst Inhalte selbst ein, per Text oder Datei-Upload. In Outlook kann Copilot Chat laut Microsoft ohne Lizenz Mails, Kalender, Meetings, Chats und einen begrenzten Satz Dateien einbeziehen.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a> und <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">microsoft-365-copilot-overview</a>, Stand 13.10.2026. Details: <a href="#organisationsdaten">Zugriff auf Daten deines Mandanten</a>.</p>
+        </details>
+        <details class="faq" id="faq-word-excel">
+          <summary>Gibt es Copilot in Word und Excel gratis?</summary>
+          <p data-faq-antwort>Copilot direkt in Word, Excel, PowerPoint und OneNote nicht: Mit Microsoft Copilot Chat (Basic) gibt es dort keinen Zugang.</p>
+          <p>In Microsoft Copilot Chat selbst gibt es laut Microsoft aber Agents für Word, Excel und PowerPoint, die Dokumente, Tabellen und Präsentationen direkt im Chat erstellen. Was davon bei dir verfügbar ist, hängt laut Microsoft von Einstellungen und Lizenz ab.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Learn: copilot/overview</a>, Stand 13.10.2026. Agents im Chat: <a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">copilot/faq</a> und <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">copilot/manage</a>, Stand 15.10.2026.</p>
+        </details>
+        <details class="faq" id="faq-studio-testen">
+          <summary>Kann ich Copilot Studio kostenlos testen?</summary>
+          <p data-faq-antwort>Ja, als Einzelperson mit Geschäfts- oder Schulkonto. Du kannst Agents bauen und im Testchat prüfen, aber nicht veröffentlichen. Private Mailadressen werden abgelehnt.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Learn: requirements-licensing-subscriptions</a>, Stand 13.10.2026.</p>
+        </details>
+        <details class="faq" id="faq-agents">
+          <summary>Sind Agents in Copilot Chat gratis?</summary>
+          <p data-faq-antwort>Agents, die nur auf Anweisungen und öffentlichen Websites beruhen, sind ohne Zusatzkosten enthalten. Agents mit Daten aus SharePoint oder Graph-Connectors werden nach Verbrauch abgerechnet und sind für Copilot-Chat-Nutzer standardmässig aus.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/agents" rel="noopener">Learn: copilot/agents</a>, Stand 13.10.2026.</p>
+        </details>
+        <details class="faq" id="faq-credit">
+          <summary>Was kostet ein Copilot Credit?</summary>
+          <p data-faq-antwort>Den Preis nennt diese Seite nicht, weil ich ihn nicht geprüft habe. Microsoft veröffentlicht Verbrauchsraten je Funktion, zum Beispiel 1 Copilot Credit für eine Classic Answer und 2 für eine Generative Answer. Die Raten können sich ändern.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Learn: requirements-messages-management</a>, Stand 13.10.2026. Kosten und Lizenzausnahmen: <a href="https://powerplatformgovernance.com/de/posts/copilot-studio-credits-licence-exemptions-costs-and-deadlines-7b922a1f/" rel="noopener">powerplatformgovernance.com</a>.</p>
+        </details>
+        <details class="faq" id="faq-agent-nutzer">
+          <summary>Brauchen Nutzer eines veröffentlichten Agents eine eigene Lizenz?</summary>
+          <p data-faq-antwort>Nein. Der Betrieb verbraucht aber Kapazität deines Mandanten.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing" rel="noopener">Learn: requirements-licensing</a>, Stand 13.10.2026.</p>
+        </details>
+        <details class="faq" id="faq-training">
+          <summary>Werden meine Prompts zum Training verwendet?</summary>
+          <p data-faq-antwort>Laut Microsoft werden Prompts und Antworten nicht zum Training von Foundation Models verwendet. Websuchanfragen laufen separat über Bing mit eigenen Datenregeln. Das ist die Aussage von Microsoft und keine Bewertung für deinen Fall.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Learn: copilot/faq</a> und <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection" rel="noopener">enterprise-data-protection</a>, Stand 13.10.2026.</p>
+        </details>
+        <details class="faq" id="faq-gruenes-schild">
+          <summary>Woran erkenne ich, dass der Unternehmensschutz aktiv ist?</summary>
+          <p data-faq-antwort>Am grünen Schild neben der Schaltfläche für einen neuen Chat («New Chat»). Laut Microsoft gilt dann Enterprise Data Protection für deine Prompts und Antworten.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/copilot/privacy-and-protections" rel="noopener">Learn: copilot/privacy-and-protections</a>, Abschnitt «Enterprise data protection for prompts and responses», und <a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">copilot/manage</a>, Stand 15.10.2026.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sektion flaeche-2" aria-labelledby="h-pflege">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Pflege</span>
+        <h2 id="h-pflege">Wer prüft, wie und wann wieder.</h2>
+      </div>
+      <div class="spalten-zwei">
+        <div id="pruefprotokoll">
+          <h3>Prüfprotokoll</h3>
+          <p>Was sich seit der letzten Prüfung geändert hat, je mit Datum, alter Aussage, neuer Aussage und Quelle.</p>
+          <ol class="protokoll">
+            <li><time datetime="2026-10-13">13.10.2026</time>. Umbenennung. Vorher: «Microsoft 365 Copilot Chat» und «Microsoft 365 Copilot». Neu: «Microsoft Copilot Chat» und «Microsoft Copilot». Learn schreibt: «Microsoft 365 Copilot is now named Microsoft Copilot, and Microsoft 365 Copilot Chat is now named Microsoft Copilot Chat.» Stellenweise stehen auf Learn noch die alten Namen. <span class="klein">(<a href="https://learn.microsoft.com/en-us/copilot/manage" rel="noopener">Learn: copilot/manage</a>)</span></li>
+            <li><time datetime="2026-10-13">13.10.2026</time>. Erste Prüfung aller Zeilen dieser Seite gegen Microsoft Learn.</li>
+            <li><time datetime="2026-10-15">15.10.2026</time>. Nachprüfung einzelner Zeilen. Grünes Schild: Quelle ist jetzt copilot/privacy-and-protections, die FAQ-Seite nennt das Schild nicht. Neu: Agents für Word, Excel und PowerPoint im Chat (copilot/faq, copilot/manage). Neu in der Liste der Abos: Office 365 E1 Plus und Office 365 A1. Verbrauch: Agent-Flow-Aktionen 13 Copilot Credits pro 100, Quelle zum Verfall ungenutzter Credits ist billing-licensing, der Agent Usage Estimator nennt übertragbare Käufe. Mit Lizenz: Ratentabelle und Lizenzierungsseite nennen verschiedene Ausnahmen, beides steht jetzt in der Zeile.</li>
+          </ol>
+        </div>
+        <div id="methode">
+          <h3>Methode</h3>
+          <p>Jede Aussage dieser Seite wird gegen die verlinkte Seite bei Microsoft Learn gelesen. Das Datum dieser Lesung steht im Stempel neben jeder Zeile. Die erste Prüfung war am <time datetime="2026-10-13">13.10.2026</time>, einzelne Zeilen wurden am <time datetime="2026-10-15">15.10.2026</time> nachgeprüft (siehe Prüfprotokoll). Die nächste Prüfung ist am <time datetime="2026-10-27">27.10.2026</time>, danach jedes Quartal.</p>
+          <p>Liegt eine Prüfung mehr als 120 Tage zurück, wird der Stempel grau und sagt: «Prüfung fällig. Massgebend ist die verlinkte Quelle.» Ab dann gilt die verlinkte Quelle und nicht diese Seite.</p>
+          <p>Preise stehen hier bewusst nicht, die aktuellen Preise nennt Microsoft auf den Produktseiten. Das ist keine Lizenzberatung: Verbindlich ist dein Vertrag, für deinen Fall fragst du deine IT oder deinen Microsoft-Partner.</p>
+          <p>Fehler gefunden oder ist eine Aussage veraltet? <a href="mailto:marcel.lehmann@kmupower.com?subject=Gratis-Seite%3A%20Korrektur">Schreib mir eine Mail</a>. Ich korrigiere oder streiche die Aussage und trage die Änderung im Prüfprotokoll ein. <a href="../ueber/">Marcel Lehmann, Fehraltorf</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sektion sektion--eng" aria-labelledby="h-weiter">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Zurück ins Dojo</span>
+        <h2 id="h-weiter">Die Antwort hast du. Jetzt kommt die Übung.</h2>
+        <p>Auf der Technik-Wand stehen alle Techniken nach Gürtel geordnet, jede mit Badge, ob sie ohne Zusatzlizenz läuft.</p>
+      </div>
+      <p class="knopf-reihe">
+        <a class="knopf knopf--primaer" href="../techniken/">Zur Technik-Wand</a>
+        <a class="knopf" href="../dojo/test/">Welcher Gürtel bist du?</a>
+      </p>
+      <p class="klein">Wenn du deinen ersten Agent mit Begleitung bauen willst: Die Power Platform Academy führt dazu einen Live-Kurs über vier Wochen. Termine sind noch offen, du kannst dich auf der <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=gratis-ende" rel="noopener">Kursseite der Academy</a> unverbindlich vormerken. Der Kurs beginnt mit Copilot in Word, Excel und PowerPoint, die Kursseite empfiehlt dafür eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026).</p>
+    </div>
+  </section>
+
 </main>
-<footer class="site-footer">
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
   <div class="wrap">
-    <div class="belt" aria-hidden="true"></div>
-    <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
-    <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Bing, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
-    <p>KMUpower, Einzelfirma Marcel Lehmann, Weidstrasse 1, 8320 Fehraltorf, Schweiz. UID CHE-296.591.945.</p>
-    <ul class="foot-links">
-      <li><a href="../impressum/">Impressum</a></li>
-      <li><a href="../datenschutz/">Datenschutz</a></li>
-      <li><a href="../ueber/">Über diese Seite</a></li>
-    </ul>
-    <p class="muted">Keine Cookies, kein Tracking. Die Reichweite wird nur über die Google Search Console und die Bing Webmaster Tools ausgewertet.</p>
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></p>
+        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn und Prüfdatum. Ohne Anmeldung und ohne Cookies.</p>
+        <p class="beitragen">Du kennst eine Technik, die hier fehlt? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technik%20f%C3%BCr%20das%20Dojo&amp;body=Titel%20der%20Technik%3A%0A%0AProblem%2C%20das%20sie%20l%C3%B6st%3A%0A%0APrompt%20oder%20Anleitung%3A%0A%0AGrenzen%3A%0A%0AQuelle%20bei%20Microsoft%20Learn%3A%0A%0ADarf%20ich%20dich%20als%20Absender%20nennen%3F%20(ja%20oder%20nein)%0A%0ABitte%20keine%20Kunden-%2C%20Personen-%20oder%20Firmendaten%20im%20Prompt.">Schreib mir.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../techniken/">Alle Techniken</a></li>
+          <li><a href="../heute/">Technik des Tages</a></li>
+          <li><a href="../gratis/">Ist Microsoft Copilot gratis?</a></li>
+          <li><a href="../dojo/">Mein Dojo</a></li>
+          <li><a href="../dojo/test/">Welcher Gürtel bist du?</a></li>
+          <li><a href="../kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="fuss-weiter">Weiter</h2>
+        <ul aria-labelledby="fuss-weiter">
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+        <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Bewegung aus</button></p>
+      </div>
+    </div>
+    <div class="fuss__recht">
+      <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
+      <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
+      <p>KMUpower, Einzelfirma Marcel Lehmann, Weidstrasse 1, 8320 Fehraltorf, Schweiz. UID CHE-296.591.945.</p>
+      <p><a href="../impressum/">Impressum</a>, <a href="../datenschutz/">Datenschutz</a>, <a href="../ueber/">Über das Dojo</a></p>
+      <p>Keine Cookies, kein Tracking. Dein Fortschritt bleibt in deinem Browser. Die Reichweite wird nur über die Google Search Console und die Bing Webmaster Tools ausgewertet.</p>
+    </div>
   </div>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
 </footer>
+<!-- /RAHMEN:FUSS -->
 </body>
 </html>

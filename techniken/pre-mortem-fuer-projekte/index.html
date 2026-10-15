@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="de-CH" data-seite="technik">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="KMUpower Dojo: neue Techniken" href="../../feed.xml">
+<link rel="preload" href="../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/technik.css">
+<link rel="stylesheet" href="../../assets/css/druck.css" media="print">
+<script src="../../assets/js/theme-init.js"></script>
+<script src="../../assets/js/core.js" defer></script>
+<script src="../../assets/js/dojo.js" defer></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="KMUpower Dojo build">
+<title>Pre-Mortem für ein Projekt: Prompt mit Quelle | KMUpower Dojo</title>
+<meta name="description" content="Pre-Mortem für ein Projekt. Prompt für Microsoft Copilot Chat zum Kopieren, mit Quelle bei Microsoft Learn und Prüfdatum. Bevor ein Projekt startet.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://marcelehmann.github.io/copilot-ninja/techniken/pre-mortem-fuer-projekte/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KMUpower Dojo">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Der Blick vom Ende: Pre-Mortem für ein Projekt">
+<meta property="og:description" content="Die Frage «Warum ist es gescheitert?» bringt Gründe auf den Tisch, die in einer Planungssitzung niemand ausspricht.">
+<meta property="og:url" content="https://marcelehmann.github.io/copilot-ninja/techniken/pre-mortem-fuer-projekte/">
+<meta property="og:image" content="https://marcelehmann.github.io/copilot-ninja/assets/img/karten/pre-mortem-fuer-projekte.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Technik 07: Der Blick vom Ende">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/#website",
+      "name": "KMUpower Dojo",
+      "url": "https://marcelehmann.github.io/copilot-ninja/",
+      "inLanguage": "de-CH",
+      "description": "Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio mit Quelle und Prüfdatum. Unabhängige Website ohne Verbindung zu Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Weidstrasse 1",
+        "postalCode": "8320",
+        "addressLocality": "Fehraltorf",
+        "addressCountry": "CH"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/techniken/pre-mortem-fuer-projekte/#technik",
+      "headline": "Der Blick vom Ende: Pre-Mortem für ein Projekt",
+      "name": "Der Blick vom Ende",
+      "url": "https://marcelehmann.github.io/copilot-ninja/techniken/pre-mortem-fuer-projekte/",
+      "inLanguage": "de-CH",
+      "description": "Die Frage «Warum ist es gescheitert?» bringt Gründe auf den Tisch, die in einer Planungssitzung niemand ausspricht.",
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "citation": [
+        "https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt",
+        "https://hbr.org/2007/09/performing-a-project-premortem"
+      ],
+      "isPartOf": {
+        "@id": "https://marcelehmann.github.io/copilot-ninja/techniken/#seite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Start",
+          "item": "https://marcelehmann.github.io/copilot-ninja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Techniken",
+          "item": "https://marcelehmann.github.io/copilot-ninja/techniken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Der Blick vom Ende",
+          "item": "https://marcelehmann.github.io/copilot-ninja/techniken/pre-mortem-fuer-projekte/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta name="dojo-build" content="testphase">
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="KMUpower Dojo, Startseite"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Techniken</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Gratis</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">Mein Dojo</a></li>
+        <li><a href="../../ueber/" data-nav="ueber">Über</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Technik suchen" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Strg K</kbd></button>
+      <a class="knoten" href="../../dojo/" data-guertelknoten aria-label="Mein Dojo, Weisser Gürtel"><span class="knoten__text">Weisser Gürtel</span></a>
+      <button type="button" class="knopf-icon" data-zufall aria-label="Zufällige Technik, die du noch nicht geübt hast" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Menü schliessen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menü">
+    <ul>
+      <li><a href="../../techniken/" aria-current="true">Techniken</a></li>
+      <li><a href="../../gratis/">Gratis</a></li>
+      <li><a href="../../dojo/">Mein Dojo</a></li>
+      <li><a href="../../ueber/">Über</a></li>
+      <li><a href="../../heute/">Technik des Tages</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Technik suchen</h2>
+    <label for="suche-feld" class="sr-only">Suchbegriff</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Protokoll, Vertrag, Agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Suche schliessen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Treffer"></ul>
+  <p class="suche__leer" hidden>Keine Technik gefunden. Versuch es mit Protokoll, Vertrag oder Agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-technik="t07" data-guertel-nr="2">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Brotkrumen"><ol><li><a href="../../">Start</a></li><li><a href="../">Techniken</a></li><li><a href="../#gelber-guertel">Gelber Gürtel</a></li><li><a href="./" aria-current="page">Nr. 07</a></li></ol></nav>
+    <header class="tk">
+      <p class="tk__nr" aria-hidden="true">07</p>
+      <h1 id="h1">Der Blick vom Ende<small>Pre-Mortem für ein Projekt</small></h1>
+      <p class="tk__moment">Bevor ein Projekt startet</p>
+      <ul class="metazeile">
+        <li><span class="metazeile__label">Gürtel</span> <span class="knoten" data-guertel-nr="2">Gelber Gürtel, Stufe 2</span></li>
+        <li><span class="metazeile__label">Art</span> <span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Pinselstrich</span></li>
+        <li><span class="metazeile__label">Zugang</span> <a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat</a></li>
+        <li><span class="metazeile__label">Ausprobieren</span> <span>ca. 10 Min.</span></li>
+      </ul>
+      <div class="tk__stempel"><a class="stempel" href="#quelle" data-geprueft="2026-10-15" data-pruef-frist="400"><span class="stempel__haupt">Geprüft</span><span class="stempel__unter">gegen die Dokumentation</span><time datetime="2026-10-15">15.10.2026</time><span class="stempel__faellig">Prüfung fällig. Massgebend ist die verlinkte Quelle.</span></a></div>
+    </header>
+
+    <div class="tk-raster">
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">Die Lage</h2>
+      <p class="abschnitt__problem">Das neue Projekt startet bald, die Planung sieht gut aus. In der Sitzung hat niemand gesagt, was schiefgehen könnte, weil niemand als Bremser gelten will.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">Der Schnitt</h2>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Vorher</p><div class="schnitt__vorher"><p class="schnitt__zitat">«Was sind die Risiken bei meinem Projekt?»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <p class="label">Nachher</p>
+<div class="schmiede" data-nur-js>
+<div class="schmiede__kopf"><h3>Für dich anpassen</h3><p class="schmiede__hinweis">Nichts verlässt deinen Browser.</p></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="technik-f1">Projekttext</label><textarea id="technik-f1" data-ph-feld="Projekttext" rows="4" aria-describedby="technik-f1-h"></textarea><small id="technik-f1-h">z. B. Beschreibung in drei Sätzen</small></div>
+<div class="schmiede__feld"><label for="technik-f2">Start</label><input id="technik-f2" type="text" data-ph-feld="Start" autocomplete="off" aria-describedby="technik-f2-h"><small id="technik-f2-h">z. B. Datum</small></div>
+<div class="schmiede__feld"><label for="technik-f3">Projektziel</label><input id="technik-f3" type="text" data-ph-feld="Projektziel" autocomplete="off" aria-describedby="technik-f3-h"><small id="technik-f3-h">z. B. ein messbares Ziel</small></div>
+<div class="schmiede__feld"><label for="technik-f4">Zeitpunkt</label><input id="technik-f4" type="text" data-ph-feld="Zeitpunkt" autocomplete="off" aria-describedby="technik-f4-h"><small id="technik-f4-h">z. B. ein Datum sechs Monate nach dem Start</small></div>
+</div>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Prompt zum Kopieren</p></div>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Hilf mir, Gründe für ein Scheitern zu finden, solange das Projekt noch nicht begonnen hat.</mark>
+
+<mark class="teil teil--kontext"><span class="teil__label">Kontext:</span> Projekt: <span class="ph" data-ph="Projekttext">[Projekttext, z. B. Beschreibung in drei Sätzen]</span>. Start: <span class="ph" data-ph="Start">[Start, z. B. Datum]</span>. Ziel: <span class="ph" data-ph="Projektziel">[Projektziel, z. B. ein messbares Ziel]</span>.</mark>
+
+<mark class="teil teil--quelle"><span class="teil__label">Quelle:</span> Nur meine Beschreibung und allgemeines Projektwissen. Kennzeichne jede Vermutung als Vermutung.</mark>
+
+<mark class="teil teil--erwartung"><span class="teil__label">Erwartung:</span>
+1. Nimm an, es ist <span class="ph" data-ph="Zeitpunkt">[Zeitpunkt, z. B. ein Datum sechs Monate nach dem Start]</span> und das Projekt ist klar gescheitert. Erzähl in höchstens 150 Wörtern, wie es dazu kam.
+2. Die sieben Ursachen, die du für am wahrscheinlichsten hältst, je mit einem frühen Warnzeichen, das ich ab der ersten Woche beobachten kann.
+3. Für die zwei gefährlichsten Ursachen je eine Massnahme, die ich vor dem Start umsetzen kann.
+4. Die Annahme in meiner Beschreibung, die am schlechtesten belegt ist.</mark></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Prompt kopieren</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Technik aus dem KMUpower Dojo: marcelehmann.github.io/copilot-ninja/7&#10;Entwurf, geprüft gegen die Dokumentation am 15.10.2026" data-nur-js>Weitergeben</button><p class="rolle__status" role="status"></p></div>
+</div>
+      <p class="rolle__fallback">Ohne Zusatzlizenz in Microsoft Copilot Chat. Ohne Kopierknopf: Text markieren und mit Strg+C kopieren.</p>
+    </section>
+
+
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">So nutzt du es</h2>
+      <ol class="schritte"><li>Projekt in drei Sätzen beschreiben, Start, Ziel und Zeitpunkt eintragen, senden.</li><li>Die Geschichte des Scheiterns lesen, ohne sie gleich zu widerlegen.</li><li>Die Warnzeichen in den Projektplan oder in die Traktandenliste der Projektsitzung übernehmen.</li><li>Die beiden Massnahmen vor dem Start einplanen, mit Termin und verantwortlicher Person.</li></ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">Woran du eine gute Antwort erkennst</h2>
+      <ul class="pruefliste"><li>Eine kurze Geschichte des Scheiterns, höchstens 150 Wörter.</li><li>Sieben Ursachen mit je einem beobachtbaren Warnzeichen.</li><li>Zwei konkrete Massnahmen vor dem Start.</li><li>Vermutungen sind als Vermutungen gekennzeichnet.</li></ul>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-probe">
+      <h2 id="h-probe">Die Probe</h2>
+      <p class="probe">Zähle die Massnahmen, die du in den Projektplan übernimmst. Nach sechs Monaten schaust du nach, wie viele der genannten Warnzeichen eingetreten sind.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Grenzen</h2>
+      <ul class="arrow-list prose"><li>Die Antwort kennt dein Team und deine Firma nicht. Die Ursachen sind Denkanstösse, keine Prognose.</li><li>Gary Klein beschreibt das Premortem in der Harvard Business Review (September 2007) als Übung im Team. Der Prompt ersetzt dieses Gespräch nicht, er bereitet es vor.</li><li>Interne Projektdetails nur so weit einfügen, wie eure internen Regeln das erlauben.</li></ul>
+    </section>
+
+
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Quelle und Prüfstatus</h2>
+      <ul class="quelle"><li><a href="https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt" rel="noopener">Microsoft Learn: Write an effective prompt (Lerneinheit)</a></li><li><a href="https://hbr.org/2007/09/performing-a-project-premortem" rel="noopener">Harvard Business Review: Gary Klein, Performing a Project Premortem, September 2007</a></li></ul>
+      <p class="pruefstatus" data-geprueft="2026-10-15" data-pruef-frist="400">Entwurf, geprüft gegen die Dokumentation am 15.10.2026.</p>
+
+      <p class="klein">Was ich nicht belegen kann, steht hier nicht. Ändert Microsoft etwas, gilt die verlinkte Quelle. Nächste Prüfung: 27.10.2026.</p>
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Als geübt markieren</button></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Weitergeben</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmarcelehmann.github.io%2Fcopilot-ninja%2Ftechniken%2Fpre-mortem-fuer-projekte%2F" rel="noopener">Auf LinkedIn teilen</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="https://marcelehmann.github.io/copilot-ninja/techniken/pre-mortem-fuer-projekte/" hidden>Teilen</button>
+        <a class="knopf knopf--klein" href="../../assets/img/karten/pre-mortem-fuer-projekte.png" download>Bild herunterladen</a>
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Text kopiert. Füg ihn in deinen Post ein." data-nur-js>Text für deinen Post kopieren</button>
+      </div>
+      <details class="einklapp">
+        <summary>Vorschlag für deinen Post</summary>
+        <pre class="code" id="teilen-text">Technik 7 aus dem KMUpower Dojo: Der Blick vom Ende. Ein Pre-Mortem als Prompt: Warum ist das Projekt gescheitert, und woran merkst du es ab der ersten Woche? Frei kopierbar, mit Quelle.</pre>
+      </details>
+    </section>
+
+
+
+    <nav class="blaettern" aria-label="Weitere Techniken">
+<a href="../../techniken/entwurf-gegen-quelle-pruefen/" rel="prev"><span>Vorherige Technik</span>06 Das Falkenauge</a>
+<a href="../../techniken/dossier-vor-der-besprechung/" rel="next"><span>Nächste Technik</span>08 Die Aufklärung</a>
+    </nav>
+    </div>
+    <aside class="tk-seite nicht-drucken" aria-labelledby="tk-seite-titel">
+      <div class="tk-seite__innen">
+        <p class="label" id="tk-seite-titel">Dein Werkzeug</p>
+        <p><a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat</a></p>
+        <p class="klein">Ausprobieren: ca. 10 Min.</p>
+        <p><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-nur-js>Prompt kopieren</button></p>
+        <p><button type="button" class="knopf knopf--klein" data-geuebt-knopf data-nur-js>Als geübt markieren</button></p>
+        <p class="klein"><a href="#quelle">Quelle und Prüfstatus</a></p>
+      </div>
+    </aside>
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-nur-js>Prompt kopieren</button>
+    <a class="knopf knopf--klein" href="../../techniken/dossier-vor-der-besprechung/">Nächste Technik</a>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></p>
+        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn und Prüfdatum. Ohne Anmeldung und ohne Cookies.</p>
+        <p class="beitragen">Du kennst eine Technik, die hier fehlt? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technik%20f%C3%BCr%20das%20Dojo&amp;body=Titel%20der%20Technik%3A%0A%0AProblem%2C%20das%20sie%20l%C3%B6st%3A%0A%0APrompt%20oder%20Anleitung%3A%0A%0AGrenzen%3A%0A%0AQuelle%20bei%20Microsoft%20Learn%3A%0A%0ADarf%20ich%20dich%20als%20Absender%20nennen%3F%20(ja%20oder%20nein)%0A%0ABitte%20keine%20Kunden-%2C%20Personen-%20oder%20Firmendaten%20im%20Prompt.">Schreib mir.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">Alle Techniken</a></li>
+          <li><a href="../../heute/">Technik des Tages</a></li>
+          <li><a href="../../gratis/">Ist Microsoft Copilot gratis?</a></li>
+          <li><a href="../../dojo/">Mein Dojo</a></li>
+          <li><a href="../../dojo/test/">Welcher Gürtel bist du?</a></li>
+          <li><a href="../../kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="fuss-weiter">Weiter</h2>
+        <ul aria-labelledby="fuss-weiter">
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+        <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Bewegung aus</button></p>
+      </div>
+    </div>
+    <div class="fuss__recht">
+      <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
+      <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
+      <p>KMUpower, Einzelfirma Marcel Lehmann, Weidstrasse 1, 8320 Fehraltorf, Schweiz. UID CHE-296.591.945.</p>
+      <p><a href="../../impressum/">Impressum</a>, <a href="../../datenschutz/">Datenschutz</a>, <a href="../../ueber/">Über das Dojo</a></p>
+      <p>Keine Cookies, kein Tracking. Dein Fortschritt bleibt in deinem Browser. Die Reichweite wird nur über die Google Search Console und die Bing Webmaster Tools ausgewertet.</p>
+    </div>
+  </div>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

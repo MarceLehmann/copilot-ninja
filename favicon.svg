@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <title>KMUpower: Vorlagen für Microsoft Copilot</title>
-  <defs>
-    <clipPath id="r"><rect x="2" y="2" width="60" height="60" rx="12"/></clipPath>
-  </defs>
-  <g clip-path="url(#r)">
-    <rect x="0" y="0" width="64" height="9.2" fill="#F4F4F0"/>
-    <rect x="0" y="9.14" width="64" height="9.2" fill="#E9B800"/>
-    <rect x="0" y="18.28" width="64" height="9.2" fill="#E36A00"/>
-    <rect x="0" y="27.42" width="64" height="9.2" fill="#2E8B57"/>
-    <rect x="0" y="36.56" width="64" height="9.2" fill="#2F6FB5"/>
-    <rect x="0" y="45.7" width="64" height="9.2" fill="#7A4A2B"/>
-    <rect x="0" y="54.84" width="64" height="9.2" fill="#111111"/>
-  </g>
-  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#8A8F98" stroke-width="2"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -4 96 96"><rect x="20" y="-4" width="96" height="96" rx="16" fill="#F4EFE6"/><path fill="#B4301A" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path fill="#15171B" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path fill="#F4EFE6" d="M31 38l62-5 1 13-63 5z"/><path fill="none" stroke="#15171B" stroke-width="4.2" stroke-linecap="round" d="M46 44.6h9M68 42.4h9"/></svg>

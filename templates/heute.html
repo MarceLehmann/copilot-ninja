@@ -1,0 +1,20 @@
+<main id="main">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Brotkrumen"><ol><li><a href="../">Start</a></li><li><a href="../techniken/">Techniken</a></li><li><a href="./" aria-current="page">Technik des Tages</a></li></ol></nav>
+    <header class="sektion--eng">
+      <span class="label">Heute im Dojo</span>
+      <h1 id="h1">Technik des Tages</h1>
+      <p class="lead">Für alle am selben Tag dieselbe Technik. Leg dir diese Seite als Lesezeichen an oder hol dir den Montags-Termin in den Kalender.</p>
+      <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a><a class="knopf knopf--leise" href="../techniken/">Alle Techniken</a></p>
+    </header>
+    <div class="heute sektion--eng">
+      <div data-heute data-heute-datum="{{build_datum}}">{{{heute_inhalt}}}</div>
+      <aside class="heute__seite" aria-label="Dein Weg">
+        <div class="naechster" data-naechster-schritt>
+          <h2>Dein nächster Schritt</h2>
+          <p>Markier eine Technik als geübt. Danach steht hier, welche Technik in deinem Gürtel als Nächstes wartet.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>

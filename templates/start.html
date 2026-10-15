@@ -1,0 +1,139 @@
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero__raster">
+      <div>
+        <p class="hero__eyebrow">Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.</p>
+        <h1 id="h1"><span class="strich">Übung<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span> schlägt Hype.</h1>
+{{{schnitt_haken}}}
+        <p class="hero__lead">{{anzahl}} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle und Prüfdatum, ohne Anmeldung.</p>
+        <div class="knopf-reihe hero__knoepfe">
+          <a class="knopf knopf--primaer" href="{{erste_technik_url}}">Erste Technik holen</a>
+          <a class="knopf" href="dojo/test/">Welcher Gürtel bist du?</a>
+        </div>
+        <p class="hero__zeile">Ich prüfe. Du übst. Was ich nicht belegen kann, steht hier nicht.<br><a href="ueber/">Marcel Lehmann, Fehraltorf</a></p>
+      </div>
+      <div class="hero__demo">
+        <span class="hero__tusch">{{{tusch_hero}}}</span>
+        {{{schnitt_karte}}}
+        <div class="hero__beweis">{{{stempel_hero}}}</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sektion flaeche-2" aria-labelledby="h-heute">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Technik des Tages</span>
+        <h2 id="h-heute">Eine Technik. Heute für alle dieselbe.</h2>
+        <p>Füll die Felder aus, kopier den Prompt, setz ihn in Microsoft Copilot Chat ein. Morgen wartet die nächste Technik.</p>
+      </div>
+      <div class="heute">
+        <div data-heute data-heute-datum="{{build_datum}}">{{{heute_inhalt}}}</div>
+        <aside class="heute__seite" aria-label="Dein Weg">
+          <div class="naechster" data-naechster-schritt>
+            <h3>Dein nächster Schritt</h3>
+            <p>Markier eine Technik als geübt. Danach steht hier, welche Technik in deinem Gürtel als Nächstes wartet.</p>
+          </div>
+          <div class="heute__tusch" data-dojo-teaser>
+            {{{tusch_seite}}}
+            <p data-dojo-stand>Noch keine Technik geübt. Tusch wartet mit weissem Gürtel.</p>
+          </div>
+          <p class="klein"><a href="heute/">Technik des Tages als Lesezeichen</a><br><a href="kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+{{{momente}}}
+
+  <section class="sektion" aria-labelledby="h-pfad" id="guertelpfad">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Der Gürtelpfad</span>
+        <h2 id="h-pfad">Sieben Gürtel. Vom ersten sauberen Prompt bis zum Agent im Betrieb.</h2>
+        <p>Unten viel Übung, oben wenige schwere Techniken. Der Gürtel zeigt, was du kannst. Ob du dafür eine Lizenz brauchst, steht auf jeder Technik.</p>
+        <p><a class="knopf" href="dojo/test/">Welcher Gürtel bist du? 7 Fragen</a></p>
+      </div>
+      {{{guertelpfad}}}
+      <p><a class="knopf knopf--primaer" href="techniken/">Alle {{anzahl}} Techniken auf der Technik-Wand</a></p>
+    </div>
+  </section>
+
+  <section class="sektion nacht" aria-labelledby="h-regeln">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Haltung</span>
+        <h2 id="h-regeln">Die fünf Dojo-Regeln</h2>
+      </div>
+      <ol class="regeln">
+        <li>Prüfe, was du nicht selbst geschrieben hast.</li>
+        <li>Erfinde nichts. Was fehlt, ist offen.</li>
+        <li>Nutze zuerst, was du schon hast.</li>
+        <li>Übung vor Ausrüstung.</li>
+        <li>Jede Technik trägt ein Datum.</li>
+      </ol>
+      <p class="versprechen">Was ich nicht belegen kann, steht hier nicht. Darum trägt jede Technik einen Prüfstempel mit Quelle und Datum. Wird die Prüfung fällig, wird der Stempel grau.</p>
+    </div>
+  </section>
+
+  <section class="sektion" aria-labelledby="h-gratis">
+    <div class="wrap">
+      <div class="sektion__kopf">
+        <span class="label">Ausrüstung</span>
+        <h2 id="h-gratis">Nutze zuerst, was du schon hast.</h2>
+        <p>{{{bilanz_satz}}}</p>
+      </div>
+      <div class="check" data-gratis-check="teaser" data-ziel="gratis/">
+        <p>Vier Fragen, und du weisst, ob Microsoft Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist. Jede Antwort mit Quelle bei Microsoft Learn.</p>
+        <p><a class="knopf" href="gratis/#check">Zum Gratis-Check</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sektion flaeche-2" aria-labelledby="h-dojo">
+    <div class="wrap">
+      <div class="dojo-teaser">
+        {{{tusch_dojo}}}
+        <div>
+          <span class="label">Dein Dojo</span>
+          <h2 id="h-dojo">Markier, was du geübt hast.</h2>
+          <p class="lead">Dein Fortschritt bleibt auf deinem Gerät. Tusch trägt deinen Gürtel und bindet den nächsten um, sobald alle Techniken eines Gürtels geübt sind.</p>
+          <div class="knopf-reihe">
+            <a class="knopf" href="dojo/">Mein Dojo öffnen</a>
+            <a class="knopf knopf--leise" href="dojo/test/">Wo stehst du? Zum Selbsttest</a>
+          </div>
+        </div>
+      </div>
+      <p class="pfad-hinweis">Lieber mit Plan? Der <a href="techniken/#vier-wochen">Vier-Wochen-Pfad</a> führt dich in vier Wochen durch alle Gürtel, frei und ohne Anmeldung.</p>
+    </div>
+  </section>
+
+  <section class="sektion nacht" aria-labelledby="h-trainer">
+    <div class="wrap trainer">
+      <div>
+        <span class="label">Der Trainer</span>
+        <h2 id="h-trainer">Hinter dem Dojo steht ein Mensch, der prüft.</h2>
+        <ul class="trainer__rollen">
+          <li>Marcel Lehmann, Inhaber von KMUpower, Einzelfirma in Fehraltorf, im UID-Register seit 01.01.2023</li>
+          <li>Trainer an der Power Platform Academy</li>
+          <li>Autor von powerplatformtip.com</li>
+        </ul>
+        <div class="offene-karten">
+          <h3>Offene Karten</h3>
+          <p>Diese Seite ist gratis und bleibt es. Sie setzt keine Cookies und zählt dich nicht. Ich bin Trainer an der Power Platform Academy. Dort steht ein Live-Kurs mit Warteliste, die Termine sind noch offen. Wenn du nicht live üben willst, nimm die Techniken einfach mit.</p>
+        </div>
+        <p class="trainer__unterschrift">Marcel, Fehraltorf</p>
+      </div>
+      <div class="trainer__weg">
+        {{{tusch_zeigen}}}
+        <p>Die Power Platform Academy führt den Live-Kurs «Copilot Citizen Developer» über vier Wochen. Neue Termine sind noch offen, auf der Kursseite kannst du dich unverbindlich vormerken. Der Kurs hat einen eigenen Lehrplan und ist nicht die begleitete Fassung des Vier-Wochen-Pfads. Die Kursseite empfiehlt eine Lizenz für Microsoft Copilot, nicht zwingend (Kursseite, Stand 15.10.2026).</p>
+        <p><a href="{{kurs_trainer}}" rel="noopener">Zur Kursseite der Academy</a></p>
+        <p>Jeden Montag ein Impuls zur Power Platform und Automatisierung: <a href="{{newsletter_trainer}}" rel="noopener">Newsletter KMUpower Impuls</a>.</p>
+        <div class="kasten">
+          <h3>Was diese Seite nicht ist</h3>
+          <p>Kein Angebot von Microsoft. Keine getesteten Rezepte: Jede Technik ist ein Entwurf, geprüft gegen die Dokumentation. Keine Lizenzberatung: Für deinen Fall fragst du deine IT oder deinen Microsoft-Partner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
