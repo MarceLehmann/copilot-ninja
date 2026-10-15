@@ -61,10 +61,11 @@
     <section class="abschnitt" aria-labelledby="h-teilen">
       <h2 id="h-teilen">Weitergeben</h2>
       <div class="teilen">
-        <a class="knopf knopf--klein" href="{{linkedin_url}}" rel="noopener">Auf LinkedIn teilen</a>
+        <a class="knopf knopf--klein" href="{{linkedin_url}}" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Auf LinkedIn teilen</a>
         <button type="button" class="knopf knopf--klein" data-teilen-system data-url="{{url}}" hidden>Teilen</button>
 {{{bild_link}}}
         <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Text kopiert. Füg ihn in deinen Post ein." data-nur-js>Text für deinen Post kopieren</button>
+        <p class="rolle__status" role="status"></p>
       </div>
       <details class="einklapp">
         <summary>Vorschlag für deinen Post</summary>

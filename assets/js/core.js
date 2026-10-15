@@ -413,6 +413,19 @@
         navigator.share({ title: d.title, url: k.getAttribute('data-url') || w.location.href }).catch(function () { /* abgebrochen */ });
       });
     });
+    /* LinkedIn: der Link fuellt den Post vor. Rueckfall, falls LinkedIn (z. B. die App) den Text nicht uebernimmt: derselbe Text liegt in der Zwischenablage */
+    alle('[data-linkedin-text]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var ziel = d.getElementById(a.getAttribute('data-linkedin-text'));
+        if (!ziel) return;
+        var status = a.parentNode.querySelector('.rolle__status');
+        kopierText(ziel.textContent.replace(/^\s+|\s+$/g, '')).then(function () {
+          var satz = 'Text kopiert. Fehlt er bei LinkedIn, füg ihn dort ein.';
+          if (status) status.textContent = satz;
+          ansage(satz);
+        }, function () { /* LinkedIn oeffnet trotzdem */ });
+      });
+    });
     alle('[data-drucken]').forEach(function (k) { k.hidden = false; k.addEventListener('click', function () { w.print(); }); });
     var l = d.querySelector('.leiste-unten'), f = d.querySelector('.fuss');
     if (l && f && 'IntersectionObserver' in w) new IntersectionObserver(function (es) { l.classList.toggle('is-weg', es[0].isIntersecting); }).observe(f);

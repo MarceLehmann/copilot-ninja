@@ -275,6 +275,12 @@ a.stempel:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; 
 .schnitt.zeigt-vorher .schnitt__haelfte { visibility: hidden; transition: none; }
 .schnitt.zeigt-vorher .schnitt__nachher { opacity: 0; visibility: hidden; transition: none; }
 .schnitt.zeigt-vorher .schnitt__strich { opacity: 0; }
+/* Vorher mobil (Korrektur 15.10.2026): der Nachher-Prompt traegt mobil eine Maske (eigene Malebene), die Safari trotz versteckter Eltern weiter zeichnet.
+   Darum: Vorher deckt die ganze Buehne ab, der Prompt selbst wird versteckt und verliert die Maske, solange Vorher gilt */
+.schnitt.is-js:not(.is-geschnitten):not(.schnitt--zeile) .schnitt__vorher:not(.schnitt__haelfte),
+.schnitt.zeigt-vorher .schnitt__vorher:not(.schnitt__haelfte) { position: relative; z-index: 1; align-self: stretch; display: flex; flex-direction: column; justify-content: center; background: var(--surface); }
+.schnitt.is-js:not(.is-geschnitten) .schnitt__nachher pre,
+.schnitt.zeigt-vorher .schnitt__nachher pre { visibility: hidden; -webkit-mask-image: none; mask-image: none; }
 .schnitt.is-geschnitten .teil { animation: teil-auf 350ms var(--ease-out) backwards; }
 .schnitt.is-geschnitten .teil:nth-of-type(1) { animation-delay: 550ms; }
 .schnitt.is-geschnitten .teil:nth-of-type(2) { animation-delay: 650ms; }

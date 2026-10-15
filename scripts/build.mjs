@@ -730,9 +730,10 @@ function baueTechnik(t, i) {
       geprueft_am: t.geprueft_am, geprueft_ch: datumCH(t.geprueft_am), frist: frist(t),
       naechste_pruefung_ch: datumCH(daten.naechste_pruefung || ''),
       ausgefuehrt: istIso(t.ausgefuehrt_am) ? `      <p class="pruefstatus">Einmal ausgeführt in Microsoft Copilot Chat am ${datumCH(t.ausgefuehrt_am)}. Ergebnisse können abweichen.</p>` : '',
-      linkedin_url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, url,
+      // LinkedIn: feed/?shareActive=true&text= fuellt den Post vor (share-offsite kann keinen Text). Rueckfall: core.js kopiert denselben Text
+      linkedin_url: `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(`${t.teilen_text}\n\n${url}`)}`, url,
       bild_link: bildDa ? `        <a class="knopf knopf--klein" href="${r}${kartenBild}" download>Bild herunterladen</a>` : '',
-      teilen_text: t.teilen_text, kette, kurs, blaettern,
+      teilen_text: `${t.teilen_text}\n\n${url}`, kette, kurs, blaettern,
       haupt_pre: 'prompt', kopier_label: a.knopf, naechste_url: nach ? `${r}techniken/${nach.slug}/` : `${r}techniken/`, naechste_label: nach ? 'Nächste Technik' : 'Zur Technik-Wand'
     }
   });
