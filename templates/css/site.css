@@ -144,6 +144,9 @@ html:not(.js) [data-nur-js], html.js [data-ohne-js] { display: none !important; 
 .kopf__innen { display: flex; align-items: center; gap: .75rem; min-height: var(--kopf-h); }
 .kopf--eingeklappt .kopf__innen { min-height: 52px; }
 .kopf--eingeklappt { box-shadow: var(--shadow-2); }
+/* Handy (Marcel 15.10.2026): beim Runterscrollen verschwindet die Leiste ganz, beim Hochscrollen kommt sie zurueck */
+@media (max-width: 767px) { .kopf { transition: transform var(--t-fast), box-shadow var(--t-fast); } .kopf--eingeklappt:not(:focus-within) { transform: translateY(-100%); box-shadow: none; } }
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) { .kopf { transition: none; } }
 .marke { display: inline-flex; align-items: center; gap: .55rem; color: var(--ink); text-decoration: none; min-height: 44px; }
 .marke .tusch { width: 27px; height: 36px; }
 .marke__wort { height: 19px; width: auto; display: block; fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: square; stroke-linejoin: miter; overflow: visible; }
