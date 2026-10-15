@@ -69,3 +69,17 @@ details.tabelle { margin: 0 0 1.5rem; }
 details.tabelle .table-block { margin-bottom: 1.25rem; }
 details.tabelle caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
+/* Welche Stufe brauchst du? Stufenleiter von unten nach oben, Aufgaben mit Filter ohne JavaScript (15.10.2026) */
+.stufen { list-style: none; margin: 0 0 2.5rem; padding: 0; display: grid; gap: 1rem; }
+.stufe { --s: var(--zugang-frei); display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; padding: 1.25rem; background: var(--surface); border: 1px solid var(--line); border-top: 6px solid var(--s); border-radius: var(--r-lg); }
+.stufe:nth-child(2) { --s: var(--zugang-builder); }
+.stufe:nth-child(3) { --s: var(--zugang-lizenz); }
+.stufe:nth-child(4) { --s: var(--zugang-studio); }
+.stufe h3 { margin: 0; font-size: 1.2rem; }
+.stufe p { margin: 0; }
+@media (min-width: 60rem) { .stufen { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; } .stufe:nth-child(1) { margin-top: 4.5rem; } .stufe:nth-child(2) { margin-top: 3rem; } .stufe:nth-child(3) { margin-top: 1.5rem; } }
+.stufen-filter { margin: 1rem 0; max-width: 30rem; }
+.beispiele { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+.beispiele summary > span { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; }
+.beispiele .zugang { font-weight: 700; }
+#stufen:has(#nur-ohne:checked) [data-stufe="3"], #stufen:has(#nur-ohne:checked) [data-stufe="4"] { display: none; }
