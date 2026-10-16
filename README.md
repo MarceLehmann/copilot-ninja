@@ -6,26 +6,31 @@ Unabhängige Website von Marcel Lehmann (Handelsname KMUpower). Sie hat keine Ve
 
 ## Seiten
 
+Aufbau, Stil und Menge pro Seite wie die Schwesterseite powerautomate.ninja (Umbau 16.10.2026): gleiche Kopfzeile (Techniken, Gürtelprüfung, Lizenz-Check, Mein Dojo, Menü auf allen Breiten), gleiche Startseite in fünf Blöcken, gleiche Fusszeile. Eigener Farbton: leicht violett (`--paper #F3EFF7`, Akzent `--site #6B3FA0`, dunkel `#100D16` und `#C6A6F0`), powerautomate.ninja leicht blau. Tusch ist die Figur beider Dojos.
+
 | Pfad | Inhalt |
 |---|---|
-| `/` | Startseite: Hero, Gratis-Check, Vier Momente mit Technik des Tages (nur ohne Zusatzlizenz), Gürtelpfad, Trainer |
-| `/techniken/` | alle Techniken nach Gürtel, mit Filter |
-| `/techniken/<slug>/` | eine Technik: Vorher und Nachher, Prompt zum Ausfüllen und Kopieren, Grenzen, Quelle |
+| `/` | Startseite: Hero (Welcher Copilot-Gürtel bist du?, Tusch), Lizenz-Check Frage 1, Technik des Tages, Gürtelweg, Absender |
+| `/techniken/` | alle Techniken nach Gürtel, Filter, die vier Momente als kurze Liste |
+| `/techniken/<slug>/` | eine Technik: Metazeile, Vorher, Prompt (Felder «Für dich anpassen» eingeklappt), Grenzen, Quelle |
 | `/1/` bis `/25/` | Kurzadressen, leiten auf die Technik mit dieser Nummer |
+| `/pruefung/` | Gürtelprüfung (Selbsttest, sieben Fragen), `/pruefung/fragen/` alle Fragen mit Auflösung |
+| `/gratis/` | Lizenz-Check: Was in Microsoft Copilot Chat ohne Zusatzlizenz enthalten ist |
+| `/gratis/nachschlagen/` | Mythen, Stufen, jede Bedingung im Wortlaut, FAQ, Prüfprotokoll |
+| `/dojo/` | eigener Fortschritt, bleibt im Browser; `/dojo/profil/` Profil und Technik beitragen |
+| `/vier-wochen/` | Vier-Wochen-Pfad zum Selbstlernen |
 | `/heute/` | Technik des Tages |
-| `/gratis/` | Was in Microsoft Copilot Chat ohne Zusatzlizenz enthalten ist, mit Gratis-Check |
-| `/dojo/` | eigener Fortschritt, bleibt im Browser |
-| `/dojo/test/` | Selbsttest mit sieben Fragen |
 | `/dojo/guertel/<farbe>/` | Gürtelseiten für geteilte Karten |
 | `/ueber/`, `/impressum/`, `/datenschutz/` | Methode, Anbieter, Datenschutz |
-| `/vorlagen/` | Weiterleitung der früheren Vorlagen-Seite |
+| `/dojo/test/`, `/vorlagen/` | Weiterleitungen alter Adressen (`UMZUEGE` in `scripts/build.mjs`) |
 
+Umgezogene Anker (`/gratis/#faq`, `/dojo/#beitragen`, `/techniken/#vier-wochen`) leitet `core.js` über `data-anker-umzug` am `main`-Element auf die Unterseite weiter.
 ## Sprachen (16.10.2026)
 
 Deutsch liegt unter `/`, Englisch unter `/en/` mit derselben Ordnerstruktur (`/en/techniken/<slug>/`, `/en/gratis/`, `/en/1/` bis `/en/25/` usw.).
 
 - Texte der Techniken: `data/techniken.en.json` legt die englischen Textfelder über die Einträge aus `data/techniken.json` (gleiche id). Struktur, Freigabe, Quellen-URLs und Daten kommen immer aus der deutschen Datei. Der Build prüft gleich viele Listeneinträge und die Regeln (keine Gedankenstriche, keine Emojis, keine «»).
-- Vorlagen: `templates/en/` und `templates/partials/en/`. Seiten von Hand: `en/gratis/`, `en/dojo/`, `en/dojo/test/`, `en/ueber/`, `en/impressum/`, `en/datenschutz/` (Anker und IDs wie deutsch). `en/dojo/selbsttest.json` ist der englische Fragenpool. `karten.mjs` erzeugt Karten, Gürtelseiten und Fragenliste für beide Sprachen.
+- Vorlagen: `templates/en/` und `templates/partials/en/`. Seiten von Hand: `en/gratis/`, `en/dojo/`, `en/pruefung/`, `en/pruefung/fragen/`, `en/gratis/nachschlagen/`, `en/dojo/profil/`, `en/ueber/`, `en/impressum/`, `en/datenschutz/` (Anker und IDs wie deutsch). `en/dojo/selbsttest.json` ist der englische Fragenpool. `karten.mjs` erzeugt Karten, Gürtelseiten und Fragenliste für beide Sprachen.
 - Daten für Skripte je Sprache: `assets/data/` und `assets/data/en/`, Karten `assets/img/karten/en/`, OG-Bild `og-image-en.png`, Feed `en/feed.xml`, Kalender `en/kalender/montag.ics`.
 - Sprachwahl: Umschalter DE/EN im Kopf jeder Seite, verlinkt auf die Entsprechung und merkt die Wahl in `localStorage` (`cn-sprache`). `assets/js/sprache.js` läuft nur auf der deutschen Startseite: ohne gespeicherte Wahl und ohne Deutsch in `navigator.languages` leitet es einmal auf `en/` weiter und merkt `en`. Crawler werden nicht weitergeleitet. Auf 404 zeigt es für Adressen unter `/en/` die englische 404-Seite.
 - Jede Seite trägt `hreflang` (de, en, x-default auf Deutsch) und ein eigenes Canonical, die Sitemap enthält beide Sprachen mit `xhtml:link`.
@@ -41,7 +46,7 @@ Deutsch liegt unter `/`, Englisch unter `/en/` mit derselben Ordnerstruktur (`/e
 | `scripts/links.mjs` | prüft alle internen Links unter `/copilot-ninja/` und unter einer eigenen Domain, dazu die Sitemap |
 | `scripts/pruefen.mjs` | listet Prüfdaten und Learn-Links, prüft Kontraste |
 | `scripts/karten.mjs` | erzeugt die Vorschaubilder je Technik und Gürtel (braucht ein lokales Chrome) |
-| `gratis/`, `dojo/`, `ueber/`, `impressum/`, `datenschutz/` | Seiten von Hand mit Rahmen-Markern, die der Build füllt |
+| `gratis/`, `gratis/nachschlagen/`, `pruefung/`, `pruefung/fragen/`, `dojo/`, `dojo/profil/`, `ueber/`, `impressum/`, `datenschutz/` | Seiten von Hand mit Rahmen-Markern, die der Build füllt |
 | `assets/` | erzeugtes CSS, Skripte, Daten für Suche und Technik des Tages, Bilder |
 
 Node 18 oder neuer, keine Abhängigkeiten. Nach jeder Änderung an Daten oder Vorlagen:

@@ -1,17 +1,12 @@
-<main id="main">
+<main id="main" data-anker-umzug='{"vier-wochen":"../vier-wochen/"}'>
   <div class="wrap">
     <nav class="krumen" aria-label="Brotkrumen"><ol><li><a href="../">Start</a></li><li><a href="./" aria-current="page">Techniken</a></li></ol></nav>
-    <header class="sektion--eng wand-kopf">
-      <div>
-        <span class="label">Die Technik-Wand</span>
-        <h1 id="h1">{{anzahl}} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio</h1>
-        <p class="lead">Vom weissen bis zum schwarzen Gürtel, dazu {{anzahl_grundformen}} zum Aufwärmen. Jede Technik mit Quelle bei Microsoft Learn, Prüfdatum und ehrlichen Grenzen.</p>
-        <p class="nicht-drucken klein">Tipp: Die Druckansicht dieser Seite ist ein Spickzettel mit Kurzadressen für deinen Schreibtisch. <button type="button" class="knopf knopf--leise knopf--klein" data-drucken data-nur-js>Spickzettel drucken</button></p>
-      </div>
-      <nav class="leiter nicht-drucken" aria-labelledby="leiter-titel">
-        <p class="label" id="leiter-titel">Springe zu deinem Gürtel</p>
-        <ol>{{{guertel_sprung}}}</ol>
-      </nav>
+    <header class="sektion--eng">
+      <span class="label">Technik-Wand</span>
+      <h1 id="h1">Alle Techniken</h1>
+      <p class="lead">{{anzahl}} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel, dazu {{anzahl_grundformen}} zum Aufwärmen. Jede Technik mit Quelle bei Microsoft Learn, Prüfdatum und ehrlichen Grenzen.</p>
+{{{momente}}}
+      <p class="nicht-drucken klein">Tipp: Die Druckansicht dieser Seite ist ein Spickzettel mit Kurzadressen für deinen Schreibtisch. <button type="button" class="knopf knopf--leise knopf--klein" data-drucken data-nur-js>Spickzettel drucken</button></p>
     </header>
     <div class="druck-kopf nur-druck"><span>PowerPlatformAcademy Dojo, Spickzettel der Techniken</span><span>Stand {{stand_ch}}</span><span>{{kurz_basis}}/Nummer</span></div>
     {{{filter}}}
@@ -25,13 +20,6 @@
         <button type="button" class="knopf knopf--klein" data-filter-reset>Filter zurücksetzen</button>
       </div>
     </div>
-  </div>
-  <section class="sektion flaeche-2 wand__pfad" aria-labelledby="h-vier-wochen">
-    <div class="wrap">
-      {{{vier_wochen}}}
-    </div>
-  </section>
-  <div class="wrap sektion--eng">
-    <p class="beitragen lead">Du kennst eine Technik, die hier fehlt? <a href="{{mailto_beitrag}}">Schreib mir.</a> Aufgenommen wird nur, was gegen die Dokumentation geprüft ist. <a href="../dojo/#beitragen">Zum Formular im Dojo</a></p>
+    <p class="sektion--eng">Ein freier Plan zum Selbstlernen: <a href="../vier-wochen/">In vier Wochen durch alle Gürtel</a>. Du kennst eine Technik, die hier fehlt? <a href="../dojo/profil/#beitragen">Schreib mir.</a></p>
   </div>
 </main>

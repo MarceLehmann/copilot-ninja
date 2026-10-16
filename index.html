@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="de" href="https://copilot.ninja/">
 <link rel="alternate" hreflang="en" href="https://copilot.ninja/en/">
@@ -25,13 +25,13 @@
 <!-- /RAHMEN:HEAD -->
 <meta name="generator" content="PowerPlatformAcademy Dojo build">
 <title>PowerPlatformAcademy Dojo · Copilot: Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio</title>
-<meta name="description" content="25 Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel. Jede mit Quelle bei Microsoft Learn und Prüfdatum.">
+<meta name="description" content="Welcher Copilot-Gürtel bist du? Gürtelprüfung, Lizenz-Check und 25 Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, jede mit Quelle bei Microsoft Learn.">
 <link rel="canonical" href="https://copilot.ninja/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PowerPlatformAcademy Dojo · Copilot">
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="PowerPlatformAcademy Dojo: Übung schlägt Hype.">
-<meta property="og:description" content="25 Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel. Jede mit Quelle bei Microsoft Learn und Prüfdatum.">
+<meta property="og:description" content="Welcher Copilot-Gürtel bist du? Gürtelprüfung, Lizenz-Check und 25 Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, jede mit Quelle bei Microsoft Learn.">
 <meta property="og:url" content="https://copilot.ninja/">
 <meta property="og:image" content="https://copilot.ninja/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -78,33 +78,38 @@
     <nav class="nav" aria-label="Hauptnavigation">
       <ul>
         <li><a href="techniken/" data-nav="techniken">Techniken</a></li>
-        <li><a href="gratis/" data-nav="gratis">Gratis</a></li>
+        <li><a href="pruefung/" data-nav="pruefung">Gürtelprüfung</a></li>
+        <li><a href="gratis/" data-nav="gratis">Lizenz-Check</a></li>
         <li><a href="dojo/" data-nav="dojo">Mein Dojo</a></li>
-        <li><a href="ueber/" data-nav="ueber">Über</a></li>
       </ul>
     </nav>
     <div class="kopf__aktionen">
       <a class="sprachwahl" href="en/" hreflang="en" lang="en" data-sprache-wahl="en" aria-label="English version of this page">EN</a>
       <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Technik suchen" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Strg K</kbd></button>
-      <a class="knoten" href="dojo/" data-guertelknoten aria-label="Mein Dojo, Weisser Gürtel"><span class="knoten__text">Weisser Gürtel</span></a>
-      <button type="button" class="knopf-icon" data-zufall aria-label="Zufällige Technik, die du noch nicht geübt hast" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg></button>
       <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
-      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
     </div>
   </div>
 </header>
 <div class="menue" id="menue" hidden>
   <div class="menue__kopf">
-    <span class="marke"><span class="marke__wort"><span class="marke__name">PowerPlatform<wbr>Academy Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">PowerPlatform<wbr>Academy Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
     <button type="button" class="knopf-icon" data-menue-zu aria-label="Menü schliessen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
   </div>
   <nav aria-label="Menü">
     <ul>
       <li><a href="techniken/">Techniken</a></li>
-      <li><a href="gratis/">Gratis</a></li>
+      <li><a href="pruefung/">Gürtelprüfung</a></li>
+      <li><a href="gratis/">Lizenz-Check</a></li>
+      <li><a href="heute/">Technik des Tages</a></li>
       <li><a href="dojo/">Mein Dojo</a></li>
       <li><a href="ueber/">Über</a></li>
-      <li><a href="heute/">Technik des Tages</a></li>
+      <li><a href="https://powerautomate.ninja/" rel="noopener">Dojo für Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="vier-wochen/">In vier Wochen durch alle Gürtel</a></li>
+      <li><a href="gratis/nachschlagen/">Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle</a></li>
+      <li><a href="dojo/profil/">Profil und eigene Technik</a></li>
     </ul>
   </nav>
 </div>
@@ -120,182 +125,103 @@
 </dialog>
 <!-- /RAHMEN:KOPF -->
 <main id="main">
-  <section class="hero" aria-labelledby="h1">
-    <div class="wrap hero__raster">
-      <div>
-        <p class="hero__eyebrow">Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.</p>
-        <h1 id="h1"><span class="strich">Übung<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span> schlägt Hype.</h1>
-        <p class="hero__nutzen">Für vieles brauchst du keine Copilot-Lizenz. Microsoft Copilot Chat ist in deinem Microsoft-365-Abo oft schon dabei.</p>
-        <a class="haken" href="#schnitt-karte">
-          <span class="tusch tusch--zeigen tusch--zeichnen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span>
-          <span class="haken__text"><span class="haken__vorher">«Schreib ein Protokoll aus meinen Notizen.»<svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></span><span class="haken__nachher">Daraus werden vier Teile: <b class="teil--ziel">Ziel</b>, <b class="teil--kontext">Kontext</b>, <b class="teil--quelle">Quelle</b>, <b class="teil--erwartung">Erwartung</b>.</span></span>
-        </a>
-        <p class="hero__lead">25 Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle, ohne Anmeldung.</p>
-        <div class="knopf-reihe hero__knoepfe">
-          <a class="knopf knopf--primaer" href="techniken/erst-befragen-dann-schreiben/">Erste Technik holen</a>
-          <a class="knopf" href="gratis/#check">Brauche ich eine Lizenz? 4 Fragen</a>
-        </div>
-        <p class="hero__zeile">Ich prüfe. Du übst. Was ich nicht belegen kann, steht hier nicht.<br><a href="ueber/">Marcel Lehmann</a></p>
-      </div>
-      <div class="hero__demo">
-        <span class="hero__tusch"><span class="tusch tusch--ruhe tusch--zeichnen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span></span>
-        <div class="schnitt" id="schnitt-karte" data-schnitt data-technik="g1">
-<div class="schnitt__fuss"><span class="label">Der Schnitt</span><div class="schnitt__umschalter" role="group" aria-label="Ansicht"><button type="button" data-zeige="vorher" aria-pressed="false">Vorher</button><button type="button" data-zeige="nachher" aria-pressed="true">Nachher</button></div></div>
-<div class="schnitt__buehne">
-<div class="schnitt__vorher"><span class="label">Vorher</span><p class="schnitt__zitat">«Schreib ein Protokoll aus meinen Notizen.»</p></div>
-<div class="schnitt__nachher"><span class="label">Nachher</span><pre class="code" id="schnitt-text"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Mach aus meinen Notizen ein Sitzungsprotokoll mit Aufgabenliste.</mark>
-
-<mark class="teil teil--kontext"><span class="teil__label">Kontext:</span> Die Notizen stammen aus einer Teamsitzung. Das Protokoll geht danach an alle Teilnehmenden.</mark>
-
-<mark class="teil teil--quelle"><span class="teil__label">Quelle:</span> Nur der Text, den ich unten einfüge. Ergänze nichts, was nicht in den Notizen steht. Wenn eine Angabe fehlt, schreibe «offen».</mark>
-
-<mark class="teil teil--erwartung"><span class="teil__label">Erwartung:</span>
-1. Eine Zusammenfassung zum Stand in höchstens drei Sätzen.
-2. Die Beschlüsse als Liste.
-3. Die Aufgaben als Tabelle mit den Spalten Aufgabe, Verantwortlich und Termin.
-4. Die offenen Fragen als Liste.
-Schreibe sachlich auf Deutsch in Schweizer Rechtschreibung und ohne Floskeln.</mark>
-
-Notizen:
-<span class="ph" data-ph="Notizen">[Notizen, z. B. deine Stichworte aus der Sitzung]</span></pre></div>
-<svg class="schnitt__strich" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M3 66C28 58 58 44 97 30"/></svg>
-</div>
-<ul class="teile-legende" aria-label="Die vier Teile eines wirksamen Prompts"><li class="teil--ziel">Ziel</li><li class="teil--kontext">Kontext</li><li class="teil--quelle">Quelle</li><li class="teil--erwartung">Erwartung</li></ul>
-<div class="schnitt__fuss" data-rolle><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="schnitt-text" data-nur-js>Prompt kopieren</button><p class="rolle__status" role="status"></p></div>
-<p class="schnitt__hinweis">Beispiel. Die Antwort kann je nach Lizenz und Daten anders ausfallen. Die vier Teile nennt das Lernmodul <a href="https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/" rel="noopener">«Write effective prompts»</a> bei Microsoft Learn, Stand 15.10.2026.</p>
-</div>
-      </div>
-    </div>
+  <section class="wrap hero hero--start" aria-labelledby="h1">
+    <div class="hero__band" aria-hidden="true"><span data-guertel-nr="1"></span><span data-guertel-nr="2"></span><span data-guertel-nr="3"></span><span data-guertel-nr="4"></span><span data-guertel-nr="5"></span><span data-guertel-nr="6"></span><span data-guertel-nr="7"></span></div>
+    <span class="label">PowerPlatformAcademy Dojo · Copilot</span>
+    <h1 id="h1">Welcher <span class="strich">Copilot-Gürtel<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span> bist du?</h1>
+    <p class="lead">Sieben Fragen, eine pro Gürtel. Danach weisst du, mit welchen Techniken du anfängst.</p>
+    <div class="knopf-reihe"><a class="knopf knopf--primaer" href="pruefung/">Gürtelprüfung starten</a><a class="knopf" href="gratis/">Brauche ich eine Lizenz?</a></div>
+    <span class="hero__tusch"><span class="tusch tusch--ruhe tusch--zeichnen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span></span>
   </section>
 
-  <section class="sektion flaeche-2" id="gratis-check" aria-labelledby="h-gratis">
-    <div class="wrap">
-      <div class="sektion__kopf">
-        <span class="label">Gratis-Check</span>
-        <h2 id="h-gratis">Brauchst du Premium? Vier Fragen, dann weisst du es.</h2>
-      </div>
-      <div class="gcheck">
-        <div class="gcheck__frage">
-          <p class="gcheck__titel" id="gcheck-frage"><span class="label">Frage 1 von 4</span>Wie meldest du dich bei Microsoft an?</p>
-          <ul class="kacheln" aria-labelledby="gcheck-frage">
-            <li><a class="kachel" href="gratis/?konto=k1#check">Mit Geschäfts- oder Schulkonto</a></li>
-            <li><a class="kachel" href="gratis/?konto=k2#check">Mit privatem Konto, zum Beispiel Outlook.com</a></li>
-            <li><a class="kachel" href="gratis/?konto=k3#check">Weiss nicht</a></li>
-          </ul>
-          <p><a class="knopf knopf--primaer" href="gratis/#check">Gratis-Check starten</a></p>
-        </div>
-        <div class="gcheck__bilanz">
-          <p class="gcheck__zahl"><strong>19 von 25</strong> Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a></p>
-          <ul class="gcheck__bsp">
-            <li><a href="gratis/#stufe-bsp-offerten">Drei Offerten als PDF vergleichen</a><span class="zugang zugang--frei">Stufe 1: Copilot Chat</span></li>
-            <li><a href="gratis/#stufe-bsp-kundenmail">Antwort auf eine verärgerte Kundenmail</a><span class="zugang zugang--frei">Stufe 1: Copilot Chat</span></li>
-            <li><a href="gratis/#stufe-bsp-word-excel">Copilot direkt in Word oder Excel</a><span class="zugang zugang--lizenz">Stufe 3: Lizenz</span></li>
-          </ul>
-        </div>
-      </div>
+  <section class="block" aria-labelledby="h-lizenz"><div class="wrap sektion--eng">
+    <div class="lcheck">
+      <span class="label">Lizenz-Check, Frage 1 von 4</span>
+      <h2 id="h-lizenz">Brauchst du Premium? Vier Fragen, dann weisst du es.</h2>
+      <p class="lcheck__frage" id="lcheck-frage">Wie meldest du dich bei Microsoft an?</p>
+      <ul class="antworten antworten--drei" aria-labelledby="lcheck-frage">
+        <li><a class="antwort" href="gratis/?konto=k1#check"><span class="antwort__b" aria-hidden="true">A</span><span>Mit Geschäfts- oder Schulkonto</span></a></li>
+        <li><a class="antwort" href="gratis/?konto=k2#check"><span class="antwort__b" aria-hidden="true">B</span><span>Mit privatem Konto, zum Beispiel Outlook.com</span></a></li>
+        <li><a class="antwort" href="gratis/?konto=k3#check"><span class="antwort__b" aria-hidden="true">C</span><span>Weiss nicht</span></a></li>
+      </ul>
+      <p class="klein">19 von 25 Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a></p>
     </div>
-  </section>
+  </div></section>
 
-  <section class="sektion" aria-labelledby="h-momente">
-    <div class="wrap">
-      <div class="sektion__kopf"><span class="label">Vier Momente</span><h2 id="h-momente">Wann brauchst du es?</h2></div>
-      <ul class="momente momente--start"><li class="moment"><blockquote><p>«Ich weiss nicht, was ich fragen soll.»</p></blockquote><a href="techniken/erst-befragen-dann-schreiben/"><span>Technik 01</span> Das Verhör</a></li>
-<li class="moment"><blockquote><p>«Die Antwort klingt nach Prospekt.»</p></blockquote><a href="techniken/eigenen-schreibstil-festhalten/"><span>Technik 11</span> Der Schattenschreiber</a></li>
-<li class="moment"><blockquote><p>«Drei Offerten, keine Zeit.»</p></blockquote><a href="techniken/offerten-vergleichen/"><span>Technik 09</span> Das Offerten-Duell</a></li>
-<li class="moment"><blockquote><p>«Der Agent erfindet Dinge.»</p></blockquote><a href="techniken/testfragen-fuer-agents/"><span>Technik 18</span> Die Gürtelprüfung</a></li></ul>
-      <div class="tdt">
-        <span class="label">Technik des Tages</span>
+  <section class="block" aria-labelledby="h-tdt"><div class="wrap sektion--eng">
+    <span class="label">Technik des Tages</span>
+    <h2 id="h-tdt">Eine Technik für heute</h2>
 <article class="tdk" data-heute-kompakt data-technik="t07" data-guertel-nr="2">
-<span class="tdk__nr" aria-hidden="true">07</span>
 <div class="tdk__inhalt">
-<h3 class="tdk__titel"><a href="techniken/pre-mortem-fuer-projekte/">Der Blick vom Ende</a><small>Nr. 7: Pre-Mortem für ein Projekt</small></h3>
+<ul class="metazeile"><li><span class="knoten" data-guertel-nr="2">Gelber Gürtel</span></li><li><a class="zugang zugang--frei" href="gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="tk__nr">Nr. <span class="tdk__nr">07</span></li></ul>
+<h3 class="tdk__titel"><a href="techniken/pre-mortem-fuer-projekte/">Der Blick vom Ende</a><small>Pre-Mortem für ein Projekt</small></h3>
 <p class="tdk__problem">Das neue Projekt startet bald, die Planung sieht gut aus. In der Sitzung hat niemand gesagt, was schiefgehen könnte, weil niemand als Bremser gelten will.</p>
-<ul class="metazeile"><li><span class="knoten" data-guertel-nr="2">Gelber Gürtel</span></li><li><a class="zugang zugang--frei" href="gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li></ul>
 <p><a class="knopf knopf--primaer knopf--klein tdk__knopf" href="techniken/pre-mortem-fuer-projekte/">Technik öffnen</a></p>
 </div>
 </article>
-        <p><a class="knopf knopf--leise" href="kalender/montag.ics" download>Jeden Montag eine Technik, als Kalendertermin</a></p>
-      </div>
-    </div>
-  </section>
+    <p><a class="knopf knopf--leise" href="kalender/montag.ics" download>Jeden Montag eine Technik, als Kalendertermin</a></p>
+  </div></section>
 
-  <section class="sektion flaeche-2" aria-labelledby="h-pfad" id="guertelpfad">
-    <div class="wrap">
-      <div class="sektion__kopf">
-        <span class="label">Der Gürtelpfad</span>
-        <h2 id="h-pfad">Sieben Gürtel. Vom ersten sauberen Prompt bis zum Agent im Betrieb.</h2>
-      </div>
-<ol class="pfadzeilen"><li class="pfadzeile" data-guertel-nr="1" id="pfad-weiss"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#weisser-guertel">Weisser Gürtel</a><span class="pfadzeile__zahl">4 Techniken</span><a class="pfadzeile__bsp" href="techniken/erst-befragen-dann-schreiben/">01 Das Verhör</a><p class="fortschritt__text pfadzeile__stand" data-fortschritt="1" hidden></p></li>
-<li class="pfadzeile" data-guertel-nr="2" id="pfad-gelb"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#gelber-guertel">Gelber Gürtel</a><span class="pfadzeile__zahl">4 Techniken</span><a class="pfadzeile__bsp" href="techniken/text-aus-empfaengersicht-angreifen/">05 Der Gegner im Spiegel</a><p class="fortschritt__text pfadzeile__stand" data-fortschritt="2" hidden></p></li>
-<li class="pfadzeile" data-guertel-nr="3" id="pfad-orange"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#oranger-guertel">Oranger Gürtel</a><span class="pfadzeile__zahl">5 Techniken</span><a class="pfadzeile__bsp" href="techniken/offerten-vergleichen/">09 Das Offerten-Duell</a><p class="fortschritt__text pfadzeile__stand" data-fortschritt="3" hidden></p></li></ol>
+  <section class="block" aria-labelledby="h-pfad" id="guertelpfad"><div class="wrap sektion--eng">
+    <span class="label">Der Gürtelweg</span>
+    <h2 id="h-pfad">Sieben Gürtel. Vom ersten sauberen Prompt bis zum Agent im Betrieb.</h2>
+<ol class="pfadzeilen"><li class="pfadzeile" data-guertel-nr="1" id="pfad-weiss"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#weisser-guertel">Weisser Gürtel: Grundstellung</a><span class="pfadzeile__zahl">4 Techniken</span><p class="pfadzeile__kann">Was du danach kannst: Prompts mit Ziel, Kontext, Quelle und Erwartung schreiben und dich befragen lassen.</p><p class="fortschritt__text pfadzeile__stand" data-fortschritt="1" hidden></p></li>
+<li class="pfadzeile" data-guertel-nr="2" id="pfad-gelb"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#gelber-guertel">Gelber Gürtel: Zweiter Blick</a><span class="pfadzeile__zahl">4 Techniken</span><p class="pfadzeile__kann">Was du danach kannst: Entwürfe so anfordern und prüfen lassen, dass Fehler vor dem Versand auffallen.</p><p class="fortschritt__text pfadzeile__stand" data-fortschritt="2" hidden></p></li>
+<li class="pfadzeile" data-guertel-nr="3" id="pfad-orange"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#oranger-guertel">Oranger Gürtel: Spurenlesen</a><span class="pfadzeile__zahl">5 Techniken</span><p class="pfadzeile__kann">Was du danach kannst: Dateien und Webquellen auswerten, jede Aussage mit Fundstelle.</p><p class="fortschritt__text pfadzeile__stand" data-fortschritt="3" hidden></p></li></ol>
 <p class="pfadzeilen__schwelle"><strong>Die Schwelle.</strong> Ab hier baust du Agents. Die <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Testversion von Copilot Studio</a> reicht zum Üben.</p>
-<ol class="pfadzeilen" start="4"><li class="pfadzeile" data-guertel-nr="4" id="pfad-gruen"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#gruener-guertel">Grüner Gürtel</a><span class="pfadzeile__zahl">4 Techniken</span><a class="pfadzeile__bsp" href="techniken/aus-chat-einen-agent-machen/">14 Der Abdruck</a><p class="fortschritt__text pfadzeile__stand" data-fortschritt="4" hidden></p></li>
-<li class="pfadzeile" data-guertel-nr="5" id="pfad-blau"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#blauer-guertel">Blauer Gürtel</a><span class="pfadzeile__zahl">3 Techniken</span><a class="pfadzeile__bsp" href="techniken/testfragen-fuer-agents/">18 Die Gürtelprüfung</a><p class="fortschritt__text pfadzeile__stand" data-fortschritt="5" hidden></p></li>
-<li class="pfadzeile" data-guertel-nr="6" id="pfad-braun"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#brauner-guertel">Brauner Gürtel</a><span class="pfadzeile__zahl">3 Techniken</span><a class="pfadzeile__bsp" href="techniken/power-automate-ausdruecke-erklaert/">21 Der Dolmetscher</a><p class="fortschritt__text pfadzeile__stand" data-fortschritt="6" hidden></p></li>
-<li class="pfadzeile" data-guertel-nr="7" id="pfad-schwarz"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#schwarzer-guertel">Schwarzer Gürtel</a><span class="pfadzeile__zahl">2 Techniken</span><a class="pfadzeile__bsp" href="techniken/betriebsblatt-fuer-agents/">24 Der Ehrenkodex</a><p class="fortschritt__text pfadzeile__stand" data-fortschritt="7" hidden></p></li></ol>
-      <p class="pfadzeilen__dojo">Was du geübt hast, markierst du in <a href="dojo/">Mein Dojo</a>. Der Fortschritt bleibt auf deinem Gerät.</p>
-      <div class="knopf-reihe">
-        <a class="knopf knopf--primaer" href="dojo/test/">Wo stehst du? Selbsttest</a>
-        <a class="knopf" href="techniken/">Alle 25 Techniken</a>
-      </div>
-    </div>
-  </section>
+<ol class="pfadzeilen" start="4"><li class="pfadzeile" data-guertel-nr="4" id="pfad-gruen"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#gruener-guertel">Grüner Gürtel: Erster Schüler</a><span class="pfadzeile__zahl">4 Techniken</span><p class="pfadzeile__kann">Was du danach kannst: Den ersten eigenen Agent instruieren und prüfen.</p><p class="fortschritt__text pfadzeile__stand" data-fortschritt="4" hidden></p></li>
+<li class="pfadzeile" data-guertel-nr="5" id="pfad-blau"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#blauer-guertel">Blauer Gürtel: Ablauf</a><span class="pfadzeile__zahl">3 Techniken</span><p class="pfadzeile__kann">Was du danach kannst: Einem Agent Schritte geben und festlegen, wann er an einen Menschen übergibt.</p><p class="fortschritt__text pfadzeile__stand" data-fortschritt="5" hidden></p></li>
+<li class="pfadzeile" data-guertel-nr="6" id="pfad-braun"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#brauner-guertel">Brauner Gürtel: Haushalt</a><span class="pfadzeile__zahl">3 Techniken</span><p class="pfadzeile__kann">Was du danach kannst: Daten sauber weitergeben und den Verbrauch eines Agents schätzen, bevor es teuer wird.</p><p class="fortschritt__text pfadzeile__stand" data-fortschritt="6" hidden></p></li>
+<li class="pfadzeile" data-guertel-nr="7" id="pfad-schwarz"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="techniken/#schwarzer-guertel">Schwarzer Gürtel: Wache</a><span class="pfadzeile__zahl">2 Techniken</span><p class="pfadzeile__kann">Was du danach kannst: Agents im Betrieb überwachen und rechtzeitig abschalten.</p><p class="fortschritt__text pfadzeile__stand" data-fortschritt="7" hidden></p></li></ol>
+    <p class="knopf-reihe"><a class="knopf" href="techniken/">Alle 25 Techniken ansehen</a></p>
+  </div></section>
 
-  <section class="sektion nacht" aria-labelledby="h-trainer">
-    <div class="wrap trainer">
-      <div>
-        <span class="label">Der Trainer</span>
-        <h2 id="h-trainer">Hinter dem Dojo steht ein Mensch.</h2>
-        <p class="trainer__name">Marcel Lehmann</p>
-        <blockquote class="trainer__zitat"><p>Viele denken, sie brauchen Premium. Das stimmt oft nicht.</p></blockquote>
-        <p><a href="ueber/#warum">Warum ich das Dojo baue</a></p>
-      </div>
-      <div class="trainer__weg">
-        <span class="tusch tusch--zeigen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span>
-        <p>Lieber mit Begleitung? <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=start-trainer" rel="noopener">Live-Kurs «Copilot Ninja in 4 Wochen» an der Power Platform Academy</a></p>
-        <p>Jeden Montag ein Impuls zur Power Platform und Automatisierung: <a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=start-trainer" rel="noopener">Newsletter KMUpower Impuls</a></p>
-        <p class="klein">Das Dojo ist gratis, ohne Cookies und ohne Anmeldung.</p>
-      </div>
-    </div>
-  </section>
+  <section class="block" aria-label="Absender"><div class="wrap sektion--eng">
+    <p class="absender"><span class="tusch tusch--zeigen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span>Von Marcel Lehmann, KMUpower. Jede Technik nennt ihre Quelle bei Microsoft Learn. Wer mit Begleitung üben will: <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=start" rel="noopener">Live-Kurs «Copilot Ninja in 4 Wochen» an der Power Platform Academy</a>. Dasselbe Dojo für Flows: <a href="https://powerautomate.ninja/" rel="noopener">powerautomate.ninja</a>. Mehr <a href="ueber/">über das Dojo</a>.</span></p>
+  </div></section>
 </main>
 <!-- RAHMEN:FUSS -->
 <footer class="fuss">
   <div class="wrap">
     <div class="fuss__raster">
       <div>
-        <p class="fuss__marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">PowerPlatform<wbr>Academy Dojo</span><span class="marke__zusatz">Copilot</span></span></p>
-        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn. Ohne Anmeldung und ohne Cookies.</p>
+        <p class="fuss__klar">Unabhängige Website, keine Verbindung zu Microsoft.</p>
+        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn. Ohne Anmeldung und ohne Cookies, nur eine anonyme Zugriffszählung. Dein Fortschritt bleibt in deinem Browser.</p>
         <p class="beitragen">Du kennst eine Technik, die hier fehlt? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technik%20f%C3%BCr%20das%20Dojo&amp;body=Titel%20der%20Technik%3A%0A%0AProblem%2C%20das%20sie%20l%C3%B6st%3A%0A%0APrompt%20oder%20Anleitung%3A%0A%0AGrenzen%3A%0A%0AQuelle%20bei%20Microsoft%20Learn%3A%0A%0ADarf%20ich%20dich%20als%20Absender%20nennen%3F%20(ja%20oder%20nein)%0A%0ABitte%20keine%20Kunden-%2C%20Personen-%20oder%20Firmendaten%20im%20Prompt.">Schreib mir.</a></p>
-        <p class="fuss__dojos">Das PowerPlatformAcademy Dojo gehört zur <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.<br>Weitere Dojos: <a href="">Copilot</a> | <a href="https://powerautomate.ninja/" rel="noopener">Power Automate</a></p>
       </div>
       <nav aria-labelledby="fuss-dojo">
         <h2 id="fuss-dojo">Dojo</h2>
         <ul>
           <li><a href="techniken/">Alle Techniken</a></li>
-          <li><a href="heute/">Technik des Tages</a></li>
+          <li><a href="pruefung/">Gürtelprüfung</a></li>
           <li><a href="gratis/">Ist Microsoft Copilot gratis?</a></li>
-          <li><a href="dojo/">Mein Dojo</a></li>
-          <li><a href="dojo/test/">Welcher Gürtel bist du?</a></li>
+          <li><a href="heute/">Technik des Tages</a></li>
+          <li><a href="vier-wochen/">In vier Wochen durch alle Gürtel</a></li>
           <li><a href="kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a></li>
         </ul>
       </nav>
-      <div>
-        <h2 id="fuss-weiter">Weiter</h2>
-        <ul aria-labelledby="fuss-weiter">
-          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls</a></li>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Info</h2>
+        <ul>
+          <li><a href="ueber/">Über das Dojo</a></li>
+          <li><a href="impressum/">Impressum</a></li>
+          <li><a href="datenschutz/">Datenschutz</a></li>
           <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls</a></li>
           <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
         </ul>
-        <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Bewegung aus</button></p>
-      </div>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Weitere Dojos: <a href="">Copilot</a> | <a href="https://powerautomate.ninja/" rel="noopener">Power Automate</a></p>
+      <p>Das PowerPlatformAcademy Dojo gehört zur <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.</p>
     </div>
     <div class="fuss__recht">
       <p class="fuss__klar">Kein Angebot von Microsoft. Keine Lizenzberatung: Für deinen Fall fragst du deine IT oder deinen Microsoft-Partner.</p>
       <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
       <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
-      <p><a href="impressum/">Impressum</a>, <a href="datenschutz/">Datenschutz</a>, <a href="ueber/">Über das Dojo</a></p>
       <p>Keine Cookies, kein Tracking. Aufrufe werden nur anonym mit GoatCounter gezählt. Dein Fortschritt bleibt in deinem Browser.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Bewegung aus</button></p>
     </div>
   </div>
   <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>

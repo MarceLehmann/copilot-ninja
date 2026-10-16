@@ -1,12 +1,11 @@
-/* Nur auf /dojo/: Mein Dojo, Selbsttest, Guertelkarten. Quelle fuer assets/css/dojo.css */
-.dojo-kopf { display: grid; gap: 1.5rem; align-items: center; }
-@media (min-width: 768px) { .dojo-kopf { grid-template-columns: auto 1fr; } }
-.dojo-kopf .tusch, [data-tusch-klon] { width: 120px; height: 160px; }
-[data-tusch-klon] { display: inline-block; }
+/* Nur auf /dojo/, /pruefung/ und Guertelkarten: Mein Dojo, Gürtelprüfung, Profil. Quelle fuer assets/css/dojo.css.
+   Seitenkopf mit Tusch (.dojo-kopf) steht seit 16.10.2026 in site.css, gleich wie bei powerautomate.ninja */
+[data-tusch-klon] { display: inline-block; flex: none; }
+.pruef { max-width: 46rem; }
 /* Leer oder voll schon vor dem ersten Rendern (theme-init.js setzt hat-dojo), JS gleicht danach ab */
 html:not(.js) [data-dojo-leer], html:not(.js) [data-dojo-voll], html.hat-dojo [data-dojo-leer], html.js:not(.hat-dojo) [data-dojo-voll] { display: none; }
 .dojo-kopf__zahlen { display: flex; flex-wrap: wrap; gap: 1rem 2rem; list-style: none; padding: 0; margin: 0; }
-.dojo-kopf__zahlen strong { display: block; font-family: var(--font-mono); font-size: 2rem; line-height: 1.1; }
+.dojo-kopf__zahlen strong { display: block; font-family: var(--font-mono); font-size: 1.6rem; line-height: 1.1; }
 .dojo-liste { display: grid; gap: 2rem; }
 .dojo-liste__guertel h3 { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; }
 .dojo-liste ul { list-style: none; margin: .5rem 0 0; padding: 0; display: grid; gap: .4rem; }

@@ -247,7 +247,7 @@
         var nr = k.querySelector('.tdk__nr'), a = k.querySelector('.tdk__titel a'), kl = k.querySelector('.tdk__titel small'), pr = k.querySelector('.tdk__problem'), kn = k.querySelector('.knoten'), kp = k.querySelector('.tdk__knopf');
         if (nr) nr.textContent = nr2(t.nr);
         if (a) { a.textContent = t.titel; a.href = url; }
-        if (kl) kl.textContent = T('Nr. ', 'No. ') + t.nr + ': ' + t.klartitel;
+        if (kl) kl.textContent = t.klartitel;
         if (pr) pr.textContent = t.problem || t.nutzen || '';
         if (kn) { kn.textContent = NAMEN[t.guertel - 1]; kn.setAttribute('data-guertel-nr', t.guertel); }
         if (kp) kp.href = url;

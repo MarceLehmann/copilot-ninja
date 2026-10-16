@@ -1,95 +1,42 @@
 <main id="main">
-  <section class="hero" aria-labelledby="h1">
-    <div class="wrap hero__raster">
-      <div>
-        <p class="hero__eyebrow">Independent website by Marcel Lehmann. Not affiliated with Microsoft.</p>
-        <h1 id="h1"><span class="strich">Practice<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span> beats hype.</h1>
-        <p class="hero__nutzen">For many things you don’t need a Copilot license. Microsoft Copilot Chat is often already included in your Microsoft 365 subscription.</p>
-{{{schnitt_haken}}}
-        <p class="hero__lead">{{anzahl}} ninja techniques for Microsoft Copilot Chat and Copilot Studio. Each with a source, no sign-up.</p>
-        <div class="knopf-reihe hero__knoepfe">
-          <a class="knopf knopf--primaer" href="{{erste_technik_url}}">Get your first technique</a>
-          <a class="knopf" href="gratis/#check">Do I need a license? 4 questions</a>
-        </div>
-        <p class="hero__zeile">I check. You practice. What I cannot back up does not appear here.<br><a href="ueber/">Marcel Lehmann</a></p>
-      </div>
-      <div class="hero__demo">
-        <span class="hero__tusch">{{{tusch_hero}}}</span>
-        {{{schnitt_karte}}}
-      </div>
-    </div>
+  <section class="wrap hero hero--start" aria-labelledby="h1">
+    <div class="hero__band" aria-hidden="true">{{{band}}}</div>
+    <span class="label">PowerPlatformAcademy Dojo · Copilot</span>
+    <h1 id="h1">Which <span class="strich">Copilot belt<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span> are you?</h1>
+    <p class="lead">Seven questions, one per belt. Then you know which techniques to start with.</p>
+    <div class="knopf-reihe"><a class="knopf knopf--primaer" href="pruefung/">Start the belt exam</a><a class="knopf" href="gratis/">Do I need a license?</a></div>
+    <span class="hero__tusch">{{{tusch_hero}}}</span>
   </section>
 
-  <section class="sektion flaeche-2" id="gratis-check" aria-labelledby="h-gratis">
-    <div class="wrap">
-      <div class="sektion__kopf">
-        <span class="label">Free check</span>
-        <h2 id="h-gratis">Do you need premium? Four questions, then you know.</h2>
-      </div>
-      <div class="gcheck">
-        <div class="gcheck__frage">
-          <p class="gcheck__titel" id="gcheck-frage"><span class="label">Question 1 of 4</span>How do you sign in to Microsoft?</p>
-          <ul class="kacheln" aria-labelledby="gcheck-frage">
-            <li><a class="kachel" href="gratis/?konto=k1#check">With a work or school account</a></li>
-            <li><a class="kachel" href="gratis/?konto=k2#check">With a personal account, for example Outlook.com</a></li>
-            <li><a class="kachel" href="gratis/?konto=k3#check">Don’t know</a></li>
-          </ul>
-          <p><a class="knopf knopf--primaer" href="gratis/#check">Start the free check</a></p>
-        </div>
-        <div class="gcheck__bilanz">
+  <section class="block" aria-labelledby="h-lizenz"><div class="wrap sektion--eng">
+    <div class="lcheck">
+      <span class="label">License check, question 1 of 4</span>
+      <h2 id="h-lizenz">Do you need premium? Four questions, then you know.</h2>
+      <p class="lcheck__frage" id="lcheck-frage">How do you sign in to Microsoft?</p>
+      <ul class="antworten antworten--drei" aria-labelledby="lcheck-frage">
+        <li><a class="antwort" href="gratis/?konto=k1#check"><span class="antwort__b" aria-hidden="true">A</span><span>With a work or school account</span></a></li>
+        <li><a class="antwort" href="gratis/?konto=k2#check"><span class="antwort__b" aria-hidden="true">B</span><span>With a personal account, for example Outlook.com</span></a></li>
+        <li><a class="antwort" href="gratis/?konto=k3#check"><span class="antwort__b" aria-hidden="true">C</span><span>Don’t know</span></a></li>
+      </ul>
 {{{bilanz}}}
-          <ul class="gcheck__bsp">
-            <li><a href="gratis/#stufe-bsp-offerten">Compare three quotes as PDFs</a><span class="zugang zugang--frei">Level 1: Copilot Chat</span></li>
-            <li><a href="gratis/#stufe-bsp-kundenmail">Reply to an angry customer email</a><span class="zugang zugang--frei">Level 1: Copilot Chat</span></li>
-            <li><a href="gratis/#stufe-bsp-word-excel">Copilot directly in Word or Excel</a><span class="zugang zugang--lizenz">Level 3: license</span></li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </section>
+  </div></section>
 
-  <section class="sektion" aria-labelledby="h-momente">
-    <div class="wrap">
-      <div class="sektion__kopf"><span class="label">Four moments</span><h2 id="h-momente">When do you need it?</h2></div>
-{{{momente}}}
-      <div class="tdt">
-        <span class="label">Technique of the day</span>
+  <section class="block" aria-labelledby="h-tdt"><div class="wrap sektion--eng">
+    <span class="label">Technique of the day</span>
+    <h2 id="h-tdt">One technique for today</h2>
 {{{heute_karte}}}
-        <p><a class="knopf knopf--leise" href="kalender/montag.ics" download>One technique every Monday, as a calendar event</a></p>
-      </div>
-    </div>
-  </section>
+    <p><a class="knopf knopf--leise" href="kalender/montag.ics" download>A technique every Monday, as a calendar entry</a></p>
+  </div></section>
 
-  <section class="sektion flaeche-2" aria-labelledby="h-pfad" id="guertelpfad">
-    <div class="wrap">
-      <div class="sektion__kopf">
-        <span class="label">The belt path</span>
-        <h2 id="h-pfad">Seven belts. From the first clean prompt to an agent in production.</h2>
-      </div>
+  <section class="block" aria-labelledby="h-pfad" id="guertelpfad"><div class="wrap sektion--eng">
+    <span class="label">The belt path</span>
+    <h2 id="h-pfad">Seven belts. From the first clean prompt to an agent in production.</h2>
 {{{guertelpfad}}}
-      <p class="pfadzeilen__dojo">You mark what you have practiced in <a href="dojo/">My Dojo</a>. Your progress stays on your device.</p>
-      <div class="knopf-reihe">
-        <a class="knopf knopf--primaer" href="dojo/test/">Where do you stand? Self-test</a>
-        <a class="knopf" href="techniken/">All {{anzahl}} techniques</a>
-      </div>
-    </div>
-  </section>
+    <p class="knopf-reihe"><a class="knopf" href="techniken/">See all {{anzahl}} techniques</a></p>
+  </div></section>
 
-  <section class="sektion nacht" aria-labelledby="h-trainer">
-    <div class="wrap trainer">
-      <div>
-        <span class="label">The trainer</span>
-        <h2 id="h-trainer">Behind the Dojo is a person.</h2>
-        <p class="trainer__name">Marcel Lehmann</p>
-        <blockquote class="trainer__zitat"><p>Many people think they need premium. Often that is not true.</p></blockquote>
-        <p><a href="ueber/#warum">Why I am building the Dojo</a></p>
-      </div>
-      <div class="trainer__weg">
-        {{{tusch_zeigen}}}
-        <p>Prefer guidance? <a href="{{kurs_trainer}}" rel="noopener">Live course “Copilot Ninja in 4 Wochen” (in German) at the Power Platform Academy</a></p>
-        <p>An idea about the Power Platform and automation every Monday: <a href="{{newsletter_trainer}}" rel="noopener">KMUpower Impuls newsletter (in German)</a></p>
-        <p class="klein">The Dojo is free, without cookies and without sign-up.</p>
-      </div>
-    </div>
-  </section>
+  <section class="block" aria-label="About the author"><div class="wrap sektion--eng">
+    <p class="absender">{{{tusch_zeigen}}}<span>By Marcel Lehmann, KMUpower. Every technique names its source on Microsoft Learn. If you want to practice with guidance: <a href="{{kurs_trainer}}" rel="noopener">live course “Copilot Ninja in 4 Wochen” (in German) at the Power Platform Academy</a>. The same dojo for flows: <a href="https://powerautomate.ninja/en/" rel="noopener">powerautomate.ninja</a>. More <a href="ueber/">about the Dojo</a>.</span></p>
+  </div></section>
 </main>

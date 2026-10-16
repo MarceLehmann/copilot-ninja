@@ -2,18 +2,17 @@
   <div class="wrap">
     <nav class="krumen" aria-label="Breadcrumbs"><ol><li><a href="../../">Home</a></li><li><a href="../">Techniques</a></li><li><a href="../#{{guertel_anker}}">{{guertel_name}}</a></li><li><a href="./" aria-current="page">{{nr_label}}</a></li></ol></nav>
     <header class="tk">
-      <p class="tk__nr{{nr_klasse}}" aria-hidden="true">{{nr_gross}}</p>
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="{{guertel}}">{{guertel_name}}</span></li>
+        <li>{{{zugang_badge}}}</li>
+        <li>{{{art_badge}}}</li>
+        <li class="tk__nr">{{nr_label}}</li>
+        <li><span>approx. {{dauer_min}} min</span></li>
+      </ul>
       <h1 id="h1">{{titel}}<small>{{klartitel}}</small></h1>
       <p class="tk__moment">{{moment}}</p>
-      <ul class="metazeile">
-        <li><span class="metazeile__label">Belt</span> <span class="knoten" data-guertel-nr="{{guertel}}">{{guertel_name}}, level {{guertel}}</span></li>
-        <li><span class="metazeile__label">Type</span> {{{art_badge}}}</li>
-        <li><span class="metazeile__label">Access</span> {{{zugang_badge}}}</li>
-        <li><span class="metazeile__label">Try it</span> <span>approx. {{dauer_min}} min</span></li>
-      </ul>
     </header>
 
-    <div class="tk-raster">
     <div class="tk-inhalt">
 
     <section class="abschnitt" aria-labelledby="h-problem">
@@ -75,17 +74,6 @@
     <nav class="blaettern" aria-label="More techniques">
 {{{blaettern}}}
     </nav>
-    </div>
-    <aside class="tk-seite nicht-drucken" aria-labelledby="tk-seite-titel">
-      <div class="tk-seite__innen">
-        <p class="label" id="tk-seite-titel">Your tool</p>
-        <p>{{{zugang_badge}}}</p>
-        <p class="klein">Try it: approx. {{dauer_min}} min</p>
-        <p><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="{{haupt_pre}}" data-erfolg="{{kopier_erfolg}}" data-nur-js>{{kopier_label}}</button></p>
-        <p><button type="button" class="knopf knopf--klein" data-geuebt-knopf data-nur-js>Mark as practiced</button></p>
-        <p class="klein"><a href="#quelle">Sources</a></p>
-      </div>
-    </aside>
     </div>
   </div>
   <div class="leiste-unten">

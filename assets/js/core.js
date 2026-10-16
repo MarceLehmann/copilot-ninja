@@ -78,11 +78,12 @@
   }
 
   /* Navigation: aktueller Punkt, Mobil-Menue, Kopfzeile */
-  var NAV = { wand: 'techniken', technik: 'techniken', heute: 'techniken', gratis: 'gratis', dojo: 'dojo', test: 'dojo', guertel: 'dojo', ueber: 'ueber' };
+  /* Hauptpunkte wie bei powerautomate.ninja (16.10.2026): Techniken, Gürtelprüfung, Lizenz-Check, Mein Dojo */
+  var NAV = { wand: 'techniken', technik: 'techniken', heute: 'techniken', wochen: 'techniken', pruefung: 'pruefung', test: 'pruefung', gratis: 'gratis', dojo: 'dojo', profil: 'dojo', guertel: 'dojo' };
   function navigation() {
     var seite = h.getAttribute('data-seite'), ziel = NAV[seite];
     if (ziel) alle('[data-nav="' + ziel + '"]').forEach(function (a) {
-      if (!a.hasAttribute('aria-current')) a.setAttribute('aria-current', /^(wand|gratis|dojo|ueber)$/.test(seite) ? 'page' : 'true');
+      if (!a.hasAttribute('aria-current')) a.setAttribute('aria-current', /^(wand|pruefung|gratis|dojo)$/.test(seite) && !/\/(nachschlagen|fragen)\/$/.test(location.pathname) ? 'page' : 'true');
     });
     var knopf = d.querySelector('[data-menue-knopf]');
     var menue = knopf && d.getElementById(knopf.getAttribute('aria-controls'));
@@ -121,6 +122,16 @@
       });
     }, { passive: true });
   }
+
+  /* Umgezogene Abschnitte (16.10.2026): Zeigt ein alter Link auf einen Anker, der jetzt auf einer Unterseite steht, geht es dorthin.
+     Die Liste steht im HTML als data-anker-umzug am main-Element: {"anker": "unterseite/"} */
+  function ankerUmzug() {
+    var m = d.querySelector('main[data-anker-umzug]'), id = decodeURIComponent(location.hash.slice(1));
+    if (!m || !id || d.getElementById(id)) return;
+    var karte = {}; try { karte = JSON.parse(m.getAttribute('data-anker-umzug')) || {}; } catch (e) { return; }
+    if (karte[id]) location.replace(karte[id] + location.search + location.hash);
+  }
+  ankerUmzug();
 
   /* Suche (Ninja-Sprung), Strg+K oder Cmd+K */
   function suche() {

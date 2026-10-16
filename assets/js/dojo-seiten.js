@@ -1,4 +1,4 @@
-/* PowerPlatformAcademy Dojo dojo-seiten.js: nur auf /dojo/ und /dojo/test/. Mein Dojo, Profil, Loeschen, Guertelkarte,
+/* PowerPlatformAcademy Dojo dojo-seiten.js: nur auf /dojo/, /dojo/profil/ und /pruefung/. Mein Dojo, Profil, Loeschen, Guertelkarte,
    Technik beitragen, Selbsttest. Braucht dojo.js (window.CNDojo). Nichts wird gesendet. */
 (function () {
   'use strict';
@@ -38,7 +38,7 @@
     var c = svg.cloneNode(true);
     c.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     var st = d.createElementNS('http://www.w3.org/2000/svg', 'style');
-    st.textContent = '.t-koerper,.t-hand{fill:#15171B}.t-gesicht{fill:#F4EFE6}.t-augen{fill:none;stroke:#15171B;stroke-width:3.6;stroke-linecap:round}.t-band,.t-pinsel-spitze{fill:#B4301A}' +
+    st.textContent = '.t-koerper,.t-hand{fill:#15171B}.t-gesicht{fill:#F3EFF7}.t-augen{fill:none;stroke:#15171B;stroke-width:3.6;stroke-linecap:round}.t-band,.t-pinsel-spitze{fill:#B4301A}' +
       '.t-guertel,.t-guertel-enden{fill:' + BELT[n - 1] + ';stroke:#8A7F6C;stroke-width:1.2;stroke-linejoin:round}.t-pinsel-stiel{fill:none;stroke:#15171B;stroke-width:3;stroke-linecap:round}.t-rolle,.t-strich{display:none}';
     c.insertBefore(st, c.firstChild);
     var url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(c)], { type: 'image/svg+xml' }));
@@ -53,7 +53,7 @@
   function zeichnen(canvas, art, n, name, mitTusch) {
     var ctx = canvas.getContext('2d');
     canvas.width = 1200; canvas.height = 630;
-    ctx.fillStyle = '#F4EFE6'; ctx.fillRect(0, 0, 1200, 630);
+    ctx.fillStyle = '#F3EFF7'; ctx.fillRect(0, 0, 1200, 630);
     for (var i = 0; i < 7; i++) {
       ctx.fillStyle = BELT[i];
       ctx.fillRect(Math.floor(i * 1200 / 7), i === n - 1 ? 586 : 606, Math.ceil(1200 / 7) + 1, i === n - 1 ? 44 : 24);

@@ -5,33 +5,38 @@
     <nav class="nav" aria-label="Main navigation">
       <ul>
         <li><a href="{{r}}techniken/" data-nav="techniken"{{{cur_techniken}}}>Techniques</a></li>
-        <li><a href="{{r}}gratis/" data-nav="gratis"{{{cur_gratis}}}>Free</a></li>
+        <li><a href="{{r}}pruefung/" data-nav="pruefung"{{{cur_pruefung}}}>Belt exam</a></li>
+        <li><a href="{{r}}gratis/" data-nav="gratis"{{{cur_gratis}}}>License check</a></li>
         <li><a href="{{r}}dojo/" data-nav="dojo"{{{cur_dojo}}}>My Dojo</a></li>
-        <li><a href="{{r}}ueber/" data-nav="ueber"{{{cur_ueber}}}>About</a></li>
       </ul>
     </nav>
     <div class="kopf__aktionen">
       {{{sprachwahl}}}
       <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Search techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js>{{{icon_suche}}}<kbd>Ctrl K</kbd></button>
-      <a class="knoten" href="{{r}}dojo/" data-guertelknoten aria-label="My Dojo, White belt"><span class="knoten__text">White belt</span></a>
-      <button type="button" class="knopf-icon" data-zufall aria-label="Random technique you have not practiced yet" data-nur-js>{{{icon_zufall}}}</button>
       <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dark mode" data-nur-js>{{{icon_sonne}}}{{{icon_mond}}}</button>
-      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu">{{{icon_menue}}}</button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js>{{{icon_menue}}}</button>
     </div>
   </div>
 </header>
 <div class="menue" id="menue" hidden>
   <div class="menue__kopf">
-    <span class="marke">{{{wortmarke}}}</span>
+    <span class="marke">{{{tusch_marke}}}{{{wortmarke}}}</span>
     <button type="button" class="knopf-icon" data-menue-zu aria-label="Close menu">{{{icon_zu}}}</button>
   </div>
   <nav aria-label="Menu">
     <ul>
       <li><a href="{{r}}techniken/"{{{cur_techniken}}}>Techniques</a></li>
-      <li><a href="{{r}}gratis/"{{{cur_gratis}}}>Free</a></li>
-      <li><a href="{{r}}dojo/"{{{cur_dojo}}}>My Dojo</a></li>
-      <li><a href="{{r}}ueber/"{{{cur_ueber}}}>About</a></li>
+      <li><a href="{{r}}pruefung/"{{{cur_pruefung}}}>Belt exam</a></li>
+      <li><a href="{{r}}gratis/"{{{cur_gratis}}}>License check</a></li>
       <li><a href="{{r}}heute/">Technique of the day</a></li>
+      <li><a href="{{r}}dojo/"{{{cur_dojo}}}>My Dojo</a></li>
+      <li><a href="{{r}}ueber/">About</a></li>
+      <li><a href="https://powerautomate.ninja/en/" rel="noopener">Dojo for Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="{{r}}vier-wochen/">Through all belts in four weeks</a></li>
+      <li><a href="{{r}}gratis/nachschlagen/">Copilot without an add-on license: every condition with its source</a></li>
+      <li><a href="{{r}}dojo/profil/">Profile and your own technique</a></li>
     </ul>
   </nav>
 </div>

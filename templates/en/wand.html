@@ -1,17 +1,12 @@
-<main id="main">
+<main id="main" data-anker-umzug='{"vier-wochen":"../vier-wochen/"}'>
   <div class="wrap">
-    <nav class="krumen" aria-label="Breadcrumbs"><ol><li><a href="../">Home</a></li><li><a href="./" aria-current="page">Techniques</a></li></ol></nav>
-    <header class="sektion--eng wand-kopf">
-      <div>
-        <span class="label">The technique wall</span>
-        <h1 id="h1">{{anzahl}} ninja techniques for Microsoft Copilot Chat and Copilot Studio</h1>
-        <p class="lead">From white belt to black belt, plus {{anzahl_grundformen}} to warm up. Each technique with a source on Microsoft Learn, a review date and honest limits.</p>
-        <p class="nicht-drucken klein">Tip: the print view of this page is a cheat sheet with short addresses for your desk. <button type="button" class="knopf knopf--leise knopf--klein" data-drucken data-nur-js>Print cheat sheet</button></p>
-      </div>
-      <nav class="leiter nicht-drucken" aria-labelledby="leiter-titel">
-        <p class="label" id="leiter-titel">Jump to your belt</p>
-        <ol>{{{guertel_sprung}}}</ol>
-      </nav>
+    <nav class="krumen" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="./" aria-current="page">Techniques</a></li></ol></nav>
+    <header class="sektion--eng">
+      <span class="label">Technique wall</span>
+      <h1 id="h1">All techniques</h1>
+      <p class="lead">{{anzahl}} ninja techniques for Microsoft Copilot Chat and Copilot Studio, from white belt to black belt, plus {{anzahl_grundformen}} to warm up. Each technique with a source on Microsoft Learn, a review date and honest limits.</p>
+{{{momente}}}
+      <p class="nicht-drucken klein">Tip: the print view of this page is a cheat sheet with short addresses for your desk. <button type="button" class="knopf knopf--leise knopf--klein" data-drucken data-nur-js>Print cheat sheet</button></p>
     </header>
     <div class="druck-kopf nur-druck"><span>PowerPlatformAcademy Dojo, cheat sheet of the techniques</span><span>As of {{stand_ch}}</span><span>{{kurz_basis}}/number</span></div>
     {{{filter}}}
@@ -25,13 +20,6 @@
         <button type="button" class="knopf knopf--klein" data-filter-reset>Reset filters</button>
       </div>
     </div>
-  </div>
-  <section class="sektion flaeche-2 wand__pfad" aria-labelledby="h-vier-wochen">
-    <div class="wrap">
-      {{{vier_wochen}}}
-    </div>
-  </section>
-  <div class="wrap sektion--eng">
-    <p class="beitragen lead">Do you know a technique that is missing here? <a href="{{mailto_beitrag}}">Write to me.</a> Only what has been checked against the documentation is added. <a href="../dojo/#beitragen">To the form in the Dojo</a></p>
+    <p class="sektion--eng">A free plan for self-study: <a href="../vier-wochen/">Through all belts in four weeks</a>. Do you know a technique that is missing here? <a href="../dojo/profil/#beitragen">Write to me.</a></p>
   </div>
 </main>

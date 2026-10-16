@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/folienbilder-einheitlicher-stil/">
 <link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/folienbilder-einheitlicher-stil/">
@@ -131,33 +131,38 @@
     <nav class="nav" aria-label="Hauptnavigation">
       <ul>
         <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Techniken</a></li>
-        <li><a href="../../gratis/" data-nav="gratis">Gratis</a></li>
+        <li><a href="../../pruefung/" data-nav="pruefung">Gürtelprüfung</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Lizenz-Check</a></li>
         <li><a href="../../dojo/" data-nav="dojo">Mein Dojo</a></li>
-        <li><a href="../../ueber/" data-nav="ueber">Über</a></li>
       </ul>
     </nav>
     <div class="kopf__aktionen">
       <a class="sprachwahl" href="../../en/techniken/folienbilder-einheitlicher-stil/" hreflang="en" lang="en" data-sprache-wahl="en" aria-label="English version of this page">EN</a>
       <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Technik suchen" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Strg K</kbd></button>
-      <a class="knoten" href="../../dojo/" data-guertelknoten aria-label="Mein Dojo, Weisser Gürtel"><span class="knoten__text">Weisser Gürtel</span></a>
-      <button type="button" class="knopf-icon" data-zufall aria-label="Zufällige Technik, die du noch nicht geübt hast" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg></button>
       <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
-      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
     </div>
   </div>
 </header>
 <div class="menue" id="menue" hidden>
   <div class="menue__kopf">
-    <span class="marke"><span class="marke__wort"><span class="marke__name">PowerPlatform<wbr>Academy Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">PowerPlatform<wbr>Academy Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
     <button type="button" class="knopf-icon" data-menue-zu aria-label="Menü schliessen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
   </div>
   <nav aria-label="Menü">
     <ul>
       <li><a href="../../techniken/" aria-current="true">Techniken</a></li>
-      <li><a href="../../gratis/">Gratis</a></li>
+      <li><a href="../../pruefung/">Gürtelprüfung</a></li>
+      <li><a href="../../gratis/">Lizenz-Check</a></li>
+      <li><a href="../../heute/">Technik des Tages</a></li>
       <li><a href="../../dojo/">Mein Dojo</a></li>
       <li><a href="../../ueber/">Über</a></li>
-      <li><a href="../../heute/">Technik des Tages</a></li>
+      <li><a href="https://powerautomate.ninja/" rel="noopener">Dojo für Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../../vier-wochen/">In vier Wochen durch alle Gürtel</a></li>
+      <li><a href="../../gratis/nachschlagen/">Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle</a></li>
+      <li><a href="../../dojo/profil/">Profil und eigene Technik</a></li>
     </ul>
   </nav>
 </div>
@@ -176,18 +181,17 @@
   <div class="wrap">
     <nav class="krumen" aria-label="Brotkrumen"><ol><li><a href="../../">Start</a></li><li><a href="../">Techniken</a></li><li><a href="../#weisser-guertel">Weisser Gürtel</a></li><li><a href="./" aria-current="page">Nr. 03</a></li></ol></nav>
     <header class="tk">
-      <p class="tk__nr" aria-hidden="true">03</p>
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="1">Weisser Gürtel</span></li>
+        <li><a class="zugang zugang--frei" href="../../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat, mit Bilderzeugung</a></li>
+        <li><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Pinselstrich</span></li>
+        <li class="tk__nr">Nr. 03</li>
+        <li><span>ca. 10 Min.</span></li>
+      </ul>
       <h1 id="h1">Der Tuschepinsel<small>Folienbilder in einem einheitlichen Stil</small></h1>
       <p class="tk__moment">Wenn die Präsentation Bilder braucht</p>
-      <ul class="metazeile">
-        <li><span class="metazeile__label">Gürtel</span> <span class="knoten" data-guertel-nr="1">Weisser Gürtel, Stufe 1</span></li>
-        <li><span class="metazeile__label">Art</span> <span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Pinselstrich</span></li>
-        <li><span class="metazeile__label">Zugang</span> <a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat, mit Bilderzeugung</a></li>
-        <li><span class="metazeile__label">Ausprobieren</span> <span>ca. 10 Min.</span></li>
-      </ul>
     </header>
 
-    <div class="tk-raster">
     <div class="tk-inhalt">
 
     <section class="abschnitt" aria-labelledby="h-problem">
@@ -199,12 +203,12 @@
       <h2 id="h-schnitt">Der Schnitt</h2>
       <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Vorher</p><div class="schnitt__vorher"><p class="schnitt__zitat">«Mach mir ein Bild für meine Folie über Zusammenarbeit.»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
       <p class="label">Nachher</p>
-<div class="schmiede" data-nur-js>
-<div class="schmiede__kopf"><h3>Für dich anpassen</h3><p class="schmiede__hinweis">Nichts verlässt deinen Browser.</p></div>
+<details class="schmiede-klappe" data-nur-js><summary>Für dich anpassen</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Nichts verlässt deinen Browser.</p></div>
 <div class="schmiede__feld"><label for="technik-f1">Anlass</label><input id="technik-f1" type="text" data-ph-feld="Anlass" autocomplete="off" aria-describedby="technik-f1-h"><small id="technik-f1-h">z. B. einen Kundenanlass</small></div>
 <div class="schmiede__feld schmiede__feld--breit"><label for="technik-f2">Motiv</label><textarea id="technik-f2" data-ph-feld="Motiv" rows="4" aria-describedby="technik-f2-h"></textarea><small id="technik-f2-h">z. B. zwei Hände setzen ein Puzzleteil in ein Bürogebäude</small></div>
 <div class="schmiede__feld"><label for="technik-f3">Akzentfarbe</label><input id="technik-f3" type="text" data-ph-feld="Akzentfarbe" autocomplete="off" aria-describedby="technik-f3-h"><small id="technik-f3-h">z. B. Dunkelrot</small></div>
-</div>
+</div></details>
 <div class="rolle" data-rolle>
 <div class="rolle__kopf"><p class="rolle__titel">Prompt zum Kopieren</p></div>
 <pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Erzeuge ein Bild für eine Präsentationsfolie.</mark>
@@ -274,17 +278,6 @@ https://copilot.ninja/techniken/folienbilder-einheitlicher-stil/</pre>
 <a href="../../techniken/nach-den-ferien-lagebericht/" rel="next"><span>Nächste Technik</span>04 Der Späherbericht</a>
     </nav>
     </div>
-    <aside class="tk-seite nicht-drucken" aria-labelledby="tk-seite-titel">
-      <div class="tk-seite__innen">
-        <p class="label" id="tk-seite-titel">Dein Werkzeug</p>
-        <p><a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat, mit Bilderzeugung</a></p>
-        <p class="klein">Ausprobieren: ca. 10 Min.</p>
-        <p><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Prompt kopieren</button></p>
-        <p><button type="button" class="knopf knopf--klein" data-geuebt-knopf data-nur-js>Als geübt markieren</button></p>
-        <p class="klein"><a href="#quelle">Quellen</a></p>
-      </div>
-    </aside>
-    </div>
   </div>
   <div class="leiste-unten">
     <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Prompt kopieren</button>
@@ -296,38 +289,43 @@ https://copilot.ninja/techniken/folienbilder-einheitlicher-stil/</pre>
   <div class="wrap">
     <div class="fuss__raster">
       <div>
-        <p class="fuss__marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">PowerPlatform<wbr>Academy Dojo</span><span class="marke__zusatz">Copilot</span></span></p>
-        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn. Ohne Anmeldung und ohne Cookies.</p>
+        <p class="fuss__klar">Unabhängige Website, keine Verbindung zu Microsoft.</p>
+        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn. Ohne Anmeldung und ohne Cookies, nur eine anonyme Zugriffszählung. Dein Fortschritt bleibt in deinem Browser.</p>
         <p class="beitragen">Du kennst eine Technik, die hier fehlt? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technik%20f%C3%BCr%20das%20Dojo&amp;body=Titel%20der%20Technik%3A%0A%0AProblem%2C%20das%20sie%20l%C3%B6st%3A%0A%0APrompt%20oder%20Anleitung%3A%0A%0AGrenzen%3A%0A%0AQuelle%20bei%20Microsoft%20Learn%3A%0A%0ADarf%20ich%20dich%20als%20Absender%20nennen%3F%20(ja%20oder%20nein)%0A%0ABitte%20keine%20Kunden-%2C%20Personen-%20oder%20Firmendaten%20im%20Prompt.">Schreib mir.</a></p>
-        <p class="fuss__dojos">Das PowerPlatformAcademy Dojo gehört zur <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.<br>Weitere Dojos: <a href="../../">Copilot</a> | <a href="https://powerautomate.ninja/" rel="noopener">Power Automate</a></p>
       </div>
       <nav aria-labelledby="fuss-dojo">
         <h2 id="fuss-dojo">Dojo</h2>
         <ul>
           <li><a href="../../techniken/">Alle Techniken</a></li>
-          <li><a href="../../heute/">Technik des Tages</a></li>
+          <li><a href="../../pruefung/">Gürtelprüfung</a></li>
           <li><a href="../../gratis/">Ist Microsoft Copilot gratis?</a></li>
-          <li><a href="../../dojo/">Mein Dojo</a></li>
-          <li><a href="../../dojo/test/">Welcher Gürtel bist du?</a></li>
+          <li><a href="../../heute/">Technik des Tages</a></li>
+          <li><a href="../../vier-wochen/">In vier Wochen durch alle Gürtel</a></li>
           <li><a href="../../kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a></li>
         </ul>
       </nav>
-      <div>
-        <h2 id="fuss-weiter">Weiter</h2>
-        <ul aria-labelledby="fuss-weiter">
-          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls</a></li>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Info</h2>
+        <ul>
+          <li><a href="../../ueber/">Über das Dojo</a></li>
+          <li><a href="../../impressum/">Impressum</a></li>
+          <li><a href="../../datenschutz/">Datenschutz</a></li>
           <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls</a></li>
           <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
         </ul>
-        <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Bewegung aus</button></p>
-      </div>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Weitere Dojos: <a href="../../">Copilot</a> | <a href="https://powerautomate.ninja/" rel="noopener">Power Automate</a></p>
+      <p>Das PowerPlatformAcademy Dojo gehört zur <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.</p>
     </div>
     <div class="fuss__recht">
       <p class="fuss__klar">Kein Angebot von Microsoft. Keine Lizenzberatung: Für deinen Fall fragst du deine IT oder deinen Microsoft-Partner.</p>
       <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
       <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
-      <p><a href="../../impressum/">Impressum</a>, <a href="../../datenschutz/">Datenschutz</a>, <a href="../../ueber/">Über das Dojo</a></p>
       <p>Keine Cookies, kein Tracking. Aufrufe werden nur anonym mit GoatCounter gezählt. Dein Fortschritt bleibt in deinem Browser.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Bewegung aus</button></p>
     </div>
   </div>
   <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>

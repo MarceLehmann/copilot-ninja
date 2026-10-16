@@ -14,8 +14,11 @@ Kurzfakten:
 ## Seiten
 
 - [Technik-Wand](https://copilot.ninja/techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)
-- [Ist Microsoft Copilot gratis?](https://copilot.ninja/gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage
-- [Welcher Gürtel bist du?](https://copilot.ninja/dojo/test/): Selbsttest mit sieben Fragen
+- [Ist Microsoft Copilot gratis?](https://copilot.ninja/gratis/): Lizenz-Check in vier Fragen, was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage
+- [Gürtelprüfung](https://copilot.ninja/pruefung/): Welcher Copilot-Gürtel bist du? Sieben Fragen, eine pro Gürtel
+- [Alle Fragen der Gürtelprüfung](https://copilot.ninja/pruefung/fragen/): jede Frage mit Auflösung und Quelle
+- [Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle](https://copilot.ninja/gratis/nachschlagen/): Mythen, vier Stufen, Wortlaut der Bedingungen, häufige Fragen, Prüfprotokoll
+- [In vier Wochen durch alle Gürtel](https://copilot.ninja/vier-wochen/): freier Plan zum Selbstlernen
 - [Über das Dojo](https://copilot.ninja/ueber/): Methode, Dojo-Regeln, was die Seite nicht ist
 - [Volltext aller Techniken](https://copilot.ninja/llms-full.txt): Prompts, Grenzen und Quellen in beiden Sprachen
 
@@ -59,7 +62,10 @@ Kurzfakten:
 
 - [Technique wall](https://copilot.ninja/en/techniken/): all techniques by belt
 - [Is Microsoft Copilot free?](https://copilot.ninja/en/gratis/): what works without an add-on license, with source and review date for each statement
-- [Which belt are you?](https://copilot.ninja/en/dojo/test/): self-test with seven questions
+- [Belt exam](https://copilot.ninja/en/pruefung/): which Copilot belt are you? Seven questions, one per belt
+- [All belt exam questions](https://copilot.ninja/en/pruefung/fragen/): each question with the answer and a source
+- [Copilot without an add-on license: every condition with its source](https://copilot.ninja/en/gratis/nachschlagen/): myths, four levels, conditions word for word, FAQ, review log
+- [Through all belts in four weeks](https://copilot.ninja/en/vier-wochen/): free plan for self-study
 - [About the Dojo](https://copilot.ninja/en/ueber/): method, Dojo rules, what the site is not
 
 ### Techniques

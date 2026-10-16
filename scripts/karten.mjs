@@ -4,7 +4,7 @@
 
   node scripts/karten.mjs                 alle Eintraege (Vorschau): SVG und PNG je Technik und je Guertel, dazu
                                           dojo/guertel.json, die sieben Guertel-Landeseiten und die Fragenliste
-                                          ohne JavaScript in dojo/test/index.html
+                                          mit Auflösung in pruefung/fragen/index.html
   node scripts/karten.mjs --produktion    nur freigegebene Eintraege, Karten nicht freigegebener Eintraege werden entfernt
   Zusatz: --ohne-png      nur SVG schreiben (kein Chrome noetig)
           CHROME=Pfad     Chrome oder Edge fuer die PNG-Wandlung (sonst Standardpfade)
@@ -123,7 +123,7 @@ function band(n) {
 function rahmen(inhalt, titel) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="${esc(titel)}">
 <title>${esc(titel)}</title>
-<rect width="1200" height="630" fill="#F4EFE6"/>
+<rect width="1200" height="630" fill="#F3EFF7"/>
 ${inhalt}
 </svg>
 `;
@@ -244,7 +244,7 @@ function landeseite(g) {
         <p class="lead"><strong>Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.</strong></p>
 ${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du)}</p>\n` : ''}        <p>Diese Seite gehört zu einer geteilten Karte aus dem PowerPlatformAcademy Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.</p>
         <div class="knopf-reihe">
-          <a class="knopf knopf--primaer" href="../../test/">Mach den Test selbst</a>
+          <a class="knopf knopf--primaer" href="${r}pruefung/">Mach die Gürtelprüfung selbst</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniken dieses Gürtels</a>
         </div>
       </div>
@@ -312,7 +312,7 @@ function landeseiteEN(g) {
         <p class="lead"><strong>Self-assessment on an independent website. Not a certificate.</strong></p>
 ${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}        <p>This page belongs to a card shared from the PowerPlatformAcademy Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
         <div class="knopf-reihe">
-          <a class="knopf knopf--primaer" href="../../test/">Take the test yourself</a>
+          <a class="knopf knopf--primaer" href="${r}pruefung/">Take the belt exam yourself</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniques of this belt</a>
         </div>
       </div>
@@ -341,11 +341,11 @@ ${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}
   schreibe(`en/dojo/guertel/${g.farbe}/index.html`, rahmenBehalten(`en/dojo/guertel/${g.farbe}/index.html`, html));
 }
 
-/* Fragenliste ohne JavaScript in dojo/test/index.html (zwischen DOJO:FRAGEN-Markern) */
+/* Fragenliste mit Auflösung in pruefung/fragen/index.html (bis 16.10.2026 dojo/test/) (zwischen DOJO:FRAGEN-Markern) */
 const TECHNIK_NAMEN = { t06: 'Das Falkenauge', t12: 'Die Fährte' };
 const TECHNIK_NAMEN_EN = { t06: 'The Hawk Eye', t12: 'The Trail' };
 function fragenListe() {
-  const rel = `${LP()}dojo/test/index.html`;
+  const rel = `${LP()}pruefung/fragen/index.html`;
   if (!gibtEs(rel) || !gibtEs(`${LP()}dojo/selbsttest.json`)) return;
   const pool = JSON.parse(lies(`${LP()}dojo/selbsttest.json`));
   const nachId = Object.fromEntries(DABEI.map(t => [t.id, t]));

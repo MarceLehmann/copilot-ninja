@@ -121,6 +121,8 @@ const MOMENTE_TEXT = {
 };
 let WOCHEN = WOCHEN_TEXT.de;
 let MOMENTE = MOMENTE_TEXT.de;
+// Alte Pfade, die seit dem Umbau vom 16.10.2026 weiterleiten: [alt, neu, Titel deutsch, Titel englisch]
+const UMZUEGE = [['dojo/test/', 'pruefung/', 'Gürtelprüfung', 'Belt exam']];
 const ALTE_ANKER = ['notizen-zu-protokoll', 'antwort-auf-kundenmail', 'tabelle-pruefen', 'agent-interne-anleitungen', 'agent-anfragen-sortieren'];
 // Zweisprachigkeit 16.10.2026: dojo.js 20 auf 23 und dojo-seiten.js 28 auf 32 (englische Texte direkt im Skript, kein Nachladen), sprache.js neu 2.
 // GoatCounter 16.10.2026: count.js neu 10 (selbst gehostete Kopie von gc.zgo.at, 9.4 KB, unveraendert, daher nicht kuerzbar).
@@ -359,7 +361,8 @@ const urlTechnik = (t) => `${BASE_L}techniken/${t.slug}/`;
 const nrLabel = (t) => t.typ === 'technik' ? pad2(t.nr) : t.id.toUpperCase();
 
 /* Gratis-Anker (beide Sprachen haben dieselben Anker) */
-for (const datei of ['gratis/index.html', 'en/gratis/index.html']) {
+// Seit 16.10.2026 stehen die Zeilen im Wortlaut auf /gratis/nachschlagen/ (Lizenz-Check kurz, Nachschlagteil als Unterseite)
+for (const datei of ['gratis/nachschlagen/index.html', 'en/gratis/nachschlagen/index.html']) {
   const ids = gibtEs(datei) ? new Set([...lies(datei).matchAll(/\sid="([^"]+)"/g)].map(m => m[1])) : null;
   if (!ids && datei.startsWith('en/')) { fehler(`${datei} fehlt`); continue; }
   for (const t of DABEI) {
@@ -374,7 +377,7 @@ function zugangBadge(t, r, kurz = false) {
   const z = ZUGANG[t.zugang]; if (!z) return '';
   const anker = t.zugang_anker || z.anker;
   const text = kurz ? z.kurz : (t.zugang_text || z.kurz);
-  return `<a class="zugang zugang--${z.klasse}" href="${r}gratis/#${esc(anker)}">${z.icon}${esc(text)}</a>`;
+  return `<a class="zugang zugang--${z.klasse}" href="${r}gratis/nachschlagen/#${esc(anker)}">${z.icon}${esc(text)}</a>`;
 }
 function artBadge(t) { const a = ART[t.art]; return a ? `<span class="art art--${t.art}">${a.icon}${a.name}</span>` : ''; }
 function knoten(n, text, extra = '') { return `<span class="knoten${extra}" data-guertel-nr="${n}">${esc(text)}</span>`; }
@@ -419,10 +422,11 @@ function schmiedeHtml(t, praefixId, ebene = 'h3') {
       : `<input id="${id}" type="text" data-ph-feld="${esc(name)}" autocomplete="off"${hinweis ? ` aria-describedby="${id}-h"` : ''}>`;
     return `<div class="schmiede__feld${breit ? ' schmiede__feld--breit' : ''}"><label for="${id}">${esc(name)}</label>${feld}${hinweis ? `<small id="${id}-h">${esc(/^(z\.\s?B\.|e\.g\.)/.test(hinweis) ? hinweis : T('z. B. ', 'e.g. ') + hinweis)}</small>` : ''}</div>`;
   }).join('\n');
-  return `<div class="schmiede" data-nur-js>
-<div class="schmiede__kopf"><${ebene}>${T('Für dich anpassen', 'Make it yours')}</${ebene}><p class="schmiede__hinweis">${T('Nichts verlässt deinen Browser.', 'Nothing leaves your browser.')}${profil ? T(' Firmenname, Funktion und Branche kommen aus deinem Profil unter Mein Dojo.', ' Company name, role and industry come from your profile in My Dojo.') : ''}</p></div>
+  // Eingeklappt (16.10.2026, Dosierung wie powerautomate.ninja): der Prompt steht sofort da, die Felder oeffnet, wer sie braucht
+  return `<details class="schmiede-klappe" data-nur-js><summary>${T('Für dich anpassen', 'Make it yours')}</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">${T('Nichts verlässt deinen Browser.', 'Nothing leaves your browser.')}${profil ? T(' Firmenname, Funktion und Branche kommen aus deinem Profil unter Mein Dojo.', ' Company name, role and industry come from your profile in My Dojo.') : ''}</p></div>
 ${html}
-</div>`;
+</div></details>`;
 }
 function rolleHtml(t, preId, titel, text, mitTeilen, erfolg, knopfText) {
   const inhalt = mitTeilen ? textMitTeilen(text, t._felder) : textHtml(text, t._felder);
@@ -481,16 +485,16 @@ function guertelpfadHtml(r) {
   const zeile = (g) => {
     const drin = sortiert.filter(t => t.guertel === g.nr);
     const tk = drin.filter(t => t.typ === 'technik');
-    const bsp = tk[0] || drin[0];
     const anzahl = tk.length ? `${tk.length} ${tk.length === 1 ? T('Technik', 'technique') : T('Techniken', 'techniques')}` : `${drin.length} ${drin.length === 1 ? T('Grundform', 'basic form') : T('Grundformen', 'basic forms')}`;
-    return `<li class="pfadzeile" data-guertel-nr="${g.nr}" id="pfad-${g.farbe}"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="${r}techniken/#${g.anker}">${esc(g.name)}</a><span class="pfadzeile__zahl">${drin.length ? anzahl : T('offen', 'open')}</span>${bsp ? `<a class="pfadzeile__bsp" href="${r}techniken/${bsp.slug}/">${bsp.typ === 'technik' ? pad2(bsp.nr) + ' ' : ''}${esc(bsp.titel)}</a>` : ''}<p class="fortschritt__text pfadzeile__stand" data-fortschritt="${g.nr}" hidden></p></li>`;
+    // Wie powerautomate.ninja (16.10.2026): Name mit Leitwort, Anzahl, ein Satz, was du danach kannst
+    return `<li class="pfadzeile" data-guertel-nr="${g.nr}" id="pfad-${g.farbe}"><span class="pfadzeile__band" aria-hidden="true"></span><a class="pfadzeile__name" href="${r}techniken/#${g.anker}">${esc(g.name)}${g.leitwort ? ': ' + esc(g.leitwort) : ''}</a><span class="pfadzeile__zahl">${drin.length ? anzahl : T('offen', 'open')}</span>${g.kannst_du ? `<p class="pfadzeile__kann">${T('Was du danach kannst:', 'What you can do afterwards:')} ${esc(g.kannst_du)}</p>` : ''}<p class="fortschritt__text pfadzeile__stand" data-fortschritt="${g.nr}" hidden></p></li>`;
   };
   const marke = MIT_AGENTS ? T(`<p class="pfadzeilen__schwelle"><strong>Die Schwelle.</strong> Ab hier baust du Agents. Die <a href="${LEARN_TESTVERSION}" rel="noopener">Testversion von Copilot Studio</a> reicht zum Üben.</p>\n`, `<p class="pfadzeilen__schwelle"><strong>The threshold.</strong> From here on you build agents. The <a href="${LEARN_TESTVERSION}" rel="noopener">Copilot Studio trial</a> is enough to practice.</p>\n`) : '';
   return `<ol class="pfadzeilen">${GUERTEL.slice(0, 3).map(zeile).join('\n')}</ol>
 ${marke}<ol class="pfadzeilen" start="4">${GUERTEL.slice(3).map(zeile).join('\n')}</ol>`;
 }
 function vierWochenHtml(r, ebene) {
-  const sub = ebene === 'h2' ? 'h3' : 'h4';
+  const sub = ebene === 'h1' ? 'h2' : ebene === 'h2' ? 'h3' : 'h4';
   let fehltWoche = false;
   const wochen = WOCHEN.map(w => {
     const liste = w.ergebnisse.filter(([id]) => NACH_ID[id]).map(([id, text]) => { const t = NACH_ID[id]; return `<li>${esc(text)} (<a href="${r}techniken/${t.slug}/">${T('Nr.', 'No.')} ${t.nr}</a>)</li>`; });
@@ -548,11 +552,10 @@ ${rolleHtml(t, 'heute-text', (ART[t.art] || ART.pinselstrich).rolle, t.technik_t
 function heuteKompaktHtml(t) {
   if (!t) return `<p>${NOCH_NICHT}</p>`;
   return `<article class="tdk" data-heute-kompakt data-technik="${t.id}" data-guertel-nr="${t.guertel}">
-<span class="tdk__nr" aria-hidden="true">${pad2(t.nr)}</span>
 <div class="tdk__inhalt">
-<h3 class="tdk__titel"><a href="techniken/${t.slug}/">${esc(t.titel)}</a><small>${T('Nr.', 'No.')} ${t.nr}: ${esc(t.klartitel)}</small></h3>
+<ul class="metazeile"><li>${knoten(t.guertel, gName(t.guertel))}</li><li>${zugangBadge(t, '', true)}</li><li class="tk__nr">${T('Nr.', 'No.')} <span class="tdk__nr">${pad2(t.nr)}</span></li></ul>
+<h3 class="tdk__titel"><a href="techniken/${t.slug}/">${esc(t.titel)}</a><small>${esc(t.klartitel)}</small></h3>
 <p class="tdk__problem">${esc(t.problem)}</p>
-<ul class="metazeile"><li>${knoten(t.guertel, gName(t.guertel))}</li><li>${zugangBadge(t, '', true)}</li></ul>
 <p><a class="knopf knopf--primaer knopf--klein tdk__knopf" href="techniken/${t.slug}/">${T('Technik öffnen', 'Open technique')}</a></p>
 </div>
 </article>`;
@@ -566,7 +569,6 @@ function filterHtml() {
 <fieldset><legend>${T('Gürtel', 'Belt')}</legend><div class="chips">${GUERTEL.map(g => chip('guertel-nr', g.nr, g.kurz, `<span class="knoten" data-guertel-nr="${g.nr}" aria-hidden="true"></span>`)).join('')}</div></fieldset>
 <fieldset><legend>${T('Werkzeug', 'Tool')}</legend><div class="chips">${werkzeuge.map(w => chip('werkzeug', w, PRODUKTNAMEN[w])).join('')}</div></fieldset>
 <fieldset><legend>${T('Zugang', 'Access')}</legend><div class="chips">${zugaenge.map(z => chip('zugang', z, ZUGANG[z].kurz)).join('')}</div></fieldset>
-<fieldset><legend>${T('Art', 'Type')}</legend><div class="chips">${arten.map(a => chip('art', a, `${ART[a].name} (${ART[a].wort})`)).join('')}</div></fieldset>
 <fieldset><legend>${T('Dein Stand', 'Your status')}</legend><div class="chips">${chip('stand', 'offen', T('Noch offen', 'Still open'))}${chip('stand', 'geuebt', T('Geübt', 'Practiced'))}</div></fieldset>
 <div class="filter__fuss"><p class="filter__zaehler" data-filter-zaehler role="status" aria-live="polite"></p><button type="button" class="knopf knopf--leise knopf--klein" data-filter-reset>${T('Filter zurücksetzen', 'Reset filters')}</button></div>
 </div>`;
@@ -575,10 +577,10 @@ function wandAbschnitte(r) {
   return GUERTEL.map(g => {
     const gf = GRUNDFORMEN.filter(t => t.guertel === g.nr), tk = TECHNIKEN.filter(t => t.guertel === g.nr);
     const teil = `<section class="guertel-abschnitt sektion--eng" id="${g.anker}" aria-labelledby="h-${g.anker}" data-guertel-nr="${g.nr}">
-<h2 id="h-${g.anker}"><span class="pfad__leitwort">${T('Stufe', 'Level')} ${g.nr}${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>${knoten(g.nr, g.name, ' knoten--gross')}</h2>
-${g.kannst_du ? `<p class="prose">${T('Was du danach kannst:', 'What you can do afterwards:')} ${esc(g.kannst_du)}</p>` : ''}
-${gf.length ? `<p class="label">${T('Aufwärmen', 'Warm-up')}</p><ul class="karten">${gf.map(t => karte(t, r)).join('\n')}</ul>` : ''}
-${tk.length ? `${gf.length ? `<p class="label">${T('Techniken', 'Techniques')}</p>` : ''}<ul class="karten">${tk.map(t => karte(t, r)).join('\n')}</ul>` : (gf.length ? '' : `<p class="pfad__offen">${NOCH_NICHT}</p>`)}
+<h2 id="h-${g.anker}">${knoten(g.nr, g.name + (g.leitwort ? ': ' + g.leitwort : ''), ' knoten--gross')}</h2>
+${g.kannst_du ? `<p class="klein">${T('Was du danach kannst:', 'What you can do afterwards:')} ${esc(g.kannst_du)}</p>` : ''}
+${gf.length ? `<p class="label">${T('Aufwärmen', 'Warm-up')}</p><ul class="karten">${gf.map(t => karte(t, r, false)).join('\n')}</ul>` : ''}
+${tk.length ? `${gf.length ? `<p class="label">${T('Techniken', 'Techniques')}</p>` : ''}<ul class="karten">${tk.map(t => karte(t, r, false)).join('\n')}</ul>` : (gf.length ? '' : `<p class="pfad__offen">${NOCH_NICHT}</p>`)}
 </section>`;
     return g.nr === 3 ? teil + '\n' + schwelleHtml('h2', ' schwelle--frei') : teil;
   }).join('\n');
@@ -613,52 +615,19 @@ function rechnerHtml(t) {
     </section>
 `;
 }
-function schnittKarte(t) {
-  if (!t) return '';
-  if (istEN()) return `<div class="schnitt" id="schnitt-karte" data-schnitt data-technik="${t.id}">
-<div class="schnitt__fuss"><span class="label">The cut</span><div class="schnitt__umschalter" role="group" aria-label="View"><button type="button" data-zeige="vorher" aria-pressed="false">Before</button><button type="button" data-zeige="nachher" aria-pressed="true">After</button></div></div>
-<div class="schnitt__buehne">
-<div class="schnitt__vorher"><span class="label">Before</span><p class="schnitt__zitat">“${esc(t.vorher)}”</p></div>
-<div class="schnitt__nachher"><span class="label">After</span><pre class="code" id="schnitt-text">${textMitTeilen(t.technik_text, t._felder)}</pre></div>
-<svg class="schnitt__strich" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M3 66C28 58 58 44 97 30"/></svg>
-</div>
-<ul class="teile-legende" aria-label="The four parts of an effective prompt"><li class="teil--ziel">Goal</li><li class="teil--kontext">Context</li><li class="teil--quelle">Source</li><li class="teil--erwartung">Expectations</li></ul>
-<div class="schnitt__fuss" data-rolle><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="schnitt-text" data-erfolg="${esc(ART.pinselstrich.erfolg)}" data-nur-js>Copy prompt</button><p class="rolle__status" role="status"></p></div>
-<p class="schnitt__hinweis">Example. The answer can differ depending on license and data. The four parts come from the learning module <a href="${LEARN_PROMPTS}" rel="noopener">“Write effective prompts”</a> on Microsoft Learn, as of October 15, 2026.</p>
-</div>`;
-  return `<div class="schnitt" id="schnitt-karte" data-schnitt data-technik="${t.id}">
-<div class="schnitt__fuss"><span class="label">Der Schnitt</span><div class="schnitt__umschalter" role="group" aria-label="Ansicht"><button type="button" data-zeige="vorher" aria-pressed="false">Vorher</button><button type="button" data-zeige="nachher" aria-pressed="true">Nachher</button></div></div>
-<div class="schnitt__buehne">
-<div class="schnitt__vorher"><span class="label">Vorher</span><p class="schnitt__zitat">«${esc(t.vorher)}»</p></div>
-<div class="schnitt__nachher"><span class="label">Nachher</span><pre class="code" id="schnitt-text">${textMitTeilen(t.technik_text, t._felder)}</pre></div>
-<svg class="schnitt__strich" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M3 66C28 58 58 44 97 30"/></svg>
-</div>
-<ul class="teile-legende" aria-label="Die vier Teile eines wirksamen Prompts"><li class="teil--ziel">Ziel</li><li class="teil--kontext">Kontext</li><li class="teil--quelle">Quelle</li><li class="teil--erwartung">Erwartung</li></ul>
-<div class="schnitt__fuss" data-rolle><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="schnitt-text" data-nur-js>Prompt kopieren</button><p class="rolle__status" role="status"></p></div>
-<p class="schnitt__hinweis">Beispiel. Die Antwort kann je nach Lizenz und Daten anders ausfallen. Die vier Teile nennt das Lernmodul <a href="${LEARN_PROMPTS}" rel="noopener">«Write effective prompts»</a> bei Microsoft Learn, Stand 15.10.2026.</p>
-</div>`;
-}
-// Mobiler Haken direkt unter der H1 (Korrektur 15.10.2026): Tusch, der schwache Prompt mit Pinselstrich, die vier Teile.
-// Auf breiten Bildschirmen steht daneben die ganze Schnitt-Karte, dort ist der Haken ausgeblendet.
-function schnittHaken(t) {
-  if (!t || !t.vorher) return '';
-  return `        <a class="haken" href="#schnitt-karte">
-          ${tusch('zeigen', 'tusch--zeichnen')}
-          <span class="haken__text"><span class="haken__vorher">${T('«', '“')}${esc(t.vorher)}${T('»', '”')}<svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></span><span class="haken__nachher">${T('Daraus werden vier Teile: <b class="teil--ziel">Ziel</b>, <b class="teil--kontext">Kontext</b>, <b class="teil--quelle">Quelle</b>, <b class="teil--erwartung">Erwartung</b>.', 'It becomes four parts: <b class="teil--ziel">Goal</b>, <b class="teil--kontext">Context</b>, <b class="teil--quelle">Source</b>, <b class="teil--erwartung">Expectations</b>.')}</span></span>
-        </a>`;
-}
 
 /* Seitenrahmen */
 const MARKEN = (() => {
   const texte = [];
-  for (const d of ['gratis/index.html', 'ueber/index.html']) if (gibtEs(d)) texte.push(lies(d));
+  for (const d of ['gratis/index.html', 'gratis/nachschlagen/index.html', 'ueber/index.html']) if (gibtEs(d)) texte.push(lies(d));
   texte.push(JSON.stringify(DABEI));
   const alles = texte.join('\n');
   const dazu = MARKEN_KANDIDATEN.filter(m => alles.includes(m));
   return [...new Set([...MARKEN_BASIS, ...dazu])].sort((a, b) => a.localeCompare(b, 'de'));
 })();
 function markenText() { return MARKEN.slice(0, -1).join(', ') + T(' und ', ' and ') + MARKEN[MARKEN.length - 1]; }
-const NAV_ZIEL = { wand: 'techniken', technik: 'techniken', heute: 'techniken', gratis: 'gratis', dojo: 'dojo', test: 'dojo', guertel: 'dojo', ueber: 'ueber' };
+// Hauptpunkte wie powerautomate.ninja (16.10.2026): Techniken, Gürtelprüfung, Lizenz-Check, Mein Dojo
+const NAV_ZIEL = { wand: 'techniken', technik: 'techniken', heute: 'techniken', wochen: 'techniken', pruefung: 'pruefung', test: 'pruefung', gratis: 'gratis', dojo: 'dojo', profil: 'dojo', guertel: 'dojo' };
 // Pfad einer Seite relativ zur Sprachwurzel: 'en/techniken/x/index.html' und 'techniken/x/index.html' ergeben 'techniken/x/'
 function seitenPfad(rel) { return rel.replace(/^en\//, '').replace(/index\.html$/, '').replace(/^404\.html$/, ''); }
 // ra: Weg zur Wurzel (Assets, gemeinsam), r: Weg zur Sprachwurzel (Seiten). Auf Deutsch sind beide gleich.
@@ -680,8 +649,9 @@ function sprachKontext(rel, absolut, mitAlternates) {
 function rahmenKontext(rel, seite, extra = {}, absolut = false) {
   const { r, ra } = wege(rel, absolut);
   const ziel = NAV_ZIEL[seite];
-  const cur = (n) => ziel === n ? (/^(wand|gratis|dojo|ueber)$/.test(seite) ? ' aria-current="page"' : ' aria-current="true"') : '';
-  const cssExtra = seite === 'gratis' ? `<link rel="stylesheet" href="${ra}assets/css/gratis.css">\n` : /^(dojo|test|guertel)$/.test(seite) ? `<link rel="stylesheet" href="${ra}assets/css/dojo.css">\n` : seite === 'technik' ? `<link rel="stylesheet" href="${ra}assets/css/technik.css">\n` : '';
+  const unterseite = /(nachschlagen|fragen)\/index\.html$/.test(rel);
+  const cur = (n) => ziel === n ? (/^(wand|pruefung|gratis|dojo)$/.test(seite) && !unterseite ? ' aria-current="page"' : ' aria-current="true"') : '';
+  const cssExtra = seite === 'gratis' ? `<link rel="stylesheet" href="${ra}assets/css/gratis.css">\n` : /^(dojo|test|guertel|pruefung|profil)$/.test(seite) ? `<link rel="stylesheet" href="${ra}assets/css/dojo.css">\n` : seite === 'technik' ? `<link rel="stylesheet" href="${ra}assets/css/technik.css">\n` : '';
   // Sprachweiche nur auf der deutschen Startseite und auf 404 (nur im Browser, Suchmaschinen sehen keine Weiterleitung)
   const weiche = (!istEN() && seite === 'start') || seite === '404' ? `<script src="${ra}assets/js/sprache.js"></script>\n` : '';
   return {
@@ -689,7 +659,7 @@ function rahmenKontext(rel, seite, extra = {}, absolut = false) {
     ...sprachKontext(rel, absolut, seite !== '404'),
     tusch_marke: tusch('ruhe'), tusch_fuss: tusch('ruhe'), wortmarke: wortmarke(),
     icon_suche: ICONS.suche, icon_zufall: ICONS.zufall, icon_sonne: ICONS.sonne, icon_mond: ICONS.mond, icon_menue: ICONS.menue, icon_zu: ICONS.zu,
-    cur_techniken: cur('techniken'), cur_gratis: cur('gratis'), cur_dojo: cur('dojo'), cur_ueber: cur('ueber'),
+    cur_techniken: cur('techniken'), cur_pruefung: cur('pruefung'), cur_gratis: cur('gratis'), cur_dojo: cur('dojo'),
     mailto_beitrag: mailtoBeitrag, markenliste: markenText(),
     newsletter_footer: NEWSLETTER_URL('footer'), academy_footer: ACADEMY_URL('footer'), academy_dojo: ACADEMY_DOJO_URL('footer'),
     ...extra
@@ -747,33 +717,29 @@ ${render(partial('fuss'), ctx, 'fuss')}
 /* Seiten erzeugen. Jede Funktion baut die Seite in der Sprache des laufenden Durchgangs (seite() setzt en/ davor). */
 function baueStart() {
   const heute = heuteTechnik(true);
-  const g1 = NACH_ID.g1;
   // Zahl aus den Daten (Review 15.10.2026, H4): Agent Builder zaehlt mit, weil er ohne Zusatzlizenz laeuft
   const ohneZl = TECHNIKEN.filter(t => t.zugang === 'ohne-zl' || t.zugang === 'agent-builder').length;
+  // Startseite wie powerautomate.ninja (16.10.2026): Bilanz als eine Zeile unter Frage 1 des Lizenz-Checks.
+  // Der Schnitt (Vorher/Nachher), die vier Momente und der Trainer-Block sind auf /techniken/ bzw. /ueber/ umgezogen.
   const bilanz = TECHNIKEN.length
-    ? T(`          <p class="gcheck__zahl"><strong>${ohneZl === TECHNIKEN.length ? 'Alle ' + ohneZl : ohneZl + ' von ' + TECHNIKEN.length}</strong> Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a></p>`,
-      `          <p class="gcheck__zahl"><strong>${ohneZl === TECHNIKEN.length ? 'All ' + ohneZl : ohneZl + ' of ' + TECHNIKEN.length}</strong> techniques run without an add-on license if your subscription includes Microsoft Copilot Chat. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Show these techniques</a></p>`)
-    : T('          <p class="gcheck__zahl">Viele Techniken laufen in Microsoft Copilot Chat. Ob Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist, zeigt der Gratis-Check.</p>', '          <p class="gcheck__zahl">Many techniques run in Microsoft Copilot Chat. Whether Copilot Chat is included in your subscription without an add-on license is shown by the free check.</p>');
-  const momente = MOMENTE.filter(([id]) => NACH_ID[id]).map(([id, satz]) => { const t = NACH_ID[id]; return `<li class="moment"><blockquote><p>${T('«', '“')}${esc(satz)}${T('»', '”')}</p></blockquote><a href="techniken/${t.slug}/"><span>${T('Technik', 'Technique')} ${pad2(t.nr)}</span> ${esc(t.titel)}</a></li>`; });
-  const momenteHtml = momente.length ? `      <ul class="momente momente--start">${momente.join('\n')}</ul>` : '';
-  const erste = TECHNIKEN[0] || sortiert[0];
-  const auf = [heute, g1, ...momente.map((_, i) => NACH_ID[MOMENTE[i][0]]), ...TECHNIKEN];
+    ? T(`      <p class="klein">${ohneZl === TECHNIKEN.length ? 'Alle ' + ohneZl : ohneZl + ' von ' + TECHNIKEN.length} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a></p>`,
+      `      <p class="klein">${ohneZl === TECHNIKEN.length ? 'All ' + ohneZl : ohneZl + ' of ' + TECHNIKEN.length} techniques run without an add-on license if your subscription includes Microsoft Copilot Chat. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Show these techniques</a></p>`)
+    : T('      <p class="klein">Viele Techniken laufen in Microsoft Copilot Chat. Ob Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist, zeigt der Lizenz-Check.</p>', '      <p class="klein">Many techniques run in Microsoft Copilot Chat. Whether Copilot Chat is included in your subscription without an add-on license is shown by the license check.</p>');
+  const auf = [heute, ...TECHNIKEN];
   seite('index.html', {
     seite: 'start', template: 'start.html',
     titel: T(`${SITE_VOLL}: Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio`, `${SITE_VOLL}: Ninja techniques for Microsoft Copilot Chat and Copilot Studio`),
-    beschreibung: T(`${ANZAHL} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel. Jede mit Quelle bei Microsoft Learn und Prüfdatum.`, `${ANZAHL} ninja techniques for Microsoft Copilot Chat and Copilot Studio, from white belt to black belt. Each with a source on Microsoft Learn and a review date.`),
+    beschreibung: T(`Welcher Copilot-Gürtel bist du? Gürtelprüfung, Lizenz-Check und ${ANZAHL} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, jede mit Quelle bei Microsoft Learn.`, `Which Copilot belt are you? Belt exam, license check and ${ANZAHL} ninja techniques for Microsoft Copilot Chat and Copilot Studio, each with a source on Microsoft Learn.`),
     ogTitel: T('PowerPlatformAcademy Dojo: Übung schlägt Hype.', 'PowerPlatformAcademy Dojo: Practice beats hype.'),
     canonical: BASE_L, banner: ohneFreigabe(auf.filter(Boolean)),
     jsonld: [ldWebsite(), LD_ORG],
     daten: {
       anzahl: ANZAHL,
-      erste_technik_url: erste ? `techniken/${erste.slug}/` : 'techniken/',
+      band: GUERTEL.map(g => `<span data-guertel-nr="${g.nr}"></span>`).join(''),
       tusch_hero: tusch('ruhe', 'tusch--zeichnen'), tusch_zeigen: tusch('zeigen'),
-      schnitt_haken: schnittHaken(g1),
-      schnitt_karte: schnittKarte(g1) || `<div class="schnitt"><p>${NOCH_NICHT}</p></div>`,
       heute_karte: heuteKompaktHtml(heute),
-      momente: momenteHtml, guertelpfad: guertelpfadHtml(''), bilanz,
-      kurs_trainer: KURS_URL('start-trainer'), newsletter_trainer: NEWSLETTER_URL('start-trainer')
+      guertelpfad: guertelpfadHtml(''), bilanz,
+      kurs_trainer: KURS_URL('start')
     }
   });
 }
@@ -788,9 +754,9 @@ function baueWand() {
     jsonld: [ldWebsite(), LD_ORG, { '@type': 'CollectionPage', '@id': `${BASE_L}techniken/#seite`, name: T(`${ANZAHL} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio`, `${ANZAHL} ninja techniques for Microsoft Copilot Chat and Copilot Studio`), url: `${BASE_L}techniken/`, inLanguage: HTML_LANG(), isPartOf: { '@id': `${BASE_L}#website` }, mainEntity: { '@type': 'ItemList', itemListElement: sortiert.map((t, i) => ({ '@type': 'ListItem', position: i + 1, url: urlTechnik(t), name: `${t.titel}: ${t.klartitel}` })) } }, krumen],
     daten: {
       anzahl: ANZAHL, anzahl_grundformen: (GRUNDFORMEN.length || 5) === 1 ? T('eine Grundform', 'one basic form') : `${GRUNDFORMEN.length || 5} ${T('Grundformen', 'basic forms')}`, stand_ch: datumCH(STAND), kurz_basis: KURZ_BASIS + (istEN() ? '/en' : ''),
-      // Sprungleiter als Textanker mit Anzahl, bewusst anders gestaltet als die Filter-Chips (Korrektur 15.10.2026)
-      guertel_sprung: GUERTEL.map(g => { const n = DABEI.filter(t => t.guertel === g.nr).length; return `<li data-guertel-nr="${g.nr}"><a href="#${g.anker}"><span class="leiter__band" aria-hidden="true"></span><span class="leiter__name">${esc(g.name)}</span><span class="leiter__zahl">${n ? n + (n === 1 ? T(' Eintrag', ' entry') : T(' Einträge', ' entries')) : T('offen', 'open')}</span></a></li>`; }).join(''),
-      filter: filterHtml(), abschnitte: wandAbschnitte(r), tusch_sitzen: tusch('sitzen'), vier_wochen: vierWochenHtml(r, 'h2')
+      filter: filterHtml(), abschnitte: wandAbschnitte(r), tusch_sitzen: tusch('sitzen'),
+      // Die vier Momente der frueheren Startseite stehen seit 16.10.2026 hier als kurze Liste
+      momente: (() => { const m = MOMENTE.filter(([id]) => NACH_ID[id]).map(([id, satz]) => { const t = NACH_ID[id]; return `<li><q>${esc(satz)}</q><a href="${r}techniken/${t.slug}/">${T('Technik', 'Technique')} ${pad2(t.nr)}, ${esc(t.titel)}</a></li>`; }); return m.length ? `      <p class="label">${T('Wann brauchst du es?', 'When do you need it?')}</p>\n      <ul class="momente-kurz">${m.join('')}</ul>` : ''; })()
     }
   });
 }
@@ -873,6 +839,16 @@ function baueTechnik(t, i) {
     }
   });
 }
+function baueVierWochen() {
+  seite('vier-wochen/index.html', {
+    seite: 'wochen', template: 'vier-wochen.html',
+    titel: T('In vier Wochen durch alle Gürtel | PowerPlatformAcademy Dojo · Copilot', 'Through all belts in four weeks | PowerPlatformAcademy Dojo · Copilot'),
+    beschreibung: T('Ein freier Plan zum Selbstlernen mit Microsoft Copilot Chat und Copilot Studio: jede Woche ein oder zwei Gürtel, mit den Ergebnissen jeder Woche.', 'A free self-study plan for Microsoft Copilot Chat and Copilot Studio: one or two belts each week, with the results of each week.'),
+    canonical: `${BASE_L}vier-wochen/`, banner: ohneFreigabe(DABEI),
+    jsonld: [ldWebsite(), LD_ORG, ldKrumen([[T('Start', 'Home'), BASE_L], [T('Techniken', 'Techniques'), `${BASE_L}techniken/`], [T('Vier Wochen', 'Four weeks'), `${BASE_L}vier-wochen/`]])],
+    daten: { vier_wochen: vierWochenHtml('../', 'h1') }
+  });
+}
 function baueHeute() {
   const t = heuteTechnik();
   seite('heute/index.html', {
@@ -897,6 +873,16 @@ function bauePflichtseiten() {
       hinweis: T('Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.', 'Independent website by Marcel Lehmann. Not affiliated with Microsoft.')
     }, 'kurzadresse'));
   }
+  // Umgezogene Seiten (16.10.2026, Geschwister-Layout wie powerautomate.ninja): alte Adresse leitet weiter, Canonical zeigt aufs Ziel
+  for (const [alt, neu, de, en] of UMZUEGE) {
+    const rel = `${LP()}${alt}index.html`;
+    const tiefe = alt.split('/').filter(Boolean).length;
+    schreibe(rel, render(lies('templates/kurzadresse.html'), {
+      lang: HTML_LANG(), ra: praefix(rel), titel: `${T(de, en)} | PowerPlatformAcademy Dojo · Copilot`, canonical: `${BASE_L}${neu}`,
+      ziel: '../'.repeat(tiefe) + neu, linktext: T(`Diese Seite ist umgezogen: ${de}`, `This page has moved: ${en}`),
+      hinweis: T('Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.', 'Independent website by Marcel Lehmann. Not affiliated with Microsoft.')
+    }, 'umzug'));
+  }
   // Weiterleitung /vorlagen/ (nur deutsch, alte Adresse)
   if (!istEN()) {
     const ziele = ALTE_ANKER.filter(s => DABEI.some(t => t.slug === s));
@@ -912,7 +898,7 @@ function bauePflichtseiten() {
 
 /* Seiten von Hand: Rahmen-Marker fuellen. Englische Fassungen liegen unter en/ mit derselben Struktur. */
 const HAND_SEITEN = () => {
-  const liste = ['ueber/index.html', 'impressum/index.html', 'datenschutz/index.html', 'gratis/index.html', 'dojo/index.html', 'dojo/test/index.html'];
+  const liste = ['ueber/index.html', 'impressum/index.html', 'datenschutz/index.html', 'gratis/index.html', 'gratis/nachschlagen/index.html', 'pruefung/index.html', 'pruefung/fragen/index.html', 'dojo/index.html', 'dojo/profil/index.html'];
   const g = `${LP()}dojo/guertel`;
   const aus = liste.map(d => LP() + d);
   if (gibtEs(g)) for (const f of fs.readdirSync(path.join(ROOT, g))) if (gibtEs(`${g}/${f}/index.html`)) aus.push(`${g}/${f}/index.html`);
@@ -1008,7 +994,10 @@ function baueGemeinsam() {
   const maxGeprueft = (html) => [...html.matchAll(/data-geprueft="(\d{4}-\d{2}-\d{2})"/g)].map(m => m[1]).sort().pop();
   const pfade = [['', STAND], ['techniken/', STAND], ...sortiert.map(t => [`techniken/${t.slug}/`, t.geprueft_am])];
   if (gibtEs('gratis/index.html')) pfade.push(['gratis/', maxGeprueft(lies('gratis/index.html')) || daten.stand]);
-  if (gibtEs('dojo/test/index.html')) pfade.push(['dojo/test/', gibtEs('dojo/selbsttest.json') ? (() => { try { const j = JSON.parse(lies('dojo/selbsttest.json')); return [...JSON.stringify(j).matchAll(/"geprueft_am":"(\d{4}-\d{2}-\d{2})"/g)].map(m => m[1]).sort().pop(); } catch { return null; } })() : null]);
+  if (gibtEs('gratis/nachschlagen/index.html')) pfade.push(['gratis/nachschlagen/', maxGeprueft(lies('gratis/nachschlagen/index.html')) || daten.stand]);
+  pfade.push(['vier-wochen/', STAND]);
+  if (gibtEs('pruefung/fragen/index.html')) pfade.push(['pruefung/fragen/', gibtEs('dojo/selbsttest.json') ? (() => { try { const j = JSON.parse(lies('dojo/selbsttest.json')); return [...JSON.stringify(j).matchAll(/"geprueft_am":"(\d{4}-\d{2}-\d{2})"/g)].map(m => m[1]).sort().pop(); } catch { return null; } })() : null]);
+  if (gibtEs('pruefung/index.html')) pfade.push(['pruefung/', gibtEs('dojo/selbsttest.json') ? (() => { try { const j = JSON.parse(lies('dojo/selbsttest.json')); return [...JSON.stringify(j).matchAll(/"geprueft_am":"(\d{4}-\d{2}-\d{2})"/g)].map(m => m[1]).sort().pop(); } catch { return null; } })() : null]);
   pfade.push(['ueber/', RECHT_STAND], ['impressum/', RECHT_STAND], ['datenschutz/', RECHT_STAND]);
   const alt = (pfad) => `<xhtml:link rel="alternate" hreflang="de" href="${BASE_URL}${pfad}"/><xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}en/${pfad}"/><xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}${pfad}"/>`;
   const eintraege = [];
@@ -1045,9 +1034,9 @@ function baueGemeinsam() {
     '- Kosten: gratis, ohne Anmeldung, ohne Cookies',
     '- Kontakt: marcel.lehmann@kmupower.com', ''];
   const llms = [...kopf,
-    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Welcher Gürtel bist du?](${BASE_URL}dojo/test/): Selbsttest mit sieben Fragen`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Dojo-Regeln, was die Seite nicht ist`, `- [Volltext aller Techniken](${BASE_URL}llms-full.txt): Prompts, Grenzen und Quellen in beiden Sprachen`, '',
+    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): Lizenz-Check in vier Fragen, was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Gürtelprüfung](${BASE_URL}pruefung/): Welcher Copilot-Gürtel bist du? Sieben Fragen, eine pro Gürtel`, `- [Alle Fragen der Gürtelprüfung](${BASE_URL}pruefung/fragen/): jede Frage mit Auflösung und Quelle`, `- [Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle](${BASE_URL}gratis/nachschlagen/): Mythen, vier Stufen, Wortlaut der Bedingungen, häufige Fragen, Prüfprotokoll`, `- [In vier Wochen durch alle Gürtel](${BASE_URL}vier-wochen/): freier Plan zum Selbstlernen`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Dojo-Regeln, was die Seite nicht ist`, `- [Volltext aller Techniken](${BASE_URL}llms-full.txt): Prompts, Grenzen und Quellen in beiden Sprachen`, '',
     '## Techniken', '', ...deListe, ...(deGrund.length ? ['', '## Grundformen', '', ...deGrund] : []), '',
-    '## English', '', `- [Technique wall](${BASE_URL}en/techniken/): all techniques by belt`, `- [Is Microsoft Copilot free?](${BASE_URL}en/gratis/): what works without an add-on license, with source and review date for each statement`, `- [Which belt are you?](${BASE_URL}en/dojo/test/): self-test with seven questions`, `- [About the Dojo](${BASE_URL}en/ueber/): method, Dojo rules, what the site is not`, '',
+    '## English', '', `- [Technique wall](${BASE_URL}en/techniken/): all techniques by belt`, `- [Is Microsoft Copilot free?](${BASE_URL}en/gratis/): what works without an add-on license, with source and review date for each statement`, `- [Belt exam](${BASE_URL}en/pruefung/): which Copilot belt are you? Seven questions, one per belt`, `- [All belt exam questions](${BASE_URL}en/pruefung/fragen/): each question with the answer and a source`, `- [Copilot without an add-on license: every condition with its source](${BASE_URL}en/gratis/nachschlagen/): myths, four levels, conditions word for word, FAQ, review log`, `- [Through all belts in four weeks](${BASE_URL}en/vier-wochen/): free plan for self-study`, `- [About the Dojo](${BASE_URL}en/ueber/): method, Dojo rules, what the site is not`, '',
     '### Techniques', '', ...enListe, ...(enGrund.length ? ['', '### Basic forms', '', ...enGrund] : []), ''];
   schreibe('llms.txt', llms.join('\n'));
   schreibe('llms-full.txt', [...kopf, '# Deutsch', '', ...deVoll, '# English', '', ...enVoll].join('\n'));
@@ -1092,19 +1081,19 @@ function baueCss() {
 }
 
 /* Statische Bilder: Favicon, Tusch-SVG, OG-Bild */
-const FARBEN_HELL = { '.t-koerper': 'fill:#15171B', '.t-gesicht': 'fill:#F4EFE6', '.t-augen': 'fill:none;stroke:#15171B;stroke-width:3.6;stroke-linecap:round', '.t-band,.t-pinsel-spitze': 'fill:#B4301A', '.t-guertel,.t-guertel-enden': 'fill:#FBFAF5;stroke:#8A7F6C;stroke-width:1.2;stroke-linejoin:round', '.t-pinsel-stiel': 'fill:none;stroke:#15171B;stroke-width:3;stroke-linecap:round', '.t-hand': 'fill:#15171B', '.t-rolle,.t-strich': 'display:none' };
+const FARBEN_HELL = { '.t-koerper': 'fill:#15171B', '.t-gesicht': 'fill:#F3EFF7', '.t-augen': 'fill:none;stroke:#15171B;stroke-width:3.6;stroke-linecap:round', '.t-band,.t-pinsel-spitze': 'fill:#B4301A', '.t-guertel,.t-guertel-enden': 'fill:#FBFAF5;stroke:#8A7F6C;stroke-width:1.2;stroke-linejoin:round', '.t-pinsel-stiel': 'fill:none;stroke:#15171B;stroke-width:3;stroke-linecap:round', '.t-hand': 'fill:#15171B', '.t-rolle,.t-strich': 'display:none' };
 function tuschDatei(farben = FARBEN_HELL, guertelFarbe = '#FBFAF5') {
   const style = Object.entries(farben).map(([k, v]) => `${k}{${v.replace('#FBFAF5', guertelFarbe)}}`).join('');
   return partial('tusch').replace('<svg class="tusch__svg"', '<svg xmlns="http://www.w3.org/2000/svg"').replace(' aria-hidden="true"', ' role="img" aria-label="Tusch, die Figur des PowerPlatformAcademy Dojo"').replace('<g class="t-figur">', `<title>Tusch</title><style>${style}</style><g class="t-figur">`);
 }
 function baueBilder() {
   schreibe('assets/img/tusch.svg', tuschDatei() + '\n');
-  schreibe('favicon.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -4 96 96"><rect x="20" y="-4" width="96" height="96" rx="16" fill="#F4EFE6"/><path fill="#B4301A" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path fill="#15171B" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path fill="#F4EFE6" d="M31 38l62-5 1 13-63 5z"/><path fill="none" stroke="#15171B" stroke-width="4.2" stroke-linecap="round" d="M46 44.6h9M68 42.4h9"/></svg>
+  schreibe('favicon.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -4 96 96"><rect x="20" y="-4" width="96" height="96" rx="16" fill="#F3EFF7"/><path fill="#B4301A" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path fill="#15171B" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path fill="#F3EFF7" d="M31 38l62-5 1 13-63 5z"/><path fill="none" stroke="#15171B" stroke-width="4.2" stroke-linecap="round" d="M46 44.6h9M68 42.4h9"/></svg>
 `);
   const belts = ['#FBFAF5', '#E2B100', '#E36A00', '#2E8B57', '#2F6FB5', '#7A4A2B', '#111111'];
   const tuschGross = tuschDatei().replace(/<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').replace(/<title>Tusch<\/title>/, '');
   const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-<rect width="1200" height="630" fill="#F4EFE6"/>
+<rect width="1200" height="630" fill="#F3EFF7"/>
 ${belts.map((c, i) => `<rect x="${i * (1200 / 7)}" y="606" width="${1200 / 7 + 1}" height="24" fill="${c}"/>`).join('')}
 <rect x="0" y="605" width="1200" height="1.5" fill="#8A7F6C"/>
 <text x="80" y="112" font-family="Bahnschrift, 'Avenir Next Condensed', 'Arial Narrow', sans-serif" font-stretch="condensed" font-weight="600" font-size="38" fill="#15171B">PowerPlatformAcademy Dojo</text>
@@ -1115,7 +1104,7 @@ ${belts.map((c, i) => `<rect x="${i * (1200 / 7)}" y="606" width="${1200 / 7 + 1
 <text x="80" y="500" font-family="'Segoe UI', system-ui, sans-serif" font-size="34" fill="#4E525B">Ninja-Techniken mit Quelle und Prüfdatum.</text>
 <text x="80" y="546" font-family="'Segoe UI', system-ui, sans-serif" font-size="34" fill="#4E525B">Vom weissen bis zum schwarzen Gürtel.</text>
 <g transform="translate(862 150) scale(2.55)">${tuschGross}</g>
-<g transform="translate(612 70) rotate(-6)"><rect x="0" y="0" width="250" height="96" fill="#F4EFE6" stroke="#B4301A" stroke-width="5"/><rect x="8" y="8" width="234" height="80" fill="none" stroke="#B4301A" stroke-width="1.5"/><text x="125" y="52" text-anchor="middle" font-family="Bahnschrift, 'Arial Narrow', sans-serif" font-weight="700" font-size="40" letter-spacing="4" fill="#B4301A">GEPRÜFT</text><text x="125" y="76" text-anchor="middle" font-family="Bahnschrift, 'Arial Narrow', sans-serif" font-size="17" fill="#B4301A">gegen die Dokumentation</text></g>
+<g transform="translate(612 70) rotate(-6)"><rect x="0" y="0" width="250" height="96" fill="#F3EFF7" stroke="#B4301A" stroke-width="5"/><rect x="8" y="8" width="234" height="80" fill="none" stroke="#B4301A" stroke-width="1.5"/><text x="125" y="52" text-anchor="middle" font-family="Bahnschrift, 'Arial Narrow', sans-serif" font-weight="700" font-size="40" letter-spacing="4" fill="#B4301A">GEPRÜFT</text><text x="125" y="76" text-anchor="middle" font-family="Bahnschrift, 'Arial Narrow', sans-serif" font-size="17" fill="#B4301A">gegen die Dokumentation</text></g>
 </svg>
 `;
   schreibe('og-image.svg', og);
@@ -1169,7 +1158,7 @@ ${(t.offen_pruefen || []).length ? `<p class="rot"><b>Offen prüfen:</b> ${t.off
 <p class="frei">Freigegeben am ______________ &nbsp; Kürzel ______</p>
 </section>`;
   const html = `<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><title>Freigabeblatt PowerPlatformAcademy Dojo${PAKET ? ' Paket ' + PAKET : ''}</title>
-<style>body{font:11pt/1.45 "Segoe UI",system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;color:#15171B}pre{white-space:pre-wrap;background:#F4EFE6;padding:.8rem;border:1px solid #D8CFBE;font-size:9.5pt}.e{border-top:2px solid #15171B;padding-top:.6rem;margin-top:1.6rem;break-inside:avoid-page}.rot{color:#B4301A}.frei{margin-top:1rem;font-weight:600}h2 small{font-weight:400;color:#4E525B}@media print{body{margin:0}.e{break-before:page}}</style></head><body>
+<style>body{font:11pt/1.45 "Segoe UI",system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;color:#15171B}pre{white-space:pre-wrap;background:#F3EFF7;padding:.8rem;border:1px solid #D8CFBE;font-size:9.5pt}.e{border-top:2px solid #15171B;padding-top:.6rem;margin-top:1.6rem;break-inside:avoid-page}.rot{color:#B4301A}.frei{margin-top:1rem;font-weight:600}h2 small{font-weight:400;color:#4E525B}@media print{body{margin:0}.e{break-before:page}}</style></head><body>
 <h1>Freigabeblatt PowerPlatformAcademy Dojo${PAKET ? ', Paket ' + PAKET : ''}</h1>
 <p>Erzeugt am ${datumCH(DATUM)} aus data/techniken.json. Nicht veröffentlichen. Nach dem Lesen trägst du das Datum in «freigabe» ein oder nennst dem Koordinator die Nummern.</p>
 <h2>Einmal selbst ausführen</h2><ul>${zeigen.map(p => `<li>Paket ${p}: ${ausfuehren[p].map(id => ALLE_NACH_ID[id] ? `${id} ${esc(ALLE_NACH_ID[id].titel)}` : id).join(', ')}</li>`).join('')}</ul>
@@ -1196,7 +1185,7 @@ function allesHtml() {
   return aus;
 }
 function abschluss() {
-  const ohneH1 = ['vorlagen/index.html', ...Array.from({ length: 25 }, (_, i) => `${i + 1}/index.html`), ...Array.from({ length: 25 }, (_, i) => `en/${i + 1}/index.html`)];
+  const ohneH1 = ['vorlagen/index.html', ...UMZUEGE.flatMap(([alt]) => [`${alt}index.html`, `en/${alt}index.html`]), ...Array.from({ length: 25 }, (_, i) => `${i + 1}/index.html`), ...Array.from({ length: 25 }, (_, i) => `en/${i + 1}/index.html`)];
   for (const rel of allesHtml()) {
     const html = lies(rel);
     const fremd = !geschrieben.includes(rel) && !EIGENE_HAND.includes(rel);
@@ -1263,6 +1252,7 @@ if (MODUS === 'freigabeblatt') {
       baueWand();
       sortiert.forEach((t, i) => baueTechnik(t, i));
       baueHeute();
+      baueVierWochen();
       bauePflichtseiten();
       fuelleHandseiten();
       baueDaten();
