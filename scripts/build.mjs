@@ -27,7 +27,7 @@ const istEN = () => L === 'en';
 const LP = () => (L === 'en' ? 'en/' : '');
 const KURZ_BASIS = BASE_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
 const KONTAKT = 'marcel.lehmann@kmupower.com';
-const RECHT_STAND = '2026-10-15';
+const RECHT_STAND = '2026-10-16';
 // Produktnamen wie Microsoft Learn sie am 13.10.2026 schreibt.
 const PRODUKTNAMEN = {
   'copilot-chat': 'Microsoft Copilot Chat',
@@ -118,11 +118,12 @@ let WOCHEN = WOCHEN_TEXT.de;
 let MOMENTE = MOMENTE_TEXT.de;
 const ALTE_ANKER = ['notizen-zu-protokoll', 'antwort-auf-kundenmail', 'tabelle-pruefen', 'agent-interne-anleitungen', 'agent-anfragen-sortieren'];
 // Zweisprachigkeit 16.10.2026: dojo.js 20 auf 23 und dojo-seiten.js 28 auf 32 (englische Texte direkt im Skript, kein Nachladen), sprache.js neu 2.
+// GoatCounter 16.10.2026: count.js neu 10 (selbst gehostete Kopie von gc.zgo.at, 9.4 KB, unveraendert, daher nicht kuerzbar).
 // Budgets in KB. Korrektur 15.10.2026: site.css 40 auf 46 (Schrift, Fokus, Hero, kompakter Pfad), core.js 20 auf 22,
 // dojo-seiten.js und dojo-extra.js neu gedeckelt, Schriftdateien gedeckelt. Ueber 120 Prozent bricht der Build ab.
 // Review 15.10.2026: site.css 46 auf 49 (Startseite mit Gratis-Check, Pfadzeilen, kompakter Technik des Tages),
 // gratis.js 9 auf 11 (Urteil im Ergebnis, Vorauswahl von der Startseite). Die Startseite selbst ist um ein Viertel kleiner.
-const BUDGET = { 'assets/css/site.css': 49, 'assets/css/technik.css': 6, 'assets/css/dojo.css': 6, 'assets/css/gratis.css': 8, 'assets/js/theme-init.js': 1, 'assets/js/core.js': 22, 'assets/js/dojo.js': 23, 'assets/js/dojo-seiten.js': 32, 'assets/js/dojo-extra.js': 9, 'assets/js/gratis.js': 11, 'assets/js/kompass.js': 5, 'assets/data/suche.json': 10, 'assets/fonts/dojo-display-600.woff2': 25, 'assets/fonts/dojo-display-700.woff2': 25, 'index.html': 60, 'en/index.html': 60, 'assets/data/en/suche.json': 10, 'assets/js/sprache.js': 2, 'templates/partials/tusch.svg': 4 };
+const BUDGET = { 'assets/css/site.css': 49, 'assets/css/technik.css': 6, 'assets/css/dojo.css': 6, 'assets/css/gratis.css': 8, 'assets/js/theme-init.js': 1, 'assets/js/core.js': 22, 'assets/js/dojo.js': 23, 'assets/js/dojo-seiten.js': 32, 'assets/js/dojo-extra.js': 9, 'assets/js/gratis.js': 11, 'assets/js/kompass.js': 5, 'assets/data/suche.json': 10, 'assets/fonts/dojo-display-600.woff2': 25, 'assets/fonts/dojo-display-700.woff2': 25, 'index.html': 60, 'en/index.html': 60, 'assets/data/en/suche.json': 10, 'assets/js/sprache.js': 2, 'assets/js/count.js': 10, 'templates/partials/tusch.svg': 4 };
 
 /* Aufruf */
 const ARGS = process.argv.slice(2);

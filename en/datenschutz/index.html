@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <!-- RAHMEN:HEAD -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)">
@@ -19,16 +19,17 @@
 <script src="../../assets/js/theme-init.js"></script>
 <script src="../../assets/js/core.js" defer></script>
 <script src="../../assets/js/dojo.js" defer></script>
+<script src="../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
 
 <!-- /RAHMEN:HEAD -->
 <title>Privacy | KMUpower</title>
-<meta name="description" content="Privacy on this website: no cookies, no tracking, hosting on GitHub Pages. Your progress in the Dojo stays in your browser.">
+<meta name="description" content="Privacy on this website: no cookies, anonymous visit counting, hosting on GitHub Pages. Your progress in the Dojo stays in your browser.">
 <link rel="canonical" href="https://copilot.ninja/en/datenschutz/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KMUpower Dojo">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Privacy | KMUpower">
-<meta property="og:description" content="No cookies, no tracking. Your progress in the Dojo stays in your browser.">
+<meta property="og:description" content="No cookies, anonymous visit counting. Your progress in the Dojo stays in your browser.">
 <meta property="og:url" content="https://copilot.ninja/en/datenschutz/">
 <meta property="og:image" content="https://copilot.ninja/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -91,14 +92,14 @@
     <nav class="krumen" aria-label="Breadcrumbs"><ol><li><a href="../">Home</a></li><li><a href="./" aria-current="page">Privacy</a></li></ol></nav>
     <div class="prose sektion--eng">
       <h1 id="h1">Privacy</h1>
-      <p>As of October 15, 2026</p>
+      <p>As of October 16, 2026</p>
 
       <h2>In brief</h2>
       <ul class="arrow-list">
         <li>This site sets no cookies.</li>
-        <li>No tracking and no analytics run on the site.</li>
+        <li>Visits are counted anonymously with GoatCounter, without cookies and without storing your IP address. There is no tracking across websites.</li>
         <li>There are no accounts and no forms that send anything. If you write me an email, for example with a technique or a bug report, the section <a href="#mails">“If you write to me”</a> applies.</li>
-        <li>The site loads no fonts, scripts or images from third parties.</li>
+        <li>Fonts, scripts and images come from this site itself. The only connection to a third party is the count request to GoatCounter.</li>
         <li>What you mark or enter in the Dojo stays in your browser. I receive none of it.</li>
       </ul>
 
@@ -110,6 +111,10 @@
 
       <h2>Search Console</h2>
       <p>I use Google Search Console and Bing Webmaster Tools to see which search queries make the site appear in search and how often it is clicked. The site embeds nothing for this. The data comes from the search engines and is aggregated.</p>
+
+      <h2 id="zugriffszaehlung">Anonymous visit counting with GoatCounter</h2>
+      <p>So that I can see which techniques are read, the site counts visits with GoatCounter. The provider is GoatCounter.com, operated by Martin Tournoij in Ireland; the data is stored on servers of Hetzner Online GmbH in Finland and Germany. This site serves the counting script itself, only the count request goes to GoatCounter.</p>
+      <p>For each page view, GoatCounter receives the page address, the referring page, the browser identifier (User-Agent), the screen width, the browser language and your IP address. Only totals per day or hour are stored: page path, referring page, browser and operating system with version, country, language and screen width. Your IP address and the full browser identifier are not stored. So that a reload does not count twice, GoatCounter keeps a combination of site, IP address and browser identifier in memory for at most 8 hours, never on disk. No cookies are set, nothing is stored in your browser and no data is passed on to third parties. The basis is my interest in knowing which content is used. Details are in the <a href="https://www.goatcounter.com/help/privacy" rel="noopener">GoatCounter privacy policy</a>. If you do not want to be counted, block requests to goatcounter.com with a content blocker. The site works exactly the same.</p>
 
       <h2 id="dein-fortschritt">Your progress in the Dojo</h2>
       <p>Some settings and your progress are stored in your browser's local storage (localStorage). This is not a cookie. The entries stay on your device and are never transferred to me or to third parties. Something is written only when you take an action, never when you merely open a page. The exceptions are the one-time takeover of the earlier entry for dark mode (see “Earlier version” below) and the one-time language choice on the home page (see cn-sprache).</p>
@@ -175,7 +180,7 @@
       <p>Microsoft and the Power Platform product names (for example Power Apps, Power Automate, Copilot Studio) are trademarks of the Microsoft group of companies. This is an independent website by Marcel Lehmann. It is not operated, sponsored or endorsed by Microsoft.</p>
       <p>This website is not affiliated with Microsoft. Also trademarks of the Microsoft group of companies: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
       <p><a href="../impressum/">Legal notice</a>, <a href="../datenschutz/">Privacy</a>, <a href="../ueber/">About the Dojo</a></p>
-      <p>No cookies, no tracking. Your progress stays in your browser. Reach is measured only with Google Search Console and Bing Webmaster Tools.</p>
+      <p>No cookies, no tracking. Visits are only counted anonymously with GoatCounter. Your progress stays in your browser.</p>
     </div>
   </div>
   <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
