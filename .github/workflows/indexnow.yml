@@ -1,0 +1,30 @@
+name: "IndexNow Submission"
+
+# Meldet geaenderte Seiten aus der Sitemap an IndexNow (Bing, Yandex, Seznam, Naver u. a.).
+# Muster wie powerplatformtip.com. Der Schluessel ist oeffentlich: er liegt als Datei an der Wurzel
+# (https://copilot.ninja/877ee17afb57b50738142a71bd40922c.txt), darum steht er hier direkt.
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  schedule:
+    - cron: '0 2 * * *' # taeglich 02:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit-to-indexnow:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Submit sitemap to IndexNow
+        uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: "https://copilot.ninja/sitemap.xml"
+          key: "877ee17afb57b50738142a71bd40922c"
+          key-location: "https://copilot.ninja/877ee17afb57b50738142a71bd40922c.txt"
+          since: 1
+          since-unit: "week"

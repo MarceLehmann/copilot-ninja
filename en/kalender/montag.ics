@@ -11,8 +11,8 @@ DURATION:PT15M
 RRULE:FREQ=WEEKLY;BYDAY=MO
 SUMMARY:Dojo: Technique of the day
 DESCRIPTION:Practice for 15 minutes. The technique of the day is at https:
- //marcelehmann.github.io/copilot-ninja/en/heute/
-URL:https://marcelehmann.github.io/copilot-ninja/en/heute/
+ //copilot.ninja/en/heute/
+URL:https://copilot.ninja/en/heute/
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

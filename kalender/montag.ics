@@ -10,9 +10,9 @@ DTSTART:20261019T083000
 DURATION:PT15M
 RRULE:FREQ=WEEKLY;BYDAY=MO
 SUMMARY:Dojo: Technik des Tages
-DESCRIPTION:15 Minuten üben. Die Technik des Tages steht unter https://ma
- rcelehmann.github.io/copilot-ninja/heute/
-URL:https://marcelehmann.github.io/copilot-ninja/heute/
+DESCRIPTION:15 Minuten üben. Die Technik des Tages steht unter https://co
+ pilot.ninja/heute/
+URL:https://copilot.ninja/heute/
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

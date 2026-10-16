@@ -1,7 +1,180 @@
+# KMUpower Dojo (copilot.ninja). Suchmaschinen und KI-Assistenten sind willkommen: bitte mit Quelle zitieren.
+# Inhalte auf Deutsch unter /, auf Englisch unter /en/. Kurzfassung fuer KI: /llms.txt, Volltext: /llms-full.txt
+
 User-agent: *
 Allow: /
-Disallow: /copilot-ninja/templates/
-Disallow: /copilot-ninja/scripts/
-Disallow: /copilot-ninja/data/
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
 
-Sitemap: https://marcelehmann.github.io/copilot-ninja/sitemap.xml
+User-agent: Googlebot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Googlebot-Image
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Bingbot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: DuckDuckBot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Applebot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: GPTBot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: OAI-SearchBot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: ChatGPT-User
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: ClaudeBot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Claude-User
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Claude-SearchBot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: anthropic-ai
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: PerplexityBot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Perplexity-User
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Google-Extended
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Applebot-Extended
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Amazonbot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: CCBot
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: cohere-ai
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+User-agent: MistralAI-User
+Allow: /
+Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /.github/
+
+Sitemap: https://copilot.ninja/sitemap.xml

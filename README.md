@@ -63,6 +63,8 @@ Der Ordner enthält nach `--vorschau` Seiten mit Banner «Interne Vorschau» und
 
 ## Checkliste Domainwechsel (Pflicht)
 
+Stand 16.10.2026: live unter https://copilot.ninja/ (Datei `CNAME`, alle Einträge freigegeben, Build `--produktion`). Die frühere Basis steht in `FRUEHERE_BASEN` in `scripts/build.mjs`, der Build schreibt feste Adressen in den Seiten von Hand darauf um. `robots.txt` (Content-Signal, eigene Gruppen für Such- und KI-Crawler), `llms.txt` und `llms-full.txt` erzeugt der Build. IndexNow: Schlüsseldatei `877ee17afb57b50738142a71bd40922c.txt` an der Wurzel, Workflow `.github/workflows/indexnow.yml` nach jedem Pages-Deploy und täglich.
+
 1. In `scripts/build.mjs` `BASE_URL` auf die neue Adresse setzen, zum Beispiel `https://copilot.ninja/`. `links.mjs` und `karten.mjs` lesen den Wert von dort.
 2. `node scripts/karten.mjs --produktion` und `node scripts/build.mjs --produktion --og-png`. Das erneuert `404.html` (Pfade ab der Basis), Canonical, `og:url`, Sitemap, `robots.txt`, Feed, `llms.txt`, JSON-LD und die Herkunftszeile in den Kopiertexten.
 3. `node scripts/links.mjs --livegang`.

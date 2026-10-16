@@ -18,7 +18,7 @@ import { execFileSync } from 'node:child_process';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 // Domainwechsel: nur BASE_URL umstellen. Die bisherige Basis bleibt in FRUEHERE_BASEN, damit der Build
 // feste Adressen in den Seiten von Hand (canonical, og:url, JSON-LD) auf die neue Basis umschreibt.
-const BASE_URL = 'https://marcelehmann.github.io/copilot-ninja/';
+const BASE_URL = 'https://copilot.ninja/';
 const FRUEHERE_BASEN = ['https://marcelehmann.github.io/copilot-ninja/'].filter(b => b !== BASE_URL);
 // Sprachen (16.10.2026): Deutsch unter /, Englisch unter /en/ mit gleicher Ordnerstruktur.
 const SPRACHEN = ['de', 'en'];
@@ -1034,14 +1034,55 @@ function baueGemeinsam() {
   const eintraege = [];
   for (const [pfad, lastmod] of pfade) for (const sp of ['', 'en/']) eintraege.push(`  <url><loc>${BASE_URL}${sp}${pfad}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}${alt(pfad)}</url>`);
   schreibe('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${eintraege.join('\n')}\n</urlset>\n`);
-  // Gilt erst an der Wurzel einer eigenen Domain. Unter github.io/copilot-ninja/ liest kein Crawler diese Datei (Korrektur 15.10.2026).
+  // robots.txt nach dem Muster von powerplatformtip.com (16.10.2026): Suchmaschinen und KI-Crawler ausdruecklich erlaubt,
+  // Content-Signal in jeder Gruppe (RFC 9309: ein Crawler liest nur die Gruppe mit seinem Namen). Gilt nur an der Wurzel einer Domain.
   const basisPfad = new URL(BASE_URL).pathname;
-  schreibe('robots.txt', `User-agent: *\nAllow: /\nDisallow: ${basisPfad}templates/\nDisallow: ${basisPfad}scripts/\nDisallow: ${basisPfad}data/\n\nSitemap: ${BASE_URL}sitemap.xml\n`);
-  const llms = [`# KMUpower Dojo`, '', `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.`, '',
-    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Dojo-Regeln, was die Seite nicht ist`, `- [English version](${BASE_URL}en/): all pages in English under /en/ with the same structure`, '',
-    '## Techniken', '', ...TECHNIKEN.map(t => `- [Nr. ${t.nr} ${t.titel}: ${t.klartitel}](${urlTechnik(t)}): ${t.nutzen || ''} Stand ${datumCH(t.geprueft_am)}.`),
-    ...(GRUNDFORMEN.length ? ['', '## Grundformen', '', ...GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): Stand ${datumCH(t.geprueft_am)}.`)] : []), ''];
+  const signal = 'Content-Signal: search=yes, ai-train=yes, ai-retrieval=yes';
+  const sperren = ['templates/', 'scripts/', 'data/', '.github/'].map(p => `Disallow: ${basisPfad}${p}`).join('\n');
+  const bots = ['Googlebot', 'Googlebot-Image', 'Bingbot', 'DuckDuckBot', 'Applebot', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Amazonbot', 'CCBot', 'cohere-ai', 'Meta-ExternalAgent', 'MistralAI-User'];
+  schreibe('robots.txt', [
+    '# KMUpower Dojo (copilot.ninja). Suchmaschinen und KI-Assistenten sind willkommen: bitte mit Quelle zitieren.',
+    '# Inhalte auf Deutsch unter /, auf Englisch unter /en/. Kurzfassung fuer KI: /llms.txt, Volltext: /llms-full.txt',
+    '', 'User-agent: *', 'Allow: /', signal, sperren, '',
+    ...bots.flatMap(b => [`User-agent: ${b}`, 'Allow: /', signal, sperren, '']),
+    `Sitemap: ${BASE_URL}sitemap.xml`, ''].join('\n'));
+  // llms.txt: Orientierung fuer KI-Assistenten, beide Sprachen. llms-full.txt: alle Techniken mit Prompt, Grenzen und Quellen.
+  const deListe = TECHNIKEN.map(t => `- [Nr. ${t.nr} ${t.titel}: ${t.klartitel}](${urlTechnik(t)}): ${t.nutzen || ''} Stand ${datumCH(t.geprueft_am)}.`);
+  const deGrund = GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): Stand ${datumCH(t.geprueft_am)}.`);
+  const deVoll = sortiert.map(t => volltext(t));
+  setzeSprache('en');
+  const enListe = TECHNIKEN.map(t => `- [No. ${t.nr} ${t.titel}: ${t.klartitel}](${urlTechnik(t)}): ${t.nutzen || ''} As of ${datumCH(t.geprueft_am)}.`);
+  const enGrund = GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): As of ${datumCH(t.geprueft_am)}.`);
+  const enVoll = sortiert.map(t => volltext(t));
+  setzeSprache('de');
+  const kopf = [`# KMUpower Dojo`, '',
+    `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.`, '',
+    'Kurzfakten:', '',
+    `- Website: KMUpower Dojo (${BASE_URL}), Englisch unter ${BASE_URL}en/`,
+    '- Autor: Marcel Lehmann, Microsoft Business Applications MVP, Schweiz (Handelsname KMUpower, https://kmupower.com/)',
+    `- Inhalt: ${TECHNIKEN.length} Techniken und ${GRUNDFORMEN.length} Grundformen für Microsoft Copilot Chat, Agent Builder und Copilot Studio, je mit Prompt zum Kopieren, Grenzen und Quellen bei Microsoft Learn`,
+    '- Kosten: gratis, ohne Anmeldung, ohne Cookies',
+    '- Kontakt: marcel.lehmann@kmupower.com', ''];
+  const llms = [...kopf,
+    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Welcher Gürtel bist du?](${BASE_URL}dojo/test/): Selbsttest mit sieben Fragen`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Dojo-Regeln, was die Seite nicht ist`, `- [Volltext aller Techniken](${BASE_URL}llms-full.txt): Prompts, Grenzen und Quellen in beiden Sprachen`, '',
+    '## Techniken', '', ...deListe, ...(deGrund.length ? ['', '## Grundformen', '', ...deGrund] : []), '',
+    '## English', '', `- [Technique wall](${BASE_URL}en/techniken/): all techniques by belt`, `- [Is Microsoft Copilot free?](${BASE_URL}en/gratis/): what works without an add-on license, with source and review date for each statement`, `- [Which belt are you?](${BASE_URL}en/dojo/test/): self-test with seven questions`, `- [About the Dojo](${BASE_URL}en/ueber/): method, Dojo rules, what the site is not`, '',
+    '### Techniques', '', ...enListe, ...(enGrund.length ? ['', '### Basic forms', '', ...enGrund] : []), ''];
   schreibe('llms.txt', llms.join('\n'));
+  schreibe('llms-full.txt', [...kopf, '# Deutsch', '', ...deVoll, '# English', '', ...enVoll].join('\n'));
+}
+// Eine Technik als Klartext fuer llms-full.txt, in der Sprache des Durchgangs
+function volltext(t) {
+  const q = [{ url: t.quelle_url, titel: t.quelle_titel }, ...(t.weitere_quellen || [])];
+  const zeilen = [`## ${t.typ === 'technik' ? `${T('Nr.', 'No.')} ${t.nr} ` : ''}${t.titel}: ${t.klartitel}`, '', `URL: ${urlTechnik(t)}`,
+    `${T('Gürtel', 'Belt')}: ${gName(t.guertel)}. ${T('Zugang', 'Access')}: ${t.zugang_text || (ZUGANG[t.zugang] || {}).kurz || ''}. ${T('Stand', 'As of')} ${datumCH(t.geprueft_am)}.`, '',
+    `${T('Problem', 'Problem')}: ${t.problem}`, '', `${T('Nutzen', 'Benefit')}: ${t.nutzen || ''}`, '',
+    `${(ART[t.art] || ART.pinselstrich).rolle}:`, '', '```', t.technik_text.replace(/\{([^{}|]*)(?:\|[^{}]*)?\}/g, '[$1]'), '```', ''];
+  (t.zusatz_texte || []).forEach(z => zeilen.push(`${z.titel}:`, '', '```', (z.text || '').replace(/\{([^{}|]*)(?:\|[^{}]*)?\}/g, '[$1]'), '```', ''));
+  zeilen.push(`${T('So nutzt du es', 'How to use it')}:`, ...(t.so_nutzt_du_es || []).map((s, i) => `${i + 1}. ${s}`), '',
+    `${T('Grenzen', 'Limits')}:`, ...(t.grenzen || []).map(s => `- ${s}`), '',
+    `${T('Quellen', 'Sources')}: ${q.map(x => `${x.titel} (${x.url})`).join('; ')}`, '');
+  return zeilen.join('\n');
 }
 function falte(zeile) {
   const b = Buffer.from(zeile, 'utf8'); if (b.length <= 75) return zeile;
