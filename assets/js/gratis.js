@@ -5,6 +5,9 @@
   var d = document, w = window;
   var CN = w.CN || {};
   var ROOT = CN.root || (function () { var s = d.querySelector('script[src*="assets/js/gratis.js"]'); return s ? s.src.replace(/assets\/js\/gratis\.js.*$/, '') : ''; })();
+  var EN = /^en/i.test(d.documentElement.getAttribute('lang') || '');
+  var BASIS = ROOT + (EN ? 'en/' : '');
+  function T(de, en) { return EN ? en : de; }
   var alle = function (sel, el) { return Array.prototype.slice.call((el || d).querySelectorAll(sel)); };
 
   /* Sprungmarken in eingeklappten Bereichen oeffnen */
@@ -71,7 +74,7 @@
     }
 
     function technikenLaden() {
-      if (!suche) suche = fetch(ROOT + 'assets/data/suche.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      if (!suche) suche = fetch(ROOT + 'assets/data/' + (EN ? 'en/' : '') + 'suche.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       return suche;
     }
 
@@ -136,16 +139,16 @@
             var t = eintraege.filter(function (x) { return x.id === id; })[0];
             if (!t) return;
             var li = d.createElement('li'), a = d.createElement('a');
-            a.href = ROOT + 'techniken/' + t.slug + '/';
-            a.textContent = (t.nr ? 'Nr. ' + t.nr + ' ' : '') + t.titel;
+            a.href = BASIS + 'techniken/' + t.slug + '/';
+            a.textContent = (t.nr ? T('Nr. ', 'No. ') + t.nr + ' ' : '') + t.titel;
             li.appendChild(a);
             if (t.klartitel && t.klartitel !== t.titel) li.appendChild(d.createTextNode(': ' + t.klartitel));
             liste.appendChild(li);
           });
           if (!liste.children.length) {
             var li = d.createElement('li'), a = d.createElement('a');
-            a.href = ROOT + 'techniken/';
-            a.textContent = 'Alle Techniken nach Gürtel';
+            a.href = BASIS + 'techniken/';
+            a.textContent = T('Alle Techniken nach Gürtel', 'All techniques by belt');
             li.appendChild(a);
             liste.appendChild(li);
           }
@@ -174,7 +177,7 @@
     var teilen = erg.querySelector('[data-check-teilen]');
     if (teilen) teilen.addEventListener('click', function () {
       var url = w.location.href.split('#')[0] + hashAus();
-      var fertig = function (ok) { if (status) status.textContent = ok ? 'Link kopiert. Wer ihn öffnet, sieht dieses Ergebnis.' : 'Kopieren ging nicht. Markier die Adresse oben im Browser.'; };
+      var fertig = function (ok) { if (status) status.textContent = ok ? T('Link kopiert. Wer ihn öffnet, sieht dieses Ergebnis.', 'Link copied. Whoever opens it sees this result.') : T('Kopieren ging nicht. Markier die Adresse oben im Browser.', 'Copying did not work. Select the address at the top of your browser.'); };
       if (CN.kopierText) CN.kopierText(url).then(function () { fertig(true); d.dispatchEvent(new CustomEvent('cn:kopiert', { detail: { id: 'gratis-check' } })); }, function () { fertig(false); });
       else fertig(false);
     });

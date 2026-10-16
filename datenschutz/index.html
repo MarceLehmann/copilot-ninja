@@ -9,6 +9,9 @@
 <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://marcelehmann.github.io/copilot-ninja/datenschutz/">
+<link rel="alternate" hreflang="en" href="https://marcelehmann.github.io/copilot-ninja/en/datenschutz/">
+<link rel="alternate" hreflang="x-default" href="https://marcelehmann.github.io/copilot-ninja/datenschutz/">
 <link rel="alternate" type="application/atom+xml" title="KMUpower Dojo: neue Techniken" href="../feed.xml">
 <link rel="preload" href="../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/site.css">
@@ -50,6 +53,7 @@
       </ul>
     </nav>
     <div class="kopf__aktionen">
+      <a class="sprachwahl" href="../en/datenschutz/" hreflang="en" lang="en" data-sprache-wahl="en" aria-label="English version of this page">EN</a>
       <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Technik suchen" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Strg K</kbd></button>
       <a class="knoten" href="../dojo/" data-guertelknoten aria-label="Mein Dojo, Weisser Gürtel"><span class="knoten__text">Weisser Gürtel</span></a>
       <button type="button" class="knopf-icon" data-zufall aria-label="Zufällige Technik, die du noch nicht geübt hast" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg></button>
@@ -110,14 +114,15 @@
       <p>Ich nutze die Google Search Console und die Bing Webmaster Tools, um zu sehen, mit welchen Suchanfragen die Seite in der Suche erscheint und wie oft sie angeklickt wird. Dafür bindet die Seite nichts ein. Die Daten stammen von den Suchmaschinen und sind zusammengefasst.</p>
 
       <h2 id="dein-fortschritt">Dein Fortschritt im Dojo</h2>
-      <p>Einige Einstellungen und dein Fortschritt werden im lokalen Speicher deines Browsers abgelegt (localStorage). Das ist kein Cookie. Die Einträge bleiben auf deinem Gerät und werden nie an mich oder an Dritte übertragen. Geschrieben wird erst, wenn du etwas tust, nie beim blossen Aufruf einer Seite. Einzige Ausnahme ist die einmalige Übernahme des früheren Eintrags für den Dunkelmodus (siehe «Frühere Fassung» unten).</p>
+      <p>Einige Einstellungen und dein Fortschritt werden im lokalen Speicher deines Browsers abgelegt (localStorage). Das ist kein Cookie. Die Einträge bleiben auf deinem Gerät und werden nie an mich oder an Dritte übertragen. Geschrieben wird erst, wenn du etwas tust, nie beim blossen Aufruf einer Seite. Ausnahmen sind die einmalige Übernahme des früheren Eintrags für den Dunkelmodus (siehe «Frühere Fassung» unten) und die einmalige Sprachwahl auf der Startseite (siehe cn-sprache).</p>
       <ul class="arrow-list">
         <li><code>cn-theme</code>: «light» oder «dark». Merkt sich den Hell- oder Dunkelmodus. Entsteht, wenn du den Umschalter für den Dunkelmodus benutzt.</li>
         <li><code>cn-bewegung</code>: «aus». Schaltet Animationen ab. Entsteht, wenn du in der Fusszeile «Bewegung aus» wählst.</li>
+        <li><code>cn-sprache</code>: «de» oder «en». Merkt sich deine Sprachwahl. Entsteht, wenn du oben auf DE oder EN klickst, oder einmalig, wenn dein Browser kein Deutsch als Sprache nennt und die deutsche Startseite dich deshalb auf die englische Fassung weiterleitet.</li>
         <li><code>cn-dojo-v1</code>: deine geübten Techniken mit Datum, dein aktueller Gürtel, dein Startpunkt aus dem Selbsttest mit Datum, gemerkte Techniken und dein Profil (Firmenname, Funktion, Branche), falls du es ausfüllst. Dient dazu, deinen Fortschritt anzuzeigen, den Gürtel zu berechnen und Felder in den Techniken vorauszufüllen. Entsteht, wenn du eine Technik als geübt markierst, den Selbsttest abschliesst oder dein Profil speicherst.</li>
       </ul>
       <p>Was du in die Felder einer Technik tippst, wird nicht gespeichert. Ausnahme sind die drei Profilfelder, die du unter <a href="../dojo/">Mein Dojo</a> selbst hinterlegst. Trag dort keine Kundendaten ein.</p>
-      <p>Löschen: Unter <a href="../dojo/">Mein Dojo</a> entfernt «Alles löschen» alle drei Einträge. Du kannst sie auch in den Einstellungen deines Browsers löschen, bei den Websitedaten dieser Seite.</p>
+      <p>Löschen: Unter <a href="../dojo/">Mein Dojo</a> entfernt «Alles löschen» alle vier Einträge. Du kannst sie auch in den Einstellungen deines Browsers löschen, bei den Websitedaten dieser Seite.</p>
       <p>Frühere Fassung: Bis Oktober 2026 hiess der Eintrag für den Dunkelmodus <code>copilot-ninja-theme</code>. Beim nächsten Besuch wird er einmalig in <code>cn-theme</code> übernommen und danach entfernt.</p>
 
       <h2 id="mails">Wenn du mir schreibst</h2>

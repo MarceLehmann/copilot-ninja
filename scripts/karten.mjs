@@ -35,7 +35,7 @@ function schreibe(rel, inhalt) {
 }
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const pad2 = (n) => String(n).padStart(2, '0');
-const datumCH = (iso) => { const [y, m, d] = String(iso).split('-'); return `${d}.${m}.${y}`; };
+const datumCH = (iso) => { const [y, m, d] = String(iso).split('-'); return L === 'en' ? `${MONATE_EN[+m - 1]} ${+d}, ${y}` : `${d}.${m}.${y}`; };
 const istIso = (s) => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
 
 /* Konstanten aus build.mjs (eine Quelle) */
@@ -43,21 +43,34 @@ const BUILD = lies('scripts/build.mjs');
 const BASE_URL = (BUILD.match(/const BASE_URL = '([^']+)'/) || [])[1] || 'https://marcelehmann.github.io/copilot-ninja/';
 const KURZ_BASIS = BASE_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
-/* Daten */
+/* Daten. Zwei Durchgaenge: deutsch (Karten unter assets/img/karten/, Seiten unter dojo/) und englisch
+   (assets/img/karten/en/, en/dojo/), Texte aus data/techniken.en.json */
 const daten = JSON.parse(lies('data/techniken.json'));
-const STANDARD = [
+const datenEN = JSON.parse(lies('data/techniken.en.json'));
+let L = 'de';
+const LP = () => (L === 'en' ? 'en/' : '');
+const T = (de, en) => (L === 'en' ? en : de);
+const STANDARD_DE = [
   ['weiss', 'Weisser Gürtel', 'Weiss'], ['gelb', 'Gelber Gürtel', 'Gelb'], ['orange', 'Oranger Gürtel', 'Orange'], ['gruen', 'Grüner Gürtel', 'Grün'],
   ['blau', 'Blauer Gürtel', 'Blau'], ['braun', 'Brauner Gürtel', 'Braun'], ['schwarz', 'Schwarzer Gürtel', 'Schwarz']
 ];
+const STANDARD_EN = [
+  ['weiss', 'White belt', 'White'], ['gelb', 'Yellow belt', 'Yellow'], ['orange', 'Orange belt', 'Orange'], ['gruen', 'Green belt', 'Green'],
+  ['blau', 'Blue belt', 'Blue'], ['braun', 'Brown belt', 'Brown'], ['schwarz', 'Black belt', 'Black']
+];
+const MONATE_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const ANKER = { weiss: 'weisser-guertel', gelb: 'gelber-guertel', orange: 'oranger-guertel', gruen: 'gruener-guertel', blau: 'blauer-guertel', braun: 'brauner-guertel', schwarz: 'schwarzer-guertel' };
 const BELT = ['#FBFAF5', '#E2B100', '#E36A00', '#2E8B57', '#2F6FB5', '#7A4A2B', '#111111'];
-const GUERTEL = STANDARD.map(([farbe, name, kurz], i) => {
-  const aus = (daten.guertel || []).find(g => g.nr === i + 1) || {};
+const guertelListe = () => (L === 'en' ? STANDARD_EN : STANDARD_DE).map(([farbe, name, kurz], i) => {
+  const aus = ((L === 'en' ? datenEN : daten).guertel || []).find(g => g.nr === i + 1) || {};
   return { nr: i + 1, farbe, name, kurz, leitwort: aus.leitwort || '', kannst_du: aus.kannst_du || '', erreicht_satz: aus.erreicht_satz || '' };
 });
 const istFrei = (t) => istIso(t.freigabe) && (!t.offen_pruefen || !t.offen_pruefen.length);
-const ALLE = (daten.techniken || []).filter(t => t && t.id && t.slug);
-const DABEI = PRODUKTION ? ALLE.filter(istFrei) : ALLE;
+const ALLE_DE = (daten.techniken || []).filter(t => t && t.id && t.slug);
+const ALLE_EN = ALLE_DE.map(t => ({ ...t, ...((datenEN.techniken || {})[t.id] || {}) }));
+let GUERTEL, ALLE, DABEI;
+function setzeSprache(l) { L = l; GUERTEL = guertelListe(); ALLE = l === 'en' ? ALLE_EN : ALLE_DE; DABEI = PRODUKTION ? ALLE.filter(istFrei) : ALLE; }
+setzeSprache('de');
 const alle25Frei = ALLE.filter(t => t.typ === 'technik' && istFrei(t)).length === 25;
 
 /* Schrift: Breite grob schaetzen (eher zu breit, damit nichts ueberlaeuft) */
@@ -123,8 +136,8 @@ ${inhalt}
 function technikKarte(t) {
   const g = GUERTEL[t.guertel - 1];
   const istT = t.typ === 'technik';
-  const zeile1 = istT ? `TECHNIK ${pad2(t.nr)}${alle25Frei ? ' VON 25' : ''}` : `GRUNDFORM ${t.id.toUpperCase()}`;
-  const adresse = istT ? `${KURZ_BASIS}/${t.nr}` : `${KURZ_BASIS}/techniken/${t.slug}/`;
+  const zeile1 = istT ? `${T('TECHNIK', 'TECHNIQUE')} ${pad2(t.nr)}${alle25Frei ? T(' VON 25', ' OF 25') : ''}` : `${T('GRUNDFORM', 'BASIC FORM')} ${t.id.toUpperCase()}`;
+  const adresse = istT ? `${KURZ_BASIS}/${LP()}${t.nr}` : `${KURZ_BASIS}/${LP()}techniken/${t.slug}/`;
   const teile = [wortmarke(80, 48, 1.45)];
   teile.push(`<rect x="80" y="122" width="58" height="22" fill="${BELT[t.guertel - 1]}" stroke="#8A7F6C" stroke-width="2"/><rect x="100" y="115" width="18" height="36" fill="${BELT[t.guertel - 1]}" stroke="#8A7F6C" stroke-width="2"/>`);
   teile.push(`<text x="156" y="142" font-family="${DISPLAY}" font-weight="700" font-size="24" letter-spacing="2.5" fill="#B4301A">${esc(zeile1)}</text>`);
@@ -152,20 +165,20 @@ function technikKarte(t) {
   teile.push(tusch(902, 128, 290, BELT[t.guertel - 1]));
   teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(adresse)}</text>`);
   teile.push(band(t.guertel));
-  return rahmen(teile.join('\n'), `${istT ? 'Technik ' + pad2(t.nr) : 'Grundform'}: ${t.titel}. ${t.nutzen || ''}`.trim());
+  return rahmen(teile.join('\n'), `${istT ? T('Technik ', 'Technique ') + pad2(t.nr) : T('Grundform', 'Basic form')}: ${t.titel}. ${t.nutzen || ''}`.trim());
 }
 /* Karte je Guertel (Landeseiten): Guertelband, Name, Leitwort, Tusch. Ohne «Mein», ohne Namen. */
 function guertelKarte(g) {
   const teile = [wortmarke(80, 48, 1.45)];
-  teile.push(`<text x="80" y="170" font-family="${DISPLAY}" font-weight="700" font-size="26" letter-spacing="3" fill="#B4301A">STUFE ${g.nr} VON 7</text>`);
+  teile.push(`<text x="80" y="170" font-family="${DISPLAY}" font-weight="700" font-size="26" letter-spacing="3" fill="#B4301A">${T('STUFE', 'LEVEL')} ${g.nr} ${T('VON', 'OF')} 7</text>`);
   teile.push(`<text x="80" y="282" font-family="${DISPLAY}" font-weight="700" font-size="104" letter-spacing="-2" fill="#15171B">${esc(g.name)}</text>`);
   teile.push(`<rect x="80" y="318" width="600" height="34" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/><rect x="352" y="304" width="56" height="62" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/>`);
   if (g.leitwort) teile.push(`<text x="80" y="446" font-family="${DISPLAY}" font-weight="600" font-size="54" fill="#15171B">${esc(g.leitwort)}</text>`);
-  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="28" fill="#4E525B">Selbsteinschätzung im KMUpower Dojo. Kein Zertifikat.</text>`);
+  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="28" fill="#4E525B">${T('Selbsteinschätzung im KMUpower Dojo. Kein Zertifikat.', 'Self-assessment in the KMUpower Dojo. Not a certificate.')}</text>`);
   teile.push(tusch(880, 110, 330, BELT[g.nr - 1]));
-  teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(KURZ_BASIS)}</text>`);
+  teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(KURZ_BASIS + (L === 'en' ? '/en' : ''))}</text>`);
   teile.push(band(g.nr));
-  return rahmen(teile.join('\n'), `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. Selbsteinschätzung im KMUpower Dojo, kein Zertifikat.`);
+  return rahmen(teile.join('\n'), `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. ${T('Selbsteinschätzung im KMUpower Dojo, kein Zertifikat.', 'Self-assessment in the KMUpower Dojo, not a certificate.')}`);
 }
 
 /* PNG mit lokalem Chrome */
@@ -196,6 +209,7 @@ function rahmenBehalten(rel, neu) {
   });
 }
 function landeseite(g) {
+  if (L === 'en') return landeseiteEN(g);
   const r = '../../../';
   const bild = `${BASE_URL}assets/img/karten/guertel-${g.farbe}.png`;
   const beschreibung = `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. Selbsteinschätzung auf einer unabhängigen Website, kein Zertifikat. Mach den Test mit sieben Fragen selbst.`;
@@ -262,12 +276,81 @@ ${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du
   schreibe(`dojo/guertel/${g.farbe}/index.html`, rahmenBehalten(`dojo/guertel/${g.farbe}/index.html`, html));
 }
 
+function landeseiteEN(g) {
+  const r = '../../../';
+  const ra = '../../../../';
+  const bild = `${BASE_URL}assets/img/karten/en/guertel-${g.farbe}.png`;
+  const beschreibung = `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. Self-assessment on an independent website, not a certificate. Take the test with seven questions yourself.`;
+  const html = `<!doctype html>
+<html lang="en" data-seite="guertel">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<!-- /RAHMEN:HEAD -->
+<title>Dojo belt: ${esc(g.kurz)} | KMUpower Dojo</title>
+<meta name="description" content="${esc(beschreibung)}">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KMUpower Dojo">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="${esc(g.name)} in the KMUpower Dojo">
+<meta property="og:description" content="${esc(beschreibung)}">
+<meta property="og:url" content="${BASE_URL}en/dojo/guertel/${g.farbe}/">
+<meta property="og:image" content="${bild}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Card: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Self-assessment, not a certificate.">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-guertel-nr="${g.nr}">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Breadcrumbs"><ol><li><a href="${r}">Home</a></li><li><a href="../../">My Dojo</a></li><li><a href="./" aria-current="page">${esc(g.name)}</a></li></ol></nav>
+    <section class="sektion--eng heute" aria-labelledby="h1">
+      <div>
+        <span class="label">Level ${g.nr} of 7${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>
+        <h1 id="h1">${esc(g.name)}</h1>
+        <p class="lead"><strong>Self-assessment on an independent website. Not a certificate.</strong></p>
+${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}        <p>This page belongs to a card shared from the KMUpower Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
+        <div class="knopf-reihe">
+          <a class="knopf knopf--primaer" href="../../test/">Take the test yourself</a>
+          <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniques of this belt</a>
+        </div>
+      </div>
+      <figure class="guertelkarte">
+        <img src="${ra}assets/img/karten/en/guertel-${g.farbe}.svg" width="1200" height="630" alt="Card: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Self-assessment in the KMUpower Dojo, not a certificate.">
+      </figure>
+    </section>
+    <section class="sektion--eng" aria-labelledby="h-was">
+      <div class="kasten">
+        <h2 id="h-was">What is the KMUpower Dojo?</h2>
+        <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio, from white belt to black belt. Each with a source on Microsoft Learn and a review date. No sign-up and no cookies.</p>
+        <p class="knopf-reihe"><a class="knopf" href="${r}">To the home page</a><a class="knopf knopf--leise" href="${r}techniken/">All techniques</a></p>
+      </div>
+    </section>
+    <nav class="sektion--eng" aria-labelledby="h-stufen">
+      <h2 id="h-stufen" class="label">All seven belts</h2>
+      <ul class="chips">${GUERTEL.map(x => `<li><a class="chip" href="../${x.farbe}/"${x.nr === g.nr ? ' aria-current="page"' : ''}><span class="knoten" data-guertel-nr="${x.nr}" aria-hidden="true"></span>${esc(x.kurz)}</a></li>`).join('')}</ul>
+    </nav>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>
+`;
+  schreibe(`en/dojo/guertel/${g.farbe}/index.html`, rahmenBehalten(`en/dojo/guertel/${g.farbe}/index.html`, html));
+}
+
 /* Fragenliste ohne JavaScript in dojo/test/index.html (zwischen DOJO:FRAGEN-Markern) */
 const TECHNIK_NAMEN = { t06: 'Das Falkenauge', t12: 'Die Fährte' };
+const TECHNIK_NAMEN_EN = { t06: 'The Hawk Eye', t12: 'The Trail' };
 function fragenListe() {
-  const rel = 'dojo/test/index.html';
-  if (!gibtEs(rel) || !gibtEs('dojo/selbsttest.json')) return;
-  const pool = JSON.parse(lies('dojo/selbsttest.json'));
+  const rel = `${LP()}dojo/test/index.html`;
+  if (!gibtEs(rel) || !gibtEs(`${LP()}dojo/selbsttest.json`)) return;
+  const pool = JSON.parse(lies(`${LP()}dojo/selbsttest.json`));
   const nachId = Object.fromEntries(DABEI.map(t => [t.id, t]));
   /* ohne JavaScript nur Faktenfragen und zeitlose Fragen, deren Technik zu Paket A gehoert (Guertel 1 bis 3) und im Build ist */
   const statisch = pool.fragen.filter(f => f.klasse === 'fakt' || !f.technik || (f.guertel <= 3 && (nachId[f.technik] || !PRODUKTION)));
@@ -275,15 +358,15 @@ function fragenListe() {
     const g = GUERTEL[f.guertel - 1];
     const t = f.technik ? nachId[f.technik] : null;
     const quelle = f.quelle
-      ? `<p class="klein">Quelle: <a href="${esc(f.quelle.url)}" rel="noopener">${esc(f.quelle.titel)}</a>, Stand ${datumCH(f.geprueft_am)}.</p>`
-      : f.technik ? `<p class="klein">Aus Technik ${Number(f.technik.slice(1))}, ${esc(t ? t.titel : TECHNIK_NAMEN[f.technik] || '')}.</p>` : '';
+      ? `<p class="klein">${T('Quelle', 'Source')}: <a href="${esc(f.quelle.url)}" rel="noopener">${esc(f.quelle.titel)}</a>, ${T('Stand', 'as of')} ${datumCH(f.geprueft_am)}.</p>`
+      : f.technik ? `<p class="klein">${T('Aus Technik', 'From technique')} ${Number(f.technik.slice(1))}, ${esc(t ? t.titel : (L === 'en' ? TECHNIK_NAMEN_EN : TECHNIK_NAMEN)[f.technik] || '')}.</p>` : '';
     return `      <li class="test__frage" id="frage-${f.id}">
         <p><span class="knoten" data-guertel-nr="${g.nr}">${esc(g.name)}</span></p>
         <h3>${esc(f.frage)}</h3>
         <ul class="arrow-list">${f.antworten.map(a => `<li>${esc(a)}</li>`).join('')}</ul>
         <details class="einklapp">
-          <summary>Auflösung</summary>
-          <p><strong>Richtig ist: ${esc(f.antworten[f.richtig])}</strong></p>
+          <summary>${T('Auflösung', 'Answer')}</summary>
+          <p><strong>${T('Richtig ist', 'The correct answer is')}: ${esc(f.antworten[f.richtig])}</strong></p>
           <p>${esc(f.aufloesung)}</p>
           ${quelle}
         </details>
@@ -296,26 +379,31 @@ function fragenListe() {
 }
 
 /* Ablauf */
-fs.mkdirSync(path.join(ROOT, 'assets/img/karten'), { recursive: true });
-schreibe('dojo/guertel.json', JSON.stringify({ hinweis: 'Erzeugt von scripts/karten.mjs aus data/techniken.json. Nicht von Hand bearbeiten.', guertel: GUERTEL.map(({ nr, farbe, name, kurz, leitwort, kannst_du, erreicht_satz }) => ({ nr, farbe, name, kurz, leitwort, kannst_du, erreicht_satz })) }, null, 2) + '\n');
-GUERTEL.forEach(g => { if (!g.erreicht_satz) warnungen.push(`Gürtel ${g.nr}: erreicht_satz fehlt in data/techniken.json (Meldung nutzt «Was du jetzt kannst»)`); });
-for (const g of GUERTEL) {
-  const rel = `assets/img/karten/guertel-${g.farbe}.svg`;
-  schreibe(rel, guertelKarte(g));
-  png(rel);
-  landeseite(g);
+for (const sp of ['de', 'en']) {
+  setzeSprache(sp);
+  const ordner = `assets/img/karten/${LP()}`.replace(/\/$/, '');
+  fs.mkdirSync(path.join(ROOT, ordner), { recursive: true });
+  schreibe(`${LP()}dojo/guertel.json`, JSON.stringify({ hinweis: 'Erzeugt von scripts/karten.mjs aus data/techniken.json' + (sp === 'en' ? ' und data/techniken.en.json' : '') + '. Nicht von Hand bearbeiten.', guertel: GUERTEL.map(({ nr, farbe, name, kurz, leitwort, kannst_du, erreicht_satz }) => ({ nr, farbe, name, kurz, leitwort, kannst_du, erreicht_satz })) }, null, 2) + '\n');
+  GUERTEL.forEach(g => { if (!g.erreicht_satz) warnungen.push(`${sp}: Gürtel ${g.nr}: erreicht_satz fehlt`); });
+  for (const g of GUERTEL) {
+    const rel = `${ordner}/guertel-${g.farbe}.svg`;
+    schreibe(rel, guertelKarte(g));
+    png(rel);
+    landeseite(g);
+  }
+  for (const t of DABEI) {
+    const rel = `${ordner}/${t.slug}.svg`;
+    schreibe(rel, technikKarte(t));
+    png(rel);
+  }
+  const behalten = new Set([...DABEI.map(t => t.slug), ...GUERTEL.map(g => 'guertel-' + g.farbe)]);
+  for (const f of fs.readdirSync(path.join(ROOT, ordner))) {
+    const stamm = f.replace(/\.(svg|png)$/, '');
+    if (/\.(svg|png)$/.test(f) && !behalten.has(stamm)) { fs.rmSync(path.join(ROOT, ordner, f)); warnungen.push(`${ordner}/${f} entfernt (nicht im ${PRODUKTION ? 'Produktions-' : ''}Build)`); }
+  }
+  fragenListe();
 }
-for (const t of DABEI) {
-  const rel = `assets/img/karten/${t.slug}.svg`;
-  schreibe(rel, technikKarte(t));
-  png(rel);
-}
-const behalten = new Set([...DABEI.map(t => t.slug), ...GUERTEL.map(g => 'guertel-' + g.farbe)]);
-for (const f of fs.readdirSync(path.join(ROOT, 'assets/img/karten'))) {
-  const stamm = f.replace(/\.(svg|png)$/, '');
-  if (/\.(svg|png)$/.test(f) && !behalten.has(stamm)) { fs.rmSync(path.join(ROOT, 'assets/img/karten', f)); warnungen.push(`assets/img/karten/${f} entfernt (nicht im ${PRODUKTION ? 'Produktions-' : ''}Build)`); }
-}
-fragenListe();
+setzeSprache('de');
 if (profil) { try { fs.rmSync(profil, { recursive: true, force: true }); } catch { /* Chrome haelt Dateien evtl. noch kurz */ } }
 
 console.log(`KMUpower Dojo Karten, ${PRODUKTION ? 'Produktion' : 'Vorschau'}: ${DABEI.length} Einträge, 7 Gürtel`);

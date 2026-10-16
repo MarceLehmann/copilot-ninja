@@ -1,0 +1,68 @@
+{
+  "hinweis": "Erzeugt von scripts/karten.mjs aus data/techniken.json und data/techniken.en.json. Nicht von Hand bearbeiten.",
+  "guertel": [
+    {
+      "nr": 1,
+      "farbe": "weiss",
+      "name": "White belt",
+      "kurz": "White",
+      "leitwort": "Ready stance",
+      "kannst_du": "Write prompts with Goal, Context, Source and Expectations, and get interviewed before you write.",
+      "erreicht_satz": "You now say what you want and let yourself be interviewed."
+    },
+    {
+      "nr": 2,
+      "farbe": "gelb",
+      "name": "Yellow belt",
+      "kurz": "Yellow",
+      "leitwort": "Second look",
+      "kannst_du": "Request and check drafts so that errors show up before you send them.",
+      "erreicht_satz": "You now check before you send."
+    },
+    {
+      "nr": 3,
+      "farbe": "orange",
+      "name": "Orange belt",
+      "kurz": "Orange",
+      "leitwort": "Tracking",
+      "kannst_du": "Analyze files and web sources, with a source location for every statement.",
+      "erreicht_satz": "You now read tracks, each with its source location."
+    },
+    {
+      "nr": 4,
+      "farbe": "gruen",
+      "name": "Green belt",
+      "kurz": "Green",
+      "leitwort": "First student",
+      "kannst_du": "Instruct and check your first own agent.",
+      "erreicht_satz": "You now have your first student."
+    },
+    {
+      "nr": 5,
+      "farbe": "blau",
+      "name": "Blue belt",
+      "kurz": "Blue",
+      "leitwort": "Sequence",
+      "kannst_du": "Give an agent steps and define when it hands over to a person.",
+      "erreicht_satz": "Your agent now knows its path and its limits."
+    },
+    {
+      "nr": 6,
+      "farbe": "braun",
+      "name": "Brown belt",
+      "kurz": "Brown",
+      "leitwort": "Budget",
+      "kannst_du": "Pass data on cleanly and estimate an agent's consumption before it gets expensive.",
+      "erreicht_satz": "You now know what your agent consumes before it runs."
+    },
+    {
+      "nr": 7,
+      "farbe": "schwarz",
+      "name": "Black belt",
+      "kurz": "Black",
+      "leitwort": "Watch",
+      "kannst_du": "Monitor agents in production and shut them down in time.",
+      "erreicht_satz": "You now keep watch, even when nobody is working on the agent."
+    }
+  ]
+}

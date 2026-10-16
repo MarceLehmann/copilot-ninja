@@ -1,0 +1,20 @@
+<main id="main">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Breadcrumbs"><ol><li><a href="../">Home</a></li><li><a href="../techniken/">Techniques</a></li><li><a href="./" aria-current="page">Technique of the day</a></li></ol></nav>
+    <header class="sektion--eng">
+      <span class="label">Today in the Dojo</span>
+      <h1 id="h1">Technique of the day</h1>
+      <p class="lead">The same technique for everyone on the same day. Bookmark this page or add the Monday slot to your calendar.</p>
+      <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>15 minutes every Monday in your calendar</a><a class="knopf knopf--leise" href="../techniken/">All techniques</a></p>
+    </header>
+    <div class="heute sektion--eng">
+      <div data-heute data-heute-datum="{{build_datum}}">{{{heute_inhalt}}}</div>
+      <aside class="heute__seite" aria-label="Your path">
+        <div class="naechster" data-naechster-schritt>
+          <h2>Your next step</h2>
+          <p>Mark a technique as practiced. Then this box shows which technique in your belt comes next.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>

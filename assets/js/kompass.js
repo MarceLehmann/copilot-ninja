@@ -2,13 +2,15 @@
 (function () {
   'use strict';
   var d = document;
+  var EN = /^en/i.test(d.documentElement.getAttribute('lang') || '');
+  function T(de, en) { return EN ? en : de; }
   function el(tag, attr, text) {
     var e = d.createElement(tag);
     Object.keys(attr || {}).forEach(function (k) { if (attr[k] !== null) e.setAttribute(k, attr[k]); });
     if (text !== undefined) e.textContent = text;
     return e;
   }
-  function zahl(n) { return (Math.round(n * 10) / 10).toLocaleString('de-CH'); }
+  function zahl(n) { return (Math.round(n * 10) / 10).toLocaleString(EN ? 'en-US' : 'de-CH'); }
   function los() {
     Array.prototype.forEach.call(d.querySelectorAll('[data-kompass]'), function (box, nr) {
       var r; try { r = JSON.parse(box.getAttribute('data-raten')); } catch (e) { return; }
@@ -16,7 +18,7 @@
       /* Welche Raten mit Microsoft-Copilot-Lizenz entfallen, kommt aus den Daten (rechner.lizenz_ohne_verbrauch) */
       var b = r.beispiel || {}, ohneLizenz = Array.isArray(r.lizenz_ohne_verbrauch) ? r.lizenz_ohne_verbrauch : [];
       var fs = el('fieldset', { 'class': 'rechner__eingaben' });
-      fs.appendChild(el('legend', null, 'Dein Agent im Monat'));
+      fs.appendChild(el('legend', null, T('Dein Agent im Monat', 'Your agent per month')));
       function zeile(id, text, wert, schritt) {
         var z = el('div', { 'class': 'rechner__zeile' });
         z.appendChild(el('label', { 'for': id }, text));
@@ -25,36 +27,36 @@
         return i;
       }
       var p = 'kompass' + nr;
-      var gespraeche = zeile(p + '-g', 'Gespräche pro Monat', b.gespraeche || 0, '1');
-      fs.appendChild(el('p', { 'class': 'klein' }, 'Je Gespräch im Durchschnitt:'));
+      var gespraeche = zeile(p + '-g', T('Gespräche pro Monat', 'Conversations per month'), b.gespraeche || 0, '1');
+      fs.appendChild(el('p', { 'class': 'klein' }, T('Je Gespräch im Durchschnitt:', 'Per conversation on average:')));
       var felder = r.raten.map(function (x) {
         var schritt = x.credits < 1 ? '1' : '0.1';
-        var rate = x.credits < 1 ? zahl(x.credits * 100) + ' Credits pro 100' : x.credits + ' ' + (x.credits === 1 ? 'Credit' : 'Credits');
+        var rate = x.credits < 1 ? zahl(x.credits * 100) + T(' Credits pro 100', ' credits per 100') : x.credits + ' ' + (x.credits === 1 ? T('Credit', 'credit') : T('Credits', 'credits'));
         return { x: x, i: zeile(p + '-' + x.schluessel, x.name + ' (' + rate + ')', b[x.schluessel] || 0, schritt) };
       });
       var lab = el('label', { 'class': 'wahl' }), lz = el('input', { type: 'checkbox' });
-      lab.appendChild(lz); lab.appendChild(el('span', null, 'Nutzer haben eine Microsoft-Copilot-Lizenz'));
+      lab.appendChild(lz); lab.appendChild(el('span', null, T('Nutzer haben eine Microsoft-Copilot-Lizenz', 'Users have a Microsoft 365 Copilot license')));
       fs.appendChild(lab);
       var aus = el('p', { 'class': 'rechner__resultat', role: 'status' });
-      var hinweis = el('p', { 'class': 'klein' }, 'Mit Haken rechnet der Kompass nach der Ratentabelle. Die Seite zur Lizenzierung nennt weniger Ausnahmen, siehe Hinweis oben. Agent Flows zählen nur mit dem Auslöser «When an agent calls the flow» als Ausnahme.');
+      var hinweis = el('p', { 'class': 'klein' }, T('Mit Haken rechnet der Kompass nach der Ratentabelle. Die Seite zur Lizenzierung nennt weniger Ausnahmen, siehe Hinweis oben. Agent Flows zählen nur mit dem Auslöser «When an agent calls the flow» als Ausnahme.', 'With the box checked, the compass calculates according to the rate table. The licensing page names fewer exceptions, see the note above. Agent flows only count as an exception with the trigger “When an agent calls the flow”.'));
       hinweis.hidden = true;
       var weg = el('p', { 'class': 'klein' });
       var start = box.querySelector('p');
       var ziel = start ? start.nextSibling : box.firstChild;
-      [fs, aus, hinweis, weg, el('p', { 'class': 'klein' }, 'Startwerte: ' + (b.hinweis || 'Annahme zur Veranschaulichung.') + ' Setz deine eigenen Zahlen ein.')].forEach(function (n) { box.insertBefore(n, ziel); });
+      [fs, aus, hinweis, weg, el('p', { 'class': 'klein' }, T('Startwerte: ', 'Starting values: ') + (b.hinweis || T('Annahme zur Veranschaulichung.', 'Assumption for illustration.')) + T(' Setz deine eigenen Zahlen ein.', ' Enter your own numbers.'))].forEach(function (n) { box.insertBefore(n, ziel); });
       function rechnen() {
         var g = Math.max(0, parseFloat(gespraeche.value) || 0), je = 0, teile = [];
         felder.forEach(function (f) {
           var anzahl = Math.max(0, parseFloat(f.i.value) || 0);
           var rate = lz.checked && ohneLizenz.indexOf(f.x.schluessel) > -1 ? 0 : f.x.credits;
-          if (anzahl) teile.push(zahl(anzahl) + ' mal ' + rate);
+          if (anzahl) teile.push(zahl(anzahl) + T(' mal ', ' times ') + rate);
           je += anzahl * rate;
         });
         aus.textContent = '';
-        aus.appendChild(d.createTextNode('Grössenordnung: '));
+        aus.appendChild(d.createTextNode(T('Grössenordnung: ', 'Order of magnitude: ')));
         aus.appendChild(el('span', { 'class': 'rechner__ergebnis' }, zahl(g * je)));
-        aus.appendChild(d.createTextNode(' ' + (r.einheit || 'Copilot Credits') + ' pro Monat.'));
-        weg.textContent = 'Rechnung: ' + zahl(g) + ' Gespräche mal ' + zahl(je) + ' Credits je Gespräch' + (teile.length ? ' (' + teile.join(' plus ') + ')' : '') + '.';
+        aus.appendChild(d.createTextNode(' ' + (r.einheit || 'Copilot Credits') + T(' pro Monat.', ' per month.')));
+        weg.textContent = T('Rechnung: ', 'Calculation: ') + zahl(g) + T(' Gespräche mal ', ' conversations times ') + zahl(je) + T(' Credits je Gespräch', ' credits per conversation') + (teile.length ? ' (' + teile.join(' plus ') + ')' : '') + '.';
         hinweis.hidden = !lz.checked;
       }
       fs.addEventListener('input', rechnen);

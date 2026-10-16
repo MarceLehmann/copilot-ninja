@@ -4,6 +4,10 @@
   var d = document, w = window, h = d.documentElement;
   var skript = d.currentScript;
   var ROOT = skript && skript.src ? skript.src.replace(/assets\/js\/core\.js.*$/, '') : '';
+  /* Sprache der Seite: Deutsch unter /, Englisch unter /en/ (gleiche Struktur). Assets liegen gemeinsam unter ROOT. */
+  var EN = /^en/i.test(h.getAttribute('lang') || '');
+  var BASIS = ROOT + (EN ? 'en/' : '');
+  function T(de, en) { return EN ? en : de; }
   var MQ_RUHE = w.matchMedia ? w.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
 
   function alle(sel, wurzel) { return Array.prototype.slice.call((wurzel || d).querySelectorAll(sel)); }
@@ -68,7 +72,7 @@
           if (bewegung()) h.classList.add('anim');
         }
         sync();
-        ansage(h.getAttribute('data-bewegung') === 'aus' ? 'Bewegung ist aus.' : 'Bewegung ist an.');
+        ansage(h.getAttribute('data-bewegung') === 'aus' ? T('Bewegung ist aus.', 'Motion is off.') : T('Bewegung ist an.', 'Motion is on.'));
       });
     });
   }
@@ -138,7 +142,7 @@
       treffer.forEach(function (t, i) {
         var li = d.createElement('li'), a = d.createElement('a'), nr = d.createElement('span'), ti = d.createElement('span'), kl = d.createElement('small');
         li.id = 'suche-t' + i; li.setAttribute('role', 'option'); li.setAttribute('aria-selected', 'false');
-        a.href = ROOT + 'techniken/' + t.slug + '/'; a.tabIndex = -1;
+        a.href = BASIS + 'techniken/' + t.slug + '/'; a.tabIndex = -1;
         nr.className = 'karte-kompakt__nr'; nr.textContent = t.nr ? ('0' + t.nr).slice(-2) : String(t.id).toUpperCase();
         ti.textContent = t.titel; kl.textContent = t.klartitel;
         a.appendChild(nr); a.appendChild(ti); a.appendChild(kl); li.appendChild(a); liste.appendChild(li);
@@ -153,7 +157,7 @@
       zeigen('');
       feld.focus();
       if (!daten) {
-        fetch(ROOT + 'assets/data/suche.json').then(function (r) { return r.json(); })
+        fetch(ROOT + 'assets/data/' + (EN ? 'en/' : '') + 'suche.json').then(function (r) { return r.json(); })
           .then(function (j) { daten = j.eintraege || []; zeigen(feld.value); })
           .catch(function () { daten = []; zeigen(feld.value); });
       }
@@ -217,8 +221,8 @@
         var alt = k.getAttribute('data-label') || k.textContent;
         k.setAttribute('data-label', alt);
         kopierText(text).then(function () {
-          var satz = weiter ? 'Mit Herkunft kopiert. Passt in einen Teams-Chat.' : (k.getAttribute('data-erfolg') || 'Kopiert. Jetzt in Microsoft Copilot Chat einfügen.');
-          k.textContent = 'Kopiert';
+          var satz = weiter ? T('Mit Herkunft kopiert. Passt in einen Teams-Chat.', 'Copied with its origin. Fits into a Teams chat.') : (k.getAttribute('data-erfolg') || T('Kopiert. Jetzt in Microsoft Copilot Chat einfügen.', 'Copied. Now paste it into Microsoft Copilot Chat.'));
+          k.textContent = T('Kopiert', 'Copied');
           k.classList.add('is-ok');
           if (status) status.textContent = satz;
           ansage(satz);
@@ -227,13 +231,16 @@
           clearTimeout(k._cnT);
           k._cnT = setTimeout(function () { k.textContent = alt; k.classList.remove('is-ok'); }, 2000);
         }, function () {
-          var f = 'Kopieren hat nicht funktioniert. Markiere den Text und kopiere ihn mit Strg+C.';
+          var f = T('Kopieren hat nicht funktioniert. Markiere den Text und kopiere ihn mit Strg+C.', 'Copying did not work. Select the text and copy it with Ctrl+C.');
           if (status) status.textContent = f;
           ansage(f);
         });
       });
     });
   }
+
+  /* Profilfelder: gespeichert unter den deutschen Namen, die englischen Platzhalter lesen dieselben Werte */
+  var PROFIL_EN = { 'Company name': 'Firmenname', 'Role': 'Funktion', 'Industry': 'Branche' };
 
   /* Schmiede: Platzhalter werden zu Feldern, Profilwerte vorausgefuellt. Speichert nichts. */
   function schmiede(wurzel) {
@@ -252,7 +259,8 @@
             sp.classList.toggle('is-gefuellt', !!v);
           });
         }
-        if (!f.value && typeof profil[name] === 'string' && profil[name]) f.value = profil[name];
+        var pk = PROFIL_EN[name] || name;
+        if (!f.value && typeof profil[pk] === 'string' && profil[pk]) f.value = profil[pk];
         f.addEventListener('input', setzen);
         if (f.value) setzen();
       });
@@ -327,7 +335,7 @@
         if (mit.length) s.hidden = !mit.some(function (k) { return !k.hidden; });
       });
       alle('.schwelle', wand).forEach(function (s) { s.hidden = Object.keys(aktiv).length > 0; });
-      if (zaehler) zaehler.textContent = 'zeigt ' + n + ' von ' + karten.length;
+      if (zaehler) zaehler.textContent = T('zeigt ' + n + ' von ' + karten.length, 'showing ' + n + ' of ' + karten.length);
       if (leer) leer.hidden = n > 0;
       if (vorher) karten.forEach(function (k, i) {
         var a = vorher[i];
@@ -409,7 +417,7 @@
         if (!ziel) return;
         var status = a.parentNode.querySelector('.rolle__status');
         kopierText(ziel.textContent.replace(/^\s+|\s+$/g, '')).then(function () {
-          var satz = 'Text kopiert. Fehlt er bei LinkedIn, füg ihn dort ein.';
+          var satz = T('Text kopiert. Fehlt er bei LinkedIn, füg ihn dort ein.', 'Text copied. If LinkedIn does not show it, paste it there.');
           if (status) status.textContent = satz;
           ansage(satz);
         }, function () { /* LinkedIn oeffnet trotzdem */ });
@@ -420,8 +428,15 @@
     if (l && f && 'IntersectionObserver' in w) new IntersectionObserver(function (es) { l.classList.toggle('is-weg', es[0].isIntersecting); }).observe(f);
   }
 
+  /* Sprachwahl im Kopf: Wahl merken (localStorage cn-sprache), damit die Startseite danach nicht mehr selbst umleitet */
+  function sprachwahl() {
+    alle('[data-sprache-wahl]').forEach(function (a) {
+      a.addEventListener('click', function () { speicher('cn-sprache', a.getAttribute('data-sprache-wahl')); });
+    });
+  }
+
   w.CN = {
-    root: ROOT,
+    root: ROOT, basis: BASIS, en: EN, T: T,
     bewegung: bewegung,
     ansage: ansage,
     dojo: dojo,
@@ -431,7 +446,7 @@
   };
 
   function los() {
-    theme(); bewegungSchalter(); navigation(); suche(); kopieren(); schmiede(); schnitt(); filter(); tusch(); teilen();
+    sprachwahl(); theme(); bewegungSchalter(); navigation(); suche(); kopieren(); schmiede(); schnitt(); filter(); tusch(); teilen();
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', los); else los();
 })();

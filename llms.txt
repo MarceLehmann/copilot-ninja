@@ -1,12 +1,13 @@
 # KMUpower Dojo
 
-> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.
+> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.
 
 ## Seiten
 
 - [Technik-Wand](https://marcelehmann.github.io/copilot-ninja/techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)
 - [Ist Microsoft Copilot gratis?](https://marcelehmann.github.io/copilot-ninja/gratis/): was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage
 - [Über das Dojo](https://marcelehmann.github.io/copilot-ninja/ueber/): Methode, Dojo-Regeln, was die Seite nicht ist
+- [English version](https://marcelehmann.github.io/copilot-ninja/en/): all pages in English under /en/ with the same structure
 
 ## Techniken
 

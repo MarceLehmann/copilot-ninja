@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en" data-seite="technik">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://marcelehmann.github.io/copilot-ninja/techniken/offerten-vergleichen/">
+<link rel="alternate" hreflang="en" href="https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/">
+<link rel="alternate" hreflang="x-default" href="https://marcelehmann.github.io/copilot-ninja/techniken/offerten-vergleichen/">
+<link rel="alternate" type="application/atom+xml" title="KMUpower Dojo: new techniques" href="../../feed.xml">
+<link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/technik.css">
+<link rel="stylesheet" href="../../../assets/css/druck.css" media="print">
+<script src="../../../assets/js/theme-init.js"></script>
+<script src="../../../assets/js/core.js" defer></script>
+<script src="../../../assets/js/dojo.js" defer></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="KMUpower Dojo build">
+<title>Compare several quotes: Prompt with source | KMUpower Dojo</title>
+<meta name="description" content="Compare several quotes. Prompt for Microsoft Copilot Chat to copy, with a source on Microsoft Learn and a review date. When several quotes are on the table.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KMUpower Dojo">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="The Quote Duel: Compare several quotes">
+<meta property="og:description" content="The fine print from three PDFs ends up in one table, including the service that only one vendor quietly leaves out.">
+<meta property="og:url" content="https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/">
+<meta property="og:image" content="https://marcelehmann.github.io/copilot-ninja/assets/img/karten/en/offerten-vergleichen.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Technique 09: The Quote Duel">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/en/#website",
+      "name": "KMUpower Dojo",
+      "url": "https://marcelehmann.github.io/copilot-ninja/en/",
+      "inLanguage": "en",
+      "description": "Ninja techniques for Microsoft Copilot Chat and Copilot Studio with sources and review dates. Independent website, not affiliated with Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/#technik",
+      "headline": "The Quote Duel: Compare several quotes",
+      "name": "The Quote Duel",
+      "url": "https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/",
+      "inLanguage": "en",
+      "description": "The fine print from three PDFs ends up in one table, including the service that only one vendor quietly leaves out.",
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "citation": [
+        "https://learn.microsoft.com/en-us/copilot/faq",
+        "https://learn.microsoft.com/en-us/copilot/overview"
+      ],
+      "isPartOf": {
+        "@id": "https://marcelehmann.github.io/copilot-ninja/en/techniken/#seite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://marcelehmann.github.io/copilot-ninja/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Techniques",
+          "item": "https://marcelehmann.github.io/copilot-ninja/en/techniken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Quote Duel",
+          "item": "https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta name="dojo-build" content="testphase">
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Skip to content</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="KMUpower Dojo, home page"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></a>
+    <nav class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Techniques</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Free</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">My Dojo</a></li>
+        <li><a href="../../ueber/" data-nav="ueber">About</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <a class="sprachwahl" href="../../../techniken/offerten-vergleichen/" hreflang="de" lang="de-CH" data-sprache-wahl="de" aria-label="Deutsche Version dieser Seite">DE</a>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Search techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <a class="knoten" href="../../dojo/" data-guertelknoten aria-label="My Dojo, White belt"><span class="knoten__text">White belt</span></a>
+      <button type="button" class="knopf-icon" data-zufall aria-label="Random technique you have not practiced yet" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dark mode" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../../techniken/" aria-current="true">Techniques</a></li>
+      <li><a href="../../gratis/">Free</a></li>
+      <li><a href="../../dojo/">My Dojo</a></li>
+      <li><a href="../../ueber/">About</a></li>
+      <li><a href="../../heute/">Technique of the day</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Search techniques</h2>
+    <label for="suche-feld" class="sr-only">Search term</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Minutes, contract, agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Results"></ul>
+  <p class="suche__leer" hidden>No technique found. Try minutes, contract or agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-technik="t09" data-guertel-nr="3">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Breadcrumbs"><ol><li><a href="../../">Home</a></li><li><a href="../">Techniques</a></li><li><a href="../#oranger-guertel">Orange belt</a></li><li><a href="./" aria-current="page">No. 09</a></li></ol></nav>
+    <header class="tk">
+      <p class="tk__nr" aria-hidden="true">09</p>
+      <h1 id="h1">The Quote Duel<small>Compare several quotes</small></h1>
+      <p class="tk__moment">When several quotes are on the table</p>
+      <ul class="metazeile">
+        <li><span class="metazeile__label">Belt</span> <span class="knoten" data-guertel-nr="3">Orange belt, level 3</span></li>
+        <li><span class="metazeile__label">Type</span> <span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Brushstroke</span></li>
+        <li><span class="metazeile__label">Access</span> <a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license, in Microsoft Copilot Chat with file upload</a></li>
+        <li><span class="metazeile__label">Try it</span> <span>approx. 10 min</span></li>
+      </ul>
+    </header>
+
+    <div class="tk-raster">
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">The situation</h2>
+      <p class="abschnitt__problem">Three vendors, three PDFs, three different layouts. The lowest price is in big letters on page one. What is missing is written nowhere.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">The cut</h2>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Before</p><div class="schnitt__vorher"><p class="schnitt__zitat">“Which quote is the best?”</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <p class="label">After</p>
+<div class="schmiede" data-nur-js>
+<div class="schmiede__kopf"><h3>Make it yours</h3><p class="schmiede__hinweis">Nothing leaves your browser.</p></div>
+<div class="schmiede__feld"><label for="technik-f1">Service</label><input id="technik-f1" type="text" data-ph-feld="Service" autocomplete="off" aria-describedby="technik-f1-h"><small id="technik-f1-h">e.g. the new phone system</small></div>
+</div>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Prompt to copy</p></div>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> Compare the attached quotes for <span class="ph" data-ph="Service">[Service, e.g. the new phone system]</span>. Do not decide for me.</mark>
+
+<mark class="teil teil--quelle"><span class="teil__label">Source:</span> Only the attached files. If a quote is missing a detail, write “missing”. Do not guess.</mark>
+
+<mark class="teil teil--erwartung"><span class="teil__label">Expectations:</span>
+1. A comparison table. The columns are the vendors. The rows are: total price, price components, scope of services, delivery time, payment terms, warranty, contract term and termination, exclusions.
+2. Differences that only show up at second glance, for example services only one vendor includes.
+3. For each vendor, the questions I should ask before deciding.
+For every number, give the location, with file and page.</mark></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy prompt</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Technique from the KMUpower Dojo: marcelehmann.github.io/copilot-ninja/en/9&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
+</div>
+      <p class="rolle__fallback">No add-on license, in Microsoft Copilot Chat with file upload. Without a copy button: select the text and copy it with Ctrl+C.</p>
+    </section>
+
+
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">How to use it</h2>
+      <ol class="schritte"><li>Upload all quotes as files to Microsoft Copilot Chat.</li><li>Fill in the service and send.</li><li>Note every row marked “missing” as a question for the vendor.</li><li>Recalculate totals and prices yourself before you decide.</li></ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">How to spot a good answer</h2>
+      <ul class="pruefliste"><li>A table with all vendors as columns.</li><li>“missing” instead of estimated values.</li><li>A location with file and page for every number.</li><li>Questions for each vendor.</li></ul>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-probe">
+      <h2 id="h-probe">The check</h2>
+      <p class="probe">Count the questions to vendors that you would not have asked without the table.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Limits</h2>
+      <ul class="arrow-list prose"><li>Recalculate totals yourself. The table is a reading aid, not an audit.</li><li>According to Microsoft, file uploads have limits. The pages we checked give no numbers.</li><li>Only upload third-party quotes if your internal rules allow it.</li><li>You have to decide yourself. The prompt deliberately rules out a recommendation.</li></ul>
+    </section>
+
+
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Sources</h2>
+      <p class="quelle"><a href="https://learn.microsoft.com/en-us/copilot/faq" rel="noopener">Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat</a>, <a href="https://learn.microsoft.com/en-us/copilot/overview" rel="noopener">Microsoft Learn: Overview of Microsoft Copilot Chat</a>. As of <time datetime="2026-10-15">October 15, 2026</time>.</p>
+
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Mark as practiced</button></p>
+      <p class="kurs-zeile">Prefer to practice with guidance? <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=technik-9" rel="noopener">Live course “Copilot Ninja in 4 Wochen” (in German) at the Power Platform Academy</a></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Pass it on</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="https://www.linkedin.com/feed/?shareActive=true&amp;text=Technique%209%20from%20the%20KMUpower%20Dojo%3A%20The%20Quote%20Duel.%20Several%20quotes%20in%20one%20table%2C%20with%20%E2%80%9Cmissing%E2%80%9D%20instead%20of%20guessed%20values%20and%20a%20location%20for%20every%20number.%20Free%20to%20copy%2C%20with%20a%20source%20on%20Microsoft%20Learn.%0A%0Ahttps%3A%2F%2Fmarcelehmann.github.io%2Fcopilot-ninja%2Fen%2Ftechniken%2Fofferten-vergleichen%2F" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Share on LinkedIn</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/" hidden>Share</button>
+        <a class="knopf knopf--klein" href="../../../assets/img/karten/en/offerten-vergleichen.png" download>Download image</a>
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Text copied. Paste it into your post." data-nur-js>Copy text for your post</button>
+        <p class="rolle__status" role="status"></p>
+      </div>
+      <details class="einklapp">
+        <summary>Suggested text for your post</summary>
+        <pre class="code" id="teilen-text">Technique 9 from the KMUpower Dojo: The Quote Duel. Several quotes in one table, with “missing” instead of guessed values and a location for every number. Free to copy, with a source on Microsoft Learn.
+
+https://marcelehmann.github.io/copilot-ninja/en/techniken/offerten-vergleichen/</pre>
+      </details>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-kette">
+      <h2 id="h-kette">Combo: Don't leave money on the table</h2>
+      <div class="kette">
+        <div><p class="label">Comes from</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="g3" data-guertel-nr="3"><span class="karte-kompakt__nr">G3</span><a class="karte-kompakt__link" href="../../techniken/tabelle-pruefen/">Check a table for anomalies</a><a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license</a></li></ul></div>
+        <div><p class="label">Continue with</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t10" data-guertel-nr="3"><span class="karte-kompakt__nr">10</span><a class="karte-kompakt__link" href="../../techniken/vertragsfristen-finden/">The Pitfall</a><span class="klein">Find deadlines and renewal traps in a contract</span><a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license</a></li></ul></div>
+      </div>
+    </section>
+
+    <nav class="blaettern" aria-label="More techniques">
+<a href="../../techniken/tabelle-pruefen/" rel="prev"><span>Previous technique</span>G3 Check a table for anomalies</a>
+<a href="../../techniken/vertragsfristen-finden/" rel="next"><span>Next technique</span>10 The Pitfall</a>
+    </nav>
+    </div>
+    <aside class="tk-seite nicht-drucken" aria-labelledby="tk-seite-titel">
+      <div class="tk-seite__innen">
+        <p class="label" id="tk-seite-titel">Your tool</p>
+        <p><a class="zugang zugang--frei" href="../../gratis/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license, in Microsoft Copilot Chat with file upload</a></p>
+        <p class="klein">Try it: approx. 10 min</p>
+        <p><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy prompt</button></p>
+        <p><button type="button" class="knopf knopf--klein" data-geuebt-knopf data-nur-js>Mark as practiced</button></p>
+        <p class="klein"><a href="#quelle">Sources</a></p>
+      </div>
+    </aside>
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy prompt</button>
+    <a class="knopf knopf--klein" href="../../techniken/vertragsfristen-finden/">Next technique</a>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><svg class="marke__wort" viewBox="-1.5 -1.5 124.1 21" width="161" height="27" aria-hidden="true" focusable="false"><path d="M1 0V14M8 0L1.5 7.5M3.6 5.6L8.5 14M11.6 14V0L16.1 9L20.6 0V14M24.2 0V10.5A3.5 3.5 0 0 0 31.2 10.5V0M34.8 18V4M34.8 7.5A3 3 0 0 1 40.8 7.5V10.5A3 3 0 0 1 34.8 10.5M44.4 7.5A3 3 0 0 1 50.4 7.5V10.5A3 3 0 0 1 44.4 10.5ZM54 4L56.2 14L58.5 6.5L60.8 14L63 4M66.8 9H72.6V7.5A3 3 0 0 0 66.6 7.5V10.5A3 3 0 0 0 69.6 13.5H72.6M76.2 14V4M76.2 8A4 4 0 0 1 80.2 4H81.2M89.4 0H92.4A4.5 4.5 0 0 1 96.9 4.5V9.5A4.5 4.5 0 0 1 92.4 14H89.4ZM100.5 7.5A3 3 0 0 1 106.5 7.5V10.5A3 3 0 0 1 100.5 10.5ZM110.3 4.8V15.5A2.5 2.5 0 0 1 107.8 18M110.3 0.6V0.7M114.1 7.5A3 3 0 0 1 120.1 7.5V10.5A3 3 0 0 1 114.1 10.5Z"/></svg></p>
+        <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio. Each with a source on Microsoft Learn. No sign-up and no cookies.</p>
+        <p class="beitragen">Do you know a technique that is missing here? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20for%20the%20Dojo&amp;body=Title%20of%20the%20technique%3A%0A%0AProblem%20it%20solves%3A%0A%0APrompt%20or%20guide%3A%0A%0ALimits%3A%0A%0ASource%20on%20Microsoft%20Learn%3A%0A%0AMay%20I%20name%20you%20as%20the%20sender%3F%20(yes%20or%20no)%0A%0APlease%20no%20customer%2C%20personal%20or%20company%20data%20in%20the%20prompt.">Write to me.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">All techniques</a></li>
+          <li><a href="../../heute/">Technique of the day</a></li>
+          <li><a href="../../gratis/">Is Microsoft Copilot free?</a></li>
+          <li><a href="../../dojo/">My Dojo</a></li>
+          <li><a href="../../dojo/test/">Which belt are you?</a></li>
+          <li><a href="../../kalender/montag.ics" download>15 minutes every Monday in your calendar</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="fuss-weiter">More</h2>
+        <ul aria-labelledby="fuss-weiter">
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower Impuls newsletter (in German)</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+        <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Motion off</button></p>
+      </div>
+    </div>
+    <div class="fuss__recht">
+      <p class="fuss__klar">Not an offer from Microsoft. No licensing advice: for your case, ask your IT or your Microsoft partner.</p>
+      <p>Microsoft and the Power Platform product names (for example Power Apps, Power Automate, Copilot Studio) are trademarks of the Microsoft group of companies. This is an independent website by Marcel Lehmann. It is not operated, sponsored or endorsed by Microsoft.</p>
+      <p>This website is not affiliated with Microsoft. Also trademarks of the Microsoft group of companies: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
+      <p><a href="../../impressum/">Legal notice</a>, <a href="../../datenschutz/">Privacy</a>, <a href="../../ueber/">About the Dojo</a></p>
+      <p>No cookies, no tracking. Your progress stays in your browser. Reach is measured only with Google Search Console and Bing Webmaster Tools.</p>
+    </div>
+  </div>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

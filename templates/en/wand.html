@@ -1,0 +1,37 @@
+<main id="main">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Breadcrumbs"><ol><li><a href="../">Home</a></li><li><a href="./" aria-current="page">Techniques</a></li></ol></nav>
+    <header class="sektion--eng wand-kopf">
+      <div>
+        <span class="label">The technique wall</span>
+        <h1 id="h1">{{anzahl}} ninja techniques for Microsoft Copilot Chat and Copilot Studio</h1>
+        <p class="lead">From white belt to black belt, plus {{anzahl_grundformen}} to warm up. Each technique with a source on Microsoft Learn, a review date and honest limits.</p>
+        <p class="nicht-drucken klein">Tip: the print view of this page is a cheat sheet with short addresses for your desk. <button type="button" class="knopf knopf--leise knopf--klein" data-drucken data-nur-js>Print cheat sheet</button></p>
+      </div>
+      <nav class="leiter nicht-drucken" aria-labelledby="leiter-titel">
+        <p class="label" id="leiter-titel">Jump to your belt</p>
+        <ol>{{{guertel_sprung}}}</ol>
+      </nav>
+    </header>
+    <div class="druck-kopf nur-druck"><span>KMUpower Dojo, cheat sheet of the techniques</span><span>As of {{stand_ch}}</span><span>{{kurz_basis}}/number</span></div>
+    {{{filter}}}
+    <div data-filter-ziel>
+{{{abschnitte}}}
+    </div>
+    <div class="leer" data-filter-leer hidden>
+      {{{tusch_sitzen}}}
+      <div>
+        <p>No technique matches these filters.</p>
+        <button type="button" class="knopf knopf--klein" data-filter-reset>Reset filters</button>
+      </div>
+    </div>
+  </div>
+  <section class="sektion flaeche-2 wand__pfad" aria-labelledby="h-vier-wochen">
+    <div class="wrap">
+      {{{vier_wochen}}}
+    </div>
+  </section>
+  <div class="wrap sektion--eng">
+    <p class="beitragen lead">Do you know a technique that is missing here? <a href="{{mailto_beitrag}}">Write to me.</a> Only what has been checked against the documentation is added. <a href="../dojo/#beitragen">To the form in the Dojo</a></p>
+  </div>
+</main>

@@ -20,6 +20,17 @@ Unabhängige Website von Marcel Lehmann (Handelsname KMUpower). Sie hat keine Ve
 | `/ueber/`, `/impressum/`, `/datenschutz/` | Methode, Anbieter, Datenschutz |
 | `/vorlagen/` | Weiterleitung der früheren Vorlagen-Seite |
 
+## Sprachen (16.10.2026)
+
+Deutsch liegt unter `/`, Englisch unter `/en/` mit derselben Ordnerstruktur (`/en/techniken/<slug>/`, `/en/gratis/`, `/en/1/` bis `/en/25/` usw.).
+
+- Texte der Techniken: `data/techniken.en.json` legt die englischen Textfelder über die Einträge aus `data/techniken.json` (gleiche id). Struktur, Freigabe, Quellen-URLs und Daten kommen immer aus der deutschen Datei. Der Build prüft gleich viele Listeneinträge und die Regeln (keine Gedankenstriche, keine Emojis, keine «»).
+- Vorlagen: `templates/en/` und `templates/partials/en/`. Seiten von Hand: `en/gratis/`, `en/dojo/`, `en/dojo/test/`, `en/ueber/`, `en/impressum/`, `en/datenschutz/` (Anker und IDs wie deutsch). `en/dojo/selbsttest.json` ist der englische Fragenpool. `karten.mjs` erzeugt Karten, Gürtelseiten und Fragenliste für beide Sprachen.
+- Daten für Skripte je Sprache: `assets/data/` und `assets/data/en/`, Karten `assets/img/karten/en/`, OG-Bild `og-image-en.png`, Feed `en/feed.xml`, Kalender `en/kalender/montag.ics`.
+- Sprachwahl: Umschalter DE/EN im Kopf jeder Seite, verlinkt auf die Entsprechung und merkt die Wahl in `localStorage` (`cn-sprache`). `assets/js/sprache.js` läuft nur auf der deutschen Startseite: ohne gespeicherte Wahl und ohne Deutsch in `navigator.languages` leitet es einmal auf `en/` weiter und merkt `en`. Crawler werden nicht weitergeleitet. Auf 404 zeigt es für Adressen unter `/en/` die englische 404-Seite.
+- Jede Seite trägt `hreflang` (de, en, x-default auf Deutsch) und ein eigenes Canonical, die Sitemap enthält beide Sprachen mit `xhtml:link`.
+- Fortschritt, Profil und Selbsttest gelten sprachübergreifend (gleicher Speicher `cn-dojo-v1`).
+
 ## Aufbau
 
 | Pfad | Inhalt |
