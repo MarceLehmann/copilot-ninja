@@ -1,4 +1,4 @@
-/* KMUpower Dojo dojo.js: Fortschritt, Guertel, Technik des Tages, naechster Schritt, Zufall.
+/* PowerPlatformAcademy Dojo dojo.js: Fortschritt, Guertel, Technik des Tages, naechster Schritt, Zufall.
    Alles bleibt im Browser (localStorage cn-dojo-v1). Geschrieben wird nur nach einer Handlung. Kein Tracking. */
 (function () {
   'use strict';

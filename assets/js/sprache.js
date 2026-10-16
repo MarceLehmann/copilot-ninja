@@ -1,4 +1,4 @@
-/* KMUpower Dojo sprache.js: synchron im head, nur auf der deutschen Startseite und auf 404. Keine Cookies, keine Anfragen.
+/* PowerPlatformAcademy Dojo sprache.js: synchron im head, nur auf der deutschen Startseite und auf 404. Keine Cookies, keine Anfragen.
    Startseite: gespeicherte Wahl (localStorage cn-sprache) gilt. Ohne Wahl und ohne Deutsch in navigator.languages einmal auf en/
    weiterleiten und die Wahl merken. Crawler werden nie weitergeleitet. 404: Adressen unter en/ zeigen die englische 404-Seite. */
 (function (w, d) {

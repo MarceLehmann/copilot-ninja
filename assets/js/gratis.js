@@ -1,4 +1,4 @@
-/* KMUpower Dojo gratis.js: Gratis-Check auf /gratis/, Ergebnis per Hash teilbar, eingeklappte Zeilen per Hash oeffnen,
+/* PowerPlatformAcademy Dojo gratis.js: Gratis-Check auf /gratis/, Ergebnis per Hash teilbar, eingeklappte Zeilen per Hash oeffnen,
    Begruessung bei ?von=gratis. Alle Saetze stehen im HTML (template#check-saetze), hier wird nur ausgewaehlt. Nichts wird gesendet. */
 (function () {
   'use strict';

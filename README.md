@@ -1,4 +1,4 @@
-# KMUpower Dojo: Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio
+# PowerPlatformAcademy Dojo: Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio
 
 Statische Website (HTML, CSS, JavaScript) mit 25 Techniken und 5 Grundformen für Microsoft Copilot Chat und Copilot Studio, geordnet vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn und den Stand (`geprueft_am`, auch als `dateModified` im JSON-LD). Prüfstempel gibt es nur noch einmal oben auf `/gratis/`, ohne Alterung (Review 15.10.2026). Feld `suchbegriffe` je Technik speist die Suche (Strg+K).
 

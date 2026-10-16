@@ -1,10 +1,11 @@
-# KMUpower Dojo
+# PowerPlatformAcademy Dojo · Copilot
 
-> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.
+> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Das Dojo gehört zur Power Platform Academy (https://www.powerplatformacademy.online/). Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.
 
 Kurzfakten:
 
-- Website: KMUpower Dojo (https://copilot.ninja/), Englisch unter https://copilot.ninja/en/
+- Website: PowerPlatformAcademy Dojo · Copilot (https://copilot.ninja/), Englisch unter https://copilot.ninja/en/
+- Weiteres Dojo: PowerPlatformAcademy Dojo · Power Automate (https://powerautomate.ninja/)
 - Autor: Marcel Lehmann, Microsoft Business Applications MVP, Schweiz (Handelsname KMUpower, https://kmupower.com/)
 - Inhalt: 25 Techniken und 5 Grundformen für Microsoft Copilot Chat, Agent Builder und Copilot Studio, je mit Prompt zum Kopieren, Grenzen und Quellen bei Microsoft Learn
 - Kosten: gratis, ohne Anmeldung, ohne Cookies

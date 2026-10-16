@@ -1,4 +1,4 @@
-/* KMUpower Dojo dojo-seiten.js: nur auf /dojo/ und /dojo/test/. Mein Dojo, Profil, Loeschen, Guertelkarte,
+/* PowerPlatformAcademy Dojo dojo-seiten.js: nur auf /dojo/ und /dojo/test/. Mein Dojo, Profil, Loeschen, Guertelkarte,
    Technik beitragen, Selbsttest. Braucht dojo.js (window.CNDojo). Nichts wird gesendet. */
 (function () {
   'use strict';
@@ -60,12 +60,9 @@
     }
     ctx.fillStyle = '#8A7F6C'; ctx.fillRect(0, 605, 1200, 1.5);
     ctx.strokeStyle = '#8A7F6C'; ctx.lineWidth = 2; ctx.strokeRect(Math.floor((n - 1) * 1200 / 7) + 1, 587, Math.ceil(1200 / 7) - 1, 43);
-    var wm = d.querySelector('.kopf .marke__wort path');
-    if (wm && w.Path2D) {
-      ctx.save(); ctx.translate(80, 56); ctx.scale(1.7, 1.7);
-      ctx.strokeStyle = '#15171B'; ctx.lineWidth = 2.3; ctx.lineCap = 'square'; ctx.stroke(new Path2D(wm.getAttribute('d')));
-      ctx.restore();
-    } else { ctx.fillStyle = '#15171B'; ctx.font = '600 34px ' + SCHRIFT; ctx.fillText('KMUpower Dojo', 80, 92); }
+    ctx.fillStyle = '#15171B'; ctx.font = '600 34px ' + SCHRIFT; ctx.fillText('PowerPlatformAcademy Dojo', 80, 88);
+    var wmB = ctx.measureText('PowerPlatformAcademy Dojo').width;
+    ctx.fillStyle = '#B4301A'; ctx.font = '700 24px ' + SCHRIFT; ctx.fillText('COPILOT', 80 + wmB + 14, 88);
     ctx.fillStyle = '#4E525B'; ctx.font = '400 34px ' + SCHRIFT; ctx.textBaseline = 'alphabetic';
     var y = 176;
     ctx.fillText(art === 'start' ? T('Mein Startpunkt im Dojo', 'My starting point in the Dojo') : T('Mein Dojo-Gürtel', 'My Dojo belt'), 80, y);
@@ -128,8 +125,8 @@
       }, 'image/png');
     });
     textK.addEventListener('click', function () {
-      var t = EN ? (art === 'start' ? 'My starting point in the KMUpower Dojo: ' + NAMEN[n - 1] + '. Seven questions, each followed by the answer with a source.' : 'In the KMUpower Dojo I have practiced all techniques up to the ' + akk(n) + '.') + ' Self-assessment, not a certificate. ' + url
-        : (art === 'start' ? 'Mein Startpunkt im KMUpower Dojo: ' + NAMEN[n - 1] + '. Sieben Fragen, nach jeder die Auflösung mit Quelle.' : 'Im KMUpower Dojo habe ich alle Techniken bis zum ' + akk(n) + ' geübt.') + ' Selbsteinschätzung, kein Zertifikat. ' + url;
+      var t = EN ? (art === 'start' ? 'My starting point in the PowerPlatformAcademy Dojo: ' + NAMEN[n - 1] + '. Seven questions, each followed by the answer with a source.' : 'In the PowerPlatformAcademy Dojo I have practiced all techniques up to the ' + akk(n) + '.') + ' Self-assessment, not a certificate. ' + url
+        : (art === 'start' ? 'Mein Startpunkt im PowerPlatformAcademy Dojo: ' + NAMEN[n - 1] + '. Sieben Fragen, nach jeder die Auflösung mit Quelle.' : 'Im PowerPlatformAcademy Dojo habe ich alle Techniken bis zum ' + akk(n) + ' geübt.') + ' Selbsteinschätzung, kein Zertifikat. ' + url;
       var status = box.querySelector('[role="status"]');
       (w.CN && w.CN.kopierText ? w.CN.kopierText(t) : Promise.reject()).then(function () { status.textContent = T('Text kopiert. Füg ihn in deinen Post ein.', 'Text copied. Paste it into your post.'); }, function () { status.textContent = t; });
     });

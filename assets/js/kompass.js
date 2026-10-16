@@ -1,4 +1,4 @@
-/* KMUpower Dojo kompass.js: Credit-Kompass auf Technik 23. Rechnet im Browser, speichert und sendet nichts. Kein Preis pro Credit. */
+/* PowerPlatformAcademy Dojo kompass.js: Credit-Kompass auf Technik 23. Rechnet im Browser, speichert und sendet nichts. Kein Preis pro Credit. */
 (function () {
   'use strict';
   var d = document;

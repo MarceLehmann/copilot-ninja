@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-  KMUpower Dojo: Vorschaubilder und Dojo-Seiten aus den Daten. Node 18 oder neuer, keine Abhaengigkeiten.
+  PowerPlatformAcademy Dojo: Vorschaubilder und Dojo-Seiten aus den Daten. Node 18 oder neuer, keine Abhaengigkeiten.
 
   node scripts/karten.mjs                 alle Eintraege (Vorschau): SVG und PNG je Technik und je Guertel, dazu
                                           dojo/guertel.json, die sieben Guertel-Landeseiten und die Fragenliste
@@ -101,14 +101,11 @@ function textZeilen(zeilen, x, y, px, abstand, attr) {
   return zeilen.map((z, i) => `<text x="${x}" y="${y + i * abstand}" font-size="${px}" ${attr}>${esc(z)}</text>`).join('\n');
 }
 
-/* Bausteine aus Dateien von FUNDAMENT: Wortmarke (og-image.svg) und Tusch (assets/img/tusch.svg) */
-const WORT = (() => { try { return (lies('og-image.svg').match(/scale\(1\.9\)"[^>]*><path d="([^"]+)"/) || [])[1] || ''; } catch { return ''; } })();
+/* Bausteine: Wortmarke als Text (16.10.2026, PowerPlatformAcademy Dojo mit Zusatz Copilot) und Tusch (assets/img/tusch.svg) */
 const TUSCH = (() => { try { return lies('assets/img/tusch.svg'); } catch { return ''; } })();
-if (!WORT) warnungen.push('Wortmarke in og-image.svg nicht gefunden, Karten zeigen Text');
 if (!TUSCH) warnungen.push('assets/img/tusch.svg fehlt, Karten ohne Tusch');
-function wortmarke(x, y, s) {
-  return WORT ? `<g transform="translate(${x} ${y}) scale(${s})" fill="none" stroke="#15171B" stroke-width="2.3" stroke-linecap="square"><path d="${WORT}"/></g>`
-    : `<text x="${x}" y="${y + 24}" font-family="${DISPLAY}" font-weight="600" font-size="30" fill="#15171B">KMUpower Dojo</text>`;
+function wortmarke(x, y) {
+  return `<text x="${x}" y="${y + 26}" font-family="${DISPLAY}" font-stretch="condensed" font-weight="600" font-size="32" fill="#15171B">PowerPlatformAcademy Dojo<tspan font-weight="700" font-size="22" letter-spacing="2.5" fill="#B4301A" dx="14">COPILOT</tspan></text>`;
 }
 function tusch(x, y, hoehe, farbe) {
   if (!TUSCH) return '';
@@ -138,7 +135,7 @@ function technikKarte(t) {
   const istT = t.typ === 'technik';
   const zeile1 = istT ? `${T('TECHNIK', 'TECHNIQUE')} ${pad2(t.nr)}${alle25Frei ? T(' VON 25', ' OF 25') : ''}` : `${T('GRUNDFORM', 'BASIC FORM')} ${t.id.toUpperCase()}`;
   const adresse = istT ? `${KURZ_BASIS}/${LP()}${t.nr}` : `${KURZ_BASIS}/${LP()}techniken/${t.slug}/`;
-  const teile = [wortmarke(80, 48, 1.45)];
+  const teile = [wortmarke(80, 48)];
   teile.push(`<rect x="80" y="122" width="58" height="22" fill="${BELT[t.guertel - 1]}" stroke="#8A7F6C" stroke-width="2"/><rect x="100" y="115" width="18" height="36" fill="${BELT[t.guertel - 1]}" stroke="#8A7F6C" stroke-width="2"/>`);
   teile.push(`<text x="156" y="142" font-family="${DISPLAY}" font-weight="700" font-size="24" letter-spacing="2.5" fill="#B4301A">${esc(zeile1)}</text>`);
   teile.push(`<text x="${156 + Math.round(breite(zeile1, 24, true) + zeile1.length * 2.5 + 22)}" y="142" font-family="${DISPLAY}" font-weight="600" font-size="24" letter-spacing="1" fill="#4E525B">${esc(g.name.toUpperCase())}</text>`);
@@ -169,16 +166,16 @@ function technikKarte(t) {
 }
 /* Karte je Guertel (Landeseiten): Guertelband, Name, Leitwort, Tusch. Ohne «Mein», ohne Namen. */
 function guertelKarte(g) {
-  const teile = [wortmarke(80, 48, 1.45)];
+  const teile = [wortmarke(80, 48)];
   teile.push(`<text x="80" y="170" font-family="${DISPLAY}" font-weight="700" font-size="26" letter-spacing="3" fill="#B4301A">${T('STUFE', 'LEVEL')} ${g.nr} ${T('VON', 'OF')} 7</text>`);
   teile.push(`<text x="80" y="282" font-family="${DISPLAY}" font-weight="700" font-size="104" letter-spacing="-2" fill="#15171B">${esc(g.name)}</text>`);
   teile.push(`<rect x="80" y="318" width="600" height="34" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/><rect x="352" y="304" width="56" height="62" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/>`);
   if (g.leitwort) teile.push(`<text x="80" y="446" font-family="${DISPLAY}" font-weight="600" font-size="54" fill="#15171B">${esc(g.leitwort)}</text>`);
-  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="28" fill="#4E525B">${T('Selbsteinschätzung im KMUpower Dojo. Kein Zertifikat.', 'Self-assessment in the KMUpower Dojo. Not a certificate.')}</text>`);
+  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="28" fill="#4E525B">${T('Selbsteinschätzung im PowerPlatformAcademy Dojo. Kein Zertifikat.', 'Self-assessment in the PowerPlatformAcademy Dojo. Not a certificate.')}</text>`);
   teile.push(tusch(880, 110, 330, BELT[g.nr - 1]));
   teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(KURZ_BASIS + (L === 'en' ? '/en' : ''))}</text>`);
   teile.push(band(g.nr));
-  return rahmen(teile.join('\n'), `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. ${T('Selbsteinschätzung im KMUpower Dojo, kein Zertifikat.', 'Self-assessment in the KMUpower Dojo, not a certificate.')}`);
+  return rahmen(teile.join('\n'), `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. ${T('Selbsteinschätzung im PowerPlatformAcademy Dojo, kein Zertifikat.', 'Self-assessment in the PowerPlatformAcademy Dojo, not a certificate.')}`);
 }
 
 /* PNG mit lokalem Chrome */
@@ -219,13 +216,13 @@ function landeseite(g) {
 <meta charset="utf-8">
 <!-- RAHMEN:HEAD -->
 <!-- /RAHMEN:HEAD -->
-<title>Dojo-Gürtel: ${esc(g.kurz)} | KMUpower Dojo</title>
+<title>Dojo-Gürtel: ${esc(g.kurz)} | PowerPlatformAcademy Dojo · Copilot</title>
 <meta name="description" content="${esc(beschreibung)}">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="KMUpower Dojo">
+<meta property="og:site_name" content="PowerPlatformAcademy Dojo · Copilot">
 <meta property="og:locale" content="de_CH">
-<meta property="og:title" content="${esc(g.name)} im KMUpower Dojo">
+<meta property="og:title" content="${esc(g.name)} im PowerPlatformAcademy Dojo">
 <meta property="og:description" content="${esc(beschreibung)}">
 <meta property="og:url" content="${BASE_URL}dojo/guertel/${g.farbe}/">
 <meta property="og:image" content="${bild}">
@@ -245,19 +242,19 @@ function landeseite(g) {
         <span class="label">Stufe ${g.nr} von 7${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>
         <h1 id="h1">${esc(g.name)}</h1>
         <p class="lead"><strong>Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.</strong></p>
-${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du)}</p>\n` : ''}        <p>Diese Seite gehört zu einer geteilten Karte aus dem KMUpower Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.</p>
+${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du)}</p>\n` : ''}        <p>Diese Seite gehört zu einer geteilten Karte aus dem PowerPlatformAcademy Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.</p>
         <div class="knopf-reihe">
           <a class="knopf knopf--primaer" href="../../test/">Mach den Test selbst</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniken dieses Gürtels</a>
         </div>
       </div>
       <figure class="guertelkarte">
-        <img src="${r}assets/img/karten/guertel-${g.farbe}.svg" width="1200" height="630" alt="Karte: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Selbsteinschätzung im KMUpower Dojo, kein Zertifikat.">
+        <img src="${r}assets/img/karten/guertel-${g.farbe}.svg" width="1200" height="630" alt="Karte: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Selbsteinschätzung im PowerPlatformAcademy Dojo, kein Zertifikat.">
       </figure>
     </section>
     <section class="sektion--eng" aria-labelledby="h-was">
       <div class="kasten">
-        <h2 id="h-was">Was ist das KMUpower Dojo?</h2>
+        <h2 id="h-was">Was ist das PowerPlatformAcademy Dojo?</h2>
         <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel. Jede mit Quelle bei Microsoft Learn und Prüfdatum. Ohne Anmeldung und ohne Cookies.</p>
         <p class="knopf-reihe"><a class="knopf" href="${r}">Zur Startseite</a><a class="knopf knopf--leise" href="${r}techniken/">Alle Techniken</a></p>
       </div>
@@ -287,13 +284,13 @@ function landeseiteEN(g) {
 <meta charset="utf-8">
 <!-- RAHMEN:HEAD -->
 <!-- /RAHMEN:HEAD -->
-<title>Dojo belt: ${esc(g.kurz)} | KMUpower Dojo</title>
+<title>Dojo belt: ${esc(g.kurz)} | PowerPlatformAcademy Dojo · Copilot</title>
 <meta name="description" content="${esc(beschreibung)}">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="KMUpower Dojo">
+<meta property="og:site_name" content="PowerPlatformAcademy Dojo · Copilot">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="${esc(g.name)} in the KMUpower Dojo">
+<meta property="og:title" content="${esc(g.name)} in the PowerPlatformAcademy Dojo">
 <meta property="og:description" content="${esc(beschreibung)}">
 <meta property="og:url" content="${BASE_URL}en/dojo/guertel/${g.farbe}/">
 <meta property="og:image" content="${bild}">
@@ -313,19 +310,19 @@ function landeseiteEN(g) {
         <span class="label">Level ${g.nr} of 7${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>
         <h1 id="h1">${esc(g.name)}</h1>
         <p class="lead"><strong>Self-assessment on an independent website. Not a certificate.</strong></p>
-${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}        <p>This page belongs to a card shared from the KMUpower Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
+${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}        <p>This page belongs to a card shared from the PowerPlatformAcademy Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
         <div class="knopf-reihe">
           <a class="knopf knopf--primaer" href="../../test/">Take the test yourself</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniques of this belt</a>
         </div>
       </div>
       <figure class="guertelkarte">
-        <img src="${ra}assets/img/karten/en/guertel-${g.farbe}.svg" width="1200" height="630" alt="Card: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Self-assessment in the KMUpower Dojo, not a certificate.">
+        <img src="${ra}assets/img/karten/en/guertel-${g.farbe}.svg" width="1200" height="630" alt="Card: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Self-assessment in the PowerPlatformAcademy Dojo, not a certificate.">
       </figure>
     </section>
     <section class="sektion--eng" aria-labelledby="h-was">
       <div class="kasten">
-        <h2 id="h-was">What is the KMUpower Dojo?</h2>
+        <h2 id="h-was">What is the PowerPlatformAcademy Dojo?</h2>
         <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio, from white belt to black belt. Each with a source on Microsoft Learn and a review date. No sign-up and no cookies.</p>
         <p class="knopf-reihe"><a class="knopf" href="${r}">To the home page</a><a class="knopf knopf--leise" href="${r}techniken/">All techniques</a></p>
       </div>
@@ -406,6 +403,6 @@ for (const sp of ['de', 'en']) {
 setzeSprache('de');
 if (profil) { try { fs.rmSync(profil, { recursive: true, force: true }); } catch { /* Chrome haelt Dateien evtl. noch kurz */ } }
 
-console.log(`KMUpower Dojo Karten, ${PRODUKTION ? 'Produktion' : 'Vorschau'}: ${DABEI.length} Einträge, 7 Gürtel`);
+console.log(`PowerPlatformAcademy Dojo Karten, ${PRODUKTION ? 'Produktion' : 'Vorschau'}: ${DABEI.length} Einträge, 7 Gürtel`);
 console.log(`Geschrieben: ${geschrieben.length} Dateien`);
 if (warnungen.length) { console.log(`Warnungen (${warnungen.length}):`); warnungen.forEach(w => console.log('  - ' + w)); }

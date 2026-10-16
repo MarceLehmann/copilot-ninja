@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-  KMUpower Dojo: lokales Pruefskript. Aendert keine Texte.
+  PowerPlatformAcademy Dojo: lokales Pruefskript. Aendert keine Texte.
   node scripts/pruefen.mjs              Pruefdaten (data-geprueft, geprueft_am) und Learn-Links auflisten, Daten aelter als 90 Tage markieren
   node scripts/pruefen.mjs --links      zusaetzlich jeden Learn-Link per fetch pruefen (Status, Weiterleitung), braucht Netz
   node scripts/pruefen.mjs --kontrast   Kontrast aller Text-Farbpaare hell und dunkel, schreibt _recherche/konzept/kontrast.md
@@ -48,7 +48,7 @@ if (ARGS.includes('--kontrast')) {
     return `| ${name} | ${wo} | --${v} ${t[v]} auf --${h} ${t[h]} | ${k.toFixed(2)}:1 | ${min}:1 | ${k >= min ? 'ok' : 'ZU TIEF'} |`;
   });
   const alle = [...zeilen(hell, 'hell'), ...zeilen(dunkel, 'dunkel')];
-  const md = `# Kontrastprüfung KMUpower Dojo\n\nErzeugt am ${heute.toISOString().slice(0, 10)} mit \`node scripts/pruefen.mjs --kontrast\` aus templates/css/site.css. Formel nach WCAG 2.2 (relative Leuchtdichte). Text mindestens 4.5:1, Bedienkonturen und grosser Text mindestens 3:1.\n\n| Modus | Wo | Paar | Kontrast | Minimum | Ergebnis |\n|---|---|---|---|---|---|\n${alle.join('\n')}\n\nGürtelfarben tragen keinen Text. Sie stehen immer mit Text daneben und mit einer Kontur in --line-strong (siehe Bedienkontur).\n`;
+  const md = `# Kontrastprüfung PowerPlatformAcademy Dojo\n\nErzeugt am ${heute.toISOString().slice(0, 10)} mit \`node scripts/pruefen.mjs --kontrast\` aus templates/css/site.css. Formel nach WCAG 2.2 (relative Leuchtdichte). Text mindestens 4.5:1, Bedienkonturen und grosser Text mindestens 3:1.\n\n| Modus | Wo | Paar | Kontrast | Minimum | Ergebnis |\n|---|---|---|---|---|---|\n${alle.join('\n')}\n\nGürtelfarben tragen keinen Text. Sie stehen immer mit Text daneben und mit einer Kontur in --line-strong (siehe Bedienkontur).\n`;
   fs.writeFileSync(path.join(ROOT, '_recherche/konzept/kontrast.md'), md);
   const schlecht = alle.filter(z => z.includes('ZU TIEF'));
   console.log(`kontrast.md geschrieben, ${alle.length} Paare, ${schlecht.length} zu tief`);
