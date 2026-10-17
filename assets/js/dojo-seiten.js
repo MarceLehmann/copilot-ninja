@@ -398,6 +398,7 @@
           zeig.addEventListener('click', function () { statisch.hidden = false; var k = statisch.querySelector('h2'); if (k) { k.setAttribute('tabindex', '-1'); k.focus(); } });
         }
         erg.appendChild(pl);
+        if (D.kursZeile) erg.appendChild(D.kursZeile('pruefung'));
         if (!gespeichert) erg.appendChild(el('p', { 'class': 'klein' }, T('Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.', 'Your browser does not store anything. The result only applies on this page.')));
         box.appendChild(erg);
         karteBauen(karte, 'start', n);

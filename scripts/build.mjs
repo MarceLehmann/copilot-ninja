@@ -464,19 +464,31 @@ const MIT_AGENTS = DABEI.some(t => t.guertel >= 4);
 // Kursname laut Academy ab 15.10.2026 (Entscheid Marcel: Disclaimer reicht), URL bleibt copilot-expert. Der Kurs ist deutsch.
 const KURS_NAME = 'Copilot Ninja in 4 Wochen';
 const kursEigen = () => T('Der Kurs hat einen eigenen Lehrplan und folgt nicht den Gürteln dieser Seite.', 'The course has its own curriculum and does not follow the belts of this site.');
+// Kursstatus wie auf der Kursseite der Academy (17.10.2026: «Auf die Warteliste», «Neue Termine folgen in Kürze»). Steuert jede
+// Kurszeile (Technik-Seiten, Vier Wochen, Schwelle, Gürtelprüfung, Mein Dojo). Sobald Termine buchbar sind: 'termine'.
+// Gleiche Regel in powerautomate.ninja (site.config.json, kurs_status).
+const KURS_STATUS = 'warteliste';
+const kursStatusSatz = () => KURS_STATUS === 'warteliste'
+  ? T('Die nächsten Termine stehen noch nicht fest, auf der Kursseite setzt du dich auf die Warteliste.', 'The next dates are not set yet, you can join the waiting list on the course page.')
+  : T('Termine und Anmeldung findest du auf der Kursseite.', 'Dates and registration are on the course page.');
+// Kurszeile der gemeinsamen Dojo-Vorlage (UX-Review 17.10.2026, Q12): gleicher Satzbau wie powerautomate.ninja, Link mit Kursnamen
+function kursZeile(stelle) {
+  const link = `<a href="${esc(KURS_URL(stelle))}" rel="noopener">${T(`Live-Kurs «${KURS_NAME}»`, `live course “${KURS_NAME}”`)}</a>`;
+  return `<p class="kurs-zeile" data-kurs-status="${KURS_STATUS}">${T(`Lieber mit Begleitung weiter? Der ${link} der Power Platform Academy läuft über vier Wochen. `, `Prefer to continue with guidance? The ${link} (in German) at the Power Platform Academy runs over four weeks. `)}${kursStatusSatz()}</p>`;
+}
 function schwelleHtml(ebene = 'h3', extra = '') {
   if (!MIT_AGENTS) return '';
   if (istEN()) return `<aside class="schwelle${extra}" aria-labelledby="schwelle-titel">
 <span class="label">The threshold</span>
 <${ebene} id="schwelle-titel">From here on you build agents.</${ebene}>
 <p>In the Copilot Studio trial you can create an agent and check it in the test chat, but not publish it (<a href="${LEARN_TESTVERSION}" rel="noopener">Microsoft Learn</a>, as of October 13, 2026). All agent techniques are free here, no sign-up.</p>
-<p class="klein">If you prefer to practice with guidance: the Power Platform Academy runs the live course “${KURS_NAME}” (in German), dates open, registering interest is non-binding. ${kursEigen()} <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">To the course page</a></p>
+<p class="klein">If you prefer to practice with guidance: the Power Platform Academy runs the <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">live course “${KURS_NAME}”</a> (in German). ${kursEigen()} ${kursStatusSatz()}</p>
 </aside>`;
   return `<aside class="schwelle${extra}" aria-labelledby="schwelle-titel">
 <span class="label">Die Schwelle</span>
 <${ebene} id="schwelle-titel">Ab hier baust du Agents.</${ebene}>
 <p>In der Testversion von Copilot Studio kannst du einen Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen (<a href="${LEARN_TESTVERSION}" rel="noopener">Microsoft Learn</a>, Stand 13.10.2026). Alle Agent-Techniken stehen hier frei, ohne Anmeldung.</p>
-<p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt den Live-Kurs «${KURS_NAME}», Termine offen, Vormerken unverbindlich. ${kursEigen()} <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">Zur Kursseite</a></p>
+<p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt den <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">Live-Kurs «${KURS_NAME}»</a>. ${kursEigen()} ${kursStatusSatz()}</p>
 </aside>`;
 }
 // Startseite: Guertelpfad als sieben Zeilen (Review 15.10.2026, Kapitel 5): Farbe, Name, Anzahl, ein Beispiel.
@@ -497,7 +509,7 @@ function vierWochenHtml(r, ebene) {
   const sub = ebene === 'h1' ? 'h2' : ebene === 'h2' ? 'h3' : 'h4';
   let fehltWoche = false;
   const wochen = WOCHEN.map(w => {
-    const liste = w.ergebnisse.filter(([id]) => NACH_ID[id]).map(([id, text]) => { const t = NACH_ID[id]; return `<li>${esc(text)} (<a href="${r}techniken/${t.slug}/">${T('Nr.', 'No.')} ${t.nr}</a>)</li>`; });
+    const liste = w.ergebnisse.filter(([id]) => NACH_ID[id]).map(([id, text]) => { const t = NACH_ID[id]; return `<li>${esc(text)} (<a href="${r}techniken/${t.slug}/">${T('Nr.', 'No.')} ${t.nr} ${esc(t.titel)}</a>)</li>`; });
     if (!liste.length) fehltWoche = true;
     return `<li class="woche"><span class="woche__nr" aria-hidden="true">${w.nr}</span>
 <${sub}>${T('Woche', 'Week')} ${w.nr}</${sub}>
@@ -514,6 +526,7 @@ ${liste.length ? `<p>${T('Wenn du die Techniken dieser Woche übst, hast du dana
 ${fehltWoche ? '' : '<p class="pfad-schluss">After four weeks you have your own agent with test questions, safeguard block, credit estimate and operations sheet.</p>'}
 <p class="klein">What you need for it is shown in the access line of every technique.</p>
 <p class="knopf-reihe nicht-drucken"><button type="button" class="knopf" data-wochen-ics data-nur-js>Four weeks into your calendar, starting next Monday</button></p>
+${kursZeile('vier-wochen')}
 </div>`;
   return `<div class="vier-wochen" id="vier-wochen">
 <span class="label">Vier-Wochen-Pfad zum Selbstlernen</span>
@@ -523,6 +536,7 @@ ${fehltWoche ? '' : '<p class="pfad-schluss">After four weeks you have your own 
 ${fehltWoche ? '' : '<p class="pfad-schluss">Nach vier Wochen hast du einen eigenen Agent mit Testfragen, Schutzbaustein, Credit-Schätzung und Betriebsblatt.</p>'}
 <p class="klein">Was du dafür brauchst, zeigt der Zugang auf jeder Technik.</p>
 <p class="knopf-reihe nicht-drucken"><button type="button" class="knopf" data-wochen-ics data-nur-js>Vier Wochen in den Kalender, ab nächstem Montag</button></p>
+${kursZeile('vier-wochen')}
 </div>`;
 }
 // Startseite: Rotation nur ueber Techniken ohne Zusatzlizenz vom weissen bis zum orangen Guertel (Review 15.10.2026, H6).
@@ -662,6 +676,7 @@ function rahmenKontext(rel, seite, extra = {}, absolut = false) {
     cur_techniken: cur('techniken'), cur_pruefung: cur('pruefung'), cur_gratis: cur('gratis'), cur_dojo: cur('dojo'),
     mailto_beitrag: mailtoBeitrag, markenliste: markenText(),
     newsletter_footer: NEWSLETTER_URL('footer'), academy_footer: ACADEMY_URL('footer'), academy_dojo: ACADEMY_DOJO_URL('footer'),
+    kurs_vorlage: `<template data-kurs-vorlage>${kursZeile('vorlage')}</template>`,
     ...extra
   };
 }
@@ -722,8 +737,8 @@ function baueStart() {
   // Startseite wie powerautomate.ninja (16.10.2026): Bilanz als eine Zeile unter Frage 1 des Lizenz-Checks.
   // Der Schnitt (Vorher/Nachher), die vier Momente und der Trainer-Block sind auf /techniken/ bzw. /ueber/ umgezogen.
   const bilanz = TECHNIKEN.length
-    ? T(`      <p class="klein">${ohneZl === TECHNIKEN.length ? 'Alle ' + ohneZl : ohneZl + ' von ' + TECHNIKEN.length} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Diese Techniken zeigen</a></p>`,
-      `      <p class="klein">${ohneZl === TECHNIKEN.length ? 'All ' + ohneZl : ohneZl + ' of ' + TECHNIKEN.length} techniques run without an add-on license if your subscription includes Microsoft Copilot Chat. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Show these techniques</a></p>`)
+    ? T(`      <p class="klein">${ohneZl === TECHNIKEN.length ? 'Alle ' + ohneZl : ohneZl + ' von ' + TECHNIKEN.length} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Alle Techniken ohne Zusatzlizenz zeigen</a></p>`,
+      `      <p class="klein">${ohneZl === TECHNIKEN.length ? 'All ' + ohneZl : ohneZl + ' of ' + TECHNIKEN.length} techniques run without an add-on license if your subscription includes Microsoft Copilot Chat. <a href="techniken/?zugang=ohne-zl&amp;zugang=agent-builder">Show all techniques without an add-on license</a></p>`)
     : T('      <p class="klein">Viele Techniken laufen in Microsoft Copilot Chat. Ob Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist, zeigt der Lizenz-Check.</p>', '      <p class="klein">Many techniques run in Microsoft Copilot Chat. Whether Copilot Chat is included in your subscription without an add-on license is shown by the license check.</p>');
   const auf = [heute, ...TECHNIKEN];
   seite('index.html', {
@@ -788,10 +803,8 @@ function baueTechnik(t, i) {
     </section>
 ` : t.kombo ? `    <p class="klein">${T(`Gehört zur Kombo «${esc(t.kombo)}».`, `Part of the combo “${esc(t.kombo)}”.`)}</p>
 ` : '';
-  // Eine dezente Kurszeile auf jeder Technik-Seite nach «Als geübt markieren» (Review 15.10.2026, H9), kein Banner
-  const kursLink = esc(KURS_URL(t.typ === 'technik' ? 'technik-' + t.nr : 'technik-' + t.id));
-  const kurs = T(`      <p class="kurs-zeile">Lieber mit Begleitung üben? <a href="${kursLink}" rel="noopener">Live-Kurs «${KURS_NAME}» an der Power Platform Academy</a></p>`,
-    `      <p class="kurs-zeile">Prefer to practice with guidance? <a href="${kursLink}" rel="noopener">Live course “${KURS_NAME}” (in German) at the Power Platform Academy</a></p>`);
+  // Eine dezente Kurszeile auf jeder Technik-Seite, seit UX-Review 17.10.2026 (Q12) unter «Nächste Technik», kein Banner
+  const kurs = kursZeile(t.typ === 'technik' ? 'technik-' + t.nr : 'technik-' + t.id);
   const alleQuellen = [{ url: t.quelle_url, titel: t.quelle_titel }, ...(t.weitere_quellen || [])];
   const blaettern = [vor ? `<a href="${r}techniken/${vor.slug}/" rel="prev"><span>${T('Vorherige Technik', 'Previous technique')}</span>${nrLabel(vor)} ${esc(vor.titel)}</a>` : `<a href="${r}techniken/"><span>${T('Zurück', 'Back')}</span>${T('Zur Technik-Wand', 'To the technique wall')}</a>`,
     nach ? `<a href="${r}techniken/${nach.slug}/" rel="next"><span>${T('Nächste Technik', 'Next technique')}</span>${nrLabel(nach)} ${esc(nach.titel)}</a>` : `<a href="${r}techniken/"><span>${T('Geschafft', 'Done')}</span>${T('Zur Technik-Wand', 'To the technique wall')}</a>`].join('\n');

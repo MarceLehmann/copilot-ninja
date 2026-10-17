@@ -284,6 +284,12 @@ a.stempel:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; 
 .schnitt--zeile .schnitt__strich path { stroke-dashoffset: 0; }
 .schnitt--zeile.is-js .schnitt__strich path { stroke-dashoffset: 1; }
 .schnitt--zeile.is-geschnitten .schnitt__strich { opacity: 1; }
+/* Das Vorher-Zitat bleibt sichtbar und wird nur durchgestrichen (UX-Review 17.10.2026 Q3, Audit Nr. 4). Ohne diese Regel blendete
+   .is-geschnitten das Zitat aus, und unter «Vorher» stand eine leere Fläche. */
+.schnitt.schnitt--zeile.is-geschnitten .schnitt__vorher:not(.schnitt__haelfte) { visibility: visible; transition: none; }
+/* Kein Pinselstrich in der Zeilenform: er lag auf dem Handy zwischen den Zeilen und machte das Zitat schwer lesbar.
+   Sichtbar war vorher ohnehin nur ein Punkt am Zitatende (dashoffset blieb auf 1). */
+.schnitt.schnitt--zeile .schnitt__strich { display: none; }
 
 /* Prompt-Teile, Platzhalter */
 .teil { color: inherit; background: color-mix(in srgb, var(--k) 13%, transparent); box-shadow: -3px 0 0 var(--k); border-radius: 2px; padding: 0 .15em; }
@@ -458,6 +464,12 @@ a.chip { text-decoration: none; }
 .krumen ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; margin: 0; padding: 0; }
 .krumen li + li::before { content: "/"; margin-right: .3rem; color: var(--ink-muted); }
 .krumen a { color: var(--ink-muted); }
+/* Klickziele mindestens 24 px (WCAG 2.5.8, UX-Review 17.10.2026 Q13). Padding an Inline-Links vergroessert die Trefferflaeche,
+   ohne den Zeilenfall zu aendern. Gleiche Regeln in powerautomate.ninja. */
+.krumen a { display: inline-flex; align-items: center; min-height: 24px; }
+.karte__titel a, .arrow-list a, .klein a, .kurs-zeile a, .pruefstatus a, .quelle a, p a:not([class]) { padding-block: 3px; }
+.dojo-haken input { width: 24px; height: 24px; }
+.kurs-zeile { max-width: 66ch; margin: 1rem 0 0; font-size: .95rem; color: var(--ink-muted); }
 .metazeile { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; list-style: none; margin: 0; padding: .9rem 0 0; border-top: 1px solid var(--line); }
 .metazeile li { display: inline-flex; align-items: center; gap: .45rem; font-size: var(--text-sm); }
 .metazeile__label { color: var(--ink-muted); }
@@ -494,7 +506,7 @@ a.chip { text-decoration: none; }
 .check { display: grid; gap: 1.5rem; padding: clamp(1.25rem, 1rem + 1.5vw, 2rem); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); }
 .wahlen { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
 .wahl { position: relative; display: flex; gap: .6rem; align-items: flex-start; min-height: 56px; padding: .8rem 1rem; border: 1.5px solid var(--line-strong); border-radius: var(--r-md); background: var(--paper); cursor: pointer; font-weight: 600; line-height: 1.35; }
-.wahl input { width: 1.2rem; height: 1.2rem; margin: .1rem 0 0; flex: none; accent-color: var(--signal); }
+.wahl input { width: 24px; height: 24px; margin: .1rem 0 0; flex: none; accent-color: var(--signal); }
 .wahl:has(input:checked) { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); background: var(--surface); }
 .wahl:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
 .fortschritt { display: grid; gap: .4rem; }

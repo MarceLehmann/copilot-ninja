@@ -22,6 +22,18 @@
     if (text !== undefined) e.textContent = text;
     return e;
   }
+  /* Kurszeile aus der Vorlage im Fuss (Build setzt Kursstatus und Link, UX-Review 17.10.2026 Q12). Rueckfall: Link zur Kursseite */
+  function kursZeile(stelle) {
+    var v = d.querySelector('template[data-kurs-vorlage]');
+    if (v && v.content && v.content.firstElementChild) {
+      var z = v.content.firstElementChild.cloneNode(true);
+      alle('a', z).forEach(function (a) { a.setAttribute('href', a.getAttribute('href').replace('utm_content=vorlage', 'utm_content=' + stelle)); });
+      return z;
+    }
+    var p = el('p', { 'class': 'kurs-zeile' });
+    p.appendChild(el('a', { href: KURS(stelle), rel: 'noopener' }, T('Kursseite «Copilot Ninja in 4 Wochen»', 'Course page “Copilot Ninja in 4 Wochen”')));
+    return p;
+  }
   function ansage(t) { if (CN.ansage) CN.ansage(t); }
   function bewegung() { return CN.bewegung ? CN.bewegung() : h.getAttribute('data-bewegung') !== 'aus'; }
   function iso(dt) { return dt.getFullYear() + '-' + ('0' + (dt.getMonth() + 1)).slice(-2) + '-' + ('0' + dt.getDate()).slice(-2); }
@@ -149,8 +161,8 @@
       box.textContent = '';
       box.appendChild(el(ebene, null, st.alle ? T('Alle Techniken geübt', 'All techniques practiced') : T('Dein nächster Schritt', 'Your next step')));
       if (st.alle) {
-        box.appendChild(el('p', null, T('Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst: Die Power Platform Academy führt den Live-Kurs «Copilot Ninja in 4 Wochen», Termine offen. Der Kurs hat einen eigenen Lehrplan.', 'You have marked every technique in the Dojo as practiced. If you want to introduce agents in your own business with guidance: the Power Platform Academy runs the live course “Copilot Ninja in 4 Wochen” (in German), dates open. The course has its own curriculum.')));
-        var pa = el('p'); pa.appendChild(el('a', { href: KURS('naechster-schritt'), rel: 'noopener' }, T('Zur Kursseite', 'To the course page'))); box.appendChild(pa);
+        box.appendChild(el('p', null, T('Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst, geht es im Live-Kurs weiter. Der Kurs hat einen eigenen Lehrplan.', 'You have marked every technique in the Dojo as practiced. If you want to introduce agents in your own business with guidance, the live course is the next step. The course has its own curriculum.')));
+        box.appendChild(kursZeile('naechster-schritt'));
         return;
       }
       var pk = el('p'); pk.appendChild(el('span', { 'class': 'knoten', 'data-guertel-nr': st.guertel }, NAMEN[st.guertel - 1])); box.appendChild(pk);
@@ -315,7 +327,7 @@
   }
 
   w.CNDojo = {
-    root: ROOT, basis: BASIS, lp: LP, en: EN, T: T, KEY: KEY, NAMEN: NAMEN, FARBEN: FARBEN, KURS: KURS, UTM: UTM,
+    root: ROOT, basis: BASIS, lp: LP, en: EN, T: T, KEY: KEY, NAMEN: NAMEN, FARBEN: FARBEN, KURS: KURS, kursZeile: kursZeile, UTM: UTM,
     lesen: lesen, schreiben: schreiben, normal: normal, liste: liste, json: json, stand: stand, zeigen: zeigen,
     markieren: markieren, heuteIso: heuteIso, isoDatum: iso, datumCH: datumCH, tage: tage, nr2: nr2,
     el: el, alle: alle, ansage: ansage, bewegung: bewegung, technikUrl: technikUrl,

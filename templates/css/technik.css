@@ -29,7 +29,6 @@
 .blaettern a span { font-size: var(--text-sm); color: var(--ink-muted); font-weight: 600; }
 .teilen { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
 /* Eine dezente Kurszeile nach «Als geübt markieren» (Review 15.10.2026, H9) */
-.kurs-zeile { max-width: 66ch; margin: 1rem 0 0; font-size: .95rem; color: var(--ink-muted); }
 .leiste-unten { display: none; }
 @media (max-width: 767px) {
   .leiste-unten { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; gap: .5rem; padding: .55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); box-shadow: 0 -8px 24px -16px rgb(0 0 0 / .4); transition: transform var(--t-base) var(--ease-out); }

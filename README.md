@@ -36,6 +36,14 @@ Deutsch liegt unter `/`, Englisch unter `/en/` mit derselben Ordnerstruktur (`/e
 - Jede Seite trägt `hreflang` (de, en, x-default auf Deutsch) und ein eigenes Canonical, die Sitemap enthält beide Sprachen mit `xhtml:link`.
 - Fortschritt, Profil und Selbsttest gelten sprachübergreifend (gleicher Speicher `cn-dojo-v1`).
 
+## Kurszeile und Kursstatus (UX-Review 17.10.2026, Paket 1)
+
+Eine Kurszeile zur Academy in der gemeinsamen Dojo-Vorlage, gleicher Satzbau in beiden Dojos: Technik-Seiten unter «Nächste Technik», Ende von `/vier-wochen/`, Ergebnis der Gürtelprüfung und «Alle Techniken geübt» in Mein Dojo. Quelle ist `kursZeile()` in `scripts/build.mjs`. Skripte holen die Zeile aus `<template data-kurs-vorlage>` im Fuss (`kursZeile()` in `assets/js/dojo.js`), damit der Status nur an einer Stelle steht.
+
+`KURS_STATUS` in `scripts/build.mjs` folgt der Kursseite der Academy: `warteliste` (Stand 17.10.2026: «Auf die Warteliste», «Neue Termine folgen in Kürze») oder `termine`, sobald Termine buchbar sind. In powerautomate.ninja heisst das Feld `kurs_status` in `site.config.json`. Beide gleich halten.
+
+Klickziele mindestens 24 px (WCAG 2.5.8): Regeln unter `.krumen a` in `templates/css/site.css`. Das Vorher-Zitat unter «Der Schnitt» bleibt nach dem Pinselstrich sichtbar.
+
 ## Aufbau
 
 | Pfad | Inhalt |
