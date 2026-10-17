@@ -467,7 +467,7 @@ a.chip { text-decoration: none; }
 /* Klickziele mindestens 24 px (WCAG 2.5.8, UX-Review 17.10.2026 Q13). Padding an Inline-Links vergroessert die Trefferflaeche,
    ohne den Zeilenfall zu aendern. Gleiche Regeln in powerautomate.ninja. */
 .krumen a { display: inline-flex; align-items: center; min-height: 24px; }
-.karte__titel a, .arrow-list a, .klein a, .kurs-zeile a, .pruefstatus a, .quelle a, p a:not([class]) { padding-block: 3px; }
+.karte__titel a, .arrow-list a, .woche__ergebnis a, .klein a, .kurs-zeile a, .pruefstatus a, .quelle a, p a:not([class]) { padding-block: 3px; }
 .dojo-haken input { width: 24px; height: 24px; }
 .kurs-zeile { max-width: 66ch; margin: 1rem 0 0; font-size: .95rem; color: var(--ink-muted); }
 .metazeile { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; list-style: none; margin: 0; padding: .9rem 0 0; border-top: 1px solid var(--line); }
