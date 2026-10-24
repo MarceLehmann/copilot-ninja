@@ -85,7 +85,7 @@
       box.textContent = '';
       var abo = wert('abo'), schl;
       if (konto === 'k2') schl = 'privat';
-      else if (/^a[1-8]$/.test(abo)) schl = konto === 'k1' ? 'ja' : 'ja-konto';
+      else if (/^a[1-8]$/.test(abo)) schl = konto === 'k1' && wert('schild') !== 's2' ? 'ja' : 'ja-konto'; /* ohne gruenes Schild nur wahrscheinlich (QA 24.10.2026) */
       else if (abo === 'a9') schl = 'anderes';
       else schl = 'weiss';
       var u = d.getElementById('check-saetze').content.querySelector('[data-urteil="' + schl + '"]');
