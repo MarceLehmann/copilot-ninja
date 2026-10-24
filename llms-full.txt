@@ -1,14 +1,18 @@
-# PowerPlatformAcademy Dojo · Copilot
+# Copilot Dojo
 
 > Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Das Dojo gehört zur Power Platform Academy (https://www.powerplatformacademy.online/). Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.
 
 Kurzfakten:
 
-- Website: PowerPlatformAcademy Dojo · Copilot (https://copilot.ninja/), Englisch unter https://copilot.ninja/en/
+- Website: Copilot Dojo (https://copilot.ninja/), Englisch unter https://copilot.ninja/en/
 - Weiteres Dojo: PowerPlatformAcademy Dojo · Power Automate (https://powerautomate.ninja/)
 - Autor: Marcel Lehmann, Microsoft Business Applications MVP, Schweiz (Handelsname KMUpower, https://kmupower.com/)
-- Inhalt: 25 Techniken und 5 Grundformen für Microsoft Copilot Chat, Agent Builder und Copilot Studio, je mit Prompt zum Kopieren, Grenzen und Quellen bei Microsoft Learn
-- Kosten: gratis, ohne Anmeldung, ohne Cookies
+- Inhalt: 5 Grundformen und 25 Techniken für Microsoft Copilot Chat, Agent Builder und Copilot Studio, je mit Prompt zum Kopieren, Grenzen und Quellen bei Microsoft Learn
+- Kosten: gratis, ohne Anmeldung
+- Datenschutz: Keine Cookies, keine Profile. Aufrufe werden ohne Cookies gezählt, gespeichert werden nur Summen ohne Personenbezug (GoatCounter).
+- Privacy: No cookies, no profiles. Visits are counted without cookies; only totals without personal data are stored (GoatCounter).
+- Apps (Word, Excel, PowerPoint und OneNote): Copilot Chat (Basic) ohne Add-on und ohne App-Zugang; Microsoft 365 Copilot (Basic) ohne Add-on mit Standard-Zugang, bei hoher Auslastung eventuell eingeschränkt; Microsoft 365 Copilot (Premium oder Pro) mit Add-on, Priority Access und vollem Umfang inklusive breiter Organisationsdaten (Graph, Work IQ). Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit, die Bezeichnung im Produkt zeigt die Stufe. Copilot Chat in Outlook bezieht in unterstützten Szenarien auch ohne Add-on Mails, Kalender, Meetings und Chats ein. Hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff sind weitere Ausnahmen vom fehlenden breiten Organisationszugriff ohne Add-on.
+- App access (Word, Excel, PowerPoint and OneNote): Copilot Chat (Basic) has no add-on and no app access; Microsoft 365 Copilot (Basic) has standard app access without an add-on, possibly limited at high demand; Microsoft 365 Copilot (Premium or Pro) adds Priority Access and full functionality including broad organizational data through Graph and Work IQ with an add-on. The in-product label shows the tier; availability depends on license and tenant configuration. In supported scenarios Copilot Chat in Outlook includes emails, calendar, meetings and chats without an add-on. Uploaded or pasted content and agents with enabled access are further exceptions to the lack of broad organizational access without an add-on.
 - Kontakt: marcel.lehmann@kmupower.com
 
 # Deutsch
@@ -89,7 +93,7 @@ So nutzt du es:
 Grenzen:
 - Die Fragen sind so gut wie dein Anlass. Wer «weiss ich nicht» sagt, bekommt eine markierte Lücke statt einer Vermutung.
 - Stellt die Antwort mehrere Fragen auf einmal, schreib «Bitte nur eine Frage» und mach weiter.
-- Ohne Zusatzlizenz kennt Microsoft Copilot Chat laut Microsoft deine Mails und Dateien nicht. Fakten bringst du selbst ein.
+- Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 
 Quellen: Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
@@ -204,7 +208,7 @@ Grenzen:
 - Die Antwort sieht laut Microsoft nur Inhalte, auf die du ohnehin Zugriff hast. Was nicht im Postfach oder Chat steht, fehlt auch im Bericht.
 - Mündliche Absprachen ohne Notiz kommen nicht vor.
 - «Kann ich ignorieren» ist ein Vorschlag, kein Entscheid.
-- Ohne Lizenz greift Microsoft Copilot Chat ausserhalb von Outlook nicht automatisch auf Mails und Chats zu.
+- Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 
 Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
@@ -397,7 +401,7 @@ So nutzt du es:
 4. Ohne Lizenz: die wichtigsten Mails oder Protokolle als Datei hochladen und in der Zeile «Quelle» auf «die angehängten Dateien» ändern.
 
 Grenzen:
-- Laut Microsoft nutzt nur das lizenzierte Microsoft Copilot automatisch Mails, Chats, Besprechungen und Dateien über Microsoft Graph. Microsoft Copilot Chat ohne Lizenz tut das nicht.
+- Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on breiten Zugriff auf Organisationsdaten über Graph und Work IQ. Ohne Add-on bleiben Ausnahmen: Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 - Die Antwort sieht laut Microsoft nur Inhalte, auf die du Zugriff hast.
 - Mündliche Absprachen ohne Notiz fehlen im Dossier.
 
@@ -437,7 +441,7 @@ So nutzt du es:
 Grenzen:
 - Beim Datei-Upload gelten Limits. Konkrete Zahlen nennt die geprüfte Microsoft-Seite nicht, darum stehen sie hier nicht.
 - Die Befunde sind Hinweise und keine Revision. Prüfe zwei oder drei Treffer in der Originaldatei, bevor du dich darauf verlässt.
-- Mit Microsoft Copilot Chat (Basic) gibt es laut Microsoft keinen Zugang zu Copilot in Excel. Die Grundform arbeitet deshalb mit einer hochgeladenen Datei im Chat.
+- Copilot Chat (Basic) hat keinen Zugang zu Copilot in Excel. Microsoft 365 Copilot (Basic) bietet ohne Add-on Standard-Zugang, der bei hoher Auslastung eingeschränkt sein kann. Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on vollen Umfang und Priority Access. Die Bezeichnung im Produkt zeigt deine Stufe; Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit. Diese Grundform arbeitet mit einer hochgeladenen Datei im Chat.
 
 Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -563,6 +567,7 @@ Grenzen:
 - Lade nur Texte hoch, die wirklich von dir sind.
 - Benutzerdefinierte Anweisungen gelten laut Microsoft für alle deine Unterhaltungen. Ein Stil für Kundenmails passt nicht in jeden Chat.
 - Die Menünamen stammen aus dem englischen Lernmodul. In deiner Oberfläche können sie anders heissen.
+- Benutzerdefinierte Anweisungen sind Vorschau. Der Admin deines Tenants steuert die Freigabe; die Verfügbarkeit kann abweichen.
 
 Quellen: Microsoft Learn: Personalize Copilot with memory and custom instructions (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3a-personalize-copilot-memory-instructions); Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -645,7 +650,7 @@ Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Cha
 ## Agent für interne Anleitungen: Agent für interne Anleitungen
 
 URL: https://copilot.ninja/techniken/agent-interne-anleitungen/
-Gürtel: Grüner Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität. Stand 15.10.2026.
+Gürtel: Grüner Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
 
 Problem: Wie man Ferien einträgt oder Spesen abrechnet, steht irgendwo auf SharePoint. Gefragt wird trotzdem die Kollegin, die es weiss.
 
@@ -704,24 +709,24 @@ Nutzen: Dein bester Chatverlauf wird ein Werkzeug, dem du nie wieder erklären m
 Text zum Kopieren:
 
 ```
-Ziel: Dieses Gespräch hat gut funktioniert. Schreib daraus Anweisungen für einen Agent, der sich immer so verhält.
+Ziel: Dieses Gespräch hat gut funktioniert. Erstelle daraus drei klar getrennte Abschnitte für einen Agent.
 
 Quelle: Nur dieser Chatverlauf.
 
-Erwartung: Anweisungen in Markdown mit dieser Gliederung:
-# Zweck
-# Ablauf
-Jeder Schritt mit Ziel, Aktion und Übergang zum nächsten Schritt.
-# Ton und Format
-# Grenzen
-Übernimm meine Korrekturen aus dem Verlauf als feste Regeln. Lass Einzelheiten weg, die nur für diesen einen Fall galten, und liste sie danach separat auf. Bleib unter 8000 Zeichen.
+Erwartung:
+# Name
+Höchstens 30 Zeichen.
+# Beschreibung
+Höchstens 1000 Zeichen. Beschreibe Zweck und Aufgaben so, dass Modell und Nutzer den Agent finden.
+# Instructions
+Höchstens 8000 Zeichen, in Markdown mit den Untertiteln Zweck, Ablauf, Ton und Format sowie Grenzen. Jeder Ablaufschritt mit Ziel, Aktion und Übergang zum nächsten Schritt. Übernimm meine Korrekturen als feste Regeln. Lass Einzelheiten weg, die nur für diesen einen Fall galten, und liste sie nach den drei Abschnitten separat auf.
 ```
 
 So nutzt du es:
 1. Am Ende eines gelungenen Chats in Microsoft Copilot Chat den Text einfügen und senden.
 2. Die Liste der Einzelheiten lesen und ergänzen, was doch eine feste Regel ist.
 3. Im Agent Builder einen neuen Agent anlegen und mit «Skip to configure» direkt zur Konfiguration gehen.
-4. Name, Beschreibung und Anweisungen ins Feld «Instructions» einfügen. Das Feld fasst laut Microsoft höchstens 8000 Zeichen.
+4. Im Tab «Configure» den Namen in «Name» (maximal 30 Zeichen), die Beschreibung in «Description» (maximal 1000 Zeichen) und nur die Anweisungen in «Instructions» (maximal 8000 Zeichen) einfügen. «Knowledge» und «Starter Prompts» sind separate Felder.
 5. Den Agent im Tab «Try it» mit drei echten Aufgaben ausprobieren.
 6. Danach die Anweisungen mit Nr. 17 prüfen.
 
@@ -865,7 +870,7 @@ Quellen: Microsoft Learn: Write agent instructions (Copilot Studio) (https://lea
 ## Agent, der Anfragen sortiert und übergibt: Agent, der Anfragen sortiert und übergibt
 
 URL: https://copilot.ninja/techniken/agent-anfragen-sortieren/
-Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität. Stand 15.10.2026.
+Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
 
 Problem: Anfragen kommen per Chat mit halben Angaben. Wer zurückruft, muss zuerst nachfragen, worum es überhaupt geht.
 
@@ -913,7 +918,7 @@ Grenzen:
 - Die Übergabe ist hier nur eine Aussage im Chat. Für eine echte Weiterleitung brauchst du ein Tool oder einen Flow, den diese Vorlage nicht enthält.
 - Wer Personendaten erfasst, klärt vorher Datenschutz und Aufbewahrung. Das ist hier nicht geprüft.
 - Teste mit unklaren und unvollständigen Anfragen, nicht nur mit dem Idealfall.
-- Testversion und Betrieb unterscheiden sich wie bei der Grundform für interne Anleitungen: Prüfen im Testchat ja, Veröffentlichen nur mit Lizenz oder Kapazität.
+- In der Testversion prüfst du im Testchat. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.
 
 Quellen: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
@@ -966,7 +971,7 @@ Quellen: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.micros
 ## Nr. 19 Die Rüstung: Schutzbaustein für jede Agent-Instruktion
 
 URL: https://copilot.ninja/techniken/schutzbaustein-fuer-agents/
-Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität. Stand 15.10.2026.
+Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
 
 Problem: Dein Agent liest Dokumente, Websites und Nachrichten. Steht in einem davon «Ignoriere alle bisherigen Anweisungen», ist nirgends geregelt, wem er folgt.
 
@@ -1003,7 +1008,7 @@ Quellen: Microsoft Learn: Configure high-quality instructions for generative orc
 ## Nr. 20 Die Weggabelung: Agent, der den richtigen Ablauf findet
 
 URL: https://copilot.ninja/techniken/agent-findet-den-ablauf/
-Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität. Stand 15.10.2026.
+Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
 
 Problem: Ob eine Anschaffung über den Einkauf, die Geschäftsleitung oder direkt läuft, steht im Beschaffungsreglement. Gelesen wird es meist erst, wenn etwas schiefging.
 
@@ -1098,7 +1103,7 @@ Grenzen:
 
 Quellen: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
 
-## Nr. 22 Die Tarnkappe: Text anonymisieren, bevor er weitergeht
+## Nr. 22 Die Tarnkappe: Text pseudonymisieren, bevor er weitergeht
 
 URL: https://copilot.ninja/techniken/text-anonymisieren/
 Gürtel: Brauner Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat. Stand 15.10.2026.
@@ -1110,7 +1115,7 @@ Nutzen: Namen, Firmen, Beträge und Nummern werden zu Platzhaltern, und die Zuor
 Prompt zum Kopieren:
 
 ```
-Ziel: Mach den Text unten so, dass niemand Personen, Firmen oder Orte darin erkennt. Der Inhalt soll verständlich bleiben.
+Ziel: Pseudonymisiere Personen, Firmen und Orte im Text unten mit einheitlichen Platzhaltern. Der Inhalt soll verständlich bleiben.
 
 Quelle: Nur der Text unten. Ergänze nichts.
 
@@ -1121,7 +1126,7 @@ Erwartung: Ersetze
 - Beträge durch [BETRAG_1], ausser ich schreibe unten, dass sie bleiben dürfen
 Gleiche Personen und Firmen bekommen immer denselben Platzhalter.
 Gib aus:
-1. Den anonymisierten Text.
+1. Den pseudonymisierten Text.
 2. Getrennt darunter eine Tabelle «Zuordnung» mit Platzhalter und Original. Diese Tabelle behalte ich für mich.
 3. Eine Liste «Prüfen» mit Stellen, die eine Person trotzdem erkennbar machen könnten, zum Beispiel eine seltene Funktion, ein Datum oder ein besonderes Ereignis.
 
@@ -1134,14 +1139,15 @@ Text:
 So nutzt du es:
 1. Den Text einfügen, festlegen, ob Beträge bleiben, und senden.
 2. Die Liste «Prüfen» abarbeiten und die Stellen selbst umschreiben.
-3. Nur den anonymisierten Teil weitergeben, nie die Zuordnung.
+3. Nur den pseudonymisierten Teil weitergeben, nie die Zuordnung.
 4. Kommt eine Antwort zurück, setzt du die Originale selbst wieder ein.
 
 Grenzen:
 - Keine Garantie, dass nichts Erkennbares übrig bleibt. Die Liste «Prüfen» ist ein Hinweis, du liest selbst.
 - Die Zuordnung steht im selben Chat. Laut Microsoft werden Prompts und Antworten unter Enterprise Data Protection protokolliert und aufbewahrt und stehen für Audit und eDiscovery bereit. Teile den Chat deshalb nicht.
 - Den Originaltext nur einfügen, wenn eure internen Regeln das erlauben. Microsoft nennt für Prompts und Antworten bei Anmeldung mit Geschäfts- oder Schulkonto Enterprise Data Protection.
-- Anonymisieren ersetzt keine Abklärung mit der Stelle, die bei euch für Datenschutz zuständig ist.
+- Pseudonymisieren ersetzt keine Abklärung mit der Stelle, die bei euch für Datenschutz zuständig ist.
+- Streng genommen pseudonymisierst du: Mit der Zuordnung lässt sich jede Person wieder bestimmen. Gib den Text nicht frei, nur weil Namen ersetzt sind.
 
 Quellen: Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -1185,6 +1191,7 @@ Grenzen:
 - Agent Flows rechnet Microsoft separat ab: 13 Copilot Credits pro 100 Flow-Aktionen. Power Automate Cloud Flows laufen laut Microsoft über die Power-Automate-Lizenz und nicht über Copilot Credits.
 - Microsoft empfiehlt beim Agent Usage Estimator 10 bis 20 Prozent Reserve auf die Schätzung.
 - Die Schätzung ersetzt nicht den Blick auf den tatsächlichen Verbrauch.
+- Zusatzkosten, zum Beispiel für Datenzugriff, Lizenzen oder andere Dienste, sind im Rechner nicht enthalten.
 
 Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Standard harness licensing (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
 
@@ -1237,7 +1244,7 @@ Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https:/
 ## Nr. 25 Die Nachtwache: Monatlicher Agent-Check
 
 URL: https://copilot.ninja/techniken/monatlicher-agent-check/
-Gürtel: Schwarzer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität. Stand 15.10.2026.
+Gürtel: Schwarzer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
 
 Problem: Am Agent hat seit Wochen niemand etwas geändert. Trotzdem antwortet er plötzlich anders, weil sich ein Dokument in seiner Wissensquelle geändert hat.
 
@@ -1365,7 +1372,7 @@ How to use it:
 Limits:
 - The questions are only as good as your occasion. If you say “I don't know”, you get a marked gap instead of a guess.
 - If the answer asks several questions at once, write “Only one question, please” and continue.
-- Without an add-on license, Microsoft Copilot Chat does not know your emails and files, according to Microsoft. You bring in the facts yourself.
+- Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 
 Sources: Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
@@ -1480,7 +1487,7 @@ Limits:
 - According to Microsoft, the answer only sees content you already have access to. What is not in your inbox or chats is also missing from the report.
 - Verbal agreements without a note do not appear.
 - “Can ignore” is a suggestion, not a decision.
-- Without a license, Microsoft Copilot Chat does not automatically access emails and chats outside of Outlook.
+- Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 
 Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
@@ -1673,7 +1680,7 @@ How to use it:
 4. Without a license: upload the most important emails or minutes as files and change the “Source” line to “the attached files”.
 
 Limits:
-- According to Microsoft, only licensed Microsoft Copilot automatically uses emails, chats, meetings and files through Microsoft Graph. Microsoft Copilot Chat without a license does not.
+- Microsoft 365 Copilot (Premium or Pro) provides broad access to organizational data through Graph and Work IQ with an add-on. Without an add-on, exceptions include Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 - According to Microsoft, the answer only sees content you have access to.
 - Verbal agreements without a note are missing from the dossier.
 
@@ -1713,7 +1720,7 @@ How to use it:
 Limits:
 - File uploads have limits. The Microsoft page we checked gives no specific numbers, so none are listed here.
 - The findings are pointers, not an audit. Verify two or three hits in the original file before you rely on them.
-- According to Microsoft, Microsoft Copilot Chat (Basic) does not include access to Copilot in Excel. That is why the basic form works with a file uploaded to the chat.
+- Copilot Chat (Basic) has no access to Copilot in Excel. Microsoft 365 Copilot (Basic) provides standard app access without an add-on, possibly limited at high demand. Microsoft 365 Copilot (Premium or Pro) provides full functionality and Priority Access with an add-on. The in-product label shows your tier; license and tenant configuration determine availability. This basic form works with a file uploaded to the chat.
 
 Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -1839,6 +1846,7 @@ Limits:
 - Only upload texts that are really yours.
 - According to Microsoft, custom instructions apply to all your conversations. A style for customer emails does not fit every chat.
 - The menu names come from the English learning module. In your interface they may be named differently.
+- Custom instructions are in preview. Your tenant admin controls access; availability can vary.
 
 Sources: Microsoft Learn: Personalize Copilot with memory and custom instructions (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3a-personalize-copilot-memory-instructions); Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -1921,7 +1929,7 @@ Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Cha
 ## Agent for internal guides: Agent for internal guides
 
 URL: https://copilot.ninja/en/techniken/agent-interne-anleitungen/
-Belt: Green belt. Access: Copilot Studio: build and check in the trial, publish with a license or capacity. As of October 15, 2026.
+Belt: Green belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
 
 Problem: How to enter vacation days or submit expenses is somewhere on SharePoint. People still ask the colleague who knows.
 
@@ -1980,24 +1988,24 @@ Benefit: Your best chat becomes a tool you never have to explain again how you w
 Text to copy:
 
 ```
-Goal: This conversation worked well. Turn it into instructions for an agent that always behaves this way.
+Goal: This conversation worked well. Turn it into three clearly separated sections for an agent.
 
 Source: Only this chat history.
 
-Expectations: Instructions in Markdown with this outline:
-# Purpose
-# Process
-Each step with goal, action and transition to the next step.
-# Tone and format
-# Limits
-Turn my corrections from the conversation into fixed rules. Leave out details that only applied to this one case, and list them separately afterwards. Stay under 8000 characters.
+Expectations:
+# Name
+At most 30 characters.
+# Description
+At most 1000 characters. Describe its purpose and tasks to help the model and users find the agent.
+# Instructions
+At most 8000 characters, in Markdown with the subheadings Purpose, Process, Tone and format, and Limits. Each process step has a goal, action and transition to the next step. Turn my corrections into fixed rules. Leave out details that only applied to this case and list them separately after the three sections.
 ```
 
 How to use it:
 1. At the end of a successful chat in Microsoft Copilot Chat, paste the text and send it.
 2. Read the list of details and add anything that is a fixed rule after all.
 3. In Agent Builder, create a new agent and use “Skip to configure” to go straight to the configuration.
-4. Paste the name, description and instructions into the “Instructions” field. According to Microsoft, the field holds at most 8000 characters.
+4. In the “Configure” tab, paste the name into “Name” (at most 30 characters), the description into “Description” (at most 1000 characters) and only the instructions into “Instructions” (at most 8000 characters). “Knowledge” and “Starter Prompts” are separate fields.
 5. Try the agent in the “Try it” tab with three real tasks.
 6. Then check the instructions with No. 17.
 
@@ -2141,7 +2149,7 @@ Sources: Microsoft Learn: Write agent instructions (Copilot Studio) (https://lea
 ## Agent that sorts and hands over requests: Agent that sorts and hands over requests
 
 URL: https://copilot.ninja/en/techniken/agent-anfragen-sortieren/
-Belt: Blue belt. Access: Copilot Studio: build and check in the trial, publish with a license or capacity. As of October 15, 2026.
+Belt: Blue belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
 
 Problem: Requests come in through chat with half the details missing. Whoever calls back first has to ask what it is actually about.
 
@@ -2189,7 +2197,7 @@ Limits:
 - Here the handover is only a statement in the chat. For real forwarding you need a tool or a flow, which this template does not include.
 - If you collect personal data, clarify data protection and retention first. That has not been checked here.
 - Check with unclear and incomplete requests, not only the ideal case.
-- Trial and production differ just as with the basic form for internal guides: checking in the test chat yes, publishing only with a license or capacity.
+- In the trial, check in the test chat. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.
 
 Sources: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
@@ -2242,7 +2250,7 @@ Sources: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.micros
 ## No. 19 The Armor: Safeguard block for every agent instruction
 
 URL: https://copilot.ninja/en/techniken/schutzbaustein-fuer-agents/
-Belt: Blue belt. Access: Copilot Studio: build and check in the trial, publish with a license or capacity. As of October 15, 2026.
+Belt: Blue belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
 
 Problem: Your agent reads documents, websites and messages. If one of them says “Ignore all previous instructions”, nothing defines whom it follows.
 
@@ -2279,7 +2287,7 @@ Sources: Microsoft Learn: Configure high-quality instructions for generative orc
 ## No. 20 The Fork in the Road: Agent that finds the right process
 
 URL: https://copilot.ninja/en/techniken/agent-findet-den-ablauf/
-Belt: Blue belt. Access: Copilot Studio: build and check in the trial, publish with a license or capacity. As of October 15, 2026.
+Belt: Blue belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
 
 Problem: Whether a purchase goes through procurement, management or directly is written in the procurement policy. Usually people only read it after something went wrong.
 
@@ -2374,7 +2382,7 @@ Limits:
 
 Sources: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
 
-## No. 22 The Invisibility Cloak: Anonymize text before it moves on
+## No. 22 The Invisibility Cloak: Pseudonymise text before it goes anywhere
 
 URL: https://copilot.ninja/en/techniken/text-anonymisieren/
 Belt: Brown belt. Access: No add-on license in Microsoft Copilot Chat. As of October 15, 2026.
@@ -2386,7 +2394,7 @@ Benefit: Names, companies, amounts and numbers become placeholders, and you get 
 Prompt to copy:
 
 ```
-Goal: Rewrite the text below so that nobody can recognize people, companies or places in it. The content should stay understandable.
+Goal: Pseudonymise people, companies and places in the text below with consistent placeholders. The content should stay understandable.
 
 Source: Only the text below. Do not add anything.
 
@@ -2397,7 +2405,7 @@ Expectations: Replace
 - amounts with [AMOUNT_1], unless I write below that they may stay
 The same people and companies always get the same placeholder.
 Output:
-1. The anonymized text.
+1. The pseudonymised text.
 2. Separately below it, a table “Mapping” with placeholder and original. I keep this table to myself.
 3. A list “Check” with passages that could still make a person recognizable, for example an unusual job title, a date or a special event.
 
@@ -2410,14 +2418,15 @@ Text:
 How to use it:
 1. Paste the text, decide whether amounts stay, and send.
 2. Work through the “Check” list and rewrite those passages yourself.
-3. Only pass on the anonymized part, never the mapping.
+3. Only pass on the pseudonymised part, never the mapping.
 4. When an answer comes back, you put the originals back in yourself.
 
 Limits:
 - There is no certainty that nothing recognizable remains. The “Check” list is a hint, you read it yourself.
 - The mapping is in the same chat. According to Microsoft, prompts and responses under Enterprise Data Protection are logged and retained and are available for audit and eDiscovery. So do not share the chat.
 - Only paste the original text if your internal rules allow it. Microsoft states Enterprise Data Protection for prompts and responses when you sign in with a work or school account.
-- Anonymizing does not replace checking with the person responsible for data protection in your organization.
+- Pseudonymising does not replace checking with the person responsible for data protection in your organization.
+- Strictly speaking, you are pseudonymising: the mapping lets each person be identified again. Do not release the text just because names have been replaced.
 
 Sources: Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -2461,6 +2470,7 @@ Limits:
 - Microsoft bills agent flows separately: 13 Copilot Credits per 100 flow actions. According to Microsoft, Power Automate cloud flows run on the Power Automate license and not on Copilot Credits.
 - For the Agent Usage Estimator, Microsoft recommends a reserve of 10 to 20 percent on the estimate.
 - The estimate does not replace looking at the actual consumption.
+- Additional costs, for example data access, licenses or other services, are not included in the calculator.
 
 Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Standard harness licensing (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
 
@@ -2513,7 +2523,7 @@ Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https:/
 ## No. 25 The Night Watch: Monthly agent check
 
 URL: https://copilot.ninja/en/techniken/monatlicher-agent-check/
-Belt: Black belt. Access: Copilot Studio: build and check in the trial, publish with a license or capacity. As of October 15, 2026.
+Belt: Black belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
 
 Problem: Nobody has changed anything on the agent for weeks. Still, it suddenly answers differently because a document in its knowledge source has changed.
 

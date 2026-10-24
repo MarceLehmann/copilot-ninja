@@ -27,7 +27,7 @@ const istEN = () => L === 'en';
 const LP = () => (L === 'en' ? 'en/' : '');
 const KURZ_BASIS = BASE_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
 const KONTAKT = 'marcel.lehmann@kmupower.com';
-const RECHT_STAND = '2026-10-16';
+const RECHT_STAND = '2026-10-24';
 // Produktnamen wie Microsoft Learn sie am 13.10.2026 schreibt.
 const PRODUKTNAMEN = {
   'copilot-chat': 'Microsoft Copilot Chat',
@@ -36,7 +36,7 @@ const PRODUKTNAMEN = {
   'copilot-studio': 'Copilot Studio',
   'power-automate': 'Power Automate'
 };
-// Marken in der Fusszeile (Absatz 2). Die Grundliste ist der freigegebene Bestand, ergaenzt wird, was auf der Seite vorkommt.
+// Marken im gemeinsamen Microsoft-Hinweis der Fusszeile. Die Grundliste ist der freigegebene Bestand, ergaenzt wird, was auf der Seite vorkommt.
 const MARKEN_BASIS = ['Bing', 'Entra', 'Excel', 'Microsoft 365', 'Microsoft Copilot', 'Microsoft Copilot Chat', 'Microsoft Graph', 'Microsoft Learn', 'Microsoft Teams', 'OneNote', 'Outlook', 'PowerPoint', 'SharePoint', 'Word', 'Work IQ'];
 const MARKEN_KANDIDATEN = ['Agent Builder', 'Azure', 'Dataverse', 'Microsoft Purview', 'Power BI', 'Power Pages', 'Microsoft Dataverse', 'Microsoft Edge', 'Windows'];
 const QUELLE_AUSNAHMEN = ['https://www.powerplatformacademy.online/'];
@@ -48,7 +48,7 @@ const ACADEMY_URL = (stelle) => `https://www.powerplatformacademy.online/?${UTM(
 const ACADEMY_DOJO_URL = (stelle) => `https://www.powerplatformacademy.online/?utm_source=copilot.ninja&utm_medium=dojo&utm_campaign=dojo&utm_content=${stelle}`;
 const SITE_NAME = 'PowerPlatformAcademy Dojo';
 const SITE_ZUSATZ = 'Copilot';
-const SITE_VOLL = `${SITE_NAME} · ${SITE_ZUSATZ}`;
+const SITE_VOLL = 'Copilot Dojo';
 const LEARN_TESTVERSION = 'https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions';
 const LEARN_PROMPTS = 'https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/';
 const GENERATOR = '<meta name="generator" content="PowerPlatformAcademy Dojo build">';
@@ -106,13 +106,13 @@ const WOCHEN_TEXT = {
     { nr: 1, guertel: [1, 2], ergebnisse: [['t01', 'die Fragen, die du vor einem wichtigen Text selbst beantworten musst'], ['t05', 'die Einwände deines Empfängers, solange du sie noch beheben kannst'], ['t06', 'eine Liste der Abweichungen zwischen Entwurf und Quelle'], ['t07', 'die Gründe, an denen dein Projekt scheitern könnte']] },
     { nr: 2, guertel: [3], ergebnisse: [['t09', 'einen Offertenvergleich mit dem Kleingedruckten in einer Tabelle'], ['t10', 'eine Fristenliste für deine Kalendereinträge'], ['t11', 'deinen Schreibstil-Steckbrief'], ['t13', 'ein Quiz mit Fundstellen zu einem Reglement']] },
     { nr: 3, guertel: [4, 5], ergebnisse: [['t14', 'einen eigenen Agent aus deinem besten Chat'], ['t17', 'eine Prüftabelle zu seinen Anweisungen'], ['t18', '20 Testfragen mit der Liste «nicht geregelt»'], ['t19', 'einen Schutzbaustein für jede Instruktion']] },
-    { nr: 4, guertel: [6, 7], ergebnisse: [['t22', 'eine Vorlage, mit der du echte Fälle anonymisiert weitergibst'], ['t23', 'eine Schätzung, in welcher Grössenordnung dein Agent Copilot Credits verbraucht'], ['t24', 'ein Betriebsblatt mit Abschaltkriterien und verantwortlicher Person'], ['t25', 'einen Ablauf für den monatlichen Check']] }
+    { nr: 4, guertel: [6, 7], ergebnisse: [['t22', 'eine Vorlage, mit der du echte Fälle pseudonymisiert weitergibst'], ['t23', 'eine Schätzung, in welcher Grössenordnung dein Agent Copilot Credits verbraucht'], ['t24', 'ein Betriebsblatt mit Abschaltkriterien und verantwortlicher Person'], ['t25', 'einen Ablauf für den monatlichen Check']] }
   ],
   en: [
     { nr: 1, guertel: [1, 2], ergebnisse: [['t01', 'the questions you have to answer yourself before an important text'], ['t05', 'your recipient’s objections, while you can still fix them'], ['t06', 'a list of differences between draft and source'], ['t07', 'the reasons your project could fail']] },
     { nr: 2, guertel: [3], ergebnisse: [['t09', 'a comparison of quotes with the fine print in one table'], ['t10', 'a list of deadlines for your calendar entries'], ['t11', 'your writing style profile'], ['t13', 'a quiz on a policy, with references']] },
     { nr: 3, guertel: [4, 5], ergebnisse: [['t14', 'your own agent built from your best chat'], ['t17', 'a review table for its instructions'], ['t18', '20 test questions with the list “not covered”'], ['t19', 'a safeguard block for every instruction']] },
-    { nr: 4, guertel: [6, 7], ergebnisse: [['t22', 'a template to pass on real cases anonymized'], ['t23', 'an estimate of the order of magnitude of Copilot Credits your agent uses'], ['t24', 'an operations sheet with shutdown criteria and a responsible person'], ['t25', 'a routine for the monthly check']] }
+    { nr: 4, guertel: [6, 7], ergebnisse: [['t22', 'a template to pass on real cases pseudonymised'], ['t23', 'an estimate of the order of magnitude of Copilot Credits your agent uses'], ['t24', 'an operations sheet with shutdown criteria and a responsible person'], ['t25', 'a routine for the monthly check']] }
   ]
 };
 const MOMENTE_TEXT = {
@@ -346,7 +346,7 @@ function setzeSprache(l) {
   GRUNDFORMEN = sortiert.filter(t => t.typ === 'grundform');
   NACH_ID = Object.fromEntries(DABEI.map(t => [t.id, t]));
   ALLE_NACH_ID = Object.fromEntries(ALLE.map(t => [t.id, t]));
-  ANZAHL = MODUS === 'produktion' ? TECHNIKEN.length : 25;
+  ANZAHL = TECHNIKEN.length;
   STAND = DABEI.map(t => t.geprueft_am).filter(istIso).sort().pop() || daten.stand || DATUM;
   alleNeu = DABEI.length && DABEI.filter(t => t.datum_publiziert >= neuGrenze).length > DABEI.length / 2;
   mailtoBeitrag = l === 'en'
@@ -481,13 +481,13 @@ function schwelleHtml(ebene = 'h3', extra = '') {
   if (istEN()) return `<aside class="schwelle${extra}" aria-labelledby="schwelle-titel">
 <span class="label">The threshold</span>
 <${ebene} id="schwelle-titel">From here on you build agents.</${ebene}>
-<p>In the Copilot Studio trial you can create an agent and check it in the test chat, but not publish it (<a href="${LEARN_TESTVERSION}" rel="noopener">Microsoft Learn</a>, as of October 13, 2026). All agent techniques are free here, no sign-up.</p>
+<p>In the Copilot Studio trial you can create an agent and check it in the test chat, but not publish it. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission. (<a href="${LEARN_TESTVERSION}" rel="noopener">Microsoft Learn</a>, as of October 13, 2026). All agent techniques are free here, no sign-up.</p>
 <p class="klein">If you prefer to practice with guidance: the Power Platform Academy runs the <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">live course “${KURS_NAME}”</a> (in German). ${kursEigen()} ${kursStatusSatz()}</p>
 </aside>`;
   return `<aside class="schwelle${extra}" aria-labelledby="schwelle-titel">
 <span class="label">Die Schwelle</span>
 <${ebene} id="schwelle-titel">Ab hier baust du Agents.</${ebene}>
-<p>In der Testversion von Copilot Studio kannst du einen Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen (<a href="${LEARN_TESTVERSION}" rel="noopener">Microsoft Learn</a>, Stand 13.10.2026). Alle Agent-Techniken stehen hier frei, ohne Anmeldung.</p>
+<p>In der Testversion von Copilot Studio kannst du einen Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung. (<a href="${LEARN_TESTVERSION}" rel="noopener">Microsoft Learn</a>, Stand 13.10.2026). Alle Agent-Techniken stehen hier frei, ohne Anmeldung.</p>
 <p class="klein">Wer lieber mit Begleitung übt: Die Power Platform Academy führt den <a href="${esc(KURS_URL('schwelle'))}" rel="noopener">Live-Kurs «${KURS_NAME}»</a>. ${kursEigen()} ${kursStatusSatz()}</p>
 </aside>`;
 }
@@ -521,7 +521,7 @@ ${liste.length ? `<p>${T('Wenn du die Techniken dieser Woche übst, hast du dana
   if (istEN()) return `<div class="vier-wochen" id="vier-wochen">
 <span class="label">Four-week path for self-study</span>
 <${ebene} id="h-vier-wochen"${ebene === 'h3' ? ' class="h2-gross"' : ''}>Through all belts in four weeks</${ebene}>
-<p class="lead">A free plan, no sign-up and no course. One or two belts each week.</p>
+<p class="lead">A free plan for ${GRUNDFORMEN.length} basic forms and ${ANZAHL} techniques. One or two belts each week, no sign-up.</p>
 <ol class="wochen">${wochen}</ol>
 ${fehltWoche ? '' : '<p class="pfad-schluss">After four weeks you have your own agent with test questions, safeguard block, credit estimate and operations sheet.</p>'}
 <p class="klein">What you need for it is shown in the access line of every technique.</p>
@@ -531,7 +531,7 @@ ${kursZeile('vier-wochen')}
   return `<div class="vier-wochen" id="vier-wochen">
 <span class="label">Vier-Wochen-Pfad zum Selbstlernen</span>
 <${ebene} id="h-vier-wochen"${ebene === 'h3' ? ' class="h2-gross"' : ''}>In vier Wochen durch alle Gürtel</${ebene}>
-<p class="lead">Ein freier Plan, ohne Anmeldung und ohne Kurs. Jede Woche ein oder zwei Gürtel.</p>
+<p class="lead">Ein freier Plan für ${GRUNDFORMEN.length} Grundformen und ${ANZAHL} Techniken. Jede Woche ein oder zwei Gürtel, ohne Anmeldung.</p>
 <ol class="wochen">${wochen}</ol>
 ${fehltWoche ? '' : '<p class="pfad-schluss">Nach vier Wochen hast du einen eigenen Agent mit Testfragen, Schutzbaustein, Credit-Schätzung und Betriebsblatt.</p>'}
 <p class="klein">Was du dafür brauchst, zeigt der Zugang auf jeder Technik.</p>
@@ -567,8 +567,8 @@ function heuteKompaktHtml(t) {
   if (!t) return `<p>${NOCH_NICHT}</p>`;
   return `<article class="tdk" data-heute-kompakt data-technik="${t.id}" data-guertel-nr="${t.guertel}">
 <div class="tdk__inhalt">
-<ul class="metazeile"><li>${knoten(t.guertel, gName(t.guertel))}</li><li>${zugangBadge(t, '', true)}</li><li class="tk__nr">${T('Nr.', 'No.')} <span class="tdk__nr">${pad2(t.nr)}</span></li></ul>
 <h3 class="tdk__titel"><a href="techniken/${t.slug}/">${esc(t.titel)}</a><small>${esc(t.klartitel)}</small></h3>
+<ul class="metazeile"><li>${knoten(t.guertel, gName(t.guertel))}</li><li>${zugangBadge(t, '', true)}</li><li class="tk__nr">${T('Nr.', 'No.')} <span class="tdk__nr">${pad2(t.nr)}</span></li></ul>
 <p class="tdk__problem">${esc(t.problem)}</p>
 <p><a class="knopf knopf--primaer knopf--klein tdk__knopf" href="techniken/${t.slug}/">${T('Technik öffnen', 'Open technique')}</a></p>
 </div>
@@ -743,8 +743,8 @@ function baueStart() {
   const auf = [heute, ...TECHNIKEN];
   seite('index.html', {
     seite: 'start', template: 'start.html',
-    titel: T(`${SITE_VOLL}: Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio`, `${SITE_VOLL}: Ninja techniques for Microsoft Copilot Chat and Copilot Studio`),
-    beschreibung: T(`Welcher Copilot-Gürtel bist du? Gürtelprüfung, Lizenz-Check und ${ANZAHL} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, jede mit Quelle bei Microsoft Learn.`, `Which Copilot belt are you? Belt exam, license check and ${ANZAHL} ninja techniques for Microsoft Copilot Chat and Copilot Studio, each with a source on Microsoft Learn.`),
+    titel: T('Copilot Chat und Studio: Techniken | Copilot Dojo', 'Copilot Chat and Studio: Techniques | Copilot Dojo'),
+    beschreibung: T(`Welcher Copilot-Gürtel bist du? ${GRUNDFORMEN.length} Grundformen und ${ANZAHL} Techniken für Copilot Chat und Studio, mit Quellen. Dazu Gürtelprüfung und Lizenz-Check.`, `Which Copilot belt are you? ${GRUNDFORMEN.length} basic forms and ${ANZAHL} techniques for Copilot Chat and Studio, with sources. Plus belt exam and license check.`),
     ogTitel: T('PowerPlatformAcademy Dojo: Übung schlägt Hype.', 'PowerPlatformAcademy Dojo: Practice beats hype.'),
     canonical: BASE_L, banner: ohneFreigabe(auf.filter(Boolean)),
     jsonld: [ldWebsite(), LD_ORG],
@@ -763,10 +763,10 @@ function baueWand() {
   const krumen = ldKrumen([[T('Start', 'Home'), BASE_L], [T('Techniken', 'Techniques'), `${BASE_L}techniken/`]]);
   seite('techniken/index.html', {
     seite: 'wand', template: 'wand.html',
-    titel: T('Prompts für Microsoft Copilot Chat und Copilot Studio mit Quelle | PowerPlatformAcademy Dojo · Copilot', 'Prompts for Microsoft Copilot Chat and Copilot Studio with sources | PowerPlatformAcademy Dojo · Copilot'),
-    beschreibung: T(`${ANZAHL} Ninja-Techniken und ${GRUNDFORMEN.length || 5} Grundformen für Microsoft Copilot Chat und Copilot Studio, nach Gürtel geordnet. Jede mit Quelle bei Microsoft Learn und Prüfdatum.`, `${ANZAHL} ninja techniques and ${GRUNDFORMEN.length || 5} basic forms for Microsoft Copilot Chat and Copilot Studio, ordered by belt. Each with a source on Microsoft Learn and a review date.`),
+    titel: T('Copilot Chat und Studio: alle Techniken | Copilot Dojo', 'Copilot Chat and Studio: all techniques | Copilot Dojo'),
+    beschreibung: T(`${GRUNDFORMEN.length} Grundformen und ${ANZAHL} Techniken für Copilot Chat und Studio, nach Gürtel geordnet. Mit Quellen und Prüfdatum.`, `${GRUNDFORMEN.length} basic forms and ${ANZAHL} techniques for Copilot Chat and Studio, ordered by belt. With sources and review dates.`),
     canonical: `${BASE_L}techniken/`, banner: ohneFreigabe(DABEI),
-    jsonld: [ldWebsite(), LD_ORG, { '@type': 'CollectionPage', '@id': `${BASE_L}techniken/#seite`, name: T(`${ANZAHL} Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio`, `${ANZAHL} ninja techniques for Microsoft Copilot Chat and Copilot Studio`), url: `${BASE_L}techniken/`, inLanguage: HTML_LANG(), isPartOf: { '@id': `${BASE_L}#website` }, mainEntity: { '@type': 'ItemList', itemListElement: sortiert.map((t, i) => ({ '@type': 'ListItem', position: i + 1, url: urlTechnik(t), name: `${t.titel}: ${t.klartitel}` })) } }, krumen],
+    jsonld: [ldWebsite(), LD_ORG, { '@type': 'CollectionPage', '@id': `${BASE_L}techniken/#seite`, name: T(`${GRUNDFORMEN.length} Grundformen und ${ANZAHL} Techniken für Copilot Chat und Studio`, `${GRUNDFORMEN.length} basic forms and ${ANZAHL} techniques for Copilot Chat and Studio`), url: `${BASE_L}techniken/`, inLanguage: HTML_LANG(), isPartOf: { '@id': `${BASE_L}#website` }, mainEntity: { '@type': 'ItemList', itemListElement: sortiert.map((t, i) => ({ '@type': 'ListItem', position: i + 1, url: urlTechnik(t), name: `${t.titel}: ${t.klartitel}` })) } }, krumen],
     daten: {
       anzahl: ANZAHL, anzahl_grundformen: (GRUNDFORMEN.length || 5) === 1 ? T('eine Grundform', 'one basic form') : `${GRUNDFORMEN.length || 5} ${T('Grundformen', 'basic forms')}`, stand_ch: datumCH(STAND), kurz_basis: KURZ_BASIS + (istEN() ? '/en' : ''),
       filter: filterHtml(), abschnitte: wandAbschnitte(r), tusch_sitzen: tusch('sitzen'),
@@ -775,18 +775,25 @@ function baueWand() {
     }
   });
 }
+function technikTitel(t) {
+  const kurz = {
+    de: { t05: 'Den Text aus Empfängersicht prüfen', t10: 'Fristen und Verlängerungsfallen finden' },
+    en: { t05: 'Check text from the recipient’s view' }
+  };
+  return `${kurz[L][t.id] || t.klartitel} | Copilot Dojo`;
+}
+
 function baueTechnik(t, i) {
   const r = '../../';
   const ra = r + (istEN() ? '../' : '');
   const a = ART[t.art] || ART.pinselstrich;
   const g = GUERTEL[t.guertel - 1];
   const produkt = PRODUKTNAMEN[(t.werkzeug || [])[0]] || 'Microsoft Copilot Chat';
-  let titel = T(`${t.klartitel}: ${a.wort} mit Quelle | PowerPlatformAcademy Dojo · Copilot`, `${t.klartitel}: ${a.wort} with source | PowerPlatformAcademy Dojo · Copilot`);
-  if (titel.length > 65) titel = `${t.klartitel} | PowerPlatformAcademy Dojo · Copilot`;
+  const titel = technikTitel(t);
   const satz = T(`${a.wort} für ${produkt} zum Kopieren, mit Quelle bei Microsoft Learn und Prüfdatum.`, `${a.wort} for ${produkt} to copy, with a source on Microsoft Learn and a review date.`);
   let beschreibung = `${t.klartitel}. ${satz}${t.moment ? ' ' + t.moment.replace(/[.!?]?$/, '.') : ''}`;
   if (beschreibung.length > 160) beschreibung = `${t.klartitel}. ${satz}`;
-  if (beschreibung.length > 160) warnung(`${L}:${t.id}: Meta-Description über 160 Zeichen`);
+  if (beschreibung.length > 165) beschreibung = `${t.klartitel}. ${T('Mit Prompt, Anleitung, Grenzen und Quelle bei Microsoft Learn.', 'With prompt, guide, limits and a Microsoft Learn source.')}`;
   const vor = sortiert[i - 1], nach = sortiert[i + 1];
   // Karten je Sprache: assets/img/karten/<slug>.png (deutsch) und assets/img/karten/en/<slug>.png
   const kartenBild = `assets/img/karten/${LP()}${t.slug}.png`;
@@ -811,7 +818,7 @@ function baueTechnik(t, i) {
   const url = urlTechnik(t);
   seite(`techniken/${t.slug}/index.html`, {
     seite: 'technik', template: 'technik.html', titel, beschreibung,
-    ogTitel: `${t.titel}: ${t.klartitel}`, ogBeschreibung: t.nutzen || beschreibung, ogTyp: 'article',
+    ogTitel: `${t.titel}: ${t.klartitel}`, ogBeschreibung: t.nutzen && t.nutzen.length <= 165 ? t.nutzen : beschreibung, ogTyp: 'article',
     ogBild: bildDa ? `${BASE_URL}${kartenBild}` : null, ogAlt: `${t.typ === 'technik' ? T('Technik ', 'Technique ') + pad2(t.nr) : T('Grundform', 'Basic form')}: ${t.titel}`,
     canonical: url, banner: VORSCHAU && !istFrei(t),
     jsExtra: t.rechner ? ['assets/js/kompass.js'] : null,
@@ -855,7 +862,7 @@ function baueTechnik(t, i) {
 function baueVierWochen() {
   seite('vier-wochen/index.html', {
     seite: 'wochen', template: 'vier-wochen.html',
-    titel: T('In vier Wochen durch alle Gürtel | PowerPlatformAcademy Dojo · Copilot', 'Through all belts in four weeks | PowerPlatformAcademy Dojo · Copilot'),
+    titel: T('In vier Wochen durch alle Gürtel | Copilot Dojo', 'Through all belts in four weeks | Copilot Dojo'),
     beschreibung: T('Ein freier Plan zum Selbstlernen mit Microsoft Copilot Chat und Copilot Studio: jede Woche ein oder zwei Gürtel, mit den Ergebnissen jeder Woche.', 'A free self-study plan for Microsoft Copilot Chat and Copilot Studio: one or two belts each week, with the results of each week.'),
     canonical: `${BASE_L}vier-wochen/`, banner: ohneFreigabe(DABEI),
     jsonld: [ldWebsite(), LD_ORG, ldKrumen([[T('Start', 'Home'), BASE_L], [T('Techniken', 'Techniques'), `${BASE_L}techniken/`], [T('Vier Wochen', 'Four weeks'), `${BASE_L}vier-wochen/`]])],
@@ -865,7 +872,7 @@ function baueVierWochen() {
 function baueHeute() {
   const t = heuteTechnik();
   seite('heute/index.html', {
-    seite: 'heute', template: 'heute.html', titel: T('Technik des Tages | PowerPlatformAcademy Dojo · Copilot', 'Technique of the day | PowerPlatformAcademy Dojo · Copilot'),
+    seite: 'heute', template: 'heute.html', titel: T('Technik des Tages | Copilot Dojo', 'Technique of the day | Copilot Dojo'),
     beschreibung: T('Jeden Tag eine Technik aus dem PowerPlatformAcademy Dojo, für alle am selben Tag dieselbe.', 'One technique from the PowerPlatformAcademy Dojo every day, the same for everyone on the same day.'), noindex: true, canonical: null,
     banner: t ? ohneFreigabe([t]) : false,
     daten: { build_datum: DATUM, heute_inhalt: heuteHtml(t, '../', 'h2') }
@@ -880,7 +887,7 @@ function bauePflichtseiten() {
     const ziel = t ? `../techniken/${t.slug}/` : g ? `../techniken/#${g.anker}` : '../techniken/';
     schreibe(`${LP()}${n}/index.html`, render(lies('templates/kurzadresse.html'), {
       lang: HTML_LANG(), ra: praefix(`${LP()}${n}/index.html`),
-      titel: t ? `${t.titel}: ${t.klartitel} | PowerPlatformAcademy Dojo · Copilot` : `${T('Technik', 'Technique')} ${n} | PowerPlatformAcademy Dojo · Copilot`,
+      titel: t ? technikTitel(t) : `${T('Technik', 'Technique')} ${n} | Copilot Dojo`,
       canonical: t ? urlTechnik(t) : `${BASE_L}techniken/`, ziel,
       linktext: t ? `${T('Technik', 'Technique')} ${pad2(n)}: ${t.titel}` : T(`Technik ${n} ist noch nicht freigegeben. Zur Technik-Wand`, `Technique ${n} is not released yet. To the technique wall`),
       hinweis: T('Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.', 'Independent website by Marcel Lehmann. Not affiliated with Microsoft.')
@@ -891,7 +898,7 @@ function bauePflichtseiten() {
     const rel = `${LP()}${alt}index.html`;
     const tiefe = alt.split('/').filter(Boolean).length;
     schreibe(rel, render(lies('templates/kurzadresse.html'), {
-      lang: HTML_LANG(), ra: praefix(rel), titel: `${T(de, en)} | PowerPlatformAcademy Dojo · Copilot`, canonical: `${BASE_L}${neu}`,
+      lang: HTML_LANG(), ra: praefix(rel), titel: `${T(de, en)} | Copilot Dojo`, canonical: `${BASE_L}${neu}`,
       ziel: '../'.repeat(tiefe) + neu, linktext: T(`Diese Seite ist umgezogen: ${de}`, `This page has moved: ${en}`),
       hinweis: T('Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.', 'Independent website by Marcel Lehmann. Not affiliated with Microsoft.')
     }, 'umzug'));
@@ -903,7 +910,7 @@ function bauePflichtseiten() {
   }
   // 404: GitHub Pages liefert nur die 404.html der Wurzel aus. sprache.js leitet dort Adressen unter /en/ auf en/404.html weiter.
   seite('404.html', {
-    seite: '404', template: '404.html', absolut: true, titel: T('Seite nicht gefunden | PowerPlatformAcademy Dojo · Copilot', 'Page not found | PowerPlatformAcademy Dojo · Copilot'),
+    seite: '404', template: '404.html', absolut: true, titel: T('Seite nicht gefunden | Copilot Dojo', 'Page not found | Copilot Dojo'),
     beschreibung: T('Diese Seite gibt es nicht. Zu den Techniken, zur Suche oder zur Startseite.', 'This page does not exist. Go to the techniques, the search or the home page.'), noindex: true,
     daten: { tusch_spaehen: tusch('spaehen'), kurz_basis: KURZ_BASIS + (istEN() ? '/en' : '') }
   });
@@ -985,7 +992,7 @@ function baueDaten() {
   </entry>`);
   schreibe(`${LP()}feed.xml`, `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="${HTML_LANG()}">
-  <title>${T(`${SITE_VOLL}: Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio`, `${SITE_VOLL}: Ninja techniques for Microsoft Copilot Chat and Copilot Studio`)}</title>
+  <title>${xml(SITE_VOLL)}</title>
   <subtitle>${T('Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.', 'Independent website by Marcel Lehmann. Not affiliated with Microsoft.')}</subtitle>
   <id>${BASE_L}</id>
   <link href="${BASE_L}"/>
@@ -1043,13 +1050,17 @@ function baueGemeinsam() {
     `- Website: ${SITE_VOLL} (${BASE_URL}), Englisch unter ${BASE_URL}en/`,
     '- Weiteres Dojo: PowerPlatformAcademy Dojo · Power Automate (https://powerautomate.ninja/)',
     '- Autor: Marcel Lehmann, Microsoft Business Applications MVP, Schweiz (Handelsname KMUpower, https://kmupower.com/)',
-    `- Inhalt: ${TECHNIKEN.length} Techniken und ${GRUNDFORMEN.length} Grundformen für Microsoft Copilot Chat, Agent Builder und Copilot Studio, je mit Prompt zum Kopieren, Grenzen und Quellen bei Microsoft Learn`,
-    '- Kosten: gratis, ohne Anmeldung, ohne Cookies',
+    `- Inhalt: ${GRUNDFORMEN.length} Grundformen und ${TECHNIKEN.length} Techniken für Microsoft Copilot Chat, Agent Builder und Copilot Studio, je mit Prompt zum Kopieren, Grenzen und Quellen bei Microsoft Learn`,
+    '- Kosten: gratis, ohne Anmeldung',
+    '- Datenschutz: Keine Cookies, keine Profile. Aufrufe werden ohne Cookies gezählt, gespeichert werden nur Summen ohne Personenbezug (GoatCounter).',
+    '- Privacy: No cookies, no profiles. Visits are counted without cookies; only totals without personal data are stored (GoatCounter).',
+    '- Apps (Word, Excel, PowerPoint und OneNote): Copilot Chat (Basic) ohne Add-on und ohne App-Zugang; Microsoft 365 Copilot (Basic) ohne Add-on mit Standard-Zugang, bei hoher Auslastung eventuell eingeschränkt; Microsoft 365 Copilot (Premium oder Pro) mit Add-on, Priority Access und vollem Umfang inklusive breiter Organisationsdaten (Graph, Work IQ). Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit, die Bezeichnung im Produkt zeigt die Stufe. Copilot Chat in Outlook bezieht in unterstützten Szenarien auch ohne Add-on Mails, Kalender, Meetings und Chats ein. Hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff sind weitere Ausnahmen vom fehlenden breiten Organisationszugriff ohne Add-on.',
+    '- App access (Word, Excel, PowerPoint and OneNote): Copilot Chat (Basic) has no add-on and no app access; Microsoft 365 Copilot (Basic) has standard app access without an add-on, possibly limited at high demand; Microsoft 365 Copilot (Premium or Pro) adds Priority Access and full functionality including broad organizational data through Graph and Work IQ with an add-on. The in-product label shows the tier; availability depends on license and tenant configuration. In supported scenarios Copilot Chat in Outlook includes emails, calendar, meetings and chats without an add-on. Uploaded or pasted content and agents with enabled access are further exceptions to the lack of broad organizational access without an add-on.',
     '- Kontakt: marcel.lehmann@kmupower.com', ''];
   const llms = [...kopf,
-    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): Lizenz-Check in vier Fragen, was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Gürtelprüfung](${BASE_URL}pruefung/): Welcher Copilot-Gürtel bist du? Sieben Fragen, eine pro Gürtel`, `- [Alle Fragen der Gürtelprüfung](${BASE_URL}pruefung/fragen/): jede Frage mit Auflösung und Quelle`, `- [Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle](${BASE_URL}gratis/nachschlagen/): Mythen, vier Stufen, Wortlaut der Bedingungen, häufige Fragen, Prüfprotokoll`, `- [In vier Wochen durch alle Gürtel](${BASE_URL}vier-wochen/): freier Plan zum Selbstlernen`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Dojo-Regeln, was die Seite nicht ist`, `- [Volltext aller Techniken](${BASE_URL}llms-full.txt): Prompts, Grenzen und Quellen in beiden Sprachen`, '',
+    '## Seiten', '', `- [Technik-Wand](${BASE_URL}techniken/): alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)`, `- [Ist Microsoft Copilot gratis?](${BASE_URL}gratis/): Lizenz-Check in vier Fragen, was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage`, `- [Gürtelprüfung](${BASE_URL}pruefung/): Welcher Copilot-Gürtel bist du? Sieben Fragen, eine pro Gürtel`, `- [Alle Fragen der Gürtelprüfung](${BASE_URL}pruefung/fragen/): jede Frage mit Auflösung und Quelle`, `- [Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle](${BASE_URL}gratis/nachschlagen/): Mythen, App-Stufen, Wortlaut der Bedingungen, häufige Fragen, Prüfprotokoll`, `- [In vier Wochen durch alle Gürtel](${BASE_URL}vier-wochen/): freier Plan zum Selbstlernen`, `- [Über das Dojo](${BASE_URL}ueber/): Methode, Dojo-Regeln, was die Seite nicht ist`, `- [Volltext aller Techniken](${BASE_URL}llms-full.txt): Prompts, Grenzen und Quellen in beiden Sprachen`, '',
     '## Techniken', '', ...deListe, ...(deGrund.length ? ['', '## Grundformen', '', ...deGrund] : []), '',
-    '## English', '', `- [Technique wall](${BASE_URL}en/techniken/): all techniques by belt`, `- [Is Microsoft Copilot free?](${BASE_URL}en/gratis/): what works without an add-on license, with source and review date for each statement`, `- [Belt exam](${BASE_URL}en/pruefung/): which Copilot belt are you? Seven questions, one per belt`, `- [All belt exam questions](${BASE_URL}en/pruefung/fragen/): each question with the answer and a source`, `- [Copilot without an add-on license: every condition with its source](${BASE_URL}en/gratis/nachschlagen/): myths, four levels, conditions word for word, FAQ, review log`, `- [Through all belts in four weeks](${BASE_URL}en/vier-wochen/): free plan for self-study`, `- [About the Dojo](${BASE_URL}en/ueber/): method, Dojo rules, what the site is not`, '',
+    '## English', '', `- [Technique wall](${BASE_URL}en/techniken/): all techniques by belt`, `- [Is Microsoft Copilot free?](${BASE_URL}en/gratis/): what works without an add-on license, with source and review date for each statement`, `- [Belt exam](${BASE_URL}en/pruefung/): which Copilot belt are you? Seven questions, one per belt`, `- [All belt exam questions](${BASE_URL}en/pruefung/fragen/): each question with the answer and a source`, `- [Copilot without an add-on license: every condition with its source](${BASE_URL}en/gratis/nachschlagen/): myths, app tiers, conditions word for word, FAQ, review log`, `- [Through all belts in four weeks](${BASE_URL}en/vier-wochen/): free plan for self-study`, `- [About the Dojo](${BASE_URL}en/ueber/): method, Dojo rules, what the site is not`, '',
     '### Techniques', '', ...enListe, ...(enGrund.length ? ['', '### Basic forms', '', ...enGrund] : []), ''];
   schreibe('llms.txt', llms.join('\n'));
   schreibe('llms-full.txt', [...kopf, '# Deutsch', '', ...deVoll, '# English', '', ...enVoll].join('\n'));
@@ -1223,6 +1234,10 @@ function abschluss() {
     const gesehen = new Set();
     for (const m of sichtbar.matchAll(/\sid="([^"]+)"/g)) { if (gesehen.has(m[1])) melde(`${wo}: id «${m[1]}» doppelt`); gesehen.add(m[1]); }
     if (!/<title>[^<]+<\/title>/.test(html)) melde(`${wo}: <title> fehlt`);
+    for (const m of html.matchAll(/<meta\b(?=[^>]*(?:name|property)="(?:description|og:description|twitter:description)")[^>]*content="([^"]*)"[^>]*>/g)) {
+      const text = m[1].replace(/&(?:amp|quot|apos|lt|gt|#\d+|#x[0-9a-f]+);/gi, "x");
+      if (text.length > 165) warnung(`${wo}: Meta-Description über 165 Zeichen (${text.length})`);
+    }
     if (!/Content-Security-Policy/.test(html)) melde(`${wo}: CSP fehlt`);
     if (!/name="robots" content="noindex"/.test(html) && !/rel="canonical"/.test(html)) melde(`${wo}: canonical fehlt`);
     if (!ohneH1.includes(rel)) { const n = (html.match(/<h1[\s>]/g) || []).length; if (n !== 1) melde(`${wo}: ${n} statt genau ein <h1>`); }

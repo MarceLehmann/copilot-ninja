@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/aus-chat-einen-agent-machen/">
 <link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/aus-chat-einen-agent-machen/">
 <link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/aus-chat-einen-agent-machen/">
-<link rel="alternate" type="application/atom+xml" title="PowerPlatformAcademy Dojo · Copilot: new techniques" href="../../feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Copilot Dojo: new techniques" href="../../feed.xml">
 <link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../../assets/css/site.css">
 <link rel="stylesheet" href="../../../assets/css/technik.css">
@@ -24,7 +24,7 @@
 
 <!-- /RAHMEN:HEAD -->
 <meta name="generator" content="PowerPlatformAcademy Dojo build">
-<title>Turn your best chat into an agent | PowerPlatformAcademy Dojo · Copilot</title>
+<title>Turn your best chat into an agent | Copilot Dojo</title>
 <meta name="description" content="Turn your best chat into an agent. Guide for Microsoft Copilot Chat to copy, with a source on Microsoft Learn and a review date.">
 <link rel="canonical" href="https://copilot.ninja/en/techniken/aus-chat-einen-agent-machen/">
 <meta property="og:type" content="article">
@@ -45,7 +45,7 @@
     {
       "@type": "WebSite",
       "@id": "https://copilot.ninja/en/#website",
-      "name": "PowerPlatformAcademy Dojo · Copilot",
+      "name": "Copilot Dojo",
       "alternateName": "PowerPlatformAcademy Dojo",
       "url": "https://copilot.ninja/en/",
       "inLanguage": "en",
@@ -207,17 +207,17 @@
 
 <div class="rolle" data-rolle>
 <div class="rolle__kopf"><p class="rolle__titel">Text to copy</p></div>
-<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> This conversation worked well. Turn it into instructions for an agent that always behaves this way.</mark>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> This conversation worked well. Turn it into three clearly separated sections for an agent.</mark>
 
 <mark class="teil teil--quelle"><span class="teil__label">Source:</span> Only this chat history.</mark>
 
-<mark class="teil teil--erwartung"><span class="teil__label">Expectations:</span> Instructions in Markdown with this outline:
-# Purpose
-# Process
-Each step with goal, action and transition to the next step.
-# Tone and format
-# Limits
-Turn my corrections from the conversation into fixed rules. Leave out details that only applied to this one case, and list them separately afterwards. Stay under 8000 characters.</mark></pre>
+<mark class="teil teil--erwartung"><span class="teil__label">Expectations:</span>
+# Name
+At most 30 characters.
+# Description
+At most 1000 characters. Describe its purpose and tasks to help the model and users find the agent.
+# Instructions
+At most 8000 characters, in Markdown with the subheadings Purpose, Process, Tone and format, and Limits. Each process step has a goal, action and transition to the next step. Turn my corrections into fixed rules. Leave out details that only applied to this case and list them separately after the three sections.</mark></pre>
 <div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy text</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Technique from the PowerPlatformAcademy Dojo: copilot.ninja/en/14&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
 </div>
       <p class="rolle__fallback">No add-on license with Agent Builder, instructions and public websites only. Without a copy button: select the text and copy it with Ctrl+C.</p>
@@ -226,12 +226,12 @@ Turn my corrections from the conversation into fixed rules. Leave out details th
 
     <section class="abschnitt" aria-labelledby="h-nutzen">
       <h2 id="h-nutzen">How to use it</h2>
-      <ol class="schritte"><li>At the end of a successful chat in Microsoft Copilot Chat, paste the text and send it.</li><li>Read the list of details and add anything that is a fixed rule after all.</li><li>In Agent Builder, create a new agent and use “Skip to configure” to go straight to the configuration.</li><li>Paste the name, description and instructions into the “Instructions” field. According to Microsoft, the field holds at most 8000 characters.</li><li>Try the agent in the “Try it” tab with three real tasks.</li><li>Then check the instructions with No. 17.</li></ol>
+      <ol class="schritte"><li>At the end of a successful chat in Microsoft Copilot Chat, paste the text and send it.</li><li>Read the list of details and add anything that is a fixed rule after all.</li><li>In Agent Builder, create a new agent and use “Skip to configure” to go straight to the configuration.</li><li>In the “Configure” tab, paste the name into “Name” (at most 30 characters), the description into “Description” (at most 1000 characters) and only the instructions into “Instructions” (at most 8000 characters). “Knowledge” and “Starter Prompts” are separate fields.</li><li>Try the agent in the “Try it” tab with three real tasks.</li><li>Then check the instructions with No. 17.</li></ol>
     </section>
 
     <section class="abschnitt" aria-labelledby="h-erwarten">
       <h2 id="h-erwarten">How to spot a good answer</h2>
-      <ul class="pruefliste"><li>Instructions with purpose, process, tone and format, and limits.</li><li>Each process step with goal, action and transition.</li><li>Your corrections as fixed rules.</li><li>A separate list of details that only applied to this case.</li></ul>
+      <ul class="pruefliste"><li>Three separate sections: Name, Description and Instructions with purpose, process, tone and format, and limits.</li><li>Each process step with goal, action and transition.</li><li>Your corrections as fixed rules.</li><li>A separate list of details that only applied to this case.</li></ul>
     </section>
 
     <section class="abschnitt" aria-labelledby="h-probe">
@@ -295,7 +295,7 @@ https://copilot.ninja/en/techniken/aus-chat-einen-agent-machen/</pre>
     <div class="fuss__raster">
       <div>
         <p class="fuss__klar">Independent website, not affiliated with Microsoft.</p>
-        <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio. Each with a source on Microsoft Learn. No sign-up and no cookies, only an anonymous visit count. Your progress stays in your browser.</p>
+        <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio. Each with a source on Microsoft Learn. No sign-up. Visits are counted without cookies; only totals without personal data are stored (GoatCounter). Your progress stays in your browser.</p>
         <p class="beitragen">Do you know a technique that is missing here? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20for%20the%20Dojo&amp;body=Title%20of%20the%20technique%3A%0A%0AProblem%20it%20solves%3A%0A%0APrompt%20or%20guide%3A%0A%0ALimits%3A%0A%0ASource%20on%20Microsoft%20Learn%3A%0A%0AMay%20I%20name%20you%20as%20the%20sender%3F%20(yes%20or%20no)%0A%0APlease%20no%20customer%2C%20personal%20or%20company%20data%20in%20the%20prompt.">Write to me.</a></p>
       </div>
       <nav aria-labelledby="fuss-dojo">
@@ -326,10 +326,8 @@ https://copilot.ninja/en/techniken/aus-chat-einen-agent-machen/</pre>
       <p>The PowerPlatformAcademy Dojo is part of the <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.</p>
     </div>
     <div class="fuss__recht">
-      <p class="fuss__klar">Not an offer from Microsoft. No licensing advice: for your case, ask your IT or your Microsoft partner.</p>
-      <p>Microsoft and the Power Platform product names (for example Power Apps, Power Automate, Copilot Studio) are trademarks of the Microsoft group of companies. This is an independent website by Marcel Lehmann. It is not operated, sponsored or endorsed by Microsoft.</p>
-      <p>This website is not affiliated with Microsoft. Also trademarks of the Microsoft group of companies: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
-      <p>No cookies, no tracking. Visits are only counted anonymously with GoatCounter. Your progress stays in your browser.</p>
+      <p>Not an offer from Microsoft. No licensing advice: ask your IT or Microsoft partner about your case. Independent website by Marcel Lehmann, not operated, sponsored or endorsed by Microsoft. Microsoft, the Power Platform product names (including Power Apps, Power Automate and Copilot Studio), and Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ are trademarks of the Microsoft group of companies. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
+      <p>No cookies, no profiles. Page views are counted without personal data (GoatCounter). Your progress stays in your browser.</p>
       <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Motion off</button></p>
     </div>
   </div>

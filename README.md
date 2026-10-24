@@ -94,7 +94,7 @@ Die Titelschrift liegt unter `assets/fonts/` (Barlow Semi Condensed, SIL Open Fo
 
 Alle Links sind relativ, die Seite läuft unter einem Unterpfad und unter einer eigenen Domain. Ausnahme ist `404.html`: GitHub Pages liefert sie in jeder Tiefe aus, darum nutzt sie Pfade ab der Basis aus `BASE_URL` in `scripts/build.mjs`. Beim Wechsel auf eine eigene Domain wird `BASE_URL` angepasst und neu gebaut.
 
-Die Seite selbst trackt nicht und setzt keine Cookies. Einzige Anfrage an einen fremden Server ist die anonyme Zugriffszählung mit GoatCounter: `assets/js/count.js` selbst gehostet, Endpunkt https://copilot-ninja.goatcounter.com/count, in der CSP (`templates/partials/head.html`) unter connect-src und img-src freigegeben. Fortschritt und Einstellungen bleiben im Browser (siehe Datenschutz). Links zur Academy und zu kmupower.com tragen einen Herkunftsparameter (utm_source=copilot.ninja), den die Zielseite nach ihrer eigenen Datenschutzerklärung auswertet.
+Die Seite setzt keine Cookies und erstellt keine Profile. Aufrufe werden ohne Cookies gezählt, gespeichert werden nur Summen ohne Personenbezug (GoatCounter): `assets/js/count.js` selbst gehostet, Endpunkt https://copilot-ninja.goatcounter.com/count, in der CSP (`templates/partials/head.html`) unter connect-src und img-src freigegeben. Fortschritt und Einstellungen bleiben im Browser (siehe Datenschutz). Links zur Academy und zu kmupower.com tragen einen Herkunftsparameter (utm_source=copilot.ninja), den die Zielseite nach ihrer eigenen Datenschutzerklärung auswertet.
 
 Lokal ansehen: im Ordner `python -m http.server 8000` und `http://localhost:8000/` öffnen. Für den Unterpfad den Server im Elternordner starten und `http://localhost:8000/copilot-ninja/` öffnen.
 

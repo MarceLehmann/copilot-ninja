@@ -216,11 +216,11 @@ function landeseite(g) {
 <meta charset="utf-8">
 <!-- RAHMEN:HEAD -->
 <!-- /RAHMEN:HEAD -->
-<title>Dojo-Gürtel: ${esc(g.kurz)} | PowerPlatformAcademy Dojo · Copilot</title>
+<title>Dojo-Gürtel: ${esc(g.kurz)} | Copilot Dojo</title>
 <meta name="description" content="${esc(beschreibung)}">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="PowerPlatformAcademy Dojo · Copilot">
+<meta property="og:site_name" content="Copilot Dojo">
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="${esc(g.name)} im PowerPlatformAcademy Dojo">
 <meta property="og:description" content="${esc(beschreibung)}">
@@ -284,11 +284,11 @@ function landeseiteEN(g) {
 <meta charset="utf-8">
 <!-- RAHMEN:HEAD -->
 <!-- /RAHMEN:HEAD -->
-<title>Dojo belt: ${esc(g.kurz)} | PowerPlatformAcademy Dojo · Copilot</title>
+<title>Dojo belt: ${esc(g.kurz)} | Copilot Dojo</title>
 <meta name="description" content="${esc(beschreibung)}">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="PowerPlatformAcademy Dojo · Copilot">
+<meta property="og:site_name" content="Copilot Dojo">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="${esc(g.name)} in the PowerPlatformAcademy Dojo">
 <meta property="og:description" content="${esc(beschreibung)}">

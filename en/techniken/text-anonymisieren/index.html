@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/text-anonymisieren/">
 <link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/text-anonymisieren/">
 <link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/text-anonymisieren/">
-<link rel="alternate" type="application/atom+xml" title="PowerPlatformAcademy Dojo · Copilot: new techniques" href="../../feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Copilot Dojo: new techniques" href="../../feed.xml">
 <link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../../assets/css/site.css">
 <link rel="stylesheet" href="../../../assets/css/technik.css">
@@ -24,13 +24,13 @@
 
 <!-- /RAHMEN:HEAD -->
 <meta name="generator" content="PowerPlatformAcademy Dojo build">
-<title>Anonymize text before it moves on | PowerPlatformAcademy Dojo · Copilot</title>
-<meta name="description" content="Anonymize text before it moves on. Prompt for Microsoft Copilot Chat to copy, with a source on Microsoft Learn and a review date. Before a real case moves on.">
+<title>Pseudonymise text before it goes anywhere | Copilot Dojo</title>
+<meta name="description" content="Pseudonymise text before it goes anywhere. Prompt for Microsoft Copilot Chat to copy, with a source on Microsoft Learn and a review date.">
 <link rel="canonical" href="https://copilot.ninja/en/techniken/text-anonymisieren/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PowerPlatformAcademy Dojo · Copilot">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="The Invisibility Cloak: Anonymize text before it moves on">
+<meta property="og:title" content="The Invisibility Cloak: Pseudonymise text before it goes anywhere">
 <meta property="og:description" content="Names, companies, amounts and numbers become placeholders, and you get the mapping back separately.">
 <meta property="og:url" content="https://copilot.ninja/en/techniken/text-anonymisieren/">
 <meta property="og:image" content="https://copilot.ninja/assets/img/karten/en/text-anonymisieren.png">
@@ -45,7 +45,7 @@
     {
       "@type": "WebSite",
       "@id": "https://copilot.ninja/en/#website",
-      "name": "PowerPlatformAcademy Dojo · Copilot",
+      "name": "Copilot Dojo",
       "alternateName": "PowerPlatformAcademy Dojo",
       "url": "https://copilot.ninja/en/",
       "inLanguage": "en",
@@ -68,7 +68,7 @@
     {
       "@type": "TechArticle",
       "@id": "https://copilot.ninja/en/techniken/text-anonymisieren/#technik",
-      "headline": "The Invisibility Cloak: Anonymize text before it moves on",
+      "headline": "The Invisibility Cloak: Pseudonymise text before it goes anywhere",
       "name": "The Invisibility Cloak",
       "url": "https://copilot.ninja/en/techniken/text-anonymisieren/",
       "inLanguage": "en",
@@ -187,7 +187,7 @@
         <li class="tk__nr">No. 22</li>
         <li><span>approx. 10 min</span></li>
       </ul>
-      <h1 id="h1">The Invisibility Cloak<small>Anonymize text before it moves on</small></h1>
+      <h1 id="h1">The Invisibility Cloak<small>Pseudonymise text before it goes anywhere</small></h1>
       <p class="tk__moment">Before a real case moves on</p>
     </header>
 
@@ -200,7 +200,7 @@
 
     <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
       <h2 id="h-schnitt">The cut</h2>
-      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Before</p><div class="schnitt__vorher"><p class="schnitt__zitat">“Anonymize this text.”</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Before</p><div class="schnitt__vorher"><p class="schnitt__zitat">“Pseudonymise this text.”</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
       <p class="label">After</p>
 <details class="schmiede-klappe" data-nur-js><summary>Make it yours</summary><div class="schmiede">
 <div class="schmiede__kopf"><p class="schmiede__hinweis">Nothing leaves your browser.</p></div>
@@ -209,7 +209,7 @@
 </div></details>
 <div class="rolle" data-rolle>
 <div class="rolle__kopf"><p class="rolle__titel">Prompt to copy</p></div>
-<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> Rewrite the text below so that nobody can recognize people, companies or places in it. The content should stay understandable.</mark>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> Pseudonymise people, companies and places in the text below with consistent placeholders. The content should stay understandable.</mark>
 
 <mark class="teil teil--quelle"><span class="teil__label">Source:</span> Only the text below. Do not add anything.</mark>
 
@@ -220,7 +220,7 @@
 - amounts with [AMOUNT_1], unless I write below that they may stay
 The same people and companies always get the same placeholder.
 Output:
-1. The anonymized text.
+1. The pseudonymised text.
 2. Separately below it, a table “Mapping” with placeholder and original. I keep this table to myself.
 3. A list “Check” with passages that could still make a person recognizable, for example an unusual job title, a date or a special event.</mark>
 
@@ -236,7 +236,7 @@ Text:
 
     <section class="abschnitt" aria-labelledby="h-nutzen">
       <h2 id="h-nutzen">How to use it</h2>
-      <ol class="schritte"><li>Paste the text, decide whether amounts stay, and send.</li><li>Work through the “Check” list and rewrite those passages yourself.</li><li>Only pass on the anonymized part, never the mapping.</li><li>When an answer comes back, you put the originals back in yourself.</li></ol>
+      <ol class="schritte"><li>Paste the text, decide whether amounts stay, and send.</li><li>Work through the “Check” list and rewrite those passages yourself.</li><li>Only pass on the pseudonymised part, never the mapping.</li><li>When an answer comes back, you put the originals back in yourself.</li></ol>
     </section>
 
     <section class="abschnitt" aria-labelledby="h-erwarten">
@@ -246,12 +246,12 @@ Text:
 
     <section class="abschnitt" aria-labelledby="h-probe">
       <h2 id="h-probe">The check</h2>
-      <p class="probe">Give the anonymized text to a colleague who does not know the case. Count how many people or companies she still guesses. The goal is zero.</p>
+      <p class="probe">Give the pseudonymised text to a colleague who does not know the case. Count how many people or companies she still guesses. The goal is zero.</p>
     </section>
 
     <section class="abschnitt" aria-labelledby="h-grenzen">
       <h2 id="h-grenzen">Limits</h2>
-      <ul class="arrow-list prose"><li>There is no certainty that nothing recognizable remains. The “Check” list is a hint, you read it yourself.</li><li>The mapping is in the same chat. According to Microsoft, prompts and responses under Enterprise Data Protection are logged and retained and are available for audit and eDiscovery. So do not share the chat.</li><li>Only paste the original text if your internal rules allow it. Microsoft states Enterprise Data Protection for prompts and responses when you sign in with a work or school account.</li><li>Anonymizing does not replace checking with the person responsible for data protection in your organization.</li></ul>
+      <ul class="arrow-list prose"><li>There is no certainty that nothing recognizable remains. The “Check” list is a hint, you read it yourself.</li><li>The mapping is in the same chat. According to Microsoft, prompts and responses under Enterprise Data Protection are logged and retained and are available for audit and eDiscovery. So do not share the chat.</li><li>Only paste the original text if your internal rules allow it. Microsoft states Enterprise Data Protection for prompts and responses when you sign in with a work or school account.</li><li>Pseudonymising does not replace checking with the person responsible for data protection in your organization.</li><li>Strictly speaking, you are pseudonymising: the mapping lets each person be identified again. Do not release the text just because names have been replaced.</li></ul>
     </section>
 
 
@@ -305,7 +305,7 @@ https://copilot.ninja/en/techniken/text-anonymisieren/</pre>
     <div class="fuss__raster">
       <div>
         <p class="fuss__klar">Independent website, not affiliated with Microsoft.</p>
-        <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio. Each with a source on Microsoft Learn. No sign-up and no cookies, only an anonymous visit count. Your progress stays in your browser.</p>
+        <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio. Each with a source on Microsoft Learn. No sign-up. Visits are counted without cookies; only totals without personal data are stored (GoatCounter). Your progress stays in your browser.</p>
         <p class="beitragen">Do you know a technique that is missing here? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20for%20the%20Dojo&amp;body=Title%20of%20the%20technique%3A%0A%0AProblem%20it%20solves%3A%0A%0APrompt%20or%20guide%3A%0A%0ALimits%3A%0A%0ASource%20on%20Microsoft%20Learn%3A%0A%0AMay%20I%20name%20you%20as%20the%20sender%3F%20(yes%20or%20no)%0A%0APlease%20no%20customer%2C%20personal%20or%20company%20data%20in%20the%20prompt.">Write to me.</a></p>
       </div>
       <nav aria-labelledby="fuss-dojo">
@@ -336,10 +336,8 @@ https://copilot.ninja/en/techniken/text-anonymisieren/</pre>
       <p>The PowerPlatformAcademy Dojo is part of the <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.</p>
     </div>
     <div class="fuss__recht">
-      <p class="fuss__klar">Not an offer from Microsoft. No licensing advice: for your case, ask your IT or your Microsoft partner.</p>
-      <p>Microsoft and the Power Platform product names (for example Power Apps, Power Automate, Copilot Studio) are trademarks of the Microsoft group of companies. This is an independent website by Marcel Lehmann. It is not operated, sponsored or endorsed by Microsoft.</p>
-      <p>This website is not affiliated with Microsoft. Also trademarks of the Microsoft group of companies: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
-      <p>No cookies, no tracking. Visits are only counted anonymously with GoatCounter. Your progress stays in your browser.</p>
+      <p>Not an offer from Microsoft. No licensing advice: ask your IT or Microsoft partner about your case. Independent website by Marcel Lehmann, not operated, sponsored or endorsed by Microsoft. Microsoft, the Power Platform product names (including Power Apps, Power Automate and Copilot Studio), and Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ are trademarks of the Microsoft group of companies. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
+      <p>No cookies, no profiles. Page views are counted without personal data (GoatCounter). Your progress stays in your browser.</p>
       <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Motion off</button></p>
     </div>
   </div>

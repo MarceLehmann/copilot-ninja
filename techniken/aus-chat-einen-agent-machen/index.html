@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/aus-chat-einen-agent-machen/">
 <link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/aus-chat-einen-agent-machen/">
 <link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/aus-chat-einen-agent-machen/">
-<link rel="alternate" type="application/atom+xml" title="PowerPlatformAcademy Dojo · Copilot: neue Techniken" href="../../feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Copilot Dojo: neue Techniken" href="../../feed.xml">
 <link rel="preload" href="../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/css/site.css">
 <link rel="stylesheet" href="../../assets/css/technik.css">
@@ -24,7 +24,7 @@
 
 <!-- /RAHMEN:HEAD -->
 <meta name="generator" content="PowerPlatformAcademy Dojo build">
-<title>Aus dem besten Chat einen Agent machen | PowerPlatformAcademy Dojo · Copilot</title>
+<title>Aus dem besten Chat einen Agent machen | Copilot Dojo</title>
 <meta name="description" content="Aus dem besten Chat einen Agent machen. Anleitung für Microsoft Copilot Chat zum Kopieren, mit Quelle bei Microsoft Learn und Prüfdatum.">
 <link rel="canonical" href="https://copilot.ninja/techniken/aus-chat-einen-agent-machen/">
 <meta property="og:type" content="article">
@@ -45,7 +45,7 @@
     {
       "@type": "WebSite",
       "@id": "https://copilot.ninja/#website",
-      "name": "PowerPlatformAcademy Dojo · Copilot",
+      "name": "Copilot Dojo",
       "alternateName": "PowerPlatformAcademy Dojo",
       "url": "https://copilot.ninja/",
       "inLanguage": "de-CH",
@@ -207,17 +207,17 @@
 
 <div class="rolle" data-rolle>
 <div class="rolle__kopf"><p class="rolle__titel">Text zum Kopieren</p></div>
-<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Dieses Gespräch hat gut funktioniert. Schreib daraus Anweisungen für einen Agent, der sich immer so verhält.</mark>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Dieses Gespräch hat gut funktioniert. Erstelle daraus drei klar getrennte Abschnitte für einen Agent.</mark>
 
 <mark class="teil teil--quelle"><span class="teil__label">Quelle:</span> Nur dieser Chatverlauf.</mark>
 
-<mark class="teil teil--erwartung"><span class="teil__label">Erwartung:</span> Anweisungen in Markdown mit dieser Gliederung:
-# Zweck
-# Ablauf
-Jeder Schritt mit Ziel, Aktion und Übergang zum nächsten Schritt.
-# Ton und Format
-# Grenzen
-Übernimm meine Korrekturen aus dem Verlauf als feste Regeln. Lass Einzelheiten weg, die nur für diesen einen Fall galten, und liste sie danach separat auf. Bleib unter 8000 Zeichen.</mark></pre>
+<mark class="teil teil--erwartung"><span class="teil__label">Erwartung:</span>
+# Name
+Höchstens 30 Zeichen.
+# Beschreibung
+Höchstens 1000 Zeichen. Beschreibe Zweck und Aufgaben so, dass Modell und Nutzer den Agent finden.
+# Instructions
+Höchstens 8000 Zeichen, in Markdown mit den Untertiteln Zweck, Ablauf, Ton und Format sowie Grenzen. Jeder Ablaufschritt mit Ziel, Aktion und Übergang zum nächsten Schritt. Übernimm meine Korrekturen als feste Regeln. Lass Einzelheiten weg, die nur für diesen einen Fall galten, und liste sie nach den drei Abschnitten separat auf.</mark></pre>
 <div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Text kopieren</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Technik aus dem PowerPlatformAcademy Dojo: copilot.ninja/14&#10;Quelle: Microsoft Learn, Stand 15.10.2026" data-nur-js>Weitergeben</button><p class="rolle__status" role="status"></p></div>
 </div>
       <p class="rolle__fallback">Ohne Zusatzlizenz mit Agent Builder, nur Anweisungen und öffentliche Websites. Ohne Kopierknopf: Text markieren und mit Strg+C kopieren.</p>
@@ -226,12 +226,12 @@ Jeder Schritt mit Ziel, Aktion und Übergang zum nächsten Schritt.
 
     <section class="abschnitt" aria-labelledby="h-nutzen">
       <h2 id="h-nutzen">So nutzt du es</h2>
-      <ol class="schritte"><li>Am Ende eines gelungenen Chats in Microsoft Copilot Chat den Text einfügen und senden.</li><li>Die Liste der Einzelheiten lesen und ergänzen, was doch eine feste Regel ist.</li><li>Im Agent Builder einen neuen Agent anlegen und mit «Skip to configure» direkt zur Konfiguration gehen.</li><li>Name, Beschreibung und Anweisungen ins Feld «Instructions» einfügen. Das Feld fasst laut Microsoft höchstens 8000 Zeichen.</li><li>Den Agent im Tab «Try it» mit drei echten Aufgaben ausprobieren.</li><li>Danach die Anweisungen mit Nr. 17 prüfen.</li></ol>
+      <ol class="schritte"><li>Am Ende eines gelungenen Chats in Microsoft Copilot Chat den Text einfügen und senden.</li><li>Die Liste der Einzelheiten lesen und ergänzen, was doch eine feste Regel ist.</li><li>Im Agent Builder einen neuen Agent anlegen und mit «Skip to configure» direkt zur Konfiguration gehen.</li><li>Im Tab «Configure» den Namen in «Name» (maximal 30 Zeichen), die Beschreibung in «Description» (maximal 1000 Zeichen) und nur die Anweisungen in «Instructions» (maximal 8000 Zeichen) einfügen. «Knowledge» und «Starter Prompts» sind separate Felder.</li><li>Den Agent im Tab «Try it» mit drei echten Aufgaben ausprobieren.</li><li>Danach die Anweisungen mit Nr. 17 prüfen.</li></ol>
     </section>
 
     <section class="abschnitt" aria-labelledby="h-erwarten">
       <h2 id="h-erwarten">Woran du eine gute Antwort erkennst</h2>
-      <ul class="pruefliste"><li>Anweisungen mit Zweck, Ablauf, Ton und Format und Grenzen.</li><li>Jeder Ablaufschritt mit Ziel, Aktion und Übergang.</li><li>Deine Korrekturen als feste Regeln.</li><li>Eine separate Liste mit Einzelheiten, die nur für diesen Fall galten.</li></ul>
+      <ul class="pruefliste"><li>Drei getrennte Abschnitte: Name, Beschreibung und Instructions mit Zweck, Ablauf, Ton und Format sowie Grenzen.</li><li>Jeder Ablaufschritt mit Ziel, Aktion und Übergang.</li><li>Deine Korrekturen als feste Regeln.</li><li>Eine separate Liste mit Einzelheiten, die nur für diesen Fall galten.</li></ul>
     </section>
 
     <section class="abschnitt" aria-labelledby="h-probe">
@@ -295,7 +295,7 @@ https://copilot.ninja/techniken/aus-chat-einen-agent-machen/</pre>
     <div class="fuss__raster">
       <div>
         <p class="fuss__klar">Unabhängige Website, keine Verbindung zu Microsoft.</p>
-        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn. Ohne Anmeldung und ohne Cookies, nur eine anonyme Zugriffszählung. Dein Fortschritt bleibt in deinem Browser.</p>
+        <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio. Jede mit Quelle bei Microsoft Learn. Ohne Anmeldung. Aufrufe werden ohne Cookies gezählt, gespeichert werden nur Summen ohne Personenbezug (GoatCounter). Dein Fortschritt bleibt in deinem Browser.</p>
         <p class="beitragen">Du kennst eine Technik, die hier fehlt? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technik%20f%C3%BCr%20das%20Dojo&amp;body=Titel%20der%20Technik%3A%0A%0AProblem%2C%20das%20sie%20l%C3%B6st%3A%0A%0APrompt%20oder%20Anleitung%3A%0A%0AGrenzen%3A%0A%0AQuelle%20bei%20Microsoft%20Learn%3A%0A%0ADarf%20ich%20dich%20als%20Absender%20nennen%3F%20(ja%20oder%20nein)%0A%0ABitte%20keine%20Kunden-%2C%20Personen-%20oder%20Firmendaten%20im%20Prompt.">Schreib mir.</a></p>
       </div>
       <nav aria-labelledby="fuss-dojo">
@@ -326,10 +326,8 @@ https://copilot.ninja/techniken/aus-chat-einen-agent-machen/</pre>
       <p>Das PowerPlatformAcademy Dojo gehört zur <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.</p>
     </div>
     <div class="fuss__recht">
-      <p class="fuss__klar">Kein Angebot von Microsoft. Keine Lizenzberatung: Für deinen Fall fragst du deine IT oder deinen Microsoft-Partner.</p>
-      <p>Microsoft und die Produktnamen der Power Platform (z. B. Power Apps, Power Automate, Copilot Studio) sind Marken der Microsoft-Unternehmensgruppe. Dies ist eine unabhängige Website von Marcel Lehmann. Sie wird nicht von Microsoft betrieben, gesponsert oder unterstützt.</p>
-      <p>Diese Website hat keine Verbindung zu Microsoft. Ebenfalls Marken der Microsoft-Unternehmensgruppe: Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
-      <p>Keine Cookies, kein Tracking. Aufrufe werden nur anonym mit GoatCounter gezählt. Dein Fortschritt bleibt in deinem Browser.</p>
+      <p>Kein Angebot von Microsoft. Keine Lizenzberatung: Frag für deinen Fall deine IT oder deinen Microsoft-Partner. Unabhängige Website von Marcel Lehmann, von Microsoft weder betrieben noch gesponsert oder unterstützt. Microsoft, die Produktnamen der Power Platform (darunter Power Apps, Power Automate und Copilot Studio) sowie Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word und Work IQ sind Marken der Microsoft-Unternehmensgruppe. GitHub und GitHub Copilot sind Marken von GitHub, Inc.</p>
+      <p>Keine Cookies, keine Profile. Aufrufe werden ohne Personenbezug gezählt (GoatCounter). Dein Fortschritt bleibt in deinem Browser.</p>
       <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Bewegung aus</button></p>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <title>PowerPlatformAcademy Dojo · Copilot: Ninja techniques for Microsoft Copilot Chat and Copilot Studio</title>
+  <title>Copilot Dojo</title>
   <subtitle>Independent website by Marcel Lehmann. Not affiliated with Microsoft.</subtitle>
   <id>https://copilot.ninja/en/</id>
   <link href="https://copilot.ninja/en/"/>
@@ -221,7 +221,7 @@
     <link href="https://copilot.ninja/en/techniken/text-anonymisieren/"/>
     <published>2026-10-15T00:00:00Z</published>
     <updated>2026-10-15T00:00:00Z</updated>
-    <summary>Anonymize text before it moves on. Names, companies, amounts and numbers become placeholders, and you get the mapping back separately.</summary>
+    <summary>Pseudonymise text before it goes anywhere. Names, companies, amounts and numbers become placeholders, and you get the mapping back separately.</summary>
   </entry>
   <entry>
     <title>Technique 23: The Credit Compass</title>

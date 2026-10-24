@@ -35,10 +35,10 @@
         return { x: x, i: zeile(p + '-' + x.schluessel, x.name + ' (' + rate + ')', b[x.schluessel] || 0, schritt) };
       });
       var lab = el('label', { 'class': 'wahl' }), lz = el('input', { type: 'checkbox' });
-      lab.appendChild(lz); lab.appendChild(el('span', null, T('Nutzer haben eine Microsoft-Copilot-Lizenz', 'Users have a Microsoft 365 Copilot license')));
+      lab.appendChild(lz); lab.appendChild(el('span', null, T('Nutzer haben eine Microsoft-365-Copilot-Add-on-Lizenz', 'Users have a Microsoft 365 Copilot add-on license')));
       fs.appendChild(lab);
       var aus = el('p', { 'class': 'rechner__resultat', role: 'status' });
-      var hinweis = el('p', { 'class': 'klein' }, T('Mit Haken rechnet der Kompass nach der Ratentabelle. Die Seite zur Lizenzierung nennt weniger Ausnahmen, siehe Hinweis oben. Agent Flows zählen nur mit dem Auslöser «When an agent calls the flow» als Ausnahme.', 'With the box checked, the compass calculates according to the rate table. The licensing page names fewer exceptions, see the note above. Agent flows only count as an exception with the trigger “When an agent calls the flow”.'));
+      var hinweis = el('p', { 'class': 'klein' }, T('Mit Haken entfallen nur Classic Answers, Generative Answers und Tenant Graph Grounding unter den Bedingungen oben. Aktionen bleiben eingerechnet, auch Computer-Using-Agent-Aktionen.', 'With the box checked, only Classic Answers, Generative Answers and Tenant Graph Grounding are exempt under the conditions above. Actions remain included, including computer-using agent actions.'));
       hinweis.hidden = true;
       var weg = el('p', { 'class': 'klein' });
       var start = box.querySelector('p');

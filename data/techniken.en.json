@@ -207,7 +207,7 @@
       "grenzen": [
         "File uploads have limits. The Microsoft page we checked gives no specific numbers, so none are listed here.",
         "The findings are pointers, not an audit. Verify two or three hits in the original file before you rely on them.",
-        "According to Microsoft, Microsoft Copilot Chat (Basic) does not include access to Copilot in Excel. That is why the basic form works with a file uploaded to the chat."
+        "Copilot Chat (Basic) has no access to Copilot in Excel. Microsoft 365 Copilot (Basic) provides standard app access without an add-on, possibly limited at high demand. Microsoft 365 Copilot (Premium or Pro) provides full functionality and Priority Access with an add-on. The in-product label shows your tier; license and tenant configuration determine availability. This basic form works with a file uploaded to the chat."
       ],
       "probe": "Check a file with a known duplicate. If it is missing from the list of findings, the list is not reliable.",
       "meister_variante": null,
@@ -241,7 +241,7 @@
         "policy",
         "internal processes"
       ],
-      "zugang_text": "Copilot Studio: build and check in the trial, publish with a license or capacity",
+      "zugang_text": "Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.",
       "zielgruppe": [
         "Team leads",
         "Makers"
@@ -310,7 +310,7 @@
         "handover",
         "email"
       ],
-      "zugang_text": "Copilot Studio: build and check in the trial, publish with a license or capacity",
+      "zugang_text": "Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.",
       "zielgruppe": [
         "Office",
         "Sales"
@@ -336,7 +336,7 @@
         "Here the handover is only a statement in the chat. For real forwarding you need a tool or a flow, which this template does not include.",
         "If you collect personal data, clarify data protection and retention first. That has not been checked here.",
         "Check with unclear and incomplete requests, not only the ideal case.",
-        "Trial and production differ just as with the basic form for internal guides: checking in the test chat yes, publishing only with a license or capacity."
+        "In the trial, check in the test chat. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission."
       ],
       "probe": "In the test chat, ask for a price and send an unclear request. Does the agent decline the price and ask a follow-up question on the unclear request?",
       "meister_variante": null,
@@ -405,7 +405,7 @@
       "grenzen": [
         "The questions are only as good as your occasion. If you say “I don't know”, you get a marked gap instead of a guess.",
         "If the answer asks several questions at once, write “Only one question, please” and continue.",
-        "Without an add-on license, Microsoft Copilot Chat does not know your emails and files, according to Microsoft. You bring in the facts yourself."
+        "Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access."
       ],
       "probe": "For three texts with and three texts without the interrogation, count the revision rounds until the version is ready to send.",
       "meister_variante": null,
@@ -579,7 +579,7 @@
         "According to Microsoft, the answer only sees content you already have access to. What is not in your inbox or chats is also missing from the report.",
         "Verbal agreements without a note do not appear.",
         "“Can ignore” is a suggestion, not a decision.",
-        "Without a license, Microsoft Copilot Chat does not automatically access emails and chats outside of Outlook."
+        "Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access."
       ],
       "probe": "Measure the time from your first login after vacation to the first reply you finish, and compare it with your last return.",
       "meister_variante": null,
@@ -798,7 +798,7 @@
         "Two opening questions."
       ],
       "grenzen": [
-        "According to Microsoft, only licensed Microsoft Copilot automatically uses emails, chats, meetings and files through Microsoft Graph. Microsoft Copilot Chat without a license does not.",
+        "Microsoft 365 Copilot (Premium or Pro) provides broad access to organizational data through Graph and Work IQ with an add-on. Without an add-on, exceptions include Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.",
         "According to Microsoft, the answer only sees content you have access to.",
         "Verbal agreements without a note are missing from the dossier."
       ],
@@ -980,7 +980,8 @@
         "Use texts of the same type. If you mix emails and technical articles, the profile gets blurry.",
         "Only upload texts that are really yours.",
         "According to Microsoft, custom instructions apply to all your conversations. A style for customer emails does not fit every chat.",
-        "The menu names come from the English learning module. In your interface they may be named differently."
+        "The menu names come from the English learning module. In your interface they may be named differently.",
+        "Custom instructions are in preview. Your tenant admin controls access; availability can vary."
       ],
       "probe": "Count the changes you make to a draft, once with and once without the profile.",
       "meister_variante": null,
@@ -1140,18 +1141,18 @@
       "nutzen": "Your best chat becomes a tool you never have to explain again how you want things done.",
       "problem": "In one chat, after several corrections, everything finally worked. Next week you start from zero again and explain everything once more.",
       "vorher": "Remember how I want this done.",
-      "technik_text": "Goal: This conversation worked well. Turn it into instructions for an agent that always behaves this way.\n\nSource: Only this chat history.\n\nExpectations: Instructions in Markdown with this outline:\n# Purpose\n# Process\nEach step with goal, action and transition to the next step.\n# Tone and format\n# Limits\nTurn my corrections from the conversation into fixed rules. Leave out details that only applied to this one case, and list them separately afterwards. Stay under 8000 characters.",
+      "technik_text": "Goal: This conversation worked well. Turn it into three clearly separated sections for an agent.\n\nSource: Only this chat history.\n\nExpectations:\n# Name\nAt most 30 characters.\n# Description\nAt most 1000 characters. Describe its purpose and tasks to help the model and users find the agent.\n# Instructions\nAt most 8000 characters, in Markdown with the subheadings Purpose, Process, Tone and format, and Limits. Each process step has a goal, action and transition to the next step. Turn my corrections into fixed rules. Leave out details that only applied to this case and list them separately after the three sections.",
       "zusatz_texte": [],
       "so_nutzt_du_es": [
         "At the end of a successful chat in Microsoft Copilot Chat, paste the text and send it.",
         "Read the list of details and add anything that is a fixed rule after all.",
         "In Agent Builder, create a new agent and use “Skip to configure” to go straight to the configuration.",
-        "Paste the name, description and instructions into the “Instructions” field. According to Microsoft, the field holds at most 8000 characters.",
+        "In the “Configure” tab, paste the name into “Name” (at most 30 characters), the description into “Description” (at most 1000 characters) and only the instructions into “Instructions” (at most 8000 characters). “Knowledge” and “Starter Prompts” are separate fields.",
         "Try the agent in the “Try it” tab with three real tasks.",
         "Then check the instructions with No. 17."
       ],
       "das_darfst_du_erwarten": [
-        "Instructions with purpose, process, tone and format, and limits.",
+        "Three separate sections: Name, Description and Instructions with purpose, process, tone and format, and limits.",
         "Each process step with goal, action and transition.",
         "Your corrections as fixed rules.",
         "A separate list of details that only applied to this case."
@@ -1438,7 +1439,7 @@
         "safeguards",
         "personal data"
       ],
-      "zugang_text": "Copilot Studio: build and check in the trial, publish with a license or capacity",
+      "zugang_text": "Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.",
       "zielgruppe": [
         "Makers"
       ],
@@ -1497,7 +1498,7 @@
         "Copilot Studio",
         "decision tree"
       ],
-      "zugang_text": "Copilot Studio: build and check in the trial, publish with a license or capacity",
+      "zugang_text": "Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.",
       "zielgruppe": [
         "Makers",
         "Process owners"
@@ -1611,7 +1612,7 @@
     },
     "t22": {
       "titel": "The Invisibility Cloak",
-      "klartitel": "Anonymize text before it moves on",
+      "klartitel": "Pseudonymise text before it goes anywhere",
       "suchbegriffe": [
         "anonymize",
         "data protection",
@@ -1622,7 +1623,8 @@
         "email",
         "customer data",
         "contract",
-        "placeholders"
+        "placeholders",
+        "pseudonymise"
       ],
       "zugang_text": "No add-on license in Microsoft Copilot Chat",
       "zielgruppe": [
@@ -1633,13 +1635,13 @@
       "moment": "Before a real case moves on",
       "nutzen": "Names, companies, amounts and numbers become placeholders, and you get the mapping back separately.",
       "problem": "You want to discuss a real case in a training session, with an external party or in a web search. Names, amounts and numbers must not go along.",
-      "vorher": "Anonymize this text.",
-      "technik_text": "Goal: Rewrite the text below so that nobody can recognize people, companies or places in it. The content should stay understandable.\n\nSource: Only the text below. Do not add anything.\n\nExpectations: Replace\n- names of people with [PERSON_1], [PERSON_2] and so on\n- companies and organizations with [COMPANY_1] and so on\n- addresses and places with [PLACE_1], phone numbers and email addresses with [CONTACT_1], customer, contract and invoice numbers with [NUMBER_1]\n- amounts with [AMOUNT_1], unless I write below that they may stay\nThe same people and companies always get the same placeholder.\nOutput:\n1. The anonymized text.\n2. Separately below it, a table “Mapping” with placeholder and original. I keep this table to myself.\n3. A list “Check” with passages that could still make a person recognizable, for example an unusual job title, a date or a special event.\n\nAmounts stay: {Amounts stay|yes or no}\n\nText:\n{Case text|the text with the real case}",
+      "vorher": "Pseudonymise this text.",
+      "technik_text": "Goal: Pseudonymise people, companies and places in the text below with consistent placeholders. The content should stay understandable.\n\nSource: Only the text below. Do not add anything.\n\nExpectations: Replace\n- names of people with [PERSON_1], [PERSON_2] and so on\n- companies and organizations with [COMPANY_1] and so on\n- addresses and places with [PLACE_1], phone numbers and email addresses with [CONTACT_1], customer, contract and invoice numbers with [NUMBER_1]\n- amounts with [AMOUNT_1], unless I write below that they may stay\nThe same people and companies always get the same placeholder.\nOutput:\n1. The pseudonymised text.\n2. Separately below it, a table “Mapping” with placeholder and original. I keep this table to myself.\n3. A list “Check” with passages that could still make a person recognizable, for example an unusual job title, a date or a special event.\n\nAmounts stay: {Amounts stay|yes or no}\n\nText:\n{Case text|the text with the real case}",
       "zusatz_texte": [],
       "so_nutzt_du_es": [
         "Paste the text, decide whether amounts stay, and send.",
         "Work through the “Check” list and rewrite those passages yourself.",
-        "Only pass on the anonymized part, never the mapping.",
+        "Only pass on the pseudonymised part, never the mapping.",
         "When an answer comes back, you put the originals back in yourself."
       ],
       "das_darfst_du_erwarten": [
@@ -1651,9 +1653,10 @@
         "There is no certainty that nothing recognizable remains. The “Check” list is a hint, you read it yourself.",
         "The mapping is in the same chat. According to Microsoft, prompts and responses under Enterprise Data Protection are logged and retained and are available for audit and eDiscovery. So do not share the chat.",
         "Only paste the original text if your internal rules allow it. Microsoft states Enterprise Data Protection for prompts and responses when you sign in with a work or school account.",
-        "Anonymizing does not replace checking with the person responsible for data protection in your organization."
+        "Pseudonymising does not replace checking with the person responsible for data protection in your organization.",
+        "Strictly speaking, you are pseudonymising: the mapping lets each person be identified again. Do not release the text just because names have been replaced."
       ],
-      "probe": "Give the anonymized text to a colleague who does not know the case. Count how many people or companies she still guesses. The goal is zero.",
+      "probe": "Give the pseudonymised text to a colleague who does not know the case. Count how many people or companies she still guesses. The goal is zero.",
       "meister_variante": null,
       "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat",
       "weitere_quellen": [
@@ -1712,7 +1715,8 @@
         "According to Microsoft, agents created in Agent Builder that do not use Tenant Graph Grounding incur no credits for Generative Answers.",
         "Microsoft bills agent flows separately: 13 Copilot Credits per 100 flow actions. According to Microsoft, Power Automate cloud flows run on the Power Automate license and not on Copilot Credits.",
         "For the Agent Usage Estimator, Microsoft recommends a reserve of 10 to 20 percent on the estimate.",
-        "The estimate does not replace looking at the actual consumption."
+        "The estimate does not replace looking at the actual consumption.",
+        "Additional costs, for example data access, licenses or other services, are not included in the calculator."
       ],
       "probe": "After the first month, compare your estimate with the actual consumption. The difference shows how good your assumptions about the conversations were.",
       "meister_variante": null,
@@ -1756,10 +1760,10 @@
         ],
         "regeln": [
           "According to the licensing page, Copilot Studio enforces purchased capacity monthly, and unused Copilot Credits do not carry over to the next month. The Agent Usage Estimator, on the other hand, says some purchases can be carried over. Your contract is what counts.",
-          "At 125 percent of the prepaid capacity, custom agents are disabled. A conversation in progress is not interrupted.",
-          "Once the capacity is used up, no new agent flows start. The agent itself keeps answering."
+          "100 to 125%: overage is tolerated; from 125%: custom agents are disabled; pay-as-you-go: no enforcement. Ongoing conversations are not interrupted. After that, every call is rejected until capacity is increased or reset. With pay-as-you-go on the environment, overage is billed to the Azure subscription.",
+          "Agent flows have separate capacity rules: when their capacity is exhausted, no new runs start. This does not mean custom agents keep answering above the 125% prepaid threshold."
         ],
-        "lizenz_hinweis": "According to the rate table, employees with a Microsoft Copilot license incur no Copilot Credits for Classic answers, Generative answers, Agent actions, Tenant graph grounding and agent flow actions when the agent runs with their signed-in identity. For agent flows this only applies to the trigger “When an agent calls the flow”. Fair use limits apply. The licensing page, on the other hand, only lists Classic answers, Generative answers and graph grounding without consumption. Microsoft is not consistent here. If in doubt, calculate without the checkbox.",
+        "lizenz_hinweis": "With the box checked, the calculator sets only Classic Answers, Generative Answers and Tenant Graph Grounding to 0 credits when the agent runs with the signed-in identity of a user with a Microsoft 365 Copilot add-on license. Fair use limits apply. Agent actions and agent flow actions remain included as a precaution. Computer-using agent actions are not generally free. Check the Microsoft source for the exemptions that apply to your use.",
         "beispiel": {
           "hinweis": "Made-up assumption for illustration."
         },
@@ -1851,7 +1855,7 @@
         "test set",
         "pass rate"
       ],
-      "zugang_text": "Copilot Studio: build and check in the trial, publish with a license or capacity",
+      "zugang_text": "Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.",
       "zielgruppe": [
         "IT",
         "Makers"

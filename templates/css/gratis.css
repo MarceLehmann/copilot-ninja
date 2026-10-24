@@ -88,3 +88,6 @@ details.tabelle caption { position: absolute; width: 1px; height: 1px; overflow:
 .urteil p { margin: 0 0 .5rem; }
 .urteil p:last-child { margin: 0; }
 .urteil__aktion { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin: 0 0 1.25rem; }
+
+.stempel { max-width: 100%; }
+@media (max-width: 600px) { .hero__beweis { margin-right: 1rem; } }

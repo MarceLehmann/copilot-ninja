@@ -292,7 +292,7 @@
       "grenzen": [
         "Beim Datei-Upload gelten Limits. Konkrete Zahlen nennt die geprüfte Microsoft-Seite nicht, darum stehen sie hier nicht.",
         "Die Befunde sind Hinweise und keine Revision. Prüfe zwei oder drei Treffer in der Originaldatei, bevor du dich darauf verlässt.",
-        "Mit Microsoft Copilot Chat (Basic) gibt es laut Microsoft keinen Zugang zu Copilot in Excel. Die Grundform arbeitet deshalb mit einer hochgeladenen Datei im Chat."
+        "Copilot Chat (Basic) hat keinen Zugang zu Copilot in Excel. Microsoft 365 Copilot (Basic) bietet ohne Add-on Standard-Zugang, der bei hoher Auslastung eingeschränkt sein kann. Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on vollen Umfang und Priority Access. Die Bezeichnung im Produkt zeigt deine Stufe; Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit. Diese Grundform arbeitet mit einer hochgeladenen Datei im Chat."
       ],
       "probe": "Prüf eine Datei mit einer bekannten Dublette. Fehlt sie in der Befundliste, stimmt die Liste nicht.",
       "meister_variante": null,
@@ -344,7 +344,7 @@
       ],
       "zugang": "studio",
       "zugang_anker": "studio-testversion",
-      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität",
+      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.",
       "klasse": "zeitlos",
       "zielgruppe": [
         "Teamleitung",
@@ -433,7 +433,7 @@
       ],
       "zugang": "studio",
       "zugang_anker": "studio-testversion",
-      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität",
+      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.",
       "klasse": "zeitlos",
       "zielgruppe": [
         "Büro",
@@ -460,7 +460,7 @@
         "Die Übergabe ist hier nur eine Aussage im Chat. Für eine echte Weiterleitung brauchst du ein Tool oder einen Flow, den diese Vorlage nicht enthält.",
         "Wer Personendaten erfasst, klärt vorher Datenschutz und Aufbewahrung. Das ist hier nicht geprüft.",
         "Teste mit unklaren und unvollständigen Anfragen, nicht nur mit dem Idealfall.",
-        "Testversion und Betrieb unterscheiden sich wie bei der Grundform für interne Anleitungen: Prüfen im Testchat ja, Veröffentlichen nur mit Lizenz oder Kapazität."
+        "In der Testversion prüfst du im Testchat. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung."
       ],
       "probe": "Frag im Testchat nach einem Preis und stell eine unklare Anfrage. Lehnt der Agent den Preis ab und fragt bei der unklaren Anfrage nach?",
       "meister_variante": null,
@@ -551,7 +551,7 @@
       "grenzen": [
         "Die Fragen sind so gut wie dein Anlass. Wer «weiss ich nicht» sagt, bekommt eine markierte Lücke statt einer Vermutung.",
         "Stellt die Antwort mehrere Fragen auf einmal, schreib «Bitte nur eine Frage» und mach weiter.",
-        "Ohne Zusatzlizenz kennt Microsoft Copilot Chat laut Microsoft deine Mails und Dateien nicht. Fakten bringst du selbst ein."
+        "Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff."
       ],
       "probe": "Zähle bei drei Texten mit und drei Texten ohne Verhör die Überarbeitungsrunden bis zur versandfertigen Fassung.",
       "meister_variante": null,
@@ -792,7 +792,7 @@
         "Die Antwort sieht laut Microsoft nur Inhalte, auf die du ohnehin Zugriff hast. Was nicht im Postfach oder Chat steht, fehlt auch im Bericht.",
         "Mündliche Absprachen ohne Notiz kommen nicht vor.",
         "«Kann ich ignorieren» ist ein Vorschlag, kein Entscheid.",
-        "Ohne Lizenz greift Microsoft Copilot Chat ausserhalb von Outlook nicht automatisch auf Mails und Chats zu."
+        "Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff."
       ],
       "probe": "Miss die Zeit vom ersten Login nach den Ferien bis zur ersten erledigten Antwort und vergleiche sie mit deiner letzten Rückkehr.",
       "meister_variante": null,
@@ -1099,7 +1099,7 @@
         "Zwei Eröffnungsfragen."
       ],
       "grenzen": [
-        "Laut Microsoft nutzt nur das lizenzierte Microsoft Copilot automatisch Mails, Chats, Besprechungen und Dateien über Microsoft Graph. Microsoft Copilot Chat ohne Lizenz tut das nicht.",
+        "Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on breiten Zugriff auf Organisationsdaten über Graph und Work IQ. Ohne Add-on bleiben Ausnahmen: Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.",
         "Die Antwort sieht laut Microsoft nur Inhalte, auf die du Zugriff hast.",
         "Mündliche Absprachen ohne Notiz fehlen im Dossier."
       ],
@@ -1353,7 +1353,8 @@
         "Nimm Texte der gleichen Textart. Mischst du Mails und Fachartikel, wird der Steckbrief unscharf.",
         "Lade nur Texte hoch, die wirklich von dir sind.",
         "Benutzerdefinierte Anweisungen gelten laut Microsoft für alle deine Unterhaltungen. Ein Stil für Kundenmails passt nicht in jeden Chat.",
-        "Die Menünamen stammen aus dem englischen Lernmodul. In deiner Oberfläche können sie anders heissen."
+        "Die Menünamen stammen aus dem englischen Lernmodul. In deiner Oberfläche können sie anders heissen.",
+        "Benutzerdefinierte Anweisungen sind Vorschau. Der Admin deines Tenants steuert die Freigabe; die Verfügbarkeit kann abweichen."
       ],
       "probe": "Zähle die Änderungen, die du an einem Entwurf machst, einmal mit und einmal ohne Steckbrief.",
       "meister_variante": null,
@@ -1578,18 +1579,18 @@
       "nutzen": "Dein bester Chatverlauf wird ein Werkzeug, dem du nie wieder erklären musst, wie du es haben willst.",
       "problem": "In einem Chat hat nach mehreren Korrekturen endlich alles gestimmt. Nächste Woche fängst du wieder bei null an und erklärst alles noch einmal.",
       "vorher": "Merk dir, wie ich das haben will.",
-      "technik_text": "Ziel: Dieses Gespräch hat gut funktioniert. Schreib daraus Anweisungen für einen Agent, der sich immer so verhält.\n\nQuelle: Nur dieser Chatverlauf.\n\nErwartung: Anweisungen in Markdown mit dieser Gliederung:\n# Zweck\n# Ablauf\nJeder Schritt mit Ziel, Aktion und Übergang zum nächsten Schritt.\n# Ton und Format\n# Grenzen\nÜbernimm meine Korrekturen aus dem Verlauf als feste Regeln. Lass Einzelheiten weg, die nur für diesen einen Fall galten, und liste sie danach separat auf. Bleib unter 8000 Zeichen.",
+      "technik_text": "Ziel: Dieses Gespräch hat gut funktioniert. Erstelle daraus drei klar getrennte Abschnitte für einen Agent.\n\nQuelle: Nur dieser Chatverlauf.\n\nErwartung:\n# Name\nHöchstens 30 Zeichen.\n# Beschreibung\nHöchstens 1000 Zeichen. Beschreibe Zweck und Aufgaben so, dass Modell und Nutzer den Agent finden.\n# Instructions\nHöchstens 8000 Zeichen, in Markdown mit den Untertiteln Zweck, Ablauf, Ton und Format sowie Grenzen. Jeder Ablaufschritt mit Ziel, Aktion und Übergang zum nächsten Schritt. Übernimm meine Korrekturen als feste Regeln. Lass Einzelheiten weg, die nur für diesen einen Fall galten, und liste sie nach den drei Abschnitten separat auf.",
       "zusatz_texte": [],
       "so_nutzt_du_es": [
         "Am Ende eines gelungenen Chats in Microsoft Copilot Chat den Text einfügen und senden.",
         "Die Liste der Einzelheiten lesen und ergänzen, was doch eine feste Regel ist.",
         "Im Agent Builder einen neuen Agent anlegen und mit «Skip to configure» direkt zur Konfiguration gehen.",
-        "Name, Beschreibung und Anweisungen ins Feld «Instructions» einfügen. Das Feld fasst laut Microsoft höchstens 8000 Zeichen.",
+        "Im Tab «Configure» den Namen in «Name» (maximal 30 Zeichen), die Beschreibung in «Description» (maximal 1000 Zeichen) und nur die Anweisungen in «Instructions» (maximal 8000 Zeichen) einfügen. «Knowledge» und «Starter Prompts» sind separate Felder.",
         "Den Agent im Tab «Try it» mit drei echten Aufgaben ausprobieren.",
         "Danach die Anweisungen mit Nr. 17 prüfen."
       ],
       "das_darfst_du_erwarten": [
-        "Anweisungen mit Zweck, Ablauf, Ton und Format und Grenzen.",
+        "Drei getrennte Abschnitte: Name, Beschreibung und Instructions mit Zweck, Ablauf, Ton und Format sowie Grenzen.",
         "Jeder Ablaufschritt mit Ziel, Aktion und Übergang.",
         "Deine Korrekturen als feste Regeln.",
         "Eine separate Liste mit Einzelheiten, die nur für diesen Fall galten."
@@ -1984,7 +1985,7 @@
       ],
       "zugang": "studio",
       "zugang_anker": "studio-testversion",
-      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität",
+      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.",
       "klasse": "zeitlos",
       "zielgruppe": [
         "Maker"
@@ -2064,7 +2065,7 @@
       ],
       "zugang": "studio",
       "zugang_anker": "studio-testversion",
-      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität",
+      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.",
       "klasse": "produktabhaengig",
       "zielgruppe": [
         "Maker",
@@ -2221,10 +2222,11 @@
         "schwärzen",
         "Mail",
         "Kundendaten",
-        "Vertrag"
+        "Vertrag",
+        "pseudonymisieren"
       ],
       "titel": "Die Tarnkappe",
-      "klartitel": "Text anonymisieren, bevor er weitergeht",
+      "klartitel": "Text pseudonymisieren, bevor er weitergeht",
       "guertel": 6,
       "art": "pinselstrich",
       "werkzeug": [
@@ -2242,13 +2244,13 @@
       "moment": "Bevor ein echter Fall weitergeht",
       "nutzen": "Namen, Firmen, Beträge und Nummern werden zu Platzhaltern, und die Zuordnung bekommst du getrennt zurück.",
       "problem": "Du willst einen echten Fall in einer Schulung, mit einer externen Stelle oder in einer Websuche besprechen. Namen, Beträge und Nummern dürfen nicht mit.",
-      "vorher": "Anonymisiere diesen Text.",
-      "technik_text": "Ziel: Mach den Text unten so, dass niemand Personen, Firmen oder Orte darin erkennt. Der Inhalt soll verständlich bleiben.\n\nQuelle: Nur der Text unten. Ergänze nichts.\n\nErwartung: Ersetze\n- Namen von Personen durch [PERSON_1], [PERSON_2] und so weiter\n- Firmen und Organisationen durch [FIRMA_1] und so weiter\n- Adressen und Orte durch [ORT_1], Telefonnummern und E-Mail-Adressen durch [KONTAKT_1], Kunden-, Vertrags- und Rechnungsnummern durch [NUMMER_1]\n- Beträge durch [BETRAG_1], ausser ich schreibe unten, dass sie bleiben dürfen\nGleiche Personen und Firmen bekommen immer denselben Platzhalter.\nGib aus:\n1. Den anonymisierten Text.\n2. Getrennt darunter eine Tabelle «Zuordnung» mit Platzhalter und Original. Diese Tabelle behalte ich für mich.\n3. Eine Liste «Prüfen» mit Stellen, die eine Person trotzdem erkennbar machen könnten, zum Beispiel eine seltene Funktion, ein Datum oder ein besonderes Ereignis.\n\nBeträge bleiben: {Beträge bleiben|ja oder nein}\n\nText:\n{Text|der Text mit dem echten Fall}",
+      "vorher": "Pseudonymisiere diesen Text.",
+      "technik_text": "Ziel: Pseudonymisiere Personen, Firmen und Orte im Text unten mit einheitlichen Platzhaltern. Der Inhalt soll verständlich bleiben.\n\nQuelle: Nur der Text unten. Ergänze nichts.\n\nErwartung: Ersetze\n- Namen von Personen durch [PERSON_1], [PERSON_2] und so weiter\n- Firmen und Organisationen durch [FIRMA_1] und so weiter\n- Adressen und Orte durch [ORT_1], Telefonnummern und E-Mail-Adressen durch [KONTAKT_1], Kunden-, Vertrags- und Rechnungsnummern durch [NUMMER_1]\n- Beträge durch [BETRAG_1], ausser ich schreibe unten, dass sie bleiben dürfen\nGleiche Personen und Firmen bekommen immer denselben Platzhalter.\nGib aus:\n1. Den pseudonymisierten Text.\n2. Getrennt darunter eine Tabelle «Zuordnung» mit Platzhalter und Original. Diese Tabelle behalte ich für mich.\n3. Eine Liste «Prüfen» mit Stellen, die eine Person trotzdem erkennbar machen könnten, zum Beispiel eine seltene Funktion, ein Datum oder ein besonderes Ereignis.\n\nBeträge bleiben: {Beträge bleiben|ja oder nein}\n\nText:\n{Text|der Text mit dem echten Fall}",
       "zusatz_texte": [],
       "so_nutzt_du_es": [
         "Den Text einfügen, festlegen, ob Beträge bleiben, und senden.",
         "Die Liste «Prüfen» abarbeiten und die Stellen selbst umschreiben.",
-        "Nur den anonymisierten Teil weitergeben, nie die Zuordnung.",
+        "Nur den pseudonymisierten Teil weitergeben, nie die Zuordnung.",
         "Kommt eine Antwort zurück, setzt du die Originale selbst wieder ein."
       ],
       "das_darfst_du_erwarten": [
@@ -2260,9 +2262,10 @@
         "Keine Garantie, dass nichts Erkennbares übrig bleibt. Die Liste «Prüfen» ist ein Hinweis, du liest selbst.",
         "Die Zuordnung steht im selben Chat. Laut Microsoft werden Prompts und Antworten unter Enterprise Data Protection protokolliert und aufbewahrt und stehen für Audit und eDiscovery bereit. Teile den Chat deshalb nicht.",
         "Den Originaltext nur einfügen, wenn eure internen Regeln das erlauben. Microsoft nennt für Prompts und Antworten bei Anmeldung mit Geschäfts- oder Schulkonto Enterprise Data Protection.",
-        "Anonymisieren ersetzt keine Abklärung mit der Stelle, die bei euch für Datenschutz zuständig ist."
+        "Pseudonymisieren ersetzt keine Abklärung mit der Stelle, die bei euch für Datenschutz zuständig ist.",
+        "Streng genommen pseudonymisierst du: Mit der Zuordnung lässt sich jede Person wieder bestimmen. Gib den Text nicht frei, nur weil Namen ersetzt sind."
       ],
-      "probe": "Gib den anonymisierten Text einer Kollegin, die den Fall nicht kennt. Zähle, wie viele Personen oder Firmen sie trotzdem errät. Das Ziel ist null.",
+      "probe": "Gib den pseudonymisierten Text einer Kollegin, die den Fall nicht kennt. Zähle, wie viele Personen oder Firmen sie trotzdem errät. Das Ziel ist null.",
       "meister_variante": null,
       "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
       "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat",
@@ -2342,7 +2345,8 @@
         "Für Agents, die im Agent Builder erstellt sind und kein Tenant Graph Grounding nutzen, fallen laut Microsoft für Generative Answers keine Credits an.",
         "Agent Flows rechnet Microsoft separat ab: 13 Copilot Credits pro 100 Flow-Aktionen. Power Automate Cloud Flows laufen laut Microsoft über die Power-Automate-Lizenz und nicht über Copilot Credits.",
         "Microsoft empfiehlt beim Agent Usage Estimator 10 bis 20 Prozent Reserve auf die Schätzung.",
-        "Die Schätzung ersetzt nicht den Blick auf den tatsächlichen Verbrauch."
+        "Die Schätzung ersetzt nicht den Blick auf den tatsächlichen Verbrauch.",
+        "Zusatzkosten, zum Beispiel für Datenzugriff, Lizenzen oder andere Dienste, sind im Rechner nicht enthalten."
       ],
       "probe": "Vergleiche deine Schätzung nach dem ersten Monat mit dem tatsächlichen Verbrauch. Die Abweichung zeigt, wie gut deine Annahmen über die Gespräche waren.",
       "meister_variante": null,
@@ -2404,16 +2408,14 @@
         ],
         "regeln": [
           "Copilot Studio setzt die gekaufte Kapazität laut der Seite zur Lizenzierung monatlich durch, nicht genutzte Copilot Credits gehen nicht in den nächsten Monat über. Der Agent Usage Estimator schreibt dagegen, dass manche Käufe übertragbar sind. Massgebend ist dein Vertrag.",
-          "Bei 125 Prozent der vorausbezahlten Kapazität werden Custom Agents deaktiviert. Ein laufendes Gespräch wird nicht unterbrochen.",
-          "Ist die Kapazität aufgebraucht, starten keine neuen Agent Flows mehr. Der Agent selbst antwortet weiter."
+          "100 bis 125 %: Überverbrauch wird geduldet; ab 125 %: Custom Agents deaktiviert; Pay-as-you-go: keine Durchsetzung. Laufende Gespräche werden nicht unterbrochen. Danach wird jeder Aufruf abgelehnt, bis die Kapazität erhöht oder zurückgesetzt wird. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet.",
+          "Für Agent Flows gelten eigene Kapazitätsregeln: Ist ihre Kapazität aufgebraucht, starten keine neuen Läufe. Daraus folgt nicht, dass Custom Agents oberhalb der Prepaid-Schwelle von 125 % weiter antworten."
         ],
-        "lizenz_hinweis": "Laut Ratentabelle fallen für Mitarbeitende mit Microsoft-Copilot-Lizenz bei Classic answers, Generative answers, Agent actions, Tenant graph grounding und Agent-Flow-Aktionen keine Copilot Credits an, wenn der Agent mit ihrer angemeldeten Identität läuft. Bei Agent Flows gilt das nur für den Auslöser «When an agent calls the flow». Es gelten Fair-Use-Grenzen. Die Seite zur Lizenzierung nennt dagegen nur Classic answers, Generative answers und Graph Grounding ohne Verbrauch. Microsoft ist hier nicht einheitlich. Rechne im Zweifel ohne Haken.",
+        "lizenz_hinweis": "Mit Haken setzt der Rechner nur Classic Answers, Generative Answers und Tenant Graph Grounding auf 0 Credits, wenn der Agent mit der angemeldeten Identität eines Nutzers mit Microsoft-365-Copilot-Add-on-Lizenz läuft. Fair-Use-Grenzen gelten. Agent Actions und Agent-Flow-Aktionen bleiben vorsorglich eingerechnet. Computer-Using-Agent-Aktionen sind nicht pauschal gratis. Prüfe die Ausnahmen für deinen Einsatz in der Microsoft-Quelle.",
         "lizenz_ohne_verbrauch": [
           "classic",
           "generativ",
-          "aktion",
-          "graph",
-          "flow"
+          "graph"
         ],
         "beispiel": {
           "gespraeche": 400,
@@ -2542,7 +2544,7 @@
       ],
       "zugang": "studio",
       "zugang_anker": "studio-testversion",
-      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen, veröffentlichen mit Lizenz oder Kapazität",
+      "zugang_text": "Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.",
       "klasse": "zeitlos",
       "zielgruppe": [
         "IT",

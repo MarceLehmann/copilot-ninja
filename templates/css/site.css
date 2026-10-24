@@ -626,3 +626,6 @@ a.pfadzeile__name:hover { color: var(--signal); }
 @media (min-width: 720px) { .momente-kurz { grid-template-columns: 1fr 1fr; } }
 .momente-kurz li { display: flex; flex-wrap: wrap; gap: .1rem .5rem; align-items: baseline; padding: .45rem 0; border-bottom: 1px solid var(--line); }
 .momente-kurz q { font-weight: 600; }
+
+.tdk__inhalt, .heute__kopf > div { min-width: 0; }
+.tdk__titel + .metazeile, .heute__titel + .metazeile { margin-top: .75rem; }
