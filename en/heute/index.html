@@ -102,33 +102,29 @@
       <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>15 minutes every Monday in your calendar</a><a class="knopf knopf--leise" href="../techniken/">All techniques</a></p>
     </header>
     <div class="heute sektion--eng">
-      <div data-heute data-heute-datum="2026-10-23"><article class="karte--gross rolle-gross" data-technik="t21" data-guertel-nr="6" data-schmiede>
-<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">21</span><div>
-<h2 class="heute__titel">The Interpreter<small>No. 21: Power Automate expressions with explanations</small></h2>
-<ul class="metazeile"><li><span class="knoten" data-guertel-nr="6">Brown belt</span></li><li><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license in Microsoft Copilot Chat. The flow itself is covered by Power Automate licenses</a></li><li><span>Try it: approx. 10 min</span></li></ul>
+      <div data-heute data-heute-datum="2026-10-24"><article class="karte--gross rolle-gross" data-technik="t14" data-guertel-nr="4" data-schmiede>
+<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">14</span><div>
+<h2 class="heute__titel">The Imprint<small>No. 14: Turn your best chat into an agent</small></h2>
+<ul class="metazeile"><li><span class="knoten" data-guertel-nr="4">Green belt</span></li><li><a class="zugang zugang--builder" href="../gratis/nachschlagen/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license with Agent Builder, instructions and public websites only</a></li><li><span>Try it: approx. 20 min</span></li></ul>
 </div></div>
-<p class="abschnitt__problem">The flow should write the date from the form into the email in Swiss time as DD.MM.YYYY. The expressions from forums don't work, and none of them is explained.</p>
-<details class="schmiede-klappe" data-nur-js><summary>Make it yours</summary><div class="schmiede">
-<div class="schmiede__kopf"><p class="schmiede__hinweis">Nothing leaves your browser.</p></div>
-<div class="schmiede__feld schmiede__feld--breit"><label for="heute-f1">Task</label><textarea id="heute-f1" data-ph-feld="Task" rows="4" aria-describedby="heute-f1-h"></textarea><small id="heute-f1-h">e.g. output the date from the trigger in Swiss time as DD.MM.YYYY</small></div>
-<div class="schmiede__feld"><label for="heute-f2">Sample value</label><input id="heute-f2" type="text" data-ph-feld="Sample value" autocomplete="off" aria-describedby="heute-f2-h"><small id="heute-f2-h">e.g. 2026-10-15T08:30:00Z</small></div>
-</div></details>
+<p class="abschnitt__problem">In one chat, after several corrections, everything finally worked. Next week you start from zero again and explain everything once more.</p>
+
 <div class="rolle" data-rolle>
-<div class="rolle__kopf"><p class="rolle__titel">Prompt to copy</p></div>
-<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> I need an expression for Power Automate.</mark>
+<div class="rolle__kopf"><p class="rolle__titel">Text to copy</p></div>
+<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> This conversation worked well. Turn it into three clearly separated sections for an agent.</mark>
 
-<mark class="teil teil--kontext"><span class="teil__label">Context:</span> The expression should <span class="ph" data-ph="Task">[Task, e.g. output the date from the trigger in Swiss time as DD.MM.YYYY]</span>. The input looks like this: <span class="ph" data-ph="Sample value">[Sample value, e.g. 2026-10-15T08:30:00Z]</span>.</mark>
-
-<mark class="teil teil--quelle"><span class="teil__label">Source:</span> Base your answer on the expression functions reference on learn.microsoft.com and give the link for every function you use.</mark>
+<mark class="teil teil--quelle"><span class="teil__label">Source:</span> Only this chat history.</mark>
 
 <mark class="teil teil--erwartung"><span class="teil__label">Expectations:</span>
-1. The expression on one line, ready to copy.
-2. An explanation from the inside out, one line per function.
-3. The expected result for my sample value.
-4. One edge case where the expression fails, for example an empty value, and how I catch it.</mark></pre>
-<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy prompt</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technique from the PowerPlatformAcademy Dojo: copilot.ninja/en/21&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
+# Name
+At most 30 characters.
+# Description
+At most 1000 characters. Describe its purpose and tasks to help the model and users find the agent.
+# Instructions
+At most 8000 characters, in Markdown with the subheadings Purpose, Process, Tone and format, and Limits. Each process step has a goal, action and transition to the next step. Turn my corrections into fixed rules. Leave out details that only applied to this case and list them separately after the three sections.</mark></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy text</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technique from the PowerPlatformAcademy Dojo: copilot.ninja/en/14&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
 </div>
-<p><a class="knopf knopf--leise" href="../techniken/power-automate-ausdruecke-erklaert/">Full technique with guide, limits and source</a></p>
+<p><a class="knopf knopf--leise" href="../techniken/aus-chat-einen-agent-machen/">Full technique with guide, limits and source</a></p>
 </article></div>
       <aside class="heute__seite" aria-label="Your path">
         <div class="naechster" data-naechster-schritt>
@@ -176,7 +172,7 @@
       <p>The PowerPlatformAcademy Dojo is part of the <a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=dojo&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a>.</p>
     </div>
     <div class="fuss__recht">
-      <p>Not an offer from Microsoft. No licensing advice: ask your IT or Microsoft partner about your case. Independent website by Marcel Lehmann, not operated, sponsored or endorsed by Microsoft. Microsoft, the Power Platform product names (including Power Apps, Power Automate and Copilot Studio), and Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ are trademarks of the Microsoft group of companies. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
+      <p>Not an offer from Microsoft. Independent website by Marcel Lehmann, not operated, sponsored or endorsed by Microsoft. Microsoft, the Power Platform product names (including Power Apps, Power Automate and Copilot Studio), and Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word and Work IQ are trademarks of the Microsoft group of companies. GitHub and GitHub Copilot are trademarks of GitHub, Inc.</p>
       <p>No cookies, no profiles. Page views are counted without personal data (GoatCounter). Your progress stays in your browser.</p>
       <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Motion off</button></p>
     </div>

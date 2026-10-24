@@ -5,7 +5,7 @@ name: "IndexNow Submission"
 # (https://copilot.ninja/877ee17afb57b50738142a71bd40922c.txt), darum steht er hier direkt.
 on:
   workflow_run:
-    workflows: ["pages-build-deployment"]
+    workflows: ["Pages deploy"]
     types: [completed]
   schedule:
     - cron: '0 2 * * *' # taeglich 02:00 UTC

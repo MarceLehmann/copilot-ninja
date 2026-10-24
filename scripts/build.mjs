@@ -125,7 +125,7 @@ let MOMENTE = MOMENTE_TEXT.de;
 const UMZUEGE = [['dojo/test/', 'pruefung/', 'Gürtelprüfung', 'Belt exam']];
 const ALTE_ANKER = ['notizen-zu-protokoll', 'antwort-auf-kundenmail', 'tabelle-pruefen', 'agent-interne-anleitungen', 'agent-anfragen-sortieren'];
 // Zweisprachigkeit 16.10.2026: dojo.js 20 auf 23 und dojo-seiten.js 28 auf 32 (englische Texte direkt im Skript, kein Nachladen), sprache.js neu 2.
-// GoatCounter 16.10.2026: count.js neu 10 (selbst gehostete Kopie von gc.zgo.at, 9.4 KB, unveraendert, daher nicht kuerzbar).
+// GoatCounter 24.10.2026: count.js ist lokal angepasst und sendet keinen Query-String. Die sha256 im Dateikopf gehoert zum unveraenderten Original.
 // Budgets in KB. Korrektur 15.10.2026: site.css 40 auf 46 (Schrift, Fokus, Hero, kompakter Pfad), core.js 20 auf 22,
 // dojo-seiten.js und dojo-extra.js neu gedeckelt, Schriftdateien gedeckelt. Ueber 120 Prozent bricht der Build ab.
 // Review 15.10.2026: site.css 46 auf 49 (Startseite mit Gratis-Check, Pfadzeilen, kompakter Technik des Tages),
