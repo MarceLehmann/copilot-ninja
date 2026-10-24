@@ -102,29 +102,34 @@
       <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>15 minutes every Monday in your calendar</a><a class="knopf knopf--leise" href="../techniken/">All techniques</a></p>
     </header>
     <div class="heute sektion--eng">
-      <div data-heute data-heute-datum="2026-10-24"><article class="karte--gross rolle-gross" data-technik="t14" data-guertel-nr="4" data-schmiede>
-<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">14</span><div>
-<h2 class="heute__titel">The Imprint<small>No. 14: Turn your best chat into an agent</small></h2>
-<ul class="metazeile"><li><span class="knoten" data-guertel-nr="4">Green belt</span></li><li><a class="zugang zugang--builder" href="../gratis/nachschlagen/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license with Agent Builder, instructions and public websites only</a></li><li><span>Try it: approx. 20 min</span></li></ul>
+      <div data-heute data-heute-datum="2026-10-24"><article class="karte--gross rolle-gross" data-technik="t06" data-guertel-nr="2" data-schmiede>
+<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">06</span><div>
+<h2 class="heute__titel">The Hawk Eye<small>No. 6: Check a draft against the source document</small></h2>
+<ul class="metazeile"><li><span class="knoten" data-guertel-nr="2">Yellow belt</span></li><li><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license, in Microsoft Copilot Chat with file upload</a></li><li><span>Try it: approx. 10 min</span></li></ul>
 </div></div>
-<p class="abschnitt__problem">In one chat, after several corrections, everything finally worked. Next week you start from zero again and explain everything once more.</p>
-
+<p class="abschnitt__problem">You summarized the annual report for the board of directors. There may be a wrong number in it, and by the third read you no longer see it.</p>
+<details class="schmiede-klappe" data-nur-js><summary>Make it yours</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Nothing leaves your browser.</p></div>
+<div class="schmiede__feld"><label for="heute-f1">Source document</label><input id="heute-f1" type="text" data-ph-feld="Source document" autocomplete="off" aria-describedby="heute-f1-h"><small id="heute-f1-h">e.g. file name</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="heute-f2">Draft</label><textarea id="heute-f2" data-ph-feld="Draft" rows="4" aria-describedby="heute-f2-h"></textarea><small id="heute-f2-h">e.g. your summary or text</small></div>
+</div></details>
 <div class="rolle" data-rolle>
-<div class="rolle__kopf"><p class="rolle__titel">Text to copy</p></div>
-<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> This conversation worked well. Turn it into three clearly separated sections for an agent.</mark>
+<div class="rolle__kopf"><p class="rolle__titel">Prompt to copy</p></div>
+<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> Check my draft against the attached source document. Do not rewrite anything.</mark>
 
-<mark class="teil teil--quelle"><span class="teil__label">Source:</span> Only this chat history.</mark>
+<mark class="teil teil--quelle"><span class="teil__label">Source:</span> The attached document <span class="ph" data-ph="Source document">[Source document, e.g. file name]</span> is the only source. My draft is below.</mark>
 
-<mark class="teil teil--erwartung"><span class="teil__label">Expectations:</span>
-# Name
-At most 30 characters.
-# Description
-At most 1000 characters. Describe its purpose and tasks to help the model and users find the agent.
-# Instructions
-At most 8000 characters, in Markdown with the subheadings Purpose, Process, Tone and format, and Limits. Each process step has a goal, action and transition to the next step. Turn my corrections into fixed rules. Leave out details that only applied to this case and list them separately after the three sections.</mark></pre>
-<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy text</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technique from the PowerPlatformAcademy Dojo: copilot.ninja/en/14&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
+<mark class="teil teil--erwartung"><span class="teil__label">Expectations:</span> A table with the columns Statement from my draft, Location in the source, Finding.
+Finding is exactly one of these values: supported, different, not in the source.
+For “different”, quote the passage from the source verbatim.
+Pay special attention to numbers, dates, names and deadlines.
+At the end: how many statements you checked.</mark>
+
+My draft:
+<span class="ph" data-ph="Draft">[Draft, e.g. your summary or text]</span></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy prompt</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technique from the PowerPlatformAcademy Dojo: copilot.ninja/en/6&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
 </div>
-<p><a class="knopf knopf--leise" href="../techniken/aus-chat-einen-agent-machen/">Full technique with guide, limits and source</a></p>
+<p><a class="knopf knopf--leise" href="../techniken/entwurf-gegen-quelle-pruefen/">Full technique with guide, limits and source</a></p>
 </article></div>
       <aside class="heute__seite" aria-label="Your path">
         <div class="naechster" data-naechster-schritt>

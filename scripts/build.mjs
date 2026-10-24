@@ -540,7 +540,7 @@ ${kursZeile('vier-wochen')}
 </div>`;
 }
 // Startseite: Rotation nur ueber Techniken ohne Zusatzlizenz vom weissen bis zum orangen Guertel (Review 15.10.2026, H6).
-// Gleiche Regel in dojo.js (heuteKompakt). /heute/ behaelt die volle Rotation.
+// Gleiche Regel in dojo.js (heuteKompakt). /heute/ nutzt dieselbe Rotation (369).
 const FUER_START = (t) => t && t.zugang === 'ohne-zl' && t.guertel <= 3;
 function heuteTechnik(nurStart = false) {
   const folge = (daten.tag_reihenfolge || []).filter(id => NACH_ID[id] && NACH_ID[id].typ === 'technik' && (!nurStart || FUER_START(NACH_ID[id])));
@@ -870,7 +870,7 @@ function baueVierWochen() {
   });
 }
 function baueHeute() {
-  const t = heuteTechnik();
+  const t = heuteTechnik(true); // dieselbe Rotation wie die Startseite (Marcel 24.10.2026, 369)
   seite('heute/index.html', {
     seite: 'heute', template: 'heute.html', titel: T('Technik des Tages | Copilot Dojo', 'Technique of the day | Copilot Dojo'),
     beschreibung: T('Jeden Tag eine Technik aus dem PowerPlatformAcademy Dojo, für alle am selben Tag dieselbe.', 'One technique from the PowerPlatformAcademy Dojo every day, the same for everyone on the same day.'), noindex: true, canonical: null,

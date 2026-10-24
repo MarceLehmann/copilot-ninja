@@ -232,7 +232,9 @@
     if (!boxen.length) return;
     json('assets/data/' + LP + 'tag.json').then(function (tag) {
       if (!tag || !tag.reihenfolge || !tag.reihenfolge.length) return;
-      var f = tag.reihenfolge, n = tage(istIso(tag.start) ? tag.start : heuteIso(), heuteIso());
+      var f = tag.reihenfolge.filter(function (i) { var e = tag.eintraege && tag.eintraege[i]; return e && e.zugang === 'ohne-zl' && e.guertel <= 3; });
+      if (!f.length) return;
+      var n = tage(istIso(tag.start) ? tag.start : heuteIso(), heuteIso());
       var id = f[((n % f.length) + f.length) % f.length], t = tag.eintraege && tag.eintraege[id];
       if (!t) return;
       boxen.forEach(function (box) {

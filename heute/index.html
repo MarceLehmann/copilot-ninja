@@ -102,29 +102,34 @@
       <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a><a class="knopf knopf--leise" href="../techniken/">Alle Techniken</a></p>
     </header>
     <div class="heute sektion--eng">
-      <div data-heute data-heute-datum="2026-10-24"><article class="karte--gross rolle-gross" data-technik="t14" data-guertel-nr="4" data-schmiede>
-<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">14</span><div>
-<h2 class="heute__titel">Der Abdruck<small>Nr. 14: Aus dem besten Chat einen Agent machen</small></h2>
-<ul class="metazeile"><li><span class="knoten" data-guertel-nr="4">Grüner Gürtel</span></li><li><a class="zugang zugang--builder" href="../gratis/nachschlagen/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz mit Agent Builder, nur Anweisungen und öffentliche Websites</a></li><li><span>Ausprobieren: ca. 20 Min.</span></li></ul>
+      <div data-heute data-heute-datum="2026-10-24"><article class="karte--gross rolle-gross" data-technik="t06" data-guertel-nr="2" data-schmiede>
+<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">06</span><div>
+<h2 class="heute__titel">Das Falkenauge<small>Nr. 6: Entwurf gegen Quelldokument prüfen</small></h2>
+<ul class="metazeile"><li><span class="knoten" data-guertel-nr="2">Gelber Gürtel</span></li><li><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat, mit Datei-Upload</a></li><li><span>Ausprobieren: ca. 10 Min.</span></li></ul>
 </div></div>
-<p class="abschnitt__problem">In einem Chat hat nach mehreren Korrekturen endlich alles gestimmt. Nächste Woche fängst du wieder bei null an und erklärst alles noch einmal.</p>
-
+<p class="abschnitt__problem">Du hast den Jahresbericht für den Verwaltungsrat zusammengefasst. Vielleicht steckt darin eine falsche Zahl, und beim dritten Lesen siehst du sie nicht mehr.</p>
+<details class="schmiede-klappe" data-nur-js><summary>Für dich anpassen</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Nichts verlässt deinen Browser.</p></div>
+<div class="schmiede__feld"><label for="heute-f1">Quelldokument</label><input id="heute-f1" type="text" data-ph-feld="Quelldokument" autocomplete="off" aria-describedby="heute-f1-h"><small id="heute-f1-h">z. B. Name der Datei</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="heute-f2">Entwurf</label><textarea id="heute-f2" data-ph-feld="Entwurf" rows="4" aria-describedby="heute-f2-h"></textarea><small id="heute-f2-h">z. B. deine Zusammenfassung oder dein Text</small></div>
+</div></details>
 <div class="rolle" data-rolle>
-<div class="rolle__kopf"><p class="rolle__titel">Text zum Kopieren</p></div>
-<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Dieses Gespräch hat gut funktioniert. Erstelle daraus drei klar getrennte Abschnitte für einen Agent.</mark>
+<div class="rolle__kopf"><p class="rolle__titel">Prompt zum Kopieren</p></div>
+<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Prüfe meinen Entwurf gegen das angehängte Quelldokument. Schreib nichts um.</mark>
 
-<mark class="teil teil--quelle"><span class="teil__label">Quelle:</span> Nur dieser Chatverlauf.</mark>
+<mark class="teil teil--quelle"><span class="teil__label">Quelle:</span> Das angehängte Dokument <span class="ph" data-ph="Quelldokument">[Quelldokument, z. B. Name der Datei]</span> ist die einzige Quelle. Mein Entwurf steht unten.</mark>
 
-<mark class="teil teil--erwartung"><span class="teil__label">Erwartung:</span>
-# Name
-Höchstens 30 Zeichen.
-# Beschreibung
-Höchstens 1000 Zeichen. Beschreibe Zweck und Aufgaben so, dass Modell und Nutzer den Agent finden.
-# Instructions
-Höchstens 8000 Zeichen, in Markdown mit den Untertiteln Zweck, Ablauf, Ton und Format sowie Grenzen. Jeder Ablaufschritt mit Ziel, Aktion und Übergang zum nächsten Schritt. Übernimm meine Korrekturen als feste Regeln. Lass Einzelheiten weg, die nur für diesen einen Fall galten, und liste sie nach den drei Abschnitten separat auf.</mark></pre>
-<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Text kopieren</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technik aus dem PowerPlatformAcademy Dojo: copilot.ninja/14&#10;Quelle: Microsoft Learn, Stand 15.10.2026" data-nur-js>Weitergeben</button><p class="rolle__status" role="status"></p></div>
+<mark class="teil teil--erwartung"><span class="teil__label">Erwartung:</span> Eine Tabelle mit den Spalten Aussage aus meinem Entwurf, Fundstelle in der Quelle, Befund.
+Befund ist genau einer dieser Werte: belegt, abweichend, nicht in der Quelle.
+Bei «abweichend» zitierst du die Stelle aus der Quelle wörtlich.
+Prüfe besonders Zahlen, Daten, Namen und Fristen.
+Am Ende: wie viele Aussagen du geprüft hast.</mark>
+
+Mein Entwurf:
+<span class="ph" data-ph="Entwurf">[Entwurf, z. B. deine Zusammenfassung oder dein Text]</span></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Prompt kopieren</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technik aus dem PowerPlatformAcademy Dojo: copilot.ninja/6&#10;Quelle: Microsoft Learn, Stand 15.10.2026" data-nur-js>Weitergeben</button><p class="rolle__status" role="status"></p></div>
 </div>
-<p><a class="knopf knopf--leise" href="../techniken/aus-chat-einen-agent-machen/">Ganze Technik mit Anleitung, Grenzen und Quelle</a></p>
+<p><a class="knopf knopf--leise" href="../techniken/entwurf-gegen-quelle-pruefen/">Ganze Technik mit Anleitung, Grenzen und Quelle</a></p>
 </article></div>
       <aside class="heute__seite" aria-label="Dein Weg">
         <div class="naechster" data-naechster-schritt>
