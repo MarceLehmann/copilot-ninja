@@ -266,7 +266,7 @@
       "grenzen": [
         "The instructions do not replace a knowledge source. Without an added source, the agent cannot follow them.",
         "In the free trial you can create the agent and check it in the test chat, but you cannot publish it.",
-        "A published agent consumes Copilot Credits. You can find prices at Microsoft.",
+        "Using a published agent consumes Copilot Credits. Users with a Microsoft Copilot license in Microsoft 365 consume none according to the rate table. You can find prices at Microsoft.",
         "With agents on the GitHub Copilot harness, even testing can consume Copilot Credits.",
         "Microsoft advises against changing how citations are displayed through instructions. The template deliberately contains nothing on this."
       ],
@@ -1525,7 +1525,7 @@
       "grenzen": [
         "Only works if the rules in the knowledge source are clear. The agent does not find contradictions in the policy for you, it stumbles over them.",
         "According to Microsoft, an agent can only follow instructions about knowledge sources if they are set up.",
-        "Once published, the agent consumes Copilot Credits. According to Microsoft, a Generative Answer counts 2 Copilot Credits, Tenant Graph Grounding 10. The rates can change.",
+        "Using the published agent consumes Copilot Credits (none for users with a Microsoft Copilot license in Microsoft 365, according to the rate table). According to Microsoft, a Generative Answer counts 2 Copilot Credits, Tenant Graph Grounding 10. The rates can change.",
         "In the Copilot Studio trial you can build and check in the test chat, but not publish."
       ],
       "probe": "Count the questions to the responsible department on the topic, four weeks before and four weeks after the launch.",

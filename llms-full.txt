@@ -691,7 +691,7 @@ So nutzt du es:
 Grenzen:
 - Die Instruktion ersetzt keine Wissensquelle. Ohne hinzugefügte Quelle kann der Agent der Anweisung nicht folgen.
 - In der kostenlosen Testversion kannst du den Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen.
-- Ein veröffentlichter Agent verbraucht Copilot Credits. Preise findest du bei Microsoft.
+- Wer einen veröffentlichten Agent nutzt, verbraucht Copilot Credits. Nutzer mit einer Microsoft-Copilot-Lizenz verbrauchen in Microsoft 365 laut Ratentabelle keine. Preise findest du bei Microsoft.
 - Bei Agents auf dem GitHub-Copilot-Harness kann schon das Testen Copilot Credits verbrauchen.
 - Microsoft rät, die Darstellung von Quellenangaben nicht per Anweisung zu verändern. Die Vorlage enthält dazu bewusst nichts.
 
@@ -1058,7 +1058,7 @@ So nutzt du es:
 Grenzen:
 - Funktioniert nur, wenn die Regeln in der Wissensquelle eindeutig sind. Widersprüche im Reglement findet der Agent nicht für dich, er stolpert darüber.
 - Laut Microsoft kann ein Agent Anweisungen zu Wissensquellen nur befolgen, wenn sie eingerichtet sind.
-- Veröffentlicht verbraucht der Agent Copilot Credits. Eine Generative Answer zählt laut Microsoft 2 Copilot Credits, Tenant Graph Grounding 10. Die Raten können sich ändern.
+- Wer den veröffentlichten Agent nutzt, verbraucht Copilot Credits (Nutzer mit Microsoft-Copilot-Lizenz in Microsoft 365 laut Ratentabelle keine). Eine Generative Answer zählt laut Microsoft 2 Copilot Credits, Tenant Graph Grounding 10. Die Raten können sich ändern.
 - In der Testversion von Copilot Studio kannst du bauen und im Testchat prüfen, aber nicht veröffentlichen.
 
 Quellen: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
@@ -1970,7 +1970,7 @@ How to use it:
 Limits:
 - The instructions do not replace a knowledge source. Without an added source, the agent cannot follow them.
 - In the free trial you can create the agent and check it in the test chat, but you cannot publish it.
-- A published agent consumes Copilot Credits. You can find prices at Microsoft.
+- Using a published agent consumes Copilot Credits. Users with a Microsoft Copilot license in Microsoft 365 consume none according to the rate table. You can find prices at Microsoft.
 - With agents on the GitHub Copilot harness, even testing can consume Copilot Credits.
 - Microsoft advises against changing how citations are displayed through instructions. The template deliberately contains nothing on this.
 
@@ -2337,7 +2337,7 @@ How to use it:
 Limits:
 - Only works if the rules in the knowledge source are clear. The agent does not find contradictions in the policy for you, it stumbles over them.
 - According to Microsoft, an agent can only follow instructions about knowledge sources if they are set up.
-- Once published, the agent consumes Copilot Credits. According to Microsoft, a Generative Answer counts 2 Copilot Credits, Tenant Graph Grounding 10. The rates can change.
+- Using the published agent consumes Copilot Credits (none for users with a Microsoft Copilot license in Microsoft 365, according to the rate table). According to Microsoft, a Generative Answer counts 2 Copilot Credits, Tenant Graph Grounding 10. The rates can change.
 - In the Copilot Studio trial you can build and check in the test chat, but not publish.
 
 Sources: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
