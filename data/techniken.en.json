@@ -207,7 +207,7 @@
       "grenzen": [
         "File uploads have limits. The Microsoft page we checked gives no specific numbers, so none are listed here.",
         "The findings are pointers, not an audit. Verify two or three hits in the original file before you rely on them.",
-        "Copilot Chat (Basic) has no access to Copilot in Excel. Microsoft 365 Copilot (Basic) provides standard app access without an add-on, possibly limited at high demand. Microsoft 365 Copilot (Premium or Pro) provides full functionality and Priority Access with an add-on. The in-product label shows your tier; license and tenant configuration determine availability. This basic form works with a file uploaded to the chat."
+        "Copilot Chat (Basic) has no access to Copilot in Excel. Microsoft 365 Copilot (Basic) provides standard app access without an add-on, possibly limited at high demand. Microsoft 365 Copilot (Premium) provides full functionality and Priority Access with an add-on. The in-product label shows your tier; license and tenant configuration determine availability. This basic form works with a file uploaded to the chat."
       ],
       "probe": "Check a file with a known duplicate. If it is missing from the list of findings, the list is not reliable.",
       "meister_variante": null,
@@ -798,7 +798,7 @@
         "Two opening questions."
       ],
       "grenzen": [
-        "Microsoft 365 Copilot (Premium or Pro) provides broad access to organizational data through Graph and Work IQ with an add-on. Without an add-on, exceptions include Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.",
+        "Microsoft 365 Copilot (Premium) provides broad access to organizational data through Graph and Work IQ with an add-on. Without an add-on, exceptions include Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.",
         "According to Microsoft, the answer only sees content you have access to.",
         "Verbal agreements without a note are missing from the dossier."
       ],
@@ -1132,7 +1132,7 @@
         "chat history",
         "declarative agent"
       ],
-      "zugang_text": "No add-on license with Agent Builder, instructions and public websites only",
+      "zugang_text": "With Agent Builder at no extra cost, instructions and public websites only; availability per Microsoft depends on license or pay-as-you-go",
       "zielgruppe": [
         "Power users",
         "Makers"
@@ -1158,7 +1158,7 @@
         "A separate list of details that only applied to this case."
       ],
       "grenzen": [
-        "According to Microsoft, you can use Agent Builder for free without an add-on license as long as the agent only relies on instructions and web knowledge.",
+        "According to Microsoft, agents with instructions and web knowledge cause no additional cost. Whether you can open Agent Builder at all is not documented consistently: the agents admin guide names a Microsoft 365 Copilot license or pay-as-you-go for Copilot Studio as the prerequisite. Ask your IT whether Agent Builder is enabled for you.",
         "If the agent should access SharePoint or other company data, Microsoft says it is billed by consumption. For Microsoft Copilot Chat users this is off by default.",
         "The menu names come from the English documentation. Your interface may name them differently.",
         "One chat history shows one case. Check the agent with other cases before you share it."
@@ -1198,7 +1198,7 @@
         "knowledge source",
         "phone inquiries"
       ],
-      "zugang_text": "No add-on license with Agent Builder, your website as the knowledge source",
+      "zugang_text": "With Agent Builder at no extra cost, your website as the knowledge source; availability per Microsoft depends on license or pay-as-you-go",
       "zielgruppe": [
         "Small business owners",
         "Office",
@@ -1226,7 +1226,7 @@
       "grenzen": [
         "The agent lives in Microsoft Copilot Chat and is meant for employees, not for customers on the website.",
         "According to Microsoft, Agent Builder cannot fully exclude general knowledge. For stricter control, Microsoft points to Copilot Studio.",
-        "According to Microsoft, the agent only stays free with instructions and public websites. Agents with company data such as SharePoint are billed by consumption.",
+        "According to Microsoft, the agent only stays free of additional cost with instructions and public websites. Agents with company data such as SharePoint are billed by consumption. Whether Agent Builder is available to you depends, according to the agents admin guide, on a Microsoft 365 Copilot license or on pay-as-you-go for Copilot Studio.",
         "If something on the website is outdated, the agent passes it on.",
         "The menu names come from the English documentation. Your interface may name them differently."
       ],
@@ -1262,7 +1262,7 @@
         "objection handling",
         "practice"
       ],
-      "zugang_text": "No add-on license with Agent Builder, instructions only",
+      "zugang_text": "With Agent Builder at no extra cost, instructions only; availability per Microsoft depends on license or pay-as-you-go",
       "zielgruppe": [
         "Sales",
         "Customer service"
@@ -1290,7 +1290,7 @@
         "The feedback measures against your criteria, not against a sales method. The criteria decide its value.",
         "Real customer names and contract details do not belong in the training.",
         "A practiced conversation is not a real one. The agent does not know your customer.",
-        "According to Microsoft, the agent stays free of additional cost as long as it only relies on instructions and public websites."
+        "According to Microsoft, the agent stays free of additional cost as long as it only relies on instructions and public websites. Whether Agent Builder is available to you depends, according to the agents admin guide, on a Microsoft 365 Copilot license or on pay-as-you-go for Copilot Studio."
       ],
       "probe": "Record in the feedback how many criteria are met in the first and in the fifth round.",
       "meister_variante": null,
@@ -1691,7 +1691,7 @@
         "Management"
       ],
       "moment": "Before an agent goes live",
-      "nutzen": "Before going live, you know the order of magnitude of the consumption and what happens at 125 percent of the quota.",
+      "nutzen": "Before going live, you know the order of magnitude of the consumption and what happens when the quota is used up.",
       "problem": "Management asks what the new agent will consume in production. You have a guess, but no calculation.",
       "vorher": "What does my agent cost?",
       "technik_text": "Goal: Help me estimate the events per conversation for my agent. Its instructions are below.\n\nContext: The agent is for {Audience|back-office employees}. It uses {Setup|one knowledge source and two tools}.\n\nExpectations:\n1. For a typical and for a long conversation: how many answers from knowledge sources (generative), how many predefined answers (classic), how many actions such as tools or switches between topics, and how many steps in agent flows to expect.\n2. One sentence of reasoning per number.\n3. The assumption that changes the result the most.\nMark everything as an estimate. Do not calculate prices.\n\nInstructions:\n{Agent instructions|your agent's instructions}",
@@ -1760,8 +1760,8 @@
         ],
         "regeln": [
           "According to the licensing page, Copilot Studio enforces purchased capacity monthly, and unused Copilot Credits do not carry over to the next month. The Agent Usage Estimator, on the other hand, says some purchases can be carried over. Your contract is what counts.",
-          "100 to 125%: overage is tolerated; from 125%: custom agents are disabled; pay-as-you-go: no enforcement. Ongoing conversations are not interrupted. After that, every call is rejected until capacity is increased or reset. With pay-as-you-go on the environment, overage is billed to the Azure subscription.",
-          "Agent flows have separate capacity rules: when their capacity is exhausted, no new runs start. This does not mean custom agents keep answering above the 125% prepaid threshold."
+          "Without an overage source (pay-as-you-go or tenant pool), an environment consumes only its allocated Copilot Credits according to the current admin page; features that need credits can stop after that. Older Microsoft pages mentioned a tolerance up to 125 percent; the current admin page names no percentage threshold. With pay-as-you-go on the environment, overage is billed to the Azure subscription.",
+          "Agent flows have separate capacity rules: when no Copilot Credits are available, no new flow runs start, while the agent, according to Microsoft, keeps answering other interactions."
         ],
         "lizenz_hinweis": "With the box checked, the calculator sets only Classic Answers, Generative Answers and Tenant Graph Grounding to 0 credits when the agent runs with the signed-in identity of a user with a Microsoft 365 Copilot add-on license. Fair use limits apply. Agent actions and agent flow actions remain included as a precaution. Computer-using agent actions are not generally free. Check the Microsoft source for the exemptions that apply to your use.",
         "beispiel": {
@@ -1821,7 +1821,7 @@
       "grenzen": [
         "A sheet without an appointment in the calendar is just paper. The review date belongs in the responsible person's calendar.",
         "The criteria are suggestions. You have to decide on them as a team.",
-        "According to Microsoft, custom agents are disabled at 125 percent of the prepaid capacity. Ideally, your own shutdown criterion kicks in earlier."
+        "According to the current admin page, features that need Copilot Credits can stop once the allocated capacity is used up without an overage source. Ideally, your own shutdown criterion kicks in earlier."
       ],
       "probe": "Count the share of your agents with a completed operations sheet and the agents without a responsible person.",
       "meister_variante": null,

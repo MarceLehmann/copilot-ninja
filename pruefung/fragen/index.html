@@ -295,13 +295,13 @@
       </li>
       <li class="test__frage" id="frage-f7a">
         <p><span class="knoten" data-guertel-nr="7">Schwarzer Gürtel</span></p>
-        <h3>Was passiert ohne Pay-as-you-go am Environment bei 125 Prozent der vorausbezahlten Copilot-Credits-Kapazität?</h3>
-        <ul class="arrow-list"><li>Nichts, es wird nachverrechnet.</li><li>Custom Agents werden deaktiviert, laufende Gespräche werden nicht unterbrochen.</li><li>Alle Agents stoppen sofort.</li></ul>
+        <h3>Was passiert laut Microsoft, wenn ein Environment ohne Überverbrauchsquelle (Pay-as-you-go oder Tenant-Pool) seine zugeteilten Copilot Credits aufgebraucht hat?</h3>
+        <ul class="arrow-list"><li>Nichts, es wird nachverrechnet.</li><li>Funktionen, die Credits brauchen, können stoppen; mit Pay-as-you-go wird Überverbrauch verrechnet.</li><li>Alle Agents stoppen sofort, auch laufende Gespräche.</li></ul>
         <details class="einklapp">
           <summary>Auflösung</summary>
-          <p><strong>Richtig ist: Custom Agents werden deaktiviert, laufende Gespräche werden nicht unterbrochen.</strong></p>
-          <p>Zwischen 100 und 125 Prozent wird Überverbrauch geduldet. Ab 125 Prozent werden Custom Agents deaktiviert. Laufende Gespräche enden regulär; danach werden Aufrufe abgelehnt, bis die Kapazität erhöht oder zurückgesetzt wird. Mit Pay-as-you-go am Environment gibt es keine Durchsetzung; Überverbrauch wird Azure verrechnet.</p>
-          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Copilot Credits und Kapazität</a>, Stand 13.10.2026.</p>
+          <p><strong>Richtig ist: Funktionen, die Credits brauchen, können stoppen; mit Pay-as-you-go wird Überverbrauch verrechnet.</strong></p>
+          <p>Ohne Überverbrauchsquelle verbraucht ein Environment nur seine zugeteilten Copilot Credits; Funktionen, die Credits brauchen, können danach stoppen. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet, mit Tenant-Pool aus dem Pool. Ältere Microsoft-Seiten nannten eine Toleranz bis 125 Prozent, die aktuelle Admin-Seite nennt keine Prozentschwelle; massgebend ist die verlinkte Quelle.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn, Copilot Credits für Copilot Studio verwalten</a>, Stand 02.11.2026.</p>
         </details>
       </li>
       <li class="test__frage" id="frage-f7b">

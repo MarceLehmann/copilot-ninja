@@ -155,9 +155,10 @@ html:not(.js) [data-nur-js], html.js [data-ohne-js] { display: none !important; 
 /* Wortmarke als Text: PowerPlatformAcademy Dojo, darunter klein der Zusatz in der Farbe des Dojo */
 .marke__wort { display: flex; flex-direction: column; gap: .15rem; min-width: 0; font-family: var(--font-display); font-stretch: 87.5%; line-height: 1; }
 .marke__name { font-weight: 700; font-size: 1.02rem; letter-spacing: -.01em; line-height: 1.02; }
-.marke__zusatz { font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--site); white-space: nowrap; }
+.marke__zusatz { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--site); white-space: nowrap; }
 @media (min-width: 420px) { .marke__name { font-size: 1.15rem; } }
-@media (min-width: 600px) { .marke__name { font-size: 1.3rem; white-space: nowrap; } .marke__zusatz { font-size: .7rem; } }
+@media (min-width: 600px) { .marke__name { font-size: 1.3rem; white-space: nowrap; } .marke__zusatz { font-size: .75rem; } }
+@media (max-width: 419px) { .marke__name { font-size: .92rem; } }
 .nav { display: none; }
 .nav ul { display: flex; gap: .2rem; list-style: none; margin: 0; padding: 0; }
 .nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 .75rem; color: var(--ink); font-weight: 500; text-decoration: none; border-radius: var(--r-md); }
@@ -171,7 +172,7 @@ html:not(.js) [data-nur-js], html.js [data-ohne-js] { display: none !important; 
 @media (min-width: 900px) { .nav { display: block; } .kopf__suche kbd { display: inline; } }
 /* Ohne JavaScript gibt es kein Menue: dann steht die Navigation mobil als zweite Zeile im Kopf */
 @media (max-width: 899px) { html:not(.js) .kopf__innen { flex-wrap: wrap; padding-block: .25rem; } html:not(.js) .nav { display: block; width: 100%; order: 3; } html:not(.js) .nav ul { flex-wrap: wrap; } }
-@media (max-width: 359px) { .kopf__aktionen .knopf-icon { min-width: 40px; padding: 0 .3rem; } .kopf__innen { gap: .3rem; } .marke { gap: .4rem; } .marke__name { font-size: .9rem; } .marke__zusatz { font-size: .6rem; letter-spacing: .08em; } }
+@media (max-width: 359px) { .kopf__aktionen .knopf-icon { min-width: 40px; padding: 0 .3rem; } .kopf__innen { gap: .3rem; } .marke { gap: .4rem; } .marke__name { font-size: .9rem; } .marke__zusatz { font-size: .75rem; letter-spacing: .08em; } }
 .menue { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; padding: 0 var(--gutter) 2rem; background: var(--paper); color: var(--ink); overflow-y: auto; }
 .menue__kopf { display: flex; justify-content: space-between; align-items: center; min-height: var(--kopf-h); border-bottom: 3px solid var(--site); margin-bottom: 1rem; }
 .menue ul { list-style: none; margin: 0; padding: 0; }
@@ -467,7 +468,7 @@ a.chip { text-decoration: none; }
 /* Klickziele mindestens 24 px (WCAG 2.5.8, UX-Review 17.10.2026 Q13). Padding an Inline-Links vergroessert die Trefferflaeche,
    ohne den Zeilenfall zu aendern. Gleiche Regeln in powerautomate.ninja. */
 .krumen a { display: inline-flex; align-items: center; min-height: 24px; }
-.karte__titel a, .arrow-list a, .woche__ergebnis a, .klein a, .kurs-zeile a, .pruefstatus a, .quelle a, p a:not([class]) { padding-block: 3px; }
+.karte__titel a, .arrow-list a, .woche__ergebnis a, .klein a, .kurs-zeile a, .pruefstatus a, .quelle a, p a:not([class]) { padding-block: 4px; }
 .dojo-haken input { width: 24px; height: 24px; }
 .kurs-zeile { max-width: 66ch; margin: 1rem 0 0; font-size: .95rem; color: var(--ink-muted); }
 .metazeile { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; list-style: none; margin: 0; padding: .9rem 0 0; border-top: 1px solid var(--line); }

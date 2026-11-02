@@ -182,3 +182,14 @@ Commit "Quelltitel korrigiert …" on this branch (data files and the generated 
 - EN t08 technik_text: `{Counterpart} from {Period` → `{Counterpart|person or company} from {Period` (restores the lost placeholder hint).
 
 Not applied (content, suggestion only): "(Premium oder Pro)" → "(Premium)", the Agent Builder caveat, the 125 % rule, the Stufe 3 heading, the `geprueft_am` dates.
+
+## D. Umsetzung auf diesem Branch (2026-11-02, dritter Auftrag)
+
+Korrigiert, DE und EN gemeinsam, Seiten mit `node scripts/build.mjs --produktion` und die Fragenliste mit `scripts/karten.mjs --produktion` neu erzeugt, Build und `scripts/links.mjs --livegang` grün:
+
+- **Agent Builder (mittel):** t14, t15, t16 (Grenzen und Zugangstext), beide Gratis-Seiten (Satz v4, Liste «Auf einen Blick», Stufe 2, Tabellenzeile): Agents mit Web-Wissen bleiben laut Microsoft ohne Zusatzkosten; die Verfügbarkeit von Agent Builder ist laut Admin-Leitfaden an eine Microsoft-365-Copilot-Lizenz oder Pay-as-you-go für Copilot Studio gebunden. Nichts wird mehr als sicher kostenlos dargestellt.
+- **«(Premium oder Pro)» → «(Premium)»** in den Daten (g3, t08), auf beiden Gratis-Seiten, in `llms.txt` (Quelle `scripts/build.mjs`) und den erzeugten Seiten; die Überschrift der Stufe 3 heisst in DE und EN gleich.
+- **Credits-Durchsetzung (125 %):** Da die aktuelle Admin-Seite eine Durchsetzung nach Zuteilung ohne Prozentschwelle beschreibt und die Copilot-Studio-Seite hier nicht lesbar war, vorsichtig formuliert: Rechner t23 (Regeln 2 und 3, Nutzen), t24 (Grenzen), Frage f7a (Frage, Antworten, Auflösung, Quelle neu auf manage-copilot-studio-copilot-credits-capacity, geprueft_am 2026-11-02) und die Zeile «Verbrauch je Funktion» im Nachschlageteil. Die alte 125-Prozent-Aussage steht als «ältere Microsoft-Seiten nannten» drin, massgebend ist die verlinkte Quelle.
+- **Mobil:** Umbruch der Marke zwischen «PowerPlatform» und «Academy» (der `<wbr>` greift jetzt, weil der Name unter 420 px 0.92 rem gross ist); Unterzeile «COPILOT» auf 0.75 rem (12 px); `padding-block` der Quellenlinks von 3 auf 4 px, gemessen 25 px. Geprüft mit Chromium bei 320, 360 und 390 px.
+
+Nicht geändert: `geprueft_am` von t20 bis t25 (Entscheid von Marcel); die Vorschaubilder unter `assets/img/karten/` (karten.mjs würde sie auf die aktuelle Papierfarbe umstellen, die PNG-Wandlung braucht ein lokales Chrome; in dieser Umgebung nicht abgeschlossen, darum unverändert gelassen).

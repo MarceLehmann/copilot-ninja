@@ -11,8 +11,8 @@ Kurzfakten:
 - Kosten: gratis, ohne Anmeldung
 - Datenschutz: Keine Cookies, keine Profile. Aufrufe werden ohne Cookies gezählt, gespeichert werden nur Summen ohne Personenbezug (GoatCounter).
 - Privacy: No cookies, no profiles. Visits are counted without cookies; only totals without personal data are stored (GoatCounter).
-- Apps (Word, Excel, PowerPoint und OneNote): Copilot Chat (Basic) ohne Add-on und ohne App-Zugang; Microsoft 365 Copilot (Basic) ohne Add-on mit Standard-Zugang, bei hoher Auslastung eventuell eingeschränkt; Microsoft 365 Copilot (Premium oder Pro) mit Add-on, Priority Access und vollem Umfang inklusive breiter Organisationsdaten (Graph, Work IQ). Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit, die Bezeichnung im Produkt zeigt die Stufe. Copilot Chat in Outlook bezieht in unterstützten Szenarien auch ohne Add-on Mails, Kalender, Meetings und Chats ein. Hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff sind weitere Ausnahmen vom fehlenden breiten Organisationszugriff ohne Add-on.
-- App access (Word, Excel, PowerPoint and OneNote): Copilot Chat (Basic) has no add-on and no app access; Microsoft 365 Copilot (Basic) has standard app access without an add-on, possibly limited at high demand; Microsoft 365 Copilot (Premium or Pro) adds Priority Access and full functionality including broad organizational data through Graph and Work IQ with an add-on. The in-product label shows the tier; availability depends on license and tenant configuration. In supported scenarios Copilot Chat in Outlook includes emails, calendar, meetings and chats without an add-on. Uploaded or pasted content and agents with enabled access are further exceptions to the lack of broad organizational access without an add-on.
+- Apps (Word, Excel, PowerPoint und OneNote): Copilot Chat (Basic) ohne Add-on und ohne App-Zugang; Microsoft 365 Copilot (Basic) ohne Add-on mit Standard-Zugang, bei hoher Auslastung eventuell eingeschränkt; Microsoft 365 Copilot (Premium) mit Add-on, Priority Access und vollem Umfang inklusive breiter Organisationsdaten (Graph, Work IQ). Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit, die Bezeichnung im Produkt zeigt die Stufe. Copilot Chat in Outlook bezieht in unterstützten Szenarien auch ohne Add-on Mails, Kalender, Meetings und Chats ein. Hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff sind weitere Ausnahmen vom fehlenden breiten Organisationszugriff ohne Add-on.
+- App access (Word, Excel, PowerPoint and OneNote): Copilot Chat (Basic) has no add-on and no app access; Microsoft 365 Copilot (Basic) has standard app access without an add-on, possibly limited at high demand; Microsoft 365 Copilot (Premium) adds Priority Access and full functionality including broad organizational data through Graph and Work IQ with an add-on. The in-product label shows the tier; availability depends on license and tenant configuration. In supported scenarios Copilot Chat in Outlook includes emails, calendar, meetings and chats without an add-on. Uploaded or pasted content and agents with enabled access are further exceptions to the lack of broad organizational access without an add-on.
 - Kontakt: marcel.lehmann@kmupower.com
 
 # Deutsch
@@ -401,7 +401,7 @@ So nutzt du es:
 4. Ohne Lizenz: die wichtigsten Mails oder Protokolle als Datei hochladen und in der Zeile «Quelle» auf «die angehängten Dateien» ändern.
 
 Grenzen:
-- Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on breiten Zugriff auf Organisationsdaten über Graph und Work IQ. Ohne Add-on bleiben Ausnahmen: Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
+- Microsoft 365 Copilot (Premium) bietet mit Add-on breiten Zugriff auf Organisationsdaten über Graph und Work IQ. Ohne Add-on bleiben Ausnahmen: Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 - Die Antwort sieht laut Microsoft nur Inhalte, auf die du Zugriff hast.
 - Mündliche Absprachen ohne Notiz fehlen im Dossier.
 
@@ -441,7 +441,7 @@ So nutzt du es:
 Grenzen:
 - Beim Datei-Upload gelten Limits. Konkrete Zahlen nennt die geprüfte Microsoft-Seite nicht, darum stehen sie hier nicht.
 - Die Befunde sind Hinweise und keine Revision. Prüfe zwei oder drei Treffer in der Originaldatei, bevor du dich darauf verlässt.
-- Copilot Chat (Basic) hat keinen Zugang zu Copilot in Excel. Microsoft 365 Copilot (Basic) bietet ohne Add-on Standard-Zugang, der bei hoher Auslastung eingeschränkt sein kann. Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on vollen Umfang und Priority Access. Die Bezeichnung im Produkt zeigt deine Stufe; Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit. Diese Grundform arbeitet mit einer hochgeladenen Datei im Chat.
+- Copilot Chat (Basic) hat keinen Zugang zu Copilot in Excel. Microsoft 365 Copilot (Basic) bietet ohne Add-on Standard-Zugang, der bei hoher Auslastung eingeschränkt sein kann. Microsoft 365 Copilot (Premium) bietet mit Add-on vollen Umfang und Priority Access. Die Bezeichnung im Produkt zeigt deine Stufe; Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit. Diese Grundform arbeitet mit einer hochgeladenen Datei im Chat.
 
 Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -700,7 +700,7 @@ Quellen: Microsoft Learn: Write agent instructions (Copilot Studio) (https://lea
 ## Nr. 14 Der Abdruck: Aus dem besten Chat einen Agent machen
 
 URL: https://copilot.ninja/techniken/aus-chat-einen-agent-machen/
-Gürtel: Grüner Gürtel. Zugang: Ohne Zusatzlizenz mit Agent Builder, nur Anweisungen und öffentliche Websites. Stand 15.10.2026.
+Gürtel: Grüner Gürtel. Zugang: Mit Agent Builder ohne Zusatzkosten, nur Anweisungen und öffentliche Websites; Freischaltung laut Microsoft je nach Lizenz oder Pay-as-you-go. Stand 15.10.2026.
 
 Problem: In einem Chat hat nach mehreren Korrekturen endlich alles gestimmt. Nächste Woche fängst du wieder bei null an und erklärst alles noch einmal.
 
@@ -731,7 +731,7 @@ So nutzt du es:
 6. Danach die Anweisungen mit Nr. 17 prüfen.
 
 Grenzen:
-- Ohne Zusatzlizenz kannst du Agent Builder laut Microsoft kostenlos nutzen, solange der Agent nur auf Anweisungen und Web-Wissen beruht.
+- Agents mit Anweisungen und Web-Wissen verursachen laut Microsoft keine Zusatzkosten. Ob du Agent Builder überhaupt öffnen kannst, ist nicht einheitlich dokumentiert: Der Admin-Leitfaden zu Agents nennt eine Microsoft-365-Copilot-Lizenz oder Pay-as-you-go für Copilot Studio als Voraussetzung. Frag deine IT, ob Agent Builder bei euch freigeschaltet ist.
 - Soll der Agent auf SharePoint oder andere Firmendaten zugreifen, wird er laut Microsoft nach Verbrauch abgerechnet. Für Nutzer von Microsoft Copilot Chat ist das standardmässig aus.
 - Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen.
 - Ein Chatverlauf zeigt einen Fall. Prüf den Agent mit anderen Fällen, bevor du ihn teilst.
@@ -741,7 +741,7 @@ Quellen: Microsoft Learn: Choose between Agent Builder and Copilot Studio to bui
 ## Nr. 15 Der Torwächter: Agent, der nur deine Website kennt
 
 URL: https://copilot.ninja/techniken/agent-fuer-die-eigene-website/
-Gürtel: Grüner Gürtel. Zugang: Ohne Zusatzlizenz mit Agent Builder, deine Website als Wissensquelle. Stand 15.10.2026.
+Gürtel: Grüner Gürtel. Zugang: Mit Agent Builder ohne Zusatzkosten, deine Website als Wissensquelle; Freischaltung laut Microsoft je nach Lizenz oder Pay-as-you-go. Stand 15.10.2026.
 
 Problem: Am Telefon fragen Kundinnen nach Leistungen und Abläufen. Die Aushilfe am Empfang sucht die Antwort auf der eigenen Website und findet sie nicht.
 
@@ -778,7 +778,7 @@ So nutzt du es:
 Grenzen:
 - Der Agent lebt in Microsoft Copilot Chat und ist für Mitarbeitende gedacht, nicht für Kundinnen auf der Website.
 - Agent Builder kann allgemeines Wissen laut Microsoft nicht ganz ausschliessen. Für strengere Kontrolle verweist Microsoft auf Copilot Studio.
-- Kostenlos bleibt der Agent laut Microsoft nur mit Anweisungen und öffentlichen Websites. Agents mit Firmendaten wie SharePoint werden nach Verbrauch abgerechnet.
+- Ohne Zusatzkosten bleibt der Agent laut Microsoft nur mit Anweisungen und öffentlichen Websites. Agents mit Firmendaten wie SharePoint werden nach Verbrauch abgerechnet. Ob Agent Builder bei dir verfügbar ist, hängt laut dem Admin-Leitfaden zu Agents von einer Microsoft-365-Copilot-Lizenz oder von Pay-as-you-go für Copilot Studio ab.
 - Steht auf der Website etwas Veraltetes, gibt der Agent es weiter.
 - Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen.
 
@@ -787,7 +787,7 @@ Quellen: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (ht
 ## Nr. 16 Der Sparringspartner: Agent für Gesprächstraining
 
 URL: https://copilot.ninja/techniken/agent-fuer-gespraechstraining/
-Gürtel: Grüner Gürtel. Zugang: Ohne Zusatzlizenz mit Agent Builder, nur Anweisungen. Stand 15.10.2026.
+Gürtel: Grüner Gürtel. Zugang: Mit Agent Builder ohne Zusatzkosten, nur Anweisungen; Freischaltung laut Microsoft je nach Lizenz oder Pay-as-you-go. Stand 15.10.2026.
 
 Problem: Nächste Woche kommt das Gespräch mit dem Kunden, der kündigen will. Üben konntest du es bisher nur im Kopf.
 
@@ -822,7 +822,7 @@ Grenzen:
 - Das Feedback misst gegen deine Kriterien, nicht gegen eine Verkaufsmethode. Die Kriterien entscheiden über den Wert.
 - Echte Kundennamen und Vertragsdetails gehören nicht ins Training.
 - Ein geübtes Gespräch ist kein echtes. Der Agent kennt deinen Kunden nicht.
-- Ohne Zusatzkosten bleibt der Agent laut Microsoft, solange er nur auf Anweisungen und öffentlichen Websites beruht.
+- Ohne Zusatzkosten bleibt der Agent laut Microsoft, solange er nur auf Anweisungen und öffentlichen Websites beruht. Ob Agent Builder bei dir verfügbar ist, hängt laut dem Admin-Leitfaden zu Agents von einer Microsoft-365-Copilot-Lizenz oder von Pay-as-you-go für Copilot Studio ab.
 
 Quellen: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents)
 
@@ -1158,7 +1158,7 @@ Gürtel: Brauner Gürtel. Zugang: Rechnen ohne Lizenz, Betrieb braucht Kapazitä
 
 Problem: Die Geschäftsleitung fragt, was der neue Agent im Betrieb verbraucht. Du hast eine Vermutung, aber keine Rechnung.
 
-Nutzen: Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was bei 125 Prozent des Kontingents passiert.
+Nutzen: Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was passiert, wenn das Kontingent aufgebraucht ist.
 
 Text zum Kopieren:
 
@@ -1237,7 +1237,7 @@ So nutzt du es:
 Grenzen:
 - Ein Blatt ohne Termin im Kalender ist Papier. Das Review-Datum gehört als Termin zur verantwortlichen Person.
 - Die Kriterien sind Vorschläge. Festlegen müsst ihr sie im Team.
-- Laut Microsoft werden Custom Agents bei 125 Prozent der vorausbezahlten Kapazität deaktiviert. Ein eigenes Abschaltkriterium greift idealerweise vorher.
+- Laut der aktuellen Admin-Seite können Funktionen, die Copilot Credits brauchen, stoppen, sobald die zugeteilte Kapazität ohne Überverbrauchsquelle aufgebraucht ist. Ein eigenes Abschaltkriterium greift idealerweise vorher.
 
 Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
 
@@ -1680,7 +1680,7 @@ How to use it:
 4. Without a license: upload the most important emails or minutes as files and change the “Source” line to “the attached files”.
 
 Limits:
-- Microsoft 365 Copilot (Premium or Pro) provides broad access to organizational data through Graph and Work IQ with an add-on. Without an add-on, exceptions include Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
+- Microsoft 365 Copilot (Premium) provides broad access to organizational data through Graph and Work IQ with an add-on. Without an add-on, exceptions include Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 - According to Microsoft, the answer only sees content you have access to.
 - Verbal agreements without a note are missing from the dossier.
 
@@ -1720,7 +1720,7 @@ How to use it:
 Limits:
 - File uploads have limits. The Microsoft page we checked gives no specific numbers, so none are listed here.
 - The findings are pointers, not an audit. Verify two or three hits in the original file before you rely on them.
-- Copilot Chat (Basic) has no access to Copilot in Excel. Microsoft 365 Copilot (Basic) provides standard app access without an add-on, possibly limited at high demand. Microsoft 365 Copilot (Premium or Pro) provides full functionality and Priority Access with an add-on. The in-product label shows your tier; license and tenant configuration determine availability. This basic form works with a file uploaded to the chat.
+- Copilot Chat (Basic) has no access to Copilot in Excel. Microsoft 365 Copilot (Basic) provides standard app access without an add-on, possibly limited at high demand. Microsoft 365 Copilot (Premium) provides full functionality and Priority Access with an add-on. The in-product label shows your tier; license and tenant configuration determine availability. This basic form works with a file uploaded to the chat.
 
 Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
@@ -1979,7 +1979,7 @@ Sources: Microsoft Learn: Write agent instructions (Copilot Studio) (https://lea
 ## No. 14 The Imprint: Turn your best chat into an agent
 
 URL: https://copilot.ninja/en/techniken/aus-chat-einen-agent-machen/
-Belt: Green belt. Access: No add-on license with Agent Builder, instructions and public websites only. As of October 15, 2026.
+Belt: Green belt. Access: With Agent Builder at no extra cost, instructions and public websites only; availability per Microsoft depends on license or pay-as-you-go. As of October 15, 2026.
 
 Problem: In one chat, after several corrections, everything finally worked. Next week you start from zero again and explain everything once more.
 
@@ -2010,7 +2010,7 @@ How to use it:
 6. Then check the instructions with No. 17.
 
 Limits:
-- According to Microsoft, you can use Agent Builder for free without an add-on license as long as the agent only relies on instructions and web knowledge.
+- According to Microsoft, agents with instructions and web knowledge cause no additional cost. Whether you can open Agent Builder at all is not documented consistently: the agents admin guide names a Microsoft 365 Copilot license or pay-as-you-go for Copilot Studio as the prerequisite. Ask your IT whether Agent Builder is enabled for you.
 - If the agent should access SharePoint or other company data, Microsoft says it is billed by consumption. For Microsoft Copilot Chat users this is off by default.
 - The menu names come from the English documentation. Your interface may name them differently.
 - One chat history shows one case. Check the agent with other cases before you share it.
@@ -2020,7 +2020,7 @@ Sources: Microsoft Learn: Choose between Agent Builder and Copilot Studio to bui
 ## No. 15 The Gatekeeper: Agent that only knows your website
 
 URL: https://copilot.ninja/en/techniken/agent-fuer-die-eigene-website/
-Belt: Green belt. Access: No add-on license with Agent Builder, your website as the knowledge source. As of October 15, 2026.
+Belt: Green belt. Access: With Agent Builder at no extra cost, your website as the knowledge source; availability per Microsoft depends on license or pay-as-you-go. As of October 15, 2026.
 
 Problem: On the phone, customers ask about services and processes. The temp at reception searches your own website for the answer and doesn't find it.
 
@@ -2057,7 +2057,7 @@ How to use it:
 Limits:
 - The agent lives in Microsoft Copilot Chat and is meant for employees, not for customers on the website.
 - According to Microsoft, Agent Builder cannot fully exclude general knowledge. For stricter control, Microsoft points to Copilot Studio.
-- According to Microsoft, the agent only stays free with instructions and public websites. Agents with company data such as SharePoint are billed by consumption.
+- According to Microsoft, the agent only stays free of additional cost with instructions and public websites. Agents with company data such as SharePoint are billed by consumption. Whether Agent Builder is available to you depends, according to the agents admin guide, on a Microsoft 365 Copilot license or on pay-as-you-go for Copilot Studio.
 - If something on the website is outdated, the agent passes it on.
 - The menu names come from the English documentation. Your interface may name them differently.
 
@@ -2066,7 +2066,7 @@ Sources: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (ht
 ## No. 16 The Sparring Partner: Agent for conversation practice
 
 URL: https://copilot.ninja/en/techniken/agent-fuer-gespraechstraining/
-Belt: Green belt. Access: No add-on license with Agent Builder, instructions only. As of October 15, 2026.
+Belt: Green belt. Access: With Agent Builder at no extra cost, instructions only; availability per Microsoft depends on license or pay-as-you-go. As of October 15, 2026.
 
 Problem: Next week you have the conversation with the customer who wants to cancel. So far you could only practice it in your head.
 
@@ -2101,7 +2101,7 @@ Limits:
 - The feedback measures against your criteria, not against a sales method. The criteria decide its value.
 - Real customer names and contract details do not belong in the training.
 - A practiced conversation is not a real one. The agent does not know your customer.
-- According to Microsoft, the agent stays free of additional cost as long as it only relies on instructions and public websites.
+- According to Microsoft, the agent stays free of additional cost as long as it only relies on instructions and public websites. Whether Agent Builder is available to you depends, according to the agents admin guide, on a Microsoft 365 Copilot license or on pay-as-you-go for Copilot Studio.
 
 Sources: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents)
 
@@ -2437,7 +2437,7 @@ Belt: Brown belt. Access: Calculate without a license, running it needs capacity
 
 Problem: Management asks what the new agent will consume in production. You have a guess, but no calculation.
 
-Benefit: Before going live, you know the order of magnitude of the consumption and what happens at 125 percent of the quota.
+Benefit: Before going live, you know the order of magnitude of the consumption and what happens when the quota is used up.
 
 Text to copy:
 
@@ -2516,7 +2516,7 @@ How to use it:
 Limits:
 - A sheet without an appointment in the calendar is just paper. The review date belongs in the responsible person's calendar.
 - The criteria are suggestions. You have to decide on them as a team.
-- According to Microsoft, custom agents are disabled at 125 percent of the prepaid capacity. Ideally, your own shutdown criterion kicks in earlier.
+- According to the current admin page, features that need Copilot Credits can stop once the allocated capacity is used up without an overage source. Ideally, your own shutdown criterion kicks in earlier.
 
 Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
 

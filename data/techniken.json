@@ -292,7 +292,7 @@
       "grenzen": [
         "Beim Datei-Upload gelten Limits. Konkrete Zahlen nennt die geprüfte Microsoft-Seite nicht, darum stehen sie hier nicht.",
         "Die Befunde sind Hinweise und keine Revision. Prüfe zwei oder drei Treffer in der Originaldatei, bevor du dich darauf verlässt.",
-        "Copilot Chat (Basic) hat keinen Zugang zu Copilot in Excel. Microsoft 365 Copilot (Basic) bietet ohne Add-on Standard-Zugang, der bei hoher Auslastung eingeschränkt sein kann. Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on vollen Umfang und Priority Access. Die Bezeichnung im Produkt zeigt deine Stufe; Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit. Diese Grundform arbeitet mit einer hochgeladenen Datei im Chat."
+        "Copilot Chat (Basic) hat keinen Zugang zu Copilot in Excel. Microsoft 365 Copilot (Basic) bietet ohne Add-on Standard-Zugang, der bei hoher Auslastung eingeschränkt sein kann. Microsoft 365 Copilot (Premium) bietet mit Add-on vollen Umfang und Priority Access. Die Bezeichnung im Produkt zeigt deine Stufe; Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit. Diese Grundform arbeitet mit einer hochgeladenen Datei im Chat."
       ],
       "probe": "Prüf eine Datei mit einer bekannten Dublette. Fehlt sie in der Befundliste, stimmt die Liste nicht.",
       "meister_variante": null,
@@ -1099,7 +1099,7 @@
         "Zwei Eröffnungsfragen."
       ],
       "grenzen": [
-        "Microsoft 365 Copilot (Premium oder Pro) bietet mit Add-on breiten Zugriff auf Organisationsdaten über Graph und Work IQ. Ohne Add-on bleiben Ausnahmen: Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.",
+        "Microsoft 365 Copilot (Premium) bietet mit Add-on breiten Zugriff auf Organisationsdaten über Graph und Work IQ. Ohne Add-on bleiben Ausnahmen: Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.",
         "Die Antwort sieht laut Microsoft nur Inhalte, auf die du Zugriff hast.",
         "Mündliche Absprachen ohne Notiz fehlen im Dossier."
       ],
@@ -1569,7 +1569,7 @@
       ],
       "zugang": "agent-builder",
       "zugang_anker": "agent-builder",
-      "zugang_text": "Ohne Zusatzlizenz mit Agent Builder, nur Anweisungen und öffentliche Websites",
+      "zugang_text": "Mit Agent Builder ohne Zusatzkosten, nur Anweisungen und öffentliche Websites; Freischaltung laut Microsoft je nach Lizenz oder Pay-as-you-go",
       "klasse": "produktabhaengig",
       "zielgruppe": [
         "Power User",
@@ -1596,7 +1596,7 @@
         "Eine separate Liste mit Einzelheiten, die nur für diesen Fall galten."
       ],
       "grenzen": [
-        "Ohne Zusatzlizenz kannst du Agent Builder laut Microsoft kostenlos nutzen, solange der Agent nur auf Anweisungen und Web-Wissen beruht.",
+        "Agents mit Anweisungen und Web-Wissen verursachen laut Microsoft keine Zusatzkosten. Ob du Agent Builder überhaupt öffnen kannst, ist nicht einheitlich dokumentiert: Der Admin-Leitfaden zu Agents nennt eine Microsoft-365-Copilot-Lizenz oder Pay-as-you-go für Copilot Studio als Voraussetzung. Frag deine IT, ob Agent Builder bei euch freigeschaltet ist.",
         "Soll der Agent auf SharePoint oder andere Firmendaten zugreifen, wird er laut Microsoft nach Verbrauch abgerechnet. Für Nutzer von Microsoft Copilot Chat ist das standardmässig aus.",
         "Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen.",
         "Ein Chatverlauf zeigt einen Fall. Prüf den Agent mit anderen Fällen, bevor du ihn teilst."
@@ -1657,7 +1657,7 @@
       ],
       "zugang": "agent-builder",
       "zugang_anker": "agent-builder",
-      "zugang_text": "Ohne Zusatzlizenz mit Agent Builder, deine Website als Wissensquelle",
+      "zugang_text": "Mit Agent Builder ohne Zusatzkosten, deine Website als Wissensquelle; Freischaltung laut Microsoft je nach Lizenz oder Pay-as-you-go",
       "klasse": "produktabhaengig",
       "zielgruppe": [
         "KMU-Inhaber",
@@ -1686,7 +1686,7 @@
       "grenzen": [
         "Der Agent lebt in Microsoft Copilot Chat und ist für Mitarbeitende gedacht, nicht für Kundinnen auf der Website.",
         "Agent Builder kann allgemeines Wissen laut Microsoft nicht ganz ausschliessen. Für strengere Kontrolle verweist Microsoft auf Copilot Studio.",
-        "Kostenlos bleibt der Agent laut Microsoft nur mit Anweisungen und öffentlichen Websites. Agents mit Firmendaten wie SharePoint werden nach Verbrauch abgerechnet.",
+        "Ohne Zusatzkosten bleibt der Agent laut Microsoft nur mit Anweisungen und öffentlichen Websites. Agents mit Firmendaten wie SharePoint werden nach Verbrauch abgerechnet. Ob Agent Builder bei dir verfügbar ist, hängt laut dem Admin-Leitfaden zu Agents von einer Microsoft-365-Copilot-Lizenz oder von Pay-as-you-go für Copilot Studio ab.",
         "Steht auf der Website etwas Veraltetes, gibt der Agent es weiter.",
         "Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen."
       ],
@@ -1743,7 +1743,7 @@
       ],
       "zugang": "agent-builder",
       "zugang_anker": "agent-builder",
-      "zugang_text": "Ohne Zusatzlizenz mit Agent Builder, nur Anweisungen",
+      "zugang_text": "Mit Agent Builder ohne Zusatzkosten, nur Anweisungen; Freischaltung laut Microsoft je nach Lizenz oder Pay-as-you-go",
       "klasse": "zeitlos",
       "zielgruppe": [
         "Vertrieb",
@@ -1772,7 +1772,7 @@
         "Das Feedback misst gegen deine Kriterien, nicht gegen eine Verkaufsmethode. Die Kriterien entscheiden über den Wert.",
         "Echte Kundennamen und Vertragsdetails gehören nicht ins Training.",
         "Ein geübtes Gespräch ist kein echtes. Der Agent kennt deinen Kunden nicht.",
-        "Ohne Zusatzkosten bleibt der Agent laut Microsoft, solange er nur auf Anweisungen und öffentlichen Websites beruht."
+        "Ohne Zusatzkosten bleibt der Agent laut Microsoft, solange er nur auf Anweisungen und öffentlichen Websites beruht. Ob Agent Builder bei dir verfügbar ist, hängt laut dem Admin-Leitfaden zu Agents von einer Microsoft-365-Copilot-Lizenz oder von Pay-as-you-go für Copilot Studio ab."
       ],
       "probe": "Halte im Feedback fest, wie viele Kriterien im ersten und im fünften Durchgang erfüllt sind.",
       "meister_variante": null,
@@ -2321,7 +2321,7 @@
         "Geschäftsleitung"
       ],
       "moment": "Bevor ein Agent live geht",
-      "nutzen": "Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was bei 125 Prozent des Kontingents passiert.",
+      "nutzen": "Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was passiert, wenn das Kontingent aufgebraucht ist.",
       "problem": "Die Geschäftsleitung fragt, was der neue Agent im Betrieb verbraucht. Du hast eine Vermutung, aber keine Rechnung.",
       "vorher": "Was kostet mein Agent?",
       "technik_text": "Ziel: Hilf mir, für meinen Agent die Ereignisse pro Gespräch zu schätzen. Seine Anweisungen stehen unten.\n\nKontext: Der Agent ist für {Zielgruppe|Mitarbeitende im Innendienst}. Er nutzt {Ausstattung|eine Wissensquelle und zwei Tools}.\n\nErwartung:\n1. Für ein typisches und für ein langes Gespräch: wie viele Antworten aus Wissensquellen (generativ), wie viele vordefinierte Antworten (klassisch) und wie viele Aktionen wie Tools oder Wechsel zwischen Topics und wie viele Schritte in Agent Flows zu erwarten sind.\n2. Pro Zahl ein Satz Begründung.\n3. Die Annahme, die das Ergebnis am stärksten verändert.\nKennzeichne alles als Schätzung. Rechne keine Preise.\n\nAnweisungen:\n{Anweisungen|die Anweisungen deines Agents}",
@@ -2408,8 +2408,8 @@
         ],
         "regeln": [
           "Copilot Studio setzt die gekaufte Kapazität laut der Seite zur Lizenzierung monatlich durch, nicht genutzte Copilot Credits gehen nicht in den nächsten Monat über. Der Agent Usage Estimator schreibt dagegen, dass manche Käufe übertragbar sind. Massgebend ist dein Vertrag.",
-          "100 bis 125 %: Überverbrauch wird geduldet; ab 125 %: Custom Agents deaktiviert; Pay-as-you-go: keine Durchsetzung. Laufende Gespräche werden nicht unterbrochen. Danach wird jeder Aufruf abgelehnt, bis die Kapazität erhöht oder zurückgesetzt wird. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet.",
-          "Für Agent Flows gelten eigene Kapazitätsregeln: Ist ihre Kapazität aufgebraucht, starten keine neuen Läufe. Daraus folgt nicht, dass Custom Agents oberhalb der Prepaid-Schwelle von 125 % weiter antworten."
+          "Ohne Überverbrauchsquelle (Pay-as-you-go oder Tenant-Pool) verbraucht ein Environment laut der aktuellen Admin-Seite nur seine zugeteilten Copilot Credits; Funktionen, die Credits brauchen, können danach stoppen. Ältere Microsoft-Seiten nannten eine Toleranz bis 125 Prozent, die aktuelle Admin-Seite nennt keine Prozentschwelle. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet.",
+          "Für Agent Flows gelten eigene Kapazitätsregeln: Sind keine Copilot Credits mehr verfügbar, starten keine neuen Flow-Läufe, der Agent antwortet laut Microsoft bei anderen Interaktionen weiter."
         ],
         "lizenz_hinweis": "Mit Haken setzt der Rechner nur Classic Answers, Generative Answers und Tenant Graph Grounding auf 0 Credits, wenn der Agent mit der angemeldeten Identität eines Nutzers mit Microsoft-365-Copilot-Add-on-Lizenz läuft. Fair-Use-Grenzen gelten. Agent Actions und Agent-Flow-Aktionen bleiben vorsorglich eingerechnet. Computer-Using-Agent-Aktionen sind nicht pauschal gratis. Prüfe die Ausnahmen für deinen Einsatz in der Microsoft-Quelle.",
         "lizenz_ohne_verbrauch": [
@@ -2488,7 +2488,7 @@
       "grenzen": [
         "Ein Blatt ohne Termin im Kalender ist Papier. Das Review-Datum gehört als Termin zur verantwortlichen Person.",
         "Die Kriterien sind Vorschläge. Festlegen müsst ihr sie im Team.",
-        "Laut Microsoft werden Custom Agents bei 125 Prozent der vorausbezahlten Kapazität deaktiviert. Ein eigenes Abschaltkriterium greift idealerweise vorher."
+        "Laut der aktuellen Admin-Seite können Funktionen, die Copilot Credits brauchen, stoppen, sobald die zugeteilte Kapazität ohne Überverbrauchsquelle aufgebraucht ist. Ein eigenes Abschaltkriterium greift idealerweise vorher."
       ],
       "probe": "Zähle den Anteil eurer Agents mit ausgefülltem Betriebsblatt und die Agents ohne verantwortliche Person.",
       "meister_variante": null,

@@ -229,7 +229,7 @@
     <link href="https://copilot.ninja/techniken/credit-verbrauch-schaetzen/"/>
     <published>2026-10-15T00:00:00Z</published>
     <updated>2026-10-15T00:00:00Z</updated>
-    <summary>Credit-Verbrauch eines Agents vorher schätzen. Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was bei 125 Prozent des Kontingents passiert.</summary>
+    <summary>Credit-Verbrauch eines Agents vorher schätzen. Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was passiert, wenn das Kontingent aufgebraucht ist.</summary>
   </entry>
   <entry>
     <title>Technik 24: Der Ehrenkodex</title>

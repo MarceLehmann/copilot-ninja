@@ -209,12 +209,12 @@
       "id": "f7a",
       "guertel": 7,
       "klasse": "fakt",
-      "geprueft_am": "2026-10-13",
-      "frage": "Without pay-as-you-go on the environment, what happens at 125 percent of prepaid Copilot Credits capacity?",
-      "antworten": ["Nothing, the extra is billed afterwards.", "Custom agents are disabled, ongoing conversations are not interrupted.", "All agents stop immediately."],
+      "geprueft_am": "2026-11-02",
+      "frage": "According to Microsoft, what happens when an environment without an overage source (pay-as-you-go or tenant pool) has used up its allocated Copilot Credits?",
+      "antworten": ["Nothing, the extra is billed afterwards.", "Features that need credits can stop; with pay-as-you-go, overage is billed.", "All agents stop immediately, including ongoing conversations."],
       "richtig": 1,
-      "aufloesung": "Overage is tolerated between 100 and 125 percent. From 125 percent, custom agents are disabled. Ongoing conversations finish; subsequent calls are rejected until capacity is increased or reset. With pay-as-you-go on the environment there is no enforcement; overage is billed to Azure.",
-      "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management", "titel": "Microsoft Learn, Copilot Credits and capacity" },
+      "aufloesung": "Without an overage source, an environment consumes only its allocated Copilot Credits; features that need credits can stop after that. With pay-as-you-go on the environment, overage is billed to the Azure subscription; with a tenant pool, it comes from the pool. Older Microsoft pages mentioned a tolerance up to 125 percent; the current admin page names no percentage threshold, and the linked source is what counts.",
+      "quelle": { "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "titel": "Microsoft Learn, Manage Copilot Credits for Copilot Studio" },
       "technik": null
     },
     {
