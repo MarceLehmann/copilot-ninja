@@ -564,7 +564,7 @@
         },
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
-          "titel": "Microsoft Learn: What is Microsoft Copilot?"
+          "titel": "Microsoft Learn: What is Microsoft 365 Copilot?"
         }
       ],
       "geprueft_am": "2026-10-15",
@@ -727,7 +727,7 @@
         },
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
-          "titel": "Microsoft Learn: What is Microsoft Copilot?"
+          "titel": "Microsoft Learn: What is Microsoft 365 Copilot?"
         }
       ],
       "geprueft_am": "2026-10-15",
@@ -801,7 +801,7 @@
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
-          "titel": "Microsoft Learn: What is Microsoft Copilot?"
+          "titel": "Microsoft Learn: What is Microsoft 365 Copilot?"
         }
       ],
       "geprueft_am": "2026-10-15",
@@ -1106,7 +1106,7 @@
       "probe": "Miss die Vorbereitungszeit pro Kundentermin, bei fünf Terminen mit und fünf Terminen ohne Dossier.",
       "meister_variante": null,
       "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
-      "quelle_titel": "Microsoft Learn: What is Microsoft Copilot?",
+      "quelle_titel": "Microsoft Learn: What is Microsoft 365 Copilot?",
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/copilot/overview",
@@ -1275,7 +1275,7 @@
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
-          "titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat"
+          "titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat"
         }
       ],
       "geprueft_am": "2026-10-15",
@@ -1444,7 +1444,7 @@
       "probe": "Öffne drei Links pro Antwort und zähle, wie oft die Quelle den Satz wirklich stützt. Diese Quote ist dein Vertrauensmass.",
       "meister_variante": null,
       "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
-      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat",
+      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat",
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/copilot/manage",
@@ -2190,7 +2190,7 @@
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
-          "titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat"
+          "titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat"
         },
         {
           "url": "https://learn.microsoft.com/en-us/copilot/manage",
@@ -2268,7 +2268,7 @@
       "probe": "Gib den pseudonymisierten Text einer Kollegin, die den Fall nicht kennt. Zähle, wie viele Personen oder Firmen sie trotzdem errät. Das Ziel ist null.",
       "meister_variante": null,
       "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
-      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat",
+      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat",
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/copilot/faq",

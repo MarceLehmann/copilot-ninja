@@ -417,7 +417,7 @@
         },
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
-          "titel": "Microsoft Learn: What is Microsoft Copilot?"
+          "titel": "Microsoft Learn: What is Microsoft 365 Copilot?"
         }
       ],
       "teilen_text": "Technique 1 from the PowerPlatformAcademy Dojo: The Interrogation. Instead of asking for a text right away, you get interviewed first, one question per message. Free to copy, with a source on Microsoft Learn.",
@@ -532,7 +532,7 @@
         },
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
-          "titel": "Microsoft Learn: What is Microsoft Copilot?"
+          "titel": "Microsoft Learn: What is Microsoft 365 Copilot?"
         }
       ],
       "teilen_text": "Technique 3 from the PowerPlatformAcademy Dojo: The Ink Brush. A building kit of subject, style, format and exclusions, so all slide images look like they come from one hand. Free to copy, with a source on Microsoft Learn.",
@@ -587,7 +587,7 @@
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview",
-          "titel": "Microsoft Learn: What is Microsoft Copilot?"
+          "titel": "Microsoft Learn: What is Microsoft 365 Copilot?"
         }
       ],
       "teilen_text": "Technique 4 from the PowerPlatformAcademy Dojo: The Scout Report. After your vacation, first read what is waiting for you and what was decided without you, each with a source. Free to copy, with a source on Microsoft Learn.",
@@ -783,7 +783,7 @@
       "nutzen": "Who promised what to whom, gathered from emails, chats and notes, without you opening a single folder.",
       "problem": "Tomorrow you meet the customer you have been exchanging emails, chats and minutes with for months. Who committed to what is scattered across many places.",
       "vorher": "Summarize everything about Muster AG for me.",
-      "technik_text": "Goal: Prepare me for the meeting {Meeting|title of the meeting} on {Date} with {Counterpart|person or company}.\n\nSource: My emails, chats, meetings and files about {Counterpart} from {Period|the last three months}.\n\nExpectations:\n1. Where things stand, in three sentences.\n2. Open commitments: what I promised and what the other side promised, each with date and source.\n3. Topics that stayed open at the last contact.\n4. Two questions I can use to open the meeting.\nMark every detail that is based on only a single source.",
+      "technik_text": "Goal: Prepare me for the meeting {Meeting|title of the meeting} on {Date} with {Counterpart|person or company}.\n\nSource: My emails, chats, meetings and files about {Counterpart|person or company} from {Period|the last three months}.\n\nExpectations:\n1. Where things stand, in three sentences.\n2. Open commitments: what I promised and what the other side promised, each with date and source.\n3. Topics that stayed open at the last contact.\n4. Two questions I can use to open the meeting.\nMark every detail that is based on only a single source.",
       "zusatz_texte": [],
       "so_nutzt_du_es": [
         "Open it in Microsoft Copilot with a license, fill in the fields, send.",
@@ -804,7 +804,7 @@
       ],
       "probe": "Measure the preparation time per customer meeting, for five meetings with and five meetings without the dossier.",
       "meister_variante": null,
-      "quelle_titel": "Microsoft Learn: What is Microsoft Copilot?",
+      "quelle_titel": "Microsoft Learn: What is Microsoft 365 Copilot?",
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/copilot/overview",
@@ -925,7 +925,7 @@
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
-          "titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat"
+          "titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat"
         }
       ],
       "teilen_text": "Technique 10 from the PowerPlatformAcademy Dojo: The Pitfall. The prompt finds every deadline in the contract with quote and location, and works out the calendar entries. Free to copy, with a source on Microsoft Learn.",
@@ -1046,7 +1046,7 @@
       ],
       "probe": "Open three links per answer and count how often the source really supports the sentence. That rate is your measure of trust.",
       "meister_variante": null,
-      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat",
+      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat",
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/copilot/manage",
@@ -1599,7 +1599,7 @@
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
-          "titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat"
+          "titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat"
         },
         {
           "url": "https://learn.microsoft.com/en-us/copilot/manage",
@@ -1658,7 +1658,7 @@
       ],
       "probe": "Give the pseudonymised text to a colleague who does not know the case. Count how many people or companies she still guesses. The goal is zero.",
       "meister_variante": null,
-      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat",
+      "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat",
       "weitere_quellen": [
         {
           "url": "https://learn.microsoft.com/en-us/copilot/faq",

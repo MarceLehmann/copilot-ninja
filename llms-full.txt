@@ -95,7 +95,7 @@ Grenzen:
 - Stellt die Antwort mehrere Fragen auf einmal, schreib «Bitte nur eine Frage» und mach weiter.
 - Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 
-Quellen: Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Quellen: Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
 ## Nr. 2 Die Klarschrift: Fachtext in Klartext, mit Verlustliste
 
@@ -172,7 +172,7 @@ Grenzen:
 - Zu Nutzungsrechten an erzeugten Bildern macht diese Seite keine Aussage. Kläre das für deinen Einsatz selbst.
 - Das Bild kann trotz Ausschluss Schrift oder Logos enthalten. Du prüfst vor dem Einsatz.
 
-Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
 ## Nr. 4 Der Späherbericht: Was habe ich in den Ferien verpasst
 
@@ -210,7 +210,7 @@ Grenzen:
 - «Kann ich ignorieren» ist ein Vorschlag, kein Entscheid.
 - Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 
-Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
 ## Antwortentwurf auf eine schwierige Kundenmail: Antwortentwurf auf eine schwierige Kundenmail
 
@@ -405,7 +405,7 @@ Grenzen:
 - Die Antwort sieht laut Microsoft nur Inhalte, auf die du Zugriff hast.
 - Mündliche Absprachen ohne Notiz fehlen im Dossier.
 
-Quellen: Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Quellen: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
 
 ## Eine Tabelle auf Auffälligkeiten prüfen: Eine Tabelle auf Auffälligkeiten prüfen
 
@@ -518,7 +518,7 @@ Grenzen:
 - Laut Microsoft gilt für Prompts und Antworten bei Anmeldung mit Geschäfts- oder Schulkonto Enterprise Data Protection. Vertrauliche Verträge lädst du trotzdem nur nach euren internen Regeln hoch.
 - Für Datei-Uploads gelten laut Microsoft Limits. Zahlen dazu nennen die geprüften Seiten nicht.
 
-Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection)
+Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection)
 
 ## Nr. 11 Der Schattenschreiber: Eigenen Schreibstil als Steckbrief festhalten
 
@@ -605,7 +605,7 @@ Grenzen:
 - Admins können die Websuche abschalten. Dann antwortet Microsoft Copilot Chat laut Microsoft nur aus dem Sprachmodell, und Links fehlen.
 - Ein Link ist kein Beleg, bis du die Seite gelesen hast.
 
-Quellen: Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Quellen: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## Nr. 13 Das Dojo-Quiz: Quiz aus einem Reglement für neue Mitarbeitende
 
@@ -1101,7 +1101,7 @@ Grenzen:
 - Ist die Websuche abgeschaltet, fehlen die Links. Dann schlägst du die Funktionen selbst nach.
 - Für den Flow selbst gelten die Lizenzen von Power Automate. Diese sind hier nicht geprüft.
 
-Quellen: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
+Quellen: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
 
 ## Nr. 22 Die Tarnkappe: Text pseudonymisieren, bevor er weitergeht
 
@@ -1149,7 +1149,7 @@ Grenzen:
 - Pseudonymisieren ersetzt keine Abklärung mit der Stelle, die bei euch für Datenschutz zuständig ist.
 - Streng genommen pseudonymisierst du: Mit der Zuordnung lässt sich jede Person wieder bestimmen. Gib den Text nicht frei, nur weil Namen ersetzt sind.
 
-Quellen: Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Quellen: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## Nr. 23 Der Credit-Kompass: Credit-Verbrauch eines Agents vorher schätzen
 
@@ -1374,7 +1374,7 @@ Limits:
 - If the answer asks several questions at once, write “Only one question, please” and continue.
 - Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 
-Sources: Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources: Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
 ## No. 2 Plain Script: Technical text in plain language, with a loss list
 
@@ -1451,7 +1451,7 @@ Limits:
 - This page makes no statement about usage rights for generated images. Clarify that yourself for your use.
 - The image may contain text or logos despite the exclusions. You check before using it.
 
-Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
 ## No. 4 The Scout Report: What did I miss during my vacation
 
@@ -1489,7 +1489,7 @@ Limits:
 - “Can ignore” is a suggestion, not a decision.
 - Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 
-Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
 ## Draft a reply to a difficult customer email: Draft a reply to a difficult customer email
 
@@ -1684,7 +1684,7 @@ Limits:
 - According to Microsoft, the answer only sees content you have access to.
 - Verbal agreements without a note are missing from the dossier.
 
-Sources: Microsoft Learn: What is Microsoft Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Sources: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
 
 ## Check a table for anomalies: Check a table for anomalies
 
@@ -1797,7 +1797,7 @@ Limits:
 - According to Microsoft, Enterprise Data Protection applies to prompts and responses when you sign in with a work or school account. Still, only upload confidential contracts according to your internal rules.
 - According to Microsoft, file uploads have limits. The pages we checked give no numbers.
 
-Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection)
+Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection)
 
 ## No. 11 The Shadow Writer: Capture your own writing style as a profile
 
@@ -1884,7 +1884,7 @@ Limits:
 - Admins can turn off web search. According to Microsoft, Microsoft Copilot Chat then answers only from the language model, and links are missing.
 - A link is not evidence until you have read the page.
 
-Sources: Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Sources: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## No. 13 The Dojo Quiz: Quiz from a policy for new employees
 
@@ -2380,7 +2380,7 @@ Limits:
 - If web search is turned off, the links are missing. Then you look up the functions yourself.
 - The flow itself is covered by Power Automate licenses. Those are not checked here.
 
-Sources: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
+Sources: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
 
 ## No. 22 The Invisibility Cloak: Pseudonymise text before it goes anywhere
 
@@ -2428,7 +2428,7 @@ Limits:
 - Pseudonymising does not replace checking with the person responsible for data protection in your organization.
 - Strictly speaking, you are pseudonymising: the mapping lets each person be identified again. Do not release the text just because names have been replaced.
 
-Sources: Microsoft Learn: Enterprise data protection in Microsoft Copilot and Microsoft Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Sources: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## No. 23 The Credit Compass: Estimate an agent's credit consumption in advance
 
