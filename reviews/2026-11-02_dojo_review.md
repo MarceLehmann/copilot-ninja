@@ -193,3 +193,11 @@ Korrigiert, DE und EN gemeinsam, Seiten mit `node scripts/build.mjs --produktion
 - **Mobil:** Umbruch der Marke zwischen «PowerPlatform» und «Academy» (der `<wbr>` greift jetzt, weil der Name unter 420 px 0.92 rem gross ist); Unterzeile «COPILOT» auf 0.75 rem (12 px); `padding-block` der Quellenlinks von 3 auf 4 px, gemessen 25 px. Geprüft mit Chromium bei 320, 360 und 390 px.
 
 Nicht geändert: `geprueft_am` von t20 bis t25 (Entscheid von Marcel); die Vorschaubilder unter `assets/img/karten/` (karten.mjs würde sie auf die aktuelle Papierfarbe umstellen, die PNG-Wandlung braucht ein lokales Chrome; in dieser Umgebung nicht abgeschlossen, darum unverändert gelassen).
+
+### Nachkorrektur nach Gegenprüfung des Koordinators (2026-11-02)
+
+- **Credits-Durchsetzung:** Beide Learn-Aussagen stehen jetzt nebeneinander und beide Quellen sind verlinkt: «Billing rates and management» (bis 125 % geduldet, ab 125 % Agents blockiert, Pay-as-you-go verrechnet) und die Admin-Seite zu Copilot Credits (ohne Überverbrauchsquelle kann ein Environment nach seiner Zuteilung stoppen). «Ältere Seiten» gestrichen. Betroffen: t23 (Regel 2, Nutzen, weitere Quellen), t24 (Grenzen, weitere Quellen), Frage f7a (eindeutig auf «Billing rates and management» bezogen, Quelle zurück auf requirements-messages-management, Admin-Seite in der Auflösung), Nachschlageteil Zeile «Verbrauch je Funktion» mit zusätzlichem Quellenlink.
+- **«(Premium)»:** einmal vermerkt (Stufe 3 im Nachschlageteil, DE und EN), dass im Produkt oder in Übersichten auch «(Pro)» stehen kann.
+- **Quelltitel «What is Microsoft 365 Copilot?»:** gegen den Learn-Quelltext (`microsoft-365-copilot-overview.md`, `title: What is Microsoft 365 Copilot?`) bestätigt; die Live-Seite war aus dieser Umgebung nicht abrufbar.
+- **EN-Platzhalter t08:** DE hat zweimal «{Gegenüber|Person oder Firma}», EN jetzt zweimal «{Counterpart|person or company}», deckungsgleich.
+- Build, Fragenliste (`karten.mjs --ohne-png`, Karten-SVGs unverändert gelassen) und `links.mjs --livegang` grün.

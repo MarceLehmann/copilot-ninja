@@ -210,11 +210,11 @@
       "guertel": 7,
       "klasse": "fakt",
       "geprueft_am": "2026-11-02",
-      "frage": "According to Microsoft, what happens when an environment without an overage source (pay-as-you-go or tenant pool) has used up its allocated Copilot Credits?",
-      "antworten": ["Nothing, the extra is billed afterwards.", "Features that need credits can stop; with pay-as-you-go, overage is billed.", "All agents stop immediately, including ongoing conversations."],
+      "frage": "According to the Learn page Billing rates and management, what happens without pay-as-you-go on the environment from 125 percent of the prepaid Copilot Credits capacity?",
+      "antworten": ["Nothing, the extra is billed afterwards.", "Agents are blocked until capacity is increased or reset.", "Only agent flows stop, the agents keep answering."],
       "richtig": 1,
-      "aufloesung": "Without an overage source, an environment consumes only its allocated Copilot Credits; features that need credits can stop after that. With pay-as-you-go on the environment, overage is billed to the Azure subscription; with a tenant pool, it comes from the pool. Older Microsoft pages mentioned a tolerance up to 125 percent; the current admin page names no percentage threshold, and the linked source is what counts.",
-      "quelle": { "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "titel": "Microsoft Learn, Manage Copilot Credits for Copilot Studio" },
+      "aufloesung": "Overage is tolerated up to 125 percent; from 125 percent, agents are blocked until capacity is increased or reset. With pay-as-you-go on the environment, overage is billed to the Azure subscription. The admin page on Copilot Credits (manage-copilot-studio-copilot-credits-capacity) adds: without an overage source, an environment can stop as soon as its allocation is used up.",
+      "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management", "titel": "Microsoft Learn, Billing rates and management (Copilot Studio)" },
       "technik": null
     },
     {

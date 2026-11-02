@@ -210,11 +210,11 @@
       "guertel": 7,
       "klasse": "fakt",
       "geprueft_am": "2026-11-02",
-      "frage": "Was passiert laut Microsoft, wenn ein Environment ohne Überverbrauchsquelle (Pay-as-you-go oder Tenant-Pool) seine zugeteilten Copilot Credits aufgebraucht hat?",
-      "antworten": ["Nichts, es wird nachverrechnet.", "Funktionen, die Credits brauchen, können stoppen; mit Pay-as-you-go wird Überverbrauch verrechnet.", "Alle Agents stoppen sofort, auch laufende Gespräche."],
+      "frage": "Was passiert laut der Learn-Seite «Billing rates and management» ohne Pay-as-you-go am Environment ab 125 Prozent der vorausbezahlten Copilot-Credits-Kapazität?",
+      "antworten": ["Nichts, es wird nachverrechnet.", "Agents werden blockiert, bis die Kapazität erhöht oder zurückgesetzt wird.", "Nur Agent Flows stoppen, die Agents antworten weiter."],
       "richtig": 1,
-      "aufloesung": "Ohne Überverbrauchsquelle verbraucht ein Environment nur seine zugeteilten Copilot Credits; Funktionen, die Credits brauchen, können danach stoppen. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet, mit Tenant-Pool aus dem Pool. Ältere Microsoft-Seiten nannten eine Toleranz bis 125 Prozent, die aktuelle Admin-Seite nennt keine Prozentschwelle; massgebend ist die verlinkte Quelle.",
-      "quelle": { "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "titel": "Microsoft Learn, Copilot Credits für Copilot Studio verwalten" },
+      "aufloesung": "Bis 125 Prozent wird Überverbrauch geduldet, ab 125 Prozent werden Agents blockiert, bis die Kapazität erhöht oder zurückgesetzt wird. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet. Die Admin-Seite zu Copilot Credits (manage-copilot-studio-copilot-credits-capacity) ergänzt: Ohne Überverbrauchsquelle kann ein Environment schon stoppen, sobald seine Zuteilung aufgebraucht ist.",
+      "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management", "titel": "Microsoft Learn, Billing rates and management (Copilot Studio)" },
       "technik": null
     },
     {

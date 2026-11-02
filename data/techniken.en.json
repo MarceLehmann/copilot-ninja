@@ -1691,7 +1691,7 @@
         "Management"
       ],
       "moment": "Before an agent goes live",
-      "nutzen": "Before going live, you know the order of magnitude of the consumption and what happens when the quota is used up.",
+      "nutzen": "Before going live, you know the order of magnitude of the consumption and what happens at 125 percent of the prepaid capacity and when the allocation is used up.",
       "problem": "Management asks what the new agent will consume in production. You have a guess, but no calculation.",
       "vorher": "What does my agent cost?",
       "technik_text": "Goal: Help me estimate the events per conversation for my agent. Its instructions are below.\n\nContext: The agent is for {Audience|back-office employees}. It uses {Setup|one knowledge source and two tools}.\n\nExpectations:\n1. For a typical and for a long conversation: how many answers from knowledge sources (generative), how many predefined answers (classic), how many actions such as tools or switches between topics, and how many steps in agent flows to expect.\n2. One sentence of reasoning per number.\n3. The assumption that changes the result the most.\nMark everything as an estimate. Do not calculate prices.\n\nInstructions:\n{Agent instructions|your agent's instructions}",
@@ -1729,6 +1729,10 @@
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator",
           "titel": "Microsoft Learn: Agent usage estimator (Copilot Studio)"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+          "titel": "Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center)"
         }
       ],
       "teilen_text": "Technique 23 from the PowerPlatformAcademy Dojo: The Credit Compass. Estimate an agent's consumption in Copilot Credits before going live, with the rates from the Microsoft documentation and without prices. With a source.",
@@ -1760,7 +1764,7 @@
         ],
         "regeln": [
           "According to the licensing page, Copilot Studio enforces purchased capacity monthly, and unused Copilot Credits do not carry over to the next month. The Agent Usage Estimator, on the other hand, says some purchases can be carried over. Your contract is what counts.",
-          "Without an overage source (pay-as-you-go or tenant pool), an environment consumes only its allocated Copilot Credits according to the current admin page; features that need credits can stop after that. Older Microsoft pages mentioned a tolerance up to 125 percent; the current admin page names no percentage threshold. With pay-as-you-go on the environment, overage is billed to the Azure subscription.",
+          "According to the Learn page Billing rates and management, overage is tolerated up to 125 percent of the prepaid capacity; from 125 percent, agents are blocked until capacity is increased or reset; with pay-as-you-go on the environment, overage is billed to the Azure subscription. The admin page on Copilot Credits adds: without an overage source (pay-as-you-go or tenant pool), an environment consumes only its allocation, and features that need credits can stop after that. Both sources are linked below.",
           "Agent flows have separate capacity rules: when no Copilot Credits are available, no new flow runs start, while the agent, according to Microsoft, keeps answering other interactions."
         ],
         "lizenz_hinweis": "With the box checked, the calculator sets only Classic Answers, Generative Answers and Tenant Graph Grounding to 0 credits when the agent runs with the signed-in identity of a user with a Microsoft 365 Copilot add-on license. Fair use limits apply. Agent actions and agent flow actions remain included as a precaution. Computer-using agent actions are not generally free. Check the Microsoft source for the exemptions that apply to your use.",
@@ -1776,6 +1780,10 @@
           {
             "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator",
             "titel": "Microsoft Learn: Agent usage estimator (Copilot Studio)"
+          },
+          {
+            "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+            "titel": "Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center)"
           }
         ]
       }
@@ -1821,7 +1829,7 @@
       "grenzen": [
         "A sheet without an appointment in the calendar is just paper. The review date belongs in the responsible person's calendar.",
         "The criteria are suggestions. You have to decide on them as a team.",
-        "According to the current admin page, features that need Copilot Credits can stop once the allocated capacity is used up without an overage source. Ideally, your own shutdown criterion kicks in earlier."
+        "According to the Learn page Billing rates and management, agents are blocked from 125 percent of the prepaid capacity; according to the admin page on Copilot Credits, an environment without an overage source can stop as soon as its allocation is used up. Ideally, your own shutdown criterion kicks in earlier."
       ],
       "probe": "Count the share of your agents with a completed operations sheet and the agents without a responsible person.",
       "meister_variante": null,
@@ -1834,6 +1842,10 @@
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator",
           "titel": "Microsoft Learn: Agent usage estimator (Copilot Studio)"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+          "titel": "Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center)"
         }
       ],
       "teilen_text": "Technique 24 from the PowerPlatformAcademy Dojo: The Code of Honor. An operations sheet with a responsible person and shutdown criteria, before the agent goes live. Free to copy, with a source on Microsoft Learn.",

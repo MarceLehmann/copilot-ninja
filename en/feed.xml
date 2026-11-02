@@ -229,7 +229,7 @@
     <link href="https://copilot.ninja/en/techniken/credit-verbrauch-schaetzen/"/>
     <published>2026-10-15T00:00:00Z</published>
     <updated>2026-10-15T00:00:00Z</updated>
-    <summary>Estimate an agent&apos;s credit consumption in advance. Before going live, you know the order of magnitude of the consumption and what happens when the quota is used up.</summary>
+    <summary>Estimate an agent&apos;s credit consumption in advance. Before going live, you know the order of magnitude of the consumption and what happens at 125 percent of the prepaid capacity and when the allocation is used up.</summary>
   </entry>
   <entry>
     <title>Technique 24: The Code of Honor</title>

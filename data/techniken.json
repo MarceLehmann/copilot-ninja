@@ -2321,7 +2321,7 @@
         "Geschäftsleitung"
       ],
       "moment": "Bevor ein Agent live geht",
-      "nutzen": "Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was passiert, wenn das Kontingent aufgebraucht ist.",
+      "nutzen": "Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was bei 125 Prozent der vorausbezahlten Kapazität und bei aufgebrauchter Zuteilung passiert.",
       "problem": "Die Geschäftsleitung fragt, was der neue Agent im Betrieb verbraucht. Du hast eine Vermutung, aber keine Rechnung.",
       "vorher": "Was kostet mein Agent?",
       "technik_text": "Ziel: Hilf mir, für meinen Agent die Ereignisse pro Gespräch zu schätzen. Seine Anweisungen stehen unten.\n\nKontext: Der Agent ist für {Zielgruppe|Mitarbeitende im Innendienst}. Er nutzt {Ausstattung|eine Wissensquelle und zwei Tools}.\n\nErwartung:\n1. Für ein typisches und für ein langes Gespräch: wie viele Antworten aus Wissensquellen (generativ), wie viele vordefinierte Antworten (klassisch) und wie viele Aktionen wie Tools oder Wechsel zwischen Topics und wie viele Schritte in Agent Flows zu erwarten sind.\n2. Pro Zahl ein Satz Begründung.\n3. Die Annahme, die das Ergebnis am stärksten verändert.\nKennzeichne alles als Schätzung. Rechne keine Preise.\n\nAnweisungen:\n{Anweisungen|die Anweisungen deines Agents}",
@@ -2360,6 +2360,10 @@
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator",
           "titel": "Microsoft Learn: Agent usage estimator (Copilot Studio)"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+          "titel": "Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center)"
         }
       ],
       "geprueft_am": "2026-10-15",
@@ -2408,7 +2412,7 @@
         ],
         "regeln": [
           "Copilot Studio setzt die gekaufte Kapazität laut der Seite zur Lizenzierung monatlich durch, nicht genutzte Copilot Credits gehen nicht in den nächsten Monat über. Der Agent Usage Estimator schreibt dagegen, dass manche Käufe übertragbar sind. Massgebend ist dein Vertrag.",
-          "Ohne Überverbrauchsquelle (Pay-as-you-go oder Tenant-Pool) verbraucht ein Environment laut der aktuellen Admin-Seite nur seine zugeteilten Copilot Credits; Funktionen, die Credits brauchen, können danach stoppen. Ältere Microsoft-Seiten nannten eine Toleranz bis 125 Prozent, die aktuelle Admin-Seite nennt keine Prozentschwelle. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet.",
+          "Laut der Learn-Seite «Billing rates and management» wird Überverbrauch bis 125 Prozent der vorausbezahlten Kapazität geduldet, ab 125 Prozent werden Agents blockiert, bis die Kapazität erhöht oder zurückgesetzt wird; mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet. Die Admin-Seite zu Copilot Credits ergänzt: Ohne Überverbrauchsquelle (Pay-as-you-go oder Tenant-Pool) verbraucht ein Environment nur seine Zuteilung, Funktionen mit Credits können danach stoppen. Beide Quellen sind unten verlinkt.",
           "Für Agent Flows gelten eigene Kapazitätsregeln: Sind keine Copilot Credits mehr verfügbar, starten keine neuen Flow-Läufe, der Agent antwortet laut Microsoft bei anderen Interaktionen weiter."
         ],
         "lizenz_hinweis": "Mit Haken setzt der Rechner nur Classic Answers, Generative Answers und Tenant Graph Grounding auf 0 Credits, wenn der Agent mit der angemeldeten Identität eines Nutzers mit Microsoft-365-Copilot-Add-on-Lizenz läuft. Fair-Use-Grenzen gelten. Agent Actions und Agent-Flow-Aktionen bleiben vorsorglich eingerechnet. Computer-Using-Agent-Aktionen sind nicht pauschal gratis. Prüfe die Ausnahmen für deinen Einsatz in der Microsoft-Quelle.",
@@ -2434,6 +2438,10 @@
           {
             "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator",
             "titel": "Microsoft Learn: Agent usage estimator (Copilot Studio)"
+          },
+          {
+            "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+            "titel": "Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center)"
           }
         ]
       }
@@ -2488,7 +2496,7 @@
       "grenzen": [
         "Ein Blatt ohne Termin im Kalender ist Papier. Das Review-Datum gehört als Termin zur verantwortlichen Person.",
         "Die Kriterien sind Vorschläge. Festlegen müsst ihr sie im Team.",
-        "Laut der aktuellen Admin-Seite können Funktionen, die Copilot Credits brauchen, stoppen, sobald die zugeteilte Kapazität ohne Überverbrauchsquelle aufgebraucht ist. Ein eigenes Abschaltkriterium greift idealerweise vorher."
+        "Laut der Learn-Seite «Billing rates and management» werden Agents ab 125 Prozent der vorausbezahlten Kapazität blockiert; laut Admin-Seite zu Copilot Credits kann ein Environment ohne Überverbrauchsquelle schon stoppen, sobald seine Zuteilung aufgebraucht ist. Ein eigenes Abschaltkriterium greift idealerweise vorher."
       ],
       "probe": "Zähle den Anteil eurer Agents mit ausgefülltem Betriebsblatt und die Agents ohne verantwortliche Person.",
       "meister_variante": null,
@@ -2502,6 +2510,10 @@
         {
           "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator",
           "titel": "Microsoft Learn: Agent usage estimator (Copilot Studio)"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+          "titel": "Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center)"
         }
       ],
       "geprueft_am": "2026-10-15",

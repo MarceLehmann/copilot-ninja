@@ -295,13 +295,13 @@
       </li>
       <li class="test__frage" id="frage-f7a">
         <p><span class="knoten" data-guertel-nr="7">Black belt</span></p>
-        <h3>According to Microsoft, what happens when an environment without an overage source (pay-as-you-go or tenant pool) has used up its allocated Copilot Credits?</h3>
-        <ul class="arrow-list"><li>Nothing, the extra is billed afterwards.</li><li>Features that need credits can stop; with pay-as-you-go, overage is billed.</li><li>All agents stop immediately, including ongoing conversations.</li></ul>
+        <h3>According to the Learn page Billing rates and management, what happens without pay-as-you-go on the environment from 125 percent of the prepaid Copilot Credits capacity?</h3>
+        <ul class="arrow-list"><li>Nothing, the extra is billed afterwards.</li><li>Agents are blocked until capacity is increased or reset.</li><li>Only agent flows stop, the agents keep answering.</li></ul>
         <details class="einklapp">
           <summary>Answer</summary>
-          <p><strong>The correct answer is: Features that need credits can stop; with pay-as-you-go, overage is billed.</strong></p>
-          <p>Without an overage source, an environment consumes only its allocated Copilot Credits; features that need credits can stop after that. With pay-as-you-go on the environment, overage is billed to the Azure subscription; with a tenant pool, it comes from the pool. Older Microsoft pages mentioned a tolerance up to 125 percent; the current admin page names no percentage threshold, and the linked source is what counts.</p>
-          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn, Manage Copilot Credits for Copilot Studio</a>, as of November 2, 2026.</p>
+          <p><strong>The correct answer is: Agents are blocked until capacity is increased or reset.</strong></p>
+          <p>Overage is tolerated up to 125 percent; from 125 percent, agents are blocked until capacity is increased or reset. With pay-as-you-go on the environment, overage is billed to the Azure subscription. The admin page on Copilot Credits (manage-copilot-studio-copilot-credits-capacity) adds: without an overage source, an environment can stop as soon as its allocation is used up.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Billing rates and management (Copilot Studio)</a>, as of November 2, 2026.</p>
         </details>
       </li>
       <li class="test__frage" id="frage-f7b">

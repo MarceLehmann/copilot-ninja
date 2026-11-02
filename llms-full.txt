@@ -1158,7 +1158,7 @@ Gürtel: Brauner Gürtel. Zugang: Rechnen ohne Lizenz, Betrieb braucht Kapazitä
 
 Problem: Die Geschäftsleitung fragt, was der neue Agent im Betrieb verbraucht. Du hast eine Vermutung, aber keine Rechnung.
 
-Nutzen: Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was passiert, wenn das Kontingent aufgebraucht ist.
+Nutzen: Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was bei 125 Prozent der vorausbezahlten Kapazität und bei aufgebrauchter Zuteilung passiert.
 
 Text zum Kopieren:
 
@@ -1193,7 +1193,7 @@ Grenzen:
 - Die Schätzung ersetzt nicht den Blick auf den tatsächlichen Verbrauch.
 - Zusatzkosten, zum Beispiel für Datenzugriff, Lizenzen oder andere Dienste, sind im Rechner nicht enthalten.
 
-Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Standard harness licensing (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
+Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Standard harness licensing (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## Nr. 24 Der Ehrenkodex: Betriebsblatt mit Abschaltkriterien
 
@@ -1237,9 +1237,9 @@ So nutzt du es:
 Grenzen:
 - Ein Blatt ohne Termin im Kalender ist Papier. Das Review-Datum gehört als Termin zur verantwortlichen Person.
 - Die Kriterien sind Vorschläge. Festlegen müsst ihr sie im Team.
-- Laut der aktuellen Admin-Seite können Funktionen, die Copilot Credits brauchen, stoppen, sobald die zugeteilte Kapazität ohne Überverbrauchsquelle aufgebraucht ist. Ein eigenes Abschaltkriterium greift idealerweise vorher.
+- Laut der Learn-Seite «Billing rates and management» werden Agents ab 125 Prozent der vorausbezahlten Kapazität blockiert; laut Admin-Seite zu Copilot Credits kann ein Environment ohne Überverbrauchsquelle schon stoppen, sobald seine Zuteilung aufgebraucht ist. Ein eigenes Abschaltkriterium greift idealerweise vorher.
 
-Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
+Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## Nr. 25 Die Nachtwache: Monatlicher Agent-Check
 
@@ -2437,7 +2437,7 @@ Belt: Brown belt. Access: Calculate without a license, running it needs capacity
 
 Problem: Management asks what the new agent will consume in production. You have a guess, but no calculation.
 
-Benefit: Before going live, you know the order of magnitude of the consumption and what happens when the quota is used up.
+Benefit: Before going live, you know the order of magnitude of the consumption and what happens at 125 percent of the prepaid capacity and when the allocation is used up.
 
 Text to copy:
 
@@ -2472,7 +2472,7 @@ Limits:
 - The estimate does not replace looking at the actual consumption.
 - Additional costs, for example data access, licenses or other services, are not included in the calculator.
 
-Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Standard harness licensing (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
+Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Standard harness licensing (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## No. 24 The Code of Honor: Operations sheet with shutdown criteria
 
@@ -2516,9 +2516,9 @@ How to use it:
 Limits:
 - A sheet without an appointment in the calendar is just paper. The review date belongs in the responsible person's calendar.
 - The criteria are suggestions. You have to decide on them as a team.
-- According to the current admin page, features that need Copilot Credits can stop once the allocated capacity is used up without an overage source. Ideally, your own shutdown criterion kicks in earlier.
+- According to the Learn page Billing rates and management, agents are blocked from 125 percent of the prepaid capacity; according to the admin page on Copilot Credits, an environment without an overage source can stop as soon as its allocation is used up. Ideally, your own shutdown criterion kicks in earlier.
 
-Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator)
+Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## No. 25 The Night Watch: Monthly agent check
 

@@ -295,13 +295,13 @@
       </li>
       <li class="test__frage" id="frage-f7a">
         <p><span class="knoten" data-guertel-nr="7">Schwarzer Gürtel</span></p>
-        <h3>Was passiert laut Microsoft, wenn ein Environment ohne Überverbrauchsquelle (Pay-as-you-go oder Tenant-Pool) seine zugeteilten Copilot Credits aufgebraucht hat?</h3>
-        <ul class="arrow-list"><li>Nichts, es wird nachverrechnet.</li><li>Funktionen, die Credits brauchen, können stoppen; mit Pay-as-you-go wird Überverbrauch verrechnet.</li><li>Alle Agents stoppen sofort, auch laufende Gespräche.</li></ul>
+        <h3>Was passiert laut der Learn-Seite «Billing rates and management» ohne Pay-as-you-go am Environment ab 125 Prozent der vorausbezahlten Copilot-Credits-Kapazität?</h3>
+        <ul class="arrow-list"><li>Nichts, es wird nachverrechnet.</li><li>Agents werden blockiert, bis die Kapazität erhöht oder zurückgesetzt wird.</li><li>Nur Agent Flows stoppen, die Agents antworten weiter.</li></ul>
         <details class="einklapp">
           <summary>Auflösung</summary>
-          <p><strong>Richtig ist: Funktionen, die Credits brauchen, können stoppen; mit Pay-as-you-go wird Überverbrauch verrechnet.</strong></p>
-          <p>Ohne Überverbrauchsquelle verbraucht ein Environment nur seine zugeteilten Copilot Credits; Funktionen, die Credits brauchen, können danach stoppen. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet, mit Tenant-Pool aus dem Pool. Ältere Microsoft-Seiten nannten eine Toleranz bis 125 Prozent, die aktuelle Admin-Seite nennt keine Prozentschwelle; massgebend ist die verlinkte Quelle.</p>
-          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn, Copilot Credits für Copilot Studio verwalten</a>, Stand 02.11.2026.</p>
+          <p><strong>Richtig ist: Agents werden blockiert, bis die Kapazität erhöht oder zurückgesetzt wird.</strong></p>
+          <p>Bis 125 Prozent wird Überverbrauch geduldet, ab 125 Prozent werden Agents blockiert, bis die Kapazität erhöht oder zurückgesetzt wird. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet. Die Admin-Seite zu Copilot Credits (manage-copilot-studio-copilot-credits-capacity) ergänzt: Ohne Überverbrauchsquelle kann ein Environment schon stoppen, sobald seine Zuteilung aufgebraucht ist.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Billing rates and management (Copilot Studio)</a>, Stand 02.11.2026.</p>
         </details>
       </li>
       <li class="test__frage" id="frage-f7b">
