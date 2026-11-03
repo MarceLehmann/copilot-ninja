@@ -1,4 +1,4 @@
-/* PowerPlatformAcademy Dojo dojo-extra.js: von dojo.js erst bei Bedarf geladen. Guertel-Aufstieg mit Meldung, Kalenderdatei
+/* Power Platform Dojo dojo-extra.js: von dojo.js erst bei Bedarf geladen. Guertel-Aufstieg mit Meldung, Kalenderdatei
    Vier-Wochen-Pfad, Technik des Tages mit Prompt von der Technik-Seite. Braucht window.CNDojo. Nichts wird gesendet. */
 (function () {
   'use strict';

@@ -1,4 +1,4 @@
-/* PowerPlatformAcademy Dojo core.js. Kein Tracking, keine fremden Anfragen. Schnittstelle fuer dojo.js und gratis.js: window.CN */
+/* Power Platform Dojo core.js. Kein Tracking, keine fremden Anfragen. Schnittstelle fuer dojo.js und gratis.js: window.CN */
 (function () {
   'use strict';
   var d = document, w = window, h = d.documentElement;

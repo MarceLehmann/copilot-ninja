@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-  PowerPlatformAcademy Dojo: Generator und Validierung. Node 18 oder neuer, keine Abhaengigkeiten.
+  Power Platform Dojo: Generator und Validierung. Node 18 oder neuer, keine Abhaengigkeiten.
 
   node scripts/build.mjs --vorschau            alle Eintraege, Banner auf Seiten ohne Freigabe (Standard)
   node scripts/build.mjs --produktion          nur Eintraege mit freigabe und leerem offen_pruefen
@@ -46,12 +46,12 @@ const NEWSLETTER_URL = (stelle) => `https://kmupower.com/newsletter?${UTM(stelle
 const ACADEMY_URL = (stelle) => `https://www.powerplatformacademy.online/?${UTM(stelle)}`;
 // Dojo gehoert zur Power Platform Academy (Marcel 16.10.2026): eigene UTM fuer den Zugehoerigkeitssatz
 const ACADEMY_DOJO_URL = (stelle) => `https://www.powerplatformacademy.online/?utm_source=copilot.ninja&utm_medium=dojo&utm_campaign=dojo&utm_content=${stelle}`;
-const SITE_NAME = 'PowerPlatformAcademy Dojo';
+const SITE_NAME = 'Power Platform Dojo';
 const SITE_ZUSATZ = 'Copilot';
-const SITE_VOLL = 'Copilot Dojo';
+const SITE_VOLL = 'Power Platform Dojo';
 const LEARN_TESTVERSION = 'https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions';
 const LEARN_PROMPTS = 'https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/';
-const GENERATOR = '<meta name="generator" content="PowerPlatformAcademy Dojo build">';
+const GENERATOR = '<meta name="generator" content="Power Platform Dojo build">';
 
 const GUERTEL_NAMEN = {
   de: [['Weisser Gürtel', 'Weiss'], ['Gelber Gürtel', 'Gelb'], ['Oranger Gürtel', 'Orange'], ['Grüner Gürtel', 'Grün'], ['Blauer Gürtel', 'Blau'], ['Brauner Gürtel', 'Braun'], ['Schwarzer Gürtel', 'Schwarz']],
@@ -202,9 +202,9 @@ function render(tpl, ctx, quelle = 'Template') {
   });
 }
 
-// Wortmarke als Text in der eigenen Titelschrift (16.10.2026: Name PowerPlatformAcademy Dojo, darunter klein Copilot)
+// Wortmarke als Text in der eigenen Titelschrift (16.10.2026: Name Power Platform Dojo, darunter klein Copilot)
 function wortmarke(srText = '') {
-  return `<span class="marke__wort"><span class="marke__name">PowerPlatform<wbr>Academy Dojo</span><span class="marke__zusatz">${SITE_ZUSATZ}</span></span>${srText ? `<span class="sr-only">${srText}</span>` : ''}`;
+  return `<span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">${SITE_ZUSATZ}</span></span>${srText ? `<span class="sr-only">${srText}</span>` : ''}`;
 }
 
 /* Tusch */
@@ -407,7 +407,7 @@ function textMitTeilen(text, hinweise) {
 }
 function herkunft(t) {
   const adresse = t.typ === 'technik' ? `${KURZ_BASIS}/${LP()}${t.nr}` : urlTechnik(t);
-  return T(`Technik aus dem PowerPlatformAcademy Dojo: ${adresse}\nQuelle: Microsoft Learn, Stand ${datumCH(t.geprueft_am)}`, `Technique from the PowerPlatformAcademy Dojo: ${adresse}\nSource: Microsoft Learn, as of ${datumCH(t.geprueft_am)}`);
+  return T(`Technik aus dem Power Platform Dojo: ${adresse}\nQuelle: Microsoft Learn, Stand ${datumCH(t.geprueft_am)}`, `Technique from the Power Platform Dojo: ${adresse}\nSource: Microsoft Learn, as of ${datumCH(t.geprueft_am)}`);
 }
 function schmiedeHtml(t, praefixId, ebene = 'h3') {
   const felder = Object.entries(t._felder || {});
@@ -687,11 +687,12 @@ function metaHtml(p) {
   if (p.canonical) zeilen.push(`<link rel="canonical" href="${p.canonical}">`);
   const bild = p.ogBild || `${BASE_URL}${T('og-image.png', 'og-image-en.png')}`;
   zeilen.push(
-    `<meta property="og:type" content="${p.ogTyp || 'website'}">`, '<meta property="og:site_name" content="PowerPlatformAcademy Dojo · Copilot">', `<meta property="og:locale" content="${T('de_CH', 'en_US')}">`,
+    `<meta property="og:type" content="${p.ogTyp || 'website'}">`, '<meta property="og:site_name" content="Power Platform Dojo · Copilot">', `<meta property="og:locale" content="${T('de_CH', 'en_US')}">`,
     `<meta property="og:title" content="${esc(p.ogTitel || p.titel)}">`, `<meta property="og:description" content="${esc(p.ogBeschreibung || p.beschreibung)}">`);
   if (p.canonical) zeilen.push(`<meta property="og:url" content="${p.canonical}">`);
   zeilen.push(`<meta property="og:image" content="${bild}">`, '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
-    `<meta property="og:image:alt" content="${esc(p.ogAlt || T('PowerPlatformAcademy Dojo: Übung schlägt Hype.', 'PowerPlatformAcademy Dojo: Practice beats hype.'))}">`, '<meta name="twitter:card" content="summary_large_image">');
+    `<meta property="og:image:alt" content="${esc(p.ogAlt || T('Power Platform Dojo: Übung schlägt Hype.', 'Power Platform Dojo: Practice beats hype.'))}">`, '<meta name="twitter:card" content="summary_large_image">',
+    `<meta name="twitter:title" content="${esc(p.ogTitel || p.titel)}">`, `<meta name="twitter:description" content="${esc(p.ogBeschreibung || p.beschreibung)}">`, `<meta name="twitter:image" content="${bild}">`);
   if (p.jsonld) zeilen.push(jsonLd({ '@context': 'https://schema.org', '@graph': p.jsonld }));
   return zeilen.join('\n');
 }
@@ -745,7 +746,7 @@ function baueStart() {
     seite: 'start', template: 'start.html',
     titel: T('Copilot Chat und Studio: Techniken | Copilot Dojo', 'Copilot Chat and Studio: Techniques | Copilot Dojo'),
     beschreibung: T(`Welcher Copilot-Gürtel bist du? ${GRUNDFORMEN.length} Grundformen und ${ANZAHL} Techniken für Copilot Chat und Studio, mit Quellen. Dazu Gürtelprüfung und Lizenz-Check.`, `Which Copilot belt are you? ${GRUNDFORMEN.length} basic forms and ${ANZAHL} techniques for Copilot Chat and Studio, with sources. Plus belt exam and license check.`),
-    ogTitel: T('PowerPlatformAcademy Dojo: Übung schlägt Hype.', 'PowerPlatformAcademy Dojo: Practice beats hype.'),
+    ogTitel: T('Power Platform Dojo: Übung schlägt Hype.', 'Power Platform Dojo: Practice beats hype.'),
     canonical: BASE_L, banner: ohneFreigabe(auf.filter(Boolean)),
     jsonld: [ldWebsite(), LD_ORG],
     daten: {
@@ -873,7 +874,7 @@ function baueHeute() {
   const t = heuteTechnik(true); // dieselbe Rotation wie die Startseite (Marcel 24.10.2026, 369)
   seite('heute/index.html', {
     seite: 'heute', template: 'heute.html', titel: T('Technik des Tages | Copilot Dojo', 'Technique of the day | Copilot Dojo'),
-    beschreibung: T('Jeden Tag eine Technik aus dem PowerPlatformAcademy Dojo, für alle am selben Tag dieselbe.', 'One technique from the PowerPlatformAcademy Dojo every day, the same for everyone on the same day.'), noindex: true, canonical: null,
+    beschreibung: T('Jeden Tag eine Technik aus dem Power Platform Dojo, für alle am selben Tag dieselbe.', 'One technique from the Power Platform Dojo every day, the same for everyone on the same day.'), noindex: true, canonical: null,
     banner: t ? ohneFreigabe([t]) : false,
     daten: { build_datum: DATUM, heute_inhalt: heuteHtml(t, '../', 'h2') }
   });
@@ -1030,7 +1031,7 @@ function baueGemeinsam() {
   const sperren = ['templates/', 'scripts/', 'data/', '.github/'].map(p => `Disallow: ${basisPfad}${p}`).join('\n');
   const bots = ['Googlebot', 'Googlebot-Image', 'Bingbot', 'DuckDuckBot', 'Applebot', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Amazonbot', 'CCBot', 'cohere-ai', 'Meta-ExternalAgent', 'MistralAI-User'];
   schreibe('robots.txt', [
-    '# PowerPlatformAcademy Dojo · Copilot (copilot.ninja). Suchmaschinen und KI-Assistenten sind willkommen: bitte mit Quelle zitieren.',
+    '# Power Platform Dojo · Copilot (copilot.ninja). Suchmaschinen und KI-Assistenten sind willkommen: bitte mit Quelle zitieren.',
     '# Inhalte auf Deutsch unter /, auf Englisch unter /en/. Kurzfassung fuer KI: /llms.txt, Volltext: /llms-full.txt',
     '', 'User-agent: *', 'Allow: /', signal, sperren, '',
     ...bots.flatMap(b => [`User-agent: ${b}`, 'Allow: /', signal, sperren, '']),
@@ -1045,10 +1046,10 @@ function baueGemeinsam() {
   const enVoll = sortiert.map(t => volltext(t));
   setzeSprache('de');
   const kopf = [`# ${SITE_VOLL}`, '',
-    `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Das Dojo gehört zur Power Platform Academy (https://www.powerplatformacademy.online/). Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.`, '',
+    `> Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, auf Deutsch und Englisch, vom weissen bis zum schwarzen Gürtel. Jede Technik nennt ihre Quellen bei Microsoft Learn, den Stand und ihre Grenzen. Das Dojo ist eine unabhängige Community-Initiative von Marcel Lehmann. Bezahlte Kurse gibt es separat in der Power Platform Academy (https://www.powerplatformacademy.online/). Unabhängige Website von Marcel Lehmann (KMUpower), keine Verbindung zu Microsoft.`, '',
     'Kurzfakten:', '',
     `- Website: ${SITE_VOLL} (${BASE_URL}), Englisch unter ${BASE_URL}en/`,
-    '- Weiteres Dojo: PowerPlatformAcademy Dojo · Power Automate (https://powerautomate.ninja/)',
+    '- Weiteres Dojo: Power Platform Dojo · Power Automate (https://powerautomate.ninja/)',
     '- Autor: Marcel Lehmann, Microsoft Business Applications MVP, Schweiz (Handelsname KMUpower, https://kmupower.com/)',
     `- Inhalt: ${GRUNDFORMEN.length} Grundformen und ${TECHNIKEN.length} Techniken für Microsoft Copilot Chat, Agent Builder und Copilot Studio, je mit Prompt zum Kopieren, Grenzen und Quellen bei Microsoft Learn`,
     '- Kosten: gratis, ohne Anmeldung',
@@ -1100,7 +1101,7 @@ function baueCss() {
     const css = lies(q);
     // Erlaubt sind data:-URIs und die selbst gehosteten Schriften unter assets/fonts/
     if (/@import|url\((?!["']?(data:|\.\.\/fonts\/[\w-]+\.woff2["']?\)))/.test(css.replace(/(["'])data:[\s\S]*?\1/g, '"data:"'))) fehler(`${q}: @import oder url() ausser data: und ../fonts/*.woff2 ist nicht erlaubt`);
-    schreibe(`assets/css/${f}.css`, `/* PowerPlatformAcademy Dojo. Quelle: ${q} (nicht hier bearbeiten, node scripts/build.mjs erzeugt diese Datei) */\n${minifiziere(css)}\n`);
+    schreibe(`assets/css/${f}.css`, `/* Power Platform Dojo. Quelle: ${q} (nicht hier bearbeiten, node scripts/build.mjs erzeugt diese Datei) */\n${minifiziere(css)}\n`);
   }
 }
 
@@ -1108,7 +1109,7 @@ function baueCss() {
 const FARBEN_HELL = { '.t-koerper': 'fill:#15171B', '.t-gesicht': 'fill:#F3EFF7', '.t-augen': 'fill:none;stroke:#15171B;stroke-width:3.6;stroke-linecap:round', '.t-band,.t-pinsel-spitze': 'fill:#B4301A', '.t-guertel,.t-guertel-enden': 'fill:#FBFAF5;stroke:#8A7F6C;stroke-width:1.2;stroke-linejoin:round', '.t-pinsel-stiel': 'fill:none;stroke:#15171B;stroke-width:3;stroke-linecap:round', '.t-hand': 'fill:#15171B', '.t-rolle,.t-strich': 'display:none' };
 function tuschDatei(farben = FARBEN_HELL, guertelFarbe = '#FBFAF5') {
   const style = Object.entries(farben).map(([k, v]) => `${k}{${v.replace('#FBFAF5', guertelFarbe)}}`).join('');
-  return partial('tusch').replace('<svg class="tusch__svg"', '<svg xmlns="http://www.w3.org/2000/svg"').replace(' aria-hidden="true"', ' role="img" aria-label="Tusch, die Figur des PowerPlatformAcademy Dojo"').replace('<g class="t-figur">', `<title>Tusch</title><style>${style}</style><g class="t-figur">`);
+  return partial('tusch').replace('<svg class="tusch__svg"', '<svg xmlns="http://www.w3.org/2000/svg"').replace(' aria-hidden="true"', ' role="img" aria-label="Tusch, die Figur des Power Platform Dojo"').replace('<g class="t-figur">', `<title>Tusch</title><style>${style}</style><g class="t-figur">`);
 }
 function baueBilder() {
   schreibe('assets/img/tusch.svg', tuschDatei() + '\n');
@@ -1120,7 +1121,7 @@ function baueBilder() {
 <rect width="1200" height="630" fill="#F3EFF7"/>
 ${belts.map((c, i) => `<rect x="${i * (1200 / 7)}" y="606" width="${1200 / 7 + 1}" height="24" fill="${c}"/>`).join('')}
 <rect x="0" y="605" width="1200" height="1.5" fill="#8A7F6C"/>
-<text x="80" y="112" font-family="Bahnschrift, 'Avenir Next Condensed', 'Arial Narrow', sans-serif" font-stretch="condensed" font-weight="600" font-size="38" fill="#15171B">PowerPlatformAcademy Dojo</text>
+<text x="80" y="112" font-family="Bahnschrift, 'Avenir Next Condensed', 'Arial Narrow', sans-serif" font-stretch="condensed" font-weight="600" font-size="38" fill="#15171B">Power Platform Dojo</text>
 <text x="80" y="152" font-family="Bahnschrift, 'Avenir Next Condensed', 'Arial Narrow', sans-serif" font-stretch="condensed" font-weight="700" font-size="26" letter-spacing="3" fill="#B4301A">COPILOT</text>
 <text x="76" y="300" font-family="Bahnschrift, 'Avenir Next Condensed', 'Arial Narrow', sans-serif" font-stretch="condensed" font-weight="600" font-size="112" letter-spacing="-2" fill="#15171B">Übung schlägt</text>
 <text x="76" y="410" font-family="Bahnschrift, 'Avenir Next Condensed', 'Arial Narrow', sans-serif" font-stretch="condensed" font-weight="600" font-size="112" letter-spacing="-2" fill="#15171B">Hype.</text>
@@ -1181,9 +1182,9 @@ ${(t.zusatz_texte || []).map(z => `<p><b>${esc(z.titel)}</b></p><pre>${esc(z.tex
 ${(t.offen_pruefen || []).length ? `<p class="rot"><b>Offen prüfen:</b> ${t.offen_pruefen.map(esc).join('; ')}</p>` : ''}
 <p class="frei">Freigegeben am ______________ &nbsp; Kürzel ______</p>
 </section>`;
-  const html = `<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><title>Freigabeblatt PowerPlatformAcademy Dojo${PAKET ? ' Paket ' + PAKET : ''}</title>
+  const html = `<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><title>Freigabeblatt Power Platform Dojo${PAKET ? ' Paket ' + PAKET : ''}</title>
 <style>body{font:11pt/1.45 "Segoe UI",system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;color:#15171B}pre{white-space:pre-wrap;background:#F3EFF7;padding:.8rem;border:1px solid #D8CFBE;font-size:9.5pt}.e{border-top:2px solid #15171B;padding-top:.6rem;margin-top:1.6rem;break-inside:avoid-page}.rot{color:#B4301A}.frei{margin-top:1rem;font-weight:600}h2 small{font-weight:400;color:#4E525B}@media print{body{margin:0}.e{break-before:page}}</style></head><body>
-<h1>Freigabeblatt PowerPlatformAcademy Dojo${PAKET ? ', Paket ' + PAKET : ''}</h1>
+<h1>Freigabeblatt Power Platform Dojo${PAKET ? ', Paket ' + PAKET : ''}</h1>
 <p>Erzeugt am ${datumCH(DATUM)} aus data/techniken.json. Nicht veröffentlichen. Nach dem Lesen trägst du das Datum in «freigabe» ein oder nennst dem Koordinator die Nummern.</p>
 <h2>Einmal selbst ausführen</h2><ul>${zeigen.map(p => `<li>Paket ${p}: ${ausfuehren[p].map(id => ALLE_NACH_ID[id] ? `${id} ${esc(ALLE_NACH_ID[id].titel)}` : id).join(', ')}</li>`).join('')}</ul>
 <h2>Einträge (${liste.length})</h2><ol>${liste.map(t => `<li>${t.typ === 'technik' ? 'Nr. ' + t.nr : t.id.toUpperCase()} ${esc(t.titel)}${(t.offen_pruefen || []).length ? ' <span class="rot">(offene Punkte)</span>' : ''}</li>`).join('')}</ol>
@@ -1292,7 +1293,7 @@ if (MODUS === 'freigabeblatt') {
   abschluss();
 }
 
-console.log(`\nPowerPlatformAcademy Dojo Build, Modus ${MODUS}${LOCKER ? ' (locker)' : ''}, Datum ${DATUM}`);
+console.log(`\nPower Platform Dojo Build, Modus ${MODUS}${LOCKER ? ' (locker)' : ''}, Datum ${DATUM}`);
 console.log(`Einträge: ${ALLE.length} in den Daten, ${DABEI.length} im Build (${TECHNIKEN.length} Techniken, ${GRUNDFORMEN.length} Grundformen)`);
 if (geschrieben.length) {
   const seiten = geschrieben.filter(f => f.endsWith('.html'));

@@ -1,4 +1,4 @@
-/* PowerPlatformAcademy Dojo dojo-seiten.js: nur auf /dojo/, /dojo/profil/ und /pruefung/. Mein Dojo, Profil, Loeschen, Guertelkarte,
+/* Power Platform Dojo dojo-seiten.js: nur auf /dojo/, /dojo/profil/ und /pruefung/. Mein Dojo, Profil, Loeschen, Guertelkarte,
    Technik beitragen, Selbsttest. Braucht dojo.js (window.CNDojo). Nichts wird gesendet. */
 (function () {
   'use strict';
@@ -60,8 +60,8 @@
     }
     ctx.fillStyle = '#8A7F6C'; ctx.fillRect(0, 605, 1200, 1.5);
     ctx.strokeStyle = '#8A7F6C'; ctx.lineWidth = 2; ctx.strokeRect(Math.floor((n - 1) * 1200 / 7) + 1, 587, Math.ceil(1200 / 7) - 1, 43);
-    ctx.fillStyle = '#15171B'; ctx.font = '600 34px ' + SCHRIFT; ctx.fillText('PowerPlatformAcademy Dojo', 80, 88);
-    var wmB = ctx.measureText('PowerPlatformAcademy Dojo').width;
+    ctx.fillStyle = '#15171B'; ctx.font = '600 34px ' + SCHRIFT; ctx.fillText('Power Platform Dojo', 80, 88);
+    var wmB = ctx.measureText('Power Platform Dojo').width;
     ctx.fillStyle = '#B4301A'; ctx.font = '700 24px ' + SCHRIFT; ctx.fillText('COPILOT', 80 + wmB + 14, 88);
     ctx.fillStyle = '#4E525B'; ctx.font = '400 34px ' + SCHRIFT; ctx.textBaseline = 'alphabetic';
     var y = 176;
@@ -125,8 +125,8 @@
       }, 'image/png');
     });
     textK.addEventListener('click', function () {
-      var t = EN ? (art === 'start' ? 'My starting point in the PowerPlatformAcademy Dojo: ' + NAMEN[n - 1] + '. Seven questions, each followed by the answer with a source.' : 'In the PowerPlatformAcademy Dojo I have practiced all techniques up to the ' + akk(n) + '.') + ' Self-assessment, not a certificate. ' + url
-        : (art === 'start' ? 'Mein Startpunkt im PowerPlatformAcademy Dojo: ' + NAMEN[n - 1] + '. Sieben Fragen, nach jeder die Auflösung mit Quelle.' : 'Im PowerPlatformAcademy Dojo habe ich alle Techniken bis zum ' + akk(n) + ' geübt.') + ' Selbsteinschätzung, kein Zertifikat. ' + url;
+      var t = EN ? (art === 'start' ? 'My starting point in the Power Platform Dojo: ' + NAMEN[n - 1] + '. Seven questions, each followed by the answer with a source.' : 'In the Power Platform Dojo I have practiced all techniques up to the ' + akk(n) + '.') + ' Self-assessment, not a certificate. ' + url
+        : (art === 'start' ? 'Mein Startpunkt im Power Platform Dojo: ' + NAMEN[n - 1] + '. Sieben Fragen, nach jeder die Auflösung mit Quelle.' : 'Im Power Platform Dojo habe ich alle Techniken bis zum ' + akk(n) + ' geübt.') + ' Selbsteinschätzung, kein Zertifikat. ' + url;
       var status = box.querySelector('[role="status"]');
       (w.CN && w.CN.kopierText ? w.CN.kopierText(t) : Promise.reject()).then(function () { status.textContent = T('Text kopiert. Füg ihn in deinen Post ein.', 'Text copied. Paste it into your post.'); }, function () { status.textContent = t; });
     });
@@ -399,6 +399,17 @@
         }
         erg.appendChild(pl);
         if (D.kursZeile) erg.appendChild(D.kursZeile('pruefung'));
+        var sensei = el('p', { 'class': 'klein' });
+        if (EN) {
+          sensei.appendChild(d.createTextNode('Belt earned? Pass it on and become a Sensei in '));
+          sensei.appendChild(el('a', { href: 'https://powerplatformdojo.com/en/mentoring/', rel: 'noopener' }, 'Dojo Mentoring'));
+          sensei.appendChild(d.createTextNode(': 3 months, free, 1:1.'));
+        } else {
+          sensei.appendChild(d.createTextNode('Gürtel geschafft? Gib dein Wissen weiter und werde Sensei im '));
+          sensei.appendChild(el('a', { href: 'https://powerplatformdojo.com/mentoring/', rel: 'noopener' }, 'Dojo Mentoring'));
+          sensei.appendChild(d.createTextNode(': 3 Monate, gratis, 1:1.'));
+        }
+        erg.appendChild(sensei);
         if (!gespeichert) erg.appendChild(el('p', { 'class': 'klein' }, T('Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.', 'Your browser does not store anything. The result only applies on this page.')));
         box.appendChild(erg);
         karteBauen(karte, 'start', n);

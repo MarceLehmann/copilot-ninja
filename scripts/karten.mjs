@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-  PowerPlatformAcademy Dojo: Vorschaubilder und Dojo-Seiten aus den Daten. Node 18 oder neuer, keine Abhaengigkeiten.
+  Power Platform Dojo: Vorschaubilder und Dojo-Seiten aus den Daten. Node 18 oder neuer, keine Abhaengigkeiten.
 
   node scripts/karten.mjs                 alle Eintraege (Vorschau): SVG und PNG je Technik und je Guertel, dazu
                                           dojo/guertel.json, die sieben Guertel-Landeseiten und die Fragenliste
@@ -101,11 +101,11 @@ function textZeilen(zeilen, x, y, px, abstand, attr) {
   return zeilen.map((z, i) => `<text x="${x}" y="${y + i * abstand}" font-size="${px}" ${attr}>${esc(z)}</text>`).join('\n');
 }
 
-/* Bausteine: Wortmarke als Text (16.10.2026, PowerPlatformAcademy Dojo mit Zusatz Copilot) und Tusch (assets/img/tusch.svg) */
+/* Bausteine: Wortmarke als Text (16.10.2026, Power Platform Dojo mit Zusatz Copilot) und Tusch (assets/img/tusch.svg) */
 const TUSCH = (() => { try { return lies('assets/img/tusch.svg'); } catch { return ''; } })();
 if (!TUSCH) warnungen.push('assets/img/tusch.svg fehlt, Karten ohne Tusch');
 function wortmarke(x, y) {
-  return `<text x="${x}" y="${y + 26}" font-family="${DISPLAY}" font-stretch="condensed" font-weight="600" font-size="32" fill="#15171B">PowerPlatformAcademy Dojo<tspan font-weight="700" font-size="22" letter-spacing="2.5" fill="#B4301A" dx="14">COPILOT</tspan></text>`;
+  return `<text x="${x}" y="${y + 26}" font-family="${DISPLAY}" font-stretch="condensed" font-weight="600" font-size="32" fill="#15171B">Power Platform Dojo<tspan font-weight="700" font-size="22" letter-spacing="2.5" fill="#B4301A" dx="14">COPILOT</tspan></text>`;
 }
 function tusch(x, y, hoehe, farbe) {
   if (!TUSCH) return '';
@@ -171,11 +171,11 @@ function guertelKarte(g) {
   teile.push(`<text x="80" y="282" font-family="${DISPLAY}" font-weight="700" font-size="104" letter-spacing="-2" fill="#15171B">${esc(g.name)}</text>`);
   teile.push(`<rect x="80" y="318" width="600" height="34" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/><rect x="352" y="304" width="56" height="62" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/>`);
   if (g.leitwort) teile.push(`<text x="80" y="446" font-family="${DISPLAY}" font-weight="600" font-size="54" fill="#15171B">${esc(g.leitwort)}</text>`);
-  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="28" fill="#4E525B">${T('Selbsteinschätzung im PowerPlatformAcademy Dojo. Kein Zertifikat.', 'Self-assessment in the PowerPlatformAcademy Dojo. Not a certificate.')}</text>`);
+  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="28" fill="#4E525B">${T('Selbsteinschätzung im Power Platform Dojo. Kein Zertifikat.', 'Self-assessment in the Power Platform Dojo. Not a certificate.')}</text>`);
   teile.push(tusch(880, 110, 330, BELT[g.nr - 1]));
   teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(KURZ_BASIS + (L === 'en' ? '/en' : ''))}</text>`);
   teile.push(band(g.nr));
-  return rahmen(teile.join('\n'), `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. ${T('Selbsteinschätzung im PowerPlatformAcademy Dojo, kein Zertifikat.', 'Self-assessment in the PowerPlatformAcademy Dojo, not a certificate.')}`);
+  return rahmen(teile.join('\n'), `${g.name}${g.leitwort ? ', ' + g.leitwort : ''}. ${T('Selbsteinschätzung im Power Platform Dojo, kein Zertifikat.', 'Self-assessment in the Power Platform Dojo, not a certificate.')}`);
 }
 
 /* PNG mit lokalem Chrome */
@@ -222,7 +222,7 @@ function landeseite(g) {
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Copilot Dojo">
 <meta property="og:locale" content="de_CH">
-<meta property="og:title" content="${esc(g.name)} im PowerPlatformAcademy Dojo">
+<meta property="og:title" content="${esc(g.name)} im Power Platform Dojo">
 <meta property="og:description" content="${esc(beschreibung)}">
 <meta property="og:url" content="${BASE_URL}dojo/guertel/${g.farbe}/">
 <meta property="og:image" content="${bild}">
@@ -242,19 +242,19 @@ function landeseite(g) {
         <span class="label">Stufe ${g.nr} von 7${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>
         <h1 id="h1">${esc(g.name)}</h1>
         <p class="lead"><strong>Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.</strong></p>
-${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du)}</p>\n` : ''}        <p>Diese Seite gehört zu einer geteilten Karte aus dem PowerPlatformAcademy Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.</p>
+${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du)}</p>\n` : ''}${g.nr === 7 ? '        <p>Gürtel geschafft? Gib dein Wissen weiter und werde Sensei im <a href="https://powerplatformdojo.com/mentoring/" rel="noopener">Dojo Mentoring</a>: 3 Monate, gratis, 1:1.</p>\n' : ''}        <p>Diese Seite gehört zu einer geteilten Karte aus dem Power Platform Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.</p>
         <div class="knopf-reihe">
           <a class="knopf knopf--primaer" href="${r}pruefung/">Mach die Gürtelprüfung selbst</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniken dieses Gürtels</a>
         </div>
       </div>
       <figure class="guertelkarte">
-        <img src="${r}assets/img/karten/guertel-${g.farbe}.svg" width="1200" height="630" alt="Karte: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Selbsteinschätzung im PowerPlatformAcademy Dojo, kein Zertifikat.">
+        <img src="${r}assets/img/karten/guertel-${g.farbe}.svg" width="1200" height="630" alt="Karte: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Selbsteinschätzung im Power Platform Dojo, kein Zertifikat.">
       </figure>
     </section>
     <section class="sektion--eng" aria-labelledby="h-was">
       <div class="kasten">
-        <h2 id="h-was">Was ist das PowerPlatformAcademy Dojo?</h2>
+        <h2 id="h-was">Was ist das Power Platform Dojo?</h2>
         <p>Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel. Jede mit Quelle bei Microsoft Learn und Prüfdatum. Ohne Anmeldung und ohne Cookies.</p>
         <p class="knopf-reihe"><a class="knopf" href="${r}">Zur Startseite</a><a class="knopf knopf--leise" href="${r}techniken/">Alle Techniken</a></p>
       </div>
@@ -290,7 +290,7 @@ function landeseiteEN(g) {
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Copilot Dojo">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="${esc(g.name)} in the PowerPlatformAcademy Dojo">
+<meta property="og:title" content="${esc(g.name)} in the Power Platform Dojo">
 <meta property="og:description" content="${esc(beschreibung)}">
 <meta property="og:url" content="${BASE_URL}en/dojo/guertel/${g.farbe}/">
 <meta property="og:image" content="${bild}">
@@ -310,19 +310,19 @@ function landeseiteEN(g) {
         <span class="label">Level ${g.nr} of 7${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>
         <h1 id="h1">${esc(g.name)}</h1>
         <p class="lead"><strong>Self-assessment on an independent website. Not a certificate.</strong></p>
-${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}        <p>This page belongs to a card shared from the PowerPlatformAcademy Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
+${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}${g.nr === 7 ? '        <p>Belt earned? Pass it on and become a Sensei in <a href="https://powerplatformdojo.com/en/mentoring/" rel="noopener">Dojo Mentoring</a>: 3 months, free, 1:1.</p>\n' : ''}        <p>This page belongs to a card shared from the Power Platform Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
         <div class="knopf-reihe">
           <a class="knopf knopf--primaer" href="${r}pruefung/">Take the belt exam yourself</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniques of this belt</a>
         </div>
       </div>
       <figure class="guertelkarte">
-        <img src="${ra}assets/img/karten/en/guertel-${g.farbe}.svg" width="1200" height="630" alt="Card: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Self-assessment in the PowerPlatformAcademy Dojo, not a certificate.">
+        <img src="${ra}assets/img/karten/en/guertel-${g.farbe}.svg" width="1200" height="630" alt="Card: ${esc(g.name)}${g.leitwort ? ', ' + esc(g.leitwort) : ''}. Self-assessment in the Power Platform Dojo, not a certificate.">
       </figure>
     </section>
     <section class="sektion--eng" aria-labelledby="h-was">
       <div class="kasten">
-        <h2 id="h-was">What is the PowerPlatformAcademy Dojo?</h2>
+        <h2 id="h-was">What is the Power Platform Dojo?</h2>
         <p>Ninja techniques for Microsoft Copilot Chat and Copilot Studio, from white belt to black belt. Each with a source on Microsoft Learn and a review date. No sign-up and no cookies.</p>
         <p class="knopf-reihe"><a class="knopf" href="${r}">To the home page</a><a class="knopf knopf--leise" href="${r}techniken/">All techniques</a></p>
       </div>
@@ -403,6 +403,6 @@ for (const sp of ['de', 'en']) {
 setzeSprache('de');
 if (profil) { try { fs.rmSync(profil, { recursive: true, force: true }); } catch { /* Chrome haelt Dateien evtl. noch kurz */ } }
 
-console.log(`PowerPlatformAcademy Dojo Karten, ${PRODUKTION ? 'Produktion' : 'Vorschau'}: ${DABEI.length} Einträge, 7 Gürtel`);
+console.log(`Power Platform Dojo Karten, ${PRODUKTION ? 'Produktion' : 'Vorschau'}: ${DABEI.length} Einträge, 7 Gürtel`);
 console.log(`Geschrieben: ${geschrieben.length} Dateien`);
 if (warnungen.length) { console.log(`Warnungen (${warnungen.length}):`); warnungen.forEach(w => console.log('  - ' + w)); }

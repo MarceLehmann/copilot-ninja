@@ -1,4 +1,4 @@
-/* PowerPlatformAcademy Dojo. Tusche und Zinnober. Alle Farben, Masse und Zeiten nur hier unter :root. */
+/* Power Platform Dojo. Tusche und Zinnober. Alle Farben, Masse und Zeiten nur hier unter :root. */
 /* Titelschrift selbst gehostet (Barlow Semi Condensed, OFL, assets/fonts/LIESMICH.txt). «optional»: kein Umbruch-Sprung,
    die Schrift ist vorgeladen und meist sofort da, sonst bleibt die Systemschrift fuer diesen Aufruf. */
 @font-face { font-family: "Dojo Display"; src: url("../fonts/dojo-display-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: optional; }
@@ -152,7 +152,7 @@ html:not(.js) [data-nur-js], html.js [data-ohne-js] { display: none !important; 
 @media (max-width: 767px) and (prefers-reduced-motion: reduce) { .kopf { transition: none; } }
 .marke { display: inline-flex; align-items: center; gap: .55rem; color: var(--ink); text-decoration: none; min-height: 44px; margin-right: auto; flex-shrink: 1; min-width: 0; }
 .marke .tusch { width: 27px; height: 36px; }
-/* Wortmarke als Text: PowerPlatformAcademy Dojo, darunter klein der Zusatz in der Farbe des Dojo */
+/* Wortmarke als Text: Power Platform Dojo, darunter klein der Zusatz in der Farbe des Dojo */
 .marke__wort { display: flex; flex-direction: column; gap: .15rem; min-width: 0; font-family: var(--font-display); font-stretch: 87.5%; line-height: 1; }
 .marke__name { font-weight: 700; font-size: 1.02rem; letter-spacing: -.01em; line-height: 1.02; }
 .marke__zusatz { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--site); white-space: nowrap; }
