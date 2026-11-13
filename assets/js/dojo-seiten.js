@@ -399,17 +399,15 @@
         }
         erg.appendChild(pl);
         if (D.kursZeile) erg.appendChild(D.kursZeile('pruefung'));
-        var sensei = el('p', { 'class': 'klein' });
-        if (EN) {
-          sensei.appendChild(d.createTextNode('Belt earned? Pass it on and become a Sensei in '));
-          sensei.appendChild(el('a', { href: 'https://powerplatformdojo.com/en/mentoring/', rel: 'noopener' }, 'Dojo Mentoring'));
-          sensei.appendChild(d.createTextNode(': 3 months, free, 1:1.'));
-        } else {
-          sensei.appendChild(d.createTextNode('Gürtel geschafft? Gib dein Wissen weiter und werde Sensei im '));
-          sensei.appendChild(el('a', { href: 'https://powerplatformdojo.com/mentoring/', rel: 'noopener' }, 'Dojo Mentoring'));
-          sensei.appendChild(d.createTextNode(': 3 Monate, gratis, 1:1.'));
+        if (n >= 3) {
+          var sensei = el('aside', { 'class': 'sensei-hinweis', 'aria-labelledby': 'sensei-titel' });
+          sensei.appendChild(el('h3', { id: 'sensei-titel' }, T('Werde Sensei', 'Become a Sensei')));
+          var sp = el('p');
+          sp.appendChild(d.createTextNode(T('Du kannst anderen helfen. Im Dojo Mentoring begleitest du als Sensei jemanden 1:1 über 3 Monate, gratis. Zeit und Anzahl Mentees bestimmst du selbst, pausieren kannst du jederzeit. ', 'You can help others. In Dojo Mentoring you guide someone 1:1 for 3 months as a Sensei, free of charge. You decide on time and number of mentees yourself and can pause at any time. ')));
+          sp.appendChild(el('a', { href: T('https://powerplatformdojo.com/mentoring/anmelden/', 'https://powerplatformdojo.com/en/mentoring/anmelden/'), rel: 'noopener' }, T('Als Sensei anmelden', 'Sign up as a Sensei')));
+          sensei.appendChild(sp);
+          erg.appendChild(sensei);
         }
-        erg.appendChild(sensei);
         if (!gespeichert) erg.appendChild(el('p', { 'class': 'klein' }, T('Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.', 'Your browser does not store anything. The result only applies on this page.')));
         box.appendChild(erg);
         karteBauen(karte, 'start', n);
