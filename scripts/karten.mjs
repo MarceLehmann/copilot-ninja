@@ -242,7 +242,7 @@ function landeseite(g) {
         <span class="label">Stufe ${g.nr} von 7${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>
         <h1 id="h1">${esc(g.name)}</h1>
         <p class="lead"><strong>Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.</strong></p>
-${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du)}</p>\n` : ''}${g.nr === 7 ? '        <p>Gürtel geschafft? Gib dein Wissen weiter und werde Sensei im <a href="https://powerplatformdojo.com/mentoring/" rel="noopener">Dojo Mentoring</a>: 3 Monate, gratis, 1:1.</p>\n' : ''}        <p>Diese Seite gehört zu einer geteilten Karte aus dem Power Platform Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.</p>
+${g.kannst_du ? `        <p>Was du nach diesem Gürtel kannst: ${esc(g.kannst_du)}</p>\n` : ''}${g.nr === 7 ? '        <p>Gürtel geschafft? Gib dein Wissen weiter und werde Sensei im <a href="https://powerplatformdojo.com/mentoring/anmelden/" rel="noopener">Dojo Mentoring</a>: 3 Monate, gratis, 1:1.</p>\n' : ''}        <p>Diese Seite gehört zu einer geteilten Karte aus dem Power Platform Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.</p>
         <div class="knopf-reihe">
           <a class="knopf knopf--primaer" href="${r}pruefung/">Mach die Gürtelprüfung selbst</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniken dieses Gürtels</a>
@@ -310,7 +310,7 @@ function landeseiteEN(g) {
         <span class="label">Level ${g.nr} of 7${g.leitwort ? ', ' + esc(g.leitwort) : ''}</span>
         <h1 id="h1">${esc(g.name)}</h1>
         <p class="lead"><strong>Self-assessment on an independent website. Not a certificate.</strong></p>
-${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}${g.nr === 7 ? '        <p>Belt earned? Pass it on and become a Sensei in <a href="https://powerplatformdojo.com/en/mentoring/" rel="noopener">Dojo Mentoring</a>: 3 months, free, 1:1.</p>\n' : ''}        <p>This page belongs to a card shared from the Power Platform Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
+${g.kannst_du ? `        <p>What you can do after this belt: ${esc(g.kannst_du)}</p>\n` : ''}${g.nr === 7 ? '        <p>Belt earned? Pass it on and become a Sensei in <a href="https://powerplatformdojo.com/en/mentoring/anmelden/" rel="noopener">Dojo Mentoring</a>: 3 months, free, 1:1.</p>\n' : ''}        <p>This page belongs to a card shared from the Power Platform Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.</p>
         <div class="knopf-reihe">
           <a class="knopf knopf--primaer" href="${r}pruefung/">Take the belt exam yourself</a>
           <a class="knopf" href="${r}techniken/#${ANKER[g.farbe]}">Techniques of this belt</a>
