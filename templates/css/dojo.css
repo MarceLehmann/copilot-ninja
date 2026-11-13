@@ -32,6 +32,9 @@ fieldset.test__frage { margin: 0; min-width: 0; }
 .test__aufloesung.is-falsch { border-left-color: var(--signal); }
 .test__ergebnis { padding: clamp(1.5rem, 1rem + 2vw, 2.5rem); border: 2px solid var(--ink); border-radius: var(--r-lg); background: var(--surface); }
 .test__ergebnis:focus { outline: 3px solid var(--focus); outline-offset: 3px; }
+.sensei-hinweis { margin: 1.2rem 0 0; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--paper); }
+.sensei-hinweis h3 { margin: 0 0 .3rem; font-size: 1.05rem; }
+.sensei-hinweis p { margin: 0; }
 .test__fortschritt { font-family: var(--font-mono); font-weight: 600; }
 .guertelkarte { display: grid; gap: 1rem; justify-items: start; }
 .guertelkarte canvas, .guertelkarte img { width: 100%; max-width: 600px; height: auto; border: 1px solid var(--line); border-radius: var(--r-md); }
