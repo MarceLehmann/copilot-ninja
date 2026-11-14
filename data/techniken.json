@@ -2485,7 +2485,7 @@
         "Anweisungen einfügen und in Microsoft Copilot Chat senden.",
         "Jedes [FESTLEGEN] mit der verantwortlichen Person klären.",
         "Die Abschaltkriterien mit Zahlen versehen, zum Beispiel eine Bestehensquote aus Nr. 18, unter der der Agent pausiert.",
-        "In Copilot Studio kannst du laut Microsoft im Power Platform Admin Center pro Agent eine monatliche Verbrauchsgrenze setzen. Trag sie ins Blatt ein.",
+        "In Copilot Studio kannst du laut Microsoft im Power Platform Admin Center pro Agent eine monatliche Verbrauchsgrenze setzen. Trag sie ins Blatt ein. Laut Microsoft greift die Grenze nicht sofort, und sie stoppt die Agent Flows nicht, die der Agent aufruft.",
         "Das Review-Datum als Termin in den Kalender der verantwortlichen Person setzen."
       ],
       "das_darfst_du_erwarten": [
@@ -2516,7 +2516,7 @@
           "titel": "Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center)"
         }
       ],
-      "geprueft_am": "2026-10-15",
+      "geprueft_am": "2026-11-14",
       "ausgefuehrt_am": null,
       "dauer_min": 20,
       "teilen_text": "Technik 24 aus dem Power Platform Dojo: Der Ehrenkodex. Ein Betriebsblatt mit verantwortlicher Person und Abschaltkriterien, bevor der Agent live geht. Frei kopierbar, mit Quelle bei Microsoft Learn.",
@@ -2589,14 +2589,20 @@
       "grenzen": [
         "Der Check findet Abweichungen. Die Ursache findet ein Mensch.",
         "Warum du auch im veröffentlichten Kanal prüfst, steht bei Nr. 18. Was der Betrieb verbraucht und was bei erschöpfter Kapazität passiert, steht bei Nr. 23.",
-        "Ohne gleiches Testset in jedem Monat sind die Ergebnisse nicht vergleichbar."
+        "Ohne gleiches Testset in jedem Monat sind die Ergebnisse nicht vergleichbar.",
+        "Laut Microsoft bleiben Testergebnisse der Agent-Evaluation 89 Tage in Copilot Studio. Für den Vergleich über mehrere Monate exportierst du sie als CSV-Datei."
       ],
       "probe": "Zähle pro Monat die Testfragen mit verändertem Verhalten. Null ist das Ziel, jede Abweichung ist ein Fund.",
       "meister_variante": null,
       "quelle_url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot",
       "quelle_titel": "Microsoft Learn: Test your agent (Copilot Studio)",
-      "weitere_quellen": [],
-      "geprueft_am": "2026-10-15",
+      "weitere_quellen": [
+        {
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create",
+          "titel": "Microsoft Learn: Create a single response test set (Copilot Studio)"
+        }
+      ],
+      "geprueft_am": "2026-11-14",
       "ausgefuehrt_am": null,
       "dauer_min": 30,
       "teilen_text": "Technik 25 aus dem Power Platform Dojo: Die Nachtwache. Einmal im Monat das Testset laufen lassen und vergleichen, was sich am Agent verändert hat, auch wenn niemand daran gearbeitet hat. Frei kopierbar.",

@@ -1818,7 +1818,7 @@
         "Paste the instructions and send them in Microsoft Copilot Chat.",
         "Clarify every [TO DEFINE] with the responsible person.",
         "Add numbers to the shutdown criteria, for example a pass rate from No. 18 below which the agent is paused.",
-        "According to Microsoft, for Copilot Studio you can set a monthly consumption limit per agent in the Power Platform admin center. Enter it in the sheet.",
+        "According to Microsoft, for Copilot Studio you can set a monthly consumption limit per agent in the Power Platform admin center. Enter it in the sheet. According to Microsoft, the limit does not apply instantly, and it does not stop the agent flows that the agent calls.",
         "Put the review date as an appointment in the responsible person's calendar."
       ],
       "das_darfst_du_erwarten": [
@@ -1899,12 +1899,18 @@
       "grenzen": [
         "The check finds deviations. A human finds the cause.",
         "Why you also check in the published channel is explained in No. 18. What production consumes and what happens when capacity runs out is explained in No. 23.",
-        "Without the same test set every month, the results are not comparable."
+        "Without the same test set every month, the results are not comparable.",
+        "According to Microsoft, agent evaluation test results stay in Copilot Studio for 89 days. To compare across several months, export them as a CSV file."
       ],
       "probe": "Count the test questions with changed behavior each month. Zero is the goal, every deviation is a finding.",
       "meister_variante": null,
       "quelle_titel": "Microsoft Learn: Test your agent (Copilot Studio)",
-      "weitere_quellen": [],
+      "weitere_quellen": [
+        {
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create",
+          "titel": "Microsoft Learn: Create a single response test set (Copilot Studio)"
+        }
+      ],
       "teilen_text": "Technique 25 from the Power Platform Dojo: The Night Watch. Once a month, run the test set and compare what has changed in the agent, even if nobody worked on it. Free to copy.",
       "kombo": "From chat to agent in production",
       "praxis_notiz": null

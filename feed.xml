@@ -5,7 +5,7 @@
   <id>https://copilot.ninja/</id>
   <link href="https://copilot.ninja/"/>
   <link rel="self" href="https://copilot.ninja/feed.xml"/>
-  <updated>2026-10-15T00:00:00Z</updated>
+  <updated>2026-11-14T00:00:00Z</updated>
   <author><name>Marcel Lehmann</name><uri>https://kmupower.com/</uri></author>
   <entry>
     <title>Grundform: Notizen in ein Protokoll mit Aufgaben verwandeln</title>
@@ -236,7 +236,7 @@
     <id>https://copilot.ninja/techniken/betriebsblatt-fuer-agents/</id>
     <link href="https://copilot.ninja/techniken/betriebsblatt-fuer-agents/"/>
     <published>2026-10-15T00:00:00Z</published>
-    <updated>2026-10-15T00:00:00Z</updated>
+    <updated>2026-11-14T00:00:00Z</updated>
     <summary>Betriebsblatt mit Abschaltkriterien. Die Frage «Wann schalten wir ihn ab?» ist beantwortet, bevor der Agent live geht, und jeder Agent hat eine verantwortliche Person.</summary>
   </entry>
   <entry>
@@ -244,7 +244,7 @@
     <id>https://copilot.ninja/techniken/monatlicher-agent-check/</id>
     <link href="https://copilot.ninja/techniken/monatlicher-agent-check/"/>
     <published>2026-10-15T00:00:00Z</published>
-    <updated>2026-10-15T00:00:00Z</updated>
+    <updated>2026-11-14T00:00:00Z</updated>
     <summary>Monatlicher Agent-Check. Wissensquellen, Einstellungen und Kontingente ändern sich, auch wenn niemand am Agent arbeitet. Die Nachtwache merkt es vor deinen Nutzern.</summary>
   </entry>
 </feed>
