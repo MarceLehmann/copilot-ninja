@@ -1,0 +1,580 @@
+{
+ "code": "it",
+ "reihenfolge": 3,
+ "pfad": "it/",
+ "html_lang": "it",
+ "og_locale": "it_IT",
+ "name": "Italiano",
+ "name_de": "Italienisch",
+ "kurz": "IT",
+ "zahl_locale": "it-CH",
+ "datum": "{d} {monat} {y}",
+ "erster": "",
+ "monate": [
+  "gennaio",
+  "febbraio",
+  "marzo",
+  "aprile",
+  "maggio",
+  "giugno",
+  "luglio",
+  "agosto",
+  "settembre",
+  "ottobre",
+  "novembre",
+  "dicembre"
+ ],
+ "zb": "ad es.",
+ "teile": {
+  "Obiettivo": "ziel",
+  "Contesto": "kontext",
+  "Fonte": "quelle",
+  "Aspettative": "erwartung"
+ },
+ "profil_felder": {
+  "Nome dell'azienda": "Firmenname",
+  "Ruolo": "Funktion",
+  "Settore": "Branche"
+ },
+ "lange_felder": "^(testo|note|contenuto|bozza|e-?mail|istruzion[ei]|cronologia|regolamento|offert[ae]|elenco|lista|caso|chat|trascrizione)",
+ "verboten": [
+  [
+   "\\btestat[oaie]\\b",
+   "«testato»"
+  ],
+  [
+   "garantit",
+   "«garantito»"
+  ],
+  [
+   "ufficial",
+   "«ufficiale»"
+  ]
+ ],
+ "anfuehrung": [
+  "«",
+  "»"
+ ],
+ "anfuehrung_verboten": false,
+ "learn": "it-it",
+ "dojo": "https://powerplatformdojo.com/it/",
+ "powerautomate": "https://powerautomate.ninja/it/",
+ "guertel": [
+  [
+   "Cintura bianca",
+   "Bianca"
+  ],
+  [
+   "Cintura gialla",
+   "Gialla"
+  ],
+  [
+   "Cintura arancione",
+   "Arancione"
+  ],
+  [
+   "Cintura verde",
+   "Verde"
+  ],
+  [
+   "Cintura blu",
+   "Blu"
+  ],
+  [
+   "Cintura marrone",
+   "Marrone"
+  ],
+  [
+   "Cintura nera",
+   "Nera"
+  ]
+ ],
+ "guertel_satz": [
+  "cintura bianca",
+  "cintura gialla",
+  "cintura arancione",
+  "cintura verde",
+  "cintura blu",
+  "cintura marrone",
+  "cintura nera"
+ ],
+ "zahlwoerter": [
+  "",
+  "",
+  "Due",
+  "Tre",
+  "Quattro",
+  "Cinque"
+ ],
+ "art": {
+  "pinselstrich": {
+   "name": "Pennellata",
+   "wort": "Prompt",
+   "knopf": "Copia il prompt",
+   "rolle": "Prompt da copiare",
+   "erfolg": "Copiato. Ora incollalo in Microsoft Copilot Chat."
+  },
+  "schriftrolle": {
+   "name": "Pergamena",
+   "wort": "Istruzione dell'agente",
+   "knopf": "Copia l'istruzione",
+   "rolle": "Istruzione dell'agente da copiare",
+   "erfolg": "Copiato. Ora incollalo nelle istruzioni del tuo agente."
+  },
+  "kata": {
+   "name": "Kata",
+   "wort": "Guida",
+   "knopf": "Copia il testo",
+   "rolle": "Testo da copiare",
+   "erfolg": "Copiato. Ora incollalo in Microsoft Copilot Chat."
+  }
+ },
+ "zugang_kurz": {
+  "ohne-zl": "Senza licenza aggiuntiva",
+  "agent-builder": "Agent Builder, senza licenza aggiuntiva",
+  "lizenz": "Con licenza",
+  "studio": "Copilot Studio",
+  "rechner": "Calcolatore"
+ },
+ "wochen": [
+  {
+   "nr": 1,
+   "guertel": [
+    1,
+    2
+   ],
+   "ergebnisse": [
+    [
+     "t01",
+     "le domande a cui devi rispondere tu prima di un testo importante"
+    ],
+    [
+     "t05",
+     "le obiezioni del tuo destinatario, finché puoi ancora correggere"
+    ],
+    [
+     "t06",
+     "un elenco delle differenze tra bozza e fonte"
+    ],
+    [
+     "t07",
+     "i motivi per cui il tuo progetto potrebbe fallire"
+    ]
+   ]
+  },
+  {
+   "nr": 2,
+   "guertel": [
+    3
+   ],
+   "ergebnisse": [
+    [
+     "t09",
+     "un confronto di offerte con le clausole in piccolo in una tabella"
+    ],
+    [
+     "t10",
+     "un elenco di scadenze per le voci del tuo calendario"
+    ],
+    [
+     "t11",
+     "il tuo profilo di stile di scrittura"
+    ],
+    [
+     "t13",
+     "un quiz su una policy, con riferimenti"
+    ]
+   ]
+  },
+  {
+   "nr": 3,
+   "guertel": [
+    4,
+    5
+   ],
+   "ergebnisse": [
+    [
+     "t14",
+     "il tuo agente, costruito dalla tua chat migliore"
+    ],
+    [
+     "t17",
+     "una tabella di revisione per le sue istruzioni"
+    ],
+    [
+     "t18",
+     "20 domande di test con l'elenco «non coperto»"
+    ],
+    [
+     "t19",
+     "un blocco di protezione per ogni istruzione"
+    ]
+   ]
+  },
+  {
+   "nr": 4,
+   "guertel": [
+    6,
+    7
+   ],
+   "ergebnisse": [
+    [
+     "t22",
+     "un modello per passare casi reali in forma pseudonimizzata"
+    ],
+    [
+     "t23",
+     "una stima dell'ordine di grandezza dei crediti Copilot che usa il tuo agente"
+    ],
+    [
+     "t24",
+     "una scheda operativa con criteri di spegnimento e una persona responsabile"
+    ],
+    [
+     "t25",
+     "una routine per il controllo mensile"
+    ]
+   ]
+  }
+ ],
+ "momente": [
+  [
+   "t01",
+   "Non so cosa chiedere."
+  ],
+  [
+   "t11",
+   "La risposta sembra un opuscolo."
+  ],
+  [
+   "t09",
+   "Tre offerte, nessun tempo."
+  ],
+  [
+   "t18",
+   "L'agente si inventa le cose."
+  ]
+ ],
+ "noch_nicht": "Non ancora pubblicata. Compare appena Marcel avrà verificato le tecniche rispetto alla documentazione.",
+ "titel_kurz": {},
+ "ui": {
+  "Gürtel {0}": "Cintura {0}",
+  "z. B.": "ad es.",
+  "Technik aus dem Power Platform Dojo: {0}\nQuelle: Microsoft Learn, Stand {1}": "Tecnica dal Power Platform Dojo: {0}\nFonte: Microsoft Learn, aggiornato al {1}",
+  "z. B. ": "ad es. ",
+  "Für dich anpassen": "Adattalo a te",
+  "Nichts verlässt deinen Browser.": "Nulla lascia il tuo browser.",
+  " Firmenname, Funktion und Branche kommen aus deinem Profil unter Mein Dojo.": " Nome dell'azienda, ruolo e settore vengono dal tuo profilo in Il mio Dojo.",
+  "Weitergeben": "Inoltra",
+  "Schritt {0}": "Passo {0}",
+  "Grundform ": "Forma base ",
+  "Neu": "Nuovo",
+  "ca. {0} Min.": "ca. {0} min",
+  "Der Kurs hat einen eigenen Lehrplan und folgt nicht den Gürteln dieser Seite.": "Il corso ha un programma proprio e non segue le cinture di questo sito.",
+  "Die nächsten Termine stehen noch nicht fest, auf der Kursseite setzt du dich auf die Warteliste.": "Le prossime date non sono ancora fissate: nella pagina del corso puoi metterti in lista d'attesa.",
+  "Termine und Anmeldung findest du auf der Kursseite.": "Date e iscrizione si trovano nella pagina del corso.",
+  "Live-Kurs «{0}»": "Corso live «{0}»",
+  "Lieber mit Begleitung weiter? Der {0} der Power Platform Academy läuft über vier Wochen. ": "Preferisci proseguire con un accompagnamento? Il {0} (in tedesco) della Power Platform Academy dura quattro settimane. ",
+  "Technik": "Tecnica",
+  "Techniken": "Tecniche",
+  "Grundform": "Forma base",
+  "offen": "da fare",
+  "Was du danach kannst:": "Cosa saprai fare dopo:",
+  "<p class=\"pfadzeilen__schwelle\"><strong>Die Schwelle.</strong> Ab hier baust du Agents. Die <a href=\"{0}\" rel=\"noopener\">Testversion von Copilot Studio</a> reicht zum Üben.</p>\n": "<p class=\"pfadzeilen__schwelle\"><strong>La soglia.</strong> Da qui in poi costruisci agenti. La <a href=\"{0}\" rel=\"noopener\">versione di valutazione di Copilot Studio</a> basta per esercitarti.</p>\n",
+  "Nr.": "N.",
+  "Woche": "Settimana",
+  "Wenn du die Techniken dieser Woche übst, hast du danach in der Hand:": "Se questa settimana ti eserciti con le tecniche, avrai poi in mano:",
+  "Zur Technik-Wand": "Alla parete delle tecniche",
+  "Ausprobieren: ca. {0} Min.": "Prova: ca. {0} min",
+  "Ganze Technik mit Anleitung, Grenzen und Quelle": "Tecnica completa con guida, limiti e fonte",
+  "Technik öffnen": "Apri la tecnica",
+  "Gürtel": "Cintura",
+  "Werkzeug": "Strumento",
+  "Zugang": "Accesso",
+  "Dein Stand": "Il tuo stato",
+  "Noch offen": "Ancora da fare",
+  "Geübt": "Esercitata",
+  "Filter zurücksetzen": "Azzera i filtri",
+  "Aufwärmen": "Riscaldamento",
+  " und ": " e ",
+  "{0}: neue Techniken": "{0}: nuove tecniche",
+  "de-CH": "it",
+  "og-image.png": "og-image-it.png",
+  "de_CH": "it_IT",
+  "Power Platform Dojo: Übung schlägt Hype.": "Power Platform Dojo: la pratica batte l'hype.",
+  "Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio mit Quelle und Prüfdatum. Unabhängige Website ohne Verbindung zu Microsoft.": "Tecniche ninja per Microsoft Copilot Chat e Copilot Studio con fonte e data di verifica. Sito indipendente, senza legami con Microsoft.",
+  "Interne Vorschau, nicht veröffentlichen.": "Anteprima interna, non pubblicare.",
+  "      <p class=\"klein\">Viele Techniken laufen in Microsoft Copilot Chat. Ob Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist, zeigt der Lizenz-Check.</p>": "      <p class=\"klein\">Molte tecniche funzionano in Microsoft Copilot Chat. Se Copilot Chat è incluso nel tuo abbonamento senza licenza aggiuntiva, lo mostra la verifica licenza.</p>",
+  "Copilot Chat und Studio: Techniken | Copilot Dojo": "Copilot Chat e Studio: tecniche | Copilot Dojo",
+  "Welcher Copilot-Gürtel bist du? {0} Grundformen und {1} Techniken für Copilot Chat und Studio, mit Quellen. Dazu Gürtelprüfung und Lizenz-Check.": "Che cintura Copilot sei? {0} forme base e {1} tecniche per Copilot Chat e Studio, con fonti. In più prova di cintura e verifica licenza.",
+  "Start": "Home",
+  "Copilot Chat und Studio: alle Techniken | Copilot Dojo": "Copilot Chat e Studio: tutte le tecniche | Copilot Dojo",
+  "{0} Grundformen und {1} Techniken für Copilot Chat und Studio, nach Gürtel geordnet. Mit Quellen und Prüfdatum.": "{0} forme base e {1} tecniche per Copilot Chat e Studio, ordinate per cintura. Con fonti e data di verifica.",
+  "{0} Grundformen und {1} Techniken für Copilot Chat und Studio": "{0} forme base e {1} tecniche per Copilot Chat e Studio",
+  "eine Grundform": "una forma base",
+  "Wann brauchst du es?": "Quando ti serve?",
+  "{0} für {1} zum Kopieren, mit Quelle bei Microsoft Learn und Prüfdatum.": "{0} per {1} da copiare, con fonte su Microsoft Learn e data di verifica.",
+  "Mit Prompt, Anleitung, Grenzen und Quelle bei Microsoft Learn.": "Con prompt, guida, limiti e fonte su Microsoft Learn.",
+  "Kombo: ": "Combo: ",
+  "Kombo": "Combo",
+  "Kommt aus": "Arriva da",
+  "Weiter mit": "Prosegui con",
+  "Gehört zur Kombo «{0}».": "Fa parte della combo «{0}».",
+  "Vorherige Technik": "Tecnica precedente",
+  "Zurück": "Indietro",
+  "Nächste Technik": "Tecnica successiva",
+  "Geschafft": "Fatto",
+  "Technik ": "Tecnica ",
+  "Vorher": "Prima",
+  "«": "«",
+  "»": "»",
+  "Die Probe": "La verifica",
+  "Meister-Variante": "Variante del maestro",
+  "Verschärfung anzeigen": "Mostra la versione più difficile",
+  "Aus der Praxis": "Dalla pratica",
+  "Stand": "Aggiornato al",
+  "      <p class=\"pruefstatus\">Einmal ausgeführt in Microsoft Copilot Chat am {0}. Ergebnisse können abweichen.</p>": "      <p class=\"pruefstatus\">Eseguita una volta in Microsoft Copilot Chat il {0}. I risultati possono variare.</p>",
+  "Bild herunterladen": "Scarica l'immagine",
+  "In vier Wochen durch alle Gürtel | Copilot Dojo": "In quattro settimane attraverso tutte le cinture | Copilot Dojo",
+  "Ein freier Plan zum Selbstlernen mit Microsoft Copilot Chat und Copilot Studio: jede Woche ein oder zwei Gürtel, mit den Ergebnissen jeder Woche.": "Un piano libero per imparare da solo con Microsoft Copilot Chat e Copilot Studio: ogni settimana una o due cinture, con i risultati di ogni settimana.",
+  "Vier Wochen": "Quattro settimane",
+  "Technik des Tages | Copilot Dojo": "Tecnica del giorno | Copilot Dojo",
+  "Jeden Tag eine Technik aus dem Power Platform Dojo, für alle am selben Tag dieselbe.": "Ogni giorno una tecnica dal Power Platform Dojo, la stessa per tutti nello stesso giorno.",
+  "Technik {0} ist noch nicht freigegeben. Zur Technik-Wand": "La tecnica {0} non è ancora pubblicata. Alla parete delle tecniche",
+  "Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.": "Sito indipendente di Marcel Lehmann. Nessun legame con Microsoft.",
+  "Seite nicht gefunden | Copilot Dojo": "Pagina non trovata | Copilot Dojo",
+  "Diese Seite gibt es nicht. Zu den Techniken, zur Suche oder zur Startseite.": "Questa pagina non esiste. Vai alle tecniche, alla ricerca o alla home page.",
+  "Alle Techniken ohne Zusatzlizenz auf der Technik-Wand": "Tutte le tecniche senza licenza aggiuntiva sulla parete delle tecniche",
+  "Stufe": "Livello",
+  "SUMMARY:Dojo: Technik des Tages": "SUMMARY:Dojo: tecnica del giorno",
+  "DESCRIPTION:15 Minuten üben. Die Technik des Tages steht unter {0}heute/": "DESCRIPTION:Esercitati per 15 minuti. La tecnica del giorno si trova su {0}heute/",
+  "Problem": "Problema",
+  "Nutzen": "Vantaggio",
+  "So nutzt du es": "Come usarla",
+  "Grenzen": "Limiti",
+  "Quellen": "Fonti",
+  "{0} Technik": "{0} tecnica",
+  "{0} Techniken": "{0} tecniche",
+  "{0} Grundform": "{0} forma base",
+  "{0} Grundformen": "{0} forme base",
+  "Der Kompass": "La bussola",
+  "Raten laut Microsoft in {0}: {1}.": "Tariffe secondo Microsoft in {0}: {1}.",
+  "Rechenbeispiel: {0} Gespräche im Monat mit je {1} Generative Answers und {2} Agent Action ergeben {0} mal {3}, also {4} Copilot Credits.": "Esempio di calcolo: {0} conversazioni al mese con {1} Generative Answers e {2} Agent Action danno {0} per {3}, quindi {4} crediti Copilot.",
+  "Quelle: {0}, Stand {1}. Kein Preis pro Credit, Preise findest du bei Microsoft.": "Fonte: {0}, aggiornato al {1}. Nessun prezzo per credito: i prezzi li trovi presso Microsoft.",
+  "Vier-Wochen-Pfad zum Selbstlernen": "Percorso di quattro settimane per imparare da solo",
+  "In vier Wochen durch alle Gürtel": "In quattro settimane attraverso tutte le cinture",
+  "Ein freier Plan für {0} Grundformen und {1} Techniken. Jede Woche ein oder zwei Gürtel, ohne Anmeldung.": "Un piano libero per {0} forme base e {1} tecniche. Ogni settimana una o due cinture, senza iscrizione.",
+  "Nach vier Wochen hast du einen eigenen Agent mit Testfragen, Schutzbaustein, Credit-Schätzung und Betriebsblatt.": "Dopo quattro settimane hai un tuo agente con domande di test, blocco di protezione, stima dei crediti e scheda operativa.",
+  "Was du dafür brauchst, zeigt der Zugang auf jeder Technik.": "Cosa ti serve lo mostra l'accesso su ogni tecnica.",
+  "Vier Wochen in den Kalender, ab nächstem Montag": "Quattro settimane nel calendario, dal prossimo lunedì",
+  "Die Schwelle": "La soglia",
+  "Ab hier baust du Agents.": "Da qui in poi costruisci agenti.",
+  "In der Testversion von Copilot Studio kannst du einen Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung. ({0}, Stand {1}). Alle Agent-Techniken stehen hier frei, ohne Anmeldung.": "Nella versione di valutazione di Copilot Studio puoi creare un agente e verificarlo nel riquadro di test, ma non pubblicarlo. La pubblicazione richiede capacità (crediti Copilot o pay-as-you-go) e autorizzazione di autore. ({0}, aggiornato al {1}). Tutte le tecniche per agenti sono libere qui, senza iscrizione.",
+  "Wer lieber mit Begleitung übt: Die Power Platform Academy führt den {0}.": "Se preferisci esercitarti con un accompagnamento: la Power Platform Academy tiene il {0} (in tedesco).",
+  "Gürtelprüfung": "Prova di cintura",
+  "Diese Seite ist umgezogen: {0}": "Questa pagina si è spostata: {0}",
+  "Sprache wählen, aktuell: {0}": "Scegli la lingua, attuale: {0}",
+  "Alle {0} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält.": "Tutte le {0} tecniche funzionano senza licenza aggiuntiva, se il tuo abbonamento include Microsoft Copilot Chat.",
+  "{0} von {1} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält.": "{0} tecniche su {1} funzionano senza licenza aggiuntiva, se il tuo abbonamento include Microsoft Copilot Chat.",
+  "Alle Techniken ohne Zusatzlizenz zeigen": "Mostra tutte le tecniche senza licenza aggiuntiva",
+  "Übung schlägt": "La pratica batte",
+  "Hype.": "l'hype.",
+  "Ninja-Techniken mit Quelle und Prüfdatum.": "Tecniche ninja con fonte e data di verifica.",
+  "Vom weissen bis zum schwarzen Gürtel.": "Dalla cintura bianca alla cintura nera.",
+  "GEPRÜFT": "VERIFICATO",
+  "gegen die Dokumentation": "rispetto alla documentazione",
+  "Technik-Wand": "Parete delle tecniche",
+  "alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)": "tutte le tecniche per cintura, con accesso (senza licenza aggiuntiva, licenza, Copilot Studio)",
+  "Ist Microsoft Copilot gratis?": "Microsoft Copilot è gratis?",
+  "Lizenz-Check in vier Fragen, was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage": "Verifica licenza in quattro domande: cosa funziona senza licenza aggiuntiva, con fonte e data di verifica per ogni affermazione",
+  "Welcher Copilot-Gürtel bist du? Sieben Fragen, eine pro Gürtel": "Che cintura Copilot sei? Sette domande, una per cintura",
+  "Alle Fragen der Gürtelprüfung": "Tutte le domande della prova di cintura",
+  "jede Frage mit Auflösung und Quelle": "ogni domanda con soluzione e fonte",
+  "Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle": "Copilot senza licenza aggiuntiva: ogni condizione con la sua fonte",
+  "Mythen, App-Stufen, Wortlaut der Bedingungen, häufige Fragen, Prüfprotokoll": "Miti, livelli delle app, testo letterale delle condizioni, domande frequenti, registro delle verifiche",
+  "freier Plan zum Selbstlernen": "piano libero per imparare da solo",
+  "Über das Dojo": "Informazioni sul Dojo",
+  "Methode, Dojo-Regeln, was die Seite nicht ist": "Metodo, regole del Dojo, cosa il sito non è",
+  "Grundformen": "Forme base",
+  "TECHNIK": "TECNICA",
+  " VON 25": " DI 25",
+  "GRUNDFORM": "FORMA BASE",
+  "STUFE": "LIVELLO",
+  "VON": "DI",
+  "Selbsteinschätzung im Power Platform Dojo. Kein Zertifikat.": "Autovalutazione nel Power Platform Dojo. Non un certificato.",
+  "Selbsteinschätzung im Power Platform Dojo, kein Zertifikat.": "Autovalutazione nel Power Platform Dojo, non un certificato.",
+  "Selbsteinschätzung auf einer unabhängigen Website, kein Zertifikat. Mach den Test mit sieben Fragen selbst.": "Autovalutazione su un sito indipendente, non un certificato. Fai tu stesso il test con sette domande.",
+  "Dojo-Gürtel: {0}": "Cintura del Dojo: {0}",
+  "{0} im Power Platform Dojo": "{0} nel Power Platform Dojo",
+  "Karte: {0}. Selbsteinschätzung, kein Zertifikat.": "Carta: {0}. Autovalutazione, non un certificato.",
+  "Brotkrumen": "Briciole di pane",
+  "Mein Dojo": "Il mio Dojo",
+  "Stufe {0} von 7": "Livello {0} di 7",
+  "Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.": "Autovalutazione su un sito indipendente. Non un certificato.",
+  "Was du nach diesem Gürtel kannst:": "Cosa saprai fare con questa cintura:",
+  "Gürtel geschafft? Gib dein Wissen weiter und werde Sensei im {0}: 3 Monate, gratis, 1:1.": "Cintura conquistata? Trasmetti il tuo sapere e diventa Sensei nel {0}: 3 mesi, gratis, 1:1.",
+  "Diese Seite gehört zu einer geteilten Karte aus dem Power Platform Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.": "Questa pagina appartiene a una carta condivisa dal Power Platform Dojo. La carta mostra il punto di partenza dall'autotest con sette domande oppure una cintura le cui tecniche la persona ha segnato da sé come esercitate.",
+  "Mach die Gürtelprüfung selbst": "Fai tu stesso la prova di cintura",
+  "Techniken dieses Gürtels": "Tecniche di questa cintura",
+  "Karte: {0}. Selbsteinschätzung im Power Platform Dojo, kein Zertifikat.": "Carta: {0}. Autovalutazione nel Power Platform Dojo, non un certificato.",
+  "Was ist das Power Platform Dojo?": "Cos'è il Power Platform Dojo?",
+  "Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel. Jede mit Quelle bei Microsoft Learn und Prüfdatum. Ohne Anmeldung und ohne Cookies.": "Tecniche ninja per Microsoft Copilot Chat e Copilot Studio, dalla cintura bianca alla cintura nera. Ognuna con fonte su Microsoft Learn e data di verifica. Senza iscrizione e senza cookie.",
+  "Zur Startseite": "Alla home page",
+  "Alle Techniken": "Tutte le tecniche",
+  "Alle sieben Gürtel": "Tutte e sette le cinture",
+  "Quelle: {0}, Stand {1}.": "Fonte: {0}, aggiornato al {1}.",
+  "Aus Technik {0}, {1}.": "Dalla tecnica {0}, {1}.",
+  "Auflösung": "Soluzione",
+  "Richtig ist: {0}": "La risposta giusta è: {0}",
+  "Technik für das Dojo": "Una tecnica per il Dojo",
+  "Titel der Technik:\n\nProblem, das sie löst:\n\nPrompt oder Anleitung:\n\nGrenzen:\n\nQuelle bei Microsoft Learn:\n\nDarf ich dich als Absender nennen? (ja oder nein)\n\nBitte keine Kunden-, Personen- oder Firmendaten im Prompt.": "Titolo della tecnica:\n\nProblema che risolve:\n\nPrompt o guida:\n\nLimiti:\n\nFonte su Microsoft Learn:\n\nPosso nominarti come mittente? (sì o no)\n\nPer favore nessun dato di clienti, persone o aziende nel prompt."
+ },
+ "js": {
+  "Bewegung ist aus.": "Il movimento è disattivato.",
+  "Bewegung ist an.": "Il movimento è attivato.",
+  "Mit Herkunft kopiert. Passt in einen Teams-Chat.": "Copiato con la provenienza. Sta in una chat di Teams.",
+  "Kopiert. Jetzt in Microsoft Copilot Chat einfügen.": "Copiato. Ora incollalo in Microsoft Copilot Chat.",
+  "Kopiert": "Copiato",
+  "Kopieren hat nicht funktioniert. Markiere den Text und kopiere ihn mit Strg+C.": "La copia non ha funzionato. Seleziona il testo e copialo con Ctrl+C.",
+  "zeigt {0} von {1}": "mostra {0} su {1}",
+  "Text kopiert. Fehlt er bei LinkedIn, füg ihn dort ein.": "Testo copiato. Se su LinkedIn non compare, incollalo lì.",
+  "Kursseite «Copilot Ninja in 4 Wochen»": "Pagina del corso «Copilot Ninja in 4 Wochen»",
+  ", alle geübt": ", tutte esercitate",
+  "Mein Dojo, ": "Il mio Dojo, ",
+  "Geübt": "Esercitata",
+  "geübt am ": "esercitata il ",
+  "offen": "da fare",
+  "geübt": "esercitata",
+  " von ": " su ",
+  " geübt": " esercitate",
+  "Alle {0} Techniken geübt. Tusch trägt den schwarzen Gürtel.": "Tutte le {0} tecniche esercitate. Tusch indossa la cintura nera.",
+  " Techniken deines Gürtels geübt.": " tecniche della tua cintura esercitate.",
+  "Alle Techniken geübt": "Tutte le tecniche esercitate",
+  "Dein nächster Schritt": "Il tuo prossimo passo",
+  "Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst, geht es im Live-Kurs weiter. Der Kurs hat einen eigenen Lehrplan.": "Hai segnato ogni tecnica del Dojo come esercitata. Se vuoi introdurre gli agenti nella tua azienda con un accompagnamento, si prosegue nel corso live. Il corso ha un programma proprio.",
+  "Geübt am ": "Esercitata il ",
+  "Als geübt markieren": "Segna come esercitata",
+  "Markierung entfernen": "Rimuovi il segno",
+  "Dein Browser speichert nichts. Die Markierung gilt nur, bis du die Seite verlässt.": "Il tuo browser non salva nulla. Il segno vale solo finché non lasci la pagina.",
+  "Als geübt markiert.": "Segnata come esercitata.",
+  "Markierung entfernt.": "Segno rimosso.",
+  "Ausprobiert? ": "Provata? ",
+  "Schon als geübt markiert.": "Già segnata come esercitata.",
+  "Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.": "Autovalutazione su un sito indipendente. Non un certificato.",
+  "Mein Startpunkt im Dojo": "Il mio punto di partenza nel Dojo",
+  "Mein Dojo-Gürtel": "La mia cintura del Dojo",
+  "Dein Name auf der Karte (freiwillig)": "Il tuo nome sulla carta (facoltativo)",
+  "Der Name wird nur in dieses Bild gezeichnet und nirgends gespeichert.": "Il nome viene disegnato solo in questa immagine e non viene salvato da nessuna parte.",
+  "Mein Startpunkt im Dojo: ": "Il mio punto di partenza nel Dojo: ",
+  "Mein Dojo-Gürtel: ": "La mia cintura del Dojo: ",
+  "Vorschau der Karte. ": "Anteprima della carta. ",
+  "Bild herunterladen": "Scarica l'immagine",
+  "Auf LinkedIn teilen": "Condividi su LinkedIn",
+  "Text für deinen Post kopieren": "Copia il testo per il tuo post",
+  "Teilen": "Condividi",
+  "startpunkt-": "punto-di-partenza-",
+  "guertel-": "cintura-",
+  "Bild gespeichert.": "Immagine salvata.",
+  "Text kopiert. Füg ihn in deinen Post ein.": "Testo copiato. Incollalo nel tuo post.",
+  "Trainingstag": "giorno di allenamento",
+  "Trainingstage": "giorni di allenamento",
+  "noch offen": "ancora da fare",
+  "Gespeichert. Ab jetzt sind diese Felder in jeder Technik vorausgefüllt.": "Salvato. Da ora questi campi sono precompilati in ogni tecnica.",
+  "Dein Browser lässt kein Speichern zu. Die Felder bleiben leer.": "Il tuo browser non permette di salvare. I campi restano vuoti.",
+  "Alles gelöscht: Fortschritt, Profil, Selbsttest, Theme, Bewegung und Sprachwahl. Rückgängig ist während 10 Sekunden möglich.": "Tutto cancellato: progressi, profilo, autotest, tema, movimento e scelta della lingua. Puoi annullare per 10 secondi.",
+  "Alles gelöscht.": "Tutto cancellato.",
+  "Wiederhergestellt.": "Ripristinato.",
+  "Der Text ist lang für einen Mail-Link. Kopier ihn lieber und füg ihn selbst in eine Mail an marcel.lehmann@kmupower.com ein.": "Il testo è lungo per un link di posta. Meglio copiarlo e incollarlo tu stesso in una mail a marcel.lehmann@kmupower.com.",
+  "Technik für das Dojo": "Una tecnica per il Dojo",
+  "Dein Mailprogramm öffnet sich mit dem Text. Gesendet wird erst, wenn du dort auf Senden klickst.": "Il tuo programma di posta si apre con il testo. Viene inviato solo quando lì clicchi su Invia.",
+  "Text kopiert. Füg ihn in eine Mail an marcel.lehmann@kmupower.com ein.": "Testo copiato. Incollalo in una mail a marcel.lehmann@kmupower.com.",
+  "Kopieren hat nicht funktioniert.": "La copia non ha funzionato.",
+  "Quelle: ": "Fonte: ",
+  ", Stand ": ", aggiornato al ",
+  "Mehr dazu: ": "Per saperne di più: ",
+  "Technik ": "Tecnica ",
+  "Frage ": "Domanda ",
+  "Antwort prüfen": "Controlla la risposta",
+  "Wähl zuerst eine Antwort.": "Scegli prima una risposta.",
+  "Richtig.": "Giusto.",
+  "Daneben. Richtig ist: ": "Sbagliato. La risposta giusta è: ",
+  "Nächste Frage": "Domanda successiva",
+  "Zum Ergebnis": "Al risultato",
+  "Dein Startpunkt": "Il tuo punto di partenza",
+  " richtig. ": " corrette. ",
+  "Dein Startpunkt ist der erste Gürtel, bei dem du danebenlagst.": "Il tuo punto di partenza è la prima cintura in cui hai sbagliato.",
+  "Alle richtig, darum startest du beim schwarzen Gürtel.": "Tutte giuste, quindi parti dalla cintura nera.",
+  "Für den {0} gibt es zurzeit keine geprüfte Frage.": "Per la {0} al momento non c'è nessuna domanda verificata.",
+  " Der Startpunkt rechnet mit den übrigen Gürteln.": " Il punto di partenza tiene conto delle altre cinture.",
+  " Den Gürtel selbst trägst du erst, wenn du seine Techniken als geübt markiert hast.": " La cintura vera e propria la porti solo quando hai segnato le sue tecniche come esercitate.",
+  "Deine Start-Techniken": "Le tue tecniche di partenza",
+  "Die Techniken dieses Gürtels sind noch nicht freigegeben. Sie erscheinen, sobald Marcel sie gegen die Dokumentation geprüft hat. ": "Le tecniche di questa cintura non sono ancora pubblicate. Compaiono appena Marcel le avrà verificate rispetto alla documentazione. ",
+  "Zur Technik-Wand": "Alla parete delle tecniche",
+  "Deine Startpunkt-Karte": "La tua carta del punto di partenza",
+  "Mein Dojo öffnen": "Apri Il mio Dojo",
+  "Test neu starten": "Ricomincia il test",
+  "Alle Fragen mit Auflösung ansehen": "Vedi tutte le domande con soluzione",
+  "Werde Sensei": "Diventa Sensei",
+  "Du kannst anderen helfen. Im Dojo Mentoring begleitest du als Sensei jemanden 1:1 über 3 Monate, gratis. Zeit und Anzahl Mentees bestimmst du selbst, pausieren kannst du jederzeit. ": "Puoi aiutare altri. Nel Dojo Mentoring accompagni come Sensei una persona 1:1 per 3 mesi, gratis. Tempo e numero di mentee li decidi tu, puoi fare una pausa quando vuoi. ",
+  "https://powerplatformdojo.com/mentoring/anmelden/": "https://powerplatformdojo.com/it/mentoring/anmelden/",
+  "Als Sensei anmelden": "Iscriviti come Sensei",
+  "Hol dir einen Sensei, 1:1 und gratis": "Trova un Sensei, 1:1 e gratis",
+  "Im Dojo Mentoring begleitet dich ein Sensei aus der Community 1:1 über 3 Monate. Du wählst Thema, Sprache und Zeitfenster, danach bekommst du fair einen passenden Sensei zugeteilt. ": "Nel Dojo Mentoring un Sensei della community ti accompagna 1:1 per 3 mesi. Scegli tema, lingua e fascia oraria, poi ti viene assegnato in modo equo un Sensei adatto. ",
+  "https://powerplatformdojo.com/mentoring/finden/": "https://powerplatformdojo.com/it/mentoring/finden/",
+  "Mentoring anfragen": "Richiedi il mentoring",
+  "Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.": "Il tuo browser non salva nulla. Il risultato vale solo su questa pagina.",
+  "Dein Startpunkt: ": "Il tuo punto di partenza: ",
+  "Was du jetzt kannst: ": "Cosa sai fare ora: ",
+  "Jeden Montag ein Impuls zur Power Platform und Automatisierung: ": "Ogni lunedì uno spunto su Power Platform e automazione: ",
+  "Newsletter KMUpower Impuls": "Newsletter KMUpower Impuls (in tedesco)",
+  "Gürtelkarte in Mein Dojo holen": "Prendi la carta della cintura in Il mio Dojo",
+  "Dojo Woche ": "Dojo settimana ",
+  " Techniken: ": " tecniche: ",
+  "Übe eine Technik pro Tag. ": "Esercitati con una tecnica al giorno. ",
+  "Kalenderdatei mit den Montagsterminen erstellt.": "File del calendario con gli appuntamenti del lunedì creato.",
+  "Nr. ": "N. ",
+  "Ausprobieren: ca. {0} Min.": "Prova: ca. {0} min",
+  "Ganze Technik mit Anleitung, Grenzen und Quelle": "Tecnica completa con guida, limiti e fonte",
+  "Alle Techniken nach Gürtel": "Tutte le tecniche per cintura",
+  "Link kopiert. Wer ihn öffnet, sieht dieses Ergebnis.": "Link copiato. Chi lo apre vede questo risultato.",
+  "Kopieren ging nicht. Markier die Adresse oben im Browser.": "La copia non è andata. Seleziona l'indirizzo in alto nel browser.",
+  "Dein Agent im Monat": "Il tuo agente al mese",
+  "Gespräche pro Monat": "Conversazioni al mese",
+  "Je Gespräch im Durchschnitt:": "Per conversazione in media:",
+  " Credits pro 100": " crediti ogni 100",
+  "Credit": "credito",
+  "Credits": "crediti",
+  "Nutzer haben eine Microsoft-365-Copilot-Add-on-Lizenz": "Gli utenti hanno una licenza add-on di Microsoft 365 Copilot",
+  "Mit Haken entfallen nur Classic Answers, Generative Answers und Tenant Graph Grounding unter den Bedingungen oben. Aktionen bleiben eingerechnet, auch Computer-Using-Agent-Aktionen.": "Con la spunta decadono solo Classic Answers, Generative Answers e Tenant Graph Grounding alle condizioni indicate sopra. Le azioni restano conteggiate, comprese le azioni del Computer-Using Agent.",
+  "Startwerte: ": "Valori iniziali: ",
+  "Annahme zur Veranschaulichung.": "Ipotesi a scopo illustrativo.",
+  " Setz deine eigenen Zahlen ein.": " Inserisci i tuoi numeri.",
+  " mal ": " per ",
+  "Grössenordnung: ": "Ordine di grandezza: ",
+  " pro Monat.": " al mese.",
+  "Rechnung: ": "Calcolo: ",
+  " Gespräche mal ": " conversazioni per ",
+  " Credits je Gespräch": " crediti per conversazione",
+  " Eine fehlt noch.": " Ne manca ancora una.",
+  " {0} fehlen noch.": " Ne mancano ancora {0}.",
+  "Tusch trägt den {0}.": "Tusch indossa la {0}.",
+  "{0} von {1} Technik geübt": "{0} su {1} tecnica esercitata",
+  "{0} von {1} Techniken geübt": "{0} su {1} tecniche esercitate",
+  ". Gürtel komplett.": ". Cintura completa.",
+  "Mein Startpunkt im Power Platform Dojo: {0}. Sieben Fragen, nach jeder die Auflösung mit Quelle.": "Il mio punto di partenza nel Power Platform Dojo: {0}. Sette domande, dopo ciascuna la soluzione con la fonte.",
+  "Im Power Platform Dojo habe ich alle Techniken bis zum {0} geübt.": "Nel Power Platform Dojo ho esercitato tutte le tecniche fino alla {0}.",
+  " Selbsteinschätzung, kein Zertifikat. ": " Autovalutazione, non un certificato. ",
+  "Titel der Technik:": "Titolo della tecnica:",
+  "Problem, das sie löst:": "Problema che risolve:",
+  "Prompt oder Anleitung:": "Prompt o guida:",
+  "Grenzen:": "Limiti:",
+  "Quelle bei Microsoft Learn:": "Fonte su Microsoft Learn:",
+  "Darf ich dich als Absender nennen?": "Posso nominarti come mittente?",
+  "(ja oder nein)": "(sì o no)",
+  "Keine Kunden-, Personen- oder Firmendaten im Prompt.": "Niente dati di clienti, persone o aziende nel prompt.",
+  "{0} und {1}": "{0} e {1}",
+  "dojo-vier-wochen.ics": "dojo-quattro-settimane.ics",
+  "Tusch! ": "Tusch! ",
+  ": ": ": "
+ }
+}

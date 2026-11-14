@@ -169,6 +169,17 @@ html:not(.js) [data-nur-js], html.js [data-ohne-js] { display: none !important; 
 /* Sprachwahl DE/EN (16.10.2026): Textlink auf die Entsprechung der Seite, Trefferflaeche 44 px hoch */
 .sprachwahl { display: inline-grid; place-items: center; min-width: 40px; min-height: 44px; padding: 0 .35rem; color: var(--ink); font-size: .95rem; font-weight: 600; letter-spacing: .04em; text-decoration: none; border-radius: var(--r-md); }
 .sprachwahl:hover { background: var(--surface-2); text-decoration: underline; }
+/* Sprachwahl mit allen Sprachen (14.11.2026): aufklappbare Liste, funktioniert ohne JavaScript */
+.sprachen { position: relative; }
+.sprachen > summary { cursor: pointer; list-style: none; }
+.sprachen > summary::-webkit-details-marker { display: none; }
+.sprachen > summary::after { content: ""; width: .4em; height: .4em; margin-left: .3em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-.15em) rotate(45deg); display: inline-block; }
+.sprachen > summary { display: inline-flex; align-items: center; }
+.sprachen__liste { position: absolute; right: 0; top: calc(100% + .25rem); z-index: 30; min-width: 11rem; margin: 0; padding: .3rem; list-style: none; background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--r-md); box-shadow: var(--shadow-2); }
+.sprachen__liste a { display: flex; align-items: center; gap: .6rem; min-height: 44px; padding: 0 .7rem; color: var(--ink); text-decoration: none; border-radius: var(--r-md); }
+.sprachen__liste a:hover { background: var(--surface-2); text-decoration: underline; }
+.sprachen__liste a[aria-current] { font-weight: 600; }
+.sprachen__kurz { min-width: 1.6rem; font-weight: 600; letter-spacing: .04em; color: var(--ink-muted); }
 @media (min-width: 900px) { .nav { display: block; } .kopf__suche kbd { display: inline; } }
 /* Ohne JavaScript gibt es kein Menue: dann steht die Navigation mobil als zweite Zeile im Kopf */
 @media (max-width: 899px) { html:not(.js) .kopf__innen { flex-wrap: wrap; padding-block: .25rem; } html:not(.js) .nav { display: block; width: 100%; order: 3; } html:not(.js) .nav ul { flex-wrap: wrap; } }

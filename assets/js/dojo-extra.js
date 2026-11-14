@@ -4,7 +4,7 @@
   'use strict';
   var d = document, w = window, h = d.documentElement, D = w.CNDojo;
   if (!D || D.aufstieg) return;
-  var el = D.el, alle = D.alle, NAMEN = D.NAMEN, ROOT = D.root, BASIS = D.basis || ROOT, EN = !!D.en;
+  var el = D.el, alle = D.alle, NAMEN = D.NAMEN, ROOT = D.root, BASIS = D.basis || ROOT, SPR = D.sprache || 'de', akk = D.akk;
   var T = D.T || function (de) { return de; };
   var NEWS = function (s) { return 'https://kmupower.com/newsletter?' + D.UTM(s); };
   var ANKER = ['weisser-guertel', 'gelber-guertel', 'oranger-guertel', 'gruener-guertel', 'blauer-guertel', 'brauner-guertel', 'schwarzer-guertel'];
@@ -16,8 +16,8 @@
     }
     guertelInfo().then(function (info) {
       var g = info.filter(function (x) { return x.nr === n; })[0] || {};
-      var satz = g.erreicht_satz || (g.kannst_du ? T('Was du jetzt kannst: ', 'What you can do now: ') + g.kannst_du : '');
-      var kopf = 'Tusch! ' + NAMEN[n - 1] + '.';
+      var satz = g.erreicht_satz || (g.kannst_du ? T("Was du jetzt kannst: ") + g.kannst_du : '');
+      var kopf = T('Tusch! ') + NAMEN[n - 1] + '.';
       var box = d.querySelector('[data-aufstieg-meldung]');
       if (!box) {
         box = el('div', { 'class': 'meldung', 'data-aufstieg-meldung': '' });
@@ -27,12 +27,12 @@
       box.textContent = '';
       box.hidden = false;
       var p1 = el('p'); p1.appendChild(el('strong', null, kopf)); if (satz) p1.appendChild(d.createTextNode(' ' + satz)); box.appendChild(p1);
-      var p2 = el('p', null, T('Jeden Montag ein Impuls zur Power Platform und Automatisierung: ', 'An idea about the Power Platform and automation every Monday: '));
-      p2.appendChild(el('a', { href: NEWS('guertel-aufstieg'), rel: 'noopener' }, T('Newsletter KMUpower Impuls', 'KMUpower Impuls newsletter (in German)')));
+      var p2 = el('p', null, T("Jeden Montag ein Impuls zur Power Platform und Automatisierung: "));
+      p2.appendChild(el('a', { href: NEWS('guertel-aufstieg'), rel: 'noopener' }, T("Newsletter KMUpower Impuls")));
       p2.appendChild(d.createTextNode('.'));
       box.appendChild(p2);
       if (h.getAttribute('data-seite') !== 'dojo') {
-        var p3 = el('p'); p3.appendChild(el('a', { href: BASIS + 'dojo/#guertelkarte' }, T('Gürtelkarte in Mein Dojo holen', 'Get your belt card in My Dojo'))); box.appendChild(p3);
+        var p3 = el('p'); p3.appendChild(el('a', { href: BASIS + 'dojo/#guertelkarte' }, T("Gürtelkarte in Mein Dojo holen"))); box.appendChild(p3);
       }
       D.ansage(kopf + (satz ? ' ' + satz : ''));
     });
@@ -48,17 +48,17 @@
     var mo = new Date(); mo.setHours(12, 0, 0, 0);
     do { mo.setDate(mo.getDate() + 1); } while (mo.getDay() !== 1);
     var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
-    var z = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//KMUpower//Dojo Vier Wochen//' + (EN ? 'EN' : 'DE'), 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
+    var z = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//KMUpower//Dojo Vier Wochen//' + SPR.toUpperCase(), 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
     WOCHEN.forEach(function (gs, i) {
       var drin = (L || []).filter(function (t) { return gs.indexOf(t.guertel) > -1; });
       if (L && !drin.length) return;
       var tag = new Date(mo); tag.setDate(mo.getDate() + 7 * i);
-      var name = EN ? gs.map(function (g) { return NAMEN[g - 1].replace(/ belt$/, ''); }).join(' and ') + ' belt' : gs.map(function (g) { return NAMEN[g - 1].replace(/ Gürtel$/, ''); }).join(' und ') + ' Gürtel';
+      var name = gs.length === 1 ? NAMEN[gs[0] - 1] : SPR === 'de' ? gs.map(function (g) { return NAMEN[g - 1].replace(/ Gürtel$/, ''); }).join(' und ') + ' Gürtel' : T('{0} und {1}', NAMEN[gs[0] - 1], akk(gs[1]));
       var link = BASIS + 'techniken/#' + ANKER[gs[0] - 1];
       z.push('BEGIN:VEVENT', 'UID:dojo-woche-' + (i + 1) + '-' + D.isoDatum(mo).replace(/-/g, '') + '@kmupower.com', 'DTSTAMP:' + stamp,
         'DTSTART:' + D.isoDatum(tag).replace(/-/g, '') + 'T083000', 'DURATION:PT15M',
-        'SUMMARY:' + T('Dojo Woche ', 'Dojo week ') + (i + 1) + ': ' + name,
-        'DESCRIPTION:' + (drin.length ? drin.length + T(' Techniken: ', ' techniques: ') + drin.map(function (t) { return t.nr + ' ' + t.titel; }).join('\\, ') + '. ' : '') + T('Übe eine Technik pro Tag. ', 'Practice one technique per day. ') + link,
+        'SUMMARY:' + T("Dojo Woche ") + (i + 1) + T(': ') + name,
+        'DESCRIPTION:' + (drin.length ? drin.length + T(" Techniken: ") + drin.map(function (t) { return t.nr + ' ' + t.titel; }).join('\\, ') + '. ' : '') + T("Übe eine Technik pro Tag. ") + link,
         'URL:' + link, 'TRANSP:TRANSPARENT', 'END:VEVENT');
     });
     z.push('END:VCALENDAR');
@@ -72,8 +72,8 @@
   }
   function kalender() {
     D.liste().then(function (L) {
-      datei(EN ? 'dojo-four-weeks.ics' : 'dojo-vier-wochen.ics', 'text/calendar;charset=utf-8', wochenIcs(L));
-      D.ansage(T('Kalenderdatei mit den Montagsterminen erstellt.', 'Calendar file with the Monday events created.'));
+      datei(T('dojo-vier-wochen.ics'), 'text/calendar;charset=utf-8', wochenIcs(L));
+      D.ansage(T("Kalenderdatei mit den Montagsterminen erstellt."));
     });
   }
   function heuteBauen(box, id, t, alt) {
@@ -84,18 +84,18 @@
     var kopf = el('div', { 'class': 'heute__kopf' });
     kopf.appendChild(el('span', { 'class': 'heute__nr', 'aria-hidden': 'true' }, D.nr2(t.nr)));
     var rechts = el('div'), ti = el(ebene, { 'class': 'heute__titel' }, t.titel);
-    ti.appendChild(el('small', null, T('Nr. ', 'No. ') + t.nr + ': ' + t.klartitel));
+    ti.appendChild(el('small', null, T("Nr. ") + t.nr + T(': ') + t.klartitel));
     rechts.appendChild(ti);
     var meta = el('ul', { 'class': 'metazeile' });
     var li1 = el('li'); li1.appendChild(el('span', { 'class': 'knoten', 'data-guertel-nr': t.guertel }, NAMEN[t.guertel - 1])); meta.appendChild(li1);
     var liZ = el('li'); meta.appendChild(liZ);
-    var li3 = el('li'); li3.appendChild(el('span', null, T('Ausprobieren: ca. ' + t.dauer_min + ' Min.', 'Try it: approx. ' + t.dauer_min + ' min'))); meta.appendChild(li3);
+    var li3 = el('li'); li3.appendChild(el('span', null, T("Ausprobieren: ca. {0} Min.", t.dauer_min))); meta.appendChild(li3);
     rechts.appendChild(meta); kopf.appendChild(rechts); art.appendChild(kopf);
     var problem = el('p', { 'class': 'abschnitt__problem' }, t.nutzen || '');
     art.appendChild(problem);
     var platz = el('div');
     art.appendChild(platz);
-    var pl = el('p'); pl.appendChild(el('a', { 'class': 'knopf knopf--leise', href: url }, T('Ganze Technik mit Anleitung, Grenzen und Quelle', 'Full technique with guide, limits and source'))); art.appendChild(pl);
+    var pl = el('p'); pl.appendChild(el('a', { 'class': 'knopf knopf--leise', href: url }, T("Ganze Technik mit Anleitung, Grenzen und Quelle"))); art.appendChild(pl);
     if (alt) box.replaceChild(art, alt); else box.appendChild(art);
     /* Prompt und Felder von der Technik-Seite holen (gleiche Herkunft) */
     fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (html) {

@@ -1,0 +1,83 @@
+<main id="main" data-technik="{{id}}" data-guertel-nr="{{guertel}}">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Fil d’Ariane"><ol><li><a href="../../">Accueil</a></li><li><a href="../">Techniques</a></li><li><a href="../#{{guertel_anker}}">{{guertel_name}}</a></li><li><a href="./" aria-current="page">{{nr_label}}</a></li></ol></nav>
+    <header class="tk">
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="{{guertel}}">{{guertel_name}}</span></li>
+        <li>{{{zugang_badge}}}</li>
+        <li>{{{art_badge}}}</li>
+        <li class="tk__nr">{{nr_label}}</li>
+        <li><span>env. {{dauer_min}} min</span></li>
+      </ul>
+      <h1 id="h1">{{titel}}<small>{{klartitel}}</small></h1>
+      <p class="tk__moment">{{moment}}</p>
+    </header>
+
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">La situation</h2>
+      <p class="abschnitt__problem">{{problem}}</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">La coupe</h2>
+{{{schnitt_zeile}}}
+      <p class="label">Après</p>
+{{{schmiede}}}
+{{{rollen}}}
+      <p class="rolle__fallback">{{zugang_text}}. Sans bouton de copie: sélectionne le texte et copie-le avec Ctrl+C.</p>
+    </section>
+
+{{{rechner}}}
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">Comment l’utiliser</h2>
+      <ol class="schritte">{{{so_nutzt}}}</ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">Comment reconnaître une bonne réponse</h2>
+      <ul class="pruefliste">{{{erwarten}}}</ul>
+    </section>
+
+{{{probe}}}
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Limites</h2>
+      <ul class="arrow-list prose">{{{grenzen}}}</ul>
+    </section>
+
+{{{meister}}}{{{praxis}}}
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Sources</h2>
+      <p class="quelle">{{{quellen}}}</p>
+{{{ausgefuehrt}}}
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Marquer comme pratiquée</button></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Transmettre</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="{{linkedin_url}}" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Partager sur LinkedIn</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="{{url}}" hidden>Partager</button>
+{{{bild_link}}}
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Texte copié. Colle-le dans ton post." data-nur-js>Copier le texte pour ton post</button>
+        <p class="rolle__status" role="status"></p>
+      </div>
+      <details class="einklapp">
+        <summary>Texte proposé pour ton post</summary>
+        <pre class="code" id="teilen-text">{{teilen_text}}</pre>
+      </details>
+    </section>
+
+{{{kette}}}
+    <nav class="blaettern" aria-label="Autres techniques">
+{{{blaettern}}}
+    </nav>
+{{{kurs}}}
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="{{haupt_pre}}" data-erfolg="{{kopier_erfolg}}" data-nur-js>{{kopier_label}}</button>
+    <a class="knopf knopf--klein" href="{{naechste_url}}">{{naechste_label}}</a>
+  </div>
+</main>

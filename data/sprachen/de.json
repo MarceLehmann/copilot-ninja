@@ -1,0 +1,239 @@
+{
+ "code": "de",
+ "reihenfolge": 1,
+ "pfad": "",
+ "html_lang": "de-CH",
+ "og_locale": "de_CH",
+ "name": "Deutsch",
+ "kurz": "DE",
+ "link_label": "Deutsche Version dieser Seite",
+ "zahl_locale": "de-CH",
+ "datum": "{dd}.{mm}.{y}",
+ "monate": [],
+ "zb": "z. B.",
+ "teile": {
+  "Ziel": "ziel",
+  "Kontext": "kontext",
+  "Quelle": "quelle",
+  "Erwartung": "erwartung"
+ },
+ "profil_felder": {
+  "Firmenname": "Firmenname",
+  "Funktion": "Funktion",
+  "Branche": "Branche"
+ },
+ "lange_felder": "(text|notizen|inhalt|entwurf|mail|anweisungen?|verlauf|reglement|offerten?|liste|fall|chat)$",
+ "verboten": [
+  [
+   "getestet",
+   "«getestet»"
+  ],
+  [
+   "garantiert",
+   "«garantiert»"
+  ],
+  [
+   "offiziell",
+   "«offiziell»"
+  ],
+  [
+   "zertifiziert",
+   "«zertifiziert»"
+  ]
+ ],
+ "anfuehrung": [
+  "«",
+  "»"
+ ],
+ "anfuehrung_verboten": false,
+ "learn": "en-us",
+ "dojo": "https://powerplatformdojo.com/",
+ "powerautomate": "https://powerautomate.ninja/",
+ "guertel": [
+  [
+   "Weisser Gürtel",
+   "Weiss"
+  ],
+  [
+   "Gelber Gürtel",
+   "Gelb"
+  ],
+  [
+   "Oranger Gürtel",
+   "Orange"
+  ],
+  [
+   "Grüner Gürtel",
+   "Grün"
+  ],
+  [
+   "Blauer Gürtel",
+   "Blau"
+  ],
+  [
+   "Brauner Gürtel",
+   "Braun"
+  ],
+  [
+   "Schwarzer Gürtel",
+   "Schwarz"
+  ]
+ ],
+ "art": {
+  "pinselstrich": {
+   "name": "Pinselstrich",
+   "wort": "Prompt",
+   "knopf": "Prompt kopieren",
+   "rolle": "Prompt zum Kopieren",
+   "erfolg": "Kopiert. Jetzt in Microsoft Copilot Chat einfügen."
+  },
+  "schriftrolle": {
+   "name": "Schriftrolle",
+   "wort": "Agent-Anweisung",
+   "knopf": "Anweisung kopieren",
+   "rolle": "Agent-Anweisung zum Kopieren",
+   "erfolg": "Kopiert. Jetzt in die Anweisungen deines Agents einfügen."
+  },
+  "kata": {
+   "name": "Kata",
+   "wort": "Anleitung",
+   "knopf": "Text kopieren",
+   "rolle": "Text zum Kopieren",
+   "erfolg": "Kopiert. Jetzt in Microsoft Copilot Chat einfügen."
+  }
+ },
+ "zugang_kurz": {
+  "ohne-zl": "Ohne Zusatzlizenz",
+  "agent-builder": "Agent Builder, ohne Zusatzlizenz",
+  "lizenz": "Mit Lizenz",
+  "studio": "Copilot Studio",
+  "rechner": "Rechner"
+ },
+ "wochen": [
+  {
+   "nr": 1,
+   "guertel": [
+    1,
+    2
+   ],
+   "ergebnisse": [
+    [
+     "t01",
+     "die Fragen, die du vor einem wichtigen Text selbst beantworten musst"
+    ],
+    [
+     "t05",
+     "die Einwände deines Empfängers, solange du sie noch beheben kannst"
+    ],
+    [
+     "t06",
+     "eine Liste der Abweichungen zwischen Entwurf und Quelle"
+    ],
+    [
+     "t07",
+     "die Gründe, an denen dein Projekt scheitern könnte"
+    ]
+   ]
+  },
+  {
+   "nr": 2,
+   "guertel": [
+    3
+   ],
+   "ergebnisse": [
+    [
+     "t09",
+     "einen Offertenvergleich mit dem Kleingedruckten in einer Tabelle"
+    ],
+    [
+     "t10",
+     "eine Fristenliste für deine Kalendereinträge"
+    ],
+    [
+     "t11",
+     "deinen Schreibstil-Steckbrief"
+    ],
+    [
+     "t13",
+     "ein Quiz mit Fundstellen zu einem Reglement"
+    ]
+   ]
+  },
+  {
+   "nr": 3,
+   "guertel": [
+    4,
+    5
+   ],
+   "ergebnisse": [
+    [
+     "t14",
+     "einen eigenen Agent aus deinem besten Chat"
+    ],
+    [
+     "t17",
+     "eine Prüftabelle zu seinen Anweisungen"
+    ],
+    [
+     "t18",
+     "20 Testfragen mit der Liste «nicht geregelt»"
+    ],
+    [
+     "t19",
+     "einen Schutzbaustein für jede Instruktion"
+    ]
+   ]
+  },
+  {
+   "nr": 4,
+   "guertel": [
+    6,
+    7
+   ],
+   "ergebnisse": [
+    [
+     "t22",
+     "eine Vorlage, mit der du echte Fälle pseudonymisiert weitergibst"
+    ],
+    [
+     "t23",
+     "eine Schätzung, in welcher Grössenordnung dein Agent Copilot Credits verbraucht"
+    ],
+    [
+     "t24",
+     "ein Betriebsblatt mit Abschaltkriterien und verantwortlicher Person"
+    ],
+    [
+     "t25",
+     "einen Ablauf für den monatlichen Check"
+    ]
+   ]
+  }
+ ],
+ "momente": [
+  [
+   "t01",
+   "Ich weiss nicht, was ich fragen soll."
+  ],
+  [
+   "t11",
+   "Die Antwort klingt nach Prospekt."
+  ],
+  [
+   "t09",
+   "Drei Offerten, keine Zeit."
+  ],
+  [
+   "t18",
+   "Der Agent erfindet Dinge."
+  ]
+ ],
+ "noch_nicht": "Noch nicht freigegeben. Erscheint, sobald Marcel die Techniken gegen die Dokumentation geprüft hat.",
+ "titel_kurz": {
+  "t05": "Den Text aus Empfängersicht prüfen",
+  "t10": "Fristen und Verlängerungsfallen finden"
+ },
+ "ui": {},
+ "js": {},
+ "name_de": "Deutsch"
+}

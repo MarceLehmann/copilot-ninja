@@ -1,0 +1,68 @@
+{
+  "hinweis": "Erzeugt von scripts/karten.mjs aus data/techniken.json und data/techniken.fr.json. Nicht von Hand bearbeiten.",
+  "guertel": [
+    {
+      "nr": 1,
+      "farbe": "weiss",
+      "name": "Ceinture blanche",
+      "kurz": "Blanche",
+      "leitwort": "Position de départ",
+      "kannst_du": "Écrire des prompts avec objectif, contexte, source et attentes, et te laisser interroger avant d'écrire.",
+      "erreicht_satz": "Tu dis maintenant ce que tu veux et tu te laisses interroger."
+    },
+    {
+      "nr": 2,
+      "farbe": "gelb",
+      "name": "Ceinture jaune",
+      "kurz": "Jaune",
+      "leitwort": "Second regard",
+      "kannst_du": "Demander des brouillons et les faire vérifier pour que les erreurs se voient avant l'envoi.",
+      "erreicht_satz": "Tu vérifies maintenant avant d'envoyer."
+    },
+    {
+      "nr": 3,
+      "farbe": "orange",
+      "name": "Ceinture orange",
+      "kurz": "Orange",
+      "leitwort": "Lecture des traces",
+      "kannst_du": "Exploiter des fichiers et des sources web, chaque affirmation avec son passage source.",
+      "erreicht_satz": "Tu lis maintenant des traces, chacune avec son passage source."
+    },
+    {
+      "nr": 4,
+      "farbe": "gruen",
+      "name": "Ceinture verte",
+      "kurz": "Verte",
+      "leitwort": "Premier élève",
+      "kannst_du": "Donner des instructions à ton premier agent et le vérifier.",
+      "erreicht_satz": "Tu as maintenant ton premier élève."
+    },
+    {
+      "nr": 5,
+      "farbe": "blau",
+      "name": "Ceinture bleue",
+      "kurz": "Bleue",
+      "leitwort": "Déroulement",
+      "kannst_du": "Donner des étapes à un agent et fixer à quel moment il passe la main à une personne.",
+      "erreicht_satz": "Ton agent connaît maintenant son chemin et ses limites."
+    },
+    {
+      "nr": 6,
+      "farbe": "braun",
+      "name": "Ceinture marron",
+      "kurz": "Marron",
+      "leitwort": "Budget",
+      "kannst_du": "Transmettre proprement les données et estimer la consommation d'un agent avant que cela devienne cher.",
+      "erreicht_satz": "Tu sais maintenant ce que ton agent consomme avant qu'il tourne."
+    },
+    {
+      "nr": 7,
+      "farbe": "schwarz",
+      "name": "Ceinture noire",
+      "kurz": "Noire",
+      "leitwort": "Veille",
+      "kannst_du": "Surveiller des agents en exploitation et les arrêter à temps.",
+      "erreicht_satz": "Tu assures maintenant la veille, même quand personne ne travaille sur l'agent."
+    }
+  ]
+}

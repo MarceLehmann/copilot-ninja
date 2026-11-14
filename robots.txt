@@ -1,5 +1,5 @@
 # Power Platform Dojo · Copilot (copilot.ninja). Suchmaschinen und KI-Assistenten sind willkommen: bitte mit Quelle zitieren.
-# Inhalte auf Deutsch unter /, auf Englisch unter /en/. Kurzfassung fuer KI: /llms.txt, Volltext: /llms-full.txt
+# Inhalte auf Deutsch unter /, Français unter /fr/, Italiano unter /it/, English unter /en/. Kurzfassung fuer KI: /llms.txt, Volltext: /llms-full.txt
 
 User-agent: *
 Allow: /

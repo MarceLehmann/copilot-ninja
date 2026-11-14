@@ -1,0 +1,68 @@
+{
+  "hinweis": "Erzeugt von scripts/karten.mjs aus data/techniken.json und data/techniken.it.json. Nicht von Hand bearbeiten.",
+  "guertel": [
+    {
+      "nr": 1,
+      "farbe": "weiss",
+      "name": "Cintura bianca",
+      "kurz": "Bianca",
+      "leitwort": "Posizione base",
+      "kannst_du": "Scrivere prompt con obiettivo, contesto, fonte e aspettative e farti fare delle domande.",
+      "erreicht_satz": "Ora dici cosa vuoi e ti lasci fare delle domande."
+    },
+    {
+      "nr": 2,
+      "farbe": "gelb",
+      "name": "Cintura gialla",
+      "kurz": "Gialla",
+      "leitwort": "Secondo sguardo",
+      "kannst_du": "Chiedere bozze e farle controllare in modo che gli errori emergano prima dell'invio.",
+      "erreicht_satz": "Ora controlli prima di inviare."
+    },
+    {
+      "nr": 3,
+      "farbe": "orange",
+      "name": "Cintura arancione",
+      "kurz": "Arancione",
+      "leitwort": "Lettura delle tracce",
+      "kannst_du": "Analizzare file e fonti web, con il riferimento preciso per ogni affermazione.",
+      "erreicht_satz": "Ora leggi le tracce, ognuna con il suo riferimento."
+    },
+    {
+      "nr": 4,
+      "farbe": "gruen",
+      "name": "Cintura verde",
+      "kurz": "Verde",
+      "leitwort": "Primo allievo",
+      "kannst_du": "Istruire e controllare il tuo primo agente.",
+      "erreicht_satz": "Ora hai il tuo primo allievo."
+    },
+    {
+      "nr": 5,
+      "farbe": "blau",
+      "name": "Cintura blu",
+      "kurz": "Blu",
+      "leitwort": "Procedura",
+      "kannst_du": "Dare dei passaggi a un agente e stabilire quando passa la mano a una persona.",
+      "erreicht_satz": "Il tuo agente ora conosce il suo percorso e i suoi limiti."
+    },
+    {
+      "nr": 6,
+      "farbe": "braun",
+      "name": "Cintura marrone",
+      "kurz": "Marrone",
+      "leitwort": "Bilancio",
+      "kannst_du": "Passare i dati in modo pulito e stimare il consumo di un agente prima che diventi costoso.",
+      "erreicht_satz": "Ora sai cosa consuma il tuo agente prima che parta."
+    },
+    {
+      "nr": 7,
+      "farbe": "schwarz",
+      "name": "Cintura nera",
+      "kurz": "Nera",
+      "leitwort": "Guardia",
+      "kannst_du": "Sorvegliare gli agenti in esercizio e spegnerli per tempo.",
+      "erreicht_satz": "Ora fai la guardia, anche quando nessuno lavora sull'agente."
+    }
+  ]
+}

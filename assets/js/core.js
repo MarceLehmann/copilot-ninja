@@ -4,10 +4,11 @@
   var d = document, w = window, h = d.documentElement;
   var skript = d.currentScript;
   var ROOT = skript && skript.src ? skript.src.replace(/assets\/js\/core\.js.*$/, '') : '';
-  /* Sprache der Seite: Deutsch unter /, Englisch unter /en/ (gleiche Struktur). Assets liegen gemeinsam unter ROOT. */
-  var EN = /^en/i.test(h.getAttribute('lang') || '');
-  var BASIS = ROOT + (EN ? 'en/' : '');
-  function T(de, en) { return EN ? en : de; }
+  /* Sprache der Seite: Deutsch unter /, weitere Sprachen unter /<code>/ (gleiche Struktur, Texte in assets/js/texte/<code>.js). Assets liegen gemeinsam unter ROOT. */
+  var TX = window.CN_TEXTE || { meta: {}, texte: {} }, SPR = TX.meta.code || 'de';
+  function T(de) { var s = TX.texte[de]; if (typeof s !== 'string') s = de; for (var i = 1; i < arguments.length; i++) s = s.split('{' + (i - 1) + '}').join(arguments[i]); return s; }
+  var LP = TX.meta.pfad || '';
+  var BASIS = ROOT + LP;
   var MQ_RUHE = w.matchMedia ? w.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
 
   function alle(sel, wurzel) { return Array.prototype.slice.call((wurzel || d).querySelectorAll(sel)); }
@@ -72,7 +73,7 @@
           if (bewegung()) h.classList.add('anim');
         }
         sync();
-        ansage(h.getAttribute('data-bewegung') === 'aus' ? T('Bewegung ist aus.', 'Motion is off.') : T('Bewegung ist an.', 'Motion is on.'));
+        ansage(h.getAttribute('data-bewegung') === 'aus' ? T("Bewegung ist aus.") : T("Bewegung ist an."));
       });
     });
   }
@@ -168,7 +169,7 @@
       zeigen('');
       feld.focus();
       if (!daten) {
-        fetch(ROOT + 'assets/data/' + (EN ? 'en/' : '') + 'suche.json').then(function (r) { return r.json(); })
+        fetch(ROOT + 'assets/data/' + LP + 'suche.json').then(function (r) { return r.json(); })
           .then(function (j) { daten = j.eintraege || []; zeigen(feld.value); })
           .catch(function () { daten = []; zeigen(feld.value); });
       }
@@ -232,8 +233,8 @@
         var alt = k.getAttribute('data-label') || k.textContent;
         k.setAttribute('data-label', alt);
         kopierText(text).then(function () {
-          var satz = weiter ? T('Mit Herkunft kopiert. Passt in einen Teams-Chat.', 'Copied with its origin. Fits into a Teams chat.') : (k.getAttribute('data-erfolg') || T('Kopiert. Jetzt in Microsoft Copilot Chat einfügen.', 'Copied. Now paste it into Microsoft Copilot Chat.'));
-          k.textContent = T('Kopiert', 'Copied');
+          var satz = weiter ? T("Mit Herkunft kopiert. Passt in einen Teams-Chat.") : (k.getAttribute('data-erfolg') || T("Kopiert. Jetzt in Microsoft Copilot Chat einfügen."));
+          k.textContent = T("Kopiert");
           k.classList.add('is-ok');
           if (status) status.textContent = satz;
           ansage(satz);
@@ -242,7 +243,7 @@
           clearTimeout(k._cnT);
           k._cnT = setTimeout(function () { k.textContent = alt; k.classList.remove('is-ok'); }, 2000);
         }, function () {
-          var f = T('Kopieren hat nicht funktioniert. Markiere den Text und kopiere ihn mit Strg+C.', 'Copying did not work. Select the text and copy it with Ctrl+C.');
+          var f = T("Kopieren hat nicht funktioniert. Markiere den Text und kopiere ihn mit Strg+C.");
           if (status) status.textContent = f;
           ansage(f);
         });
@@ -250,8 +251,8 @@
     });
   }
 
-  /* Profilfelder: gespeichert unter den deutschen Namen, die englischen Platzhalter lesen dieselben Werte */
-  var PROFIL_EN = { 'Company name': 'Firmenname', 'Role': 'Funktion', 'Industry': 'Branche' };
+  /* Profilfelder: gespeichert unter den deutschen Namen, die Platzhalter anderer Sprachen lesen dieselben Werte */
+  var PROFIL_SP = TX.meta.profil_felder || {};
 
   /* Schmiede: Platzhalter werden zu Feldern, Profilwerte vorausgefuellt. Speichert nichts. */
   function schmiede(wurzel) {
@@ -270,7 +271,7 @@
             sp.classList.toggle('is-gefuellt', !!v);
           });
         }
-        var pk = PROFIL_EN[name] || name;
+        var pk = PROFIL_SP[name] || name;
         if (!f.value && typeof profil[pk] === 'string' && profil[pk]) f.value = profil[pk];
         f.addEventListener('input', setzen);
         if (f.value) setzen();
@@ -346,7 +347,7 @@
         if (mit.length) s.hidden = !mit.some(function (k) { return !k.hidden; });
       });
       alle('.schwelle', wand).forEach(function (s) { s.hidden = Object.keys(aktiv).length > 0; });
-      if (zaehler) zaehler.textContent = T('zeigt ' + n + ' von ' + karten.length, 'showing ' + n + ' of ' + karten.length);
+      if (zaehler) zaehler.textContent = T("zeigt {0} von {1}", n, karten.length);
       if (leer) leer.hidden = n > 0;
       if (vorher) karten.forEach(function (k, i) {
         var a = vorher[i];
@@ -428,7 +429,7 @@
         if (!ziel) return;
         var status = a.parentNode.querySelector('.rolle__status');
         kopierText(ziel.textContent.replace(/^\s+|\s+$/g, '')).then(function () {
-          var satz = T('Text kopiert. Fehlt er bei LinkedIn, füg ihn dort ein.', 'Text copied. If LinkedIn does not show it, paste it there.');
+          var satz = T("Text kopiert. Fehlt er bei LinkedIn, füg ihn dort ein.");
           if (status) status.textContent = satz;
           ansage(satz);
         }, function () { /* LinkedIn oeffnet trotzdem */ });
@@ -447,7 +448,7 @@
   }
 
   w.CN = {
-    root: ROOT, basis: BASIS, en: EN, T: T,
+    root: ROOT, basis: BASIS, lp: LP, sprache: SPR, TX: TX, T: T,
     bewegung: bewegung,
     ansage: ansage,
     dojo: dojo,
