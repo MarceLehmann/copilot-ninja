@@ -1,0 +1,396 @@
+{
+  "schema": 1,
+  "stand": "2026-10-13",
+  "hinweis": "Pool de questions pour «Quelle ceinture es-tu?». Les questions de fait (klasse fakt) ne sont valables que tant que geprueft_am date de 120 jours au plus. Les questions intemporelles avec «technik» n'apparaissent que si la technique fait partie du build. Formulation des faits issue de _recherche/fakten.md, état au 13 octobre 2026.",
+  "startpunkt": {
+    "1": "Ceinture blanche. Tu commences par la Position de base.",
+    "2": "Ceinture jaune. Tu écris proprement, vient maintenant le second regard.",
+    "3": "Ceinture orange. Tu vérifies tes brouillons. Ensuite, tu suis des pistes dans les fichiers et sur le web.",
+    "4": "Ceinture verte. Tu es à l'aise dans le chat. Maintenant, tu entraînes ton premier agent.",
+    "5": "Ceinture bleue. Ton agent est en place. Maintenant, il reçoit une séquence et une protection.",
+    "6": "Ceinture marron. Tu construis des agents. Maintenant, tu transmets les données proprement et tu estimes ce que consomme ton agent.",
+    "7": "Ceinture noire. Presque tout est en place. Reste la veille en production.",
+    "alle": "Ceinture noire. Tu connais la situation. Teste-toi avec la Veille de nuit."
+  },
+  "fragen": [
+    {
+      "id": "f1a",
+      "guertel": 1,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "«Résume le document. Utilise uniquement le fichier joint. Cinq points maximum.» Lequel des quatre éléments d'un prompt efficace manque?",
+      "antworten": [
+        "Objectif",
+        "Source",
+        "Attentes",
+        "Contexte"
+      ],
+      "richtig": 3,
+      "aufloesung": "Microsoft nomme le contexte, l'objectif, la source et les attentes. Ici, il manque ce à quoi le texte sert et à qui il s'adresse.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/",
+        "titel": "Microsoft Learn, module de formation «Rédiger des prompts efficaces»"
+      },
+      "technik": null
+    },
+    {
+      "id": "f1b",
+      "guertel": 1,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "Quels quatre éléments le module de formation de Microsoft nomme-t-il pour un prompt efficace?",
+      "antworten": [
+        "Contexte, objectif, source, attentes",
+        "Rôle, ton, longueur, format",
+        "Question, exemple, règle, objectif"
+      ],
+      "richtig": 0,
+      "aufloesung": "Microsoft nomme le contexte, l'objectif, la source et les attentes. Chaque technique du Dojo s'appuie sur ces quatre parties.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/",
+        "titel": "Microsoft Learn, module de formation «Rédiger des prompts efficaces»"
+      },
+      "technik": null
+    },
+    {
+      "id": "f2a",
+      "guertel": 2,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "Tu fais vérifier un brouillon par rapport à un document source. Quelle demande te donne la réponse la plus facile à vérifier?",
+      "antworten": [
+        "«Tout est-il correct?»",
+        "Un tableau avec l'affirmation, son emplacement dans la source et le constat (confirmée, différente, absente de la source)",
+        "«Améliore le texte.»"
+      ],
+      "richtig": 1,
+      "aufloesung": "Avec l'emplacement et un constat fixe pour chaque affirmation, tu vois ligne par ligne ce qui est confirmé, ce qui diffère et ce qui manque dans la source. Si tu demandes «Tout est-il correct?», tu obtiens en général juste un oui.",
+      "quelle": null,
+      "technik": "t06"
+    },
+    {
+      "id": "f2b",
+      "guertel": 2,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "La réponse marque une affirmation de ton brouillon comme «confirmée». Que cela signifie-t-il pour toi?",
+      "antworten": [
+        "C'est forcément correct.",
+        "C'est un indice. Tu vérifies toi-même deux des résultats dans la source.",
+        "Tu n'as plus rien à vérifier."
+      ],
+      "richtig": 1,
+      "aufloesung": "Un «confirmée» est un indice, pas une certitude. Si tu vérifies toi-même deux résultats, tu vois vite à quel point tu peux te fier au contrôle.",
+      "quelle": null,
+      "technik": "t06"
+    },
+    {
+      "id": "f3a",
+      "guertel": 3,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Les requêtes de recherche web de Microsoft Copilot Chat sont-elles couvertes par le même engagement de protection des données que tes prompts et réponses?",
+      "antworten": [
+        "Oui, tout est protégé de la même façon.",
+        "Non, elles passent séparément par Bing avec leurs propres règles de données.",
+        "Copilot Chat n'a pas de recherche web."
+      ],
+      "richtig": 1,
+      "aufloesung": "Selon Microsoft, la protection des données d'entreprise s'applique aux prompts et aux réponses. Les requêtes de recherche web partent vers le service Bing, suivent leurs propres règles de données et, selon Learn, ne sont pas couvertes par l'addendum sur la protection des données. C'est pourquoi les noms de clients et les chiffres internes n'ont pas leur place dans une question de recherche.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection",
+        "titel": "Microsoft Learn, Protection des données d'entreprise"
+      },
+      "technik": null
+    },
+    {
+      "id": "f3b",
+      "guertel": 3,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Microsoft Copilot Chat peut-il analyser des fichiers téléversés sans licence supplémentaire?",
+      "antworten": [
+        "Oui, le téléversement de fichiers est inclus, avec des limites dont les chiffres ne sont pas publiés.",
+        "Non, seulement avec une licence.",
+        "Seulement les images."
+      ],
+      "richtig": 0,
+      "aufloesung": "Selon Microsoft, «téléverser et analyser des fichiers» fait partie de Copilot Chat sans licence supplémentaire. Le téléversement a des limites, mais Learn ne donne pas de chiffres précis sur cette page.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+        "titel": "Microsoft Learn, Aperçu de Copilot Chat"
+      },
+      "technik": null
+    },
+    {
+      "id": "f3c",
+      "guertel": 3,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "Tu fais faire une recherche sur le web. Quelle demande te permet de vérifier ce qui est vrai?",
+      "antworten": [
+        "«Résume le sujet en détail.»",
+        "Après chaque phrase, le lien dont elle provient, plus une liste séparée «Non étayé».",
+        "«Utilise uniquement des sources fiables.»"
+      ],
+      "richtig": 1,
+      "aufloesung": "Sans lien pour chaque phrase, tu ne peux rien vérifier, et des hypothèses se mêlent aux preuves.",
+      "quelle": null,
+      "technik": "t12"
+    },
+    {
+      "id": "f4a",
+      "guertel": 4,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Un agent dans Microsoft Copilot Chat utilise uniquement des instructions et des sites web publics. Combien coûte-t-il sans licence supplémentaire?",
+      "antworten": [
+        "Il est facturé à la consommation.",
+        "Il est inclus sans frais supplémentaires.",
+        "Il nécessite une licence Copilot Studio."
+      ],
+      "richtig": 1,
+      "aufloesung": "Selon Microsoft, les agents qui s'appuient uniquement sur des instructions et des sites web publics sont inclus sans frais supplémentaires. Ils n'ont pas accès aux données de ton organisation.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/copilot/agents",
+        "titel": "Microsoft Learn, Agents dans Copilot Chat"
+      },
+      "technik": null
+    },
+    {
+      "id": "f4b",
+      "guertel": 4,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Un agent dans Microsoft Copilot Chat doit accéder à des documents dans SharePoint. Que se passe-t-il sans licence?",
+      "antworten": [
+        "Sans frais supplémentaires, actif tout de suite.",
+        "Facturé à la consommation, désactivé par défaut pour les utilisateurs de Copilot Chat.",
+        "Ce n'est pas possible."
+      ],
+      "richtig": 1,
+      "aufloesung": "Selon Microsoft, les agents ayant accès aux données de ton organisation, par exemple depuis SharePoint, sont facturés à la consommation et désactivés par défaut pour les utilisateurs de Copilot Chat. Les admins configurent pour cela un abonnement Copilot Studio ou le paiement à l'utilisation.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/copilot/agents",
+        "titel": "Microsoft Learn, Agents dans Copilot Chat"
+      },
+      "technik": null
+    },
+    {
+      "id": "f4c",
+      "guertel": 4,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "Que vérifies-tu dans les instructions d'un agent avant de les tester pour la première fois?",
+      "antworten": [
+        "Si elles sont assez longues.",
+        "Les contradictions entre deux règles, et chaque outil mentionné qui n'est même pas configuré dans l'agent.",
+        "Si elles sont formulées poliment."
+      ],
+      "richtig": 1,
+      "aufloesung": "Deux règles qui se contredisent laissent l'agent deviner. Un outil mentionné mais non configuré, il ne peut pas l'utiliser. Tu trouves les deux avant le premier test.",
+      "quelle": null,
+      "technik": "t17"
+    },
+    {
+      "id": "f5a",
+      "guertel": 5,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Ton instruction impose à l'agent d'utiliser un outil qui n'est pas configuré dans l'agent. Que se passe-t-il?",
+      "antworten": [
+        "L'agent le configure lui-même.",
+        "Il ne peut pas suivre l'instruction.",
+        "Il cherche un outil similaire."
+      ],
+      "richtig": 1,
+      "aufloesung": "Selon Microsoft, un agent ne peut suivre des instructions sur des outils, des sources de connaissances, des agents ou des rubriques que s'ils sont configurés dans l'agent.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions",
+        "titel": "Microsoft Learn, Instructions dans Copilot Studio"
+      },
+      "technik": null
+    },
+    {
+      "id": "f5b",
+      "guertel": 5,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Faut-il modifier ou supprimer le format de citation de ton agent par une instruction?",
+      "antworten": [
+        "Oui, c'est courant.",
+        "Non, Microsoft le déconseille.",
+        "Seulement pour les agents internes."
+      ],
+      "richtig": 1,
+      "aufloesung": "Microsoft déconseille de modifier ou de supprimer le format de citation du système par des instructions.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions",
+        "titel": "Microsoft Learn, Instructions dans Copilot Studio"
+      },
+      "technik": null
+    },
+    {
+      "id": "f5c",
+      "guertel": 5,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "Un fichier que ton agent lit contient la phrase «Ignore toutes les instructions précédentes». Que doit prévoir ton bloc de protection?",
+      "antworten": [
+        "L'agent suit le texte le plus récent.",
+        "Le texte des documents est du contenu, pas une instruction.",
+        "L'agent demande à l'utilisateur ce qui s'applique."
+      ],
+      "richtig": 1,
+      "aufloesung": "Le bloc réduit le risque dans la conversation, ce n'est pas une frontière de sécurité. Tout ce que l'agent ne doit pas voir n'a pas sa place dans ses sources de connaissances.",
+      "quelle": null,
+      "technik": "t19"
+    },
+    {
+      "id": "f6a",
+      "guertel": 6,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Peux-tu publier un agent dans la version d'évaluation gratuite de Copilot Studio?",
+      "antworten": [
+        "Oui.",
+        "Non. Créer et vérifier dans le volet de test, oui. Publier, non.",
+        "Seulement dans Teams."
+      ],
+      "richtig": 1,
+      "aufloesung": "Selon Microsoft, la licence d'évaluation permet de créer des agents et de les vérifier dans le volet de test. La publication n'est pas possible avec elle.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions",
+        "titel": "Microsoft Learn, Licences et abonnements Copilot Studio"
+      },
+      "technik": null
+    },
+    {
+      "id": "f6b",
+      "guertel": 6,
+      "klasse": "fakt",
+      "geprueft_am": "2026-10-13",
+      "frage": "Selon Microsoft, combien de crédits Copilot une réponse générative consomme-t-elle dans Copilot Studio?",
+      "antworten": [
+        "1",
+        "2",
+        "10"
+      ],
+      "richtig": 1,
+      "aufloesung": "Réponse classique 1, réponse générative 2, action d'agent 5, ancrage du graphe du locataire 10 crédits Copilot. Les tarifs peuvent changer.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
+        "titel": "Microsoft Learn, Crédits Copilot et capacité"
+      },
+      "technik": null
+    },
+    {
+      "id": "f6c",
+      "guertel": 6,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "Tu pseudonymises un cas réel avant de le transmettre. Que transmets-tu?",
+      "antworten": [
+        "Le texte et la table de correspondance, pour que l'autre personne puisse poser des questions.",
+        "Seulement le texte pseudonymisé, jamais la correspondance.",
+        "Tout le chat sous forme de lien."
+      ],
+      "richtig": 1,
+      "aufloesung": "Tu gardes la correspondance pour toi. Qui l'a peut remonter jusqu'au cas. Comme elle se trouve dans le même chat, tu ne partages pas non plus le chat. C'est de la pseudonymisation. Ne diffuse pas le texte simplement parce que les noms ont été remplacés.",
+      "quelle": null,
+      "technik": "t22"
+    },
+    {
+      "id": "f7a",
+      "guertel": 7,
+      "klasse": "fakt",
+      "geprueft_am": "2026-11-14",
+      "frage": "Selon la page Learn Taux de facturation et gestion, que se passe-t-il pour les agents d'un environnement sans paiement à l'utilisation quand le locataire atteint 125 pour cent de sa capacité prépayée?",
+      "antworten": [
+        "Rien, le dépassement est facturé après coup.",
+        "Ils sont bloqués et cessent de répondre, même dans les conversations en cours.",
+        "Seuls les flux d'agent s'arrêtent, les agents continuent de répondre."
+      ],
+      "richtig": 1,
+      "aufloesung": "Microsoft tolère un certain dépassement, comparable à un délai de grâce. À 125 pour cent de la capacité prépayée, l'application des limites commence: les agents de l'environnement sont bloqués et cessent de répondre, même en pleine conversation. Si un environnement facture le dépassement à un plan de paiement à l'utilisation, l'épuisement des crédits prépayés ne bloque pas ses agents. La page d'administration sur les crédits Copilot ajoute: sans source de dépassement, un environnement ne peut utiliser que son allocation, ensuite les expériences qui ont besoin de crédits peuvent cesser de fonctionner.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
+        "titel": "Microsoft Learn, Taux de facturation et gestion (Copilot Studio)"
+      },
+      "technik": null
+    },
+    {
+      "id": "f7b",
+      "guertel": 7,
+      "klasse": "fakt",
+      "geprueft_am": "2026-11-14",
+      "frage": "Le volet de test de Copilot Studio reproduit-il tout le comportement des canaux publiés?",
+      "antworten": [
+        "Oui.",
+        "Non, il sert à vérifier pendant que tu construis.",
+        "Seulement pour Teams."
+      ],
+      "richtig": 1,
+      "aufloesung": "Selon Microsoft, le volet de test sert à vérifier pendant la construction et ne reproduit pas tout le comportement des canaux publiés. Les événements déclenchés par une minuterie ou en arrière-plan, comme les déclencheurs d'inactivité, peuvent ne pas s'y déclencher. Tu vérifies ce comportement après la publication, dans un canal comme Microsoft Teams.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-test-bot",
+        "titel": "Microsoft Learn, Tester ton agent dans le volet de test"
+      },
+      "technik": null
+    },
+    {
+      "id": "f7c",
+      "guertel": 7,
+      "klasse": "zeitlos",
+      "geprueft_am": "2026-10-13",
+      "frage": "Quand définis-tu les conditions dans lesquelles un agent est arrêté?",
+      "antworten": [
+        "Quand il pose problème pour la première fois.",
+        "Avant sa mise en service, avec une personne responsable.",
+        "Pendant la planification annuelle."
+      ],
+      "richtig": 1,
+      "aufloesung": "Un critère d'arrêt créé seulement en cas d'urgence arrive trop tard. Dans la fiche d'exploitation, il existe avant la mise en service, avec le nom de la personne responsable.",
+      "quelle": null,
+      "technik": "t24"
+    },
+    {
+      "id": "f7d",
+      "guertel": 7,
+      "klasse": "fakt",
+      "geprueft_am": "2026-11-14",
+      "frage": "Un admin définit une limite mensuelle avec arrêt strict pour un agent dans le centre d'administration Power Platform. Que s'applique-t-il selon Microsoft?",
+      "antworten": [
+        "L'agent s'arrête exactement à la limite, avec tous les flux d'agent qu'il appelle.",
+        "L'agent est désactivé à la limite, mais pas instantanément, et la limite n'arrête pas ses flux d'agent.",
+        "Une telle limite n'existe que dans les environnements avec paiement à l'utilisation."
+      ],
+      "richtig": 1,
+      "aufloesung": "Avec un arrêt strict, l'agent est désactivé automatiquement quand il atteint la limite. Selon Microsoft, les limites ne s'appliquent pas instantanément, et l'agent peut continuer à répondre un certain temps. Prévois donc de la marge pour la limite et la notification. La limite n'arrête pas les flux d'agent que l'agent appelle, ils sont facturés et contrôlés séparément. Les limites fonctionnent avec la capacité prépayée et avec le paiement à l'utilisation.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+        "titel": "Microsoft Learn, Gérer les crédits et la capacité Copilot Studio (centre d'administration Power Platform)"
+      },
+      "technik": null
+    },
+    {
+      "id": "f7e",
+      "guertel": 7,
+      "klasse": "fakt",
+      "geprueft_am": "2026-11-14",
+      "frage": "Selon Microsoft, combien de temps les résultats d'une évaluation d'agent restent-ils disponibles dans Copilot Studio?",
+      "antworten": [
+        "7 jours.",
+        "89 jours.",
+        "Indéfiniment."
+      ],
+      "richtig": 1,
+      "aufloesung": "Selon Microsoft, les résultats des tests sont disponibles dans Copilot Studio pendant 89 jours. Si tu compares des mois, comme dans la Veille de nuit, exporte-les en fichier CSV.",
+      "quelle": {
+        "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/analytics-agent-evaluation-create",
+        "titel": "Microsoft Learn, Créer un jeu de tests à réponse unique (Copilot Studio)"
+      },
+      "technik": null
+    }
+  ]
+}

@@ -1,0 +1,589 @@
+{
+ "code": "en",
+ "reihenfolge": 4,
+ "pfad": "en/",
+ "html_lang": "en",
+ "og_locale": "en_US",
+ "name": "English",
+ "kurz": "EN",
+ "link_label": "English version of this page",
+ "zahl_locale": "en-US",
+ "datum": "{monat} {d}, {y}",
+ "monate": [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+ ],
+ "zb": "e.g.",
+ "teile": {
+  "Goal": "ziel",
+  "Context": "kontext",
+  "Source": "quelle",
+  "Expectations": "erwartung",
+  "Expectation": "erwartung"
+ },
+ "profil_felder": {
+  "Company name": "Firmenname",
+  "Role": "Funktion",
+  "Industry": "Branche"
+ },
+ "lange_felder": "(notes|content|draft|instructions?|history|policy|quotes?|list|case|transcript)$",
+ "verboten": [
+  [
+   "[«»]",
+   "«»"
+  ],
+  [
+   "\btested\b",
+   "«tested»"
+  ],
+  [
+   "guarantee",
+   "«guarantee»"
+  ],
+  [
+   "\bofficial",
+   "«official»"
+  ],
+  [
+   "\bcertified\b",
+   "«certified»"
+  ]
+ ],
+ "anfuehrung": [
+  "“",
+  "”"
+ ],
+ "anfuehrung_verboten": true,
+ "learn": "en-us",
+ "dojo": "https://powerplatformdojo.com/en/",
+ "powerautomate": "https://powerautomate.ninja/en/",
+ "guertel": [
+  [
+   "White belt",
+   "White"
+  ],
+  [
+   "Yellow belt",
+   "Yellow"
+  ],
+  [
+   "Orange belt",
+   "Orange"
+  ],
+  [
+   "Green belt",
+   "Green"
+  ],
+  [
+   "Blue belt",
+   "Blue"
+  ],
+  [
+   "Brown belt",
+   "Brown"
+  ],
+  [
+   "Black belt",
+   "Black"
+  ]
+ ],
+ "art": {
+  "pinselstrich": {
+   "name": "Brushstroke",
+   "wort": "Prompt",
+   "knopf": "Copy prompt",
+   "rolle": "Prompt to copy",
+   "erfolg": "Copied. Now paste it into Microsoft Copilot Chat."
+  },
+  "schriftrolle": {
+   "name": "Scroll",
+   "wort": "Agent instruction",
+   "knopf": "Copy instruction",
+   "rolle": "Agent instruction to copy",
+   "erfolg": "Copied. Now paste it into your agent’s instructions."
+  },
+  "kata": {
+   "name": "Kata",
+   "wort": "Guide",
+   "knopf": "Copy text",
+   "rolle": "Text to copy",
+   "erfolg": "Copied. Now paste it into Microsoft Copilot Chat."
+  }
+ },
+ "zugang_kurz": {
+  "ohne-zl": "No add-on license",
+  "agent-builder": "Agent Builder, no add-on license",
+  "lizenz": "With license",
+  "studio": "Copilot Studio",
+  "rechner": "Calculator"
+ },
+ "wochen": [
+  {
+   "nr": 1,
+   "guertel": [
+    1,
+    2
+   ],
+   "ergebnisse": [
+    [
+     "t01",
+     "the questions you have to answer yourself before an important text"
+    ],
+    [
+     "t05",
+     "your recipient’s objections, while you can still fix them"
+    ],
+    [
+     "t06",
+     "a list of differences between draft and source"
+    ],
+    [
+     "t07",
+     "the reasons your project could fail"
+    ]
+   ]
+  },
+  {
+   "nr": 2,
+   "guertel": [
+    3
+   ],
+   "ergebnisse": [
+    [
+     "t09",
+     "a comparison of quotes with the fine print in one table"
+    ],
+    [
+     "t10",
+     "a list of deadlines for your calendar entries"
+    ],
+    [
+     "t11",
+     "your writing style profile"
+    ],
+    [
+     "t13",
+     "a quiz on a policy, with references"
+    ]
+   ]
+  },
+  {
+   "nr": 3,
+   "guertel": [
+    4,
+    5
+   ],
+   "ergebnisse": [
+    [
+     "t14",
+     "your own agent built from your best chat"
+    ],
+    [
+     "t17",
+     "a review table for its instructions"
+    ],
+    [
+     "t18",
+     "20 test questions with the list “not covered”"
+    ],
+    [
+     "t19",
+     "a safeguard block for every instruction"
+    ]
+   ]
+  },
+  {
+   "nr": 4,
+   "guertel": [
+    6,
+    7
+   ],
+   "ergebnisse": [
+    [
+     "t22",
+     "a template to pass on real cases pseudonymised"
+    ],
+    [
+     "t23",
+     "an estimate of the order of magnitude of Copilot Credits your agent uses"
+    ],
+    [
+     "t24",
+     "an operations sheet with shutdown criteria and a responsible person"
+    ],
+    [
+     "t25",
+     "a routine for the monthly check"
+    ]
+   ]
+  }
+ ],
+ "momente": [
+  [
+   "t01",
+   "I don’t know what to ask."
+  ],
+  [
+   "t11",
+   "The answer sounds like a brochure."
+  ],
+  [
+   "t09",
+   "Three quotes, no time."
+  ],
+  [
+   "t18",
+   "The agent makes things up."
+  ]
+ ],
+ "noch_nicht": "Not released yet. Appears as soon as Marcel has checked the techniques against the documentation.",
+ "titel_kurz": {
+  "t05": "Check text from the recipient’s view"
+ },
+ "ui": {
+  "Gürtel {0}": "Belt {0}",
+  "z. B.": "e.g.",
+  "Technik aus dem Power Platform Dojo: {0}\nQuelle: Microsoft Learn, Stand {1}": "Technique from the Power Platform Dojo: {0}\nSource: Microsoft Learn, as of {1}",
+  "z. B. ": "e.g. ",
+  "Für dich anpassen": "Make it yours",
+  "Nichts verlässt deinen Browser.": "Nothing leaves your browser.",
+  " Firmenname, Funktion und Branche kommen aus deinem Profil unter Mein Dojo.": " Company name, role and industry come from your profile in My Dojo.",
+  "Weitergeben": "Pass it on",
+  "Schritt {0}": "Step {0}",
+  "Grundform ": "Basic form ",
+  "Neu": "New",
+  "ca. {0} Min.": "approx. {0} min",
+  "Der Kurs hat einen eigenen Lehrplan und folgt nicht den Gürteln dieser Seite.": "The course has its own curriculum and does not follow the belts of this site.",
+  "Die nächsten Termine stehen noch nicht fest, auf der Kursseite setzt du dich auf die Warteliste.": "The next dates are not set yet, you can join the waiting list on the course page.",
+  "Termine und Anmeldung findest du auf der Kursseite.": "Dates and registration are on the course page.",
+  "Live-Kurs «{0}»": "live course “{0}”",
+  "Lieber mit Begleitung weiter? Der {0} der Power Platform Academy läuft über vier Wochen. ": "Prefer to continue with guidance? The {0} (in German) at the Power Platform Academy runs over four weeks. ",
+  "Technik": "Technique",
+  "Techniken": "Techniques",
+  "Grundform": "Basic form",
+  "offen": "open",
+  "Was du danach kannst:": "What you can do afterwards:",
+  "<p class=\"pfadzeilen__schwelle\"><strong>Die Schwelle.</strong> Ab hier baust du Agents. Die <a href=\"{0}\" rel=\"noopener\">Testversion von Copilot Studio</a> reicht zum Üben.</p>\n": "<p class=\"pfadzeilen__schwelle\"><strong>The threshold.</strong> From here on you build agents. The <a href=\"{0}\" rel=\"noopener\">Copilot Studio trial</a> is enough to practice.</p>\n",
+  "Nr.": "No.",
+  "Woche": "Week",
+  "Wenn du die Techniken dieser Woche übst, hast du danach in der Hand:": "If you practice this week’s techniques, afterwards you have:",
+  "Zur Technik-Wand": "To the technique wall",
+  "Ausprobieren: ca. {0} Min.": "Try it: approx. {0} min",
+  "Ganze Technik mit Anleitung, Grenzen und Quelle": "Full technique with guide, limits and source",
+  "Technik öffnen": "Open technique",
+  "Gürtel": "Belt",
+  "Werkzeug": "Tool",
+  "Zugang": "Access",
+  "Dein Stand": "Your status",
+  "Noch offen": "Still open",
+  "Geübt": "Practiced",
+  "Filter zurücksetzen": "Reset filters",
+  "Aufwärmen": "Warm-up",
+  " und ": " and ",
+  "{0}: neue Techniken": "{0}: new techniques",
+  "de-CH": "en",
+  "og-image.png": "og-image-en.png",
+  "de_CH": "en_US",
+  "Power Platform Dojo: Übung schlägt Hype.": "Power Platform Dojo: Practice beats hype.",
+  "Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio mit Quelle und Prüfdatum. Unabhängige Website ohne Verbindung zu Microsoft.": "Ninja techniques for Microsoft Copilot Chat and Copilot Studio with sources and review dates. Independent website, not affiliated with Microsoft.",
+  "Interne Vorschau, nicht veröffentlichen.": "Internal preview, do not publish.",
+  "      <p class=\"klein\">Viele Techniken laufen in Microsoft Copilot Chat. Ob Copilot Chat in deinem Abo ohne Zusatzlizenz enthalten ist, zeigt der Lizenz-Check.</p>": "      <p class=\"klein\">Many techniques run in Microsoft Copilot Chat. Whether Copilot Chat is included in your subscription without an add-on license is shown by the license check.</p>",
+  "Copilot Chat und Studio: Techniken | Copilot Dojo": "Copilot Chat and Studio: Techniques | Copilot Dojo",
+  "Welcher Copilot-Gürtel bist du? {0} Grundformen und {1} Techniken für Copilot Chat und Studio, mit Quellen. Dazu Gürtelprüfung und Lizenz-Check.": "Which Copilot belt are you? {0} basic forms and {1} techniques for Copilot Chat and Studio, with sources. Plus belt exam and license check.",
+  "Start": "Home",
+  "Copilot Chat und Studio: alle Techniken | Copilot Dojo": "Copilot Chat and Studio: all techniques | Copilot Dojo",
+  "{0} Grundformen und {1} Techniken für Copilot Chat und Studio, nach Gürtel geordnet. Mit Quellen und Prüfdatum.": "{0} basic forms and {1} techniques for Copilot Chat and Studio, ordered by belt. With sources and review dates.",
+  "{0} Grundformen und {1} Techniken für Copilot Chat und Studio": "{0} basic forms and {1} techniques for Copilot Chat and Studio",
+  "eine Grundform": "one basic form",
+  "Wann brauchst du es?": "When do you need it?",
+  "{0} für {1} zum Kopieren, mit Quelle bei Microsoft Learn und Prüfdatum.": "{0} for {1} to copy, with a source on Microsoft Learn and a review date.",
+  "Mit Prompt, Anleitung, Grenzen und Quelle bei Microsoft Learn.": "With prompt, guide, limits and a Microsoft Learn source.",
+  "Kombo: ": "Combo: ",
+  "Kombo": "Combo",
+  "Kommt aus": "Comes from",
+  "Weiter mit": "Continue with",
+  "Gehört zur Kombo «{0}».": "Part of the combo “{0}”.",
+  "Vorherige Technik": "Previous technique",
+  "Zurück": "Back",
+  "Nächste Technik": "Next technique",
+  "Geschafft": "Done",
+  "Technik ": "Technique ",
+  "Vorher": "Before",
+  "«": "“",
+  "»": "”",
+  "Die Probe": "The check",
+  "Meister-Variante": "Master variant",
+  "Verschärfung anzeigen": "Show the harder version",
+  "Aus der Praxis": "From practice",
+  "Stand": "As of",
+  "      <p class=\"pruefstatus\">Einmal ausgeführt in Microsoft Copilot Chat am {0}. Ergebnisse können abweichen.</p>": "      <p class=\"pruefstatus\">Run once in Microsoft Copilot Chat on {0}. Results can differ.</p>",
+  "Bild herunterladen": "Download image",
+  "In vier Wochen durch alle Gürtel | Copilot Dojo": "Through all belts in four weeks | Copilot Dojo",
+  "Ein freier Plan zum Selbstlernen mit Microsoft Copilot Chat und Copilot Studio: jede Woche ein oder zwei Gürtel, mit den Ergebnissen jeder Woche.": "A free self-study plan for Microsoft Copilot Chat and Copilot Studio: one or two belts each week, with the results of each week.",
+  "Vier Wochen": "Four weeks",
+  "Technik des Tages | Copilot Dojo": "Technique of the day | Copilot Dojo",
+  "Jeden Tag eine Technik aus dem Power Platform Dojo, für alle am selben Tag dieselbe.": "One technique from the Power Platform Dojo every day, the same for everyone on the same day.",
+  "Technik {0} ist noch nicht freigegeben. Zur Technik-Wand": "Technique {0} is not released yet. To the technique wall",
+  "Unabhängige Website von Marcel Lehmann. Keine Verbindung zu Microsoft.": "Independent website by Marcel Lehmann. Not affiliated with Microsoft.",
+  "Seite nicht gefunden | Copilot Dojo": "Page not found | Copilot Dojo",
+  "Diese Seite gibt es nicht. Zu den Techniken, zur Suche oder zur Startseite.": "This page does not exist. Go to the techniques, the search or the home page.",
+  "Alle Techniken ohne Zusatzlizenz auf der Technik-Wand": "All techniques without an add-on license on the technique wall",
+  "Stufe": "Level",
+  "SUMMARY:Dojo: Technik des Tages": "SUMMARY:Dojo: Technique of the day",
+  "DESCRIPTION:15 Minuten üben. Die Technik des Tages steht unter {0}heute/": "DESCRIPTION:Practice for 15 minutes. The technique of the day is at {0}heute/",
+  "Problem": "Problem",
+  "Nutzen": "Benefit",
+  "So nutzt du es": "How to use it",
+  "Grenzen": "Limits",
+  "Quellen": "Sources",
+  "{0} Technik": "{0} technique",
+  "{0} Techniken": "{0} techniques",
+  "{0} Grundform": "{0} basic form",
+  "{0} Grundformen": "{0} basic forms",
+  "Der Kompass": "The compass",
+  "Raten laut Microsoft in {0}: {1}.": "Rates according to Microsoft in {0}: {1}.",
+  "Rechenbeispiel: {0} Gespräche im Monat mit je {1} Generative Answers und {2} Agent Action ergeben {0} mal {3}, also {4} Copilot Credits.": "Example: {0} conversations per month with {1} Generative Answers and {2} Agent Action each give {0} times {3}, so {4} Copilot Credits.",
+  "Quelle: {0}, Stand {1}. Kein Preis pro Credit, Preise findest du bei Microsoft.": "Source: {0}, as of {1}. No price per credit; you find prices at Microsoft.",
+  "Vier-Wochen-Pfad zum Selbstlernen": "Four-week path for self-study",
+  "In vier Wochen durch alle Gürtel": "Through all belts in four weeks",
+  "Ein freier Plan für {0} Grundformen und {1} Techniken. Jede Woche ein oder zwei Gürtel, ohne Anmeldung.": "A free plan for {0} basic forms and {1} techniques. One or two belts each week, no sign-up.",
+  "Nach vier Wochen hast du einen eigenen Agent mit Testfragen, Schutzbaustein, Credit-Schätzung und Betriebsblatt.": "After four weeks you have your own agent with test questions, safeguard block, credit estimate and operations sheet.",
+  "Was du dafür brauchst, zeigt der Zugang auf jeder Technik.": "What you need for it is shown in the access line of every technique.",
+  "Vier Wochen in den Kalender, ab nächstem Montag": "Four weeks into your calendar, starting next Monday",
+  "Die Schwelle": "The threshold",
+  "Ab hier baust du Agents.": "From here on you build agents.",
+  "In der Testversion von Copilot Studio kannst du einen Agent erstellen und im Testchat prüfen, aber nicht veröffentlichen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung. ({0}, Stand {1}). Alle Agent-Techniken stehen hier frei, ohne Anmeldung.": "In the Copilot Studio trial you can create an agent and check it in the test chat, but not publish it. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission. ({0}, as of {1}). All agent techniques are free here, no sign-up.",
+  "Wer lieber mit Begleitung übt: Die Power Platform Academy führt den {0}.": "If you prefer to practice with guidance: the Power Platform Academy runs the {0} (in German).",
+  "Gürtelprüfung": "Belt exam",
+  "Diese Seite ist umgezogen: {0}": "This page has moved: {0}",
+  "Sprache wählen, aktuell: {0}": "Choose language, current: {0}",
+  "Alle {0} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält.": "All {0} techniques run without an add-on license if your subscription includes Microsoft Copilot Chat.",
+  "{0} von {1} Techniken laufen ohne Zusatzlizenz, wenn dein Abo Microsoft Copilot Chat enthält.": "{0} of {1} techniques run without an add-on license if your subscription includes Microsoft Copilot Chat.",
+  "Alle Techniken ohne Zusatzlizenz zeigen": "Show all techniques without an add-on license",
+  "Übung schlägt": "Practice beats",
+  "Hype.": "hype.",
+  "Ninja-Techniken mit Quelle und Prüfdatum.": "Ninja techniques with sources and review dates.",
+  "Vom weissen bis zum schwarzen Gürtel.": "From white belt to black belt.",
+  "GEPRÜFT": "CHECKED",
+  "gegen die Dokumentation": "against the documentation",
+  "Technik-Wand": "Technique wall",
+  "alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)": "all techniques by belt",
+  "Ist Microsoft Copilot gratis?": "Is Microsoft Copilot free?",
+  "Lizenz-Check in vier Fragen, was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage": "what works without an add-on license, with source and review date for each statement",
+  "Welcher Copilot-Gürtel bist du? Sieben Fragen, eine pro Gürtel": "which Copilot belt are you? Seven questions, one per belt",
+  "Alle Fragen der Gürtelprüfung": "All belt exam questions",
+  "jede Frage mit Auflösung und Quelle": "each question with the answer and a source",
+  "Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle": "Copilot without an add-on license: every condition with its source",
+  "Mythen, App-Stufen, Wortlaut der Bedingungen, häufige Fragen, Prüfprotokoll": "myths, app tiers, conditions word for word, FAQ, review log",
+  "freier Plan zum Selbstlernen": "free plan for self-study",
+  "Über das Dojo": "About the Dojo",
+  "Methode, Dojo-Regeln, was die Seite nicht ist": "method, Dojo rules, what the site is not",
+  "Grundformen": "Basic forms",
+  "TECHNIK": "TECHNIQUE",
+  " VON 25": " OF 25",
+  "GRUNDFORM": "BASIC FORM",
+  "STUFE": "LEVEL",
+  "VON": "OF",
+  "Selbsteinschätzung im Power Platform Dojo. Kein Zertifikat.": "Self-assessment in the Power Platform Dojo. Not a certificate.",
+  "Selbsteinschätzung im Power Platform Dojo, kein Zertifikat.": "Self-assessment in the Power Platform Dojo, not a certificate.",
+  "Selbsteinschätzung auf einer unabhängigen Website, kein Zertifikat. Mach den Test mit sieben Fragen selbst.": "Self-assessment on an independent website, not a certificate. Take the test with seven questions yourself.",
+  "Dojo-Gürtel: {0}": "Dojo belt: {0}",
+  "{0} im Power Platform Dojo": "{0} in the Power Platform Dojo",
+  "Karte: {0}. Selbsteinschätzung, kein Zertifikat.": "Card: {0}. Self-assessment, not a certificate.",
+  "Brotkrumen": "Breadcrumbs",
+  "Mein Dojo": "My Dojo",
+  "Stufe {0} von 7": "Level {0} of 7",
+  "Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.": "Self-assessment on an independent website. Not a certificate.",
+  "Was du nach diesem Gürtel kannst:": "What you can do after this belt:",
+  "Gürtel geschafft? Gib dein Wissen weiter und werde Sensei im {0}: 3 Monate, gratis, 1:1.": "Belt earned? Pass it on and become a Sensei in {0}: 3 months, free, 1:1.",
+  "Diese Seite gehört zu einer geteilten Karte aus dem Power Platform Dojo. Die Karte zeigt entweder den Startpunkt aus dem Selbsttest mit sieben Fragen oder einen Gürtel, dessen Techniken die Person selbst als geübt markiert hat.": "This page belongs to a card shared from the Power Platform Dojo. The card shows either the starting point from the self-test with seven questions or a belt whose techniques the person has marked as practiced themselves.",
+  "Mach die Gürtelprüfung selbst": "Take the belt exam yourself",
+  "Techniken dieses Gürtels": "Techniques of this belt",
+  "Karte: {0}. Selbsteinschätzung im Power Platform Dojo, kein Zertifikat.": "Card: {0}. Self-assessment in the Power Platform Dojo, not a certificate.",
+  "Was ist das Power Platform Dojo?": "What is the Power Platform Dojo?",
+  "Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio, vom weissen bis zum schwarzen Gürtel. Jede mit Quelle bei Microsoft Learn und Prüfdatum. Ohne Anmeldung und ohne Cookies.": "Ninja techniques for Microsoft Copilot Chat and Copilot Studio, from white belt to black belt. Each with a source on Microsoft Learn and a review date. No sign-up and no cookies.",
+  "Zur Startseite": "To the home page",
+  "Alle Techniken": "All techniques",
+  "Alle sieben Gürtel": "All seven belts",
+  "Quelle: {0}, Stand {1}.": "Source: {0}, as of {1}.",
+  "Aus Technik {0}, {1}.": "From technique {0}, {1}.",
+  "Auflösung": "Answer",
+  "Richtig ist: {0}": "The correct answer is: {0}",
+  "Technik für das Dojo": "Technique for the Dojo",
+  "Titel der Technik:\n\nProblem, das sie löst:\n\nPrompt oder Anleitung:\n\nGrenzen:\n\nQuelle bei Microsoft Learn:\n\nDarf ich dich als Absender nennen? (ja oder nein)\n\nBitte keine Kunden-, Personen- oder Firmendaten im Prompt.": "Title of the technique:\n\nProblem it solves:\n\nPrompt or guide:\n\nLimits:\n\nSource on Microsoft Learn:\n\nMay I name you as the sender? (yes or no)\n\nPlease no customer, personal or company data in the prompt."
+ },
+ "js": {
+  "Bewegung ist aus.": "Motion is off.",
+  "Bewegung ist an.": "Motion is on.",
+  "Mit Herkunft kopiert. Passt in einen Teams-Chat.": "Copied with its origin. Fits into a Teams chat.",
+  "Kopiert. Jetzt in Microsoft Copilot Chat einfügen.": "Copied. Now paste it into Microsoft Copilot Chat.",
+  "Kopiert": "Copied",
+  "Kopieren hat nicht funktioniert. Markiere den Text und kopiere ihn mit Strg+C.": "Copying did not work. Select the text and copy it with Ctrl+C.",
+  "zeigt {0} von {1}": "showing {0} of {1}",
+  "Text kopiert. Fehlt er bei LinkedIn, füg ihn dort ein.": "Text copied. If LinkedIn does not show it, paste it there.",
+  "Kursseite «Copilot Ninja in 4 Wochen»": "Course page “Copilot Ninja in 4 Wochen”",
+  ", alle geübt": ", all practiced",
+  "Mein Dojo, ": "My Dojo, ",
+  "Geübt": "Practiced",
+  "geübt am ": "practiced on ",
+  "offen": "open",
+  "geübt": "practiced",
+  " von ": " of ",
+  " geübt": " practiced",
+  "Alle {0} Techniken geübt. Tusch trägt den schwarzen Gürtel.": "All {0} techniques practiced. Tusch wears the black belt.",
+  " Techniken deines Gürtels geübt.": " techniques of your belt practiced.",
+  "Alle Techniken geübt": "All techniques practiced",
+  "Dein nächster Schritt": "Your next step",
+  "Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst, geht es im Live-Kurs weiter. Der Kurs hat einen eigenen Lehrplan.": "You have marked every technique in the Dojo as practiced. If you want to introduce agents in your own business with guidance, the live course is the next step. The course has its own curriculum.",
+  "Geübt am ": "Practiced on ",
+  "Als geübt markieren": "Mark as practiced",
+  "Markierung entfernen": "Remove mark",
+  "Dein Browser speichert nichts. Die Markierung gilt nur, bis du die Seite verlässt.": "Your browser does not store anything. The mark only lasts until you leave the page.",
+  "Als geübt markiert.": "Marked as practiced.",
+  "Markierung entfernt.": "Mark removed.",
+  "Ausprobiert? ": "Tried it? ",
+  "Schon als geübt markiert.": "Already marked as practiced.",
+  "Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.": "Self-assessment on an independent website. Not a certificate.",
+  "Mein Startpunkt im Dojo": "My starting point in the Dojo",
+  "Mein Dojo-Gürtel": "My Dojo belt",
+  "Dein Name auf der Karte (freiwillig)": "Your name on the card (optional)",
+  "Der Name wird nur in dieses Bild gezeichnet und nirgends gespeichert.": "The name is only drawn into this image and stored nowhere.",
+  "Mein Startpunkt im Dojo: ": "My starting point in the Dojo: ",
+  "Mein Dojo-Gürtel: ": "My Dojo belt: ",
+  "Vorschau der Karte. ": "Card preview. ",
+  "Bild herunterladen": "Download image",
+  "Auf LinkedIn teilen": "Share on LinkedIn",
+  "Text für deinen Post kopieren": "Copy text for your post",
+  "Teilen": "Share",
+  "startpunkt-": "starting-point-",
+  "guertel-": "belt-",
+  "Bild gespeichert.": "Image saved.",
+  "Text kopiert. Füg ihn in deinen Post ein.": "Text copied. Paste it into your post.",
+  "Trainingstag": "training day",
+  "Trainingstage": "training days",
+  "noch offen": "still open",
+  "Gespeichert. Ab jetzt sind diese Felder in jeder Technik vorausgefüllt.": "Saved. From now on these fields are prefilled in every technique.",
+  "Dein Browser lässt kein Speichern zu. Die Felder bleiben leer.": "Your browser does not allow saving. The fields stay empty.",
+  "Alles gelöscht: Fortschritt, Profil, Selbsttest, Theme, Bewegung und Sprachwahl. Rückgängig ist während 10 Sekunden möglich.": "Everything deleted: progress, profile, self-test, theme, motion and language choice. You can undo this for 10 seconds.",
+  "Alles gelöscht.": "Everything deleted.",
+  "Wiederhergestellt.": "Restored.",
+  "Der Text ist lang für einen Mail-Link. Kopier ihn lieber und füg ihn selbst in eine Mail an marcel.lehmann@kmupower.com ein.": "The text is long for a mail link. Better copy it and paste it into an email to marcel.lehmann@kmupower.com yourself.",
+  "Technik für das Dojo": "Technique for the Dojo",
+  "Dein Mailprogramm öffnet sich mit dem Text. Gesendet wird erst, wenn du dort auf Senden klickst.": "Your mail program opens with the text. Nothing is sent until you click Send there.",
+  "Text kopiert. Füg ihn in eine Mail an marcel.lehmann@kmupower.com ein.": "Text copied. Paste it into an email to marcel.lehmann@kmupower.com.",
+  "Kopieren hat nicht funktioniert.": "Copying did not work.",
+  "Quelle: ": "Source: ",
+  ", Stand ": ", as of ",
+  "Mehr dazu: ": "More on this: ",
+  "Technik ": "Technique ",
+  "Frage ": "Question ",
+  "Antwort prüfen": "Check answer",
+  "Wähl zuerst eine Antwort.": "Choose an answer first.",
+  "Richtig.": "Correct.",
+  "Daneben. Richtig ist: ": "Not quite. The correct answer is: ",
+  "Nächste Frage": "Next question",
+  "Zum Ergebnis": "To the result",
+  "Dein Startpunkt": "Your starting point",
+  " richtig. ": " correct. ",
+  "Dein Startpunkt ist der erste Gürtel, bei dem du danebenlagst.": "Your starting point is the first belt where you missed.",
+  "Alle richtig, darum startest du beim schwarzen Gürtel.": "All correct, so you start at the black belt.",
+  "Für den {0} gibt es zurzeit keine geprüfte Frage.": "There is currently no checked question for the {0}.",
+  " Der Startpunkt rechnet mit den übrigen Gürteln.": " The starting point uses the other belts.",
+  " Den Gürtel selbst trägst du erst, wenn du seine Techniken als geübt markiert hast.": " You only wear the belt itself once you have marked its techniques as practiced.",
+  "Deine Start-Techniken": "Your starting techniques",
+  "Die Techniken dieses Gürtels sind noch nicht freigegeben. Sie erscheinen, sobald Marcel sie gegen die Dokumentation geprüft hat. ": "The techniques of this belt are not released yet. They appear as soon as Marcel has checked them against the documentation. ",
+  "Zur Technik-Wand": "To the technique wall",
+  "Deine Startpunkt-Karte": "Your starting point card",
+  "Mein Dojo öffnen": "Open My Dojo",
+  "Test neu starten": "Restart the test",
+  "Alle Fragen mit Auflösung ansehen": "See all questions with answers",
+  "Werde Sensei": "Become a Sensei",
+  "Du kannst anderen helfen. Im Dojo Mentoring begleitest du als Sensei jemanden 1:1 über 3 Monate, gratis. Zeit und Anzahl Mentees bestimmst du selbst, pausieren kannst du jederzeit. ": "You can help others. In Dojo Mentoring you guide someone 1:1 for 3 months as a Sensei, free of charge. You decide on time and number of mentees yourself and can pause at any time. ",
+  "https://powerplatformdojo.com/mentoring/anmelden/": "https://powerplatformdojo.com/en/mentoring/anmelden/",
+  "Als Sensei anmelden": "Sign up as a Sensei",
+  "Hol dir einen Sensei, 1:1 und gratis": "Get a Sensei, 1:1 and free",
+  "Im Dojo Mentoring begleitet dich ein Sensei aus der Community 1:1 über 3 Monate. Du wählst Thema, Sprache und Zeitfenster, danach bekommst du fair einen passenden Sensei zugeteilt. ": "In Dojo Mentoring, a Sensei from the community guides you 1:1 for 3 months. You choose topic, language and time slot, then you are fairly assigned a matching Sensei. ",
+  "https://powerplatformdojo.com/mentoring/finden/": "https://powerplatformdojo.com/en/mentoring/finden/",
+  "Mentoring anfragen": "Request mentoring",
+  "Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.": "Your browser does not store anything. The result only applies on this page.",
+  "Dein Startpunkt: ": "Your starting point: ",
+  "Was du jetzt kannst: ": "What you can do now: ",
+  "Jeden Montag ein Impuls zur Power Platform und Automatisierung: ": "An idea about the Power Platform and automation every Monday: ",
+  "Newsletter KMUpower Impuls": "KMUpower Impuls newsletter (in German)",
+  "Gürtelkarte in Mein Dojo holen": "Get your belt card in My Dojo",
+  "Dojo Woche ": "Dojo week ",
+  " Techniken: ": " techniques: ",
+  "Übe eine Technik pro Tag. ": "Practice one technique per day. ",
+  "Kalenderdatei mit den Montagsterminen erstellt.": "Calendar file with the Monday events created.",
+  "Nr. ": "No. ",
+  "Ausprobieren: ca. {0} Min.": "Try it: approx. {0} min",
+  "Ganze Technik mit Anleitung, Grenzen und Quelle": "Full technique with guide, limits and source",
+  "Alle Techniken nach Gürtel": "All techniques by belt",
+  "Link kopiert. Wer ihn öffnet, sieht dieses Ergebnis.": "Link copied. Whoever opens it sees this result.",
+  "Kopieren ging nicht. Markier die Adresse oben im Browser.": "Copying did not work. Select the address at the top of your browser.",
+  "Dein Agent im Monat": "Your agent per month",
+  "Gespräche pro Monat": "Conversations per month",
+  "Je Gespräch im Durchschnitt:": "Per conversation on average:",
+  " Credits pro 100": " credits per 100",
+  "Credit": "credit",
+  "Credits": "credits",
+  "Nutzer haben eine Microsoft-365-Copilot-Add-on-Lizenz": "Users have a Microsoft 365 Copilot add-on license",
+  "Mit Haken entfallen nur Classic Answers, Generative Answers und Tenant Graph Grounding unter den Bedingungen oben. Aktionen bleiben eingerechnet, auch Computer-Using-Agent-Aktionen.": "With the box checked, only Classic Answers, Generative Answers and Tenant Graph Grounding are exempt under the conditions above. Actions remain included, including computer-using agent actions.",
+  "Startwerte: ": "Starting values: ",
+  "Annahme zur Veranschaulichung.": "Assumption for illustration.",
+  " Setz deine eigenen Zahlen ein.": " Enter your own numbers.",
+  " mal ": " times ",
+  "Grössenordnung: ": "Order of magnitude: ",
+  " pro Monat.": " per month.",
+  "Rechnung: ": "Calculation: ",
+  " Gespräche mal ": " conversations times ",
+  " Credits je Gespräch": " credits per conversation",
+  " Eine fehlt noch.": " One to go.",
+  " {0} fehlen noch.": " {0} to go.",
+  "Tusch trägt den {0}.": "Tusch wears the {0}.",
+  "{0} von {1} Technik geübt": "{0} of {1} technique practiced",
+  "{0} von {1} Techniken geübt": "{0} of {1} techniques practiced",
+  ". Gürtel komplett.": ". Belt complete.",
+  "Mein Startpunkt im Power Platform Dojo: {0}. Sieben Fragen, nach jeder die Auflösung mit Quelle.": "My starting point in the Power Platform Dojo: {0}. Seven questions, each followed by the answer with a source.",
+  "Im Power Platform Dojo habe ich alle Techniken bis zum {0} geübt.": "In the Power Platform Dojo I have practiced all techniques up to the {0}.",
+  " Selbsteinschätzung, kein Zertifikat. ": " Self-assessment, not a certificate. ",
+  "Titel der Technik:": "Title of the technique:",
+  "Problem, das sie löst:": "Problem it solves:",
+  "Prompt oder Anleitung:": "Prompt or guide:",
+  "Grenzen:": "Limits:",
+  "Quelle bei Microsoft Learn:": "Source on Microsoft Learn:",
+  "Darf ich dich als Absender nennen?": "May I name you as the sender?",
+  "(ja oder nein)": "(yes or no)",
+  "Keine Kunden-, Personen- oder Firmendaten im Prompt.": "No customer, personal or company data in the prompt.",
+  "{0} und {1}": "{0} and {1}",
+  "dojo-vier-wochen.ics": "dojo-four-weeks.ics"
+ },
+ "guertel_satz": [
+  "White belt",
+  "Yellow belt",
+  "Orange belt",
+  "Green belt",
+  "Blue belt",
+  "Brown belt",
+  "Black belt"
+ ],
+ "zahlwoerter": [
+  "",
+  "",
+  "Two",
+  "Three",
+  "Four",
+  "Five"
+ ],
+ "name_de": "Englisch"
+}

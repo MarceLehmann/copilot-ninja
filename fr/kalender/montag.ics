@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KMUpower//Dojo//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dojo-montag-technik-des-tages-fr@kmupower.com
+DTSTAMP:20261114T000000Z
+DTSTART:20261019T083000
+DURATION:PT15M
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Dojo: technique du jour
+DESCRIPTION:S’entraîner 15 minutes. La technique du jour se trouve sous
+  https://copilot.ninja/fr/heute/
+URL:https://copilot.ninja/fr/heute/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

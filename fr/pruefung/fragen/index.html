@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="fr" data-seite="pruefung">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://copilot.ninja/pruefung/fragen/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/pruefung/fragen/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/pruefung/fragen/">
+<link rel="alternate" hreflang="en" href="https://copilot.ninja/en/pruefung/fragen/">
+<link rel="alternate" hreflang="x-default" href="https://copilot.ninja/pruefung/fragen/">
+<link rel="alternate" type="application/atom+xml" title="Power Platform Dojo: nouvelles techniques" href="../../feed.xml">
+<link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/dojo.css">
+<link rel="stylesheet" href="../../../assets/css/druck.css" media="print">
+<script src="../../../assets/js/theme-init.js"></script>
+<script src="../../../assets/js/texte/fr.js" defer></script>
+<script src="../../../assets/js/core.js" defer></script>
+<script src="../../../assets/js/dojo.js" defer></script>
+<script src="../../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
+
+<!-- /RAHMEN:HEAD -->
+<title>Toutes les questions de l’examen de ceinture avec solutions | Copilot Dojo</title>
+<meta name="description" content="Les questions de l’examen de ceinture sur Microsoft Copilot Chat et Copilot Studio, chacune avec la solution et une source Microsoft Learn.">
+<link rel="canonical" href="https://copilot.ninja/fr/pruefung/fragen/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Power Platform Dojo · Copilot">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Toutes les questions de l’examen de ceinture avec solutions">
+<meta property="og:description" content="Chaque question avec la solution et une source Microsoft Learn.">
+<meta property="og:url" content="https://copilot.ninja/fr/pruefung/fragen/">
+<meta property="og:image" content="https://copilot.ninja/og-image-fr.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Power Platform Dojo: la pratique plutôt que le hype.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://copilot.ninja/fr/pruefung/fragen/#seite",
+      "name": "Toutes les questions de l’examen de ceinture",
+      "url": "https://copilot.ninja/fr/pruefung/fragen/",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://copilot.ninja/fr/#website"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/"
+      },
+      "dateModified": "2026-10-16"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://copilot.ninja/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Examen de ceinture",
+          "item": "https://copilot.ninja/fr/pruefung/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Toutes les questions",
+          "item": "https://copilot.ninja/fr/pruefung/fragen/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="Power Platform Dojo, Copilot, page d’accueil"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken">Techniques</a></li>
+        <li><a href="../../pruefung/" data-nav="pruefung" aria-current="true">Examen de ceinture</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Test de licence</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">Mon Dojo</a></li>
+        <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Choisir la langue, actuelle: Français">FR</summary><ul class="sprachen__liste"><li><a href="../../../pruefung/fragen/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/pruefung/fragen/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/pruefung/fragen/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/pruefung/fragen/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Mode sombre" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../../techniken/">Techniques</a></li>
+      <li><a href="../../pruefung/" aria-current="true">Examen de ceinture</a></li>
+      <li><a href="../../gratis/">Test de licence</a></li>
+      <li><a href="../../heute/">Technique du jour</a></li>
+      <li><a href="../../dojo/">Mon Dojo</a></li>
+      <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      <li><a href="../../ueber/">À propos</a></li>
+      <li><a href="https://powerautomate.ninja/en/" rel="noopener">Dojo pour Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+      <li><a href="../../gratis/nachschlagen/">Copilot sans licence supplémentaire: chaque condition avec sa source</a></li>
+      <li><a href="../../dojo/profil/">Profil et ta propre technique</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Rechercher des techniques</h2>
+    <label for="suche-feld" class="sr-only">Terme de recherche</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Résultats"></ul>
+  <p class="suche__leer" hidden>Aucune technique trouvée. Essaie compte rendu, contrat ou agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Fil d’Ariane"><ol><li><a href="../../">Accueil</a></li><li><a href="../">Examen de ceinture</a></li><li><a href="./" aria-current="page">Toutes les questions</a></li></ol></nav>
+
+    <section class="sektion--eng" aria-labelledby="h-alle">
+      <span class="label">Examen de ceinture</span>
+      <h1 id="h1">Toutes les questions avec explications</h1>
+      <p>Pour chaque ceinture, le test tire l’une de ces questions. L’explication se trouve sous chaque question. Les questions sur les fonctions Microsoft sont valables 120 jours à partir de la date de vérification. Passé ce délai, le test les retire du pool jusqu’à ce qu’elles aient été revérifiées.</p>
+    <!-- DOJO:FRAGEN -->
+    <ol class="test">
+      <li class="test__frage" id="frage-f1a">
+        <p><span class="knoten" data-guertel-nr="1">Ceinture blanche</span></p>
+        <h3>«Résume le document. Utilise uniquement le fichier joint. Cinq points maximum.» Lequel des quatre éléments d'un prompt efficace manque?</h3>
+        <ul class="arrow-list"><li>Objectif</li><li>Source</li><li>Attentes</li><li>Contexte</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Contexte</strong></p>
+          <p>Microsoft nomme le contexte, l'objectif, la source et les attentes. Ici, il manque ce à quoi le texte sert et à qui il s'adresse.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/" rel="noopener">Microsoft Learn, module de formation «Rédiger des prompts efficaces»</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f1b">
+        <p><span class="knoten" data-guertel-nr="1">Ceinture blanche</span></p>
+        <h3>Quels quatre éléments le module de formation de Microsoft nomme-t-il pour un prompt efficace?</h3>
+        <ul class="arrow-list"><li>Contexte, objectif, source, attentes</li><li>Rôle, ton, longueur, format</li><li>Question, exemple, règle, objectif</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Contexte, objectif, source, attentes</strong></p>
+          <p>Microsoft nomme le contexte, l'objectif, la source et les attentes. Chaque technique du Dojo s'appuie sur ces quatre parties.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/" rel="noopener">Microsoft Learn, module de formation «Rédiger des prompts efficaces»</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f2a">
+        <p><span class="knoten" data-guertel-nr="2">Ceinture jaune</span></p>
+        <h3>Tu fais vérifier un brouillon par rapport à un document source. Quelle demande te donne la réponse la plus facile à vérifier?</h3>
+        <ul class="arrow-list"><li>«Tout est-il correct?»</li><li>Un tableau avec l'affirmation, son emplacement dans la source et le constat (confirmée, différente, absente de la source)</li><li>«Améliore le texte.»</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Un tableau avec l'affirmation, son emplacement dans la source et le constat (confirmée, différente, absente de la source)</strong></p>
+          <p>Avec l'emplacement et un constat fixe pour chaque affirmation, tu vois ligne par ligne ce qui est confirmé, ce qui diffère et ce qui manque dans la source. Si tu demandes «Tout est-il correct?», tu obtiens en général juste un oui.</p>
+          <p class="klein">Tirée de la technique 6, L'oeil de faucon.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f2b">
+        <p><span class="knoten" data-guertel-nr="2">Ceinture jaune</span></p>
+        <h3>La réponse marque une affirmation de ton brouillon comme «confirmée». Que cela signifie-t-il pour toi?</h3>
+        <ul class="arrow-list"><li>C'est forcément correct.</li><li>C'est un indice. Tu vérifies toi-même deux des résultats dans la source.</li><li>Tu n'as plus rien à vérifier.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: C'est un indice. Tu vérifies toi-même deux des résultats dans la source.</strong></p>
+          <p>Un «confirmée» est un indice, pas une certitude. Si tu vérifies toi-même deux résultats, tu vois vite à quel point tu peux te fier au contrôle.</p>
+          <p class="klein">Tirée de la technique 6, L'oeil de faucon.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f3a">
+        <p><span class="knoten" data-guertel-nr="3">Ceinture orange</span></p>
+        <h3>Les requêtes de recherche web de Microsoft Copilot Chat sont-elles couvertes par le même engagement de protection des données que tes prompts et réponses?</h3>
+        <ul class="arrow-list"><li>Oui, tout est protégé de la même façon.</li><li>Non, elles passent séparément par Bing avec leurs propres règles de données.</li><li>Copilot Chat n'a pas de recherche web.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Non, elles passent séparément par Bing avec leurs propres règles de données.</strong></p>
+          <p>Selon Microsoft, la protection des données d'entreprise s'applique aux prompts et aux réponses. Les requêtes de recherche web partent vers le service Bing, suivent leurs propres règles de données et, selon Learn, ne sont pas couvertes par l'addendum sur la protection des données. C'est pourquoi les noms de clients et les chiffres internes n'ont pas leur place dans une question de recherche.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Microsoft Learn, Protection des données d'entreprise</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f3b">
+        <p><span class="knoten" data-guertel-nr="3">Ceinture orange</span></p>
+        <h3>Microsoft Copilot Chat peut-il analyser des fichiers téléversés sans licence supplémentaire?</h3>
+        <ul class="arrow-list"><li>Oui, le téléversement de fichiers est inclus, avec des limites dont les chiffres ne sont pas publiés.</li><li>Non, seulement avec une licence.</li><li>Seulement les images.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Oui, le téléversement de fichiers est inclus, avec des limites dont les chiffres ne sont pas publiés.</strong></p>
+          <p>Selon Microsoft, «téléverser et analyser des fichiers» fait partie de Copilot Chat sans licence supplémentaire. Le téléversement a des limites, mais Learn ne donne pas de chiffres précis sur cette page.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Microsoft Learn, Aperçu de Copilot Chat</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f3c">
+        <p><span class="knoten" data-guertel-nr="3">Ceinture orange</span></p>
+        <h3>Tu fais faire une recherche sur le web. Quelle demande te permet de vérifier ce qui est vrai?</h3>
+        <ul class="arrow-list"><li>«Résume le sujet en détail.»</li><li>Après chaque phrase, le lien dont elle provient, plus une liste séparée «Non étayé».</li><li>«Utilise uniquement des sources fiables.»</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Après chaque phrase, le lien dont elle provient, plus une liste séparée «Non étayé».</strong></p>
+          <p>Sans lien pour chaque phrase, tu ne peux rien vérifier, et des hypothèses se mêlent aux preuves.</p>
+          <p class="klein">Tirée de la technique 12, La piste.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f4a">
+        <p><span class="knoten" data-guertel-nr="4">Ceinture verte</span></p>
+        <h3>Un agent dans Microsoft Copilot Chat utilise uniquement des instructions et des sites web publics. Combien coûte-t-il sans licence supplémentaire?</h3>
+        <ul class="arrow-list"><li>Il est facturé à la consommation.</li><li>Il est inclus sans frais supplémentaires.</li><li>Il nécessite une licence Copilot Studio.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Il est inclus sans frais supplémentaires.</strong></p>
+          <p>Selon Microsoft, les agents qui s'appuient uniquement sur des instructions et des sites web publics sont inclus sans frais supplémentaires. Ils n'ont pas accès aux données de ton organisation.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/copilot/agents" rel="noopener">Microsoft Learn, Agents dans Copilot Chat</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f4b">
+        <p><span class="knoten" data-guertel-nr="4">Ceinture verte</span></p>
+        <h3>Un agent dans Microsoft Copilot Chat doit accéder à des documents dans SharePoint. Que se passe-t-il sans licence?</h3>
+        <ul class="arrow-list"><li>Sans frais supplémentaires, actif tout de suite.</li><li>Facturé à la consommation, désactivé par défaut pour les utilisateurs de Copilot Chat.</li><li>Ce n'est pas possible.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Facturé à la consommation, désactivé par défaut pour les utilisateurs de Copilot Chat.</strong></p>
+          <p>Selon Microsoft, les agents ayant accès aux données de ton organisation, par exemple depuis SharePoint, sont facturés à la consommation et désactivés par défaut pour les utilisateurs de Copilot Chat. Les admins configurent pour cela un abonnement Copilot Studio ou le paiement à l'utilisation.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/copilot/agents" rel="noopener">Microsoft Learn, Agents dans Copilot Chat</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f5a">
+        <p><span class="knoten" data-guertel-nr="5">Ceinture bleue</span></p>
+        <h3>Ton instruction impose à l'agent d'utiliser un outil qui n'est pas configuré dans l'agent. Que se passe-t-il?</h3>
+        <ul class="arrow-list"><li>L'agent le configure lui-même.</li><li>Il ne peut pas suivre l'instruction.</li><li>Il cherche un outil similaire.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Il ne peut pas suivre l'instruction.</strong></p>
+          <p>Selon Microsoft, un agent ne peut suivre des instructions sur des outils, des sources de connaissances, des agents ou des rubriques que s'ils sont configurés dans l'agent.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions" rel="noopener">Microsoft Learn, Instructions dans Copilot Studio</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f5b">
+        <p><span class="knoten" data-guertel-nr="5">Ceinture bleue</span></p>
+        <h3>Faut-il modifier ou supprimer le format de citation de ton agent par une instruction?</h3>
+        <ul class="arrow-list"><li>Oui, c'est courant.</li><li>Non, Microsoft le déconseille.</li><li>Seulement pour les agents internes.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Non, Microsoft le déconseille.</strong></p>
+          <p>Microsoft déconseille de modifier ou de supprimer le format de citation du système par des instructions.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions" rel="noopener">Microsoft Learn, Instructions dans Copilot Studio</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f6a">
+        <p><span class="knoten" data-guertel-nr="6">Ceinture marron</span></p>
+        <h3>Peux-tu publier un agent dans la version d'évaluation gratuite de Copilot Studio?</h3>
+        <ul class="arrow-list"><li>Oui.</li><li>Non. Créer et vérifier dans le volet de test, oui. Publier, non.</li><li>Seulement dans Teams.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Non. Créer et vérifier dans le volet de test, oui. Publier, non.</strong></p>
+          <p>Selon Microsoft, la licence d'évaluation permet de créer des agents et de les vérifier dans le volet de test. La publication n'est pas possible avec elle.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Microsoft Learn, Licences et abonnements Copilot Studio</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f6b">
+        <p><span class="knoten" data-guertel-nr="6">Ceinture marron</span></p>
+        <h3>Selon Microsoft, combien de crédits Copilot une réponse générative consomme-t-elle dans Copilot Studio?</h3>
+        <ul class="arrow-list"><li>1</li><li>2</li><li>10</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: 2</strong></p>
+          <p>Réponse classique 1, réponse générative 2, action d'agent 5, ancrage du graphe du locataire 10 crédits Copilot. Les tarifs peuvent changer.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Crédits Copilot et capacité</a>, état au 13 octobre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7a">
+        <p><span class="knoten" data-guertel-nr="7">Ceinture noire</span></p>
+        <h3>Selon la page Learn Taux de facturation et gestion, que se passe-t-il pour les agents d'un environnement sans paiement à l'utilisation quand le locataire atteint 125 pour cent de sa capacité prépayée?</h3>
+        <ul class="arrow-list"><li>Rien, le dépassement est facturé après coup.</li><li>Ils sont bloqués et cessent de répondre, même dans les conversations en cours.</li><li>Seuls les flux d'agent s'arrêtent, les agents continuent de répondre.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Ils sont bloqués et cessent de répondre, même dans les conversations en cours.</strong></p>
+          <p>Microsoft tolère un certain dépassement, comparable à un délai de grâce. À 125 pour cent de la capacité prépayée, l'application des limites commence: les agents de l'environnement sont bloqués et cessent de répondre, même en pleine conversation. Si un environnement facture le dépassement à un plan de paiement à l'utilisation, l'épuisement des crédits prépayés ne bloque pas ses agents. La page d'administration sur les crédits Copilot ajoute: sans source de dépassement, un environnement ne peut utiliser que son allocation, ensuite les expériences qui ont besoin de crédits peuvent cesser de fonctionner.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Taux de facturation et gestion (Copilot Studio)</a>, état au 14 novembre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7b">
+        <p><span class="knoten" data-guertel-nr="7">Ceinture noire</span></p>
+        <h3>Le volet de test de Copilot Studio reproduit-il tout le comportement des canaux publiés?</h3>
+        <ul class="arrow-list"><li>Oui.</li><li>Non, il sert à vérifier pendant que tu construis.</li><li>Seulement pour Teams.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: Non, il sert à vérifier pendant que tu construis.</strong></p>
+          <p>Selon Microsoft, le volet de test sert à vérifier pendant la construction et ne reproduit pas tout le comportement des canaux publiés. Les événements déclenchés par une minuterie ou en arrière-plan, comme les déclencheurs d'inactivité, peuvent ne pas s'y déclencher. Tu vérifies ce comportement après la publication, dans un canal comme Microsoft Teams.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-test-bot" rel="noopener">Microsoft Learn, Tester ton agent dans le volet de test</a>, état au 14 novembre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7d">
+        <p><span class="knoten" data-guertel-nr="7">Ceinture noire</span></p>
+        <h3>Un admin définit une limite mensuelle avec arrêt strict pour un agent dans le centre d'administration Power Platform. Que s'applique-t-il selon Microsoft?</h3>
+        <ul class="arrow-list"><li>L'agent s'arrête exactement à la limite, avec tous les flux d'agent qu'il appelle.</li><li>L'agent est désactivé à la limite, mais pas instantanément, et la limite n'arrête pas ses flux d'agent.</li><li>Une telle limite n'existe que dans les environnements avec paiement à l'utilisation.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: L'agent est désactivé à la limite, mais pas instantanément, et la limite n'arrête pas ses flux d'agent.</strong></p>
+          <p>Avec un arrêt strict, l'agent est désactivé automatiquement quand il atteint la limite. Selon Microsoft, les limites ne s'appliquent pas instantanément, et l'agent peut continuer à répondre un certain temps. Prévois donc de la marge pour la limite et la notification. La limite n'arrête pas les flux d'agent que l'agent appelle, ils sont facturés et contrôlés séparément. Les limites fonctionnent avec la capacité prépayée et avec le paiement à l'utilisation.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn, Gérer les crédits et la capacité Copilot Studio (centre d'administration Power Platform)</a>, état au 14 novembre 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7e">
+        <p><span class="knoten" data-guertel-nr="7">Ceinture noire</span></p>
+        <h3>Selon Microsoft, combien de temps les résultats d'une évaluation d'agent restent-ils disponibles dans Copilot Studio?</h3>
+        <ul class="arrow-list"><li>7 jours.</li><li>89 jours.</li><li>Indéfiniment.</li></ul>
+        <details class="einklapp">
+          <summary>Solution</summary>
+          <p><strong>La bonne réponse est: 89 jours.</strong></p>
+          <p>Selon Microsoft, les résultats des tests sont disponibles dans Copilot Studio pendant 89 jours. Si tu compares des mois, comme dans la Veille de nuit, exporte-les en fichier CSV.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/analytics-agent-evaluation-create" rel="noopener">Microsoft Learn, Créer un jeu de tests à réponse unique (Copilot Studio)</a>, état au 14 novembre 2026.</p>
+        </details>
+      </li>
+    </ol>
+    <!-- /DOJO:FRAGEN -->
+    </section>
+    <p class="knopf-reihe sektion--eng"><a class="knopf knopf--primaer" href="../">Commencer l’examen de ceinture</a><a class="knopf" href="../../techniken/">Toutes les techniques</a></p>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__klar">Site indépendant, sans lien avec Microsoft.</p>
+        <p>Un projet de Marcel Lehmann. En savoir plus: <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+        <p>Techniques ninja pour Microsoft Copilot Chat et Copilot Studio. Chacune avec une source Microsoft Learn. Sans inscription. Les visites sont comptées sans cookies; seuls des totaux sans données personnelles sont enregistrés (GoatCounter). Ta progression reste dans ton navigateur.</p>
+        <p class="beitragen">Tu connais une technique qui manque ici? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20pour%20le%20Dojo&amp;body=Titre%20de%20la%20technique%3A%0A%0AProbl%C3%A8me%20qu%E2%80%99elle%20r%C3%A9sout%3A%0A%0APrompt%20ou%20guide%3A%0A%0ALimites%3A%0A%0ASource%20Microsoft%20Learn%3A%0A%0APuis-je%20te%20nommer%20comme%20exp%C3%A9diteur%3F%20(oui%20ou%20non)%0A%0AMerci%20de%20ne%20mettre%20aucune%20donn%C3%A9e%20de%20client%2C%20de%20personne%20ou%20d%E2%80%99entreprise%20dans%20le%20prompt.">Écris-moi.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">Toutes les techniques</a></li>
+          <li><a href="../../pruefung/">Examen de ceinture</a></li>
+          <li><a href="../../gratis/">Microsoft Copilot est-il gratuit?</a></li>
+          <li><a href="../../heute/">Technique du jour</a></li>
+          <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+          <li><a href="../../kalender/montag.ics" download>15 minutes chaque lundi dans ton calendrier</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Infos</h2>
+        <ul>
+          <li><a href="../../ueber/">À propos du Dojo</a></li>
+          <li><a href="../../impressum/">Mentions légales</a></li>
+          <li><a href="../../datenschutz/">Protection des données</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls (en allemand)</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Plus de disciplines: <a href="https://powerautomate.ninja/en/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage</a>, <a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
+    </div>
+    <div class="fuss__recht">
+      <p>Pas une offre de Microsoft. Site indépendant de Marcel Lehmann, non exploité, non sponsorisé et non soutenu par Microsoft. Microsoft, les noms de produits de la Power Platform (dont Power Apps, Power Automate et Copilot Studio) et Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word et Work IQ sont des marques du groupe de sociétés Microsoft. GitHub et GitHub Copilot sont des marques de GitHub, Inc.</p>
+      <p>Pas de cookies, pas de profils. Les pages vues sont comptées sans données personnelles (GoatCounter). Ta progression reste dans ton navigateur.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Mouvement désactivé</button></p>
+    </div>
+  </div>
+  <template data-kurs-vorlage><p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=vorlage" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p></template>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

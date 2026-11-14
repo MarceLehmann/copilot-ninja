@@ -25,16 +25,18 @@ Aufbau, Stil und Menge pro Seite wie die Schwesterseite powerautomate.ninja (Umb
 | `/dojo/test/`, `/vorlagen/` | Weiterleitungen alter Adressen (`UMZUEGE` in `scripts/build.mjs`) |
 
 Umgezogene Anker (`/gratis/#faq`, `/dojo/#beitragen`, `/techniken/#vier-wochen`) leitet `core.js` über `data-anker-umzug` am `main`-Element auf die Unterseite weiter.
-## Sprachen (16.10.2026)
+## Sprachen (16.10.2026 DE/EN, 14.11.2026 FR/IT)
 
-Deutsch liegt unter `/`, Englisch unter `/en/` mit derselben Ordnerstruktur (`/en/techniken/<slug>/`, `/en/gratis/`, `/en/1/` bis `/en/25/` usw.).
+Deutsch liegt unter `/`, Englisch unter `/en/`, Französisch unter `/fr/`, Italienisch unter `/it/`, jeweils mit derselben Ordnerstruktur (`/fr/techniken/<slug>/`, `/fr/gratis/`, `/fr/1/` bis `/fr/25/` usw.). Eine weitere Sprache braucht nur Daten, keinen Code:
 
-- Texte der Techniken: `data/techniken.en.json` legt die englischen Textfelder über die Einträge aus `data/techniken.json` (gleiche id). Struktur, Freigabe, Quellen-URLs und Daten kommen immer aus der deutschen Datei. Der Build prüft gleich viele Listeneinträge und die Regeln (keine Gedankenstriche, keine Emojis, keine «»).
-- Vorlagen: `templates/en/` und `templates/partials/en/`. Seiten von Hand: `en/gratis/`, `en/dojo/`, `en/pruefung/`, `en/pruefung/fragen/`, `en/gratis/nachschlagen/`, `en/dojo/profil/`, `en/ueber/`, `en/impressum/`, `en/datenschutz/` (Anker und IDs wie deutsch). `en/dojo/selbsttest.json` ist der englische Fragenpool. `karten.mjs` erzeugt Karten, Gürtelseiten und Fragenliste für beide Sprachen.
-- Daten für Skripte je Sprache: `assets/data/` und `assets/data/en/`, Karten `assets/img/karten/en/`, OG-Bild `og-image-en.png`, Feed `en/feed.xml`, Kalender `en/kalender/montag.ics`.
-- Sprachwahl: Umschalter DE/EN im Kopf jeder Seite, verlinkt auf die Entsprechung und merkt die Wahl in `localStorage` (`cn-sprache`). `assets/js/sprache.js` läuft nur auf der deutschen Startseite: ohne gespeicherte Wahl und ohne Deutsch in `navigator.languages` leitet es einmal auf `en/` weiter und merkt `en`. Crawler werden nicht weitergeleitet. Auf 404 zeigt es für Adressen unter `/en/` die englische 404-Seite.
-- Jede Seite trägt `hreflang` (de, en, x-default auf Deutsch) und ein eigenes Canonical, die Sitemap enthält beide Sprachen mit `xhtml:link`.
-- Fortschritt, Profil und Selbsttest gelten sprachübergreifend (gleicher Speicher `cn-dojo-v1`).
+- `data/sprachen/<code>.json`: Meta (Pfad, `lang`, `og:locale`, Name, Datumsformat und Monate, Zahlformat, Beispiel-Präfix «z. B.», Namen der Prompt-Teile, Profilfelder, verbotene Wörter, Learn-Sprache, Dojo-Adresse), Tabellen (Gürtelnamen, Arten, Zugang, Vier-Wochen-Pfad, Momente) und die Texte: `ui` für den Build (`scripts/build.mjs`, `scripts/karten.mjs`), `js` für die Skripte im Browser. Schlüssel ist immer der deutsche Text, `{0}`, `{1}` sind Platzhalter. Fehlt ein Text, bricht der Build ab.
+- `data/techniken.<code>.json` legt die Textfelder über die Einträge aus `data/techniken.json` (gleiche id). Struktur, Freigabe und Daten kommen immer aus der deutschen Datei. Learn-Links schreibt der Build auf die Sprache um (`learn` in der Sprachdatei, Ausnahmen in `data/sprachen/learn_ausnahmen.json`, falls eine Seite in der Sprache fehlt).
+- Vorlagen: `templates/<code>/` und `templates/partials/<code>/`. Seiten von Hand unter `<code>/` (gratis, gratis/nachschlagen, pruefung, pruefung/fragen, dojo, dojo/profil, ueber, impressum, datenschutz), Fragenpool `<code>/dojo/selbsttest.json`.
+- Der Build schreibt `assets/js/texte/<code>.js` (Texte der Skripte, vor `core.js` geladen), Daten unter `assets/data/<code>/`, Feed `<code>/feed.xml`, Kalender `<code>/kalender/montag.ics`, OG-Bild `og-image-<code>.png`. `karten.mjs` erzeugt Karten unter `assets/img/karten/<code>/`, Gürtelseiten und Fragenliste; mit `--sprachen=fr,it` nur für diese Sprachen.
+- Sprachwahl: aufklappbare Liste mit allen Sprachen im Kopf jeder Seite (Reihenfolge DE, FR, IT, EN wie powerplatformdojo.com), verlinkt auf die Entsprechung und merkt die Wahl in `localStorage` (`cn-sprache`). `assets/js/sprache.js` läuft nur auf der deutschen Startseite und auf 404: ohne gespeicherte Wahl gilt die erste Sprache aus `navigator.languages`, die das Dojo hat (Deutsch bleibt), sonst Englisch. Crawler werden nicht weitergeleitet. Auf 404 zeigt es für Adressen unter `/<code>/` die 404-Seite der Sprache.
+- Jede Seite trägt `hreflang` für alle Sprachen und x-default (Deutsch) und ein eigenes Canonical, die Sitemap enthält alle Sprachen mit `xhtml:link`.
+- Dojo-Mentoring-Links zeigen auf die Sprachfassung von powerplatformdojo.com. Academy, Kurs und Newsletter gibt es nur auf Deutsch: Links bleiben, mit Hinweis auf die Sprache. powerautomate.ninja hat kein FR/IT, Links zeigen auf `/en/`.
+- Fortschritt, Profil und Selbsttest gelten sprachübergreifend (gleicher Speicher `cn-dojo-v1`, Profilfelder unter den deutschen Namen).
 
 ## Kurszeile und Kursstatus (UX-Review 17.10.2026, Paket 1)
 

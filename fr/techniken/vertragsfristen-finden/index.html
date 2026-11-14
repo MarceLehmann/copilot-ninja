@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr" data-seite="technik">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/vertragsfristen-finden/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/techniken/vertragsfristen-finden/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/techniken/vertragsfristen-finden/">
+<link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/vertragsfristen-finden/">
+<link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/vertragsfristen-finden/">
+<link rel="alternate" type="application/atom+xml" title="Power Platform Dojo: nouvelles techniques" href="../../feed.xml">
+<link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/technik.css">
+<link rel="stylesheet" href="../../../assets/css/druck.css" media="print">
+<script src="../../../assets/js/theme-init.js"></script>
+<script src="../../../assets/js/texte/fr.js" defer></script>
+<script src="../../../assets/js/core.js" defer></script>
+<script src="../../../assets/js/dojo.js" defer></script>
+<script src="../../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="Power Platform Dojo build">
+<title>Trouver les délais et les pièges de reconduction dans un contrat | Copilot Dojo</title>
+<meta name="description" content="Trouver les délais et les pièges de reconduction dans un contrat. Prompt pour Microsoft Copilot Chat à copier, avec source Microsoft Learn et date de vérification.">
+<link rel="canonical" href="https://copilot.ninja/fr/techniken/vertragsfristen-finden/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Power Platform Dojo · Copilot">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La fosse piégée: Trouver les délais et les pièges de reconduction dans un contrat">
+<meta property="og:description" content="La reconduction automatique atterrit dans ton calendrier avec une alerte préalable, avant qu'elle te lie pour une année de plus.">
+<meta property="og:url" content="https://copilot.ninja/fr/techniken/vertragsfristen-finden/">
+<meta property="og:image" content="https://copilot.ninja/assets/img/karten/fr/vertragsfristen-finden.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Technique 10: La fosse piégée">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La fosse piégée: Trouver les délais et les pièges de reconduction dans un contrat">
+<meta name="twitter:description" content="La reconduction automatique atterrit dans ton calendrier avec une alerte préalable, avant qu'elle te lie pour une année de plus.">
+<meta name="twitter:image" content="https://copilot.ninja/assets/img/karten/fr/vertragsfristen-finden.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://copilot.ninja/fr/#website",
+      "name": "Power Platform Dojo",
+      "alternateName": "Power Platform Dojo",
+      "url": "https://copilot.ninja/fr/",
+      "inLanguage": "fr",
+      "description": "Techniques ninja pour Microsoft Copilot Chat et Copilot Studio, avec source et date de vérification. Site indépendant, sans lien avec Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://copilot.ninja/fr/techniken/vertragsfristen-finden/#technik",
+      "headline": "La fosse piégée: Trouver les délais et les pièges de reconduction dans un contrat",
+      "name": "La fosse piégée",
+      "url": "https://copilot.ninja/fr/techniken/vertragsfristen-finden/",
+      "inLanguage": "fr",
+      "description": "La reconduction automatique atterrit dans ton calendrier avec une alerte préalable, avant qu'elle te lie pour une année de plus.",
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "citation": [
+        "https://learn.microsoft.com/fr-fr/copilot/faq",
+        "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection"
+      ],
+      "isPartOf": {
+        "@id": "https://copilot.ninja/fr/techniken/#seite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://copilot.ninja/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Techniques",
+          "item": "https://copilot.ninja/fr/techniken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "La fosse piégée",
+          "item": "https://copilot.ninja/fr/techniken/vertragsfristen-finden/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="Power Platform Dojo, Copilot, page d’accueil"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Techniques</a></li>
+        <li><a href="../../pruefung/" data-nav="pruefung">Examen de ceinture</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Test de licence</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">Mon Dojo</a></li>
+        <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Choisir la langue, actuelle: Français">FR</summary><ul class="sprachen__liste"><li><a href="../../../techniken/vertragsfristen-finden/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/techniken/vertragsfristen-finden/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/techniken/vertragsfristen-finden/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/techniken/vertragsfristen-finden/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Mode sombre" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../../techniken/" aria-current="true">Techniques</a></li>
+      <li><a href="../../pruefung/">Examen de ceinture</a></li>
+      <li><a href="../../gratis/">Test de licence</a></li>
+      <li><a href="../../heute/">Technique du jour</a></li>
+      <li><a href="../../dojo/">Mon Dojo</a></li>
+      <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      <li><a href="../../ueber/">À propos</a></li>
+      <li><a href="https://powerautomate.ninja/en/" rel="noopener">Dojo pour Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+      <li><a href="../../gratis/nachschlagen/">Copilot sans licence supplémentaire: chaque condition avec sa source</a></li>
+      <li><a href="../../dojo/profil/">Profil et ta propre technique</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Rechercher des techniques</h2>
+    <label for="suche-feld" class="sr-only">Terme de recherche</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Résultats"></ul>
+  <p class="suche__leer" hidden>Aucune technique trouvée. Essaie compte rendu, contrat ou agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-technik="t10" data-guertel-nr="3">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Fil d’Ariane"><ol><li><a href="../../">Accueil</a></li><li><a href="../">Techniques</a></li><li><a href="../#oranger-guertel">Ceinture orange</a></li><li><a href="./" aria-current="page">N° 10</a></li></ol></nav>
+    <header class="tk">
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="3">Ceinture orange</span></li>
+        <li><a class="zugang zugang--frei" href="../../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire dans Microsoft Copilot Chat, avec import de fichier</a></li>
+        <li><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span></li>
+        <li class="tk__nr">N° 10</li>
+        <li><span>env. 10 min</span></li>
+      </ul>
+      <h1 id="h1">La fosse piégée<small>Trouver les délais et les pièges de reconduction dans un contrat</small></h1>
+      <p class="tk__moment">Quand un contrat arrive</p>
+    </header>
+
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">La situation</h2>
+      <p class="abschnitt__problem">Le contrat de maintenance traîne en PDF dans un dossier. Quand tu dois résilier est écrit quelque part dans les petits caractères.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">La coupe</h2>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Avant</p><div class="schnitt__vorher"><p class="schnitt__zitat">«Résume-moi ce contrat.»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <p class="label">Après</p>
+<details class="schmiede-klappe" data-nur-js><summary>Adapte-le pour toi</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Rien ne quitte ton navigateur.</p></div>
+<div class="schmiede__feld"><label for="technik-f1">Alerte en jours</label><input id="technik-f1" type="text" data-ph-feld="Alerte en jours" autocomplete="off" aria-describedby="technik-f1-h"><small id="technik-f1-h">p. ex. 30</small></div>
+<div class="schmiede__feld"><label for="technik-f2">Début du contrat</label><input id="technik-f2" type="text" data-ph-feld="Début du contrat" autocomplete="off" aria-describedby="technik-f2-h"><small id="technik-f2-h">p. ex. 01.01.2026</small></div>
+</div></details>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Prompt à copier</p></div>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Objectif:</span> Trouve dans le contrat joint tous les délais et tous les passages qui ont des conséquences si je ne fais rien.</mark>
+
+<mark class="teil teil--quelle"><span class="teil__label">Source:</span> Uniquement le document joint. Ne donne aucune appréciation juridique.</mark>
+
+<mark class="teil teil--erwartung"><span class="teil__label">Attentes:</span>
+1. Un tableau avec les colonnes Sujet, citation littérale, passage (chiffre ou page), délai, conséquence si je ne fais rien.
+2. Sois particulièrement attentif aux délais de résiliation, à la reconduction automatique, à la durée minimale, à l'adaptation des prix, aux délais de paiement et à la responsabilité pour les défauts.
+3. Si un passage est formulé de façon peu claire, écris «peu clair, à faire vérifier».
+4. Ensuite: liste les délais sous forme d'entrées de calendrier avec date, titre et rappel <span class="ph" data-ph="Alerte en jours">[Alerte en jours, p. ex. 30]</span> jours avant. Calcule à partir du début du contrat <span class="ph" data-ph="Début du contrat">[Début du contrat, p. ex. 01.01.2026]</span> et montre le calcul.</mark></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copié. Colle-le maintenant dans Microsoft Copilot Chat." data-nur-js>Copier le prompt</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Technique du Power Platform Dojo: copilot.ninja/fr/10&#10;Source: Microsoft Learn, état au 15 octobre 2026" data-nur-js>Transmettre</button><p class="rolle__status" role="status"></p></div>
+</div>
+      <p class="rolle__fallback">Sans licence supplémentaire dans Microsoft Copilot Chat, avec import de fichier. Sans bouton de copie: sélectionne le texte et copie-le avec Ctrl+C.</p>
+    </section>
+
+
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">Comment l’utiliser</h2>
+      <ol class="schritte"><li>Joins le contrat comme fichier à Microsoft Copilot Chat.</li><li>Renseigne l'alerte et le début du contrat, puis envoie.</li><li>Compare chaque délai avec la citation dans le contrat.</li><li>Refais toi-même le calcul des dates.</li><li>Crée toi-même les entrées de calendrier, avec l'alerte comme rappel.</li></ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">Comment reconnaître une bonne réponse</h2>
+      <ul class="pruefliste"><li>Un tableau avec citation littérale et passage pour chaque délai.</li><li>«peu clair, à faire vérifier» pour les passages peu clairs.</li><li>Un calcul de dates compréhensible.</li><li>Des entrées de calendrier avec date, titre et rappel.</li></ul>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-probe">
+      <h2 id="h-probe">L’épreuve</h2>
+      <p class="probe">Compte tes contrats en cours avec un délai de résiliation saisi, avant et après.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Limites</h2>
+      <ul class="arrow-list prose"><li>Pas de conseil juridique. Pour «peu clair, à faire vérifier», tu demandes à un spécialiste.</li><li>Revérifie toi-même les calculs de dates, surtout pour les délais à fin de mois.</li><li>Selon Microsoft, la protection des données d'entreprise s'applique aux prompts et aux réponses quand tu te connectes avec un compte professionnel ou scolaire. Tu n'importes quand même les contrats confidentiels que selon vos règles internes.</li><li>Selon Microsoft, des limites s'appliquent à l'import de fichiers. Les pages consultées ne donnent pas de chiffres.</li></ul>
+    </section>
+
+
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Sources</h2>
+      <p class="quelle"><a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Microsoft Learn: Questions fréquentes sur Microsoft Copilot Chat</a>, <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Microsoft Learn: Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat</a>. État au <time datetime="2026-10-15">15 octobre 2026</time>.</p>
+
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Marquer comme pratiquée</button></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Transmettre</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="https://www.linkedin.com/feed/?shareActive=true&amp;text=Technique%2010%20du%20Power%20Platform%20Dojo%3A%20La%20fosse%20pi%C3%A9g%C3%A9e.%20Le%20prompt%20cherche%20dans%20le%20contrat%20chaque%20d%C3%A9lai%20avec%20citation%20et%20passage%2C%20et%20calcule%20les%20entr%C3%A9es%20de%20calendrier.%20%C3%80%20copier%20librement%2C%20avec%20la%20source%20chez%20Microsoft%20Learn.%0A%0Ahttps%3A%2F%2Fcopilot.ninja%2Ffr%2Ftechniken%2Fvertragsfristen-finden%2F" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Partager sur LinkedIn</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="https://copilot.ninja/fr/techniken/vertragsfristen-finden/" hidden>Partager</button>
+        <a class="knopf knopf--klein" href="../../../assets/img/karten/fr/vertragsfristen-finden.png" download>Télécharger l’image</a>
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Texte copié. Colle-le dans ton post." data-nur-js>Copier le texte pour ton post</button>
+        <p class="rolle__status" role="status"></p>
+      </div>
+      <details class="einklapp">
+        <summary>Texte proposé pour ton post</summary>
+        <pre class="code" id="teilen-text">Technique 10 du Power Platform Dojo: La fosse piégée. Le prompt cherche dans le contrat chaque délai avec citation et passage, et calcule les entrées de calendrier. À copier librement, avec la source chez Microsoft Learn.
+
+https://copilot.ninja/fr/techniken/vertragsfristen-finden/</pre>
+      </details>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-kette">
+      <h2 id="h-kette">Combo: Ne laisse pas d'argent sur la table</h2>
+      <div class="kette">
+        <div><p class="label">Vient de</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t09" data-guertel-nr="3"><span class="karte-kompakt__nr">09</span><a class="karte-kompakt__link" href="../../techniken/offerten-vergleichen/">Le duel des offres</a><span class="klein">Comparer plusieurs offres</span><a class="zugang zugang--frei" href="../../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a></li></ul></div>
+        <div><p class="label">Suite avec</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t06" data-guertel-nr="2"><span class="karte-kompakt__nr">06</span><a class="karte-kompakt__link" href="../../techniken/entwurf-gegen-quelle-pruefen/">L'oeil de faucon</a><span class="klein">Vérifier un brouillon par rapport au document source</span><a class="zugang zugang--frei" href="../../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a></li></ul></div>
+      </div>
+    </section>
+
+    <nav class="blaettern" aria-label="Autres techniques">
+<a href="../../techniken/offerten-vergleichen/" rel="prev"><span>Technique précédente</span>09 Le duel des offres</a>
+<a href="../../techniken/eigenen-schreibstil-festhalten/" rel="next"><span>Technique suivante</span>11 Le scribe de l'ombre</a>
+    </nav>
+<p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=technik-10" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p>
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copié. Colle-le maintenant dans Microsoft Copilot Chat." data-nur-js>Copier le prompt</button>
+    <a class="knopf knopf--klein" href="../../techniken/eigenen-schreibstil-festhalten/">Technique suivante</a>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__klar">Site indépendant, sans lien avec Microsoft.</p>
+        <p>Un projet de Marcel Lehmann. En savoir plus: <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+        <p>Techniques ninja pour Microsoft Copilot Chat et Copilot Studio. Chacune avec une source Microsoft Learn. Sans inscription. Les visites sont comptées sans cookies; seuls des totaux sans données personnelles sont enregistrés (GoatCounter). Ta progression reste dans ton navigateur.</p>
+        <p class="beitragen">Tu connais une technique qui manque ici? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20pour%20le%20Dojo&amp;body=Titre%20de%20la%20technique%3A%0A%0AProbl%C3%A8me%20qu%E2%80%99elle%20r%C3%A9sout%3A%0A%0APrompt%20ou%20guide%3A%0A%0ALimites%3A%0A%0ASource%20Microsoft%20Learn%3A%0A%0APuis-je%20te%20nommer%20comme%20exp%C3%A9diteur%3F%20(oui%20ou%20non)%0A%0AMerci%20de%20ne%20mettre%20aucune%20donn%C3%A9e%20de%20client%2C%20de%20personne%20ou%20d%E2%80%99entreprise%20dans%20le%20prompt.">Écris-moi.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">Toutes les techniques</a></li>
+          <li><a href="../../pruefung/">Examen de ceinture</a></li>
+          <li><a href="../../gratis/">Microsoft Copilot est-il gratuit?</a></li>
+          <li><a href="../../heute/">Technique du jour</a></li>
+          <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+          <li><a href="../../kalender/montag.ics" download>15 minutes chaque lundi dans ton calendrier</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Infos</h2>
+        <ul>
+          <li><a href="../../ueber/">À propos du Dojo</a></li>
+          <li><a href="../../impressum/">Mentions légales</a></li>
+          <li><a href="../../datenschutz/">Protection des données</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls (en allemand)</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Plus de disciplines: <a href="https://powerautomate.ninja/en/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage</a>, <a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
+    </div>
+    <div class="fuss__recht">
+      <p>Pas une offre de Microsoft. Site indépendant de Marcel Lehmann, non exploité, non sponsorisé et non soutenu par Microsoft. Microsoft, les noms de produits de la Power Platform (dont Power Apps, Power Automate et Copilot Studio) et Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word et Work IQ sont des marques du groupe de sociétés Microsoft. GitHub et GitHub Copilot sont des marques de GitHub, Inc.</p>
+      <p>Pas de cookies, pas de profils. Les pages vues sont comptées sans données personnelles (GoatCounter). Ta progression reste dans ton navigateur.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Mouvement désactivé</button></p>
+    </div>
+  </div>
+  <template data-kurs-vorlage><p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=vorlage" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p></template>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

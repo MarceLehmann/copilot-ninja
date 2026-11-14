@@ -1,0 +1,52 @@
+<main id="main">
+  <section class="wrap hero hero--start" aria-labelledby="h1">
+    <div class="hero__band" aria-hidden="true">{{{band}}}</div>
+    <span class="label">Power Platform Dojo · Copilot</span>
+    <h1 id="h1">Quelle <span class="strich">ceinture Copilot<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C48 7 120 5 196 10"/></svg></span> es-tu?</h1>
+    <p class="lead">Sept questions, une par ceinture. Ensuite, tu sais par quelles techniques commencer.</p>
+    <div class="knopf-reihe"><a class="knopf knopf--primaer" href="pruefung/">Commencer l’examen de ceinture</a><a class="knopf" href="gratis/">Ai-je besoin d’une licence?</a></div>
+    <span class="hero__tusch">{{{tusch_hero}}}</span>
+  </section>
+
+  <section class="block" aria-labelledby="h-lizenz"><div class="wrap sektion--eng">
+    <div class="lcheck">
+      <span class="label">Test de licence, question 1 sur 4</span>
+      <h2 id="h-lizenz">As-tu besoin de la version premium? Quatre questions, puis tu sais.</h2>
+      <p class="lcheck__frage" id="lcheck-frage">Comment te connectes-tu à Microsoft?</p>
+      <ul class="antworten antworten--drei" aria-labelledby="lcheck-frage">
+        <li><a class="antwort" href="gratis/?konto=k1#check"><span class="antwort__b" aria-hidden="true">A</span><span>Avec un compte professionnel ou scolaire</span></a></li>
+        <li><a class="antwort" href="gratis/?konto=k2#check"><span class="antwort__b" aria-hidden="true">B</span><span>Avec un compte personnel, par exemple Outlook.com</span></a></li>
+        <li><a class="antwort" href="gratis/?konto=k3#check"><span class="antwort__b" aria-hidden="true">C</span><span>Je ne sais pas</span></a></li>
+      </ul>
+{{{bilanz}}}
+    </div>
+  </div></section>
+
+  <section class="block" aria-labelledby="h-more-dojo"><div class="wrap sektion--eng">
+    <h2 id="h-more-dojo">Plus au Dojo</h2>
+    <ul>
+      <li><a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage: construis ta propre app en 7 semaines</a></li>
+      <li><a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring: en 1:1 avec un Sensei, 3 mois, gratuit</a></li>
+      <li><a href="https://powerautomate.ninja/en/" rel="noopener">Une autre discipline: powerautomate.ninja</a></li>
+    </ul>
+    <p>Tu trouveras des ateliers en direct gratuits et des cours payants à la <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+  </div></section>
+
+  <section class="block" aria-labelledby="h-tdt"><div class="wrap sektion--eng">
+    <span class="label">Technique du jour</span>
+    <h2 id="h-tdt">Une technique pour aujourd’hui</h2>
+{{{heute_karte}}}
+    <p><a class="knopf knopf--leise" href="kalender/montag.ics" download>Une technique chaque lundi, comme entrée de calendrier</a></p>
+  </div></section>
+
+  <section class="block" aria-labelledby="h-pfad" id="guertelpfad"><div class="wrap sektion--eng">
+    <span class="label">Le parcours des ceintures</span>
+    <h2 id="h-pfad">Sept ceintures. Du premier prompt propre à un agent en production.</h2>
+{{{guertelpfad}}}
+    <p class="knopf-reihe"><a class="knopf" href="techniken/">Voir 5 formes de base et {{anzahl}} techniques</a></p>
+  </div></section>
+
+  <section class="block" aria-label="À propos de l’auteur"><div class="wrap sektion--eng">
+    <p class="absender">{{{tusch_zeigen}}}<span>Par Marcel Lehmann, KMUpower. Chaque technique indique sa source Microsoft Learn. Si tu veux t’entraîner avec un accompagnement: <a href="{{kurs_trainer}}" rel="noopener">cours en direct «Copilot Ninja in 4 Wochen» (en allemand) à la Power Platform Academy</a>. Le même dojo pour les flows: <a href="https://powerautomate.ninja/en/" rel="noopener">powerautomate.ninja</a>. Plus <a href="ueber/">à propos du Dojo</a>.</span></p>
+  </div></section>
+</main>

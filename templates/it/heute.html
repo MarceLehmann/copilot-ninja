@@ -1,0 +1,20 @@
+<main id="main">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Briciole di pane"><ol><li><a href="../">Home</a></li><li><a href="../techniken/">Tecniche</a></li><li><a href="./" aria-current="page">Tecnica del giorno</a></li></ol></nav>
+    <header class="sektion--eng">
+      <span class="label">Oggi nel Dojo</span>
+      <h1 id="h1">Tecnica del giorno</h1>
+      <p class="lead">La stessa tecnica per tutti nello stesso giorno. Salva questa pagina tra i preferiti o aggiungi l'appuntamento del lunedì al tuo calendario.</p>
+      <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>15 minuti ogni lunedì nel tuo calendario</a><a class="knopf knopf--leise" href="../techniken/">Tutte le tecniche</a></p>
+    </header>
+    <div class="heute sektion--eng">
+      <div data-heute data-heute-datum="{{build_datum}}">{{{heute_inhalt}}}</div>
+      <aside class="heute__seite" aria-label="Il tuo percorso">
+        <div class="naechster" data-naechster-schritt>
+          <h2>Il tuo prossimo passo</h2>
+          <p>Segna una tecnica come esercitata. Poi questo riquadro mostra quale tecnica della tua cintura viene dopo.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="it" data-seite="technik">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/monatlicher-agent-check/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/techniken/monatlicher-agent-check/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/techniken/monatlicher-agent-check/">
+<link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/monatlicher-agent-check/">
+<link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/monatlicher-agent-check/">
+<link rel="alternate" type="application/atom+xml" title="Power Platform Dojo: nuove tecniche" href="../../feed.xml">
+<link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/technik.css">
+<link rel="stylesheet" href="../../../assets/css/druck.css" media="print">
+<script src="../../../assets/js/theme-init.js"></script>
+<script src="../../../assets/js/texte/it.js" defer></script>
+<script src="../../../assets/js/core.js" defer></script>
+<script src="../../../assets/js/dojo.js" defer></script>
+<script src="../../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="Power Platform Dojo build">
+<title>Controllo mensile dell'agente | Copilot Dojo</title>
+<meta name="description" content="Controllo mensile dell'agente. Guida per Copilot Studio da copiare, con fonte su Microsoft Learn e data di verifica. Una volta al mese.">
+<link rel="canonical" href="https://copilot.ninja/it/techniken/monatlicher-agent-check/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Power Platform Dojo · Copilot">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="La guardia notturna: Controllo mensile dell'agente">
+<meta property="og:description" content="Fonti di conoscenza, impostazioni e contingenti cambiano anche quando nessuno lavora sull'agente. La guardia notturna se ne accorge prima dei tuoi utenti.">
+<meta property="og:url" content="https://copilot.ninja/it/techniken/monatlicher-agent-check/">
+<meta property="og:image" content="https://copilot.ninja/assets/img/karten/it/monatlicher-agent-check.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tecnica 25: La guardia notturna">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La guardia notturna: Controllo mensile dell'agente">
+<meta name="twitter:description" content="Fonti di conoscenza, impostazioni e contingenti cambiano anche quando nessuno lavora sull'agente. La guardia notturna se ne accorge prima dei tuoi utenti.">
+<meta name="twitter:image" content="https://copilot.ninja/assets/img/karten/it/monatlicher-agent-check.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://copilot.ninja/it/#website",
+      "name": "Power Platform Dojo",
+      "alternateName": "Power Platform Dojo",
+      "url": "https://copilot.ninja/it/",
+      "inLanguage": "it",
+      "description": "Tecniche ninja per Microsoft Copilot Chat e Copilot Studio con fonte e data di verifica. Sito indipendente, senza legami con Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://copilot.ninja/it/techniken/monatlicher-agent-check/#technik",
+      "headline": "La guardia notturna: Controllo mensile dell'agente",
+      "name": "La guardia notturna",
+      "url": "https://copilot.ninja/it/techniken/monatlicher-agent-check/",
+      "inLanguage": "it",
+      "description": "Fonti di conoscenza, impostazioni e contingenti cambiano anche quando nessuno lavora sull'agente. La guardia notturna se ne accorge prima dei tuoi utenti.",
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-11-14",
+      "citation": [
+        "https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-test-bot",
+        "https://learn.microsoft.com/it-it/microsoft-copilot-studio/analytics-agent-evaluation-create"
+      ],
+      "isPartOf": {
+        "@id": "https://copilot.ninja/it/techniken/#seite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://copilot.ninja/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tecniche",
+          "item": "https://copilot.ninja/it/techniken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "La guardia notturna",
+          "item": "https://copilot.ninja/it/techniken/monatlicher-agent-check/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="Power Platform Dojo, Copilot, home page"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></a>
+    <nav class="nav" aria-label="Navigazione principale">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Tecniche</a></li>
+        <li><a href="../../pruefung/" data-nav="pruefung">Prova di cintura</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Verifica licenza</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">Il mio Dojo</a></li>
+        <li><a href="https://powerplatformdojo.com/it/" rel="noopener">Panoramica del Dojo</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Scegli la lingua, attuale: Italiano">IT</summary><ul class="sprachen__liste"><li><a href="../../../techniken/monatlicher-agent-check/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/techniken/monatlicher-agent-check/" hreflang="fr" lang="fr" data-sprache-wahl="fr"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/techniken/monatlicher-agent-check/" hreflang="it" lang="it" data-sprache-wahl="it" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/techniken/monatlicher-agent-check/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Cerca tecniche" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Modalità scura" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Chiudi il menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../../techniken/" aria-current="true">Tecniche</a></li>
+      <li><a href="../../pruefung/">Prova di cintura</a></li>
+      <li><a href="../../gratis/">Verifica licenza</a></li>
+      <li><a href="../../heute/">Tecnica del giorno</a></li>
+      <li><a href="../../dojo/">Il mio Dojo</a></li>
+      <li><a href="https://powerplatformdojo.com/it/" rel="noopener">Panoramica del Dojo</a></li>
+      <li><a href="../../ueber/">Informazioni</a></li>
+      <li><a href="https://powerautomate.ninja/en/" rel="noopener">Dojo per Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../../vier-wochen/">In quattro settimane attraverso tutte le cinture</a></li>
+      <li><a href="../../gratis/nachschlagen/">Copilot senza licenza aggiuntiva: ogni condizione con la sua fonte</a></li>
+      <li><a href="../../dojo/profil/">Profilo e tecnica tua</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Cerca tecniche</h2>
+    <label for="suche-feld" class="sr-only">Termine di ricerca</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Verbale, contratto, agente">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Chiudi la ricerca"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Risultati"></ul>
+  <p class="suche__leer" hidden>Nessuna tecnica trovata. Prova con verbale, contratto o agente.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-technik="t25" data-guertel-nr="7">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Briciole di pane"><ol><li><a href="../../">Home</a></li><li><a href="../">Tecniche</a></li><li><a href="../#schwarzer-guertel">Cintura nera</a></li><li><a href="./" aria-current="page">N. 25</a></li></ol></nav>
+    <header class="tk">
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="7">Cintura nera</span></li>
+        <li><a class="zugang zugang--studio" href="../../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio: crea e verifica nella versione di valutazione. Per pubblicare servono capacità (crediti Copilot o pay-as-you-go) e l'autorizzazione come autore.</a></li>
+        <li><span class="art art--kata"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M1 7h20"/><circle cx="4" cy="7" r="2"/><circle cx="11" cy="7" r="2"/><circle cx="18" cy="7" r="2"/></svg>Kata</span></li>
+        <li class="tk__nr">N. 25</li>
+        <li><span>ca. 30 min</span></li>
+      </ul>
+      <h1 id="h1">La guardia notturna<small>Controllo mensile dell'agente</small></h1>
+      <p class="tk__moment">Una volta al mese</p>
+    </header>
+
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">La situazione</h2>
+      <p class="abschnitt__problem">Sull'agente da settimane nessuno ha cambiato nulla. Eppure all'improvviso risponde in modo diverso, perché è cambiato un documento nella sua fonte di conoscenza.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">Il taglio</h2>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Prima</p><div class="schnitt__vorher"><p class="schnitt__zitat">«Il mio agente funziona ancora bene?»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <p class="label">Dopo</p>
+<details class="schmiede-klappe" data-nur-js><summary>Adattalo a te</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Nulla lascia il tuo browser.</p></div>
+<div class="schmiede__feld"><label for="technik-f1">Mese A</label><input id="technik-f1" type="text" data-ph-feld="Mese A" autocomplete="off" aria-describedby="technik-f1-h"><small id="technik-f1-h">ad es. settembre</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="technik-f2">Risultati A</label><textarea id="technik-f2" data-ph-feld="Risultati A" rows="4" aria-describedby="technik-f2-h"></textarea><small id="technik-f2-h">ad es. elenco con numero, domanda di test e comportamento dell'agente</small></div>
+<div class="schmiede__feld"><label for="technik-f3">Mese B</label><input id="technik-f3" type="text" data-ph-feld="Mese B" autocomplete="off" aria-describedby="technik-f3-h"><small id="technik-f3-h">ad es. ottobre</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="technik-f4">Risultati B</label><textarea id="technik-f4" data-ph-feld="Risultati B" rows="4" aria-describedby="technik-f4-h"></textarea><small id="technik-f4-h">ad es. elenco con numero, domanda di test e comportamento dell'agente</small></div>
+</div></details>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Testo da copiare</p></div>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Obiettivo:</span> Confronta i risultati dei test del mio agente di due mesi.</mark>
+
+<mark class="teil teil--quelle"><span class="teil__label">Fonte:</span> Solo i due elenchi di risultati qui sotto.</mark>
+
+<mark class="teil teil--erwartung"><span class="teil__label">Aspettative:</span>
+1. Ogni domanda di test il cui comportamento è cambiato, con il comportamento vecchio e quello nuovo.
+2. Prima le modifiche nelle categorie «Deviare» e «Dati personali».
+3. Non valutare se una modifica è buona. Mostra solo che cosa è cambiato.</mark>
+
+Risultati <span class="ph" data-ph="Mese A">[Mese A, ad es. settembre]</span>:
+<span class="ph" data-ph="Risultati A">[Risultati A, ad es. elenco con numero, domanda di test e comportamento dell'agente]</span>
+
+Risultati <span class="ph" data-ph="Mese B">[Mese B, ad es. ottobre]</span>:
+<span class="ph" data-ph="Risultati B">[Risultati B, ad es. elenco con numero, domanda di test e comportamento dell'agente]</span></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copiato. Ora incollalo in Microsoft Copilot Chat." data-nur-js>Copia il testo</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Tecnica dal Power Platform Dojo: copilot.ninja/it/25&#10;Fonte: Microsoft Learn, aggiornato al 14 novembre 2026" data-nur-js>Inoltra</button><p class="rolle__status" role="status"></p></div>
+</div>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Checklist per l'appuntamento mensile</p></div>
+<pre class="code" id="prompt-2">1. Esegui il set di test della prova di cintura nel riquadro di test e nel canale pubblicato.
+2. Annota la percentuale di superamento nella scheda di esercizio.
+3. Confronta il consumo di crediti Copilot con la stima e con il contingente.
+4. Controlla le fonti di conoscenza per documenti modificati e per la data di verifica.
+5. Rileggi le pagine Microsoft su licenze e crediti Copilot.
+6. Fai confrontare i risultati e attribuisci ogni modifica a una causa.</pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt-2" data-erfolg="Copiato. Ora incollalo in Microsoft Copilot Chat." data-nur-js>Copia il testo</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt-2" data-herkunft="Tecnica dal Power Platform Dojo: copilot.ninja/it/25&#10;Fonte: Microsoft Learn, aggiornato al 14 novembre 2026" data-nur-js>Inoltra</button><p class="rolle__status" role="status"></p></div>
+</div>
+      <p class="rolle__fallback">Copilot Studio: crea e verifica nella versione di valutazione. Per pubblicare servono capacità (crediti Copilot o pay-as-you-go) e l'autorizzazione come autore.. Senza il pulsante di copia: seleziona il testo e copialo con Ctrl+C.</p>
+    </section>
+
+
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">Come usarla</h2>
+      <ol class="schritte"><li>Una volta al mese esegui il set di test della n. 18, nel riquadro di test e nel canale pubblicato.</li><li>Incolla nel prompt i risultati di questo mese e di quello scorso e fai confrontare.</li><li>Attribuisci ogni modifica a una causa: istruzioni, fonte di conoscenza, impostazione o modello.</li><li>Annota percentuale di superamento e consumo nella scheda di esercizio della n. 24.</li><li>Salva la checklist come appuntamento ricorrente.</li></ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">Come riconoscere una buona risposta</h2>
+      <ul class="pruefliste"><li>Solo le domande di test con comportamento cambiato.</li><li>Comportamento vecchio e nuovo affiancati.</li><li>Le modifiche in «Deviare» e «Dati personali» in cima.</li><li>Nessuna valutazione, solo il riscontro.</li></ul>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-probe">
+      <h2 id="h-probe">La verifica</h2>
+      <p class="probe">Conta ogni mese le domande di test con comportamento cambiato. Zero è l'obiettivo, ogni scostamento è un riscontro.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Limiti</h2>
+      <ul class="arrow-list prose"><li>Il controllo trova gli scostamenti. La causa la trova una persona.</li><li>Perché controlli anche nel canale pubblicato è spiegato nella n. 18. Che cosa consuma l'esercizio e che cosa succede quando la capacità si esaurisce è spiegato nella n. 23.</li><li>Senza lo stesso set di test ogni mese i risultati non sono confrontabili.</li><li>Secondo Microsoft i risultati dei test della valutazione dell'agente restano 89 giorni in Copilot Studio. Per il confronto su più mesi esportali come file CSV.</li></ul>
+    </section>
+
+
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Fonti</h2>
+      <p class="quelle"><a href="https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-test-bot" rel="noopener">Microsoft Learn: Testa il tuo agente (Copilot Studio)</a>, <a href="https://learn.microsoft.com/it-it/microsoft-copilot-studio/analytics-agent-evaluation-create" rel="noopener">Microsoft Learn: Creare un singolo set di test di risposta (Copilot Studio)</a>. Aggiornato al <time datetime="2026-11-14">14 novembre 2026</time>.</p>
+
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Segna come esercitata</button></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Inoltra</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="https://www.linkedin.com/feed/?shareActive=true&amp;text=Tecnica%2025%20dal%20Power%20Platform%20Dojo%3A%20La%20guardia%20notturna.%20Una%20volta%20al%20mese%20esegui%20il%20set%20di%20test%20e%20confronta%20che%20cosa%20%C3%A8%20cambiato%20nell'agente%2C%20anche%20se%20nessuno%20ci%20ha%20lavorato.%20Da%20copiare%20liberamente.%0A%0Ahttps%3A%2F%2Fcopilot.ninja%2Fit%2Ftechniken%2Fmonatlicher-agent-check%2F" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Condividi su LinkedIn</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="https://copilot.ninja/it/techniken/monatlicher-agent-check/" hidden>Condividi</button>
+        <a class="knopf knopf--klein" href="../../../assets/img/karten/it/monatlicher-agent-check.png" download>Scarica l'immagine</a>
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Testo copiato. Incollalo nel tuo post." data-nur-js>Copia il testo per il tuo post</button>
+        <p class="rolle__status" role="status"></p>
+      </div>
+      <details class="einklapp">
+        <summary>Testo suggerito per il tuo post</summary>
+        <pre class="code" id="teilen-text">Tecnica 25 dal Power Platform Dojo: La guardia notturna. Una volta al mese esegui il set di test e confronta che cosa è cambiato nell'agente, anche se nessuno ci ha lavorato. Da copiare liberamente.
+
+https://copilot.ninja/it/techniken/monatlicher-agent-check/</pre>
+      </details>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-kette">
+      <h2 id="h-kette">Combo: Dalla chat all'agente in produzione</h2>
+      <div class="kette">
+        <div><p class="label">Arriva da</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t24" data-guertel-nr="7"><span class="karte-kompakt__nr">24</span><a class="karte-kompakt__link" href="../../techniken/betriebsblatt-fuer-agents/">Il codice d'onore</a><span class="klein">Scheda di esercizio con criteri di spegnimento</span><a class="zugang zugang--frei" href="../../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Senza licenza aggiuntiva</a></li></ul></div>
+        
+      </div>
+    </section>
+
+    <nav class="blaettern" aria-label="Altre tecniche">
+<a href="../../techniken/betriebsblatt-fuer-agents/" rel="prev"><span>Tecnica precedente</span>24 Il codice d'onore</a>
+<a href="../../techniken/"><span>Fatto</span>Alla parete delle tecniche</a>
+    </nav>
+<p class="kurs-zeile" data-kurs-status="warteliste">Preferisci proseguire con un accompagnamento? Il <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=technik-25" rel="noopener">Corso live «Copilot Ninja in 4 Wochen»</a> (in tedesco) della Power Platform Academy dura quattro settimane. Le prossime date non sono ancora fissate: nella pagina del corso puoi metterti in lista d'attesa.</p>
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copiato. Ora incollalo in Microsoft Copilot Chat." data-nur-js>Copia il testo</button>
+    <a class="knopf knopf--klein" href="../../techniken/">Alla parete delle tecniche</a>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__klar">Sito indipendente, senza legami con Microsoft.</p>
+        <p>Un progetto di Marcel Lehmann. Per saperne di più: <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+        <p>Tecniche ninja per Microsoft Copilot Chat e Copilot Studio. Ognuna con fonte su Microsoft Learn. Senza iscrizione. Le visite vengono contate senza cookie; vengono salvati solo totali senza dati personali (GoatCounter). I tuoi progressi restano nel tuo browser.</p>
+        <p class="beitragen">Conosci una tecnica che qui manca? <a href="mailto:marcel.lehmann@kmupower.com?subject=Una%20tecnica%20per%20il%20Dojo&amp;body=Titolo%20della%20tecnica%3A%0A%0AProblema%20che%20risolve%3A%0A%0APrompt%20o%20guida%3A%0A%0ALimiti%3A%0A%0AFonte%20su%20Microsoft%20Learn%3A%0A%0APosso%20nominarti%20come%20mittente%3F%20(s%C3%AC%20o%20no)%0A%0APer%20favore%20nessun%20dato%20di%20clienti%2C%20persone%20o%20aziende%20nel%20prompt.">Scrivimi.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">Tutte le tecniche</a></li>
+          <li><a href="../../pruefung/">Prova di cintura</a></li>
+          <li><a href="../../gratis/">Microsoft Copilot è gratis?</a></li>
+          <li><a href="../../heute/">Tecnica del giorno</a></li>
+          <li><a href="../../vier-wochen/">In quattro settimane attraverso tutte le cinture</a></li>
+          <li><a href="../../kalender/montag.ics" download>15 minuti ogni lunedì nel tuo calendario</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Info</h2>
+        <ul>
+          <li><a href="../../ueber/">Informazioni sul Dojo</a></li>
+          <li><a href="../../impressum/">Note legali</a></li>
+          <li><a href="../../datenschutz/">Protezione dei dati</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls (in tedesco)</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Altre discipline: <a href="https://powerautomate.ninja/en/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/it/lernpfade/" rel="noopener">Percorsi di apprendimento</a>, <a href="https://powerplatformdojo.com/it/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
+    </div>
+    <div class="fuss__recht">
+      <p>Non è un'offerta di Microsoft. Sito indipendente di Marcel Lehmann, non gestito, sponsorizzato né approvato da Microsoft. Microsoft, i nomi dei prodotti Power Platform (tra cui Power Apps, Power Automate e Copilot Studio) e Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word e Work IQ sono marchi del gruppo di aziende Microsoft. GitHub e GitHub Copilot sono marchi di GitHub, Inc.</p>
+      <p>Niente cookie, niente profili. Le visualizzazioni di pagina vengono contate senza dati personali (GoatCounter). I tuoi progressi restano nel tuo browser.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Movimento disattivato</button></p>
+    </div>
+  </div>
+  <template data-kurs-vorlage><p class="kurs-zeile" data-kurs-status="warteliste">Preferisci proseguire con un accompagnamento? Il <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=vorlage" rel="noopener">Corso live «Copilot Ninja in 4 Wochen»</a> (in tedesco) della Power Platform Academy dura quattro settimane. Le prossime date non sono ancora fissate: nella pagina del corso puoi metterti in lista d'attesa.</p></template>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

@@ -6,11 +6,13 @@
   var CN = w.CN || {};
   var ROOT = CN.root || (function () { var s = d.querySelector('script[src*="assets/js/dojo.js"]'); return s ? s.src.replace(/assets\/js\/dojo\.js.*$/, '') : ''; })();
   var KEY = 'cn-dojo-v1';
-  var EN = /^en/i.test(h.getAttribute('lang') || '');
-  var LP = EN ? 'en/' : '';
+  var TX = w.CN_TEXTE || { meta: {}, texte: {} }, SPR = TX.meta.code || 'de';
+  function T(de) { var s = TX.texte[de]; if (typeof s !== 'string') s = de; for (var i = 1; i < arguments.length; i++) s = s.split('{' + (i - 1) + '}').join(arguments[i]); return s; }
+  var LP = TX.meta.pfad || '';
   var BASIS = ROOT + LP;
-  function T(de, en) { return EN ? en : de; }
-  var NAMEN = EN ? ['White belt', 'Yellow belt', 'Orange belt', 'Green belt', 'Blue belt', 'Brown belt', 'Black belt'] : ['Weisser Gürtel', 'Gelber Gürtel', 'Oranger Gürtel', 'Grüner Gürtel', 'Blauer Gürtel', 'Brauner Gürtel', 'Schwarzer Gürtel'];
+  var NAMEN = TX.meta.guertel || ['Weisser Gürtel', 'Gelber Gürtel', 'Oranger Gürtel', 'Grüner Gürtel', 'Blauer Gürtel', 'Brauner Gürtel', 'Schwarzer Gürtel'];
+  /* Guertelname mitten im Satz: deutsch im Akkusativ (den Weissen Guertel), sonst aus den Texten der Sprache */
+  function akk(n) { return TX.meta.guertel_satz ? TX.meta.guertel_satz[n - 1] : NAMEN[n - 1].replace(/er Gürtel$/, 'en Gürtel'); }
   var FARBEN = ['weiss', 'gelb', 'orange', 'gruen', 'blau', 'braun', 'schwarz'];
   var UTM = function (s) { return 'utm_source=copilot.ninja&utm_medium=referral&utm_campaign=dojo&utm_content=' + s; };
   var KURS = function (s) { return 'https://www.powerplatformacademy.online/kurse/copilot-expert?' + UTM(s); };
@@ -31,7 +33,7 @@
       return z;
     }
     var p = el('p', { 'class': 'kurs-zeile' });
-    p.appendChild(el('a', { href: KURS(stelle), rel: 'noopener' }, T('Kursseite «Copilot Ninja in 4 Wochen»', 'Course page “Copilot Ninja in 4 Wochen”')));
+    p.appendChild(el('a', { href: KURS(stelle), rel: 'noopener' }, T("Kursseite «Copilot Ninja in 4 Wochen»")));
     return p;
   }
   function ansage(t) { if (CN.ansage) CN.ansage(t); }
@@ -40,12 +42,12 @@
   function heuteIso() { return iso(new Date()); }
   function istIso(s) { return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) && !isNaN(Date.parse(s + 'T00:00:00Z')); }
   function tage(a, b) { return Math.round((Date.parse(b + 'T00:00:00Z') - Date.parse(a + 'T00:00:00Z')) / 864e5); }
-  var MONATE = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  function datumCH(s) { var p = String(s).split('-'); if (p.length !== 3) return s; return EN ? MONATE[(+p[1]) - 1] + ' ' + (+p[2]) + ', ' + p[0] : p[2] + '.' + p[1] + '.' + p[0]; }
+  function datumCH(s) { var p = String(s).split('-'); if (p.length !== 3) return s; return (TX.meta.datum || '{dd}.{mm}.{y}').replace('{dd}', p[2]).replace('{mm}', p[1]).replace('{d}', String(+p[2])).replace('{monat}', (TX.meta.monate || [])[(+p[1]) - 1] || p[1]).replace('{y}', p[0]); }
   function nr2(n) { return ('0' + n).slice(-2); }
-  function fehlenNoch(n) { if (EN) return n < 1 ? '' : n === 1 ? ' One to go.' : ' ' + (['', '', 'Two', 'Three', 'Four', 'Five'][n] || n) + ' to go.'; return n < 1 ? '' : n === 1 ? ' Eine fehlt noch.' : ' ' + (['', '', 'Zwei', 'Drei', 'Vier', 'Fünf'][n] || n) + ' fehlen noch.'; }
+  var ZAHLWORT = TX.meta.zahlwoerter && TX.meta.zahlwoerter.length ? TX.meta.zahlwoerter : ['', '', 'Zwei', 'Drei', 'Vier', 'Fünf'];
+  function fehlenNoch(n) { return n < 1 ? '' : n === 1 ? T(' Eine fehlt noch.') : T(' {0} fehlen noch.', ZAHLWORT[n] || n); }
   /* Tusch traegt den ... Guertel (deutsch im Akkusativ) */
-  function traegt(n) { return EN ? 'Tusch wears the ' + NAMEN[n - 1] + '.' : 'Tusch trägt den ' + NAMEN[n - 1].replace(/er Gürtel$/, 'en Gürtel') + '.'; }
+  function traegt(n) { return T('Tusch trägt den {0}.', akk(n)); }
 
   /* Speicher */
   function normal(s) {
@@ -92,34 +94,34 @@
   }
 
   /* Anzeige */
-  function guertelName(st) { return NAMEN[st.guertel - 1] + (st.alle && st.guertel === 7 ? T(', alle geübt', ', all practiced') : ''); }
+  function guertelName(st) { return NAMEN[st.guertel - 1] + (st.alle && st.guertel === 7 ? T(", alle geübt") : ''); }
   function zeigen(s, st) {
     if (st.guertel > 1 || s.selbsttest || Object.keys(s.geuebt).length) h.setAttribute('data-guertel', st.guertel); else h.removeAttribute('data-guertel');
     alle('[data-guertelknoten]').forEach(function (k) {
       var t = k.querySelector('.knoten__text');
       if (t) t.textContent = guertelName(st);
-      k.setAttribute('aria-label', T('Mein Dojo, ', 'My Dojo, ') + guertelName(st));
+      k.setAttribute('aria-label', T("Mein Dojo, ") + guertelName(st));
     });
     alle('.karte[data-technik], .karte-kompakt[data-technik], .dojo-liste li[data-technik]').forEach(function (k) {
       var id = k.getAttribute('data-technik'), dat = s.geuebt[id];
       k.classList.toggle('is-geuebt', !!dat);
       var stt = k.querySelector('[data-status]');
       if (stt) {
-        if (k.classList.contains('karte')) { stt.hidden = !dat; stt.textContent = dat ? T('Geübt', 'Practiced') : ''; }
-        else stt.textContent = dat ? T('geübt am ', 'practiced on ') + datumCH(dat) : T('offen', 'open');
+        if (k.classList.contains('karte')) { stt.hidden = !dat; stt.textContent = dat ? T("Geübt") : ''; }
+        else stt.textContent = dat ? T("geübt am ") + datumCH(dat) : T("offen");
       } else if (k.classList.contains('karte-kompakt')) {
         var m = k.querySelector('[data-dojo-mark]');
-        if (dat && !m) k.appendChild(el('span', { 'class': 'klein', 'data-dojo-mark': '' }, T('geübt', 'practiced')));
+        if (dat && !m) k.appendChild(el('span', { 'class': 'klein', 'data-dojo-mark': '' }, T("geübt")));
         if (!dat && m) m.parentNode.removeChild(m);
       }
     });
     alle('[data-fortschritt]').forEach(function (f) {
       var p = st.pro[(f.getAttribute('data-fortschritt') | 0) - 1];
       if (!p || !st.liste) return;
-      var text = p.total ? p.fertig + T(' von ', ' of ') + p.total + T(' geübt', ' practiced') : '';
+      var text = p.total ? p.fertig + T(" von ") + p.total + T(" geübt") : '';
       if (f.tagName === 'P') { f.textContent = text; f.hidden = !p.fertig; return; }
       var tx = f.querySelector('.fortschritt__text');
-      if (tx && p.total) tx.textContent = EN ? p.fertig + ' of ' + p.total + (p.total === 1 ? ' technique practiced' : ' techniques practiced') + (p.komplett ? '. Belt complete.' : '.') : p.fertig + ' von ' + p.total + (p.total === 1 ? ' Technik geübt' : ' Techniken geübt') + (p.komplett ? '. Gürtel komplett.' : '.');
+      if (tx && p.total) tx.textContent = (p.total === 1 ? T('{0} von {1} Technik geübt', p.fertig, p.total) : T('{0} von {1} Techniken geübt', p.fertig, p.total)) + (p.komplett ? T('. Gürtel komplett.') : '.');
       var band = f.querySelector('.fortschritt__band');
       if (!band && p.total) { band = el('div', { 'class': 'fortschritt__band', 'data-guertel-nr': p.n, 'aria-hidden': 'true' }); f.insertBefore(band, f.firstChild); }
       if (band) {
@@ -130,8 +132,8 @@
     alle('[data-dojo-stand]').forEach(function (p) {
       if (!st.liste || (!st.geuebt && !s.selbsttest)) return;
       var g = st.pro[st.guertel - 1];
-      p.textContent = st.alle ? T('Alle ' + st.gesamt + ' Techniken geübt. Tusch trägt den schwarzen Gürtel.', 'All ' + st.gesamt + ' techniques practiced. Tusch wears the black belt.')
-        : g.total ? g.fertig + T(' von ', ' of ') + g.total + T(' Techniken deines Gürtels geübt.', ' techniques of your belt practiced.') + fehlenNoch(g.total - g.fertig) + ' ' + traegt(st.guertel)
+      p.textContent = st.alle ? T("Alle {0} Techniken geübt. Tusch trägt den schwarzen Gürtel.", st.gesamt)
+        : g.total ? g.fertig + T(" von ") + g.total + T(" Techniken deines Gürtels geübt.") + fehlenNoch(g.total - g.fertig) + ' ' + traegt(st.guertel)
         : traegt(st.guertel);
     });
     alle('[data-geuebt-knopf]').forEach(function (b) { knopfZeigen(b, s); });
@@ -159,14 +161,14 @@
       var kopf = box.querySelector('h2, h3, h4');
       var ebene = kopf ? kopf.tagName.toLowerCase() : 'h3';
       box.textContent = '';
-      box.appendChild(el(ebene, null, st.alle ? T('Alle Techniken geübt', 'All techniques practiced') : T('Dein nächster Schritt', 'Your next step')));
+      box.appendChild(el(ebene, null, st.alle ? T("Alle Techniken geübt") : T("Dein nächster Schritt")));
       if (st.alle) {
-        box.appendChild(el('p', null, T('Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst, geht es im Live-Kurs weiter. Der Kurs hat einen eigenen Lehrplan.', 'You have marked every technique in the Dojo as practiced. If you want to introduce agents in your own business with guidance, the live course is the next step. The course has its own curriculum.')));
+        box.appendChild(el('p', null, T("Du hast jede Technik im Dojo als geübt markiert. Wenn du Agents mit Begleitung im eigenen Betrieb einführen willst, geht es im Live-Kurs weiter. Der Kurs hat einen eigenen Lehrplan.")));
         box.appendChild(kursZeile('naechster-schritt'));
         return;
       }
       var pk = el('p'); pk.appendChild(el('span', { 'class': 'knoten', 'data-guertel-nr': st.guertel }, NAMEN[st.guertel - 1])); box.appendChild(pk);
-      if (g.total) box.appendChild(el('p', { 'class': 'fortschritt__text' }, g.fertig + T(' von ', ' of ') + g.total + T(' Techniken deines Gürtels geübt.', ' techniques of your belt practiced.') + fehlenNoch(g.total - g.fertig)));
+      if (g.total) box.appendChild(el('p', { 'class': 'fortschritt__text' }, g.fertig + T(" von ") + g.total + T(" Techniken deines Gürtels geübt.") + fehlenNoch(g.total - g.fertig)));
       if (t) {
         var p = el('p'), a = el('a', { 'class': 'knopf knopf--primaer', href: technikUrl(t) }, nr2(t.nr) + ' ' + t.titel);
         p.appendChild(a); box.appendChild(p);
@@ -182,12 +184,12 @@
     if (!id) return;
     var dat = s.geuebt[id];
     b.hidden = false;
-    b.textContent = dat ? T('Geübt am ', 'Practiced on ') + datumCH(dat) : T('Als geübt markieren', 'Mark as practiced');
+    b.textContent = dat ? T("Geübt am ") + datumCH(dat) : T("Als geübt markieren");
     b.classList.toggle('is-ok', !!dat);
     if (dat) b.setAttribute('aria-disabled', 'true'); else b.removeAttribute('aria-disabled');
     var weg = b.parentNode.querySelector('[data-geuebt-weg]');
     if (dat && !weg) {
-      weg = el('button', { type: 'button', 'class': 'knopf knopf--leise knopf--klein', 'data-geuebt-weg': id }, T('Markierung entfernen', 'Remove mark'));
+      weg = el('button', { type: 'button', 'class': 'knopf knopf--leise knopf--klein', 'data-geuebt-weg': id }, T("Markierung entfernen"));
       b.parentNode.appendChild(d.createTextNode(' '));
       b.parentNode.appendChild(weg);
       weg.addEventListener('click', function () { markieren(id, false, b); b.focus(); });
@@ -203,11 +205,11 @@
       var ok = schreiben(s);
       zeigen(s, nachher);
       d.dispatchEvent(new CustomEvent('cn:geuebt', { detail: { id: id, geuebt: !!an } }));
-      if (!ok) { ansage(T('Dein Browser speichert nichts. Die Markierung gilt nur, bis du die Seite verlässt.', 'Your browser does not store anything. The mark only lasts until you leave the page.')); return; }
+      if (!ok) { ansage(T("Dein Browser speichert nichts. Die Markierung gilt nur, bis du die Seite verlässt.")); return; }
       var t = (L || []).filter(function (x) { return x.id === id; })[0];
       var n = t ? t.guertel : 0;
       if (an && n && !vorher.pro[n - 1].komplett && nachher.pro[n - 1].komplett) aufstieg(n, quelle);
-      else ansage(an ? T('Als geübt markiert.', 'Marked as practiced.') : T('Markierung entfernt.', 'Mark removed.'));
+      else ansage(an ? T("Als geübt markiert.") : T("Markierung entfernt."));
     });
   }
   /* Guertel-Aufstieg, Kalender und Technik des Tages (Prompt holen) stehen in dojo-extra.js, geladen bei Bedarf */
@@ -302,8 +304,8 @@
     if (e.detail.id !== id || lesen().geuebt[id] || d.querySelector('[data-geuebt-hinweis]')) return;
     var rolle = d.querySelector('.tk-inhalt .rolle');
     if (!rolle) return;
-    var p = el('p', { 'class': 'geuebt-hinweis', 'data-geuebt-hinweis': '' }, T('Ausprobiert? ', 'Tried it? '));
-    var b = el('button', { type: 'button', 'class': 'knopf knopf--klein', 'data-geuebt-knopf': id }, T('Als geübt markieren', 'Mark as practiced'));
+    var p = el('p', { 'class': 'geuebt-hinweis', 'data-geuebt-hinweis': '' }, T("Ausprobiert? "));
+    var b = el('button', { type: 'button', 'class': 'knopf knopf--klein', 'data-geuebt-knopf': id }, T("Als geübt markieren"));
     p.appendChild(b);
     rolle.parentNode.insertBefore(p, rolle.nextSibling);
     b.addEventListener('click', function () { if (b.getAttribute('aria-disabled') !== 'true') markieren(id, true, b); });
@@ -316,7 +318,7 @@
     zeigen(s, stand(s, null));
     alle('[data-geuebt-knopf]').forEach(function (b) {
       b.addEventListener('click', function () {
-        if (b.getAttribute('aria-disabled') === 'true') { ansage(T('Schon als geübt markiert.', 'Already marked as practiced.')); return; }
+        if (b.getAttribute('aria-disabled') === 'true') { ansage(T("Schon als geübt markiert.")); return; }
         var main = d.querySelector('main[data-technik]');
         var id = b.getAttribute('data-geuebt-knopf') || (main && main.getAttribute('data-technik'));
         if (id) markieren(id, true, b);
@@ -329,7 +331,7 @@
   }
 
   w.CNDojo = {
-    root: ROOT, basis: BASIS, lp: LP, en: EN, T: T, KEY: KEY, NAMEN: NAMEN, FARBEN: FARBEN, KURS: KURS, kursZeile: kursZeile, UTM: UTM,
+    root: ROOT, basis: BASIS, lp: LP, sprache: SPR, akk: akk, T: T, KEY: KEY, NAMEN: NAMEN, FARBEN: FARBEN, KURS: KURS, kursZeile: kursZeile, UTM: UTM,
     lesen: lesen, schreiben: schreiben, normal: normal, liste: liste, json: json, stand: stand, zeigen: zeigen,
     markieren: markieren, heuteIso: heuteIso, isoDatum: iso, datumCH: datumCH, tage: tage, nr2: nr2,
     el: el, alle: alle, ansage: ansage, bewegung: bewegung, technikUrl: technikUrl,
