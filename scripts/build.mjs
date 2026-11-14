@@ -819,7 +819,7 @@ function baueTechnik(t, i) {
       id: t.id, guertel: t.guertel, guertel_name: g.name, guertel_anker: g.anker,
       nr_label: t.typ === 'technik' ? `${T("Nr.")} ${pad2(t.nr)}` : `${T("Grundform")} ${t.id.toUpperCase()}`,
       nr_gross: t.typ === 'technik' ? pad2(t.nr) : `${T("Grundform")} ${t.id.toUpperCase()}`, nr_klasse: t.typ === 'technik' ? '' : ' tk__nr--wort',
-      titel: t.titel, klartitel: t.klartitel || '', moment: t.moment || '', problem: t.problem, dauer_min: t.dauer_min,
+      titel: t.titel, klartitel: t.klartitel !== t.titel ? (t.klartitel || '') : '', moment: t.moment || '', problem: t.problem, dauer_min: t.dauer_min,
       art_badge: artBadge(t), zugang_badge: zugangBadge(t, r), zugang_text: t.zugang_text || (ZUGANG[t.zugang] || {}).kurz || '',
       schnitt_zeile: t.vorher ? `      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">${T("Vorher")}</p><div class="schnitt__vorher"><p class="schnitt__zitat">${T("«")}${esc(t.vorher)}${T("»")}</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>` : '',
       schmiede: schmiedeHtml(t, 'technik'), rollen: rollenFuer(t, 'prompt'), rechner: rechnerHtml(t),
