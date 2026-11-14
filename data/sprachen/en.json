@@ -566,7 +566,9 @@
   "(ja oder nein)": "(yes or no)",
   "Keine Kunden-, Personen- oder Firmendaten im Prompt.": "No customer, personal or company data in the prompt.",
   "{0} und {1}": "{0} and {1}",
-  "dojo-vier-wochen.ics": "dojo-four-weeks.ics"
+  "dojo-vier-wochen.ics": "dojo-four-weeks.ics",
+  "Tusch! ": "Tusch! ",
+  ": ": ": "
  },
  "guertel_satz": [
   "White belt",

@@ -17,6 +17,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { typoMarkup, typoJson } from './typo.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ARGS = process.argv.slice(2);
@@ -27,6 +28,9 @@ const gibtEs = (rel) => fs.existsSync(path.join(ROOT, rel));
 const geschrieben = [];
 const warnungen = [];
 function schreibe(rel, inhalt) {
+  const sp = (rel.match(/^(?:assets\/img\/karten\/)?([a-z]{2})\//) || [])[1];
+  if (sp && SP[sp] && /\.(svg|html)$/.test(rel)) inhalt = typoMarkup(inhalt, SP[sp].typo);
+  if (sp && SP[sp] && SP[sp].typo && /\.json$/.test(rel)) inhalt = JSON.stringify(typoJson(JSON.parse(inhalt), SP[sp].typo), null, 2) + '\n';
   const ziel = path.join(ROOT, rel);
   fs.mkdirSync(path.dirname(ziel), { recursive: true });
   if (fs.existsSync(ziel) && fs.readFileSync(ziel, 'utf8') === inhalt) return;
@@ -96,6 +100,21 @@ function umbrechen(text, px, max, fett) {
   if (z) zeilen.push(z);
   return zeilen;
 }
+// Mehr Zeilen als Platz: die letzte erlaubte Zeile an der Wortgrenze kuerzen und «…» anhaengen (14.11.2026)
+function kuerzen(zeilen, n, px, max, fett) {
+  if (zeilen.length <= n) return zeilen;
+  const aus = zeilen.slice(0, n);
+  let letzte = aus[n - 1];
+  while (breite(letzte + '…', px, fett) > max && letzte.includes(' ')) letzte = letzte.slice(0, letzte.lastIndexOf(' '));
+  aus[n - 1] = letzte.replace(/[\s,.;:!?]+$/, '') + '…';
+  return aus;
+}
+// Eine Zeile: Schrift bis minPx verkleinern, reicht das nicht, an der Wortgrenze mit «…» kuerzen
+function einzeilig(text, px, max, fett, minPx) {
+  let p = px;
+  while (breite(text, p, fett) > max && p > minPx) p -= 2;
+  return { px: p, text: breite(text, p, fett) > max ? kuerzen(umbrechen(text, p, max, fett), 1, p, max, fett)[0] : text };
+}
 const DISPLAY = "Bahnschrift, 'Avenir Next Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif";
 const BODY = "'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif";
 function textZeilen(zeilen, x, y, px, abstand, attr) {
@@ -143,12 +162,13 @@ function technikKarte(t) {
   let y = 228;
   let px = 68, name = umbrechen(t.titel, px, 770, true);
   if (name.length > 2) { px = 56; name = umbrechen(t.titel, px, 770, true); }
-  teile.push(textZeilen(name.slice(0, 3), 80, y, px, px + 4, `font-family="${DISPLAY}" font-weight="700" fill="#15171B" letter-spacing="-1"`));
+  name = kuerzen(name, 3, px, 770, true);
+  teile.push(textZeilen(name, 80, y, px, px + 4, `font-family="${DISPLAY}" font-weight="700" fill="#15171B" letter-spacing="-1"`));
   y += (name.length - 1) * (px + 4);
   if (t.klartitel && t.klartitel !== t.titel) {
-    const kl = umbrechen(t.klartitel, 28, 770);
+    const kl = kuerzen(umbrechen(t.klartitel, 28, 770), 2, 28, 770);
     y += 50;
-    teile.push(textZeilen(kl.slice(0, 2), 80, y, 28, 36, `font-family="${BODY}" font-weight="600" fill="#4E525B"`));
+    teile.push(textZeilen(kl, 80, y, 28, 36, `font-family="${BODY}" font-weight="600" fill="#4E525B"`));
     y += (Math.min(kl.length, 2) - 1) * 36;
   }
   if (t.nutzen) {
@@ -157,8 +177,8 @@ function technikKarte(t) {
     const abstand = Math.round(npx * 1.32);
     y += 30;
     teile.push(`<rect x="80" y="${y}" width="6" height="${(Math.min(nz.length, 4) - 1) * abstand + npx + 6}" fill="#B4301A"/>`);
-    teile.push(textZeilen(nz.slice(0, 4), 104, y + npx, npx, abstand, `font-family="${BODY}" fill="#15171B"`));
-    if (nz.length > 4) warnungen.push(`${t.id}: Nutzen-Satz zu lang für die Karte`);
+    if (nz.length > 4) warnungen.push(`${L}:${t.id}: Nutzen-Satz zu lang für die Karte, mit «…» gekürzt`);
+    teile.push(textZeilen(kuerzen(nz, 4, npx, 760), 104, y + npx, npx, abstand, `font-family="${BODY}" fill="#15171B"`));
   }
   teile.push(tusch(902, 128, 290, BELT[t.guertel - 1]));
   teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(adresse)}</text>`);
@@ -169,10 +189,12 @@ function technikKarte(t) {
 function guertelKarte(g) {
   const teile = [wortmarke(80, 48)];
   teile.push(`<text x="80" y="170" font-family="${DISPLAY}" font-weight="700" font-size="26" letter-spacing="3" fill="#B4301A">${T("STUFE")} ${g.nr} ${T("VON")} 7</text>`);
-  teile.push(`<text x="80" y="282" font-family="${DISPLAY}" font-weight="700" font-size="104" letter-spacing="-2" fill="#15171B">${esc(g.name)}</text>`);
+  const nm = einzeilig(g.name, 104, 780, true, 64);
+  teile.push(`<text x="80" y="282" font-family="${DISPLAY}" font-weight="700" font-size="${nm.px}" letter-spacing="-2" fill="#15171B">${esc(nm.text)}</text>`);
   teile.push(`<rect x="80" y="318" width="600" height="34" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/><rect x="352" y="304" width="56" height="62" fill="${BELT[g.nr - 1]}" stroke="#8A7F6C" stroke-width="3"/>`);
-  if (g.leitwort) teile.push(`<text x="80" y="446" font-family="${DISPLAY}" font-weight="600" font-size="54" fill="#15171B">${esc(g.leitwort)}</text>`);
-  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="28" fill="#4E525B">${T("Selbsteinschätzung im Power Platform Dojo. Kein Zertifikat.")}</text>`);
+  if (g.leitwort) { const lw = einzeilig(g.leitwort, 54, 780, true, 40); teile.push(`<text x="80" y="446" font-family="${DISPLAY}" font-weight="600" font-size="${lw.px}" fill="#15171B">${esc(lw.text)}</text>`); }
+  const unter = einzeilig(T("Selbsteinschätzung im Power Platform Dojo. Kein Zertifikat."), 28, 780, false, 22);
+  teile.push(`<text x="80" y="512" font-family="${BODY}" font-size="${unter.px}" fill="#4E525B">${esc(unter.text)}</text>`);
   teile.push(tusch(880, 110, 330, BELT[g.nr - 1]));
   teile.push(`<text x="1120" y="568" text-anchor="end" font-family="${BODY}" font-size="22" fill="#4E525B">${esc(KURZ_BASIS + (L === 'de' ? '' : '/' + L))}</text>`);
   teile.push(band(g.nr));

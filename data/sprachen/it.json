@@ -58,7 +58,7 @@
  "anfuehrung_verboten": false,
  "learn": "it-it",
  "dojo": "https://powerplatformdojo.com/it/",
- "powerautomate": "https://powerautomate.ninja/en/",
+ "powerautomate": "https://powerautomate.ninja/it/",
  "guertel": [
   [
    "Cintura bianca",
@@ -573,6 +573,8 @@
   "(ja oder nein)": "(sì o no)",
   "Keine Kunden-, Personen- oder Firmendaten im Prompt.": "Niente dati di clienti, persone o aziende nel prompt.",
   "{0} und {1}": "{0} e {1}",
-  "dojo-vier-wochen.ics": "dojo-quattro-settimane.ics"
+  "dojo-vier-wochen.ics": "dojo-quattro-settimane.ics",
+  "Tusch! ": "Tusch! ",
+  ": ": ": "
  }
 }

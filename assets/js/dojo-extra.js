@@ -17,7 +17,7 @@
     guertelInfo().then(function (info) {
       var g = info.filter(function (x) { return x.nr === n; })[0] || {};
       var satz = g.erreicht_satz || (g.kannst_du ? T("Was du jetzt kannst: ") + g.kannst_du : '');
-      var kopf = 'Tusch! ' + NAMEN[n - 1] + '.';
+      var kopf = T('Tusch! ') + NAMEN[n - 1] + '.';
       var box = d.querySelector('[data-aufstieg-meldung]');
       if (!box) {
         box = el('div', { 'class': 'meldung', 'data-aufstieg-meldung': '' });
@@ -57,7 +57,7 @@
       var link = BASIS + 'techniken/#' + ANKER[gs[0] - 1];
       z.push('BEGIN:VEVENT', 'UID:dojo-woche-' + (i + 1) + '-' + D.isoDatum(mo).replace(/-/g, '') + '@kmupower.com', 'DTSTAMP:' + stamp,
         'DTSTART:' + D.isoDatum(tag).replace(/-/g, '') + 'T083000', 'DURATION:PT15M',
-        'SUMMARY:' + T("Dojo Woche ") + (i + 1) + ': ' + name,
+        'SUMMARY:' + T("Dojo Woche ") + (i + 1) + T(': ') + name,
         'DESCRIPTION:' + (drin.length ? drin.length + T(" Techniken: ") + drin.map(function (t) { return t.nr + ' ' + t.titel; }).join('\\, ') + '. ' : '') + T("Übe eine Technik pro Tag. ") + link,
         'URL:' + link, 'TRANSP:TRANSPARENT', 'END:VEVENT');
     });
@@ -84,7 +84,7 @@
     var kopf = el('div', { 'class': 'heute__kopf' });
     kopf.appendChild(el('span', { 'class': 'heute__nr', 'aria-hidden': 'true' }, D.nr2(t.nr)));
     var rechts = el('div'), ti = el(ebene, { 'class': 'heute__titel' }, t.titel);
-    ti.appendChild(el('small', null, T("Nr. ") + t.nr + ': ' + t.klartitel));
+    ti.appendChild(el('small', null, T("Nr. ") + t.nr + T(': ') + t.klartitel));
     rechts.appendChild(ti);
     var meta = el('ul', { 'class': 'metazeile' });
     var li1 = el('li'); li1.appendChild(el('span', { 'class': 'knoten', 'data-guertel-nr': t.guertel }, NAMEN[t.guertel - 1])); meta.appendChild(li1);

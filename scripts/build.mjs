@@ -14,6 +14,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { typoMarkup, typoText, typoJson, typoFehlt } from './typo.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 // Domainwechsel: nur BASE_URL umstellen. Die bisherige Basis bleibt in FRUEHERE_BASEN, damit der Build
@@ -145,8 +146,17 @@ function T(de, ...werte) {
 }
 function pad2(n) { return String(n).padStart(2, '0'); }
 function tageZwischen(a, b) { return Math.round((Date.parse(b + 'T00:00:00Z') - Date.parse(a + 'T00:00:00Z')) / 864e5); }
+// Sprache einer Ausgabedatei aus dem Pfad (fr/..., assets/data/fr/..., assets/img/karten/fr/...)
+function spracheVon(rel) { const m = rel.replace(/\\/g, '/').match(/^(?:assets\/(?:data|img\/karten)\/)?([a-z]{2})\//); return m && SP[m[1]] ? m[1] : 'de'; }
 function schreibe(rel, inhalt) {
   if (MODUS === 'pruefen') return;
+  // Typografie der Sprache (Franzoesisch: geschuetztes Leerzeichen vor : ; ? !) auf der fertigen Ausgabe, auch wo der Code Zeichen anhaengt
+  const regel = SP[spracheVon(rel)].typo;
+  if (regel) {
+    if (/\.(html|xml|svg)$/.test(rel)) inhalt = typoMarkup(inhalt, regel);
+    else if (/\.json$/.test(rel)) inhalt = JSON.stringify(typoJson(JSON.parse(inhalt), regel));
+    else if (/\.ics$/.test(rel)) inhalt = inhalt.split('\r\n').map(z => (/^(SUMMARY|DESCRIPTION):/.test(z) ? z.replace(/^(\w+:)(.*)$/, (m, k, v) => k + typoText(v, regel)) : z)).join('\r\n');
+  }
   const ziel = path.join(ROOT, rel);
   fs.mkdirSync(path.dirname(ziel), { recursive: true });
   fs.writeFileSync(ziel, inhalt);
@@ -940,8 +950,7 @@ ${drin.length ? `<ul>${drin.map(t => `<li data-technik="${t.id}" data-guertel-nr
       }).join('\n')}</div>`;
       const x = ersetzeMarker(neu, 'DOJO-LISTE', inhalt, datei); if (x !== null) neu = x;
     }
-    if (neu !== html) schreibe(datei, neu);
-    else geschrieben.push(datei);
+    schreibe(datei, neu);
   }
 }
 
@@ -990,7 +999,7 @@ function baueSkriptTexte() {
   for (const sp of SPRACHEN.filter(x => x !== 'de')) {
     const j = SP[sp];
     const meta = { code: sp, pfad: j.pfad, datum: j.datum, monate: j.monate, zahl_locale: j.zahl_locale, guertel: j.guertel.map(g => g[0]), guertel_satz: j.guertel_satz || j.guertel.map(g => g[0]), guertel_kurz: j.guertel.map(g => g[1]), zahlwoerter: j.zahlwoerter || [], profil_felder: j.profil_felder || {} };
-    schreibe(`assets/js/texte/${sp}.js`, `/* Power Platform Dojo: Texte der Skripte (${j.name}). Erzeugt von scripts/build.mjs aus data/sprachen/${sp}.json, nicht hier bearbeiten. */\nwindow.CN_TEXTE = ${JSON.stringify({ meta, texte: j.js || {} })};\n`);
+    schreibe(`assets/js/texte/${sp}.js`, `/* Power Platform Dojo: Texte der Skripte (${j.name}). Erzeugt von scripts/build.mjs aus data/sprachen/${sp}.json, nicht hier bearbeiten. */\nwindow.CN_TEXTE = ${JSON.stringify({ meta, texte: typoJson(j.js || {}, j.typo) })};\n`);
   }
 }
 /* Sitemap mit allen Sprachen und hreflang, robots.txt, llms.txt (nach beiden Durchgaengen) */
@@ -1032,6 +1041,7 @@ function baueGemeinsam() {
       grund: GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): ${T('Stand')} ${datumCH(t.geprueft_am)}.`),
       voll: sortiert.map(t => volltext(t)), titelT: T('Techniken'), titelG: T('Grundformen')
     };
+    teil[sp] = typoJson(teil[sp], SP[sp].typo);
   }
   setzeSprache('de');
   const kopf = [`# ${SITE_VOLL}`, '',
@@ -1219,6 +1229,7 @@ function abschluss() {
     if (/<[a-z][^>]*\son[a-z]+=/i.test(html)) melde(`${wo}: on…-Attribut`);
     for (const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)) if (!/\ssrc=/.test(m[1]) && !/application\/ld\+json/.test(m[1]) && m[2].trim()) melde(`${wo}: Inline-Skript`);
     const spRel = (rel.match(SPRACH_PRAEFIX) || [])[1] || 'de';
+    if (SP[spRel].typo && typoMarkup(html, SP[spRel].typo) !== html) melde(`${wo}: Typografie ${spRel} fehlt (geschütztes Leerzeichen vor ${SP[spRel].typo.zeichen})`);
     const sollLang = SP[spRel].html_lang;
     if (!new RegExp(`<html[^>]*lang="${sollLang}"`).test(html)) melde(`${wo}: lang="${sollLang}" fehlt`);
     // Englisch: keine deutschen Anfuehrungszeichen im sichtbaren Text, Umschalter DE/EN auf jeder Seite mit Rahmen

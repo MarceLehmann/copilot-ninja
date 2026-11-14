@@ -146,7 +146,7 @@
       var cb = el('input', { type: 'checkbox', 'data-geuebt-toggle': id });
       lab.appendChild(cb);
       lab.appendChild(d.createTextNode(T(" geübt")));
-      lab.appendChild(el('span', { 'class': 'sr-only' }, ': ' + (a ? a.textContent : id)));
+      lab.appendChild(el('span', { 'class': 'sr-only' }, T(': ') + (a ? a.textContent : id)));
       li.appendChild(lab);
       cb.addEventListener('change', function () { D.markieren(id, cb.checked, li.closest('.dojo-liste__guertel')); });
     });

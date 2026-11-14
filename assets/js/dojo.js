@@ -225,7 +225,7 @@
   }
   function aufstieg(n, quelle) {
     d.dispatchEvent(new CustomEvent('cn:guertel', { detail: { guertel: n, erreicht: true } }));
-    extra().then(function (D) { if (D.aufstieg) D.aufstieg(n, quelle); else ansage('Tusch! ' + NAMEN[n - 1] + '.'); });
+    extra().then(function (D) { if (D.aufstieg) D.aufstieg(n, quelle); else ansage(T('Tusch! ') + NAMEN[n - 1] + '.'); });
   }
 
   /* Technik des Tages: gleiche Formel wie der Build, nach lokalem Datum */

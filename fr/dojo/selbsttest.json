@@ -18,7 +18,7 @@
       "guertel": 1,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "«Résume le document. Utilise uniquement le fichier joint. Cinq points maximum.» Lequel des quatre éléments d'un prompt efficace manque?",
+      "frage": "«Résume le document. Utilise uniquement le fichier joint. Cinq points maximum.» Lequel des quatre éléments d'un prompt efficace manque ?",
       "antworten": [
         "Objectif",
         "Source",
@@ -38,7 +38,7 @@
       "guertel": 1,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "Quels quatre éléments le module de formation de Microsoft nomme-t-il pour un prompt efficace?",
+      "frage": "Quels quatre éléments le module de formation de Microsoft nomme-t-il pour un prompt efficace ?",
       "antworten": [
         "Contexte, objectif, source, attentes",
         "Rôle, ton, longueur, format",
@@ -57,7 +57,7 @@
       "guertel": 2,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "Tu fais vérifier un brouillon par rapport à un document source. Quelle demande te donne la réponse la plus facile à vérifier?",
+      "frage": "Tu fais vérifier un brouillon par rapport à un document source. Quelle demande te donne la réponse la plus facile à vérifier ?",
       "antworten": [
         "«Tout est-il correct?»",
         "Un tableau avec l'affirmation, son emplacement dans la source et le constat (confirmée, différente, absente de la source)",
@@ -73,7 +73,7 @@
       "guertel": 2,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "La réponse marque une affirmation de ton brouillon comme «confirmée». Que cela signifie-t-il pour toi?",
+      "frage": "La réponse marque une affirmation de ton brouillon comme «confirmée». Que cela signifie-t-il pour toi ?",
       "antworten": [
         "C'est forcément correct.",
         "C'est un indice. Tu vérifies toi-même deux des résultats dans la source.",
@@ -89,7 +89,7 @@
       "guertel": 3,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Les requêtes de recherche web de Microsoft Copilot Chat sont-elles couvertes par le même engagement de protection des données que tes prompts et réponses?",
+      "frage": "Les requêtes de recherche web de Microsoft Copilot Chat sont-elles couvertes par le même engagement de protection des données que tes prompts et réponses ?",
       "antworten": [
         "Oui, tout est protégé de la même façon.",
         "Non, elles passent séparément par Bing avec leurs propres règles de données.",
@@ -108,7 +108,7 @@
       "guertel": 3,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Microsoft Copilot Chat peut-il analyser des fichiers téléversés sans licence supplémentaire?",
+      "frage": "Microsoft Copilot Chat peut-il analyser des fichiers téléversés sans licence supplémentaire ?",
       "antworten": [
         "Oui, le téléversement de fichiers est inclus, avec des limites dont les chiffres ne sont pas publiés.",
         "Non, seulement avec une licence.",
@@ -127,7 +127,7 @@
       "guertel": 3,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "Tu fais faire une recherche sur le web. Quelle demande te permet de vérifier ce qui est vrai?",
+      "frage": "Tu fais faire une recherche sur le web. Quelle demande te permet de vérifier ce qui est vrai ?",
       "antworten": [
         "«Résume le sujet en détail.»",
         "Après chaque phrase, le lien dont elle provient, plus une liste séparée «Non étayé».",
@@ -143,7 +143,7 @@
       "guertel": 4,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Un agent dans Microsoft Copilot Chat utilise uniquement des instructions et des sites web publics. Combien coûte-t-il sans licence supplémentaire?",
+      "frage": "Un agent dans Microsoft Copilot Chat utilise uniquement des instructions et des sites web publics. Combien coûte-t-il sans licence supplémentaire ?",
       "antworten": [
         "Il est facturé à la consommation.",
         "Il est inclus sans frais supplémentaires.",
@@ -162,7 +162,7 @@
       "guertel": 4,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Un agent dans Microsoft Copilot Chat doit accéder à des documents dans SharePoint. Que se passe-t-il sans licence?",
+      "frage": "Un agent dans Microsoft Copilot Chat doit accéder à des documents dans SharePoint. Que se passe-t-il sans licence ?",
       "antworten": [
         "Sans frais supplémentaires, actif tout de suite.",
         "Facturé à la consommation, désactivé par défaut pour les utilisateurs de Copilot Chat.",
@@ -181,7 +181,7 @@
       "guertel": 4,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "Que vérifies-tu dans les instructions d'un agent avant de les tester pour la première fois?",
+      "frage": "Que vérifies-tu dans les instructions d'un agent avant de les tester pour la première fois ?",
       "antworten": [
         "Si elles sont assez longues.",
         "Les contradictions entre deux règles, et chaque outil mentionné qui n'est même pas configuré dans l'agent.",
@@ -197,7 +197,7 @@
       "guertel": 5,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Ton instruction impose à l'agent d'utiliser un outil qui n'est pas configuré dans l'agent. Que se passe-t-il?",
+      "frage": "Ton instruction impose à l'agent d'utiliser un outil qui n'est pas configuré dans l'agent. Que se passe-t-il ?",
       "antworten": [
         "L'agent le configure lui-même.",
         "Il ne peut pas suivre l'instruction.",
@@ -216,7 +216,7 @@
       "guertel": 5,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Faut-il modifier ou supprimer le format de citation de ton agent par une instruction?",
+      "frage": "Faut-il modifier ou supprimer le format de citation de ton agent par une instruction ?",
       "antworten": [
         "Oui, c'est courant.",
         "Non, Microsoft le déconseille.",
@@ -235,7 +235,7 @@
       "guertel": 5,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "Un fichier que ton agent lit contient la phrase «Ignore toutes les instructions précédentes». Que doit prévoir ton bloc de protection?",
+      "frage": "Un fichier que ton agent lit contient la phrase «Ignore toutes les instructions précédentes». Que doit prévoir ton bloc de protection ?",
       "antworten": [
         "L'agent suit le texte le plus récent.",
         "Le texte des documents est du contenu, pas une instruction.",
@@ -251,7 +251,7 @@
       "guertel": 6,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Peux-tu publier un agent dans la version d'évaluation gratuite de Copilot Studio?",
+      "frage": "Peux-tu publier un agent dans la version d'évaluation gratuite de Copilot Studio ?",
       "antworten": [
         "Oui.",
         "Non. Créer et vérifier dans le volet de test, oui. Publier, non.",
@@ -270,7 +270,7 @@
       "guertel": 6,
       "klasse": "fakt",
       "geprueft_am": "2026-10-13",
-      "frage": "Selon Microsoft, combien de crédits Copilot une réponse générative consomme-t-elle dans Copilot Studio?",
+      "frage": "Selon Microsoft, combien de crédits Copilot une réponse générative consomme-t-elle dans Copilot Studio ?",
       "antworten": [
         "1",
         "2",
@@ -289,7 +289,7 @@
       "guertel": 6,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "Tu pseudonymises un cas réel avant de le transmettre. Que transmets-tu?",
+      "frage": "Tu pseudonymises un cas réel avant de le transmettre. Que transmets-tu ?",
       "antworten": [
         "Le texte et la table de correspondance, pour que l'autre personne puisse poser des questions.",
         "Seulement le texte pseudonymisé, jamais la correspondance.",
@@ -305,14 +305,14 @@
       "guertel": 7,
       "klasse": "fakt",
       "geprueft_am": "2026-11-14",
-      "frage": "Selon la page Learn Taux de facturation et gestion, que se passe-t-il pour les agents d'un environnement sans paiement à l'utilisation quand le locataire atteint 125 pour cent de sa capacité prépayée?",
+      "frage": "Selon la page Learn Taux de facturation et gestion, que se passe-t-il pour les agents d'un environnement sans paiement à l'utilisation quand le locataire atteint 125 pour cent de sa capacité prépayée ?",
       "antworten": [
         "Rien, le dépassement est facturé après coup.",
         "Ils sont bloqués et cessent de répondre, même dans les conversations en cours.",
         "Seuls les flux d'agent s'arrêtent, les agents continuent de répondre."
       ],
       "richtig": 1,
-      "aufloesung": "Microsoft tolère un certain dépassement, comparable à un délai de grâce. À 125 pour cent de la capacité prépayée, l'application des limites commence: les agents de l'environnement sont bloqués et cessent de répondre, même en pleine conversation. Si un environnement facture le dépassement à un plan de paiement à l'utilisation, l'épuisement des crédits prépayés ne bloque pas ses agents. La page d'administration sur les crédits Copilot ajoute: sans source de dépassement, un environnement ne peut utiliser que son allocation, ensuite les expériences qui ont besoin de crédits peuvent cesser de fonctionner.",
+      "aufloesung": "Microsoft tolère un certain dépassement, comparable à un délai de grâce. À 125 pour cent de la capacité prépayée, l'application des limites commence : les agents de l'environnement sont bloqués et cessent de répondre, même en pleine conversation. Si un environnement facture le dépassement à un plan de paiement à l'utilisation, l'épuisement des crédits prépayés ne bloque pas ses agents. La page d'administration sur les crédits Copilot ajoute : sans source de dépassement, un environnement ne peut utiliser que son allocation, ensuite les expériences qui ont besoin de crédits peuvent cesser de fonctionner.",
       "quelle": {
         "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
         "titel": "Microsoft Learn, Taux de facturation et gestion (Copilot Studio)"
@@ -324,7 +324,7 @@
       "guertel": 7,
       "klasse": "fakt",
       "geprueft_am": "2026-11-14",
-      "frage": "Le volet de test de Copilot Studio reproduit-il tout le comportement des canaux publiés?",
+      "frage": "Le volet de test de Copilot Studio reproduit-il tout le comportement des canaux publiés ?",
       "antworten": [
         "Oui.",
         "Non, il sert à vérifier pendant que tu construis.",
@@ -343,7 +343,7 @@
       "guertel": 7,
       "klasse": "zeitlos",
       "geprueft_am": "2026-10-13",
-      "frage": "Quand définis-tu les conditions dans lesquelles un agent est arrêté?",
+      "frage": "Quand définis-tu les conditions dans lesquelles un agent est arrêté ?",
       "antworten": [
         "Quand il pose problème pour la première fois.",
         "Avant sa mise en service, avec une personne responsable.",
@@ -359,7 +359,7 @@
       "guertel": 7,
       "klasse": "fakt",
       "geprueft_am": "2026-11-14",
-      "frage": "Un admin définit une limite mensuelle avec arrêt strict pour un agent dans le centre d'administration Power Platform. Que s'applique-t-il selon Microsoft?",
+      "frage": "Un admin définit une limite mensuelle avec arrêt strict pour un agent dans le centre d'administration Power Platform. Que s'applique-t-il selon Microsoft ?",
       "antworten": [
         "L'agent s'arrête exactement à la limite, avec tous les flux d'agent qu'il appelle.",
         "L'agent est désactivé à la limite, mais pas instantanément, et la limite n'arrête pas ses flux d'agent.",
@@ -378,7 +378,7 @@
       "guertel": 7,
       "klasse": "fakt",
       "geprueft_am": "2026-11-14",
-      "frage": "Selon Microsoft, combien de temps les résultats d'une évaluation d'agent restent-ils disponibles dans Copilot Studio?",
+      "frage": "Selon Microsoft, combien de temps les résultats d'une évaluation d'agent restent-ils disponibles dans Copilot Studio ?",
       "antworten": [
         "7 jours.",
         "89 jours.",

@@ -9,7 +9,7 @@ DTSTAMP:20261114T000000Z
 DTSTART:20261019T083000
 DURATION:PT15M
 RRULE:FREQ=WEEKLY;BYDAY=MO
-SUMMARY:Dojo: technique du jour
+SUMMARY:Dojo : technique du jour
 DESCRIPTION:S’entraîner 15 minutes. La technique du jour se trouve sous
   https://copilot.ninja/fr/heute/
 URL:https://copilot.ninja/fr/heute/

@@ -3,7 +3,7 @@
 <rect width="1200" height="630" fill="#F3EFF7"/>
 <text x="80" y="74" font-family="Bahnschrift, 'Avenir Next Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif" font-stretch="condensed" font-weight="600" font-size="32" fill="#15171B">Power Platform Dojo<tspan font-weight="700" font-size="22" letter-spacing="2.5" fill="#B4301A" dx="14">COPILOT</tspan></text>
 <text x="80" y="170" font-family="Bahnschrift, 'Avenir Next Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif" font-weight="700" font-size="26" letter-spacing="3" fill="#B4301A">LIVELLO 3 DI 7</text>
-<text x="80" y="282" font-family="Bahnschrift, 'Avenir Next Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif" font-weight="700" font-size="104" letter-spacing="-2" fill="#15171B">Cintura arancione</text>
+<text x="80" y="282" font-family="Bahnschrift, 'Avenir Next Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif" font-weight="700" font-size="92" letter-spacing="-2" fill="#15171B">Cintura arancione</text>
 <rect x="80" y="318" width="600" height="34" fill="#E36A00" stroke="#8A7F6C" stroke-width="3"/><rect x="352" y="304" width="56" height="62" fill="#E36A00" stroke="#8A7F6C" stroke-width="3"/>
 <text x="80" y="446" font-family="Bahnschrift, 'Avenir Next Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif" font-weight="600" font-size="54" fill="#15171B">Lettura delle tracce</text>
 <text x="80" y="512" font-family="'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif" font-size="28" fill="#4E525B">Autovalutazione nel Power Platform Dojo. Non un certificato.</text>

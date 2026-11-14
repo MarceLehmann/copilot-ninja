@@ -143,7 +143,7 @@
             a.href = BASIS + 'techniken/' + t.slug + '/';
             a.textContent = (t.nr ? T("Nr. ") + t.nr + ' ' : '') + t.titel;
             li.appendChild(a);
-            if (t.klartitel && t.klartitel !== t.titel) li.appendChild(d.createTextNode(': ' + t.klartitel));
+            if (t.klartitel && t.klartitel !== t.titel) li.appendChild(d.createTextNode(T(': ') + t.klartitel));
             liste.appendChild(li);
           });
           if (!liste.children.length) {
