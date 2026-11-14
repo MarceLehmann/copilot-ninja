@@ -1,0 +1,20 @@
+<main id="main">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Fil d’Ariane"><ol><li><a href="../">Accueil</a></li><li><a href="../techniken/">Techniques</a></li><li><a href="./" aria-current="page">Technique du jour</a></li></ol></nav>
+    <header class="sektion--eng">
+      <span class="label">Aujourd’hui au Dojo</span>
+      <h1 id="h1">Technique du jour</h1>
+      <p class="lead">La même technique pour tout le monde le même jour. Mets cette page en favori ou ajoute le créneau du lundi à ton calendrier.</p>
+      <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>15 minutes chaque lundi dans ton calendrier</a><a class="knopf knopf--leise" href="../techniken/">Toutes les techniques</a></p>
+    </header>
+    <div class="heute sektion--eng">
+      <div data-heute data-heute-datum="{{build_datum}}">{{{heute_inhalt}}}</div>
+      <aside class="heute__seite" aria-label="Ton parcours">
+        <div class="naechster" data-naechster-schritt>
+          <h2>Ta prochaine étape</h2>
+          <p>Marque une technique comme pratiquée. Ensuite, ce cadre montre quelle technique de ta ceinture vient après.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="fr" data-seite="technik">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/dossier-vor-der-besprechung/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/techniken/dossier-vor-der-besprechung/">
+<link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/dossier-vor-der-besprechung/">
+<link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/dossier-vor-der-besprechung/">
+<link rel="alternate" type="application/atom+xml" title="Power Platform Dojo : nouvelles techniques" href="../../feed.xml">
+<link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/technik.css">
+<link rel="stylesheet" href="../../../assets/css/druck.css" media="print">
+<script src="../../../assets/js/theme-init.js"></script>
+<script src="../../../assets/js/texte/fr.js" defer></script>
+<script src="../../../assets/js/core.js" defer></script>
+<script src="../../../assets/js/dojo.js" defer></script>
+<script src="../../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="Power Platform Dojo build">
+<title>Dossier avant une réunion | Copilot Dojo</title>
+<meta name="description" content="Dossier avant une réunion. Prompt pour Microsoft Copilot à copier, avec source Microsoft Learn et date de vérification. Avant un rendez-vous client.">
+<link rel="canonical" href="https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Power Platform Dojo · Copilot">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La reconnaissance : Dossier avant une réunion">
+<meta property="og:description" content="Qui a promis quoi à qui, rassemblé à partir des e-mails, des conversations et des notes, sans que tu ouvres un seul dossier.">
+<meta property="og:url" content="https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/">
+<meta property="og:image" content="https://copilot.ninja/assets/img/karten/fr/dossier-vor-der-besprechung.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Technique 08 : La reconnaissance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La reconnaissance : Dossier avant une réunion">
+<meta name="twitter:description" content="Qui a promis quoi à qui, rassemblé à partir des e-mails, des conversations et des notes, sans que tu ouvres un seul dossier.">
+<meta name="twitter:image" content="https://copilot.ninja/assets/img/karten/fr/dossier-vor-der-besprechung.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://copilot.ninja/fr/#website",
+      "name": "Power Platform Dojo",
+      "alternateName": "Power Platform Dojo",
+      "url": "https://copilot.ninja/fr/",
+      "inLanguage": "fr",
+      "description": "Techniques ninja pour Microsoft Copilot Chat et Copilot Studio, avec source et date de vérification. Site indépendant, sans lien avec Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/#technik",
+      "headline": "La reconnaissance: Dossier avant une réunion",
+      "name": "La reconnaissance",
+      "url": "https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/",
+      "inLanguage": "fr",
+      "description": "Qui a promis quoi à qui, rassemblé à partir des e-mails, des conversations et des notes, sans que tu ouvres un seul dossier.",
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "citation": [
+        "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview",
+        "https://learn.microsoft.com/fr-fr/copilot/overview"
+      ],
+      "isPartOf": {
+        "@id": "https://copilot.ninja/fr/techniken/#seite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://copilot.ninja/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Techniques",
+          "item": "https://copilot.ninja/fr/techniken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "La reconnaissance",
+          "item": "https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="Power Platform Dojo, Copilot, page d’accueil"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Techniques</a></li>
+        <li><a href="../../pruefung/" data-nav="pruefung">Examen de ceinture</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Test de licence</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">Mon Dojo</a></li>
+        <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Choisir la langue, actuelle : Français">FR</summary><ul class="sprachen__liste"><li><a href="../../../techniken/dossier-vor-der-besprechung/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/techniken/dossier-vor-der-besprechung/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/techniken/dossier-vor-der-besprechung/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/techniken/dossier-vor-der-besprechung/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Mode sombre" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../../techniken/" aria-current="true">Techniques</a></li>
+      <li><a href="../../pruefung/">Examen de ceinture</a></li>
+      <li><a href="../../gratis/">Test de licence</a></li>
+      <li><a href="../../heute/">Technique du jour</a></li>
+      <li><a href="../../dojo/">Mon Dojo</a></li>
+      <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      <li><a href="../../ueber/">À propos</a></li>
+      <li><a href="https://powerautomate.ninja/fr/" rel="noopener">Dojo pour Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+      <li><a href="../../gratis/nachschlagen/">Copilot sans licence supplémentaire : chaque condition avec sa source</a></li>
+      <li><a href="../../dojo/profil/">Profil et ta propre technique</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Rechercher des techniques</h2>
+    <label for="suche-feld" class="sr-only">Terme de recherche</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Résultats"></ul>
+  <p class="suche__leer" hidden>Aucune technique trouvée. Essaie compte rendu, contrat ou agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-technik="t08" data-guertel-nr="2">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Fil d’Ariane"><ol><li><a href="../../">Accueil</a></li><li><a href="../">Techniques</a></li><li><a href="../#gelber-guertel">Ceinture jaune</a></li><li><a href="./" aria-current="page">N° 08</a></li></ol></nav>
+    <header class="tk">
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="2">Ceinture jaune</span></li>
+        <li><a class="zugang zugang--lizenz" href="../../gratis/nachschlagen/#organisationsdaten"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="5.5" cy="8" r="3"/><path d="M8.5 8H15M12.5 8v2.5M14.5 8v2"/></svg>Avec licence pour Microsoft Copilot</a></li>
+        <li><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span></li>
+        <li class="tk__nr">N° 08</li>
+        <li><span>env. 5 min</span></li>
+      </ul>
+      <h1 id="h1">La reconnaissance<small>Dossier avant une réunion</small></h1>
+      <p class="tk__moment">Avant un rendez-vous client</p>
+    </header>
+
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">La situation</h2>
+      <p class="abschnitt__problem">Demain vient le client avec qui e-mails, conversations et procès-verbaux circulent depuis des mois. Qui a promis quoi à qui est dispersé à de nombreux endroits.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">La coupe</h2>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Avant</p><div class="schnitt__vorher"><p class="schnitt__zitat">«Résume-moi tout sur la société Muster SA.»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <p class="label">Après</p>
+<details class="schmiede-klappe" data-nur-js><summary>Adapte-le pour toi</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Rien ne quitte ton navigateur.</p></div>
+<div class="schmiede__feld"><label for="technik-f1">Réunion</label><input id="technik-f1" type="text" data-ph-feld="Réunion" autocomplete="off" aria-describedby="technik-f1-h"><small id="technik-f1-h">p. ex. titre de la réunion</small></div>
+<div class="schmiede__feld"><label for="technik-f2">Date</label><input id="technik-f2" type="text" data-ph-feld="Date" autocomplete="off"></div>
+<div class="schmiede__feld"><label for="technik-f3">Interlocuteur</label><input id="technik-f3" type="text" data-ph-feld="Interlocuteur" autocomplete="off" aria-describedby="technik-f3-h"><small id="technik-f3-h">p. ex. personne ou entreprise</small></div>
+<div class="schmiede__feld"><label for="technik-f4">Période</label><input id="technik-f4" type="text" data-ph-feld="Période" autocomplete="off" aria-describedby="technik-f4-h"><small id="technik-f4-h">p. ex. les trois derniers mois</small></div>
+</div></details>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Prompt à copier</p></div>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Objectif :</span> Prépare-moi à la réunion <span class="ph" data-ph="Réunion">[Réunion, p. ex. titre de la réunion]</span> du <span class="ph" data-ph="Date">[Date]</span> avec <span class="ph" data-ph="Interlocuteur">[Interlocuteur, p. ex. personne ou entreprise]</span>.</mark>
+
+<mark class="teil teil--quelle"><span class="teil__label">Source :</span> Mes e-mails, conversations, réunions et fichiers concernant <span class="ph" data-ph="Interlocuteur">[Interlocuteur, p. ex. personne ou entreprise]</span> sur <span class="ph" data-ph="Période">[Période, p. ex. les trois derniers mois]</span>.</mark>
+
+<mark class="teil teil--erwartung"><span class="teil__label">Attentes :</span>
+1. La situation en trois phrases.
+2. Les engagements en cours : ce que j'ai promis et ce que l'autre partie a promis, chacun avec la date et la source.
+3. Les sujets restés ouverts lors du dernier contact.
+4. Deux questions avec lesquelles je peux ouvrir la réunion.
+Signale chaque information qui ne repose que sur une seule source.</mark></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copié. Colle-le maintenant dans Microsoft Copilot Chat." data-nur-js>Copier le prompt</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Technique du Power Platform Dojo : copilot.ninja/fr/8&#10;Source : Microsoft Learn, état au 15 octobre 2026" data-nur-js>Transmettre</button><p class="rolle__status" role="status"></p></div>
+</div>
+      <p class="rolle__fallback">Avec licence pour Microsoft Copilot. Sans bouton de copie : sélectionne le texte et copie-le avec Ctrl+C.</p>
+    </section>
+
+
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">Comment l’utiliser</h2>
+      <ol class="schritte"><li>Ouvre Microsoft Copilot avec licence, remplis les champs, envoie.</li><li>Compare les engagements en cours avec les sources liées.</li><li>Les informations qui ne reposent que sur une source, confirme-les avant le rendez-vous ou laisse-les de côté.</li><li>Sans licence : importe les e-mails ou procès-verbaux les plus importants sous forme de fichier et remplace dans la ligne «Source» par «les fichiers joints».</li></ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">Comment reconnaître une bonne réponse</h2>
+      <ul class="pruefliste"><li>Une situation en trois phrases.</li><li>Les engagements des deux parties avec date et source.</li><li>Les informations marquées qui ne reposent que sur une source.</li><li>Deux questions d'ouverture.</li></ul>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-probe">
+      <h2 id="h-probe">L’épreuve</h2>
+      <p class="probe">Mesure le temps de préparation par rendez-vous client, pour cinq rendez-vous avec et cinq sans dossier.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Limites</h2>
+      <ul class="arrow-list prose"><li>Microsoft 365 Copilot (Premium) offre avec l'extension un accès large aux données de l'organisation via Graph et Work IQ. Sans extension, il reste des exceptions : Copilot Chat dans Outlook dans les scénarios pris en charge, les contenus importés ou collés et les agents avec accès autorisé.</li><li>Selon Microsoft, la réponse ne voit que les contenus auxquels tu as accès.</li><li>Les accords oraux sans note manquent dans le dossier.</li></ul>
+    </section>
+
+
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Sources</h2>
+      <p class="quelle"><a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ?</a>, <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat</a>. État au <time datetime="2026-10-15">15 octobre 2026</time>.</p>
+
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Marquer comme pratiquée</button></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Transmettre</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="https://www.linkedin.com/feed/?shareActive=true&amp;text=Technique%208%20du%20Power%20Platform%20Dojo%3A%20La%20reconnaissance.%20Avant%20le%20rendez-vous%20client%2C%20les%20engagements%20en%20cours%20des%20deux%20parties%20avec%20date%20et%20source.%20%C3%80%20copier%20librement%2C%20avec%20la%20source%20chez%20Microsoft%20Learn.%0A%0Ahttps%3A%2F%2Fcopilot.ninja%2Ffr%2Ftechniken%2Fdossier-vor-der-besprechung%2F" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Partager sur LinkedIn</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/" hidden>Partager</button>
+        <a class="knopf knopf--klein" href="../../../assets/img/karten/fr/dossier-vor-der-besprechung.png" download>Télécharger l’image</a>
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Texte copié. Colle-le dans ton post." data-nur-js>Copier le texte pour ton post</button>
+        <p class="rolle__status" role="status"></p>
+      </div>
+      <details class="einklapp">
+        <summary>Texte proposé pour ton post</summary>
+        <pre class="code" id="teilen-text">Technique 8 du Power Platform Dojo : La reconnaissance. Avant le rendez-vous client, les engagements en cours des deux parties avec date et source. À copier librement, avec la source chez Microsoft Learn.
+
+https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/</pre>
+      </details>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-kette">
+      <h2 id="h-kette">Combo</h2>
+      <div class="kette">
+        <div><p class="label">Vient de</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t04" data-guertel-nr="1"><span class="karte-kompakt__nr">04</span><a class="karte-kompakt__link" href="../../techniken/nach-den-ferien-lagebericht/">Le rapport d'éclaireur</a><span class="klein">Qu'ai-je manqué pendant mes vacances</span><a class="zugang zugang--lizenz" href="../../gratis/nachschlagen/#organisationsdaten"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="5.5" cy="8" r="3"/><path d="M8.5 8H15M12.5 8v2.5M14.5 8v2"/></svg>Avec licence</a></li></ul></div>
+        <div><p class="label">Suite avec</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t05" data-guertel-nr="2"><span class="karte-kompakt__nr">05</span><a class="karte-kompakt__link" href="../../techniken/text-aus-empfaengersicht-angreifen/">L'adversaire dans le miroir</a><span class="klein">Attaquer son propre texte du point de vue du destinataire</span><a class="zugang zugang--frei" href="../../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a></li></ul></div>
+      </div>
+    </section>
+
+    <nav class="blaettern" aria-label="Autres techniques">
+<a href="../../techniken/pre-mortem-fuer-projekte/" rel="prev"><span>Technique précédente</span>07 Le regard depuis la fin</a>
+<a href="../../techniken/tabelle-pruefen/" rel="next"><span>Technique suivante</span>G3 Vérifier un tableau pour repérer les anomalies</a>
+    </nav>
+<p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement ? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=technik-8" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p>
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copié. Colle-le maintenant dans Microsoft Copilot Chat." data-nur-js>Copier le prompt</button>
+    <a class="knopf knopf--klein" href="../../techniken/tabelle-pruefen/">Technique suivante</a>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__klar">Site indépendant, sans lien avec Microsoft.</p>
+        <p>Un projet de Marcel Lehmann. En savoir plus : <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+        <p>Techniques ninja pour Microsoft Copilot Chat et Copilot Studio. Chacune avec une source Microsoft Learn. Sans inscription. Les visites sont comptées sans cookies ; seuls des totaux sans données personnelles sont enregistrés (GoatCounter). Ta progression reste dans ton navigateur.</p>
+        <p class="beitragen">Tu connais une technique qui manque ici ? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20pour%20le%20Dojo&amp;body=Titre%20de%20la%20technique%3A%0A%0AProbl%C3%A8me%20qu%E2%80%99elle%20r%C3%A9sout%3A%0A%0APrompt%20ou%20guide%3A%0A%0ALimites%3A%0A%0ASource%20Microsoft%20Learn%3A%0A%0APuis-je%20te%20nommer%20comme%20exp%C3%A9diteur%3F%20(oui%20ou%20non)%0A%0AMerci%20de%20ne%20mettre%20aucune%20donn%C3%A9e%20de%20client%2C%20de%20personne%20ou%20d%E2%80%99entreprise%20dans%20le%20prompt.">Écris-moi.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">Toutes les techniques</a></li>
+          <li><a href="../../pruefung/">Examen de ceinture</a></li>
+          <li><a href="../../gratis/">Microsoft Copilot est-il gratuit ?</a></li>
+          <li><a href="../../heute/">Technique du jour</a></li>
+          <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+          <li><a href="../../kalender/montag.ics" download>15 minutes chaque lundi dans ton calendrier</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Infos</h2>
+        <ul>
+          <li><a href="../../ueber/">À propos du Dojo</a></li>
+          <li><a href="../../impressum/">Mentions légales</a></li>
+          <li><a href="../../datenschutz/">Protection des données</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls (en allemand)</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Plus de disciplines : <a href="https://powerautomate.ninja/fr/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage</a>, <a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
+    </div>
+    <div class="fuss__recht">
+      <p>Pas une offre de Microsoft. Site indépendant de Marcel Lehmann, non exploité, non sponsorisé et non soutenu par Microsoft. Microsoft, les noms de produits de la Power Platform (dont Power Apps, Power Automate et Copilot Studio) et Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word et Work IQ sont des marques du groupe de sociétés Microsoft. GitHub et GitHub Copilot sont des marques de GitHub, Inc.</p>
+      <p>Pas de cookies, pas de profils. Les pages vues sont comptées sans données personnelles (GoatCounter). Ta progression reste dans ton navigateur.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Mouvement désactivé</button></p>
+    </div>
+  </div>
+  <template data-kurs-vorlage><p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement ? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=vorlage" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p></template>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

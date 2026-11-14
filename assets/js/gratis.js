@@ -5,9 +5,10 @@
   var d = document, w = window;
   var CN = w.CN || {};
   var ROOT = CN.root || (function () { var s = d.querySelector('script[src*="assets/js/gratis.js"]'); return s ? s.src.replace(/assets\/js\/gratis\.js.*$/, '') : ''; })();
-  var EN = /^en/i.test(d.documentElement.getAttribute('lang') || '');
-  var BASIS = ROOT + (EN ? 'en/' : '');
-  function T(de, en) { return EN ? en : de; }
+  var TX = window.CN_TEXTE || { meta: {}, texte: {} }, SPR = TX.meta.code || 'de';
+  function T(de) { var s = TX.texte[de]; if (typeof s !== 'string') s = de; for (var i = 1; i < arguments.length; i++) s = s.split('{' + (i - 1) + '}').join(arguments[i]); return s; }
+  var LP = TX.meta.pfad || '';
+  var BASIS = ROOT + LP;
   var alle = function (sel, el) { return Array.prototype.slice.call((el || d).querySelectorAll(sel)); };
 
   /* Sprungmarken in eingeklappten Bereichen oeffnen */
@@ -74,7 +75,7 @@
     }
 
     function technikenLaden() {
-      if (!suche) suche = fetch(ROOT + 'assets/data/' + (EN ? 'en/' : '') + 'suche.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      if (!suche) suche = fetch(ROOT + 'assets/data/' + LP + 'suche.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       return suche;
     }
 
@@ -140,15 +141,15 @@
             if (!t) return;
             var li = d.createElement('li'), a = d.createElement('a');
             a.href = BASIS + 'techniken/' + t.slug + '/';
-            a.textContent = (t.nr ? T('Nr. ', 'No. ') + t.nr + ' ' : '') + t.titel;
+            a.textContent = (t.nr ? T("Nr. ") + t.nr + ' ' : '') + t.titel;
             li.appendChild(a);
-            if (t.klartitel && t.klartitel !== t.titel) li.appendChild(d.createTextNode(': ' + t.klartitel));
+            if (t.klartitel && t.klartitel !== t.titel) li.appendChild(d.createTextNode(T(': ') + t.klartitel));
             liste.appendChild(li);
           });
           if (!liste.children.length) {
             var li = d.createElement('li'), a = d.createElement('a');
             a.href = BASIS + 'techniken/';
-            a.textContent = T('Alle Techniken nach Gürtel', 'All techniques by belt');
+            a.textContent = T("Alle Techniken nach Gürtel");
             li.appendChild(a);
             liste.appendChild(li);
           }
@@ -177,7 +178,7 @@
     var teilen = erg.querySelector('[data-check-teilen]');
     if (teilen) teilen.addEventListener('click', function () {
       var url = w.location.href.split('#')[0] + hashAus();
-      var fertig = function (ok) { if (status) status.textContent = ok ? T('Link kopiert. Wer ihn öffnet, sieht dieses Ergebnis.', 'Link copied. Whoever opens it sees this result.') : T('Kopieren ging nicht. Markier die Adresse oben im Browser.', 'Copying did not work. Select the address at the top of your browser.'); };
+      var fertig = function (ok) { if (status) status.textContent = ok ? T("Link kopiert. Wer ihn öffnet, sieht dieses Ergebnis.") : T("Kopieren ging nicht. Markier die Adresse oben im Browser."); };
       if (CN.kopierText) CN.kopierText(url).then(function () { fertig(true); d.dispatchEvent(new CustomEvent('cn:kopiert', { detail: { id: 'gratis-check' } })); }, function () { fertig(false); });
       else fertig(false);
     });

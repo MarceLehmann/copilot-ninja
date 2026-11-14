@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="fr" data-seite="wand">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/techniken/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/techniken/">
+<link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/">
+<link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/">
+<link rel="alternate" type="application/atom+xml" title="Power Platform Dojo : nouvelles techniques" href="../feed.xml">
+<link rel="preload" href="../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/druck.css" media="print">
+<script src="../../assets/js/theme-init.js"></script>
+<script src="../../assets/js/texte/fr.js" defer></script>
+<script src="../../assets/js/core.js" defer></script>
+<script src="../../assets/js/dojo.js" defer></script>
+<script src="../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="Power Platform Dojo build">
+<title>Copilot Chat et Studio : toutes les techniques | Copilot Dojo</title>
+<meta name="description" content="5 formes de base et 25 techniques pour Copilot Chat et Studio, classées par ceinture. Avec sources et date de vérification.">
+<link rel="canonical" href="https://copilot.ninja/fr/techniken/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Power Platform Dojo · Copilot">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Copilot Chat et Studio : toutes les techniques | Copilot Dojo">
+<meta property="og:description" content="5 formes de base et 25 techniques pour Copilot Chat et Studio, classées par ceinture. Avec sources et date de vérification.">
+<meta property="og:url" content="https://copilot.ninja/fr/techniken/">
+<meta property="og:image" content="https://copilot.ninja/og-image-fr.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Power Platform Dojo : la pratique plutôt que le hype.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Copilot Chat et Studio : toutes les techniques | Copilot Dojo">
+<meta name="twitter:description" content="5 formes de base et 25 techniques pour Copilot Chat et Studio, classées par ceinture. Avec sources et date de vérification.">
+<meta name="twitter:image" content="https://copilot.ninja/og-image-fr.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://copilot.ninja/fr/#website",
+      "name": "Power Platform Dojo",
+      "alternateName": "Power Platform Dojo",
+      "url": "https://copilot.ninja/fr/",
+      "inLanguage": "fr",
+      "description": "Techniques ninja pour Microsoft Copilot Chat et Copilot Studio, avec source et date de vérification. Site indépendant, sans lien avec Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://copilot.ninja/fr/techniken/#seite",
+      "name": "5 formes de base et 25 techniques pour Copilot Chat et Studio",
+      "url": "https://copilot.ninja/fr/techniken/",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://copilot.ninja/fr/#website"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://copilot.ninja/fr/techniken/notizen-zu-protokoll/",
+            "name": "Transformer des notes en procès-verbal avec des tâches: Transformer des notes en procès-verbal avec des tâches"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://copilot.ninja/fr/techniken/erst-befragen-dann-schreiben/",
+            "name": "L'interrogatoire: Laisse-toi interroger avant d'écrire"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://copilot.ninja/fr/techniken/fachtext-in-klartext/",
+            "name": "L'écriture claire: Un texte spécialisé en langage clair, avec liste des pertes"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://copilot.ninja/fr/techniken/folienbilder-einheitlicher-stil/",
+            "name": "Le pinceau d'encre: Des images de diapositives dans un style uniforme"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://copilot.ninja/fr/techniken/nach-den-ferien-lagebericht/",
+            "name": "Le rapport d'éclaireur: Qu'ai-je manqué pendant mes vacances"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://copilot.ninja/fr/techniken/antwort-auf-kundenmail/",
+            "name": "Brouillon de réponse à un e-mail client difficile: Brouillon de réponse à un e-mail client difficile"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "url": "https://copilot.ninja/fr/techniken/text-aus-empfaengersicht-angreifen/",
+            "name": "L'adversaire dans le miroir: Attaquer son propre texte du point de vue du destinataire"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "url": "https://copilot.ninja/fr/techniken/entwurf-gegen-quelle-pruefen/",
+            "name": "L'oeil de faucon: Vérifier un brouillon par rapport au document source"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "url": "https://copilot.ninja/fr/techniken/pre-mortem-fuer-projekte/",
+            "name": "Le regard depuis la fin: Pre-mortem pour un projet"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "url": "https://copilot.ninja/fr/techniken/dossier-vor-der-besprechung/",
+            "name": "La reconnaissance: Dossier avant une réunion"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "url": "https://copilot.ninja/fr/techniken/tabelle-pruefen/",
+            "name": "Vérifier un tableau pour repérer les anomalies: Vérifier un tableau pour repérer les anomalies"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "url": "https://copilot.ninja/fr/techniken/offerten-vergleichen/",
+            "name": "Le duel des offres: Comparer plusieurs offres"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "url": "https://copilot.ninja/fr/techniken/vertragsfristen-finden/",
+            "name": "La fosse piégée: Trouver les délais et les pièges de reconduction dans un contrat"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "url": "https://copilot.ninja/fr/techniken/eigenen-schreibstil-festhalten/",
+            "name": "Le scribe de l'ombre: Fixer son propre style d'écriture dans un profil de style"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "url": "https://copilot.ninja/fr/techniken/webrecherche-mit-quellen/",
+            "name": "La piste: Recherche web avec obligation de sources"
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "url": "https://copilot.ninja/fr/techniken/quiz-aus-reglement/",
+            "name": "Le quiz du Dojo: Un quiz à partir d'un règlement pour les nouveaux collaborateurs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "url": "https://copilot.ninja/fr/techniken/agent-interne-anleitungen/",
+            "name": "Agent pour les guides internes: Agent pour les guides internes"
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "url": "https://copilot.ninja/fr/techniken/aus-chat-einen-agent-machen/",
+            "name": "L'empreinte: Transformer ton meilleur chat en agent"
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "url": "https://copilot.ninja/fr/techniken/agent-fuer-die-eigene-website/",
+            "name": "Le gardien de la porte: Un agent qui ne connaît que ton site web"
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "url": "https://copilot.ninja/fr/techniken/agent-fuer-gespraechstraining/",
+            "name": "Le partenaire d'entraînement: Un agent pour s'entraîner aux entretiens"
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "url": "https://copilot.ninja/fr/techniken/agent-anweisungen-pruefen/",
+            "name": "L'essai d'écriture: Vérifier les instructions d'agent avant le test"
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "url": "https://copilot.ninja/fr/techniken/agent-anfragen-sortieren/",
+            "name": "Agent qui trie les demandes et les transmet: Agent qui trie les demandes et les transmet"
+          },
+          {
+            "@type": "ListItem",
+            "position": 23,
+            "url": "https://copilot.ninja/fr/techniken/testfragen-fuer-agents/",
+            "name": "L'examen de ceinture: 20 questions de test pour ton agent"
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
+            "url": "https://copilot.ninja/fr/techniken/schutzbaustein-fuer-agents/",
+            "name": "L'armure: Un bloc de protection pour chaque instruction d'agent"
+          },
+          {
+            "@type": "ListItem",
+            "position": 25,
+            "url": "https://copilot.ninja/fr/techniken/agent-findet-den-ablauf/",
+            "name": "La bifurcation: Un agent qui trouve le bon processus"
+          },
+          {
+            "@type": "ListItem",
+            "position": 26,
+            "url": "https://copilot.ninja/fr/techniken/power-automate-ausdruecke-erklaert/",
+            "name": "L'interprète: Des expressions Power Automate avec explication"
+          },
+          {
+            "@type": "ListItem",
+            "position": 27,
+            "url": "https://copilot.ninja/fr/techniken/text-anonymisieren/",
+            "name": "La cape d'invisibilité: Pseudonymiser un texte avant de le transmettre"
+          },
+          {
+            "@type": "ListItem",
+            "position": 28,
+            "url": "https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/",
+            "name": "La boussole des crédits: Estimer à l'avance la consommation de crédits d'un agent"
+          },
+          {
+            "@type": "ListItem",
+            "position": 29,
+            "url": "https://copilot.ninja/fr/techniken/betriebsblatt-fuer-agents/",
+            "name": "Le code d'honneur: Une fiche d'exploitation avec critères d'arrêt"
+          },
+          {
+            "@type": "ListItem",
+            "position": 30,
+            "url": "https://copilot.ninja/fr/techniken/monatlicher-agent-check/",
+            "name": "La veille de nuit: Le contrôle mensuel de l'agent"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://copilot.ninja/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Techniques",
+          "item": "https://copilot.ninja/fr/techniken/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../" aria-label="Power Platform Dojo, Copilot, page d’accueil"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="../techniken/" data-nav="techniken" aria-current="page">Techniques</a></li>
+        <li><a href="../pruefung/" data-nav="pruefung">Examen de ceinture</a></li>
+        <li><a href="../gratis/" data-nav="gratis">Test de licence</a></li>
+        <li><a href="../dojo/" data-nav="dojo">Mon Dojo</a></li>
+        <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Choisir la langue, actuelle : Français">FR</summary><ul class="sprachen__liste"><li><a href="../../techniken/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../fr/techniken/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../it/techniken/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../en/techniken/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Mode sombre" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../techniken/" aria-current="page">Techniques</a></li>
+      <li><a href="../pruefung/">Examen de ceinture</a></li>
+      <li><a href="../gratis/">Test de licence</a></li>
+      <li><a href="../heute/">Technique du jour</a></li>
+      <li><a href="../dojo/">Mon Dojo</a></li>
+      <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      <li><a href="../ueber/">À propos</a></li>
+      <li><a href="https://powerautomate.ninja/fr/" rel="noopener">Dojo pour Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+      <li><a href="../gratis/nachschlagen/">Copilot sans licence supplémentaire : chaque condition avec sa source</a></li>
+      <li><a href="../dojo/profil/">Profil et ta propre technique</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Rechercher des techniques</h2>
+    <label for="suche-feld" class="sr-only">Terme de recherche</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Résultats"></ul>
+  <p class="suche__leer" hidden>Aucune technique trouvée. Essaie compte rendu, contrat ou agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-anker-umzug='{"vier-wochen":"../vier-wochen/"}'>
+  <div class="wrap">
+    <nav class="krumen" aria-label="Fil d’Ariane"><ol><li><a href="../">Accueil</a></li><li><a href="./" aria-current="page">Techniques</a></li></ol></nav>
+    <header class="sektion--eng">
+      <span class="label">Mur des techniques</span>
+      <h1 id="h1">Toutes les techniques</h1>
+      <p class="lead">25 techniques ninja pour Microsoft Copilot Chat et Copilot Studio, de la ceinture blanche à la ceinture noire, plus 5 formes de base pour t’échauffer. Chaque technique avec une source Microsoft Learn, une date de vérification et des limites honnêtes.</p>
+      <p class="label">Quand en as-tu besoin ?</p>
+      <ul class="momente-kurz"><li><q>Je ne sais pas quoi demander.</q><a href="../techniken/erst-befragen-dann-schreiben/">Technique 01, L'interrogatoire</a></li><li><q>La réponse sonne comme une brochure.</q><a href="../techniken/eigenen-schreibstil-festhalten/">Technique 11, Le scribe de l'ombre</a></li><li><q>Trois offres, pas le temps.</q><a href="../techniken/offerten-vergleichen/">Technique 09, Le duel des offres</a></li><li><q>L’agent invente des choses.</q><a href="../techniken/testfragen-fuer-agents/">Technique 18, L'examen de ceinture</a></li></ul>
+      <p class="nicht-drucken klein">Astuce : la version imprimée de cette page est un aide-mémoire avec des adresses courtes pour ton bureau. <button type="button" class="knopf knopf--leise knopf--klein" data-drucken data-nur-js>Imprimer l’aide-mémoire</button></p>
+    </header>
+    <div class="druck-kopf nur-druck"><span>Power Platform Dojo, aide-mémoire des techniques</span><span>État au 14 novembre 2026</span><span>copilot.ninja/fr/numéro</span></div>
+    <div class="filter nicht-drucken" data-filter data-nur-js>
+<fieldset><legend>Ceinture</legend><div class="chips"><button type="button" class="chip" data-f="guertel-nr" data-v="1" aria-pressed="false"><span class="knoten" data-guertel-nr="1" aria-hidden="true"></span>Blanche</button><button type="button" class="chip" data-f="guertel-nr" data-v="2" aria-pressed="false"><span class="knoten" data-guertel-nr="2" aria-hidden="true"></span>Jaune</button><button type="button" class="chip" data-f="guertel-nr" data-v="3" aria-pressed="false"><span class="knoten" data-guertel-nr="3" aria-hidden="true"></span>Orange</button><button type="button" class="chip" data-f="guertel-nr" data-v="4" aria-pressed="false"><span class="knoten" data-guertel-nr="4" aria-hidden="true"></span>Verte</button><button type="button" class="chip" data-f="guertel-nr" data-v="5" aria-pressed="false"><span class="knoten" data-guertel-nr="5" aria-hidden="true"></span>Bleue</button><button type="button" class="chip" data-f="guertel-nr" data-v="6" aria-pressed="false"><span class="knoten" data-guertel-nr="6" aria-hidden="true"></span>Marron</button><button type="button" class="chip" data-f="guertel-nr" data-v="7" aria-pressed="false"><span class="knoten" data-guertel-nr="7" aria-hidden="true"></span>Noire</button></div></fieldset>
+<fieldset><legend>Outil</legend><div class="chips"><button type="button" class="chip" data-f="werkzeug" data-v="copilot-chat" aria-pressed="false">Microsoft Copilot Chat</button><button type="button" class="chip" data-f="werkzeug" data-v="copilot-studio" aria-pressed="false">Copilot Studio</button><button type="button" class="chip" data-f="werkzeug" data-v="microsoft-copilot" aria-pressed="false">Microsoft Copilot</button><button type="button" class="chip" data-f="werkzeug" data-v="agent-builder" aria-pressed="false">Agent Builder</button><button type="button" class="chip" data-f="werkzeug" data-v="power-automate" aria-pressed="false">Power Automate</button></div></fieldset>
+<fieldset><legend>Accès</legend><div class="chips"><button type="button" class="chip" data-f="zugang" data-v="ohne-zl" aria-pressed="false">Sans licence supplémentaire</button><button type="button" class="chip" data-f="zugang" data-v="agent-builder" aria-pressed="false">Agent Builder, sans licence supplémentaire</button><button type="button" class="chip" data-f="zugang" data-v="lizenz" aria-pressed="false">Avec licence</button><button type="button" class="chip" data-f="zugang" data-v="studio" aria-pressed="false">Copilot Studio</button><button type="button" class="chip" data-f="zugang" data-v="rechner" aria-pressed="false">Calculateur</button></div></fieldset>
+<fieldset><legend>Ton état</legend><div class="chips"><button type="button" class="chip" data-f="stand" data-v="offen" aria-pressed="false">Pas encore faite</button><button type="button" class="chip" data-f="stand" data-v="geuebt" aria-pressed="false">Pratiquée</button></div></fieldset>
+<div class="filter__fuss"><p class="filter__zaehler" data-filter-zaehler role="status" aria-live="polite"></p><button type="button" class="knopf knopf--leise knopf--klein" data-filter-reset>Réinitialiser les filtres</button></div>
+</div>
+    <div data-filter-ziel>
+<section class="guertel-abschnitt sektion--eng" id="weisser-guertel" aria-labelledby="h-weisser-guertel" data-guertel-nr="1">
+<h2 id="h-weisser-guertel"><span class="knoten knoten--gross" data-guertel-nr="1">Ceinture blanche : Position de départ</span></h2>
+<p class="klein">Ce que tu sauras faire ensuite : Écrire des prompts avec objectif, contexte, source et attentes, et te laisser interroger avant d'écrire.</p>
+<p class="label">Échauffement</p><ul class="karten"><li class="karte karte--grundform" data-technik="g1" data-guertel-nr="1" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">Forme de base G1</span></div>
+<h3 class="karte__titel"><a href="../techniken/notizen-zu-protokoll/">Transformer des notes en procès-verbal avec des tâches</a></h3>
+
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 5 min</span><span class="karte__status" data-status hidden></span></div>
+</li></ul>
+<p class="label">Techniques</p><ul class="karten"><li class="karte" data-technik="t01" data-guertel-nr="1" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">01</span></div>
+<h3 class="karte__titel"><a href="../techniken/erst-befragen-dann-schreiben/">L'interrogatoire</a></h3>
+<p class="karte__klartitel">Laisse-toi interroger avant d'écrire</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/1</span></div>
+</li>
+<li class="karte" data-technik="t02" data-guertel-nr="1" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">02</span></div>
+<h3 class="karte__titel"><a href="../techniken/fachtext-in-klartext/">L'écriture claire</a></h3>
+<p class="karte__klartitel">Un texte spécialisé en langage clair, avec liste des pertes</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/2</span></div>
+</li>
+<li class="karte" data-technik="t03" data-guertel-nr="1" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">03</span></div>
+<h3 class="karte__titel"><a href="../techniken/folienbilder-einheitlicher-stil/">Le pinceau d'encre</a></h3>
+<p class="karte__klartitel">Des images de diapositives dans un style uniforme</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/3</span></div>
+</li>
+<li class="karte" data-technik="t04" data-guertel-nr="1" data-zugang="lizenz" data-art="pinselstrich" data-werkzeug="microsoft-copilot">
+<div class="karte__oben"><span class="karte__nr">04</span></div>
+<h3 class="karte__titel"><a href="../techniken/nach-den-ferien-lagebericht/">Le rapport d'éclaireur</a></h3>
+<p class="karte__klartitel">Qu'ai-je manqué pendant mes vacances</p>
+
+<div class="karte__meta"><a class="zugang zugang--lizenz" href="../gratis/nachschlagen/#organisationsdaten"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="5.5" cy="8" r="3"/><path d="M8.5 8H15M12.5 8v2.5M14.5 8v2"/></svg>Avec licence</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 5 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/4</span></div>
+</li></ul>
+</section>
+<section class="guertel-abschnitt sektion--eng" id="gelber-guertel" aria-labelledby="h-gelber-guertel" data-guertel-nr="2">
+<h2 id="h-gelber-guertel"><span class="knoten knoten--gross" data-guertel-nr="2">Ceinture jaune : Second regard</span></h2>
+<p class="klein">Ce que tu sauras faire ensuite : Demander des brouillons et les faire vérifier pour que les erreurs se voient avant l'envoi.</p>
+<p class="label">Échauffement</p><ul class="karten"><li class="karte karte--grundform" data-technik="g2" data-guertel-nr="2" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">Forme de base G2</span></div>
+<h3 class="karte__titel"><a href="../techniken/antwort-auf-kundenmail/">Brouillon de réponse à un e-mail client difficile</a></h3>
+
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span></div>
+</li></ul>
+<p class="label">Techniques</p><ul class="karten"><li class="karte" data-technik="t05" data-guertel-nr="2" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">05</span></div>
+<h3 class="karte__titel"><a href="../techniken/text-aus-empfaengersicht-angreifen/">L'adversaire dans le miroir</a></h3>
+<p class="karte__klartitel">Attaquer son propre texte du point de vue du destinataire</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 5 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/5</span></div>
+</li>
+<li class="karte" data-technik="t06" data-guertel-nr="2" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">06</span></div>
+<h3 class="karte__titel"><a href="../techniken/entwurf-gegen-quelle-pruefen/">L'oeil de faucon</a></h3>
+<p class="karte__klartitel">Vérifier un brouillon par rapport au document source</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/6</span></div>
+</li>
+<li class="karte" data-technik="t07" data-guertel-nr="2" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">07</span></div>
+<h3 class="karte__titel"><a href="../techniken/pre-mortem-fuer-projekte/">Le regard depuis la fin</a></h3>
+<p class="karte__klartitel">Pre-mortem pour un projet</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/7</span></div>
+</li>
+<li class="karte" data-technik="t08" data-guertel-nr="2" data-zugang="lizenz" data-art="pinselstrich" data-werkzeug="microsoft-copilot">
+<div class="karte__oben"><span class="karte__nr">08</span></div>
+<h3 class="karte__titel"><a href="../techniken/dossier-vor-der-besprechung/">La reconnaissance</a></h3>
+<p class="karte__klartitel">Dossier avant une réunion</p>
+
+<div class="karte__meta"><a class="zugang zugang--lizenz" href="../gratis/nachschlagen/#organisationsdaten"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="5.5" cy="8" r="3"/><path d="M8.5 8H15M12.5 8v2.5M14.5 8v2"/></svg>Avec licence</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 5 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/8</span></div>
+</li></ul>
+</section>
+<section class="guertel-abschnitt sektion--eng" id="oranger-guertel" aria-labelledby="h-oranger-guertel" data-guertel-nr="3">
+<h2 id="h-oranger-guertel"><span class="knoten knoten--gross" data-guertel-nr="3">Ceinture orange : Lecture des traces</span></h2>
+<p class="klein">Ce que tu sauras faire ensuite : Exploiter des fichiers et des sources web, chaque affirmation avec son passage source.</p>
+<p class="label">Échauffement</p><ul class="karten"><li class="karte karte--grundform" data-technik="g3" data-guertel-nr="3" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">Forme de base G3</span></div>
+<h3 class="karte__titel"><a href="../techniken/tabelle-pruefen/">Vérifier un tableau pour repérer les anomalies</a></h3>
+
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span></div>
+</li></ul>
+<p class="label">Techniques</p><ul class="karten"><li class="karte" data-technik="t09" data-guertel-nr="3" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">09</span></div>
+<h3 class="karte__titel"><a href="../techniken/offerten-vergleichen/">Le duel des offres</a></h3>
+<p class="karte__klartitel">Comparer plusieurs offres</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/9</span></div>
+</li>
+<li class="karte" data-technik="t10" data-guertel-nr="3" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">10</span></div>
+<h3 class="karte__titel"><a href="../techniken/vertragsfristen-finden/">La fosse piégée</a></h3>
+<p class="karte__klartitel">Trouver les délais et les pièges de reconduction dans un contrat</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/10</span></div>
+</li>
+<li class="karte" data-technik="t11" data-guertel-nr="3" data-zugang="ohne-zl" data-art="kata" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">11</span></div>
+<h3 class="karte__titel"><a href="../techniken/eigenen-schreibstil-festhalten/">Le scribe de l'ombre</a></h3>
+<p class="karte__klartitel">Fixer son propre style d'écriture dans un profil de style</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--kata"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M1 7h20"/><circle cx="4" cy="7" r="2"/><circle cx="11" cy="7" r="2"/><circle cx="18" cy="7" r="2"/></svg>Kata</span><span>env. 15 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/11</span></div>
+</li>
+<li class="karte" data-technik="t12" data-guertel-nr="3" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">12</span></div>
+<h3 class="karte__titel"><a href="../techniken/webrecherche-mit-quellen/">La piste</a></h3>
+<p class="karte__klartitel">Recherche web avec obligation de sources</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/12</span></div>
+</li>
+<li class="karte" data-technik="t13" data-guertel-nr="3" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">13</span></div>
+<h3 class="karte__titel"><a href="../techniken/quiz-aus-reglement/">Le quiz du Dojo</a></h3>
+<p class="karte__klartitel">Un quiz à partir d'un règlement pour les nouveaux collaborateurs</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/13</span></div>
+</li></ul>
+</section>
+<aside class="schwelle schwelle--frei" aria-labelledby="schwelle-titel">
+<span class="label">Le seuil</span>
+<h2 id="schwelle-titel">À partir d’ici, tu construis des agents.</h2>
+<p>Dans la version d’évaluation de Copilot Studio, tu peux créer un agent et le vérifier dans le volet de test, mais pas le publier. Pour publier, il faut de la capacité (crédits Copilot ou paiement à l’utilisation) et l’autorisation d’auteur. (<a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Microsoft Learn</a>, état au 13 octobre 2026). Toutes les techniques d’agent sont libres d’accès ici, sans inscription.</p>
+<p class="klein">Si tu préfères t’entraîner avec un accompagnement : la Power Platform Academy propose le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=schwelle" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand). Le cours a son propre programme et ne suit pas les ceintures de ce site. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p>
+</aside>
+<section class="guertel-abschnitt sektion--eng" id="gruener-guertel" aria-labelledby="h-gruener-guertel" data-guertel-nr="4">
+<h2 id="h-gruener-guertel"><span class="knoten knoten--gross" data-guertel-nr="4">Ceinture verte : Premier élève</span></h2>
+<p class="klein">Ce que tu sauras faire ensuite : Donner des instructions à ton premier agent et le vérifier.</p>
+<p class="label">Échauffement</p><ul class="karten"><li class="karte karte--grundform" data-technik="g4" data-guertel-nr="4" data-zugang="studio" data-art="schriftrolle" data-werkzeug="copilot-studio">
+<div class="karte__oben"><span class="karte__nr">Forme de base G4</span></div>
+<h3 class="karte__titel"><a href="../techniken/agent-interne-anleitungen/">Agent pour les guides internes</a></h3>
+
+
+<div class="karte__meta"><a class="zugang zugang--studio" href="../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a><span class="art art--schriftrolle"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M4 2h14v10H4zM4 2a2 2 0 0 0 0 10M18 2a2 2 0 0 1 0 10"/></svg>Rouleau</span><span>env. 20 min</span><span class="karte__status" data-status hidden></span></div>
+</li></ul>
+<p class="label">Techniques</p><ul class="karten"><li class="karte" data-technik="t14" data-guertel-nr="4" data-zugang="agent-builder" data-art="kata" data-werkzeug="copilot-chat agent-builder">
+<div class="karte__oben"><span class="karte__nr">14</span></div>
+<h3 class="karte__titel"><a href="../techniken/aus-chat-einen-agent-machen/">L'empreinte</a></h3>
+<p class="karte__klartitel">Transformer ton meilleur chat en agent</p>
+
+<div class="karte__meta"><a class="zugang zugang--builder" href="../gratis/nachschlagen/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Agent Builder, sans licence supplémentaire</a><span class="art art--kata"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M1 7h20"/><circle cx="4" cy="7" r="2"/><circle cx="11" cy="7" r="2"/><circle cx="18" cy="7" r="2"/></svg>Kata</span><span>env. 20 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/14</span></div>
+</li>
+<li class="karte" data-technik="t15" data-guertel-nr="4" data-zugang="agent-builder" data-art="schriftrolle" data-werkzeug="agent-builder">
+<div class="karte__oben"><span class="karte__nr">15</span></div>
+<h3 class="karte__titel"><a href="../techniken/agent-fuer-die-eigene-website/">Le gardien de la porte</a></h3>
+<p class="karte__klartitel">Un agent qui ne connaît que ton site web</p>
+
+<div class="karte__meta"><a class="zugang zugang--builder" href="../gratis/nachschlagen/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Agent Builder, sans licence supplémentaire</a><span class="art art--schriftrolle"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M4 2h14v10H4zM4 2a2 2 0 0 0 0 10M18 2a2 2 0 0 1 0 10"/></svg>Rouleau</span><span>env. 20 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/15</span></div>
+</li>
+<li class="karte" data-technik="t16" data-guertel-nr="4" data-zugang="agent-builder" data-art="schriftrolle" data-werkzeug="agent-builder copilot-chat">
+<div class="karte__oben"><span class="karte__nr">16</span></div>
+<h3 class="karte__titel"><a href="../techniken/agent-fuer-gespraechstraining/">Le partenaire d'entraînement</a></h3>
+<p class="karte__klartitel">Un agent pour s'entraîner aux entretiens</p>
+
+<div class="karte__meta"><a class="zugang zugang--builder" href="../gratis/nachschlagen/#agent-builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Agent Builder, sans licence supplémentaire</a><span class="art art--schriftrolle"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M4 2h14v10H4zM4 2a2 2 0 0 0 0 10M18 2a2 2 0 0 1 0 10"/></svg>Rouleau</span><span>env. 15 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/16</span></div>
+</li>
+<li class="karte" data-technik="t17" data-guertel-nr="4" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat copilot-studio">
+<div class="karte__oben"><span class="karte__nr">17</span></div>
+<h3 class="karte__titel"><a href="../techniken/agent-anweisungen-pruefen/">L'essai d'écriture</a></h3>
+<p class="karte__klartitel">Vérifier les instructions d'agent avant le test</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/17</span></div>
+</li></ul>
+</section>
+<section class="guertel-abschnitt sektion--eng" id="blauer-guertel" aria-labelledby="h-blauer-guertel" data-guertel-nr="5">
+<h2 id="h-blauer-guertel"><span class="knoten knoten--gross" data-guertel-nr="5">Ceinture bleue : Déroulement</span></h2>
+<p class="klein">Ce que tu sauras faire ensuite : Donner des étapes à un agent et fixer à quel moment il passe la main à une personne.</p>
+<p class="label">Échauffement</p><ul class="karten"><li class="karte karte--grundform" data-technik="g5" data-guertel-nr="5" data-zugang="studio" data-art="schriftrolle" data-werkzeug="copilot-studio">
+<div class="karte__oben"><span class="karte__nr">Forme de base G5</span></div>
+<h3 class="karte__titel"><a href="../techniken/agent-anfragen-sortieren/">Agent qui trie les demandes et les transmet</a></h3>
+
+
+<div class="karte__meta"><a class="zugang zugang--studio" href="../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a><span class="art art--schriftrolle"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M4 2h14v10H4zM4 2a2 2 0 0 0 0 10M18 2a2 2 0 0 1 0 10"/></svg>Rouleau</span><span>env. 20 min</span><span class="karte__status" data-status hidden></span></div>
+</li></ul>
+<p class="label">Techniques</p><ul class="karten"><li class="karte" data-technik="t18" data-guertel-nr="5" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat copilot-studio">
+<div class="karte__oben"><span class="karte__nr">18</span></div>
+<h3 class="karte__titel"><a href="../techniken/testfragen-fuer-agents/">L'examen de ceinture</a></h3>
+<p class="karte__klartitel">20 questions de test pour ton agent</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 15 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/18</span></div>
+</li>
+<li class="karte" data-technik="t19" data-guertel-nr="5" data-zugang="studio" data-art="schriftrolle" data-werkzeug="copilot-studio agent-builder">
+<div class="karte__oben"><span class="karte__nr">19</span></div>
+<h3 class="karte__titel"><a href="../techniken/schutzbaustein-fuer-agents/">L'armure</a></h3>
+<p class="karte__klartitel">Un bloc de protection pour chaque instruction d'agent</p>
+
+<div class="karte__meta"><a class="zugang zugang--studio" href="../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a><span class="art art--schriftrolle"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M4 2h14v10H4zM4 2a2 2 0 0 0 0 10M18 2a2 2 0 0 1 0 10"/></svg>Rouleau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/19</span></div>
+</li>
+<li class="karte" data-technik="t20" data-guertel-nr="5" data-zugang="studio" data-art="schriftrolle" data-werkzeug="copilot-studio">
+<div class="karte__oben"><span class="karte__nr">20</span></div>
+<h3 class="karte__titel"><a href="../techniken/agent-findet-den-ablauf/">La bifurcation</a></h3>
+<p class="karte__klartitel">Un agent qui trouve le bon processus</p>
+
+<div class="karte__meta"><a class="zugang zugang--studio" href="../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a><span class="art art--schriftrolle"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M4 2h14v10H4zM4 2a2 2 0 0 0 0 10M18 2a2 2 0 0 1 0 10"/></svg>Rouleau</span><span>env. 30 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/20</span></div>
+</li></ul>
+</section>
+<section class="guertel-abschnitt sektion--eng" id="brauner-guertel" aria-labelledby="h-brauner-guertel" data-guertel-nr="6">
+<h2 id="h-brauner-guertel"><span class="knoten knoten--gross" data-guertel-nr="6">Ceinture marron : Budget</span></h2>
+<p class="klein">Ce que tu sauras faire ensuite : Transmettre proprement les données et estimer la consommation d'un agent avant que cela devienne cher.</p>
+
+<ul class="karten"><li class="karte" data-technik="t21" data-guertel-nr="6" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat power-automate">
+<div class="karte__oben"><span class="karte__nr">21</span></div>
+<h3 class="karte__titel"><a href="../techniken/power-automate-ausdruecke-erklaert/">L'interprète</a></h3>
+<p class="karte__klartitel">Des expressions Power Automate avec explication</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/21</span></div>
+</li>
+<li class="karte" data-technik="t22" data-guertel-nr="6" data-zugang="ohne-zl" data-art="pinselstrich" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">22</span></div>
+<h3 class="karte__titel"><a href="../techniken/text-anonymisieren/">La cape d'invisibilité</a></h3>
+<p class="karte__klartitel">Pseudonymiser un texte avant de le transmettre</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--pinselstrich"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M2 11c5-1 9-6 18-8"/></svg>Coup de pinceau</span><span>env. 10 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/22</span></div>
+</li>
+<li class="karte" data-technik="t23" data-guertel-nr="6" data-zugang="rechner" data-art="kata" data-werkzeug="copilot-studio copilot-chat">
+<div class="karte__oben"><span class="karte__nr">23</span></div>
+<h3 class="karte__titel"><a href="../techniken/credit-verbrauch-schaetzen/">La boussole des crédits</a></h3>
+<p class="karte__klartitel">Estimer à l'avance la consommation de crédits d'un agent</p>
+
+<div class="karte__meta"><a class="zugang zugang--rechner" href="../gratis/nachschlagen/#studio-verbrauch"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 1.5h10v13H3zM5 4h6M5.5 8h1M9.5 8h1M5.5 11h1M9.5 11h1"/></svg>Calculateur</a><span class="art art--kata"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M1 7h20"/><circle cx="4" cy="7" r="2"/><circle cx="11" cy="7" r="2"/><circle cx="18" cy="7" r="2"/></svg>Kata</span><span>env. 15 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/23</span></div>
+</li></ul>
+</section>
+<section class="guertel-abschnitt sektion--eng" id="schwarzer-guertel" aria-labelledby="h-schwarzer-guertel" data-guertel-nr="7">
+<h2 id="h-schwarzer-guertel"><span class="knoten knoten--gross" data-guertel-nr="7">Ceinture noire : Veille</span></h2>
+<p class="klein">Ce que tu sauras faire ensuite : Surveiller des agents en exploitation et les arrêter à temps.</p>
+
+<ul class="karten"><li class="karte" data-technik="t24" data-guertel-nr="7" data-zugang="ohne-zl" data-art="kata" data-werkzeug="copilot-chat">
+<div class="karte__oben"><span class="karte__nr">24</span></div>
+<h3 class="karte__titel"><a href="../techniken/betriebsblatt-fuer-agents/">Le code d'honneur</a></h3>
+<p class="karte__klartitel">Une fiche d'exploitation avec critères d'arrêt</p>
+
+<div class="karte__meta"><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a><span class="art art--kata"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M1 7h20"/><circle cx="4" cy="7" r="2"/><circle cx="11" cy="7" r="2"/><circle cx="18" cy="7" r="2"/></svg>Kata</span><span>env. 20 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/24</span></div>
+</li>
+<li class="karte" data-technik="t25" data-guertel-nr="7" data-zugang="studio" data-art="kata" data-werkzeug="copilot-studio copilot-chat">
+<div class="karte__oben"><span class="karte__nr">25</span></div>
+<h3 class="karte__titel"><a href="../techniken/monatlicher-agent-check/">La veille de nuit</a></h3>
+<p class="karte__klartitel">Le contrôle mensuel de l'agent</p>
+
+<div class="karte__meta"><a class="zugang zugang--studio" href="../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a><span class="art art--kata"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M1 7h20"/><circle cx="4" cy="7" r="2"/><circle cx="11" cy="7" r="2"/><circle cx="18" cy="7" r="2"/></svg>Kata</span><span>env. 30 min</span><span class="karte__status" data-status hidden></span><span class="karte__kurz nur-druck">copilot.ninja/fr/25</span></div>
+</li></ul>
+</section>
+    </div>
+    <div class="leer" data-filter-leer hidden>
+      <span class="tusch tusch--sitzen" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span>
+      <div>
+        <p>Aucune technique ne correspond à ces filtres.</p>
+        <button type="button" class="knopf knopf--klein" data-filter-reset>Réinitialiser les filtres</button>
+      </div>
+    </div>
+    <p class="sektion--eng">Un plan libre pour apprendre seul : <a href="../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a>. Tu connais une technique qui manque ici ? <a href="../dojo/profil/#beitragen">Écris-moi.</a></p>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__klar">Site indépendant, sans lien avec Microsoft.</p>
+        <p>Un projet de Marcel Lehmann. En savoir plus : <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+        <p>Techniques ninja pour Microsoft Copilot Chat et Copilot Studio. Chacune avec une source Microsoft Learn. Sans inscription. Les visites sont comptées sans cookies ; seuls des totaux sans données personnelles sont enregistrés (GoatCounter). Ta progression reste dans ton navigateur.</p>
+        <p class="beitragen">Tu connais une technique qui manque ici ? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20pour%20le%20Dojo&amp;body=Titre%20de%20la%20technique%3A%0A%0AProbl%C3%A8me%20qu%E2%80%99elle%20r%C3%A9sout%3A%0A%0APrompt%20ou%20guide%3A%0A%0ALimites%3A%0A%0ASource%20Microsoft%20Learn%3A%0A%0APuis-je%20te%20nommer%20comme%20exp%C3%A9diteur%3F%20(oui%20ou%20non)%0A%0AMerci%20de%20ne%20mettre%20aucune%20donn%C3%A9e%20de%20client%2C%20de%20personne%20ou%20d%E2%80%99entreprise%20dans%20le%20prompt.">Écris-moi.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../techniken/">Toutes les techniques</a></li>
+          <li><a href="../pruefung/">Examen de ceinture</a></li>
+          <li><a href="../gratis/">Microsoft Copilot est-il gratuit ?</a></li>
+          <li><a href="../heute/">Technique du jour</a></li>
+          <li><a href="../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+          <li><a href="../kalender/montag.ics" download>15 minutes chaque lundi dans ton calendrier</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Infos</h2>
+        <ul>
+          <li><a href="../ueber/">À propos du Dojo</a></li>
+          <li><a href="../impressum/">Mentions légales</a></li>
+          <li><a href="../datenschutz/">Protection des données</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls (en allemand)</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Plus de disciplines : <a href="https://powerautomate.ninja/fr/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage</a>, <a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
+    </div>
+    <div class="fuss__recht">
+      <p>Pas une offre de Microsoft. Site indépendant de Marcel Lehmann, non exploité, non sponsorisé et non soutenu par Microsoft. Microsoft, les noms de produits de la Power Platform (dont Power Apps, Power Automate et Copilot Studio) et Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word et Work IQ sont des marques du groupe de sociétés Microsoft. GitHub et GitHub Copilot sont des marques de GitHub, Inc.</p>
+      <p>Pas de cookies, pas de profils. Les pages vues sont comptées sans données personnelles (GoatCounter). Ta progression reste dans ton navigateur.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Mouvement désactivé</button></p>
+    </div>
+  </div>
+  <template data-kurs-vorlage><p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement ? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=vorlage" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p></template>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

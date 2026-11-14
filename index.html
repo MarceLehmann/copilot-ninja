@@ -10,13 +10,15 @@
 <meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="de" href="https://copilot.ninja/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/">
 <link rel="alternate" hreflang="en" href="https://copilot.ninja/en/">
 <link rel="alternate" hreflang="x-default" href="https://copilot.ninja/">
 <link rel="alternate" type="application/atom+xml" title="Power Platform Dojo: neue Techniken" href="feed.xml">
 <link rel="preload" href="assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <link rel="stylesheet" href="assets/css/druck.css" media="print">
-<script src="assets/js/sprache.js"></script>
+<script src="assets/js/sprache.js" data-sprachen="fr it en"></script>
 <script src="assets/js/theme-init.js"></script>
 <script src="assets/js/core.js" defer></script>
 <script src="assets/js/dojo.js" defer></script>
@@ -88,7 +90,7 @@
       </ul>
     </nav>
     <div class="kopf__aktionen">
-      <a class="sprachwahl" href="en/" hreflang="en" lang="en" data-sprache-wahl="en" aria-label="English version of this page">EN</a>
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Sprache wählen, aktuell: Deutsch">DE</summary><ul class="sprachen__liste"><li><a href="./" hreflang="de" lang="de-CH" data-sprache-wahl="de" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="fr/" hreflang="fr" lang="fr" data-sprache-wahl="fr"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="it/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="en/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
       <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Technik suchen" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Strg K</kbd></button>
       <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
       <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
@@ -166,12 +168,12 @@
   <section class="block" aria-labelledby="h-tdt"><div class="wrap sektion--eng">
     <span class="label">Technik des Tages</span>
     <h2 id="h-tdt">Eine Technik für heute</h2>
-<article class="tdk" data-heute-kompakt data-technik="t09" data-guertel-nr="3">
+<article class="tdk" data-heute-kompakt data-technik="t02" data-guertel-nr="1">
 <div class="tdk__inhalt">
-<h3 class="tdk__titel"><a href="techniken/offerten-vergleichen/">Das Offerten-Duell</a><small>Mehrere Offerten vergleichen</small></h3>
-<ul class="metazeile"><li><span class="knoten" data-guertel-nr="3">Oranger Gürtel</span></li><li><a class="zugang zugang--frei" href="gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="tk__nr">Nr. <span class="tdk__nr">09</span></li></ul>
-<p class="tdk__problem">Drei Anbieter, drei PDFs, drei verschiedene Aufbauten. Der tiefste Preis steht gross auf der ersten Seite, was fehlt, steht nirgends.</p>
-<p><a class="knopf knopf--primaer knopf--klein tdk__knopf" href="techniken/offerten-vergleichen/">Technik öffnen</a></p>
+<h3 class="tdk__titel"><a href="techniken/fachtext-in-klartext/">Die Klarschrift</a><small>Fachtext in Klartext, mit Verlustliste</small></h3>
+<ul class="metazeile"><li><span class="knoten" data-guertel-nr="1">Weisser Gürtel</span></li><li><a class="zugang zugang--frei" href="gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz</a></li><li class="tk__nr">Nr. <span class="tdk__nr">02</span></li></ul>
+<p class="tdk__problem">Das interne Merkblatt zur Spesenregelung ist korrekt, trotzdem rufen die Lernenden jede Woche an. Beim Vereinfachen darf keine Pflicht und keine Frist verloren gehen.</p>
+<p><a class="knopf knopf--primaer knopf--klein tdk__knopf" href="techniken/fachtext-in-klartext/">Technik öffnen</a></p>
 </div>
 </article>
     <p><a class="knopf knopf--leise" href="kalender/montag.ics" download>Jeden Montag eine Technik, als Kalendertermin</a></p>

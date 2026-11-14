@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="it" data-seite="technik">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/agent-findet-den-ablauf/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/techniken/agent-findet-den-ablauf/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/techniken/agent-findet-den-ablauf/">
+<link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/agent-findet-den-ablauf/">
+<link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/agent-findet-den-ablauf/">
+<link rel="alternate" type="application/atom+xml" title="Power Platform Dojo: nuove tecniche" href="../../feed.xml">
+<link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/technik.css">
+<link rel="stylesheet" href="../../../assets/css/druck.css" media="print">
+<script src="../../../assets/js/theme-init.js"></script>
+<script src="../../../assets/js/texte/it.js" defer></script>
+<script src="../../../assets/js/core.js" defer></script>
+<script src="../../../assets/js/dojo.js" defer></script>
+<script src="../../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="Power Platform Dojo build">
+<title>Agente che trova la procedura giusta | Copilot Dojo</title>
+<meta name="description" content="Agente che trova la procedura giusta. Istruzione dell'agente per Copilot Studio da copiare, con fonte su Microsoft Learn e data di verifica.">
+<link rel="canonical" href="https://copilot.ninja/it/techniken/agent-findet-den-ablauf/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Power Platform Dojo · Copilot">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Il bivio: Agente che trova la procedura giusta">
+<meta property="og:description" content="A differenza della forma base per le guide, il bivio chiede prima i dati che decidono la procedura. Rispondi a poche domande e sai quale procedura vale e perché.">
+<meta property="og:url" content="https://copilot.ninja/it/techniken/agent-findet-den-ablauf/">
+<meta property="og:image" content="https://copilot.ninja/assets/img/karten/it/agent-findet-den-ablauf.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tecnica 20: Il bivio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Il bivio: Agente che trova la procedura giusta">
+<meta name="twitter:description" content="A differenza della forma base per le guide, il bivio chiede prima i dati che decidono la procedura. Rispondi a poche domande e sai quale procedura vale e perché.">
+<meta name="twitter:image" content="https://copilot.ninja/assets/img/karten/it/agent-findet-den-ablauf.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://copilot.ninja/it/#website",
+      "name": "Power Platform Dojo",
+      "alternateName": "Power Platform Dojo",
+      "url": "https://copilot.ninja/it/",
+      "inLanguage": "it",
+      "description": "Tecniche ninja per Microsoft Copilot Chat e Copilot Studio con fonte e data di verifica. Sito indipendente, senza legami con Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://copilot.ninja/it/techniken/agent-findet-den-ablauf/#technik",
+      "headline": "Il bivio: Agente che trova la procedura giusta",
+      "name": "Il bivio",
+      "url": "https://copilot.ninja/it/techniken/agent-findet-den-ablauf/",
+      "inLanguage": "it",
+      "description": "A differenza della forma base per le guide, il bivio chiede prima i dati che decidono la procedura. Rispondi a poche domande e sai quale procedura vale e perché.",
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "citation": [
+        "https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance",
+        "https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+        "https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management",
+        "https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions"
+      ],
+      "isPartOf": {
+        "@id": "https://copilot.ninja/it/techniken/#seite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://copilot.ninja/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tecniche",
+          "item": "https://copilot.ninja/it/techniken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Il bivio",
+          "item": "https://copilot.ninja/it/techniken/agent-findet-den-ablauf/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="Power Platform Dojo, Copilot, home page"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></a>
+    <nav class="nav" aria-label="Navigazione principale">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Tecniche</a></li>
+        <li><a href="../../pruefung/" data-nav="pruefung">Prova di cintura</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Verifica licenza</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">Il mio Dojo</a></li>
+        <li><a href="https://powerplatformdojo.com/it/" rel="noopener">Panoramica del Dojo</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Scegli la lingua, attuale: Italiano">IT</summary><ul class="sprachen__liste"><li><a href="../../../techniken/agent-findet-den-ablauf/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/techniken/agent-findet-den-ablauf/" hreflang="fr" lang="fr" data-sprache-wahl="fr"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/techniken/agent-findet-den-ablauf/" hreflang="it" lang="it" data-sprache-wahl="it" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/techniken/agent-findet-den-ablauf/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Cerca tecniche" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Modalità scura" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Chiudi il menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../../techniken/" aria-current="true">Tecniche</a></li>
+      <li><a href="../../pruefung/">Prova di cintura</a></li>
+      <li><a href="../../gratis/">Verifica licenza</a></li>
+      <li><a href="../../heute/">Tecnica del giorno</a></li>
+      <li><a href="../../dojo/">Il mio Dojo</a></li>
+      <li><a href="https://powerplatformdojo.com/it/" rel="noopener">Panoramica del Dojo</a></li>
+      <li><a href="../../ueber/">Informazioni</a></li>
+      <li><a href="https://powerautomate.ninja/it/" rel="noopener">Dojo per Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../../vier-wochen/">In quattro settimane attraverso tutte le cinture</a></li>
+      <li><a href="../../gratis/nachschlagen/">Copilot senza licenza aggiuntiva: ogni condizione con la sua fonte</a></li>
+      <li><a href="../../dojo/profil/">Profilo e tecnica tua</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Cerca tecniche</h2>
+    <label for="suche-feld" class="sr-only">Termine di ricerca</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Verbale, contratto, agente">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Chiudi la ricerca"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Risultati"></ul>
+  <p class="suche__leer" hidden>Nessuna tecnica trovata. Prova con verbale, contratto o agente.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-technik="t20" data-guertel-nr="5">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Briciole di pane"><ol><li><a href="../../">Home</a></li><li><a href="../">Tecniche</a></li><li><a href="../#blauer-guertel">Cintura blu</a></li><li><a href="./" aria-current="page">N. 20</a></li></ol></nav>
+    <header class="tk">
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="5">Cintura blu</span></li>
+        <li><a class="zugang zugang--studio" href="../../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio: crea e verifica nella versione di valutazione. Per pubblicare servono capacità (crediti Copilot o pay-as-you-go) e l'autorizzazione come autore.</a></li>
+        <li><span class="art art--schriftrolle"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M4 2h14v10H4zM4 2a2 2 0 0 0 0 10M18 2a2 2 0 0 1 0 10"/></svg>Pergamena</span></li>
+        <li class="tk__nr">N. 20</li>
+        <li><span>ca. 30 min</span></li>
+      </ul>
+      <h1 id="h1">Il bivio<small>Agente che trova la procedura giusta</small></h1>
+      <p class="tk__moment">Quando nessuno sa quale procedura vale</p>
+    </header>
+
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">La situazione</h2>
+      <p class="abschnitt__problem">Se un acquisto passa dall'ufficio acquisti, dalla direzione o direttamente, è scritto nel regolamento sugli acquisti. Di solito lo si legge solo quando qualcosa è andato storto.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">Il taglio</h2>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Prima</p><div class="schnitt__vorher"><p class="schnitt__zitat">«Rispondi alle domande sul nostro regolamento.»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <p class="label">Dopo</p>
+<details class="schmiede-klappe" data-nur-js><summary>Adattalo a te</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Nulla lascia il tuo browser. Nome dell'azienda, ruolo e settore vengono dal tuo profilo in Il mio Dojo.</p></div>
+<div class="schmiede__feld"><label for="technik-f1">Nome dell'azienda</label><input id="technik-f1" type="text" data-ph-feld="Nome dell'azienda" autocomplete="off"></div>
+<div class="schmiede__feld"><label for="technik-f2">Area</label><input id="technik-f2" type="text" data-ph-feld="Area" autocomplete="off" aria-describedby="technik-f2-h"><small id="technik-f2-h">ad es. acquisti</small></div>
+<div class="schmiede__feld"><label for="technik-f3">Fonte di conoscenza</label><input id="technik-f3" type="text" data-ph-feld="Fonte di conoscenza" autocomplete="off" aria-describedby="technik-f3-h"><small id="technik-f3-h">ad es. nome del regolamento</small></div>
+<div class="schmiede__feld"><label for="technik-f4">Contatto</label><input id="technik-f4" type="text" data-ph-feld="Contatto" autocomplete="off" aria-describedby="technik-f4-h"><small id="technik-f4-h">ad es. funzione con indirizzo e-mail</small></div>
+</div></details>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Istruzione dell'agente da copiare</p></div>
+<pre class="code" id="prompt"># Scopo
+Aiuti i collaboratori di <span class="ph" data-ph="Nome dell'azienda">[Nome dell'azienda]</span> a scoprire quale procedura vale per la loro richiesta nell'area <span class="ph" data-ph="Area">[Area, ad es. acquisti]</span>.
+
+# Conoscenze
+Le regole sono in <span class="ph" data-ph="Fonte di conoscenza">[Fonte di conoscenza, ad es. nome del regolamento]</span>. Rispondi solo in base a quella.
+
+# Procedura
+## Passaggio 1: Capire la richiesta
+- Obiettivo: Sapere di che cosa si tratta.
+- Azione: Fatti descrivere la richiesta in una frase.
+- Transizione: Continua con il passaggio 2.
+
+## Passaggio 2: Posizionare gli scambi
+- Obiettivo: Raccogliere i dati da cui dipende la procedura.
+- Azione: Individua dalla fonte di conoscenza quali dati decidono la procedura, ad esempio importo, tipo di prestazione o urgenza. Chiedili uno alla volta, prima il più decisivo. Non chiedere nulla che non conti per la decisione.
+- Transizione: Continua con il passaggio 3 non appena la procedura è chiara. Se dopo tutte le domande resta poco chiara, continua con il passaggio 4.
+
+## Passaggio 3: Indicare la procedura
+- Obiettivo: La persona sa che cosa fare dopo.
+- Azione: Indica la procedura con il nome, i due passaggi successivi, l'ufficio competente e il riferimento nella fonte di conoscenza. Dì in una frase quale dato ha posizionato lo scambio.
+- Transizione: Concludi la conversazione, a meno che la persona abbia una domanda successiva.
+
+## Passaggio 4: Passare la mano
+- Obiettivo: Nessuna ipotesi nei casi limite.
+- Azione: Dì che le regole non coprono questo caso in modo univoco e indica <span class="ph" data-ph="Contatto">[Contatto, ad es. funzione con indirizzo e-mail]</span>.
+- Transizione: Concludi la conversazione.
+
+# Tono
+Usa il tu, italiano semplice, al massimo tre frasi per messaggio.</pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copiato. Ora incollalo nelle istruzioni del tuo agente." data-nur-js>Copia l'istruzione</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Tecnica dal Power Platform Dojo: copilot.ninja/it/20&#10;Fonte: Microsoft Learn, aggiornato al 15 ottobre 2026" data-nur-js>Inoltra</button><p class="rolle__status" role="status"></p></div>
+</div>
+      <p class="rolle__fallback">Copilot Studio: crea e verifica nella versione di valutazione. Per pubblicare servono capacità (crediti Copilot o pay-as-you-go) e l'autorizzazione come autore.. Senza il pulsante di copia: seleziona il testo e copialo con Ctrl+C.</p>
+    </section>
+
+
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">Come usarla</h2>
+      <ol class="schritte"><li>In Copilot Studio crea un agente e aggiungi il regolamento come fonte di conoscenza.</li><li>Incolla le istruzioni e compila i campi.</li><li>Prima fai leggere il regolamento alla ricerca di contraddizioni con la n. 6 o con un prompt tuo.</li><li>Aggiungi il blocco della n. 19.</li><li>Nel riquadro di test simula i casi limite, ad esempio un importo esattamente su una soglia.</li></ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">Come riconoscere una buona risposta</h2>
+      <ul class="pruefliste"><li>L'agente chiede solo i dati che decidono la procedura, il più importante per primo.</li><li>Indica la procedura, i due passaggi successivi, l'ufficio competente e il riferimento.</li><li>Dice quale dato ha posizionato lo scambio.</li><li>Nei casi poco chiari passa la mano al punto di contatto invece di tirare a indovinare.</li></ul>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-probe">
+      <h2 id="h-probe">La verifica</h2>
+      <p class="probe">Conta le domande rivolte all'ufficio competente sul tema, quattro settimane prima e quattro settimane dopo l'introduzione.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Limiti</h2>
+      <ul class="arrow-list prose"><li>Funziona solo se le regole nella fonte di conoscenza sono univoche. Le contraddizioni nel regolamento l'agente non le trova per te, ci inciampa.</li><li>Secondo Microsoft un agente può seguire istruzioni sulle fonti di conoscenza solo se sono configurate.</li><li>Chi usa l'agente pubblicato consuma crediti Copilot (secondo la tabella delle tariffe, gli utenti con licenza Microsoft Copilot in Microsoft 365 no). Secondo Microsoft una risposta generativa vale 2 crediti Copilot, il Tenant Graph Grounding 10. Le tariffe possono cambiare.</li><li>Nella versione di valutazione di Copilot Studio puoi creare e verificare nel riquadro di test, ma non pubblicare.</li></ul>
+    </section>
+
+
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Fonti</h2>
+      <p class="quelle"><a href="https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance" rel="noopener">Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio)</a>, <a href="https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions" rel="noopener">Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi</a>, <a href="https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn: Gestione e tariffe di fatturazione (Copilot Studio)</a>, <a href="https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions" rel="noopener">Microsoft Learn: Ottenere l'accesso a Copilot Studio</a>. Aggiornato al <time datetime="2026-10-15">15 ottobre 2026</time>.</p>
+
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Segna come esercitata</button></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Inoltra</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="https://www.linkedin.com/feed/?shareActive=true&amp;text=Tecnica%2020%20dal%20Power%20Platform%20Dojo%3A%20Il%20bivio.%20Un%20agente%20chiede%20solo%20ci%C3%B2%20che%20decide%20la%20procedura%20e%20dice%20quale%20dato%20ha%20posizionato%20lo%20scambio.%20Da%20copiare%20liberamente%2C%20con%20fonte%20su%20Microsoft%20Learn.%0A%0Ahttps%3A%2F%2Fcopilot.ninja%2Fit%2Ftechniken%2Fagent-findet-den-ablauf%2F" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Condividi su LinkedIn</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="https://copilot.ninja/it/techniken/agent-findet-den-ablauf/" hidden>Condividi</button>
+        <a class="knopf knopf--klein" href="../../../assets/img/karten/it/agent-findet-den-ablauf.png" download>Scarica l'immagine</a>
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Testo copiato. Incollalo nel tuo post." data-nur-js>Copia il testo per il tuo post</button>
+        <p class="rolle__status" role="status"></p>
+      </div>
+      <details class="einklapp">
+        <summary>Testo suggerito per il tuo post</summary>
+        <pre class="code" id="teilen-text">Tecnica 20 dal Power Platform Dojo: Il bivio. Un agente chiede solo ciò che decide la procedura e dice quale dato ha posizionato lo scambio. Da copiare liberamente, con fonte su Microsoft Learn.
+
+https://copilot.ninja/it/techniken/agent-findet-den-ablauf/</pre>
+      </details>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-kette">
+      <h2 id="h-kette">Combo</h2>
+      <div class="kette">
+        <div><p class="label">Arriva da</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="g4" data-guertel-nr="4"><span class="karte-kompakt__nr">G4</span><a class="karte-kompakt__link" href="../../techniken/agent-interne-anleitungen/">Agente per le istruzioni interne</a><a class="zugang zugang--studio" href="../../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a></li></ul></div>
+        <div><p class="label">Prosegui con</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t19" data-guertel-nr="5"><span class="karte-kompakt__nr">19</span><a class="karte-kompakt__link" href="../../techniken/schutzbaustein-fuer-agents/">L'armatura</a><span class="klein">Blocco di protezione per ogni istruzione dell'agente</span><a class="zugang zugang--studio" href="../../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a></li></ul></div>
+      </div>
+    </section>
+
+    <nav class="blaettern" aria-label="Altre tecniche">
+<a href="../../techniken/schutzbaustein-fuer-agents/" rel="prev"><span>Tecnica precedente</span>19 L'armatura</a>
+<a href="../../techniken/power-automate-ausdruecke-erklaert/" rel="next"><span>Tecnica successiva</span>21 L'interprete</a>
+    </nav>
+<p class="kurs-zeile" data-kurs-status="warteliste">Preferisci proseguire con un accompagnamento? Il <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=technik-20" rel="noopener">Corso live «Copilot Ninja in 4 Wochen»</a> (in tedesco) della Power Platform Academy dura quattro settimane. Le prossime date non sono ancora fissate: nella pagina del corso puoi metterti in lista d'attesa.</p>
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copiato. Ora incollalo nelle istruzioni del tuo agente." data-nur-js>Copia l'istruzione</button>
+    <a class="knopf knopf--klein" href="../../techniken/power-automate-ausdruecke-erklaert/">Tecnica successiva</a>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__klar">Sito indipendente, senza legami con Microsoft.</p>
+        <p>Un progetto di Marcel Lehmann. Per saperne di più: <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+        <p>Tecniche ninja per Microsoft Copilot Chat e Copilot Studio. Ognuna con fonte su Microsoft Learn. Senza iscrizione. Le visite vengono contate senza cookie; vengono salvati solo totali senza dati personali (GoatCounter). I tuoi progressi restano nel tuo browser.</p>
+        <p class="beitragen">Conosci una tecnica che qui manca? <a href="mailto:marcel.lehmann@kmupower.com?subject=Una%20tecnica%20per%20il%20Dojo&amp;body=Titolo%20della%20tecnica%3A%0A%0AProblema%20che%20risolve%3A%0A%0APrompt%20o%20guida%3A%0A%0ALimiti%3A%0A%0AFonte%20su%20Microsoft%20Learn%3A%0A%0APosso%20nominarti%20come%20mittente%3F%20(s%C3%AC%20o%20no)%0A%0APer%20favore%20nessun%20dato%20di%20clienti%2C%20persone%20o%20aziende%20nel%20prompt.">Scrivimi.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">Tutte le tecniche</a></li>
+          <li><a href="../../pruefung/">Prova di cintura</a></li>
+          <li><a href="../../gratis/">Microsoft Copilot è gratis?</a></li>
+          <li><a href="../../heute/">Tecnica del giorno</a></li>
+          <li><a href="../../vier-wochen/">In quattro settimane attraverso tutte le cinture</a></li>
+          <li><a href="../../kalender/montag.ics" download>15 minuti ogni lunedì nel tuo calendario</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Info</h2>
+        <ul>
+          <li><a href="../../ueber/">Informazioni sul Dojo</a></li>
+          <li><a href="../../impressum/">Note legali</a></li>
+          <li><a href="../../datenschutz/">Protezione dei dati</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls (in tedesco)</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Altre discipline: <a href="https://powerautomate.ninja/it/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/it/lernpfade/" rel="noopener">Percorsi di apprendimento</a>, <a href="https://powerplatformdojo.com/it/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
+    </div>
+    <div class="fuss__recht">
+      <p>Non è un'offerta di Microsoft. Sito indipendente di Marcel Lehmann, non gestito, sponsorizzato né approvato da Microsoft. Microsoft, i nomi dei prodotti Power Platform (tra cui Power Apps, Power Automate e Copilot Studio) e Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word e Work IQ sono marchi del gruppo di aziende Microsoft. GitHub e GitHub Copilot sono marchi di GitHub, Inc.</p>
+      <p>Niente cookie, niente profili. Le visualizzazioni di pagina vengono contate senza dati personali (GoatCounter). I tuoi progressi restano nel tuo browser.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Movimento disattivato</button></p>
+    </div>
+  </div>
+  <template data-kurs-vorlage><p class="kurs-zeile" data-kurs-status="warteliste">Preferisci proseguire con un accompagnamento? Il <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=vorlage" rel="noopener">Corso live «Copilot Ninja in 4 Wochen»</a> (in tedesco) della Power Platform Academy dura quattro settimane. Le prossime date non sono ancora fissate: nella pagina del corso puoi metterti in lista d'attesa.</p></template>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>

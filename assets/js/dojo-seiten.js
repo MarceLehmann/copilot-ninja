@@ -4,12 +4,14 @@
   'use strict';
   var d = document, w = window, h = d.documentElement, D = w.CNDojo;
   if (!D) return;
-  var el = D.el, alle = D.alle, NAMEN = D.NAMEN, FARBEN = D.FARBEN, ROOT = D.root, BASIS = D.basis || ROOT, EN = !!D.en, LP = D.lp || '';
+  var el = D.el, alle = D.alle, NAMEN = D.NAMEN, FARBEN = D.FARBEN, ROOT = D.root, BASIS = D.basis || ROOT, SPR = D.sprache || 'de', LP = D.lp || '';
   var T = D.T || function (de) { return de; };
-  var PFLICHT = T('Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.', 'Self-assessment on an independent website. Not a certificate.');
+  var PFLICHT = T("Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.");
   var BELT = ['#FBFAF5', '#E2B100', '#E36A00', '#2E8B57', '#2F6FB5', '#7A4A2B', '#111111'];
   function landeseite(n) { return BASIS + 'dojo/guertel/' + FARBEN[n - 1] + '/'; }
-  function akk(n) { return EN ? NAMEN[n - 1] : NAMEN[n - 1].replace(/er Gürtel$/, 'en Gürtel'); }
+  /* GoatCounter-Ereignis, still: fehlt der Zaehler oder ist er abgeschaltet (skipgc), passiert nichts */
+  function ereignis(pfad) { try { var gc = w.goatcounter; if (gc && typeof gc.count === 'function') gc.count({ path: pfad, title: pfad, event: true }); } catch (e) { /* Zaehlen darf nie stoeren */ } }
+  var akk = D.akk;
 
   /* Tusch aus der Kopfzeile in Platzhalter klonen, damit er den Guertel der Person traegt */
   function tuschKlonen() {
@@ -65,7 +67,7 @@
     ctx.fillStyle = '#B4301A'; ctx.font = '700 24px ' + SCHRIFT; ctx.fillText('COPILOT', 80 + wmB + 14, 88);
     ctx.fillStyle = '#4E525B'; ctx.font = '400 34px ' + SCHRIFT; ctx.textBaseline = 'alphabetic';
     var y = 176;
-    ctx.fillText(art === 'start' ? T('Mein Startpunkt im Dojo', 'My starting point in the Dojo') : T('Mein Dojo-Gürtel', 'My Dojo belt'), 80, y);
+    ctx.fillText(art === 'start' ? T("Mein Startpunkt im Dojo") : T("Mein Dojo-Gürtel"), 80, y);
     if (name) { y += 46; ctx.fillStyle = '#15171B'; ctx.font = '600 34px ' + SCHRIFT; ctx.fillText(umbrechen(ctx, name, 700)[0], 80, y); }
     var gross = 58;
     y += 74; ctx.fillStyle = '#15171B'; ctx.font = '700 ' + gross + 'px ' + SCHRIFT; ctx.fillText(NAMEN[n - 1], 80, y);
@@ -86,22 +88,22 @@
     box.hidden = false;
     var id = 'karte-name-' + art;
     var feld = el('div', { 'class': 'schmiede__feld' });
-    feld.appendChild(el('label', { 'for': id }, T('Dein Name auf der Karte (freiwillig)', 'Your name on the card (optional)')));
+    feld.appendChild(el('label', { 'for': id }, T("Dein Name auf der Karte (freiwillig)")));
     var inp = el('input', { id: id, type: 'text', autocomplete: 'name', maxlength: '40', 'aria-describedby': id + '-h' });
     feld.appendChild(inp);
-    feld.appendChild(el('small', { id: id + '-h' }, T('Der Name wird nur in dieses Bild gezeichnet und nirgends gespeichert.', 'The name is only drawn into this image and stored nowhere.')));
+    feld.appendChild(el('small', { id: id + '-h' }, T("Der Name wird nur in dieses Bild gezeichnet und nirgends gespeichert.")));
     box.appendChild(feld);
-    var titel = (art === 'start' ? T('Mein Startpunkt im Dojo: ', 'My starting point in the Dojo: ') : T('Mein Dojo-Gürtel: ', 'My Dojo belt: ')) + NAMEN[n - 1] + '. ' + PFLICHT;
-    var cv = el('canvas', { width: '1200', height: '630', role: 'img', 'aria-label': T('Vorschau der Karte. ', 'Card preview. ') + titel });
+    var titel = (art === 'start' ? T("Mein Startpunkt im Dojo: ") : T("Mein Dojo-Gürtel: ")) + NAMEN[n - 1] + '. ' + PFLICHT;
+    var cv = el('canvas', { width: '1200', height: '630', role: 'img', 'aria-label': T("Vorschau der Karte. ") + titel });
     box.appendChild(cv);
     var reihe = el('div', { 'class': 'knopf-reihe' });
-    var laden = el('button', { type: 'button', 'class': 'knopf knopf--primaer' }, T('Bild herunterladen', 'Download image'));
+    var laden = el('button', { type: 'button', 'class': 'knopf knopf--primaer' }, T("Bild herunterladen"));
     var url = landeseite(n);
-    var li = el('a', { 'class': 'knopf', href: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), rel: 'noopener' }, T('Auf LinkedIn teilen', 'Share on LinkedIn'));
-    var textK = el('button', { type: 'button', 'class': 'knopf' }, T('Text für deinen Post kopieren', 'Copy text for your post'));
+    var li = el('a', { 'class': 'knopf', href: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), rel: 'noopener' }, T("Auf LinkedIn teilen"));
+    var textK = el('button', { type: 'button', 'class': 'knopf' }, T("Text für deinen Post kopieren"));
     reihe.appendChild(laden); reihe.appendChild(li); reihe.appendChild(textK);
     if (navigator.share) {
-      var sys = el('button', { type: 'button', 'class': 'knopf' }, T('Teilen', 'Share'));
+      var sys = el('button', { type: 'button', 'class': 'knopf' }, T("Teilen"));
       sys.addEventListener('click', function () { navigator.share({ title: titel, url: url }).catch(function () {}); });
       reihe.appendChild(sys);
     }
@@ -118,17 +120,16 @@
     laden.addEventListener('click', function () {
       cv.toBlob(function (b) {
         if (!b) return;
-        var u = URL.createObjectURL(b), a = el('a', { href: u, download: 'dojo-' + (art === 'start' ? T('startpunkt-', 'starting-point-') : T('guertel-', 'belt-')) + FARBEN[n - 1] + (EN ? '-en' : '') + '.png' });
+        var u = URL.createObjectURL(b), a = el('a', { href: u, download: 'dojo-' + (art === 'start' ? T("startpunkt-") : T("guertel-")) + FARBEN[n - 1] + (SPR === 'de' ? '' : '-' + SPR) + '.png' });
         d.body.appendChild(a); a.click(); d.body.removeChild(a);
         setTimeout(function () { URL.revokeObjectURL(u); }, 4000);
-        D.ansage(T('Bild gespeichert.', 'Image saved.'));
+        D.ansage(T("Bild gespeichert."));
       }, 'image/png');
     });
     textK.addEventListener('click', function () {
-      var t = EN ? (art === 'start' ? 'My starting point in the Power Platform Dojo: ' + NAMEN[n - 1] + '. Seven questions, each followed by the answer with a source.' : 'In the Power Platform Dojo I have practiced all techniques up to the ' + akk(n) + '.') + ' Self-assessment, not a certificate. ' + url
-        : (art === 'start' ? 'Mein Startpunkt im Power Platform Dojo: ' + NAMEN[n - 1] + '. Sieben Fragen, nach jeder die Auflösung mit Quelle.' : 'Im Power Platform Dojo habe ich alle Techniken bis zum ' + akk(n) + ' geübt.') + ' Selbsteinschätzung, kein Zertifikat. ' + url;
+      var t = (art === 'start' ? T('Mein Startpunkt im Power Platform Dojo: {0}. Sieben Fragen, nach jeder die Auflösung mit Quelle.', NAMEN[n - 1]) : T('Im Power Platform Dojo habe ich alle Techniken bis zum {0} geübt.', akk(n))) + T(' Selbsteinschätzung, kein Zertifikat. ') + url;
       var status = box.querySelector('[role="status"]');
-      (w.CN && w.CN.kopierText ? w.CN.kopierText(t) : Promise.reject()).then(function () { status.textContent = T('Text kopiert. Füg ihn in deinen Post ein.', 'Text copied. Paste it into your post.'); }, function () { status.textContent = t; });
+      (w.CN && w.CN.kopierText ? w.CN.kopierText(t) : Promise.reject()).then(function () { status.textContent = T("Text kopiert. Füg ihn in deinen Post ein."); }, function () { status.textContent = t; });
     });
   }
 
@@ -144,8 +145,8 @@
       var lab = el('label', { 'class': 'dojo-haken' });
       var cb = el('input', { type: 'checkbox', 'data-geuebt-toggle': id });
       lab.appendChild(cb);
-      lab.appendChild(d.createTextNode(T(' geübt', ' practiced')));
-      lab.appendChild(el('span', { 'class': 'sr-only' }, ': ' + (a ? a.textContent : id)));
+      lab.appendChild(d.createTextNode(T(" geübt")));
+      lab.appendChild(el('span', { 'class': 'sr-only' }, T(': ') + (a ? a.textContent : id)));
       li.appendChild(lab);
       cb.addEventListener('change', function () { D.markieren(id, cb.checked, li.closest('.dojo-liste__guertel')); });
     });
@@ -161,10 +162,10 @@
     alle('[data-dojo-leer]').forEach(function (x) { x.hidden = !leer; });
     alle('[data-dojo-voll]').forEach(function (x) { x.hidden = leer; });
     var z = function (k, v) { alle('[data-zahl="' + k + '"]').forEach(function (x) { x.textContent = v; }); };
-    z('guertel', NAMEN[st.guertel - 1] + (st.alle && st.guertel === 7 ? T(', alle geübt', ', all practiced') : ''));
-    z('geuebt', st.liste ? st.geuebt + T(' von ', ' of ') + st.gesamt : String(Object.keys(s.geuebt).length));
-    z('tage', String(st.tage)); alle('[data-tage-wort]').forEach(function (x) { x.textContent = st.tage === 1 ? T('Trainingstag', 'training day') : T('Trainingstage', 'training days'); });
-    z('start', s.selbsttest ? NAMEN[s.selbsttest.startguertel - 1] : T('noch offen', 'still open'));
+    z('guertel', NAMEN[st.guertel - 1] + (st.alle && st.guertel === 7 ? T(", alle geübt") : ''));
+    z('geuebt', st.liste ? st.geuebt + T(" von ") + st.gesamt : String(Object.keys(s.geuebt).length));
+    z('tage', String(st.tage)); alle('[data-tage-wort]').forEach(function (x) { x.textContent = st.tage === 1 ? T("Trainingstag") : T("Trainingstage"); });
+    z('start', s.selbsttest ? NAMEN[s.selbsttest.startguertel - 1] : T("noch offen"));
     alle('[data-geschafft]').forEach(function (x) { x.hidden = !st.alle; });
     /* Guertelkarte nur fuer vollstaendig geuebte Guertel */
     var fertig = st.pro.filter(function (p) { return p.komplett; });
@@ -196,7 +197,7 @@
       var s2 = D.lesen();
       alle('input[data-profil-feld]', f).forEach(function (i) { s2.profil[i.getAttribute('data-profil-feld')] = i.value.trim().slice(0, 80); });
       var ok = D.schreiben(s2);
-      status.textContent = ok ? T('Gespeichert. Ab jetzt sind diese Felder in jeder Technik vorausgefüllt.', 'Saved. From now on these fields are prefilled in every technique.') : T('Dein Browser lässt kein Speichern zu. Die Felder bleiben leer.', 'Your browser does not allow saving. The fields stay empty.');
+      status.textContent = ok ? T("Gespeichert. Ab jetzt sind diese Felder in jeder Technik vorausgefüllt.") : T("Dein Browser lässt kein Speichern zu. Die Felder bleiben leer.");
       D.ansage(status.textContent);
     });
   }
@@ -212,11 +213,11 @@
       h.removeAttribute('data-theme'); h.removeAttribute('data-bewegung');
       alle('input[data-profil-feld]').forEach(function (i) { i.value = ''; });
       D.aktualisieren();
-      status.textContent = T('Alles gelöscht: Fortschritt, Profil, Selbsttest, Theme, Bewegung und Sprachwahl. Rückgängig ist während 10 Sekunden möglich.', 'Everything deleted: progress, profile, self-test, theme, motion and language choice. You can undo this for 10 seconds.');
+      status.textContent = T("Alles gelöscht: Fortschritt, Profil, Selbsttest, Theme, Bewegung und Sprachwahl. Rückgängig ist während 10 Sekunden möglich.");
       zurueck.hidden = false; zurueck.focus();
       D.ansage(status.textContent);
       clearTimeout(timer);
-      timer = setTimeout(function () { zurueck.hidden = true; alt = null; status.textContent = T('Alles gelöscht.', 'Everything deleted.'); }, 10000);
+      timer = setTimeout(function () { zurueck.hidden = true; alt = null; status.textContent = T("Alles gelöscht."); }, 10000);
     });
     zurueck.addEventListener('click', function () {
       if (!alt) return;
@@ -228,7 +229,7 @@
       var s = D.lesen();
       alle('input[data-profil-feld]').forEach(function (i) { i.value = s.profil[i.getAttribute('data-profil-feld')] || ''; });
       D.aktualisieren();
-      status.textContent = T('Wiederhergestellt.', 'Restored.');
+      status.textContent = T("Wiederhergestellt.");
       D.ansage(status.textContent); b.focus();
     });
   }
@@ -240,21 +241,18 @@
     function text() {
       var v = function (n) { var x = f.querySelector('[name="' + n + '"]'); return x ? x.value.trim() : ''; };
       var nennung = f.querySelector('[name="nennung"]:checked');
-      if (EN) return ['Title of the technique:', v('titel'), '', 'Problem it solves:', v('problem'), '', 'Prompt or guide:', v('prompt'), '', 'Limits:', v('grenzen'), '',
-        'Source on Microsoft Learn:', v('quelle'), '', 'May I name you as the sender? ' + (nennung ? nennung.value : '(yes or no)'), '',
-        'No customer, personal or company data in the prompt.'].join('\n');
-      return ['Titel der Technik:', v('titel'), '', 'Problem, das sie löst:', v('problem'), '', 'Prompt oder Anleitung:', v('prompt'), '', 'Grenzen:', v('grenzen'), '',
-        'Quelle bei Microsoft Learn:', v('quelle'), '', 'Darf ich dich als Absender nennen? ' + (nennung ? nennung.value : '(ja oder nein)'), '',
-        'Keine Kunden-, Personen- oder Firmendaten im Prompt.'].join('\n');
+      return [T('Titel der Technik:'), v('titel'), '', T('Problem, das sie löst:'), v('problem'), '', T('Prompt oder Anleitung:'), v('prompt'), '', T('Grenzen:'), v('grenzen'), '',
+        T('Quelle bei Microsoft Learn:'), v('quelle'), '', T('Darf ich dich als Absender nennen?') + ' ' + (nennung ? nennung.value : T('(ja oder nein)')), '',
+        T('Keine Kunden-, Personen- oder Firmendaten im Prompt.')].join('\n');
     }
     knopf.addEventListener('click', function () {
       var body = text();
-      if (body.length > 1800) { status.textContent = T('Der Text ist lang für einen Mail-Link. Kopier ihn lieber und füg ihn selbst in eine Mail an marcel.lehmann@kmupower.com ein.', 'The text is long for a mail link. Better copy it and paste it into an email to marcel.lehmann@kmupower.com yourself.'); D.ansage(status.textContent); return; }
-      w.location.href = 'mailto:marcel.lehmann@kmupower.com?subject=' + encodeURIComponent(T('Technik für das Dojo', 'Technique for the Dojo')) + '&body=' + encodeURIComponent(body);
-      status.textContent = T('Dein Mailprogramm öffnet sich mit dem Text. Gesendet wird erst, wenn du dort auf Senden klickst.', 'Your mail program opens with the text. Nothing is sent until you click Send there.');
+      if (body.length > 1800) { status.textContent = T("Der Text ist lang für einen Mail-Link. Kopier ihn lieber und füg ihn selbst in eine Mail an marcel.lehmann@kmupower.com ein."); D.ansage(status.textContent); return; }
+      w.location.href = 'mailto:marcel.lehmann@kmupower.com?subject=' + encodeURIComponent(T("Technik für das Dojo")) + '&body=' + encodeURIComponent(body);
+      status.textContent = T("Dein Mailprogramm öffnet sich mit dem Text. Gesendet wird erst, wenn du dort auf Senden klickst.");
     });
     kopie.addEventListener('click', function () {
-      w.CN.kopierText(text()).then(function () { status.textContent = T('Text kopiert. Füg ihn in eine Mail an marcel.lehmann@kmupower.com ein.', 'Text copied. Paste it into an email to marcel.lehmann@kmupower.com.'); }, function () { status.textContent = T('Kopieren hat nicht funktioniert.', 'Copying did not work.'); });
+      w.CN.kopierText(text()).then(function () { status.textContent = T("Text kopiert. Füg ihn in eine Mail an marcel.lehmann@kmupower.com ein."); }, function () { status.textContent = T("Kopieren hat nicht funktioniert."); });
     });
   }
 
@@ -291,13 +289,13 @@
       function quelleHtml(f, ziel) {
         var p = el('p', { 'class': 'klein' });
         if (f.quelle) {
-          p.appendChild(d.createTextNode(T('Quelle: ', 'Source: ')));
+          p.appendChild(d.createTextNode(T("Quelle: ")));
           p.appendChild(el('a', { href: f.quelle.url, rel: 'noopener' }, f.quelle.titel));
-          p.appendChild(d.createTextNode(T(', Stand ', ', as of ') + D.datumCH(f.geprueft_am) + '.'));
+          p.appendChild(d.createTextNode(T(", Stand ") + D.datumCH(f.geprueft_am) + '.'));
         } else if (f.technik && frei[f.technik]) {
           var t = frei[f.technik];
-          p.appendChild(d.createTextNode(T('Mehr dazu: ', 'More on this: ')));
-          p.appendChild(el('a', { href: D.technikUrl(t) }, T('Technik ', 'Technique ') + t.nr + ', ' + t.titel));
+          p.appendChild(d.createTextNode(T("Mehr dazu: ")));
+          p.appendChild(el('a', { href: D.technikUrl(t) }, T("Technik ") + t.nr + ', ' + t.titel));
           p.appendChild(d.createTextNode('.'));
         }
         ziel.appendChild(p);
@@ -310,7 +308,7 @@
       function frage() {
         var f = runde[pos];
         box.textContent = '';
-        var kopf = el('h2', { 'class': 'label test__fortschritt', tabindex: '-1' }, T('Frage ', 'Question ') + (pos + 1) + T(' von ', ' of ') + runde.length + ', ' + NAMEN[f.guertel - 1]);
+        var kopf = el('h2', { 'class': 'label test__fortschritt', tabindex: '-1' }, T("Frage ") + (pos + 1) + T(" von ") + runde.length + ', ' + NAMEN[f.guertel - 1]);
         box.appendChild(kopf);
         box.appendChild(band());
         var pk = el('p'); pk.appendChild(el('span', { 'class': 'knoten', 'data-guertel-nr': f.guertel }, NAMEN[f.guertel - 1])); box.appendChild(pk);
@@ -325,7 +323,7 @@
         fs.appendChild(wahlen);
         var fehler = el('p', { 'class': 'test__fehler', id: 'test-fehler', role: 'alert' }); fehler.hidden = true;
         fs.appendChild(fehler);
-        var pr = el('p'), knopf = el('button', { type: 'button', 'class': 'knopf knopf--primaer' }, T('Antwort prüfen', 'Check answer'));
+        var pr = el('p'), knopf = el('button', { type: 'button', 'class': 'knopf knopf--primaer' }, T("Antwort prüfen"));
         pr.appendChild(knopf); fs.appendChild(pr);
         var auf = el('div', { 'class': 'test__aufloesung', tabindex: '-1' }); auf.hidden = true;
         fs.appendChild(auf);
@@ -333,18 +331,18 @@
         if (pos > 0) kopf.focus();
         knopf.addEventListener('click', function () {
           var gew = fs.querySelector('input:checked');
-          if (!gew) { fehler.hidden = false; fehler.textContent = T('Wähl zuerst eine Antwort.', 'Choose an answer first.'); alle('input', fs).forEach(function (i) { i.setAttribute('aria-describedby', 'test-fehler'); }); return; }
+          if (!gew) { fehler.hidden = false; fehler.textContent = T("Wähl zuerst eine Antwort."); alle('input', fs).forEach(function (i) { i.setAttribute('aria-describedby', 'test-fehler'); }); return; }
           fehler.hidden = true;
           var richtig = +gew.value === f.richtig;
           antworten.push({ guertel: f.guertel, richtig: richtig });
           alle('input', fs).forEach(function (i) { i.disabled = true; });
           auf.hidden = false;
           auf.classList.add(richtig ? 'is-richtig' : 'is-falsch');
-          var p1 = el('p'); p1.appendChild(el('strong', null, richtig ? T('Richtig.', 'Correct.') : T('Daneben. Richtig ist: ', 'Not quite. The correct answer is: ') + f.antworten[f.richtig]));
+          var p1 = el('p'); p1.appendChild(el('strong', null, richtig ? T("Richtig.") : T("Daneben. Richtig ist: ") + f.antworten[f.richtig]));
           auf.appendChild(p1);
           auf.appendChild(el('p', null, f.aufloesung));
           quelleHtml(f, auf);
-          var weiter = el('button', { type: 'button', 'class': 'knopf knopf--primaer' }, pos + 1 < runde.length ? T('Nächste Frage', 'Next question') : T('Zum Ergebnis', 'To the result'));
+          var weiter = el('button', { type: 'button', 'class': 'knopf knopf--primaer' }, pos + 1 < runde.length ? T("Nächste Frage") : T("Zum Ergebnis"));
           var pw = el('p'); pw.appendChild(weiter); auf.appendChild(pw);
           pr.hidden = true;
           auf.focus();
@@ -362,15 +360,15 @@
         D.zeigen(s, st);
         box.textContent = '';
         var erg = el('section', { 'class': 'test__ergebnis', tabindex: '-1', 'aria-labelledby': 'ergebnis-titel' });
-        erg.appendChild(el('span', { 'class': 'label' }, T('Dein Startpunkt', 'Your starting point')));
+        erg.appendChild(el('span', { 'class': 'label' }, T("Dein Startpunkt")));
         var h2 = el('h2', { id: 'ergebnis-titel' }); h2.appendChild(el('span', { 'class': 'knoten knoten--gross', 'data-guertel-nr': n }, NAMEN[n - 1])); erg.appendChild(h2);
         erg.appendChild(el('p', { 'class': 'lead' }, (pool.startpunkt && pool.startpunkt[falsch ? n : 'alle']) || NAMEN[n - 1] + '.'));
         var richtigZahl = antworten.filter(function (a) { return a.richtig; }).length;
-        erg.appendChild(el('p', null, richtigZahl + T(' von ', ' of ') + antworten.length + T(' richtig. ', ' correct. ') + (falsch ? T('Dein Startpunkt ist der erste Gürtel, bei dem du danebenlagst.', 'Your starting point is the first belt where you missed.') : T('Alle richtig, darum startest du beim schwarzen Gürtel.', 'All correct, so you start at the black belt.'))));
-        if (ohne.length) erg.appendChild(el('p', { 'class': 'klein' }, ohne.map(function (g) { return T('Für den ' + akk(g) + ' gibt es zurzeit keine geprüfte Frage.', 'There is currently no checked question for the ' + akk(g) + '.'); }).join(' ') + T(' Der Startpunkt rechnet mit den übrigen Gürteln.', ' The starting point uses the other belts.')));
-        erg.appendChild(el('p', { 'class': 'meldung' }, PFLICHT + T(' Den Gürtel selbst trägst du erst, wenn du seine Techniken als geübt markiert hast.', ' You only wear the belt itself once you have marked its techniques as practiced.')));
+        erg.appendChild(el('p', null, richtigZahl + T(" von ") + antworten.length + T(" richtig. ") + (falsch ? T("Dein Startpunkt ist der erste Gürtel, bei dem du danebenlagst.") : T("Alle richtig, darum startest du beim schwarzen Gürtel."))));
+        if (ohne.length) erg.appendChild(el('p', { 'class': 'klein' }, ohne.map(function (g) { return T("Für den {0} gibt es zurzeit keine geprüfte Frage.", akk(g)); }).join(' ') + T(" Der Startpunkt rechnet mit den übrigen Gürteln.")));
+        erg.appendChild(el('p', { 'class': 'meldung' }, PFLICHT + T(" Den Gürtel selbst trägst du erst, wenn du seine Techniken als geübt markiert hast.")));
         var start = (L || []).filter(function (t) { return t.guertel === n; }).sort(function (a, b) { return a.nr - b.nr; }).slice(0, 3);
-        erg.appendChild(el('h3', null, T('Deine Start-Techniken', 'Your starting techniques')));
+        erg.appendChild(el('h3', null, T("Deine Start-Techniken")));
         if (start.length) {
           var ul = el('ul', { 'class': 'pfad__liste' });
           start.forEach(function (t) {
@@ -382,18 +380,18 @@
           });
           erg.appendChild(ul);
         } else {
-          var pn = el('p', null, T('Die Techniken dieses Gürtels sind noch nicht freigegeben. Sie erscheinen, sobald Marcel sie gegen die Dokumentation geprüft hat. ', 'The techniques of this belt are not released yet. They appear as soon as Marcel has checked them against the documentation. '));
-          pn.appendChild(el('a', { href: BASIS + 'techniken/' }, T('Zur Technik-Wand', 'To the technique wall'))); erg.appendChild(pn);
+          var pn = el('p', null, T("Die Techniken dieses Gürtels sind noch nicht freigegeben. Sie erscheinen, sobald Marcel sie gegen die Dokumentation geprüft hat. "));
+          pn.appendChild(el('a', { href: BASIS + 'techniken/' }, T("Zur Technik-Wand"))); erg.appendChild(pn);
         }
-        erg.appendChild(el('h3', null, T('Deine Startpunkt-Karte', 'Your starting point card')));
+        erg.appendChild(el('h3', null, T("Deine Startpunkt-Karte")));
         var karte = el('div', { 'class': 'guertelkarte' }); erg.appendChild(karte);
         var pl = el('p', { 'class': 'knopf-reihe' });
-        pl.appendChild(el('a', { 'class': 'knopf', href: BASIS + 'dojo/' }, T('Mein Dojo öffnen', 'Open My Dojo')));
-        var nochmal = el('button', { type: 'button', 'class': 'knopf knopf--leise' }, T('Test neu starten', 'Restart the test'));
+        pl.appendChild(el('a', { 'class': 'knopf', href: BASIS + 'dojo/' }, T("Mein Dojo öffnen")));
+        var nochmal = el('button', { type: 'button', 'class': 'knopf knopf--leise' }, T("Test neu starten"));
         pl.appendChild(nochmal);
         var statisch = d.querySelector('[data-test-statisch]');
         if (statisch) {
-          var zeig = el('button', { type: 'button', 'class': 'knopf knopf--leise' }, T('Alle Fragen mit Auflösung ansehen', 'See all questions with answers'));
+          var zeig = el('button', { type: 'button', 'class': 'knopf knopf--leise' }, T("Alle Fragen mit Auflösung ansehen"));
           pl.appendChild(zeig);
           zeig.addEventListener('click', function () { statisch.hidden = false; var k = statisch.querySelector('h2'); if (k) { k.setAttribute('tabindex', '-1'); k.focus(); } });
         }
@@ -401,18 +399,27 @@
         if (D.kursZeile) erg.appendChild(D.kursZeile('pruefung'));
         if (n >= 3) {
           var sensei = el('aside', { 'class': 'sensei-hinweis', 'aria-labelledby': 'sensei-titel' });
-          sensei.appendChild(el('h3', { id: 'sensei-titel' }, T('Werde Sensei', 'Become a Sensei')));
+          sensei.appendChild(el('h3', { id: 'sensei-titel' }, T("Werde Sensei")));
           var sp = el('p');
-          sp.appendChild(d.createTextNode(T('Du kannst anderen helfen. Im Dojo Mentoring begleitest du als Sensei jemanden 1:1 über 3 Monate, gratis. Zeit und Anzahl Mentees bestimmst du selbst, pausieren kannst du jederzeit. ', 'You can help others. In Dojo Mentoring you guide someone 1:1 for 3 months as a Sensei, free of charge. You decide on time and number of mentees yourself and can pause at any time. ')));
-          sp.appendChild(el('a', { href: T('https://powerplatformdojo.com/mentoring/anmelden/', 'https://powerplatformdojo.com/en/mentoring/anmelden/'), rel: 'noopener' }, T('Als Sensei anmelden', 'Sign up as a Sensei')));
+          sp.appendChild(d.createTextNode(T("Du kannst anderen helfen. Im Dojo Mentoring begleitest du als Sensei jemanden 1:1 über 3 Monate, gratis. Zeit und Anzahl Mentees bestimmst du selbst, pausieren kannst du jederzeit. ")));
+          sp.appendChild(el('a', { href: T("https://powerplatformdojo.com/mentoring/anmelden/"), rel: 'noopener' }, T("Als Sensei anmelden")));
           sensei.appendChild(sp);
           erg.appendChild(sensei);
+        } else {
+          var mentee = el('aside', { 'class': 'sensei-hinweis', 'aria-labelledby': 'mentee-titel' });
+          mentee.appendChild(el('h3', { id: 'mentee-titel' }, T("Hol dir einen Sensei, 1:1 und gratis")));
+          var mp = el('p');
+          mp.appendChild(d.createTextNode(T("Im Dojo Mentoring begleitet dich ein Sensei aus der Community 1:1 über 3 Monate. Du wählst Thema, Sprache und Zeitfenster, danach bekommst du fair einen passenden Sensei zugeteilt. ")));
+          mp.appendChild(el('a', { href: T("https://powerplatformdojo.com/mentoring/finden/"), rel: 'noopener' }, T("Mentoring anfragen")));
+          mentee.appendChild(mp);
+          erg.appendChild(mentee);
         }
-        if (!gespeichert) erg.appendChild(el('p', { 'class': 'klein' }, T('Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.', 'Your browser does not store anything. The result only applies on this page.')));
+        if (!gespeichert) erg.appendChild(el('p', { 'class': 'klein' }, T("Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.")));
         box.appendChild(erg);
         karteBauen(karte, 'start', n);
         erg.focus();
-        D.ansage(T('Dein Startpunkt: ', 'Your starting point: ') + NAMEN[n - 1] + '.');
+        D.ansage(T("Dein Startpunkt: ") + NAMEN[n - 1] + '.');
+        ereignis('pruefung-beendet/' + FARBEN[n - 1]);
         nochmal.addEventListener('click', neu);
       }
       function starten() { startKnopf.parentNode.hidden = true; neu(); box.querySelector('h2').focus(); }

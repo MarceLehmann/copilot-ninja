@@ -10,6 +10,8 @@
 <meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="de" href="https://copilot.ninja/pruefung/fragen/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/pruefung/fragen/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/pruefung/fragen/">
 <link rel="alternate" hreflang="en" href="https://copilot.ninja/en/pruefung/fragen/">
 <link rel="alternate" hreflang="x-default" href="https://copilot.ninja/pruefung/fragen/">
 <link rel="alternate" type="application/atom+xml" title="Power Platform Dojo: neue Techniken" href="../../feed.xml">
@@ -101,7 +103,7 @@
       </ul>
     </nav>
     <div class="kopf__aktionen">
-      <a class="sprachwahl" href="../../en/pruefung/fragen/" hreflang="en" lang="en" data-sprache-wahl="en" aria-label="English version of this page">EN</a>
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Sprache wählen, aktuell: Deutsch">DE</summary><ul class="sprachen__liste"><li><a href="../../pruefung/fragen/" hreflang="de" lang="de-CH" data-sprache-wahl="de" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../fr/pruefung/fragen/" hreflang="fr" lang="fr" data-sprache-wahl="fr"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../it/pruefung/fragen/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../en/pruefung/fragen/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
       <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Technik suchen" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Strg K</kbd></button>
       <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
       <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menü" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
@@ -297,13 +299,13 @@
       </li>
       <li class="test__frage" id="frage-f7a">
         <p><span class="knoten" data-guertel-nr="7">Schwarzer Gürtel</span></p>
-        <h3>Was passiert laut der Learn-Seite «Billing rates and management» ohne Pay-as-you-go am Environment ab 125 Prozent der vorausbezahlten Copilot-Credits-Kapazität?</h3>
-        <ul class="arrow-list"><li>Nichts, es wird nachverrechnet.</li><li>Agents werden blockiert, bis die Kapazität erhöht oder zurückgesetzt wird.</li><li>Nur Agent Flows stoppen, die Agents antworten weiter.</li></ul>
+        <h3>Was passiert laut der Learn-Seite «Billing rates and management» mit den Agents eines Environments ohne Pay-as-you-go, wenn der Tenant 125 Prozent seiner vorausbezahlten Kapazität erreicht?</h3>
+        <ul class="arrow-list"><li>Nichts, der Überverbrauch wird nachverrechnet.</li><li>Sie werden blockiert und antworten nicht mehr, auch in laufenden Gesprächen.</li><li>Nur die Agent Flows stoppen, die Agents antworten weiter.</li></ul>
         <details class="einklapp">
           <summary>Auflösung</summary>
-          <p><strong>Richtig ist: Agents werden blockiert, bis die Kapazität erhöht oder zurückgesetzt wird.</strong></p>
-          <p>Bis 125 Prozent wird Überverbrauch geduldet, ab 125 Prozent werden Agents blockiert, bis die Kapazität erhöht oder zurückgesetzt wird. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet. Die Admin-Seite zu Copilot Credits (manage-copilot-studio-copilot-credits-capacity) ergänzt: Ohne Überverbrauchsquelle kann ein Environment schon stoppen, sobald seine Zuteilung aufgebraucht ist.</p>
-          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Billing rates and management (Copilot Studio)</a>, Stand 02.11.2026.</p>
+          <p><strong>Richtig ist: Sie werden blockiert und antworten nicht mehr, auch in laufenden Gesprächen.</strong></p>
+          <p>Microsoft duldet etwas Überverbrauch, ähnlich einer Schonfrist. Bei 125 Prozent der vorausbezahlten Kapazität greift die Durchsetzung: Die Agents des Environments werden blockiert und antworten nicht mehr, auch mitten in einem Gespräch. Rechnet ein Environment Überverbrauch über einen Pay-as-you-go-Plan ab, blockiert das Aufbrauchen der vorausbezahlten Credits seine Agents nicht. Die Admin-Seite zu Copilot Credits ergänzt: Ohne Überverbrauchsquelle nutzt ein Environment nur seine Zuteilung, danach können Funktionen, die Credits brauchen, aufhören zu arbeiten.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Billing rates and management (Copilot Studio)</a>, Stand 14.11.2026.</p>
         </details>
       </li>
       <li class="test__frage" id="frage-f7b">
@@ -313,8 +315,30 @@
         <details class="einklapp">
           <summary>Auflösung</summary>
           <p><strong>Richtig ist: Nein, es ist für die Prüfung beim Entwurf gedacht.</strong></p>
-          <p>Laut Microsoft ist das Test-Panel für die Prüfung beim Entwurf gedacht und bildet nicht alles Verhalten veröffentlichter Kanäle ab.</p>
-          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot" rel="noopener">Microsoft Learn, Agent im Test-Panel prüfen</a>, Stand 13.10.2026.</p>
+          <p>Laut Microsoft ist das Test-Panel für die Prüfung beim Entwurf gedacht und bildet nicht alles Verhalten veröffentlichter Kanäle ab. Zeitgesteuerte und im Hintergrund ausgelöste Ereignisse, etwa Inaktivitäts-Trigger, feuern dort unter Umständen nicht. Solches Verhalten prüfst du nach dem Veröffentlichen in einem Kanal wie Microsoft Teams.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot" rel="noopener">Microsoft Learn, Agent im Test-Panel prüfen</a>, Stand 14.11.2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7d">
+        <p><span class="knoten" data-guertel-nr="7">Schwarzer Gürtel</span></p>
+        <h3>Ein Admin setzt im Power Platform Admin Center für einen Agent ein monatliches Limit mit hartem Stopp. Was gilt laut Microsoft?</h3>
+        <ul class="arrow-list"><li>Der Agent stoppt genau beim Limit, und mit ihm alle Agent Flows, die er aufruft.</li><li>Der Agent wird beim Limit abgeschaltet, aber nicht sofort, und seine Agent Flows stoppt das Limit nicht.</li><li>Ein solches Limit gibt es nur in Environments mit Pay-as-you-go.</li></ul>
+        <details class="einklapp">
+          <summary>Auflösung</summary>
+          <p><strong>Richtig ist: Der Agent wird beim Limit abgeschaltet, aber nicht sofort, und seine Agent Flows stoppt das Limit nicht.</strong></p>
+          <p>Mit hartem Stopp wird der Agent automatisch abgeschaltet, wenn er das Limit erreicht. Limits greifen laut Microsoft nicht sofort, der Agent kann noch eine Weile antworten. Darum setzt du Limit und Benachrichtigung mit Reserve. Die Agent Flows, die der Agent aufruft, stoppt das Limit nicht, sie werden getrennt abgerechnet und geprüft. Limits gibt es bei vorausbezahlter Kapazität und bei Pay-as-you-go.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn, Copilot Credits und Kapazität verwalten (Power Platform Admin Center)</a>, Stand 14.11.2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7e">
+        <p><span class="knoten" data-guertel-nr="7">Schwarzer Gürtel</span></p>
+        <h3>Wie lange bleiben die Ergebnisse einer Agent-Evaluation laut Microsoft in Copilot Studio verfügbar?</h3>
+        <ul class="arrow-list"><li>7 Tage.</li><li>89 Tage.</li><li>Unbegrenzt.</li></ul>
+        <details class="einklapp">
+          <summary>Auflösung</summary>
+          <p><strong>Richtig ist: 89 Tage.</strong></p>
+          <p>Laut Microsoft sind Testergebnisse 89 Tage in Copilot Studio verfügbar. Wer Monate vergleicht wie bei der Nachtwache, exportiert sie als CSV-Datei.</p>
+          <p class="klein">Quelle: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create" rel="noopener">Microsoft Learn, Testsatz für einzelne Antworten erstellen (Copilot Studio)</a>, Stand 14.11.2026.</p>
         </details>
       </li>
     </ol>

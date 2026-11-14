@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="fr" data-seite="technik">
+<head>
+<meta charset="utf-8">
+<!-- RAHMEN:HEAD -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://copilot-ninja.goatcounter.com; connect-src 'self' https://copilot-ninja.goatcounter.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3EFF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100D16" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://copilot.ninja/techniken/credit-verbrauch-schaetzen/">
+<link rel="alternate" hreflang="fr" href="https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/">
+<link rel="alternate" hreflang="it" href="https://copilot.ninja/it/techniken/credit-verbrauch-schaetzen/">
+<link rel="alternate" hreflang="en" href="https://copilot.ninja/en/techniken/credit-verbrauch-schaetzen/">
+<link rel="alternate" hreflang="x-default" href="https://copilot.ninja/techniken/credit-verbrauch-schaetzen/">
+<link rel="alternate" type="application/atom+xml" title="Power Platform Dojo : nouvelles techniques" href="../../feed.xml">
+<link rel="preload" href="../../../assets/fonts/dojo-display-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<link rel="stylesheet" href="../../../assets/css/technik.css">
+<link rel="stylesheet" href="../../../assets/css/druck.css" media="print">
+<script src="../../../assets/js/theme-init.js"></script>
+<script src="../../../assets/js/texte/fr.js" defer></script>
+<script src="../../../assets/js/core.js" defer></script>
+<script src="../../../assets/js/dojo.js" defer></script>
+<script src="../../../assets/js/count.js" data-goatcounter="https://copilot-ninja.goatcounter.com/count" async></script>
+<script src="../../../assets/js/kompass.js" defer></script>
+
+<!-- /RAHMEN:HEAD -->
+<meta name="generator" content="Power Platform Dojo build">
+<title>Estimer à l'avance la consommation de crédits d'un agent | Copilot Dojo</title>
+<meta name="description" content="Estimer à l'avance la consommation de crédits d'un agent. Guide pour Copilot Studio à copier, avec source Microsoft Learn et date de vérification.">
+<link rel="canonical" href="https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Power Platform Dojo · Copilot">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La boussole des crédits : Estimer à l'avance la consommation de crédits d'un agent">
+<meta property="og:description" content="Estimer à l'avance la consommation de crédits d'un agent. Guide pour Copilot Studio à copier, avec source Microsoft Learn et date de vérification.">
+<meta property="og:url" content="https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/">
+<meta property="og:image" content="https://copilot.ninja/assets/img/karten/fr/credit-verbrauch-schaetzen.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Technique 23 : La boussole des crédits">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La boussole des crédits : Estimer à l'avance la consommation de crédits d'un agent">
+<meta name="twitter:description" content="Estimer à l'avance la consommation de crédits d'un agent. Guide pour Copilot Studio à copier, avec source Microsoft Learn et date de vérification.">
+<meta name="twitter:image" content="https://copilot.ninja/assets/img/karten/fr/credit-verbrauch-schaetzen.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://copilot.ninja/fr/#website",
+      "name": "Power Platform Dojo",
+      "alternateName": "Power Platform Dojo",
+      "url": "https://copilot.ninja/fr/",
+      "inLanguage": "fr",
+      "description": "Techniques ninja pour Microsoft Copilot Chat et Copilot Studio, avec source et date de vérification. Site indépendant, sans lien avec Microsoft.",
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://kmupower.com/#organization",
+      "name": "KMUpower",
+      "legalName": "Marcel Lehmann (Handelsname KMUpower)",
+      "url": "https://kmupower.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcel Lehmann"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/#technik",
+      "headline": "La boussole des crédits: Estimer à l'avance la consommation de crédits d'un agent",
+      "name": "La boussole des crédits",
+      "url": "https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/",
+      "inLanguage": "fr",
+      "description": "Avant la mise en production, tu connais l'ordre de grandeur de la consommation et tu sais ce qui se passe à 125 pour cent de la capacité prépayée et quand l'allocation est épuisée.",
+      "author": {
+        "@type": "Person",
+        "name": "Marcel Lehmann",
+        "url": "https://kmupower.com/",
+        "worksFor": {
+          "@id": "https://kmupower.com/#organization"
+        }
+      },
+      "publisher": {
+        "@id": "https://kmupower.com/#organization"
+      },
+      "datePublished": "2026-10-15",
+      "dateModified": "2026-10-15",
+      "citation": [
+        "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
+        "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/billing-licensing",
+        "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agent-usage-estimator",
+        "https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity"
+      ],
+      "isPartOf": {
+        "@id": "https://copilot.ninja/fr/techniken/#seite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://copilot.ninja/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Techniques",
+          "item": "https://copilot.ninja/fr/techniken/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "La boussole des crédits",
+          "item": "https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- RAHMEN:KOPF -->
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="kopf">
+  <div class="wrap kopf__innen">
+    <a class="marke" href="../../" aria-label="Power Platform Dojo, Copilot, page d’accueil"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="../../techniken/" data-nav="techniken" aria-current="true">Techniques</a></li>
+        <li><a href="../../pruefung/" data-nav="pruefung">Examen de ceinture</a></li>
+        <li><a href="../../gratis/" data-nav="gratis">Test de licence</a></li>
+        <li><a href="../../dojo/" data-nav="dojo">Mon Dojo</a></li>
+        <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      </ul>
+    </nav>
+    <div class="kopf__aktionen">
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Choisir la langue, actuelle : Français">FR</summary><ul class="sprachen__liste"><li><a href="../../../techniken/credit-verbrauch-schaetzen/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/techniken/credit-verbrauch-schaetzen/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/techniken/credit-verbrauch-schaetzen/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/techniken/credit-verbrauch-schaetzen/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Mode sombre" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
+      <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="menue" id="menue" hidden>
+  <div class="menue__kopf">
+    <span class="marke"><span class="tusch tusch--ruhe" data-tusch aria-hidden="true"><svg class="tusch__svg" viewBox="0 0 120 160" width="120" height="160" focusable="false" aria-hidden="true"><g class="t-figur"><path class="t-band" d="M89 27l21-8-2 8-17 6zM90 34h22l-3 6-18-2z"/><path class="t-koerper" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/><path class="t-gesicht" d="M31 38l62-5 1 13-63 5z"/><path class="t-augen" d="M46 44.6h9M68 42.4h9"/><g class="t-rolle"><path class="t-rolle-blatt" d="M30 114h60v18H30z"/><path class="t-rolle-zeilen" d="M38 120h40M38 126h28"/><path class="t-rolle-enden" d="M25 111h6v24h-6zM89 111h6v24h-6z"/></g><path class="t-guertel-enden" d="M52 107c4 13 14 21 30 25l-2 6c-16-4-26-12-31-28zM57 107c7 9 19 13 37 11l1 6c-19 3-32-3-40-14z"/><path class="t-guertel" d="M28 98l69-2 1 9-70 3zM49 94h11v14H49z"/><g class="t-pinsel"><path class="t-pinsel-stiel" d="M95 134l16-36"/><path class="t-pinsel-spitze" d="M110 99q-1-8 5-13 1 8-2 14z"/><circle class="t-hand" cx="101" cy="121" r="5.5"/></g><path class="t-strich" pathLength="1" d="M24 152l2.6-20 .4-20q1-28 3-50c1-26 14-48 36-53l18-3q-4 8 4 18c6 10 7 28 5 46q4 34 7 82z"/></g></svg></span><span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">Copilot</span></span></span>
+    <button type="button" class="knopf-icon" data-menue-zu aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <nav aria-label="Menu">
+    <ul>
+      <li><a href="../../techniken/" aria-current="true">Techniques</a></li>
+      <li><a href="../../pruefung/">Examen de ceinture</a></li>
+      <li><a href="../../gratis/">Test de licence</a></li>
+      <li><a href="../../heute/">Technique du jour</a></li>
+      <li><a href="../../dojo/">Mon Dojo</a></li>
+      <li><a href="https://powerplatformdojo.com/fr/" rel="noopener">Aperçu du Dojo</a></li>
+      <li><a href="../../ueber/">À propos</a></li>
+      <li><a href="https://powerautomate.ninja/fr/" rel="noopener">Dojo pour Power Automate</a></li>
+    </ul>
+    <ul class="menue__klein">
+      <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+      <li><a href="../../gratis/nachschlagen/">Copilot sans licence supplémentaire : chaque condition avec sa source</a></li>
+      <li><a href="../../dojo/profil/">Profil et ta propre technique</a></li>
+    </ul>
+  </nav>
+</div>
+<dialog class="suche" id="suche" aria-labelledby="suche-titel">
+  <div class="suche__kopf">
+    <h2 id="suche-titel" class="sr-only">Rechercher des techniques</h2>
+    <label for="suche-feld" class="sr-only">Terme de recherche</label>
+    <input id="suche-feld" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <button type="button" class="knopf-icon" data-suche-zu aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Résultats"></ul>
+  <p class="suche__leer" hidden>Aucune technique trouvée. Essaie compte rendu, contrat ou agent.</p>
+</dialog>
+<!-- /RAHMEN:KOPF -->
+<main id="main" data-technik="t23" data-guertel-nr="6">
+  <div class="wrap">
+    <nav class="krumen" aria-label="Fil d’Ariane"><ol><li><a href="../../">Accueil</a></li><li><a href="../">Techniques</a></li><li><a href="../#brauner-guertel">Ceinture marron</a></li><li><a href="./" aria-current="page">N° 23</a></li></ol></nav>
+    <header class="tk">
+      <ul class="metazeile">
+        <li><span class="knoten" data-guertel-nr="6">Ceinture marron</span></li>
+        <li><a class="zugang zugang--rechner" href="../../gratis/nachschlagen/#studio-verbrauch"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 1.5h10v13H3zM5 4h6M5.5 8h1M9.5 8h1M5.5 11h1M9.5 11h1"/></svg>Calculer sans licence, l'exploitation demande de la capacité</a></li>
+        <li><span class="art art--kata"><svg viewBox="0 0 22 14" aria-hidden="true" focusable="false"><path d="M1 7h20"/><circle cx="4" cy="7" r="2"/><circle cx="11" cy="7" r="2"/><circle cx="18" cy="7" r="2"/></svg>Kata</span></li>
+        <li class="tk__nr">N° 23</li>
+        <li><span>env. 15 min</span></li>
+      </ul>
+      <h1 id="h1">La boussole des crédits<small>Estimer à l'avance la consommation de crédits d'un agent</small></h1>
+      <p class="tk__moment">Avant qu'un agent passe en production</p>
+    </header>
+
+    <div class="tk-inhalt">
+
+    <section class="abschnitt" aria-labelledby="h-problem">
+      <h2 id="h-problem" class="sr-only">La situation</h2>
+      <p class="abschnitt__problem">La direction demande ce que le nouvel agent consomme en exploitation. Tu as une intuition, mais pas de calcul.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-schnitt" data-schmiede>
+      <h2 id="h-schnitt">La coupe</h2>
+      <div class="schnitt schnitt--zeile" data-schnitt><p class="label">Avant</p><div class="schnitt__vorher"><p class="schnitt__zitat">«Combien coûte mon agent?»</p><svg class="schnitt__strich" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 13C30 9 66 7 99 8"/></svg></div></div>
+      <p class="label">Après</p>
+<details class="schmiede-klappe" data-nur-js><summary>Adapte-le pour toi</summary><div class="schmiede">
+<div class="schmiede__kopf"><p class="schmiede__hinweis">Rien ne quitte ton navigateur.</p></div>
+<div class="schmiede__feld"><label for="technik-f1">Public cible</label><input id="technik-f1" type="text" data-ph-feld="Public cible" autocomplete="off" aria-describedby="technik-f1-h"><small id="technik-f1-h">p. ex. collaborateurs du service interne</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="technik-f2">Équipement</label><textarea id="technik-f2" data-ph-feld="Équipement" rows="4" aria-describedby="technik-f2-h"></textarea><small id="technik-f2-h">p. ex. une source de connaissances et deux outils</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="technik-f3">Instructions</label><textarea id="technik-f3" data-ph-feld="Instructions" rows="4" aria-describedby="technik-f3-h"></textarea><small id="technik-f3-h">p. ex. les instructions de ton agent</small></div>
+</div></details>
+<div class="rolle" data-rolle>
+<div class="rolle__kopf"><p class="rolle__titel">Texte à copier</p></div>
+<pre class="code" id="prompt"><mark class="teil teil--ziel"><span class="teil__label">Objectif :</span> Aide-moi à estimer pour mon agent les événements par conversation. Ses instructions figurent ci-dessous.</mark>
+
+<mark class="teil teil--kontext"><span class="teil__label">Contexte :</span> L'agent est destiné à <span class="ph" data-ph="Public cible">[Public cible, p. ex. collaborateurs du service interne]</span>. Il utilise <span class="ph" data-ph="Équipement">[Équipement, p. ex. une source de connaissances et deux outils]</span>.</mark>
+
+<mark class="teil teil--erwartung"><span class="teil__label">Attentes :</span>
+1. Pour une conversation typique et pour une longue : combien de réponses issues de sources de connaissances (génératives), combien de réponses prédéfinies (classiques), combien d'actions comme des outils ou des changements entre rubriques et combien d'étapes dans des flux d'agent sont à prévoir.
+2. Une phrase de justification par chiffre.
+3. L'hypothèse qui modifie le plus le résultat.
+Indique tout comme estimation. Ne calcule aucun prix.</mark>
+
+Instructions :
+<span class="ph" data-ph="Instructions">[Instructions, p. ex. les instructions de ton agent]</span></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copié. Colle-le maintenant dans Microsoft Copilot Chat." data-nur-js>Copier le texte</button><button type="button" class="knopf knopf--klein" data-weitergeben="prompt" data-herkunft="Technique du Power Platform Dojo : copilot.ninja/fr/23&#10;Source : Microsoft Learn, état au 15 octobre 2026" data-nur-js>Transmettre</button><p class="rolle__status" role="status"></p></div>
+</div>
+      <p class="rolle__fallback">Calculer sans licence, l'exploitation demande de la capacité. Sans bouton de copie : sélectionne le texte et copie-le avec Ctrl+C.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-rechner">
+      <h2 id="h-rechner">La boussole</h2>
+      <div class="rechner" data-kompass data-raten="{&quot;einheit&quot;:&quot;crédits Copilot&quot;,&quot;raten&quot;:[{&quot;schluessel&quot;:&quot;classic&quot;,&quot;name&quot;:&quot;Réponse classique&quot;,&quot;credits&quot;:1},{&quot;schluessel&quot;:&quot;generativ&quot;,&quot;name&quot;:&quot;Réponse générative&quot;,&quot;credits&quot;:2},{&quot;schluessel&quot;:&quot;aktion&quot;,&quot;name&quot;:&quot;Action d'agent&quot;,&quot;credits&quot;:5},{&quot;schluessel&quot;:&quot;graph&quot;,&quot;name&quot;:&quot;Ancrage dans le graphe du locataire&quot;,&quot;credits&quot;:10},{&quot;schluessel&quot;:&quot;flow&quot;,&quot;name&quot;:&quot;Action de flux d'agent&quot;,&quot;credits&quot;:0.13}],&quot;regeln&quot;:[&quot;Selon la page sur les licences, Copilot Studio applique la capacité achetée chaque mois, et les crédits Copilot non utilisés ne sont pas reportés au mois suivant. L'Agent Usage Estimator écrit en revanche que certains achats sont reportables. C'est ton contrat qui fait foi.&quot;,&quot;Selon la page Learn «Taux de facturation et gestion», un dépassement est toléré jusqu'à 125 pour cent de la capacité prépayée; à partir de 125 pour cent, les agents sont bloqués jusqu'à ce que la capacité soit augmentée ou réinitialisée; avec le paiement à l'utilisation sur l'environnement, le dépassement est facturé à l'abonnement Azure. La page d'administration sur les crédits Copilot ajoute: sans source de dépassement (paiement à l'utilisation ou pool du locataire), un environnement ne consomme que son allocation, et les fonctions qui demandent des crédits peuvent s'arrêter ensuite. Les deux sources sont liées ci-dessous.&quot;,&quot;Pour les flux d'agent, des règles de capacité propres s'appliquent: s'il n'y a plus de crédits Copilot disponibles, aucune nouvelle exécution de flux ne démarre, l'agent continue selon Microsoft de répondre pour les autres interactions.&quot;],&quot;lizenz_hinweis&quot;:&quot;Avec la case cochée, le calculateur ne met à 0 crédit que les réponses classiques, les réponses génératives et l'ancrage dans le graphe du locataire, lorsque l'agent fonctionne avec l'identité connectée d'un utilisateur disposant d'une licence complémentaire Microsoft 365 Copilot. Des limites d'utilisation équitable s'appliquent. Les actions d'agent et les actions de flux d'agent restent incluses par précaution. Les actions d'agent d'utilisation de l'ordinateur ne sont pas gratuites d'office. Vérifie dans la source Microsoft les exceptions qui s'appliquent à ton cas.&quot;,&quot;lizenz_ohne_verbrauch&quot;:[&quot;classic&quot;,&quot;generativ&quot;,&quot;graph&quot;],&quot;beispiel&quot;:{&quot;gespraeche&quot;:400,&quot;generativ&quot;:3,&quot;aktion&quot;:1,&quot;hinweis&quot;:&quot;Hypothèse inventée pour illustrer.&quot;},&quot;quelle_url&quot;:&quot;https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management&quot;,&quot;quelle_titel&quot;:&quot;Microsoft Learn: Taux de facturation et gestion (Copilot Studio)&quot;,&quot;geprueft_am&quot;:&quot;2026-10-15&quot;,&quot;weitere_quellen&quot;:[{&quot;url&quot;:&quot;https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/billing-licensing&quot;,&quot;titel&quot;:&quot;Microsoft Learn: Licence standard pour harnais (Copilot Studio)&quot;},{&quot;url&quot;:&quot;https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agent-usage-estimator&quot;,&quot;titel&quot;:&quot;Microsoft Learn: Estimateur d'utilisation de l'agent (Copilot Studio)&quot;},{&quot;url&quot;:&quot;https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity&quot;,&quot;titel&quot;:&quot;Microsoft Learn: Gérer les crédits Copilot et la capacité pour Copilot Studio (Power Platform admin center)&quot;}]}">
+        <p>Tarifs selon Microsoft dans crédits Copilot : Réponse classique 1, Réponse générative 2, Action d'agent 5, Ancrage dans le graphe du locataire 10, Action de flux d'agent 0.13.</p>
+        <p>Exemple de calcul : 400 conversations par mois, chacune avec 3 réponses génératives et 1 action d’agent, donnent 400 fois 11, soit <span class="rechner__ergebnis">4 400</span> crédits Copilot. Hypothèse inventée pour illustrer.</p>
+        <ul class="arrow-list"><li>Selon la page sur les licences, Copilot Studio applique la capacité achetée chaque mois, et les crédits Copilot non utilisés ne sont pas reportés au mois suivant. L'Agent Usage Estimator écrit en revanche que certains achats sont reportables. C'est ton contrat qui fait foi.</li><li>Selon la page Learn «Taux de facturation et gestion», un dépassement est toléré jusqu'à 125 pour cent de la capacité prépayée ; à partir de 125 pour cent, les agents sont bloqués jusqu'à ce que la capacité soit augmentée ou réinitialisée ; avec le paiement à l'utilisation sur l'environnement, le dépassement est facturé à l'abonnement Azure. La page d'administration sur les crédits Copilot ajoute : sans source de dépassement (paiement à l'utilisation ou pool du locataire), un environnement ne consomme que son allocation, et les fonctions qui demandent des crédits peuvent s'arrêter ensuite. Les deux sources sont liées ci-dessous.</li><li>Pour les flux d'agent, des règles de capacité propres s'appliquent : s'il n'y a plus de crédits Copilot disponibles, aucune nouvelle exécution de flux ne démarre, l'agent continue selon Microsoft de répondre pour les autres interactions.</li></ul>
+        <p>Avec la case cochée, le calculateur ne met à 0 crédit que les réponses classiques, les réponses génératives et l'ancrage dans le graphe du locataire, lorsque l'agent fonctionne avec l'identité connectée d'un utilisateur disposant d'une licence complémentaire Microsoft 365 Copilot. Des limites d'utilisation équitable s'appliquent. Les actions d'agent et les actions de flux d'agent restent incluses par précaution. Les actions d'agent d'utilisation de l'ordinateur ne sont pas gratuites d'office. Vérifie dans la source Microsoft les exceptions qui s'appliquent à ton cas.</p>
+        <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn : Taux de facturation et gestion (Copilot Studio)</a>, <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/billing-licensing" rel="noopener">Microsoft Learn : Licence standard pour harnais (Copilot Studio)</a>, <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agent-usage-estimator" rel="noopener">Microsoft Learn : Estimateur d'utilisation de l'agent (Copilot Studio)</a>, <a href="https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn : Gérer les crédits Copilot et la capacité pour Copilot Studio (Power Platform admin center)</a>, état au 15 octobre 2026. Pas de prix par crédit, les prix se trouvent chez Microsoft.</p>
+      </div>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-nutzen">
+      <h2 id="h-nutzen">Comment l’utiliser</h2>
+      <ol class="schritte"><li>Colle les instructions, décris le public cible et l'équipement, et envoie dans Microsoft Copilot Chat.</li><li>Reporte les chiffres par conversation dans le calculateur de cette page et estime les conversations par mois.</li><li>Calcule trois cas : peu, moyennement et beaucoup d'exploitation.</li><li>Pour une estimation plus précise, Microsoft propose l'Agent Usage Estimator.</li><li>Après le premier mois, compare la consommation dans le Power Platform Admin Center avec ton estimation.</li></ol>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-erwarten">
+      <h2 id="h-erwarten">Comment reconnaître une bonne réponse</h2>
+      <ul class="pruefliste"><li>Des chiffres pour une conversation typique et une longue.</li><li>Une justification par chiffre.</li><li>L'hypothèse qui pèse le plus.</li><li>Aucun prix, seulement des événements.</li></ul>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-probe">
+      <h2 id="h-probe">L’épreuve</h2>
+      <p class="probe">Compare ton estimation après le premier mois avec la consommation réelle. L'écart montre à quel point tes hypothèses sur les conversations étaient bonnes.</p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-grenzen">
+      <h2 id="h-grenzen">Limites</h2>
+      <ul class="arrow-list prose"><li>Cette page n'indique pas de prix par crédit Copilot. Ils figurent chez Microsoft.</li><li>Les taux viennent de la documentation Microsoft et peuvent changer. La source liée fait foi.</li><li>Pour les agents créés dans Agent Builder et qui n'utilisent pas l'ancrage dans le graphe du locataire, aucun crédit n'est facturé selon Microsoft pour les réponses génératives.</li><li>Microsoft facture les flux d'agent séparément : 13 crédits Copilot pour 100 actions de flux. Selon Microsoft, les flux cloud Power Automate passent par la licence Power Automate et non par les crédits Copilot.</li><li>Pour l'Agent Usage Estimator, Microsoft recommande une réserve de 10 à 20 pour cent sur l'estimation.</li><li>L'estimation ne remplace pas le regard sur la consommation réelle.</li><li>Les coûts supplémentaires, par exemple pour l'accès aux données, les licences ou d'autres services, ne sont pas inclus dans le calculateur.</li></ul>
+    </section>
+
+
+    <section class="abschnitt" id="quelle" aria-labelledby="h-quelle">
+      <h2 id="h-quelle">Sources</h2>
+      <p class="quelle"><a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn : Taux de facturation et gestion (Copilot Studio)</a>, <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/billing-licensing" rel="noopener">Microsoft Learn : Licence standard pour harnais (Copilot Studio)</a>, <a href="https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agent-usage-estimator" rel="noopener">Microsoft Learn : Estimateur d'utilisation de l'agent (Copilot Studio)</a>, <a href="https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn : Gérer les crédits Copilot et la capacité pour Copilot Studio (Power Platform admin center)</a>. État au <time datetime="2026-10-15">15 octobre 2026</time>.</p>
+
+      <p><button type="button" class="knopf" data-geuebt-knopf data-nur-js>Marquer comme pratiquée</button></p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-teilen">
+      <h2 id="h-teilen">Transmettre</h2>
+      <div class="teilen">
+        <a class="knopf knopf--klein" href="https://www.linkedin.com/feed/?shareActive=true&amp;text=Technique%2023%20du%20Power%20Platform%20Dojo%3A%20La%20boussole%20des%20cr%C3%A9dits.%20Estimer%20avant%20la%20mise%20en%20production%20la%20consommation%20d'un%20agent%20en%20cr%C3%A9dits%20Copilot%2C%20avec%20les%20taux%20de%20la%20documentation%20Microsoft%20et%20sans%20prix.%20Avec%20la%20source.%0A%0Ahttps%3A%2F%2Fcopilot.ninja%2Ffr%2Ftechniken%2Fcredit-verbrauch-schaetzen%2F" target="_blank" rel="noopener" data-linkedin-text="teilen-text">Partager sur LinkedIn</a>
+        <button type="button" class="knopf knopf--klein" data-teilen-system data-url="https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/" hidden>Partager</button>
+        <a class="knopf knopf--klein" href="../../../assets/img/karten/fr/credit-verbrauch-schaetzen.png" download>Télécharger l’image</a>
+        <button type="button" class="knopf knopf--klein" data-kopieren="teilen-text" data-erfolg="Texte copié. Colle-le dans ton post." data-nur-js>Copier le texte pour ton post</button>
+        <p class="rolle__status" role="status"></p>
+      </div>
+      <details class="einklapp">
+        <summary>Texte proposé pour ton post</summary>
+        <pre class="code" id="teilen-text">Technique 23 du Power Platform Dojo : La boussole des crédits. Estimer avant la mise en production la consommation d'un agent en crédits Copilot, avec les taux de la documentation Microsoft et sans prix. Avec la source.
+
+https://copilot.ninja/fr/techniken/credit-verbrauch-schaetzen/</pre>
+      </details>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="h-kette">
+      <h2 id="h-kette">Combo : Du chat à l'agent en production</h2>
+      <div class="kette">
+        <div><p class="label">Vient de</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t19" data-guertel-nr="5"><span class="karte-kompakt__nr">19</span><a class="karte-kompakt__link" href="../../techniken/schutzbaustein-fuer-agents/">L'armure</a><span class="klein">Un bloc de protection pour chaque instruction d'agent</span><a class="zugang zugang--studio" href="../../gratis/nachschlagen/#studio-testversion"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Copilot Studio</a></li></ul></div>
+        <div><p class="label">Suite avec</p><ul class="pfad__liste"><li class="karte-kompakt" data-technik="t24" data-guertel-nr="7"><span class="karte-kompakt__nr">24</span><a class="karte-kompakt__link" href="../../techniken/betriebsblatt-fuer-agents/">Le code d'honneur</a><span class="klein">Une fiche d'exploitation avec critères d'arrêt</span><a class="zugang zugang--frei" href="../../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Sans licence supplémentaire</a></li></ul></div>
+      </div>
+    </section>
+
+    <nav class="blaettern" aria-label="Autres techniques">
+<a href="../../techniken/text-anonymisieren/" rel="prev"><span>Technique précédente</span>22 La cape d'invisibilité</a>
+<a href="../../techniken/betriebsblatt-fuer-agents/" rel="next"><span>Technique suivante</span>24 Le code d'honneur</a>
+    </nav>
+<p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement ? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=technik-23" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p>
+    </div>
+  </div>
+  <div class="leiste-unten">
+    <button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="prompt" data-erfolg="Copié. Colle-le maintenant dans Microsoft Copilot Chat." data-nur-js>Copier le texte</button>
+    <a class="knopf knopf--klein" href="../../techniken/betriebsblatt-fuer-agents/">Technique suivante</a>
+  </div>
+</main>
+<!-- RAHMEN:FUSS -->
+<footer class="fuss">
+  <div class="wrap">
+    <div class="fuss__raster">
+      <div>
+        <p class="fuss__klar">Site indépendant, sans lien avec Microsoft.</p>
+        <p>Un projet de Marcel Lehmann. En savoir plus : <a href="https://www.powerplatformacademy.online/" rel="noopener">Power Platform Academy</a>.</p>
+        <p>Techniques ninja pour Microsoft Copilot Chat et Copilot Studio. Chacune avec une source Microsoft Learn. Sans inscription. Les visites sont comptées sans cookies ; seuls des totaux sans données personnelles sont enregistrés (GoatCounter). Ta progression reste dans ton navigateur.</p>
+        <p class="beitragen">Tu connais une technique qui manque ici ? <a href="mailto:marcel.lehmann@kmupower.com?subject=Technique%20pour%20le%20Dojo&amp;body=Titre%20de%20la%20technique%3A%0A%0AProbl%C3%A8me%20qu%E2%80%99elle%20r%C3%A9sout%3A%0A%0APrompt%20ou%20guide%3A%0A%0ALimites%3A%0A%0ASource%20Microsoft%20Learn%3A%0A%0APuis-je%20te%20nommer%20comme%20exp%C3%A9diteur%3F%20(oui%20ou%20non)%0A%0AMerci%20de%20ne%20mettre%20aucune%20donn%C3%A9e%20de%20client%2C%20de%20personne%20ou%20d%E2%80%99entreprise%20dans%20le%20prompt.">Écris-moi.</a></p>
+      </div>
+      <nav aria-labelledby="fuss-dojo">
+        <h2 id="fuss-dojo">Dojo</h2>
+        <ul>
+          <li><a href="../../techniken/">Toutes les techniques</a></li>
+          <li><a href="../../pruefung/">Examen de ceinture</a></li>
+          <li><a href="../../gratis/">Microsoft Copilot est-il gratuit ?</a></li>
+          <li><a href="../../heute/">Technique du jour</a></li>
+          <li><a href="../../vier-wochen/">Parcourir toutes les ceintures en quatre semaines</a></li>
+          <li><a href="../../kalender/montag.ics" download>15 minutes chaque lundi dans ton calendrier</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="fuss-info">
+        <h2 id="fuss-info">Infos</h2>
+        <ul>
+          <li><a href="../../ueber/">À propos du Dojo</a></li>
+          <li><a href="../../impressum/">Mentions légales</a></li>
+          <li><a href="../../datenschutz/">Protection des données</a></li>
+          <li><a href="https://www.powerplatformacademy.online/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Power Platform Academy</a></li>
+          <li><a href="https://kmupower.com/newsletter?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">Newsletter KMUpower Impuls (en allemand)</a></li>
+          <li><a href="https://kmupower.com/?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=footer" rel="noopener">KMUpower</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="fuss__dojos">
+      <p>Plus de disciplines : <a href="https://powerautomate.ninja/fr/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage</a>, <a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
+    </div>
+    <div class="fuss__recht">
+      <p>Pas une offre de Microsoft. Site indépendant de Marcel Lehmann, non exploité, non sponsorisé et non soutenu par Microsoft. Microsoft, les noms de produits de la Power Platform (dont Power Apps, Power Automate et Copilot Studio) et Agent Builder, Azure, Bing, Dataverse, Entra, Excel, Microsoft 365, Microsoft Copilot, Microsoft Copilot Chat, Microsoft Graph, Microsoft Learn, Microsoft Teams, OneNote, Outlook, PowerPoint, SharePoint, Windows, Word et Work IQ sont des marques du groupe de sociétés Microsoft. GitHub et GitHub Copilot sont des marques de GitHub, Inc.</p>
+      <p>Pas de cookies, pas de profils. Les pages vues sont comptées sans données personnelles (GoatCounter). Ta progression reste dans ton navigateur.</p>
+      <p><button type="button" class="knopf knopf--klein" data-bewegung-toggle aria-pressed="false" data-nur-js>Mouvement désactivé</button></p>
+    </div>
+  </div>
+  <template data-kurs-vorlage><p class="kurs-zeile" data-kurs-status="warteliste">Tu préfères continuer avec un accompagnement ? Le <a href="https://www.powerplatformacademy.online/kurse/copilot-expert?utm_source=copilot.ninja&amp;utm_medium=referral&amp;utm_campaign=dojo&amp;utm_content=vorlage" rel="noopener">Cours en direct «Copilot Ninja in 4 Wochen»</a> (en allemand) de la Power Platform Academy dure quatre semaines. Les prochaines dates ne sont pas encore fixées. Sur la page du cours, tu peux t’inscrire sur la liste d’attente.</p></template>
+  <p id="kopier-status" class="sr-only" role="status" aria-live="polite"></p>
+</footer>
+<!-- /RAHMEN:FUSS -->
+</body>
+</html>
