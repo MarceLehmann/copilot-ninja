@@ -1198,7 +1198,7 @@ Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https:/
 ## Nr. 24 Der Ehrenkodex: Betriebsblatt mit Abschaltkriterien
 
 URL: https://copilot.ninja/techniken/betriebsblatt-fuer-agents/
-Gürtel: Schwarzer Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat. Das Blatt ist eine Methode, keine Microsoft-Funktion. Stand 15.10.2026.
+Gürtel: Schwarzer Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat. Das Blatt ist eine Methode, keine Microsoft-Funktion. Stand 14.11.2026.
 
 Problem: Im Team laufen inzwischen mehrere Agents. Wer sie pflegt und wann einer abgeschaltet wird, weiss niemand genau.
 
@@ -1231,7 +1231,7 @@ So nutzt du es:
 1. Anweisungen einfügen und in Microsoft Copilot Chat senden.
 2. Jedes [FESTLEGEN] mit der verantwortlichen Person klären.
 3. Die Abschaltkriterien mit Zahlen versehen, zum Beispiel eine Bestehensquote aus Nr. 18, unter der der Agent pausiert.
-4. In Copilot Studio kannst du laut Microsoft im Power Platform Admin Center pro Agent eine monatliche Verbrauchsgrenze setzen. Trag sie ins Blatt ein.
+4. In Copilot Studio kannst du laut Microsoft im Power Platform Admin Center pro Agent eine monatliche Verbrauchsgrenze setzen. Trag sie ins Blatt ein. Laut Microsoft greift die Grenze nicht sofort, und sie stoppt die Agent Flows nicht, die der Agent aufruft.
 5. Das Review-Datum als Termin in den Kalender der verantwortlichen Person setzen.
 
 Grenzen:
@@ -1244,7 +1244,7 @@ Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https:/
 ## Nr. 25 Die Nachtwache: Monatlicher Agent-Check
 
 URL: https://copilot.ninja/techniken/monatlicher-agent-check/
-Gürtel: Schwarzer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
+Gürtel: Schwarzer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 14.11.2026.
 
 Problem: Am Agent hat seit Wochen niemand etwas geändert. Trotzdem antwortet er plötzlich anders, weil sich ein Dokument in seiner Wissensquelle geändert hat.
 
@@ -1291,8 +1291,9 @@ Grenzen:
 - Der Check findet Abweichungen. Die Ursache findet ein Mensch.
 - Warum du auch im veröffentlichten Kanal prüfst, steht bei Nr. 18. Was der Betrieb verbraucht und was bei erschöpfter Kapazität passiert, steht bei Nr. 23.
 - Ohne gleiches Testset in jedem Monat sind die Ergebnisse nicht vergleichbar.
+- Laut Microsoft bleiben Testergebnisse der Agent-Evaluation 89 Tage in Copilot Studio. Für den Vergleich über mehrere Monate exportierst du sie als CSV-Datei.
 
-Quellen: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot)
+Quellen: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Create a single response test set (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create)
 
 # English
 
@@ -2477,7 +2478,7 @@ Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https:/
 ## No. 24 The Code of Honor: Operations sheet with shutdown criteria
 
 URL: https://copilot.ninja/en/techniken/betriebsblatt-fuer-agents/
-Belt: Black belt. Access: No add-on license in Microsoft Copilot Chat. The sheet is a method, not a Microsoft feature. As of October 15, 2026.
+Belt: Black belt. Access: No add-on license in Microsoft Copilot Chat. The sheet is a method, not a Microsoft feature. As of November 14, 2026.
 
 Problem: Several agents are now running in the team. Nobody knows exactly who maintains them and when one gets shut down.
 
@@ -2510,7 +2511,7 @@ How to use it:
 1. Paste the instructions and send them in Microsoft Copilot Chat.
 2. Clarify every [TO DEFINE] with the responsible person.
 3. Add numbers to the shutdown criteria, for example a pass rate from No. 18 below which the agent is paused.
-4. According to Microsoft, for Copilot Studio you can set a monthly consumption limit per agent in the Power Platform admin center. Enter it in the sheet.
+4. According to Microsoft, for Copilot Studio you can set a monthly consumption limit per agent in the Power Platform admin center. Enter it in the sheet. According to Microsoft, the limit does not apply instantly, and it does not stop the agent flows that the agent calls.
 5. Put the review date as an appointment in the responsible person's calendar.
 
 Limits:
@@ -2523,7 +2524,7 @@ Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https:/
 ## No. 25 The Night Watch: Monthly agent check
 
 URL: https://copilot.ninja/en/techniken/monatlicher-agent-check/
-Belt: Black belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
+Belt: Black belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of November 14, 2026.
 
 Problem: Nobody has changed anything on the agent for weeks. Still, it suddenly answers differently because a document in its knowledge source has changed.
 
@@ -2570,5 +2571,6 @@ Limits:
 - The check finds deviations. A human finds the cause.
 - Why you also check in the published channel is explained in No. 18. What production consumes and what happens when capacity runs out is explained in No. 23.
 - Without the same test set every month, the results are not comparable.
+- According to Microsoft, agent evaluation test results stay in Copilot Studio for 89 days. To compare across several months, export them as a CSV file.
 
-Sources: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot)
+Sources: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Create a single response test set (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create)

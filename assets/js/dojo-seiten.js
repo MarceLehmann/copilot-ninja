@@ -9,6 +9,8 @@
   var PFLICHT = T('Selbsteinschätzung auf einer unabhängigen Website. Kein Zertifikat.', 'Self-assessment on an independent website. Not a certificate.');
   var BELT = ['#FBFAF5', '#E2B100', '#E36A00', '#2E8B57', '#2F6FB5', '#7A4A2B', '#111111'];
   function landeseite(n) { return BASIS + 'dojo/guertel/' + FARBEN[n - 1] + '/'; }
+  /* GoatCounter-Ereignis, still: fehlt der Zaehler oder ist er abgeschaltet (skipgc), passiert nichts */
+  function ereignis(pfad) { try { var gc = w.goatcounter; if (gc && typeof gc.count === 'function') gc.count({ path: pfad, title: pfad, event: true }); } catch (e) { /* Zaehlen darf nie stoeren */ } }
   function akk(n) { return EN ? NAMEN[n - 1] : NAMEN[n - 1].replace(/er Gürtel$/, 'en Gürtel'); }
 
   /* Tusch aus der Kopfzeile in Platzhalter klonen, damit er den Guertel der Person traegt */
@@ -407,12 +409,21 @@
           sp.appendChild(el('a', { href: T('https://powerplatformdojo.com/mentoring/anmelden/', 'https://powerplatformdojo.com/en/mentoring/anmelden/'), rel: 'noopener' }, T('Als Sensei anmelden', 'Sign up as a Sensei')));
           sensei.appendChild(sp);
           erg.appendChild(sensei);
+        } else {
+          var mentee = el('aside', { 'class': 'sensei-hinweis', 'aria-labelledby': 'mentee-titel' });
+          mentee.appendChild(el('h3', { id: 'mentee-titel' }, T('Hol dir einen Sensei, 1:1 und gratis', 'Get a Sensei, 1:1 and free')));
+          var mp = el('p');
+          mp.appendChild(d.createTextNode(T('Im Dojo Mentoring begleitet dich ein Sensei aus der Community 1:1 über 3 Monate. Du wählst Thema, Sprache und Zeitfenster, danach bekommst du fair einen passenden Sensei zugeteilt. ', 'In Dojo Mentoring, a Sensei from the community guides you 1:1 for 3 months. You choose topic, language and time slot, then you are fairly assigned a matching Sensei. ')));
+          mp.appendChild(el('a', { href: T('https://powerplatformdojo.com/mentoring/finden/', 'https://powerplatformdojo.com/en/mentoring/finden/'), rel: 'noopener' }, T('Mentoring anfragen', 'Request mentoring')));
+          mentee.appendChild(mp);
+          erg.appendChild(mentee);
         }
         if (!gespeichert) erg.appendChild(el('p', { 'class': 'klein' }, T('Dein Browser speichert nichts. Das Ergebnis gilt nur auf dieser Seite.', 'Your browser does not store anything. The result only applies on this page.')));
         box.appendChild(erg);
         karteBauen(karte, 'start', n);
         erg.focus();
         D.ansage(T('Dein Startpunkt: ', 'Your starting point: ') + NAMEN[n - 1] + '.');
+        ereignis('pruefung-beendet/' + FARBEN[n - 1]);
         nochmal.addEventListener('click', neu);
       }
       function starten() { startKnopf.parentNode.hidden = true; neu(); box.querySelector('h2').focus(); }
