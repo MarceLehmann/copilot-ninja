@@ -51,8 +51,8 @@ Kurzfakten:
 - [Nr. 21 Der Dolmetscher: Power-Automate-Ausdrücke mit Erklärung](https://copilot.ninja/techniken/power-automate-ausdruecke-erklaert/): Der Ausdruck kommt mit Erklärung von innen nach aussen und mit dem Randfall, an dem er scheitert. Stand 15.10.2026.
 - [Nr. 22 Die Tarnkappe: Text pseudonymisieren, bevor er weitergeht](https://copilot.ninja/techniken/text-anonymisieren/): Namen, Firmen, Beträge und Nummern werden zu Platzhaltern, und die Zuordnung bekommst du getrennt zurück. Stand 15.10.2026.
 - [Nr. 23 Der Credit-Kompass: Credit-Verbrauch eines Agents vorher schätzen](https://copilot.ninja/techniken/credit-verbrauch-schaetzen/): Du kennst vor dem Livegang die Grössenordnung des Verbrauchs und weisst, was bei 125 Prozent der vorausbezahlten Kapazität und bei aufgebrauchter Zuteilung passiert. Stand 15.10.2026.
-- [Nr. 24 Der Ehrenkodex: Betriebsblatt mit Abschaltkriterien](https://copilot.ninja/techniken/betriebsblatt-fuer-agents/): Die Frage «Wann schalten wir ihn ab?» ist beantwortet, bevor der Agent live geht, und jeder Agent hat eine verantwortliche Person. Stand 15.10.2026.
-- [Nr. 25 Die Nachtwache: Monatlicher Agent-Check](https://copilot.ninja/techniken/monatlicher-agent-check/): Wissensquellen, Einstellungen und Kontingente ändern sich, auch wenn niemand am Agent arbeitet. Die Nachtwache merkt es vor deinen Nutzern. Stand 15.10.2026.
+- [Nr. 24 Der Ehrenkodex: Betriebsblatt mit Abschaltkriterien](https://copilot.ninja/techniken/betriebsblatt-fuer-agents/): Die Frage «Wann schalten wir ihn ab?» ist beantwortet, bevor der Agent live geht, und jeder Agent hat eine verantwortliche Person. Stand 14.11.2026.
+- [Nr. 25 Die Nachtwache: Monatlicher Agent-Check](https://copilot.ninja/techniken/monatlicher-agent-check/): Wissensquellen, Einstellungen und Kontingente ändern sich, auch wenn niemand am Agent arbeitet. Die Nachtwache merkt es vor deinen Nutzern. Stand 14.11.2026.
 
 ## Grundformen
 
@@ -97,8 +97,8 @@ Kurzfakten:
 - [No. 21 The Interpreter: Power Automate expressions with explanations](https://copilot.ninja/en/techniken/power-automate-ausdruecke-erklaert/): The expression comes with an explanation from the inside out and with the edge case where it fails. As of October 15, 2026.
 - [No. 22 The Invisibility Cloak: Pseudonymise text before it goes anywhere](https://copilot.ninja/en/techniken/text-anonymisieren/): Names, companies, amounts and numbers become placeholders, and you get the mapping back separately. As of October 15, 2026.
 - [No. 23 The Credit Compass: Estimate an agent's credit consumption in advance](https://copilot.ninja/en/techniken/credit-verbrauch-schaetzen/): Before going live, you know the order of magnitude of the consumption and what happens at 125 percent of the prepaid capacity and when the allocation is used up. As of October 15, 2026.
-- [No. 24 The Code of Honor: Operations sheet with shutdown criteria](https://copilot.ninja/en/techniken/betriebsblatt-fuer-agents/): The question “When do we shut it down?” is answered before the agent goes live, and every agent has a responsible person. As of October 15, 2026.
-- [No. 25 The Night Watch: Monthly agent check](https://copilot.ninja/en/techniken/monatlicher-agent-check/): Knowledge sources, settings and quotas change even when nobody works on the agent. The Night Watch notices before your users do. As of October 15, 2026.
+- [No. 24 The Code of Honor: Operations sheet with shutdown criteria](https://copilot.ninja/en/techniken/betriebsblatt-fuer-agents/): The question “When do we shut it down?” is answered before the agent goes live, and every agent has a responsible person. As of November 14, 2026.
+- [No. 25 The Night Watch: Monthly agent check](https://copilot.ninja/en/techniken/monatlicher-agent-check/): Knowledge sources, settings and quotas change even when nobody works on the agent. The Night Watch notices before your users do. As of November 14, 2026.
 
 ### Basic forms
 

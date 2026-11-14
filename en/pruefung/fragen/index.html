@@ -297,13 +297,13 @@
       </li>
       <li class="test__frage" id="frage-f7a">
         <p><span class="knoten" data-guertel-nr="7">Black belt</span></p>
-        <h3>According to the Learn page Billing rates and management, what happens without pay-as-you-go on the environment from 125 percent of the prepaid Copilot Credits capacity?</h3>
-        <ul class="arrow-list"><li>Nothing, the extra is billed afterwards.</li><li>Agents are blocked until capacity is increased or reset.</li><li>Only agent flows stop, the agents keep answering.</li></ul>
+        <h3>According to the Learn page Billing rates and management, what happens to the agents of an environment without pay-as-you-go when the tenant reaches 125 percent of its prepaid capacity?</h3>
+        <ul class="arrow-list"><li>Nothing, the overage is billed afterwards.</li><li>They are blocked and stop responding, even in conversations in progress.</li><li>Only the agent flows stop, the agents keep answering.</li></ul>
         <details class="einklapp">
           <summary>Answer</summary>
-          <p><strong>The correct answer is: Agents are blocked until capacity is increased or reset.</strong></p>
-          <p>Overage is tolerated up to 125 percent; from 125 percent, agents are blocked until capacity is increased or reset. With pay-as-you-go on the environment, overage is billed to the Azure subscription. The admin page on Copilot Credits (manage-copilot-studio-copilot-credits-capacity) adds: without an overage source, an environment can stop as soon as its allocation is used up.</p>
-          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Billing rates and management (Copilot Studio)</a>, as of November 2, 2026.</p>
+          <p><strong>The correct answer is: They are blocked and stop responding, even in conversations in progress.</strong></p>
+          <p>Microsoft allows some overage, similar to a grace period. At 125 percent of the prepaid capacity, enforcement applies: the environment's agents are blocked and stop responding, even in the middle of a conversation. If an environment bills overage to a pay-as-you-go plan, running out of prepaid credits does not block its agents. The admin page on Copilot Credits adds: without an overage source, an environment can only use its allocation, after that experiences that need credits can stop working.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management" rel="noopener">Microsoft Learn, Billing rates and management (Copilot Studio)</a>, as of November 14, 2026.</p>
         </details>
       </li>
       <li class="test__frage" id="frage-f7b">
@@ -313,8 +313,30 @@
         <details class="einklapp">
           <summary>Answer</summary>
           <p><strong>The correct answer is: No, it is meant for checking while you build.</strong></p>
-          <p>According to Microsoft, the test panel is meant for checking while you build and does not reproduce all behavior of published channels.</p>
-          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot" rel="noopener">Microsoft Learn, Test your agent in the test panel</a>, as of October 13, 2026.</p>
+          <p>According to Microsoft, the test panel is meant for checking while you build and does not reproduce all behavior of published channels. Timer-based and background-triggered events, such as inactivity triggers, might not fire there. You check that behavior after publishing, in a channel such as Microsoft Teams.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot" rel="noopener">Microsoft Learn, Test your agent in the test panel</a>, as of November 14, 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7d">
+        <p><span class="knoten" data-guertel-nr="7">Black belt</span></p>
+        <h3>An admin sets a monthly limit with a hard stop for an agent in the Power Platform admin center. What applies according to Microsoft?</h3>
+        <ul class="arrow-list"><li>The agent stops exactly at the limit, along with all agent flows it calls.</li><li>The agent is turned off at the limit, but not instantly, and the limit does not stop its agent flows.</li><li>Such a limit only exists in environments with pay-as-you-go.</li></ul>
+        <details class="einklapp">
+          <summary>Answer</summary>
+          <p><strong>The correct answer is: The agent is turned off at the limit, but not instantly, and the limit does not stop its agent flows.</strong></p>
+          <p>With a hard stop, the agent is turned off automatically when it hits the limit. According to Microsoft, limits are not applied instantly, and the agent can keep responding for some time. So set the limit and the notification with some margin. The limit does not stop the agent flows that the agent calls, they are billed and checked separately. Limits work with prepaid capacity and with pay-as-you-go.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity" rel="noopener">Microsoft Learn, Manage Copilot Credits and capacity for Copilot Studio (Power Platform admin center)</a>, as of November 14, 2026.</p>
+        </details>
+      </li>
+      <li class="test__frage" id="frage-f7e">
+        <p><span class="knoten" data-guertel-nr="7">Black belt</span></p>
+        <h3>According to Microsoft, how long do the results of an agent evaluation stay available in Copilot Studio?</h3>
+        <ul class="arrow-list"><li>7 days.</li><li>89 days.</li><li>Indefinitely.</li></ul>
+        <details class="einklapp">
+          <summary>Answer</summary>
+          <p><strong>The correct answer is: 89 days.</strong></p>
+          <p>According to Microsoft, test results are available in Copilot Studio for 89 days. If you compare months, as in the Night watch, export them as a CSV file.</p>
+          <p class="klein">Source: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create" rel="noopener">Microsoft Learn, Create a single response test set (Copilot Studio)</a>, as of November 14, 2026.</p>
         </details>
       </li>
     </ol>

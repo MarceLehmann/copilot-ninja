@@ -209,11 +209,11 @@
       "id": "f7a",
       "guertel": 7,
       "klasse": "fakt",
-      "geprueft_am": "2026-11-02",
-      "frage": "Was passiert laut der Learn-Seite «Billing rates and management» ohne Pay-as-you-go am Environment ab 125 Prozent der vorausbezahlten Copilot-Credits-Kapazität?",
-      "antworten": ["Nichts, es wird nachverrechnet.", "Agents werden blockiert, bis die Kapazität erhöht oder zurückgesetzt wird.", "Nur Agent Flows stoppen, die Agents antworten weiter."],
+      "geprueft_am": "2026-11-14",
+      "frage": "Was passiert laut der Learn-Seite «Billing rates and management» mit den Agents eines Environments ohne Pay-as-you-go, wenn der Tenant 125 Prozent seiner vorausbezahlten Kapazität erreicht?",
+      "antworten": ["Nichts, der Überverbrauch wird nachverrechnet.", "Sie werden blockiert und antworten nicht mehr, auch in laufenden Gesprächen.", "Nur die Agent Flows stoppen, die Agents antworten weiter."],
       "richtig": 1,
-      "aufloesung": "Bis 125 Prozent wird Überverbrauch geduldet, ab 125 Prozent werden Agents blockiert, bis die Kapazität erhöht oder zurückgesetzt wird. Mit Pay-as-you-go am Environment wird Überverbrauch dem Azure-Abo verrechnet. Die Admin-Seite zu Copilot Credits (manage-copilot-studio-copilot-credits-capacity) ergänzt: Ohne Überverbrauchsquelle kann ein Environment schon stoppen, sobald seine Zuteilung aufgebraucht ist.",
+      "aufloesung": "Microsoft duldet etwas Überverbrauch, ähnlich einer Schonfrist. Bei 125 Prozent der vorausbezahlten Kapazität greift die Durchsetzung: Die Agents des Environments werden blockiert und antworten nicht mehr, auch mitten in einem Gespräch. Rechnet ein Environment Überverbrauch über einen Pay-as-you-go-Plan ab, blockiert das Aufbrauchen der vorausbezahlten Credits seine Agents nicht. Die Admin-Seite zu Copilot Credits ergänzt: Ohne Überverbrauchsquelle nutzt ein Environment nur seine Zuteilung, danach können Funktionen, die Credits brauchen, aufhören zu arbeiten.",
       "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management", "titel": "Microsoft Learn, Billing rates and management (Copilot Studio)" },
       "technik": null
     },
@@ -221,11 +221,11 @@
       "id": "f7b",
       "guertel": 7,
       "klasse": "fakt",
-      "geprueft_am": "2026-10-13",
+      "geprueft_am": "2026-11-14",
       "frage": "Bildet das Test-Panel von Copilot Studio alles Verhalten veröffentlichter Kanäle ab?",
       "antworten": ["Ja.", "Nein, es ist für die Prüfung beim Entwurf gedacht.", "Nur bei Teams."],
       "richtig": 1,
-      "aufloesung": "Laut Microsoft ist das Test-Panel für die Prüfung beim Entwurf gedacht und bildet nicht alles Verhalten veröffentlichter Kanäle ab.",
+      "aufloesung": "Laut Microsoft ist das Test-Panel für die Prüfung beim Entwurf gedacht und bildet nicht alles Verhalten veröffentlichter Kanäle ab. Zeitgesteuerte und im Hintergrund ausgelöste Ereignisse, etwa Inaktivitäts-Trigger, feuern dort unter Umständen nicht. Solches Verhalten prüfst du nach dem Veröffentlichen in einem Kanal wie Microsoft Teams.",
       "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot", "titel": "Microsoft Learn, Agent im Test-Panel prüfen" },
       "technik": null
     },
@@ -240,6 +240,30 @@
       "aufloesung": "Ein Abschaltkriterium, das erst im Ernstfall entsteht, kommt zu spät. Im Betriebsblatt steht es vor dem Livegang, mit dem Namen der Person, die verantwortlich ist.",
       "quelle": null,
       "technik": "t24"
+    },
+    {
+      "id": "f7d",
+      "guertel": 7,
+      "klasse": "fakt",
+      "geprueft_am": "2026-11-14",
+      "frage": "Ein Admin setzt im Power Platform Admin Center für einen Agent ein monatliches Limit mit hartem Stopp. Was gilt laut Microsoft?",
+      "antworten": ["Der Agent stoppt genau beim Limit, und mit ihm alle Agent Flows, die er aufruft.", "Der Agent wird beim Limit abgeschaltet, aber nicht sofort, und seine Agent Flows stoppt das Limit nicht.", "Ein solches Limit gibt es nur in Environments mit Pay-as-you-go."],
+      "richtig": 1,
+      "aufloesung": "Mit hartem Stopp wird der Agent automatisch abgeschaltet, wenn er das Limit erreicht. Limits greifen laut Microsoft nicht sofort, der Agent kann noch eine Weile antworten. Darum setzt du Limit und Benachrichtigung mit Reserve. Die Agent Flows, die der Agent aufruft, stoppt das Limit nicht, sie werden getrennt abgerechnet und geprüft. Limits gibt es bei vorausbezahlter Kapazität und bei Pay-as-you-go.",
+      "quelle": { "url": "https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "titel": "Microsoft Learn, Copilot Credits und Kapazität verwalten (Power Platform Admin Center)" },
+      "technik": null
+    },
+    {
+      "id": "f7e",
+      "guertel": 7,
+      "klasse": "fakt",
+      "geprueft_am": "2026-11-14",
+      "frage": "Wie lange bleiben die Ergebnisse einer Agent-Evaluation laut Microsoft in Copilot Studio verfügbar?",
+      "antworten": ["7 Tage.", "89 Tage.", "Unbegrenzt."],
+      "richtig": 1,
+      "aufloesung": "Laut Microsoft sind Testergebnisse 89 Tage in Copilot Studio verfügbar. Wer Monate vergleicht wie bei der Nachtwache, exportiert sie als CSV-Datei.",
+      "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create", "titel": "Microsoft Learn, Testsatz für einzelne Antworten erstellen (Copilot Studio)" },
+      "technik": null
     }
   ]
 }

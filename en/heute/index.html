@@ -107,30 +107,37 @@
       <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>15 minutes every Monday in your calendar</a><a class="knopf knopf--leise" href="../techniken/">All techniques</a></p>
     </header>
     <div class="heute sektion--eng">
-      <div data-heute data-heute-datum="2026-11-13"><article class="karte--gross rolle-gross" data-technik="t09" data-guertel-nr="3" data-schmiede>
-<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">09</span><div>
-<h2 class="heute__titel">The Quote Duel<small>No. 9: Compare several quotes</small></h2>
-<ul class="metazeile"><li><span class="knoten" data-guertel-nr="3">Orange belt</span></li><li><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license, in Microsoft Copilot Chat with file upload</a></li><li><span>Try it: approx. 10 min</span></li></ul>
+      <div data-heute data-heute-datum="2026-11-14"><article class="karte--gross rolle-gross" data-technik="t02" data-guertel-nr="1" data-schmiede>
+<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">02</span><div>
+<h2 class="heute__titel">Plain Script<small>No. 2: Technical text in plain language, with a loss list</small></h2>
+<ul class="metazeile"><li><span class="knoten" data-guertel-nr="1">White belt</span></li><li><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>No add-on license, in Microsoft Copilot Chat</a></li><li><span>Try it: approx. 10 min</span></li></ul>
 </div></div>
-<p class="abschnitt__problem">Three vendors, three PDFs, three different layouts. The lowest price is in big letters on page one. What is missing is written nowhere.</p>
+<p class="abschnitt__problem">The internal fact sheet on expense rules is correct, yet the apprentices call every week. While simplifying, no duty and no deadline may get lost.</p>
 <details class="schmiede-klappe" data-nur-js><summary>Make it yours</summary><div class="schmiede">
 <div class="schmiede__kopf"><p class="schmiede__hinweis">Nothing leaves your browser.</p></div>
-<div class="schmiede__feld"><label for="heute-f1">Service</label><input id="heute-f1" type="text" data-ph-feld="Service" autocomplete="off" aria-describedby="heute-f1-h"><small id="heute-f1-h">e.g. the new phone system</small></div>
+<div class="schmiede__feld"><label for="heute-f1">Target group</label><input id="heute-f1" type="text" data-ph-feld="Target group" autocomplete="off" aria-describedby="heute-f1-h"><small id="heute-f1-h">e.g. first-year apprentices</small></div>
+<div class="schmiede__feld"><label for="heute-f2">Text type</label><input id="heute-f2" type="text" data-ph-feld="Text type" autocomplete="off" aria-describedby="heute-f2-h"><small id="heute-f2-h">e.g. an internal fact sheet</small></div>
+<div class="schmiede__feld"><label for="heute-f3">Action</label><input id="heute-f3" type="text" data-ph-feld="Action" autocomplete="off" aria-describedby="heute-f3-h"><small id="heute-f3-h">e.g. submit their expenses correctly</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="heute-f4">Text</label><textarea id="heute-f4" data-ph-feld="Text" rows="4" aria-describedby="heute-f4-h"></textarea><small id="heute-f4-h">e.g. the technical text you want to simplify</small></div>
 </div></details>
 <div class="rolle" data-rolle>
 <div class="rolle__kopf"><p class="rolle__titel">Prompt to copy</p></div>
-<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> Compare the attached quotes for <span class="ph" data-ph="Service">[Service, e.g. the new phone system]</span>. Do not decide for me.</mark>
+<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Goal:</span> Rewrite the text below in plain language for <span class="ph" data-ph="Target group">[Target group, e.g. first-year apprentices]</span>.</mark>
 
-<mark class="teil teil--quelle"><span class="teil__label">Source:</span> Only the attached files. If a quote is missing a detail, write “missing”. Do not guess.</mark>
+<mark class="teil teil--kontext"><span class="teil__label">Context:</span> The text is <span class="ph" data-ph="Text type">[Text type, e.g. an internal fact sheet]</span>. After reading it, readers should be able to <span class="ph" data-ph="Action">[Action, e.g. submit their expenses correctly]</span>.</mark>
+
+<mark class="teil teil--quelle"><span class="teil__label">Source:</span> Only the text below. Do not leave out any duty or any deadline. If a technical term is needed, explain it in half a sentence the first time it appears.</mark>
 
 <mark class="teil teil--erwartung"><span class="teil__label">Expectations:</span>
-1. A comparison table. The columns are the vendors. The rows are: total price, price components, scope of services, delivery time, payment terms, warranty, contract term and termination, exclusions.
-2. Differences that only show up at second glance, for example services only one vendor includes.
-3. For each vendor, the questions I should ask before deciding.
-For every number, give the location, with file and page.</mark></pre>
-<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy prompt</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technique from the Power Platform Dojo: copilot.ninja/en/9&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
+1. The text in short sentences, no more than 15 words per sentence, one idea per sentence.
+2. A list “What changed in content” with everything you left out, summarized or weighted differently. If the list is empty, write “nothing”.
+3. Four comprehension questions with answers that I can use to check whether the key points come across.</mark>
+
+Text:
+<span class="ph" data-ph="Text">[Text, e.g. the technical text you want to simplify]</span></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Copied. Now paste it into Microsoft Copilot Chat." data-nur-js>Copy prompt</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technique from the Power Platform Dojo: copilot.ninja/en/2&#10;Source: Microsoft Learn, as of October 15, 2026" data-nur-js>Pass it on</button><p class="rolle__status" role="status"></p></div>
 </div>
-<p><a class="knopf knopf--leise" href="../techniken/offerten-vergleichen/">Full technique with guide, limits and source</a></p>
+<p><a class="knopf knopf--leise" href="../techniken/fachtext-in-klartext/">Full technique with guide, limits and source</a></p>
 </article></div>
       <aside class="heute__seite" aria-label="Your path">
         <div class="naechster" data-naechster-schritt>

@@ -107,30 +107,37 @@
       <p class="knopf-reihe"><a class="knopf" href="../kalender/montag.ics" download>Jeden Montag 15 Minuten im Kalender</a><a class="knopf knopf--leise" href="../techniken/">Alle Techniken</a></p>
     </header>
     <div class="heute sektion--eng">
-      <div data-heute data-heute-datum="2026-11-13"><article class="karte--gross rolle-gross" data-technik="t09" data-guertel-nr="3" data-schmiede>
-<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">09</span><div>
-<h2 class="heute__titel">Das Offerten-Duell<small>Nr. 9: Mehrere Offerten vergleichen</small></h2>
-<ul class="metazeile"><li><span class="knoten" data-guertel-nr="3">Oranger Gürtel</span></li><li><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat, mit Datei-Upload</a></li><li><span>Ausprobieren: ca. 10 Min.</span></li></ul>
+      <div data-heute data-heute-datum="2026-11-14"><article class="karte--gross rolle-gross" data-technik="t02" data-guertel-nr="1" data-schmiede>
+<div class="heute__kopf"><span class="heute__nr" aria-hidden="true">02</span><div>
+<h2 class="heute__titel">Die Klarschrift<small>Nr. 2: Fachtext in Klartext, mit Verlustliste</small></h2>
+<ul class="metazeile"><li><span class="knoten" data-guertel-nr="1">Weisser Gürtel</span></li><li><a class="zugang zugang--frei" href="../gratis/nachschlagen/#chat-ohne-zusatzlizenz"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Ohne Zusatzlizenz in Microsoft Copilot Chat</a></li><li><span>Ausprobieren: ca. 10 Min.</span></li></ul>
 </div></div>
-<p class="abschnitt__problem">Drei Anbieter, drei PDFs, drei verschiedene Aufbauten. Der tiefste Preis steht gross auf der ersten Seite, was fehlt, steht nirgends.</p>
+<p class="abschnitt__problem">Das interne Merkblatt zur Spesenregelung ist korrekt, trotzdem rufen die Lernenden jede Woche an. Beim Vereinfachen darf keine Pflicht und keine Frist verloren gehen.</p>
 <details class="schmiede-klappe" data-nur-js><summary>Für dich anpassen</summary><div class="schmiede">
 <div class="schmiede__kopf"><p class="schmiede__hinweis">Nichts verlässt deinen Browser.</p></div>
-<div class="schmiede__feld"><label for="heute-f1">Leistung</label><input id="heute-f1" type="text" data-ph-feld="Leistung" autocomplete="off" aria-describedby="heute-f1-h"><small id="heute-f1-h">z. B. die neue Telefonanlage</small></div>
+<div class="schmiede__feld"><label for="heute-f1">Zielgruppe</label><input id="heute-f1" type="text" data-ph-feld="Zielgruppe" autocomplete="off" aria-describedby="heute-f1-h"><small id="heute-f1-h">z. B. Lernende im ersten Lehrjahr</small></div>
+<div class="schmiede__feld"><label for="heute-f2">Textart</label><input id="heute-f2" type="text" data-ph-feld="Textart" autocomplete="off" aria-describedby="heute-f2-h"><small id="heute-f2-h">z. B. ein internes Merkblatt</small></div>
+<div class="schmiede__feld"><label for="heute-f3">Handlung</label><input id="heute-f3" type="text" data-ph-feld="Handlung" autocomplete="off" aria-describedby="heute-f3-h"><small id="heute-f3-h">z. B. ihre Spesen korrekt abrechnen</small></div>
+<div class="schmiede__feld schmiede__feld--breit"><label for="heute-f4">Text</label><textarea id="heute-f4" data-ph-feld="Text" rows="4" aria-describedby="heute-f4-h"></textarea><small id="heute-f4-h">z. B. der Fachtext, den du vereinfachen willst</small></div>
 </div></details>
 <div class="rolle" data-rolle>
 <div class="rolle__kopf"><p class="rolle__titel">Prompt zum Kopieren</p></div>
-<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Vergleiche die angehängten Offerten für <span class="ph" data-ph="Leistung">[Leistung, z. B. die neue Telefonanlage]</span>. Entscheide nicht für mich.</mark>
+<pre class="code" id="heute-text"><mark class="teil teil--ziel"><span class="teil__label">Ziel:</span> Schreib den Text unten in Klartext für <span class="ph" data-ph="Zielgruppe">[Zielgruppe, z. B. Lernende im ersten Lehrjahr]</span>.</mark>
 
-<mark class="teil teil--quelle"><span class="teil__label">Quelle:</span> Nur die angehängten Dateien. Fehlt eine Angabe in einer Offerte, schreib «fehlt». Rate nicht.</mark>
+<mark class="teil teil--kontext"><span class="teil__label">Kontext:</span> Der Text ist <span class="ph" data-ph="Textart">[Textart, z. B. ein internes Merkblatt]</span>. Die Leserinnen und Leser sollen danach <span class="ph" data-ph="Handlung">[Handlung, z. B. ihre Spesen korrekt abrechnen]</span> können.</mark>
+
+<mark class="teil teil--quelle"><span class="teil__label">Quelle:</span> Nur der Text unten. Lass keine Pflicht und keine Frist weg. Ist ein Fachbegriff nötig, erklär ihn beim ersten Auftreten in einem Halbsatz.</mark>
 
 <mark class="teil teil--erwartung"><span class="teil__label">Erwartung:</span>
-1. Eine Vergleichstabelle. Spalten sind die Anbieter. Zeilen sind: Preis total, Preisbestandteile, Leistungsumfang, Lieferzeit, Zahlungsbedingungen, Garantie, Vertragsdauer und Kündigung, Ausschlüsse.
-2. Unterschiede, die erst auf den zweiten Blick auffallen, zum Beispiel Leistungen, die nur ein Anbieter einschliesst.
-3. Pro Anbieter die Fragen, die ich vor einem Entscheid stellen sollte.
-Gib bei jeder Zahl die Fundstelle an, mit Datei und Seite.</mark></pre>
-<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Prompt kopieren</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technik aus dem Power Platform Dojo: copilot.ninja/9&#10;Quelle: Microsoft Learn, Stand 15.10.2026" data-nur-js>Weitergeben</button><p class="rolle__status" role="status"></p></div>
+1. Der Text in kurzen Sätzen, höchstens 15 Wörter pro Satz, ein Gedanke pro Satz.
+2. Eine Liste «Das hat sich inhaltlich verändert» mit allem, was du weggelassen, zusammengefasst oder anders gewichtet hast. Ist die Liste leer, schreib «nichts».
+3. Vier Verständnisfragen mit Antwort, mit denen ich prüfe, ob das Wichtigste ankommt.</mark>
+
+Text:
+<span class="ph" data-ph="Text">[Text, z. B. der Fachtext, den du vereinfachen willst]</span></pre>
+<div class="rolle__knoepfe"><button type="button" class="knopf knopf--primaer knopf--klein" data-kopieren="heute-text" data-erfolg="Kopiert. Jetzt in Microsoft Copilot Chat einfügen." data-nur-js>Prompt kopieren</button><button type="button" class="knopf knopf--klein" data-weitergeben="heute-text" data-herkunft="Technik aus dem Power Platform Dojo: copilot.ninja/2&#10;Quelle: Microsoft Learn, Stand 15.10.2026" data-nur-js>Weitergeben</button><p class="rolle__status" role="status"></p></div>
 </div>
-<p><a class="knopf knopf--leise" href="../techniken/offerten-vergleichen/">Ganze Technik mit Anleitung, Grenzen und Quelle</a></p>
+<p><a class="knopf knopf--leise" href="../techniken/fachtext-in-klartext/">Ganze Technik mit Anleitung, Grenzen und Quelle</a></p>
 </article></div>
       <aside class="heute__seite" aria-label="Dein Weg">
         <div class="naechster" data-naechster-schritt>
