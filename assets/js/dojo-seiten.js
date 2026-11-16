@@ -242,7 +242,7 @@
       var v = function (n) { var x = f.querySelector('[name="' + n + '"]'); return x ? x.value.trim() : ''; };
       var nennung = f.querySelector('[name="nennung"]:checked');
       return [T('Titel der Technik:'), v('titel'), '', T('Problem, das sie löst:'), v('problem'), '', T('Prompt oder Anleitung:'), v('prompt'), '', T('Grenzen:'), v('grenzen'), '',
-        T('Quelle bei Microsoft Learn:'), v('quelle'), '', T('Darf ich dich als Absender nennen?') + ' ' + (nennung ? nennung.value : T('(ja oder nein)')), '',
+        T('Quelle bei Microsoft Learn:'), v('quelle'), '', T('Darf ich dich als Absender nennen?') + ' ' + (nennung ? T(nennung.value === 'ja' ? 'ja' : 'nein') : T('(ja oder nein)')), '',
         T('Keine Kunden-, Personen- oder Firmendaten im Prompt.')].join('\n');
     }
     knopf.addEventListener('click', function () {
