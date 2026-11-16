@@ -10,7 +10,11 @@
   var BELT = ['#FBFAF5', '#E2B100', '#E36A00', '#2E8B57', '#2F6FB5', '#7A4A2B', '#111111'];
   function landeseite(n) { return BASIS + 'dojo/guertel/' + FARBEN[n - 1] + '/'; }
   /* GoatCounter-Ereignis, still: fehlt der Zaehler oder ist er abgeschaltet (skipgc), passiert nichts */
-  function ereignis(pfad) { try { var gc = w.goatcounter; if (gc && typeof gc.count === 'function') gc.count({ path: pfad, title: pfad, event: true }); } catch (e) { /* Zaehlen darf nie stoeren */ } }
+  /* GoatCounter-Ereignis. count.js laedt async: fehlt goatcounter.count noch, bis ca. 10 s alle 500 ms erneut versuchen. Fehler nie sichtbar. */
+  function ereignis(pfad, versuch) {
+    try { var gc = w.goatcounter; if (gc && typeof gc.count === 'function') { gc.count({ path: pfad, title: pfad, event: true }); return; } } catch (e) { return; /* Zaehlen darf nie stoeren */ }
+    versuch = (versuch || 0) + 1; if (versuch <= 20) setTimeout(function () { ereignis(pfad, versuch); }, 500);
+  }
   var akk = D.akk;
 
   /* Tusch aus der Kopfzeile in Platzhalter klonen, damit er den Guertel der Person traegt */
@@ -420,6 +424,8 @@
         erg.focus();
         D.ansage(T("Dein Startpunkt: ") + NAMEN[n - 1] + '.');
         ereignis('pruefung-beendet/' + FARBEN[n - 1]);
+        /* Alle Fragen richtig, also auch die Meisterpruefung (Schwarz): eigenes Ereignis (Marcel 16.11.2026) */
+        if (!falsch) ereignis('meisterpruefung-bestanden');
         nochmal.addEventListener('click', neu);
       }
       function starten() { startKnopf.parentNode.hidden = true; neu(); box.querySelector('h2').focus(); }
