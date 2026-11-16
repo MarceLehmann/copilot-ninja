@@ -564,6 +564,8 @@
   "Quelle bei Microsoft Learn:": "Source on Microsoft Learn:",
   "Darf ich dich als Absender nennen?": "May I name you as the sender?",
   "(ja oder nein)": "(yes or no)",
+  "ja": "yes",
+  "nein": "no",
   "Keine Kunden-, Personen- oder Firmendaten im Prompt.": "No customer, personal or company data in the prompt.",
   "{0} und {1}": "{0} and {1}",
   "dojo-vier-wochen.ics": "dojo-four-weeks.ics",

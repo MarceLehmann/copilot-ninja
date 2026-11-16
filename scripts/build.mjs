@@ -1012,7 +1012,7 @@ function baueGemeinsam() {
   pfade.push(['vier-wochen/', STAND]);
   if (gibtEs('pruefung/fragen/index.html')) pfade.push(['pruefung/fragen/', gibtEs('dojo/selbsttest.json') ? (() => { try { const j = JSON.parse(lies('dojo/selbsttest.json')); return [...JSON.stringify(j).matchAll(/"geprueft_am":"(\d{4}-\d{2}-\d{2})"/g)].map(m => m[1]).sort().pop(); } catch { return null; } })() : null]);
   if (gibtEs('pruefung/index.html')) pfade.push(['pruefung/', gibtEs('dojo/selbsttest.json') ? (() => { try { const j = JSON.parse(lies('dojo/selbsttest.json')); return [...JSON.stringify(j).matchAll(/"geprueft_am":"(\d{4}-\d{2}-\d{2})"/g)].map(m => m[1]).sort().pop(); } catch { return null; } })() : null]);
-  pfade.push(['ueber/', RECHT_STAND], ['impressum/', RECHT_STAND], ['datenschutz/', RECHT_STAND]);
+  pfade.push(['ueber/', RECHT_STAND], ['impressum/', RECHT_STAND], ['datenschutz/', '2026-11-16']);
   const alt = (pfad) => [...SPRACHEN.map(sp => `<xhtml:link rel="alternate" hreflang="${sp}" href="${BASE_URL}${SP[sp].pfad}${pfad}"/>`), `<xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}${pfad}"/>`].join('');
   const eintraege = [];
   for (const [pfad, lastmod] of pfade) for (const sp of SPRACHEN.map(x => SP[x].pfad)) eintraege.push(`  <url><loc>${BASE_URL}${sp}${pfad}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}${alt(pfad)}</url>`);

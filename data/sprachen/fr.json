@@ -575,6 +575,8 @@
   "Quelle bei Microsoft Learn:": "Source Microsoft Learn:",
   "Darf ich dich als Absender nennen?": "Puis-je te nommer comme expéditeur?",
   "(ja oder nein)": "(oui ou non)",
+  "ja": "oui",
+  "nein": "non",
   "Keine Kunden-, Personen- oder Firmendaten im Prompt.": "Aucune donnée de client, de personne ou d’entreprise dans le prompt.",
   "{0} und {1}": "{0} et {1}",
   "dojo-vier-wochen.ics": "dojo-quatre-semaines.ics",

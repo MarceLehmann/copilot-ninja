@@ -304,15 +304,15 @@
       "id": "f7a",
       "guertel": 7,
       "klasse": "fakt",
-      "geprueft_am": "2026-11-14",
-      "frage": "Selon la page Learn Taux de facturation et gestion, que se passe-t-il pour les agents d'un environnement sans paiement à l'utilisation quand le locataire atteint 125 pour cent de sa capacité prépayée ?",
+      "geprueft_am": "2026-11-16",
+      "frage": "Selon la page Learn Taux de facturation et gestion, que se passe-t-il pour les agents d'un environnement sans allocation de capacité propre et sans paiement à l'utilisation quand le locataire atteint 125 pour cent de sa capacité prépayée ?",
       "antworten": [
         "Rien, le dépassement est facturé après coup.",
         "Ils sont bloqués et cessent de répondre, même dans les conversations en cours.",
         "Seuls les flux d'agent s'arrêtent, les agents continuent de répondre."
       ],
       "richtig": 1,
-      "aufloesung": "Microsoft tolère un certain dépassement, comparable à un délai de grâce. À 125 pour cent de la capacité prépayée, l'application des limites commence : les agents de l'environnement sont bloqués et cessent de répondre, même en pleine conversation. Si un environnement facture le dépassement à un plan de paiement à l'utilisation, l'épuisement des crédits prépayés ne bloque pas ses agents. La page d'administration sur les crédits Copilot ajoute : sans source de dépassement, un environnement ne peut utiliser que son allocation, ensuite les expériences qui ont besoin de crédits peuvent cesser de fonctionner.",
+      "aufloesung": "Microsoft tolère un certain dépassement, comparable à un délai de grâce. À 125 pour cent de la capacité prépayée, l'application des limites commence : les agents de l'environnement sont bloqués et cessent de répondre, même en pleine conversation. Si un environnement facture le dépassement à un plan de paiement à l'utilisation, l'épuisement des crédits prépayés ne bloque pas ses agents. La page d'administration sur les crédits Copilot ajoute : sans source de dépassement, un environnement ne peut utiliser que son allocation, ensuite les expériences qui ont besoin de crédits peuvent cesser de fonctionner. Exception : un environnement qui dispose encore de sa propre allocation reste disponible.",
       "quelle": {
         "url": "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
         "titel": "Microsoft Learn, Taux de facturation et gestion (Copilot Studio)"
