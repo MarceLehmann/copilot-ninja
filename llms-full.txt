@@ -17,7 +17,7 @@ Kurzfakten:
 
 # Deutsch
 
-## Notizen in ein Protokoll mit Aufgaben verwandeln: Notizen in ein Protokoll mit Aufgaben verwandeln
+## Notizen in ein Protokoll mit Aufgaben verwandeln
 
 URL: https://copilot.ninja/techniken/notizen-zu-protokoll/
 Gürtel: Weisser Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat. Stand 15.10.2026.
@@ -56,7 +56,7 @@ Grenzen:
 - Namen, Termine und Beschlüsse sind so gut wie deine Notizen.
 - Läuft in Microsoft Copilot Chat mit Geschäfts- oder Schulkonto. Ob dein Abonnement dazu berechtigt, steht auf der Seite Gratis.
 
-Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## Nr. 1 Das Verhör: Lass dich befragen, bevor du schreibst
 
@@ -95,7 +95,7 @@ Grenzen:
 - Stellt die Antwort mehrere Fragen auf einmal, schreib «Bitte nur eine Frage» und mach weiter.
 - Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 
-Quellen: Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Quellen: Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## Nr. 2 Die Klarschrift: Fachtext in Klartext, mit Verlustliste
 
@@ -172,7 +172,7 @@ Grenzen:
 - Zu Nutzungsrechten an erzeugten Bildern macht diese Seite keine Aussage. Kläre das für deinen Einsatz selbst.
 - Das Bild kann trotz Ausschluss Schrift oder Logos enthalten. Du prüfst vor dem Einsatz.
 
-Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## Nr. 4 Der Späherbericht: Was habe ich in den Ferien verpasst
 
@@ -210,9 +210,9 @@ Grenzen:
 - «Kann ich ignorieren» ist ein Vorschlag, kein Entscheid.
 - Ohne Add-on gibt es keinen breiten Zugriff auf Organisationsdaten. Ausnahmen sind Copilot Chat in Outlook in unterstützten Szenarien, hochgeladene oder eingefügte Inhalte und Agents mit freigegebenem Zugriff.
 
-Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
-## Antwortentwurf auf eine schwierige Kundenmail: Antwortentwurf auf eine schwierige Kundenmail
+## Antwortentwurf auf eine schwierige Kundenmail
 
 URL: https://copilot.ninja/techniken/antwort-auf-kundenmail/
 Gürtel: Gelber Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat. Stand 15.10.2026.
@@ -250,7 +250,7 @@ Grenzen:
 - Er ersetzt nicht deine Prüfung vor dem Senden.
 - Kundendaten gehören nur in den Prompt, wenn eure internen Regeln das erlauben.
 
-Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## Nr. 5 Der Gegner im Spiegel: Den eigenen Text aus Sicht des Empfängers angreifen
 
@@ -330,7 +330,7 @@ Grenzen:
 - Hochgeladene Dateien legt Microsoft Copilot Chat laut Microsoft in deinem OneDrive for Business ab. Du kannst sie dort jederzeit löschen.
 - Vertrauliche Dokumente nur hochladen, wenn eure internen Regeln das erlauben.
 
-Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## Nr. 7 Der Blick vom Ende: Pre-Mortem für ein Projekt
 
@@ -405,9 +405,9 @@ Grenzen:
 - Die Antwort sieht laut Microsoft nur Inhalte, auf die du Zugriff hast.
 - Mündliche Absprachen ohne Notiz fehlen im Dossier.
 
-Quellen: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Quellen: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
-## Eine Tabelle auf Auffälligkeiten prüfen: Eine Tabelle auf Auffälligkeiten prüfen
+## Eine Tabelle auf Auffälligkeiten prüfen
 
 URL: https://copilot.ninja/techniken/tabelle-pruefen/
 Gürtel: Oranger Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat, mit Datei-Upload. Stand 15.10.2026.
@@ -443,7 +443,7 @@ Grenzen:
 - Die Befunde sind Hinweise und keine Revision. Prüfe zwei oder drei Treffer in der Originaldatei, bevor du dich darauf verlässt.
 - Copilot Chat (Basic) hat keinen Zugang zu Copilot in Excel. Microsoft 365 Copilot (Basic) bietet ohne Add-on Standard-Zugang, der bei hoher Auslastung eingeschränkt sein kann. Microsoft 365 Copilot (Premium) bietet mit Add-on vollen Umfang und Priority Access. Die Bezeichnung im Produkt zeigt deine Stufe; Lizenz und Tenant-Konfiguration bestimmen die Verfügbarkeit. Diese Grundform arbeitet mit einer hochgeladenen Datei im Chat.
 
-Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Quellen: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## Nr. 9 Das Offerten-Duell: Mehrere Offerten vergleichen
 
@@ -480,7 +480,7 @@ Grenzen:
 - Offerten Dritter nur hochladen, wenn eure internen Regeln das erlauben.
 - Entscheiden musst du selbst. Der Prompt verbietet bewusst eine Empfehlung.
 
-Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## Nr. 10 Die Fallgrube: Fristen und Verlängerungsfallen im Vertrag finden
 
@@ -518,7 +518,7 @@ Grenzen:
 - Laut Microsoft gilt für Prompts und Antworten bei Anmeldung mit Geschäfts- oder Schulkonto Enterprise Data Protection. Vertrauliche Verträge lädst du trotzdem nur nach euren internen Regeln hoch.
 - Für Datei-Uploads gelten laut Microsoft Limits. Zahlen dazu nennen die geprüften Seiten nicht.
 
-Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection)
+Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection)
 
 ## Nr. 11 Der Schattenschreiber: Eigenen Schreibstil als Steckbrief festhalten
 
@@ -605,7 +605,7 @@ Grenzen:
 - Admins können die Websuche abschalten. Dann antwortet Microsoft Copilot Chat laut Microsoft nur aus dem Sprachmodell, und Links fehlen.
 - Ein Link ist kein Beleg, bis du die Seite gelesen hast.
 
-Quellen: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Quellen: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## Nr. 13 Das Dojo-Quiz: Quiz aus einem Reglement für neue Mitarbeitende
 
@@ -647,7 +647,7 @@ Grenzen:
 
 Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agent für interne Anleitungen: Agent für interne Anleitungen
+## Agent für interne Anleitungen
 
 URL: https://copilot.ninja/techniken/agent-interne-anleitungen/
 Gürtel: Grüner Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
@@ -736,7 +736,7 @@ Grenzen:
 - Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen.
 - Ein Chatverlauf zeigt einen Fall. Prüf den Agent mit anderen Fällen, bevor du ihn teilst.
 
-Quellen: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Quellen: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
 
 ## Nr. 15 Der Torwächter: Agent, der nur deine Website kennt
 
@@ -782,7 +782,7 @@ Grenzen:
 - Steht auf der Website etwas Veraltetes, gibt der Agent es weiter.
 - Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen.
 
-Quellen: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience)
+Quellen: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience)
 
 ## Nr. 16 Der Sparringspartner: Agent für Gesprächstraining
 
@@ -824,7 +824,7 @@ Grenzen:
 - Ein geübtes Gespräch ist kein echtes. Der Agent kennt deinen Kunden nicht.
 - Ohne Zusatzkosten bleibt der Agent laut Microsoft, solange er nur auf Anweisungen und öffentlichen Websites beruht. Ob Agent Builder bei dir verfügbar ist, hängt laut dem Admin-Leitfaden zu Agents von einer Microsoft-365-Copilot-Lizenz oder von Pay-as-you-go für Copilot Studio ab.
 
-Quellen: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents)
+Quellen: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents)
 
 ## Nr. 17 Die Schriftprobe: Agent-Anweisungen vor dem Test prüfen
 
@@ -865,9 +865,9 @@ Grenzen:
 - Die Prüfung liest nur Text. Ob der Agent sich danach richtig verhält, zeigt erst der Test.
 - Interne Namen und Kontaktangaben in den Anweisungen nur einfügen, wenn eure internen Regeln das erlauben.
 
-Quellen: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Quellen: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
 
-## Agent, der Anfragen sortiert und übergibt: Agent, der Anfragen sortiert und übergibt
+## Agent, der Anfragen sortiert und übergibt
 
 URL: https://copilot.ninja/techniken/agent-anfragen-sortieren/
 Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
@@ -920,7 +920,7 @@ Grenzen:
 - Teste mit unklaren und unvollständigen Anfragen, nicht nur mit dem Idealfall.
 - In der Testversion prüfst du im Testchat. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.
 
-Quellen: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Quellen: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## Nr. 18 Die Gürtelprüfung: 20 Testfragen für deinen Agent
 
@@ -1061,7 +1061,7 @@ Grenzen:
 - Wer den veröffentlichten Agent nutzt, verbraucht Copilot Credits (Nutzer mit Microsoft-Copilot-Lizenz in Microsoft 365 laut Ratentabelle keine). Eine Generative Answer zählt laut Microsoft 2 Copilot Credits, Tenant Graph Grounding 10. Die Raten können sich ändern.
 - In der Testversion von Copilot Studio kannst du bauen und im Testchat prüfen, aber nicht veröffentlichen.
 
-Quellen: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Quellen: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## Nr. 21 Der Dolmetscher: Power-Automate-Ausdrücke mit Erklärung
 
@@ -1101,7 +1101,7 @@ Grenzen:
 - Ist die Websuche abgeschaltet, fehlen die Links. Dann schlägst du die Funktionen selbst nach.
 - Für den Flow selbst gelten die Lizenzen von Power Automate. Diese sind hier nicht geprüft.
 
-Quellen: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
+Quellen: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
 
 ## Nr. 22 Die Tarnkappe: Text pseudonymisieren, bevor er weitergeht
 
@@ -1149,7 +1149,7 @@ Grenzen:
 - Pseudonymisieren ersetzt keine Abklärung mit der Stelle, die bei euch für Datenschutz zuständig ist.
 - Streng genommen pseudonymisierst du: Mit der Zuordnung lässt sich jede Person wieder bestimmen. Gib den Text nicht frei, nur weil Namen ersetzt sind.
 
-Quellen: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Quellen: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## Nr. 23 Der Credit-Kompass: Credit-Verbrauch eines Agents vorher schätzen
 
@@ -1239,7 +1239,7 @@ Grenzen:
 - Die Kriterien sind Vorschläge. Festlegen müsst ihr sie im Team.
 - Laut der Learn-Seite «Billing rates and management» werden Agents ab 125 Prozent der vorausbezahlten Kapazität blockiert; laut Admin-Seite zu Copilot Credits kann ein Environment ohne Überverbrauchsquelle schon stoppen, sobald seine Zuteilung aufgebraucht ist. Ein eigenes Abschaltkriterium greift idealerweise vorher.
 
-Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
+Quellen: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## Nr. 25 Die Nachtwache: Monatlicher Agent-Check
 
@@ -1297,7 +1297,7 @@ Quellen: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.micros
 
 # Français
 
-## Transformer des notes en procès-verbal avec des tâches : Transformer des notes en procès-verbal avec des tâches
+## Transformer des notes en procès-verbal avec des tâches
 
 URL : https://copilot.ninja/fr/techniken/notizen-zu-protokoll/
 Ceinture : Ceinture blanche. Accès : Sans licence supplémentaire dans Microsoft Copilot Chat. État au 15 octobre 2026.
@@ -1336,7 +1336,7 @@ Limites :
 - Les noms, les dates et les décisions valent ce que valent tes notes.
 - Fonctionne dans Microsoft Copilot Chat avec un compte professionnel ou scolaire. La page Gratuit explique si ton abonnement y donne droit.
 
-Sources : Microsoft Learn : Écrire des invites efficaces pour obtenir des résultats optimaux (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview)
+Sources : Microsoft Learn : Écrire des invites efficaces pour obtenir des résultats optimaux (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
 ## N° 1 L'interrogatoire : Laisse-toi interroger avant d'écrire
 
@@ -1375,7 +1375,7 @@ Limites :
 - Si la réponse pose plusieurs questions à la fois, écris «Une seule question, s'il te plaît» et continue.
 - Sans extension, il n'y a pas d'accès large aux données de l'organisation. Les exceptions sont Copilot Chat dans Outlook dans les scénarios pris en charge, les contenus importés ou collés et les agents avec accès autorisé.
 
-Sources : Microsoft Learn : Écrire une invite efficace (unité de formation) (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt) ; Microsoft Learn : Évaluer les meilleures pratiques de requête (unité de formation) (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices) ; Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources : Microsoft Learn : Écrire une invite efficace (unité de formation) (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt) ; Microsoft Learn : Évaluer les meilleures pratiques de requête (unité de formation) (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices) ; Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
 ## N° 2 L'écriture claire : Un texte spécialisé en langage clair, avec liste des pertes
 
@@ -1452,7 +1452,7 @@ Limites :
 - Cette page ne dit rien sur les droits d'utilisation des images générées. Clarifie ce point toi-même pour ton usage.
 - Malgré l'exclusion, l'image peut contenir du texte ou des logos. Tu vérifies avant de l'utiliser.
 
-Sources : Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview) ; Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources : Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview) ; Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
 ## N° 4 Le rapport d'éclaireur : Qu'ai-je manqué pendant mes vacances
 
@@ -1490,9 +1490,9 @@ Limites :
 - «Je peux ignorer» est une proposition, pas une décision.
 - Sans extension, il n'y a pas d'accès large aux données de l'organisation. Les exceptions sont Copilot Chat dans Outlook dans les scénarios pris en charge, les contenus importés ou collés et les agents avec accès autorisé.
 
-Sources : Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview) ; Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources : Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview) ; Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
-## Brouillon de réponse à un e-mail client difficile : Brouillon de réponse à un e-mail client difficile
+## Brouillon de réponse à un e-mail client difficile
 
 URL : https://copilot.ninja/fr/techniken/antwort-auf-kundenmail/
 Ceinture : Ceinture jaune. Accès : Sans licence supplémentaire dans Microsoft Copilot Chat. État au 15 octobre 2026.
@@ -1530,7 +1530,7 @@ Limites :
 - Il ne remplace pas ta relecture avant l'envoi.
 - Les données clients n'ont leur place dans le prompt que si vos règles internes l'autorisent.
 
-Sources : Microsoft Learn : Écrire des invites efficaces pour obtenir des résultats optimaux (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview)
+Sources : Microsoft Learn : Écrire des invites efficaces pour obtenir des résultats optimaux (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
 ## N° 5 L'adversaire dans le miroir : Attaquer son propre texte du point de vue du destinataire
 
@@ -1610,7 +1610,7 @@ Limites :
 - Selon Microsoft, Microsoft Copilot Chat enregistre les fichiers importés dans ton OneDrive Entreprise. Tu peux les y supprimer à tout moment.
 - N'importe des documents confidentiels que si vos règles internes l'autorisent.
 
-Sources : Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview)
+Sources : Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
 ## N° 7 Le regard depuis la fin : Pre-mortem pour un projet
 
@@ -1685,9 +1685,9 @@ Limites :
 - Selon Microsoft, la réponse ne voit que les contenus auxquels tu as accès.
 - Les accords oraux sans note manquent dans le dossier.
 
-Sources : Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview)
+Sources : Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
-## Vérifier un tableau pour repérer les anomalies : Vérifier un tableau pour repérer les anomalies
+## Vérifier un tableau pour repérer les anomalies
 
 URL : https://copilot.ninja/fr/techniken/tabelle-pruefen/
 Ceinture : Ceinture orange. Accès : Sans licence supplémentaire dans Microsoft Copilot Chat, avec import de fichier. État au 15 octobre 2026.
@@ -1723,7 +1723,7 @@ Limites :
 - Les constats sont des indices, pas un audit. Contrôle deux ou trois résultats dans le fichier d'origine avant de t'y fier.
 - Copilot Chat (Basic) n'a pas accès à Copilot dans Excel. Microsoft 365 Copilot (Basic) offre sans extension un accès standard, qui peut être limité en cas de forte charge. Microsoft 365 Copilot (Premium) offre avec l'extension la portée complète et l'accès prioritaire. Le nom affiché dans le produit indique ton niveau ; la licence et la configuration du tenant déterminent la disponibilité. Cette forme de base travaille avec un fichier importé dans le chat.
 
-Sources : Microsoft Learn : Écrire des invites efficaces pour obtenir des résultats optimaux (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview) ; Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq)
+Sources : Microsoft Learn : Écrire des invites efficaces pour obtenir des résultats optimaux (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview) ; Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq)
 
 ## N° 9 Le duel des offres : Comparer plusieurs offres
 
@@ -1760,7 +1760,7 @@ Limites :
 - N'importe des offres de tiers que si vos règles internes l'autorisent.
 - C'est à toi de décider. Le prompt interdit volontairement une recommandation.
 
-Sources : Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview)
+Sources : Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview)
 
 ## N° 10 La fosse piégée : Trouver les délais et les pièges de reconduction dans un contrat
 
@@ -1798,7 +1798,7 @@ Limites :
 - Selon Microsoft, la protection des données d'entreprise s'applique aux prompts et aux réponses quand tu te connectes avec un compte professionnel ou scolaire. Tu n'importes quand même les contrats confidentiels que selon vos règles internes.
 - Selon Microsoft, des limites s'appliquent à l'import de fichiers. Les pages consultées ne donnent pas de chiffres.
 
-Sources : Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection)
+Sources : Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection)
 
 ## N° 11 Le scribe de l'ombre : Fixer son propre style d'écriture dans un profil de style
 
@@ -1885,7 +1885,7 @@ Limites :
 - Les admins peuvent désactiver la recherche web. Selon Microsoft, Microsoft Copilot Chat répond alors uniquement à partir du modèle de langage, et les liens manquent.
 - Un lien n'est pas une preuve tant que tu n'as pas lu la page.
 
-Sources : Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection) ; Microsoft Learn : Gérer Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/manage) ; Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq)
+Sources : Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection) ; Microsoft Learn : Gérer Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/manage) ; Microsoft Learn : Questions fréquentes sur Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/faq)
 
 ## N° 13 Le quiz du Dojo : Un quiz à partir d'un règlement pour les nouveaux collaborateurs
 
@@ -1927,7 +1927,7 @@ Limites :
 
 Sources : Microsoft Learn : Qu'est-ce que Microsoft Copilot ? (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Écrire une invite efficace (unité de formation) (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agent pour les guides internes : Agent pour les guides internes
+## Agent pour les guides internes
 
 URL : https://copilot.ninja/fr/techniken/agent-interne-anleitungen/
 Ceinture : Ceinture verte. Accès : Copilot Studio : construction et vérification dans la version d'évaluation. La publication demande de la capacité (crédits Copilot ou paiement à l'usage) et les autorisations de création.. État au 15 octobre 2026.
@@ -2016,7 +2016,7 @@ Limites :
 - Les noms de menu viennent de la documentation Microsoft. Dans ton interface, ils peuvent s'appeler autrement.
 - Un historique de chat montre un cas. Essaie l'agent avec d'autres cas avant de le partager.
 
-Sources : Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/copilot-studio-experience) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-build-agents) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Sources : Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/plugins/agent-builder-build-agents) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions)
 
 ## N° 15 Le gardien de la porte : Un agent qui ne connaît que ton site web
 
@@ -2062,7 +2062,7 @@ Limites :
 - Si le site web contient quelque chose de périmé, l'agent le transmet.
 - Les noms de menu viennent de la documentation Microsoft. Dans ton interface, ils peuvent s'appeler autrement.
 
-Sources : Microsoft Learn : Ajouter des sources de connaissances à un agent dans Agent Builder (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-add-knowledge) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/copilot-studio-experience)
+Sources : Microsoft Learn : Ajouter des sources de connaissances à un agent dans Agent Builder (https://learn.microsoft.com/fr-fr/plugins/agent-builder-add-knowledge) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience)
 
 ## N° 16 Le partenaire d'entraînement : Un agent pour s'entraîner aux entretiens
 
@@ -2104,7 +2104,7 @@ Limites :
 - Un entretien répété n'est pas un vrai entretien. L'agent ne connaît pas ton client.
 - Sans frais supplémentaires, l'agent le reste selon Microsoft tant qu'il repose seulement sur des instructions et des sites web publics. Savoir si Agent Builder est disponible chez toi dépend, d'après le guide d'administration sur les agents, d'une licence Microsoft 365 Copilot ou du paiement à l'utilisation pour Copilot Studio.
 
-Sources : Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-build-agents)
+Sources : Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/plugins/agent-builder-build-agents)
 
 ## N° 17 L'essai d'écriture : Vérifier les instructions d'agent avant le test
 
@@ -2145,9 +2145,9 @@ Limites :
 - La vérification ne lit que du texte. Seul le test montre si l'agent se comporte ensuite correctement.
 - N'insère des noms internes et des coordonnées dans les instructions que si vos règles internes l'autorisent.
 
-Sources : Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Sources : Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions)
 
-## Agent qui trie les demandes et les transmet : Agent qui trie les demandes et les transmet
+## Agent qui trie les demandes et les transmet
 
 URL : https://copilot.ninja/fr/techniken/agent-anfragen-sortieren/
 Ceinture : Ceinture bleue. Accès : Copilot Studio : construction et vérification dans la version d'évaluation. La publication demande de la capacité (crédits Copilot ou paiement à l'usage) et les autorisations de création.. État au 15 octobre 2026.
@@ -2200,7 +2200,7 @@ Limites :
 - Teste avec des demandes floues et incomplètes, pas seulement avec le cas idéal.
 - Dans la version d'évaluation, tu vérifies dans le volet de test. La publication demande de la capacité (crédits Copilot ou paiement à l'usage) et les autorisations de création.
 
-Sources : Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions) ; Microsoft Learn : Configurer des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Tester ton agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-test-bot) ; Microsoft Learn : Obtenir l'accès au harnais standard de Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources : Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions) ; Microsoft Learn : Configurer des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Tester ton agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-test-bot) ; Microsoft Learn : Obtenir l'accès au harnais standard de Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N° 18 L'examen de ceinture : 20 questions de test pour ton agent
 
@@ -2341,7 +2341,7 @@ Limites :
 - Qui utilise l'agent publié consomme des crédits Copilot (les utilisateurs avec une licence Microsoft Copilot dans Microsoft 365 n'en consomment pas selon le tableau des taux). Une réponse générative compte selon Microsoft 2 crédits Copilot, l'ancrage dans le graphe du locataire 10. Les taux peuvent changer.
 - Dans la version d'évaluation de Copilot Studio, tu peux construire et vérifier dans le volet de test, mais pas publier.
 
-Sources : Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions) ; Microsoft Learn : Taux de facturation et gestion (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management) ; Microsoft Learn : Obtenir l'accès à Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources : Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions) ; Microsoft Learn : Taux de facturation et gestion (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management) ; Microsoft Learn : Obtenir l'accès à Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N° 21 L'interprète : Des expressions Power Automate avec explication
 
@@ -2381,7 +2381,7 @@ Limites :
 - Si la recherche web est désactivée, les liens manquent. Tu cherches alors les fonctions toi-même.
 - Pour le flow lui-même, les licences de Power Automate s'appliquent. Elles n'ont pas été vérifiées ici.
 
-Sources : Microsoft Learn : Informations de référence sur les fonctions dans les expressions de flux de travail (Azure Logic Apps et Power Automate) (https://learn.microsoft.com/fr-fr/azure/logic-apps/expression-functions-reference) ; Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection) ; Microsoft Learn : Gérer Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/manage)
+Sources : Microsoft Learn : Informations de référence sur les fonctions dans les expressions de flux de travail (Azure Logic Apps et Power Automate) (https://learn.microsoft.com/fr-fr/azure/logic-apps/expression-functions-reference) ; Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection) ; Microsoft Learn : Gérer Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/manage)
 
 ## N° 22 La cape d'invisibilité : Pseudonymiser un texte avant de le transmettre
 
@@ -2429,7 +2429,7 @@ Limites :
 - Pseudonymiser ne remplace pas une clarification avec le service responsable de la protection des données chez vous.
 - À proprement parler, tu pseudonymises : avec la correspondance, chaque personne peut être identifiée à nouveau. Ne donne pas le texte pour diffusion sous prétexte que les noms sont remplacés.
 
-Sources : Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection) ; Microsoft Learn : Qu'est-ce que Microsoft Copilot ? (https://learn.microsoft.com/fr-fr/copilot/faq)
+Sources : Microsoft Learn : Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection) ; Microsoft Learn : Qu'est-ce que Microsoft Copilot ? (https://learn.microsoft.com/fr-fr/copilot/faq)
 
 ## N° 23 La boussole des crédits : Estimer à l'avance la consommation de crédits d'un agent
 
@@ -2519,7 +2519,7 @@ Limites :
 - Les critères sont des propositions. C'est à l'équipe de les fixer.
 - Selon la page Learn «Taux de facturation et gestion», les agents sont bloqués à partir de 125 pour cent de la capacité prépayée ; selon la page d'administration sur les crédits Copilot, un environnement sans source de dépassement peut déjà s'arrêter dès que son allocation est épuisée. Un critère d'arrêt propre agit idéalement avant.
 
-Sources : Microsoft Learn : Taux de facturation et gestion (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management) ; Microsoft Learn : Qu'est-ce que Microsoft Copilot ? (https://learn.microsoft.com/fr-fr/copilot/overview) ; Microsoft Learn : Estimateur d'utilisation de l'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agent-usage-estimator) ; Microsoft Learn : Gérer les crédits Copilot et la capacité pour Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
+Sources : Microsoft Learn : Taux de facturation et gestion (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management) ; Microsoft Learn : Qu'est-ce que Microsoft Copilot ? (https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview) ; Microsoft Learn : Estimateur d'utilisation de l'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agent-usage-estimator) ; Microsoft Learn : Gérer les crédits Copilot et la capacité pour Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## N° 25 La veille de nuit : Le contrôle mensuel de l'agent
 
@@ -2577,7 +2577,7 @@ Sources : Microsoft Learn : Tester votre assistant (Copilot Studio) (https://l
 
 # Italiano
 
-## Trasformare gli appunti in un verbale con i compiti: Trasformare gli appunti in un verbale con i compiti
+## Trasformare gli appunti in un verbale con i compiti
 
 URL: https://copilot.ninja/it/techniken/notizen-zu-protokoll/
 Cintura: Cintura bianca. Accesso: Senza licenza aggiuntiva in Microsoft Copilot Chat. Aggiornato al 15 ottobre 2026.
@@ -2616,7 +2616,7 @@ Limiti:
 - Nomi, scadenze e decisioni valgono quanto i tuoi appunti.
 - Funziona in Microsoft Copilot Chat con un account di lavoro o di scuola. Se il tuo abbonamento lo include, lo trovi nella pagina Gratis.
 
-Fonti: Microsoft Learn: Scrivere prompt efficaci per ottenere risultati ottimali (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview)
+Fonti: Microsoft Learn: Scrivere prompt efficaci per ottenere risultati ottimali (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
 ## N. 1 L'interrogatorio: Fatti fare domande prima di scrivere
 
@@ -2655,7 +2655,7 @@ Limiti:
 - Se la risposta pone più domande insieme, scrivi «Per favore una sola domanda» e vai avanti.
 - Senza add-on non c'è un accesso ampio ai dati dell'organizzazione. Fanno eccezione Copilot Chat in Outlook negli scenari supportati, i contenuti caricati o incollati e gli agenti con accesso autorizzato.
 
-Fonti: Microsoft Learn: Scrivere un prompt efficace (unità di apprendimento) (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Rivedere le procedure consigliate per i prompt (unità di apprendimento) (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/microsoft-365/copilot/microsoft-365-copilot-overview)
+Fonti: Microsoft Learn: Scrivere un prompt efficace (unità di apprendimento) (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Rivedere le procedure consigliate per i prompt (unità di apprendimento) (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
 ## N. 2 La scrittura chiara: Testo tecnico in linguaggio chiaro, con elenco delle perdite
 
@@ -2732,7 +2732,7 @@ Limiti:
 - Sui diritti d'uso delle immagini generate questa pagina non dice nulla. Chiariscilo tu per il tuo impiego.
 - Nonostante l'esclusione l'immagine può contenere scritte o loghi. Controlli tu prima dell'uso.
 
-Fonti: Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/microsoft-365/copilot/microsoft-365-copilot-overview)
+Fonti: Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
 ## N. 4 Il rapporto dell'esploratore: Cosa mi sono perso in vacanza
 
@@ -2770,9 +2770,9 @@ Limiti:
 - «Posso ignorare» è un suggerimento, non una decisione.
 - Senza add-on non c'è un accesso ampio ai dati dell'organizzazione. Fanno eccezione Copilot Chat in Outlook negli scenari supportati, i contenuti caricati o incollati e gli agenti con accesso autorizzato.
 
-Fonti: Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview); Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/microsoft-365/copilot/microsoft-365-copilot-overview)
+Fonti: Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview); Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
-## Bozza di risposta a una mail difficile di un cliente: Bozza di risposta a una mail difficile di un cliente
+## Bozza di risposta a una mail difficile di un cliente
 
 URL: https://copilot.ninja/it/techniken/antwort-auf-kundenmail/
 Cintura: Cintura gialla. Accesso: Senza licenza aggiuntiva in Microsoft Copilot Chat. Aggiornato al 15 ottobre 2026.
@@ -2810,7 +2810,7 @@ Limiti:
 - Non sostituisce il tuo controllo prima dell'invio.
 - I dati dei clienti vanno nel prompt solo se le vostre regole interne lo consentono.
 
-Fonti: Microsoft Learn: Scrivere prompt efficaci per ottenere risultati ottimali (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview)
+Fonti: Microsoft Learn: Scrivere prompt efficaci per ottenere risultati ottimali (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
 ## N. 5 L'avversario allo specchio: Attacca il tuo testo dal punto di vista del destinatario
 
@@ -2890,7 +2890,7 @@ Limiti:
 - I file caricati Microsoft Copilot Chat, secondo Microsoft, li salva nel tuo OneDrive for Business. Lì puoi eliminarli in qualsiasi momento.
 - Carica documenti riservati solo se le vostre regole interne lo consentono.
 
-Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview)
+Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
 ## N. 7 Lo sguardo dalla fine: Pre-mortem per un progetto
 
@@ -2965,9 +2965,9 @@ Limiti:
 - La risposta, secondo Microsoft, vede solo contenuti a cui hai accesso.
 - Gli accordi a voce senza nota mancano nel dossier.
 
-Fonti: Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview)
+Fonti: Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
-## Controllare una tabella alla ricerca di anomalie: Controllare una tabella alla ricerca di anomalie
+## Controllare una tabella alla ricerca di anomalie
 
 URL: https://copilot.ninja/it/techniken/tabelle-pruefen/
 Cintura: Cintura arancione. Accesso: Senza licenza aggiuntiva in Microsoft Copilot Chat, con caricamento di file. Aggiornato al 15 ottobre 2026.
@@ -3003,7 +3003,7 @@ Limiti:
 - Gli esiti sono indicazioni e non una revisione. Verifica due o tre risultati nel file originale prima di fidarti.
 - Copilot Chat (Basic) non ha accesso a Copilot in Excel. Microsoft 365 Copilot (Basic) offre senza add-on un accesso standard, che in caso di forte carico può essere limitato. Microsoft 365 Copilot (Premium) offre con l'add-on la piena portata e Priority Access. La denominazione nel prodotto mostra il tuo livello; licenza e configurazione del tenant determinano la disponibilità. Questa forma base lavora con un file caricato nella chat.
 
-Fonti: Microsoft Learn: Scrivere prompt efficaci per ottenere risultati ottimali (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq)
+Fonti: Microsoft Learn: Scrivere prompt efficaci per ottenere risultati ottimali (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq)
 
 ## N. 9 Il duello delle offerte: Confrontare più offerte
 
@@ -3040,7 +3040,7 @@ Limiti:
 - Carica offerte di terzi solo se le vostre regole interne lo consentono.
 - Decidere spetta a te. Il prompt vieta volutamente una raccomandazione.
 
-Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview)
+Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview)
 
 ## N. 10 La trappola: Trovare scadenze e trappole di rinnovo nel contratto
 
@@ -3078,7 +3078,7 @@ Limiti:
 - Secondo Microsoft, per prompt e risposte con accesso tramite account di lavoro o di scuola vale l'Enterprise Data Protection. I contratti riservati li carichi comunque solo secondo le vostre regole interne.
 - Per il caricamento dei file valgono, secondo Microsoft, dei limiti. Le pagine consultate non indicano cifre.
 
-Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Enterprise Data Protection in Microsoft 365 Copilot e Microsoft 365 Copilot Chat (https://learn.microsoft.com/it-it/microsoft-365/copilot/enterprise-data-protection)
+Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Enterprise Data Protection in Microsoft 365 Copilot e Microsoft 365 Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/enterprise-data-protection)
 
 ## N. 11 Lo scrivano ombra: Fissare il proprio stile di scrittura in un profilo
 
@@ -3165,7 +3165,7 @@ Limiti:
 - Gli amministratori possono disattivare la ricerca web. In quel caso Microsoft Copilot Chat, secondo Microsoft, risponde solo dal modello linguistico e i link mancano.
 - Un link non è una prova finché non hai letto la pagina.
 
-Fonti: Microsoft Learn: Enterprise Data Protection in Microsoft 365 Copilot e Microsoft 365 Copilot Chat (https://learn.microsoft.com/it-it/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Gestire Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/manage); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq)
+Fonti: Microsoft Learn: Enterprise Data Protection in Microsoft 365 Copilot e Microsoft 365 Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/enterprise-data-protection); Microsoft Learn: Gestire Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/manage); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq)
 
 ## N. 13 Il quiz del Dojo: Quiz da un regolamento per i nuovi collaboratori
 
@@ -3207,7 +3207,7 @@ Limiti:
 
 Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Scrivi una richiesta efficace (unità di apprendimento) (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agente per le istruzioni interne: Agente per le istruzioni interne
+## Agente per le istruzioni interne
 
 URL: https://copilot.ninja/it/techniken/agent-interne-anleitungen/
 Cintura: Cintura verde. Accesso: Copilot Studio: crea e verifica nella versione di valutazione. La pubblicazione richiede capacità (crediti Copilot o pay-as-you-go) e autorizzazione di autore.. Aggiornato al 15 ottobre 2026.
@@ -3296,7 +3296,7 @@ Limiti:
 - I nomi dei menu provengono dalla documentazione in inglese. Nella tua interfaccia possono avere un altro nome.
 - Una cronologia di chat mostra un solo caso. Prova l'agente con altri casi prima di condividerlo.
 
-Fonti: Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/copilot-studio-experience); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/agent-builder-build-agents); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Fonti: Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/plugins/copilot-studio-experience); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/plugins/agent-builder-build-agents); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions)
 
 ## N. 15 Il guardiano: Agente che conosce solo il tuo sito web
 
@@ -3342,7 +3342,7 @@ Limiti:
 - Se sul sito web c'è qualcosa di superato, l'agente lo riporta.
 - I nomi dei menu provengono dalla documentazione in inglese. Nella tua interfaccia possono avere un altro nome.
 
-Fonti: Microsoft Learn: Aggiungere fonti di conoscenza a un agente in Agent Builder (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/agent-builder-add-knowledge); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/copilot-studio-experience)
+Fonti: Microsoft Learn: Aggiungere fonti di conoscenza a un agente in Agent Builder (https://learn.microsoft.com/it-it/plugins/agent-builder-add-knowledge); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/plugins/copilot-studio-experience)
 
 ## N. 16 Lo sparring partner: Agente per l'allenamento alla conversazione
 
@@ -3384,7 +3384,7 @@ Limiti:
 - Un colloquio provato non è un colloquio vero. L'agente non conosce il tuo cliente.
 - Secondo Microsoft l'agente resta senza costi aggiuntivi finché si basa solo su istruzioni e siti web pubblici. Secondo la guida per gli amministratori sugli agenti, la disponibilità di Agent Builder dipende da una licenza Microsoft 365 Copilot oppure dal pay-as-you-go per Copilot Studio.
 
-Fonti: Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/agent-builder-build-agents)
+Fonti: Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/plugins/agent-builder-build-agents)
 
 ## N. 17 Il controllo della pergamena: Controlla le istruzioni dell'agente prima del test
 
@@ -3425,9 +3425,9 @@ Limiti:
 - Il controllo legge solo testo. Se l'agente poi si comporta correttamente lo mostra solo il test.
 - Inserisci nomi interni e recapiti nelle istruzioni solo se le vostre regole interne lo consentono.
 
-Fonti: Microsoft Learn: Scrivere istruzioni per l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Fonti: Microsoft Learn: Scrivere istruzioni per l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions)
 
-## Agente che smista le richieste e le passa a una persona: Agente che smista le richieste e le passa a una persona
+## Agente che smista le richieste e le passa a una persona
 
 URL: https://copilot.ninja/it/techniken/agent-anfragen-sortieren/
 Cintura: Cintura blu. Accesso: Copilot Studio: crea e verifica nella versione di valutazione. La pubblicazione richiede capacità (crediti Copilot o pay-as-you-go) e autorizzazione di autore.. Aggiornato al 15 ottobre 2026.
@@ -3480,7 +3480,7 @@ Limiti:
 - Testa con richieste poco chiare e incomplete, non solo con il caso ideale.
 - Nella versione di valutazione verifichi nel riquadro di test. La pubblicazione richiede capacità (crediti Copilot o pay-as-you-go) e autorizzazione di autore.
 
-Fonti: Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere le istruzioni dell'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Testare l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Ottenere l'accesso all'harness standard di Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Fonti: Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere le istruzioni dell'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Testare l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Ottenere l'accesso all'harness standard di Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N. 18 La prova di cintura: 20 domande di test per il tuo agente
 
@@ -3621,7 +3621,7 @@ Limiti:
 - Chi usa l'agente pubblicato consuma crediti Copilot (secondo la tabella delle tariffe, gli utenti con licenza Microsoft Copilot in Microsoft 365 no). Secondo Microsoft una risposta generativa vale 2 crediti Copilot, il Tenant Graph Grounding 10. Le tariffe possono cambiare.
 - Nella versione di valutazione di Copilot Studio puoi creare e verificare nel riquadro di test, ma non pubblicare.
 
-Fonti: Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Gestione e tariffe di fatturazione (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Ottenere l'accesso a Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Fonti: Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions); Microsoft Learn: Gestione e tariffe di fatturazione (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Ottenere l'accesso a Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N. 21 L'interprete: Espressioni di Power Automate con spiegazione
 
@@ -3661,7 +3661,7 @@ Limiti:
 - Se la ricerca sul web è disattivata, i link mancano. Allora cerchi tu stesso le funzioni.
 - Per il flusso stesso valgono le licenze di Power Automate. Qui non sono state verificate.
 
-Fonti: Microsoft Learn: Riferimento per le funzioni nelle espressioni del flusso di lavoro (Azure Logic Apps) (https://learn.microsoft.com/it-it/azure/logic-apps/expression-functions-reference); Microsoft Learn: Protezione dei dati aziendali in Microsoft Copilot e Microsoft Copilot Chat (https://learn.microsoft.com/it-it/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Gestire Copilot Chat (https://learn.microsoft.com/it-it/copilot/manage)
+Fonti: Microsoft Learn: Riferimento per le funzioni nelle espressioni del flusso di lavoro (Azure Logic Apps) (https://learn.microsoft.com/it-it/azure/logic-apps/expression-functions-reference); Microsoft Learn: Protezione dei dati aziendali in Microsoft Copilot e Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/enterprise-data-protection); Microsoft Learn: Gestire Copilot Chat (https://learn.microsoft.com/it-it/copilot/manage)
 
 ## N. 22 Il mantello dell'invisibilità: Pseudonimizza il testo prima che vada oltre
 
@@ -3709,7 +3709,7 @@ Limiti:
 - La pseudonimizzazione non sostituisce un chiarimento con l'ufficio responsabile della protezione dei dati da voi.
 - A rigore pseudonimizzi: con la tabella di corrispondenza ogni persona può essere identificata di nuovo. Non rilasciare il testo solo perché i nomi sono stati sostituiti.
 
-Fonti: Microsoft Learn: Protezione dei dati aziendali in Microsoft Copilot e Microsoft Copilot Chat (https://learn.microsoft.com/it-it/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq)
+Fonti: Microsoft Learn: Protezione dei dati aziendali in Microsoft Copilot e Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/plan/enterprise-data-protection); Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq)
 
 ## N. 23 La bussola dei crediti: Stima in anticipo il consumo di crediti di un agente
 
@@ -3799,7 +3799,7 @@ Limiti:
 - I criteri sono proposte. Dovete stabilirli come team.
 - Secondo la pagina di Learn «Gestione e tariffe di fatturazione» gli agenti vengono bloccati dal 125 per cento della capacità prepagata; secondo la pagina di amministrazione sui crediti Copilot un ambiente senza una fonte per il superamento può già fermarsi non appena la sua assegnazione è esaurita. Un criterio di spegnimento proprio scatta idealmente prima.
 
-Fonti: Microsoft Learn: Gestione e tariffe di fatturazione (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Che cos'è Microsoft Copilot? (https://learn.microsoft.com/it-it/copilot/overview); Microsoft Learn: Strumento di stima dell'utilizzo dell'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Gestire crediti Copilot e capacità per Copilot Studio (interfaccia di amministrazione di Power Platform) (https://learn.microsoft.com/it-it/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
+Fonti: Microsoft Learn: Gestione e tariffe di fatturazione (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Che cos'è Microsoft Copilot? (https://learn.microsoft.com/it-it/copilot/plan/copilot-overview); Microsoft Learn: Strumento di stima dell'utilizzo dell'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Gestire crediti Copilot e capacità per Copilot Studio (interfaccia di amministrazione di Power Platform) (https://learn.microsoft.com/it-it/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## N. 25 La guardia notturna: Controllo mensile dell'agente
 
@@ -3857,7 +3857,7 @@ Fonti: Microsoft Learn: Testa il tuo agente (Copilot Studio) (https://learn.micr
 
 # English
 
-## Turn notes into minutes with action items: Turn notes into minutes with action items
+## Turn notes into minutes with action items
 
 URL: https://copilot.ninja/en/techniken/notizen-zu-protokoll/
 Belt: White belt. Access: No add-on license, in Microsoft Copilot Chat. As of October 15, 2026.
@@ -3896,7 +3896,7 @@ Limits:
 - Names, dates and decisions are only as good as your notes.
 - Runs in Microsoft Copilot Chat with a work or school account. Whether your subscription includes it is explained on the Free page.
 
-Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## No. 1 The Interrogation: Get interviewed before you write
 
@@ -3935,7 +3935,7 @@ Limits:
 - If the answer asks several questions at once, write “Only one question, please” and continue.
 - Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 
-Sources: Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources: Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt); Microsoft Learn: Review prompting best practices (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/3-review-prompting-best-practices); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## No. 2 Plain Script: Technical text in plain language, with a loss list
 
@@ -4012,7 +4012,7 @@ Limits:
 - This page makes no statement about usage rights for generated images. Clarify that yourself for your use.
 - The image may contain text or logos despite the exclusions. You check before using it.
 
-Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## No. 4 The Scout Report: What did I miss during my vacation
 
@@ -4050,9 +4050,9 @@ Limits:
 - “Can ignore” is a suggestion, not a decision.
 - Without an add-on there is no broad access to organizational data. Exceptions are Copilot Chat in Outlook in supported scenarios, uploaded or pasted content, and agents with enabled access.
 
-Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
+Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
-## Draft a reply to a difficult customer email: Draft a reply to a difficult customer email
+## Draft a reply to a difficult customer email
 
 URL: https://copilot.ninja/en/techniken/antwort-auf-kundenmail/
 Belt: Yellow belt. Access: No add-on license, in Microsoft Copilot Chat. As of October 15, 2026.
@@ -4090,7 +4090,7 @@ Limits:
 - It does not replace your own check before sending.
 - Customer data only belongs in the prompt if your internal rules allow it.
 
-Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## No. 5 The Opponent in the Mirror: Attack your own text from the recipient's view
 
@@ -4170,7 +4170,7 @@ Limits:
 - According to Microsoft, Microsoft Copilot Chat stores uploaded files in your OneDrive for Business. You can delete them there at any time.
 - Only upload confidential documents if your internal rules allow it.
 
-Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## No. 7 The View from the End: Pre-mortem for a project
 
@@ -4245,9 +4245,9 @@ Limits:
 - According to Microsoft, the answer only sees content you have access to.
 - Verbal agreements without a note are missing from the dossier.
 
-Sources: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Sources: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
-## Check a table for anomalies: Check a table for anomalies
+## Check a table for anomalies
 
 URL: https://copilot.ninja/en/techniken/tabelle-pruefen/
 Belt: Orange belt. Access: No add-on license, in Microsoft Copilot Chat with file upload. As of October 15, 2026.
@@ -4283,7 +4283,7 @@ Limits:
 - The findings are pointers, not an audit. Verify two or three hits in the original file before you rely on them.
 - Copilot Chat (Basic) has no access to Copilot in Excel. Microsoft 365 Copilot (Basic) provides standard app access without an add-on, possibly limited at high demand. Microsoft 365 Copilot (Premium) provides full functionality and Priority Access with an add-on. The in-product label shows your tier; license and tenant configuration determine availability. This basic form works with a file uploaded to the chat.
 
-Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Sources: Microsoft Learn: Write effective prompts to achieve optimal results (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## No. 9 The Quote Duel: Compare several quotes
 
@@ -4320,7 +4320,7 @@ Limits:
 - Only upload third-party quotes if your internal rules allow it.
 - You have to decide yourself. The prompt deliberately rules out a recommendation.
 
-Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
+Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview)
 
 ## No. 10 The Pitfall: Find deadlines and renewal traps in a contract
 
@@ -4358,7 +4358,7 @@ Limits:
 - According to Microsoft, Enterprise Data Protection applies to prompts and responses when you sign in with a work or school account. Still, only upload confidential contracts according to your internal rules.
 - According to Microsoft, file uploads have limits. The pages we checked give no numbers.
 
-Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection)
+Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection)
 
 ## No. 11 The Shadow Writer: Capture your own writing style as a profile
 
@@ -4445,7 +4445,7 @@ Limits:
 - Admins can turn off web search. According to Microsoft, Microsoft Copilot Chat then answers only from the language model, and links are missing.
 - A link is not evidence until you have read the page.
 
-Sources: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Sources: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## No. 13 The Dojo Quiz: Quiz from a policy for new employees
 
@@ -4487,7 +4487,7 @@ Limits:
 
 Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agent for internal guides: Agent for internal guides
+## Agent for internal guides
 
 URL: https://copilot.ninja/en/techniken/agent-interne-anleitungen/
 Belt: Green belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
@@ -4576,7 +4576,7 @@ Limits:
 - The menu names come from the English documentation. Your interface may name them differently.
 - One chat history shows one case. Check the agent with other cases before you share it.
 
-Sources: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Sources: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
 
 ## No. 15 The Gatekeeper: Agent that only knows your website
 
@@ -4622,7 +4622,7 @@ Limits:
 - If something on the website is outdated, the agent passes it on.
 - The menu names come from the English documentation. Your interface may name them differently.
 
-Sources: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience)
+Sources: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience)
 
 ## No. 16 The Sparring Partner: Agent for conversation practice
 
@@ -4664,7 +4664,7 @@ Limits:
 - A practiced conversation is not a real one. The agent does not know your customer.
 - According to Microsoft, the agent stays free of additional cost as long as it only relies on instructions and public websites. Whether Agent Builder is available to you depends, according to the agents admin guide, on a Microsoft 365 Copilot license or on pay-as-you-go for Copilot Studio.
 
-Sources: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents)
+Sources: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents)
 
 ## No. 17 The Scroll Check: Check agent instructions before testing
 
@@ -4705,9 +4705,9 @@ Limits:
 - The check only reads text. Whether the agent then behaves correctly only shows in testing.
 - Only include internal names and contact details in the instructions if your internal rules allow it.
 
-Sources: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
+Sources: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
 
-## Agent that sorts and hands over requests: Agent that sorts and hands over requests
+## Agent that sorts and hands over requests
 
 URL: https://copilot.ninja/en/techniken/agent-anfragen-sortieren/
 Belt: Blue belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
@@ -4760,7 +4760,7 @@ Limits:
 - Check with unclear and incomplete requests, not only the ideal case.
 - In the trial, check in the test chat. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.
 
-Sources: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## No. 18 The Belt Exam: 20 test questions for your agent
 
@@ -4901,7 +4901,7 @@ Limits:
 - Using the published agent consumes Copilot Credits (none for users with a Microsoft Copilot license in Microsoft 365, according to the rate table). According to Microsoft, a Generative Answer counts 2 Copilot Credits, Tenant Graph Grounding 10. The rates can change.
 - In the Copilot Studio trial you can build and check in the test chat, but not publish.
 
-Sources: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## No. 21 The Interpreter: Power Automate expressions with explanations
 
@@ -4941,7 +4941,7 @@ Limits:
 - If web search is turned off, the links are missing. Then you look up the functions yourself.
 - The flow itself is covered by Power Automate licenses. Those are not checked here.
 
-Sources: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
+Sources: Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate (https://learn.microsoft.com/en-us/azure/logic-apps/expression-functions-reference); Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection); Microsoft Learn: Manage Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/manage)
 
 ## No. 22 The Invisibility Cloak: Pseudonymise text before it goes anywhere
 
@@ -4989,7 +4989,7 @@ Limits:
 - Pseudonymising does not replace checking with the person responsible for data protection in your organization.
 - Strictly speaking, you are pseudonymising: the mapping lets each person be identified again. Do not release the text just because names have been replaced.
 
-Sources: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
+Sources: Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection); Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq)
 
 ## No. 23 The Credit Compass: Estimate an agent's credit consumption in advance
 
@@ -5079,7 +5079,7 @@ Limits:
 - The criteria are suggestions. You have to decide on them as a team.
 - According to the Learn page Billing rates and management, agents are blocked from 125 percent of the prepaid capacity; according to the admin page on Copilot Credits, an environment without an overage source can stop as soon as its allocation is used up. Ideally, your own shutdown criterion kicks in earlier.
 
-Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
+Sources: Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/plan/copilot-overview); Microsoft Learn: Agent usage estimator (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-usage-estimator); Microsoft Learn: Manage Copilot Credits for Copilot Studio (Power Platform admin center) (https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-copilot-credits-capacity)
 
 ## No. 25 The Night Watch: Monthly agent check
 

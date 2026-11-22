@@ -98,7 +98,7 @@
       "richtig": 1,
       "aufloesung": "Selon Microsoft, la protection des données d'entreprise s'applique aux prompts et aux réponses. Les requêtes de recherche web partent vers le service Bing, suivent leurs propres règles de données et, selon Learn, ne sont pas couvertes par l'addendum sur la protection des données. C'est pourquoi les noms de clients et les chiffres internes n'ont pas leur place dans une question de recherche.",
       "quelle": {
-        "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection",
+        "url": "https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection",
         "titel": "Microsoft Learn, Protection des données d'entreprise"
       },
       "technik": null
@@ -117,7 +117,7 @@
       "richtig": 0,
       "aufloesung": "Selon Microsoft, «téléverser et analyser des fichiers» fait partie de Copilot Chat sans licence supplémentaire. Le téléversement a des limites, mais Learn ne donne pas de chiffres précis sur cette page.",
       "quelle": {
-        "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+        "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
         "titel": "Microsoft Learn, Aperçu de Copilot Chat"
       },
       "technik": null

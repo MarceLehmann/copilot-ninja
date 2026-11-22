@@ -107,7 +107,7 @@
       "quelle_titel": "Microsoft Learn: Écrire des invites efficaces pour obtenir des résultats optimaux",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Vue d'ensemble de Microsoft Copilot Chat"
         }
       ],
@@ -161,7 +161,7 @@
       "quelle_titel": "Microsoft Learn: Écrire des invites efficaces pour obtenir des résultats optimaux",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Vue d'ensemble de Microsoft Copilot Chat"
         }
       ],
@@ -215,7 +215,7 @@
       "quelle_titel": "Microsoft Learn: Écrire des invites efficaces pour obtenir des résultats optimaux",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Vue d'ensemble de Microsoft Copilot Chat"
         },
         {
@@ -415,7 +415,7 @@
           "titel": "Microsoft Learn: Évaluer les meilleures pratiques de requête (unité de formation)"
         },
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Qu'est-ce que Microsoft 365 Copilot?"
         }
       ],
@@ -529,7 +529,7 @@
           "titel": "Microsoft Learn: Questions fréquentes sur Microsoft Copilot Chat"
         },
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Qu'est-ce que Microsoft 365 Copilot?"
         }
       ],
@@ -583,7 +583,7 @@
       "quelle_titel": "Microsoft Learn: Vue d'ensemble de Microsoft Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Qu'est-ce que Microsoft 365 Copilot?"
         }
       ],
@@ -692,7 +692,7 @@
       "quelle_titel": "Microsoft Learn: Questions fréquentes sur Microsoft Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Vue d'ensemble de Microsoft Copilot Chat"
         }
       ],
@@ -800,7 +800,7 @@
       "quelle_titel": "Microsoft Learn: Qu'est-ce que Microsoft 365 Copilot?",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Vue d'ensemble de Microsoft Copilot Chat"
         }
       ],
@@ -857,7 +857,7 @@
       "quelle_titel": "Microsoft Learn: Questions fréquentes sur Microsoft Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Vue d'ensemble de Microsoft Copilot Chat"
         }
       ],
@@ -915,7 +915,7 @@
       "quelle_titel": "Microsoft Learn: Questions fréquentes sur Microsoft Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection",
           "titel": "Microsoft Learn: Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat"
         }
       ],
@@ -1158,11 +1158,11 @@
           "titel": "Microsoft Learn: Acheter et gérer des agents dans Copilot Chat"
         },
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-build-agents",
+          "url": "https://learn.microsoft.com/fr-fr/plugins/agent-builder-build-agents",
           "titel": "Microsoft Learn: Créer des agents dans Agent Builder"
         },
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions",
           "titel": "Microsoft Learn: Rédiger des instructions efficaces pour les agents déclaratifs"
         }
       ],
@@ -1222,7 +1222,7 @@
           "titel": "Microsoft Learn: Acheter et gérer des agents dans Copilot Chat"
         },
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/copilot-studio-experience",
+          "url": "https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience",
           "titel": "Microsoft Learn: Choisissez entre Agent Builder et Copilot Studio pour créer votre agent"
         }
       ],
@@ -1278,7 +1278,7 @@
       "quelle_titel": "Microsoft Learn: Acheter et gérer des agents dans Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-build-agents",
+          "url": "https://learn.microsoft.com/fr-fr/plugins/agent-builder-build-agents",
           "titel": "Microsoft Learn: Créer des agents dans Agent Builder"
         }
       ],
@@ -1333,7 +1333,7 @@
           "titel": "Microsoft Learn: Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio)"
         },
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions",
           "titel": "Microsoft Learn: Rédiger des instructions efficaces pour les agents déclaratifs"
         }
       ],
@@ -1499,7 +1499,7 @@
       "quelle_titel": "Microsoft Learn: Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio)",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions",
           "titel": "Microsoft Learn: Rédiger des instructions efficaces pour les agents déclaratifs"
         },
         {
@@ -1560,7 +1560,7 @@
       "quelle_titel": "Microsoft Learn: Informations de référence sur les fonctions dans les expressions de flux de travail (Azure Logic Apps et Power Automate)",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection",
           "titel": "Microsoft Learn: Protection des données d'entreprise dans Microsoft 365 Copilot et Microsoft Copilot Chat"
         },
         {
@@ -1790,7 +1790,7 @@
       "quelle_titel": "Microsoft Learn: Taux de facturation et gestion (Copilot Studio)",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/fr-fr/copilot/overview",
+          "url": "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
           "titel": "Microsoft Learn: Qu'est-ce que Microsoft Copilot?"
         },
         {

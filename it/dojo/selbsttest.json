@@ -70,7 +70,7 @@
       "antworten": ["Sì, tutto è protetto allo stesso modo.", "No, passano separatamente da Bing con regole sui dati proprie.", "Copilot Chat non ha la ricerca web."],
       "richtig": 1,
       "aufloesung": "Secondo Microsoft, la protezione dei dati aziendali vale per prompt e risposte. Le ricerche web vanno al servizio Bing, seguono regole sui dati proprie e, secondo Learn, non sono coperte dal Data Protection Addendum. Per questo i nomi dei clienti e le cifre interne non vanno in una domanda di ricerca.",
-      "quelle": { "url": "https://learn.microsoft.com/it-it/microsoft-365/copilot/enterprise-data-protection", "titel": "Microsoft Learn, protezione dei dati aziendali" },
+      "quelle": { "url": "https://learn.microsoft.com/it-it/copilot/plan/enterprise-data-protection", "titel": "Microsoft Learn, protezione dei dati aziendali" },
       "technik": null
     },
     {
@@ -82,7 +82,7 @@
       "antworten": ["Sì, il caricamento di file è incluso, con limiti di cui non sono pubblicati i numeri.", "No, solo con una licenza.", "Solo immagini."],
       "richtig": 0,
       "aufloesung": "Secondo Microsoft, «caricare e analizzare file» fa parte di Copilot Chat senza licenza aggiuntiva. Il caricamento ha dei limiti, ma Learn non indica numeri precisi in questa pagina.",
-      "quelle": { "url": "https://learn.microsoft.com/it-it/copilot/overview", "titel": "Microsoft Learn, panoramica di Copilot Chat" },
+      "quelle": { "url": "https://learn.microsoft.com/it-it/copilot/plan/copilot-overview", "titel": "Microsoft Learn, panoramica di Copilot Chat" },
       "technik": null
     },
     {

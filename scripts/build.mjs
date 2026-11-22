@@ -148,6 +148,19 @@ function pad2(n) { return String(n).padStart(2, '0'); }
 function tageZwischen(a, b) { return Math.round((Date.parse(b + 'T00:00:00Z') - Date.parse(a + 'T00:00:00Z')) / 864e5); }
 // Sprache einer Ausgabedatei aus dem Pfad (fr/..., assets/data/fr/..., assets/img/karten/fr/...)
 function spracheVon(rel) { const m = rel.replace(/\\/g, '/').match(/^(?:assets\/(?:data|img\/karten)\/)?([a-z]{2})\//); return m && SP[m[1]] ? m[1] : 'de'; }
+// Seitentitel-Laenge fuer Suchmaschinen (30 bis 60 Zeichen): Das Suffix « | Copilot Dojo» entfaellt, wenn der Titel sonst
+// laenger als 60 Zeichen wird, und wird bei sehr kurzen Titeln (Rechtstexte) zum vollen Namen verlaengert.
+const TITEL_SUFFIX = ' | Copilot Dojo';
+const TITEL_SUFFIX_LANG = ' | Power Platform Dojo, Copilot';
+function titelLaenge(html) {
+  return html.replace(/<title>([^<]*)<\/title>/, (m, t) => {
+    if (!t.endsWith(TITEL_SUFFIX)) return m;
+    const basis = t.slice(0, -TITEL_SUFFIX.length);
+    if (t.length > 60 && basis.length >= 30 && basis.length <= 60) return `<title>${basis}</title>`;
+    if (t.length < 30 && (basis + TITEL_SUFFIX_LANG).length <= 60) return `<title>${basis}${TITEL_SUFFIX_LANG}</title>`;
+    return m;
+  });
+}
 function schreibe(rel, inhalt) {
   if (MODUS === 'pruefen') return;
   // Typografie der Sprache (Franzoesisch: geschuetztes Leerzeichen vor : ; ? !) auf der fertigen Ausgabe, auch wo der Code Zeichen anhaengt
@@ -157,6 +170,7 @@ function schreibe(rel, inhalt) {
     else if (/\.json$/.test(rel)) inhalt = JSON.stringify(typoJson(JSON.parse(inhalt), regel));
     else if (/\.ics$/.test(rel)) inhalt = inhalt.split('\r\n').map(z => (/^(SUMMARY|DESCRIPTION):/.test(z) ? z.replace(/^(\w+:)(.*)$/, (m, k, v) => k + typoText(v, regel)) : z)).join('\r\n');
   }
+  if (/\.html$/.test(rel)) inhalt = titelLaenge(inhalt);
   const ziel = path.join(ROOT, rel);
   fs.mkdirSync(path.dirname(ziel), { recursive: true });
   fs.writeFileSync(ziel, inhalt);
@@ -201,7 +215,7 @@ function render(tpl, ctx, quelle = 'Template') {
 
 // Wortmarke als Text in der eigenen Titelschrift (16.10.2026: Name Power Platform Dojo, darunter klein Copilot)
 function wortmarke(srText = '') {
-  return `<span class="marke__wort"><span class="marke__name">Power Platform Dojo</span><span class="marke__zusatz">${SITE_ZUSATZ}</span></span>${srText ? `<span class="sr-only">${srText}</span>` : ''}`;
+  return `<span class="marke__wort"><span class="marke__name">Power Platform Dojo</span> <span class="marke__zusatz">${SITE_ZUSATZ}</span></span>${srText ? `<span class="sr-only">${srText}</span>` : ''}`;
 }
 
 /* Tusch */
@@ -645,9 +659,15 @@ function sprachKontext(rel, absolut, mitAlternates) {
     const href = `${ra}${SP[sp].pfad}${pfad}` || './';
     return `<li><a href="${href}" hreflang="${sp}" lang="${SP[sp].html_lang}" data-sprache-wahl="${sp}"${sp === L ? ' aria-current="true"' : ''}><span class="sprachen__kurz" aria-hidden="true">${SP[sp].kurz}</span> ${SP[sp].name}</a></li>`;
   }).join('');
-  const link = `<details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="${esc(T('Sprache wählen, aktuell: {0}', SP[L].name))}">${SP[L].kurz}</summary><ul class="sprachen__liste">${eintraege}</ul></details>`;
+  const link = `<details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="${esc(T('Sprache wählen, aktuell: {0}', SP[L].name))}"><span aria-hidden="true">${SP[L].kurz}</span></summary><ul class="sprachen__liste">${eintraege}</ul></details>`;
   const alternates = mitAlternates ? [...SPRACHEN.map(sp => `<link rel="alternate" hreflang="${sp}" href="${BASE_URL}${SP[sp].pfad}${pfad}">`), `<link rel="alternate" hreflang="x-default" href="${BASE_URL}${pfad}">`].join('\n') + '\n' : '';
-  return { sprachwahl: link, alternates };
+  // Sichtbare Links auf die Entsprechung dieser Seite in den anderen Sprachen (Fusszeile, ohne JS und ohne aufgeklapptes Menue)
+  const FUSS_LABEL = { de: 'Diese Seite in anderen Sprachen:', fr: "Cette page dans d'autres langues:", it: 'Questa pagina in altre lingue:', en: 'This page in other languages:' };
+  const fussLinks = ANZEIGE.filter(sp => sp !== L).map(sp => `<a href="${ra}${SP[sp].pfad}${pfad}" hreflang="${sp}" lang="${SP[sp].html_lang}" data-sprache-wahl="${sp}">${SP[sp].name}</a>`).join(', ');
+  const sprachen_fuss = `<div class="fuss__dojos fuss__sprachen">
+      <p>${FUSS_LABEL[L] || FUSS_LABEL.de} ${fussLinks}</p>
+    </div>`;
+  return { sprachwahl: link, alternates, sprachen_fuss };
 }
 function rahmenKontext(rel, seite, extra = {}, absolut = false) {
   const { r, ra } = wege(rel, absolut);
@@ -671,6 +691,8 @@ function rahmenKontext(rel, seite, extra = {}, absolut = false) {
     ...extra
   };
 }
+// Titel und Klartitel nur einmal ausgeben, wenn sie gleich sind (Grundformen)
+const titelKombi = (t) => (t.klartitel && t.klartitel !== t.titel ? `${t.titel}: ${t.klartitel}` : t.titel);
 const HTML_LANG = () => SP[L].html_lang;
 function metaHtml(p) {
   const zeilen = [GENERATOR, `<title>${esc(p.titel)}</title>`, `<meta name="description" content="${esc(p.beschreibung)}">`];
@@ -688,7 +710,7 @@ function metaHtml(p) {
   return zeilen.join('\n');
 }
 const ldWebsite = () => ({ '@type': 'WebSite', '@id': `${BASE_L}#website`, name: SITE_VOLL, alternateName: SITE_NAME, url: BASE_L, inLanguage: HTML_LANG(), description: T("Ninja-Techniken für Microsoft Copilot Chat und Copilot Studio mit Quelle und Prüfdatum. Unabhängige Website ohne Verbindung zu Microsoft."), publisher: { '@id': 'https://kmupower.com/#organization' } });
-const LD_ORG = { '@type': 'Organization', '@id': 'https://kmupower.com/#organization', name: 'KMUpower', legalName: 'Marcel Lehmann (Handelsname KMUpower)', url: 'https://kmupower.com/', founder: { '@type': 'Person', name: 'Marcel Lehmann' } };
+const LD_ORG = { '@type': 'Organization', '@id': 'https://kmupower.com/#organization', name: 'KMUpower', legalName: 'Marcel Lehmann (Handelsname KMUpower)', url: 'https://kmupower.com/', founder: { '@type': 'Person', name: 'Marcel Lehmann' }, logo: { '@type': 'ImageObject', url: 'https://kmupower.com/assets/logos/LOGO_KMUpower_high.webp' } };
 const LD_AUTOR = { '@type': 'Person', name: 'Marcel Lehmann', url: 'https://kmupower.com/', worksFor: { '@id': 'https://kmupower.com/#organization' } };
 function ldKrumen(teile) { return { '@type': 'BreadcrumbList', itemListElement: teile.map(([name, url], i) => ({ '@type': 'ListItem', position: i + 1, name, item: url })) }; }
 function seite(rel, p) {
@@ -757,7 +779,7 @@ function baueWand() {
     titel: T("Copilot Chat und Studio: alle Techniken | Copilot Dojo"),
     beschreibung: T("{0} Grundformen und {1} Techniken für Copilot Chat und Studio, nach Gürtel geordnet. Mit Quellen und Prüfdatum.", GRUNDFORMEN.length, ANZAHL),
     canonical: `${BASE_L}techniken/`, banner: ohneFreigabe(DABEI),
-    jsonld: [ldWebsite(), LD_ORG, { '@type': 'CollectionPage', '@id': `${BASE_L}techniken/#seite`, name: T("{0} Grundformen und {1} Techniken für Copilot Chat und Studio", GRUNDFORMEN.length, ANZAHL), url: `${BASE_L}techniken/`, inLanguage: HTML_LANG(), isPartOf: { '@id': `${BASE_L}#website` }, mainEntity: { '@type': 'ItemList', itemListElement: sortiert.map((t, i) => ({ '@type': 'ListItem', position: i + 1, url: urlTechnik(t), name: `${t.titel}: ${t.klartitel}` })) } }, krumen],
+    jsonld: [ldWebsite(), LD_ORG, { '@type': 'CollectionPage', '@id': `${BASE_L}techniken/#seite`, name: T("{0} Grundformen und {1} Techniken für Copilot Chat und Studio", GRUNDFORMEN.length, ANZAHL), url: `${BASE_L}techniken/`, inLanguage: HTML_LANG(), isPartOf: { '@id': `${BASE_L}#website` }, mainEntity: { '@type': 'ItemList', itemListElement: sortiert.map((t, i) => ({ '@type': 'ListItem', position: i + 1, url: urlTechnik(t), name: `${titelKombi(t)}` })) } }, krumen],
     daten: {
       anzahl: ANZAHL, anzahl_grundformen: (GRUNDFORMEN.length || 5) === 1 ? T("eine Grundform") : T("{0} Grundformen", GRUNDFORMEN.length || 5), stand_ch: datumCH(STAND), kurz_basis: KURZ_BASIS + (istDE() ? '' : '/' + L),
       filter: filterHtml(), abschnitte: wandAbschnitte(r), tusch_sitzen: tusch('sitzen'),
@@ -805,12 +827,12 @@ function baueTechnik(t, i) {
   const url = urlTechnik(t);
   seite(`techniken/${t.slug}/index.html`, {
     seite: 'technik', template: 'technik.html', titel, beschreibung,
-    ogTitel: `${t.titel}: ${t.klartitel}`, ogBeschreibung: t.nutzen && t.nutzen.length <= 165 ? t.nutzen : beschreibung, ogTyp: 'article',
+    ogTitel: `${titelKombi(t)}`, ogBeschreibung: t.nutzen && t.nutzen.length <= 165 ? t.nutzen : beschreibung, ogTyp: 'article',
     ogBild: bildDa ? `${BASE_URL}${kartenBild}` : null, ogAlt: `${t.typ === 'technik' ? T("Technik ") + pad2(t.nr) : T("Grundform")}: ${t.titel}`,
     canonical: url, banner: VORSCHAU && !istFrei(t),
     jsExtra: t.rechner ? ['assets/js/kompass.js'] : null,
     jsonld: [ldWebsite(), LD_ORG, {
-      '@type': 'TechArticle', '@id': `${url}#technik`, headline: `${t.titel}: ${t.klartitel}`, name: t.titel, url, inLanguage: HTML_LANG(),
+      '@type': 'TechArticle', '@id': `${url}#technik`, headline: `${titelKombi(t)}`, name: t.titel, url, inLanguage: HTML_LANG(),
       description: t.nutzen || beschreibung, author: LD_AUTOR, publisher: { '@id': 'https://kmupower.com/#organization' },
       datePublished: t.datum_publiziert || t.geprueft_am, dateModified: t.geprueft_am,
       citation: [t.quelle_url, ...(t.weitere_quellen || []).map(q => q.url)], isPartOf: { '@id': `${BASE_L}techniken/#seite` }
@@ -1037,7 +1059,7 @@ function baueGemeinsam() {
     const u = (p) => `${BASE_L}${p}`;
     teil[sp] = {
       seiten: [`- [${T('Technik-Wand')}](${u('techniken/')}): ${T('alle Techniken nach Gürtel, mit Zugang (ohne Zusatzlizenz, Lizenz, Copilot Studio)')}`, `- [${T('Ist Microsoft Copilot gratis?')}](${u('gratis/')}): ${T('Lizenz-Check in vier Fragen, was ohne Zusatzlizenz geht, mit Quelle und Prüfdatum je Aussage')}`, `- [${T('Gürtelprüfung')}](${u('pruefung/')}): ${T('Welcher Copilot-Gürtel bist du? Sieben Fragen, eine pro Gürtel')}`, `- [${T('Alle Fragen der Gürtelprüfung')}](${u('pruefung/fragen/')}): ${T('jede Frage mit Auflösung und Quelle')}`, `- [${T('Copilot ohne Zusatzlizenz: jede Bedingung mit Quelle')}](${u('gratis/nachschlagen/')}): ${T('Mythen, App-Stufen, Wortlaut der Bedingungen, häufige Fragen, Prüfprotokoll')}`, `- [${T('In vier Wochen durch alle Gürtel')}](${u('vier-wochen/')}): ${T('freier Plan zum Selbstlernen')}`, `- [${T('Über das Dojo')}](${u('ueber/')}): ${T('Methode, Dojo-Regeln, was die Seite nicht ist')}`],
-      liste: TECHNIKEN.map(t => `- [${T('Nr.')} ${t.nr} ${t.titel}: ${t.klartitel}](${urlTechnik(t)}): ${t.nutzen || ''} ${T('Stand')} ${datumCH(t.geprueft_am)}.`),
+      liste: TECHNIKEN.map(t => `- [${T('Nr.')} ${t.nr} ${titelKombi(t)}](${urlTechnik(t)}): ${t.nutzen || ''} ${T('Stand')} ${datumCH(t.geprueft_am)}.`),
       grund: GRUNDFORMEN.map(t => `- [${t.titel}](${urlTechnik(t)}): ${T('Stand')} ${datumCH(t.geprueft_am)}.`),
       voll: sortiert.map(t => volltext(t)), titelT: T('Techniken'), titelG: T('Grundformen')
     };
@@ -1068,7 +1090,7 @@ function baueGemeinsam() {
 // Eine Technik als Klartext fuer llms-full.txt, in der Sprache des Durchgangs
 function volltext(t) {
   const q = [{ url: t.quelle_url, titel: t.quelle_titel }, ...(t.weitere_quellen || [])];
-  const zeilen = [`## ${t.typ === 'technik' ? `${T("Nr.")} ${t.nr} ` : ''}${t.titel}: ${t.klartitel}`, '', `URL: ${urlTechnik(t)}`,
+  const zeilen = [`## ${t.typ === 'technik' ? `${T("Nr.")} ${t.nr} ` : ''}${titelKombi(t)}`, '', `URL: ${urlTechnik(t)}`,
     `${T("Gürtel")}: ${gName(t.guertel)}. ${T("Zugang")}: ${t.zugang_text || (ZUGANG[t.zugang] || {}).kurz || ''}. ${T("Stand")} ${datumCH(t.geprueft_am)}.`, '',
     `${T("Problem")}: ${t.problem}`, '', `${T("Nutzen")}: ${t.nutzen || ''}`, '',
     `${(ART[t.art] || ART.pinselstrich).rolle}:`, '', '```', t.technik_text.replace(/\{([^{}|]*)(?:\|[^{}]*)?\}/g, '[$1]'), '```', ''];
