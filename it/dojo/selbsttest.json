@@ -70,7 +70,7 @@
       "antworten": ["Sì, tutto è protetto allo stesso modo.", "No, passano separatamente da Bing con regole sui dati proprie.", "Copilot Chat non ha la ricerca web."],
       "richtig": 1,
       "aufloesung": "Secondo Microsoft, la protezione dei dati aziendali vale per prompt e risposte. Le ricerche web vanno al servizio Bing, seguono regole sui dati proprie e, secondo Learn, non sono coperte dal Data Protection Addendum. Per questo i nomi dei clienti e le cifre interne non vanno in una domanda di ricerca.",
-      "quelle": { "url": "https://learn.microsoft.com/it-it/microsoft-365/copilot/enterprise-data-protection", "titel": "Microsoft Learn, protezione dei dati aziendali" },
+      "quelle": { "url": "https://learn.microsoft.com/it-it/copilot/plan/enterprise-data-protection", "titel": "Microsoft Learn, protezione dei dati aziendali" },
       "technik": null
     },
     {

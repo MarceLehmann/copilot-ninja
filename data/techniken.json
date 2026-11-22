@@ -464,7 +464,7 @@
       ],
       "probe": "Frag im Testchat nach einem Preis und stell eine unklare Anfrage. Lehnt der Agent den Preis ab und fragt bei der unklaren Anfrage nach?",
       "meister_variante": null,
-      "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+      "quelle_url": "https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions",
       "quelle_titel": "Microsoft Learn: Write effective instructions for declarative agents",
       "weitere_quellen": [
         {
@@ -1274,7 +1274,7 @@
       "quelle_titel": "Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
+          "url": "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection",
           "titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat"
         }
       ],
@@ -1443,7 +1443,7 @@
       ],
       "probe": "Öffne drei Links pro Antwort und zähle, wie oft die Quelle den Satz wirklich stützt. Diese Quote ist dein Vertrauensmass.",
       "meister_variante": null,
-      "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
+      "quelle_url": "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection",
       "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat",
       "weitere_quellen": [
         {
@@ -1603,7 +1603,7 @@
       ],
       "probe": "Zähle eine Woche lang, wie oft du dieselbe Erklärung in einen neuen Chat tippst. Danach zählst du eine Woche mit dem Agent.",
       "meister_variante": null,
-      "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience",
+      "quelle_url": "https://learn.microsoft.com/en-us/plugins/copilot-studio-experience",
       "quelle_titel": "Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent",
       "weitere_quellen": [
         {
@@ -1611,11 +1611,11 @@
           "titel": "Microsoft Learn: Agents for Microsoft Copilot Chat"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents",
+          "url": "https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents",
           "titel": "Microsoft Learn: Build agents in Agent Builder"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions",
           "titel": "Microsoft Learn: Write effective instructions for declarative agents"
         }
       ],
@@ -1692,7 +1692,7 @@
       ],
       "probe": "Sammle zwei Wochen lang alle Fragen, bei denen der Agent «Das steht nicht auf unserer Website» antwortet. Die Länge dieser Liste ist die Lücke deiner Website.",
       "meister_variante": null,
-      "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge",
+      "quelle_url": "https://learn.microsoft.com/en-us/plugins/agent-builder-add-knowledge",
       "quelle_titel": "Microsoft Learn: Add knowledge sources to an agent in Agent Builder",
       "weitere_quellen": [
         {
@@ -1700,7 +1700,7 @@
           "titel": "Microsoft Learn: Agents for Microsoft Copilot Chat"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience",
+          "url": "https://learn.microsoft.com/en-us/plugins/copilot-studio-experience",
           "titel": "Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent"
         }
       ],
@@ -1780,7 +1780,7 @@
       "quelle_titel": "Microsoft Learn: Agents for Microsoft Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents",
+          "url": "https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents",
           "titel": "Microsoft Learn: Build agents in Agent Builder"
         }
       ],
@@ -1859,7 +1859,7 @@
           "titel": "Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio)"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions",
           "titel": "Microsoft Learn: Write effective instructions for declarative agents"
         }
       ],
@@ -2102,7 +2102,7 @@
       "quelle_titel": "Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio)",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions",
           "titel": "Microsoft Learn: Write effective instructions for declarative agents"
         },
         {
@@ -2189,7 +2189,7 @@
       "quelle_titel": "Microsoft Learn: Reference guide to functions in expressions for workflows in Azure Logic Apps and Power Automate",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
+          "url": "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection",
           "titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat"
         },
         {
@@ -2267,7 +2267,7 @@
       ],
       "probe": "Gib den pseudonymisierten Text einer Kollegin, die den Fall nicht kennt. Zähle, wie viele Personen oder Firmen sie trotzdem errät. Das Ziel ist null.",
       "meister_variante": null,
-      "quelle_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection",
+      "quelle_url": "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection",
       "quelle_titel": "Microsoft Learn: Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat",
       "weitere_quellen": [
         {
