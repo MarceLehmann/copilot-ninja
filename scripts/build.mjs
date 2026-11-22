@@ -94,7 +94,8 @@ const ICONS = {
   sonne: '<svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>',
   mond: '<svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>',
   menue: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg>',
-  zu: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg>'
+  zu: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg>',
+  loeschen: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="M9.5 9.5l5 5M14.5 9.5l-5 5"/></svg>'
 };
 // Vier-Wochen-Pfad (Konzept 7.3): je Ergebnis die Technik, aus der es stammt.
 // Vier-Wochen-Pfad (Konzept 7.3) und die vier Momente: Texte je Sprache in data/sprachen/<code>.json (wochen, momente).
@@ -151,7 +152,12 @@ function spracheVon(rel) { const m = rel.replace(/\\/g, '/').match(/^(?:assets\/
 // Seitentitel-Laenge fuer Suchmaschinen (30 bis 60 Zeichen), gemessen am Text ohne HTML-Entitaeten: Das Suffix « | Copilot Dojo»
 // entfaellt, wenn der Titel sonst laenger als 60 Zeichen wird, und wird bei sehr kurzen Titeln (Rechtstexte) zum vollen Namen
 // verlaengert. og:title und twitter:title, die den Seitentitel unveraendert uebernehmen, bekommen denselben Wert.
-const entitaetenText = (t) => t.replace(/&(#x?[0-9a-f]+|amp|lt|gt|quot|apos);/gi, (m, e) => ({ amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" }[e.toLowerCase()] || (e[1] === 'x' || e[1] === 'X' ? String.fromCodePoint(parseInt(e.slice(2), 16)) : String.fromCodePoint(Number(e.slice(1))))));
+const entitaetenText = (t) => t.replace(/&(#x[0-9a-f]+|#[0-9]+|amp|lt|gt|quot|apos);/gi, (m, e) => {
+  const n = e.toLowerCase(), k = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" };
+  if (k[n]) return k[n];
+  const z = n[1] === 'x' ? parseInt(n.slice(2), 16) : parseInt(n.slice(1), 10);
+  return Number.isInteger(z) && z >= 0 && z <= 0x10ffff ? String.fromCodePoint(z) : m;
+});
 function titelLaenge(html) {
   const suffix = ' | Copilot Dojo';
   const suffixLang = ' | Power Platform Dojo, Copilot';
@@ -166,7 +172,7 @@ function titelLaenge(html) {
   if (basis === null) return html;
   const gesamt = entitaetenText(basis + suffix).length, kurz = entitaetenText(basis).length;
   let neu = basis + suffix;
-  if (gesamt > 60 && kurz >= 30 && kurz <= 60) neu = basis;
+  if (gesamt > 60) neu = basis;
   else if (gesamt < 30 && kurz + entitaetenText(suffixLang).length <= 60) neu = basis + suffixLang;
   const alte = [aktuell, basis + suffix, basis + suffixLang];
   let aus = html.replace(`<title>${aktuell}</title>`, `<title>${neu}</title>`);
@@ -695,7 +701,7 @@ function rahmenKontext(rel, seite, extra = {}, absolut = false) {
     r, ra, feed_titel: T("{0}: neue Techniken", SITE_VOLL), css_extra: cssExtra, js_extra: '', vorschau_banner: '', sprach_weiche: weiche, texte_js: texteJs,
     ...sprachKontext(rel, absolut, seite !== '404'),
     tusch_marke: tusch('ruhe'), tusch_fuss: tusch('ruhe'), wortmarke: wortmarke(),
-    icon_suche: ICONS.suche, icon_zufall: ICONS.zufall, icon_sonne: ICONS.sonne, icon_mond: ICONS.mond, icon_menue: ICONS.menue, icon_zu: ICONS.zu,
+    icon_suche: ICONS.suche, icon_zufall: ICONS.zufall, icon_sonne: ICONS.sonne, icon_mond: ICONS.mond, icon_menue: ICONS.menue, icon_zu: ICONS.zu, icon_loeschen: ICONS.loeschen,
     cur_techniken: cur('techniken'), cur_pruefung: cur('pruefung'), cur_gratis: cur('gratis'), cur_dojo: cur('dojo'),
     mailto_beitrag: mailtoBeitrag, markenliste: markenText(),
     newsletter_footer: NEWSLETTER_URL('footer'), academy_footer: ACADEMY_URL('footer'), academy_dojo: ACADEMY_DOJO_URL('footer'),

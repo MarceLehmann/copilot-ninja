@@ -736,7 +736,7 @@ Grenzen:
 - Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen.
 - Ein Chatverlauf zeigt einen Fall. Prüf den Agent mit anderen Fällen, bevor du ihn teilst.
 
-Quellen: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
+Quellen: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## Nr. 15 Der Torwächter: Agent, der nur deine Website kennt
 
@@ -782,7 +782,7 @@ Grenzen:
 - Steht auf der Website etwas Veraltetes, gibt der Agent es weiter.
 - Die Menünamen stammen aus der englischen Dokumentation. In deiner Oberfläche können sie anders heissen.
 
-Quellen: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience)
+Quellen: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience)
 
 ## Nr. 16 Der Sparringspartner: Agent für Gesprächstraining
 
@@ -824,7 +824,7 @@ Grenzen:
 - Ein geübtes Gespräch ist kein echtes. Der Agent kennt deinen Kunden nicht.
 - Ohne Zusatzkosten bleibt der Agent laut Microsoft, solange er nur auf Anweisungen und öffentlichen Websites beruht. Ob Agent Builder bei dir verfügbar ist, hängt laut dem Admin-Leitfaden zu Agents von einer Microsoft-365-Copilot-Lizenz oder von Pay-as-you-go für Copilot Studio ab.
 
-Quellen: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents)
+Quellen: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents)
 
 ## Nr. 17 Die Schriftprobe: Agent-Anweisungen vor dem Test prüfen
 
@@ -865,7 +865,7 @@ Grenzen:
 - Die Prüfung liest nur Text. Ob der Agent sich danach richtig verhält, zeigt erst der Test.
 - Interne Namen und Kontaktangaben in den Anweisungen nur einfügen, wenn eure internen Regeln das erlauben.
 
-Quellen: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
+Quellen: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## Agent, der Anfragen sortiert und übergibt
 
@@ -920,7 +920,7 @@ Grenzen:
 - Teste mit unklaren und unvollständigen Anfragen, nicht nur mit dem Idealfall.
 - In der Testversion prüfst du im Testchat. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.
 
-Quellen: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Quellen: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## Nr. 18 Die Gürtelprüfung: 20 Testfragen für deinen Agent
 
@@ -1061,7 +1061,7 @@ Grenzen:
 - Wer den veröffentlichten Agent nutzt, verbraucht Copilot Credits (Nutzer mit Microsoft-Copilot-Lizenz in Microsoft 365 laut Ratentabelle keine). Eine Generative Answer zählt laut Microsoft 2 Copilot Credits, Tenant Graph Grounding 10. Die Raten können sich ändern.
 - In der Testversion von Copilot Studio kannst du bauen und im Testchat prüfen, aber nicht veröffentlichen.
 
-Quellen: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Quellen: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## Nr. 21 Der Dolmetscher: Power-Automate-Ausdrücke mit Erklärung
 
@@ -2016,7 +2016,7 @@ Limites :
 - Les noms de menu viennent de la documentation Microsoft. Dans ton interface, ils peuvent s'appeler autrement.
 - Un historique de chat montre un cas. Essaie l'agent avec d'autres cas avant de le partager.
 
-Sources : Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/plugins/agent-builder-build-agents) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions)
+Sources : Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/copilot-studio-experience) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-build-agents) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## N° 15 Le gardien de la porte : Un agent qui ne connaît que ton site web
 
@@ -2062,7 +2062,7 @@ Limites :
 - Si le site web contient quelque chose de périmé, l'agent le transmet.
 - Les noms de menu viennent de la documentation Microsoft. Dans ton interface, ils peuvent s'appeler autrement.
 
-Sources : Microsoft Learn : Ajouter des sources de connaissances à un agent dans Agent Builder (https://learn.microsoft.com/fr-fr/plugins/agent-builder-add-knowledge) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience)
+Sources : Microsoft Learn : Ajouter des sources de connaissances à un agent dans Agent Builder (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-add-knowledge) ; Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Choisissez entre Agent Builder et Copilot Studio pour créer votre agent (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/copilot-studio-experience)
 
 ## N° 16 Le partenaire d'entraînement : Un agent pour s'entraîner aux entretiens
 
@@ -2104,7 +2104,7 @@ Limites :
 - Un entretien répété n'est pas un vrai entretien. L'agent ne connaît pas ton client.
 - Sans frais supplémentaires, l'agent le reste selon Microsoft tant qu'il repose seulement sur des instructions et des sites web publics. Savoir si Agent Builder est disponible chez toi dépend, d'après le guide d'administration sur les agents, d'une licence Microsoft 365 Copilot ou du paiement à l'utilisation pour Copilot Studio.
 
-Sources : Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/plugins/agent-builder-build-agents)
+Sources : Microsoft Learn : Acheter et gérer des agents dans Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/agents) ; Microsoft Learn : Créer des agents dans Agent Builder (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/agent-builder-build-agents)
 
 ## N° 17 L'essai d'écriture : Vérifier les instructions d'agent avant le test
 
@@ -2145,7 +2145,7 @@ Limites :
 - La vérification ne lit que du texte. Seul le test montre si l'agent se comporte ensuite correctement.
 - N'insère des noms internes et des coordonnées dans les instructions que si vos règles internes l'autorisent.
 
-Sources : Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions)
+Sources : Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## Agent qui trie les demandes et les transmet
 
@@ -2200,7 +2200,7 @@ Limites :
 - Teste avec des demandes floues et incomplètes, pas seulement avec le cas idéal.
 - Dans la version d'évaluation, tu vérifies dans le volet de test. La publication demande de la capacité (crédits Copilot ou paiement à l'usage) et les autorisations de création.
 
-Sources : Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions) ; Microsoft Learn : Configurer des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Tester ton agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-test-bot) ; Microsoft Learn : Obtenir l'accès au harnais standard de Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources : Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions) ; Microsoft Learn : Configurer des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Tester ton agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-test-bot) ; Microsoft Learn : Obtenir l'accès au harnais standard de Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N° 18 L'examen de ceinture : 20 questions de test pour ton agent
 
@@ -2341,7 +2341,7 @@ Limites :
 - Qui utilise l'agent publié consomme des crédits Copilot (les utilisateurs avec une licence Microsoft Copilot dans Microsoft 365 n'en consomment pas selon le tableau des taux). Une réponse générative compte selon Microsoft 2 crédits Copilot, l'ancrage dans le graphe du locataire 10. Les taux peuvent changer.
 - Dans la version d'évaluation de Copilot Studio, tu peux construire et vérifier dans le volet de test, mais pas publier.
 
-Sources : Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/plugins/declarative-agent-instructions) ; Microsoft Learn : Taux de facturation et gestion (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management) ; Microsoft Learn : Obtenir l'accès à Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources : Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions) ; Microsoft Learn : Taux de facturation et gestion (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management) ; Microsoft Learn : Obtenir l'accès à Copilot Studio (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N° 21 L'interprète : Des expressions Power Automate avec explication
 
@@ -3296,7 +3296,7 @@ Limiti:
 - I nomi dei menu provengono dalla documentazione in inglese. Nella tua interfaccia possono avere un altro nome.
 - Una cronologia di chat mostra un solo caso. Prova l'agente con altri casi prima di condividerlo.
 
-Fonti: Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/plugins/copilot-studio-experience); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/plugins/agent-builder-build-agents); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions)
+Fonti: Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/copilot-studio-experience); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/agent-builder-build-agents); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## N. 15 Il guardiano: Agente che conosce solo il tuo sito web
 
@@ -3342,7 +3342,7 @@ Limiti:
 - Se sul sito web c'è qualcosa di superato, l'agente lo riporta.
 - I nomi dei menu provengono dalla documentazione in inglese. Nella tua interfaccia possono avere un altro nome.
 
-Fonti: Microsoft Learn: Aggiungere fonti di conoscenza a un agente in Agent Builder (https://learn.microsoft.com/it-it/plugins/agent-builder-add-knowledge); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/plugins/copilot-studio-experience)
+Fonti: Microsoft Learn: Aggiungere fonti di conoscenza a un agente in Agent Builder (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/agent-builder-add-knowledge); Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Scegliere tra Agent Builder e Copilot Studio per creare il tuo agente (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/copilot-studio-experience)
 
 ## N. 16 Lo sparring partner: Agente per l'allenamento alla conversazione
 
@@ -3384,7 +3384,7 @@ Limiti:
 - Un colloquio provato non è un colloquio vero. L'agente non conosce il tuo cliente.
 - Secondo Microsoft l'agente resta senza costi aggiuntivi finché si basa solo su istruzioni e siti web pubblici. Secondo la guida per gli amministratori sugli agenti, la disponibilità di Agent Builder dipende da una licenza Microsoft 365 Copilot oppure dal pay-as-you-go per Copilot Studio.
 
-Fonti: Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/plugins/agent-builder-build-agents)
+Fonti: Microsoft Learn: Acquistare e gestire agenti in Copilot Chat (https://learn.microsoft.com/it-it/copilot/agents); Microsoft Learn: Creare agenti in Agent Builder (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/agent-builder-build-agents)
 
 ## N. 17 Il controllo della pergamena: Controlla le istruzioni dell'agente prima del test
 
@@ -3425,7 +3425,7 @@ Limiti:
 - Il controllo legge solo testo. Se l'agente poi si comporta correttamente lo mostra solo il test.
 - Inserisci nomi interni e recapiti nelle istruzioni solo se le vostre regole interne lo consentono.
 
-Fonti: Microsoft Learn: Scrivere istruzioni per l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions)
+Fonti: Microsoft Learn: Scrivere istruzioni per l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## Agente che smista le richieste e le passa a una persona
 
@@ -3480,7 +3480,7 @@ Limiti:
 - Testa con richieste poco chiare e incomplete, non solo con il caso ideale.
 - Nella versione di valutazione verifichi nel riquadro di test. La pubblicazione richiede capacità (crediti Copilot o pay-as-you-go) e autorizzazione di autore.
 
-Fonti: Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere le istruzioni dell'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Testare l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Ottenere l'accesso all'harness standard di Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Fonti: Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere le istruzioni dell'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Testare l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Ottenere l'accesso all'harness standard di Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N. 18 La prova di cintura: 20 domande di test per il tuo agente
 
@@ -3621,7 +3621,7 @@ Limiti:
 - Chi usa l'agente pubblicato consuma crediti Copilot (secondo la tabella delle tariffe, gli utenti con licenza Microsoft Copilot in Microsoft 365 no). Secondo Microsoft una risposta generativa vale 2 crediti Copilot, il Tenant Graph Grounding 10. Le tariffe possono cambiare.
 - Nella versione di valutazione di Copilot Studio puoi creare e verificare nel riquadro di test, ma non pubblicare.
 
-Fonti: Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/plugins/declarative-agent-instructions); Microsoft Learn: Gestione e tariffe di fatturazione (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Ottenere l'accesso a Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Fonti: Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Gestione e tariffe di fatturazione (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Ottenere l'accesso a Copilot Studio (https://learn.microsoft.com/it-it/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## N. 21 L'interprete: Espressioni di Power Automate con spiegazione
 
@@ -4576,7 +4576,7 @@ Limits:
 - The menu names come from the English documentation. Your interface may name them differently.
 - One chat history shows one case. Check the agent with other cases before you share it.
 
-Sources: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
+Sources: Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## No. 15 The Gatekeeper: Agent that only knows your website
 
@@ -4622,7 +4622,7 @@ Limits:
 - If something on the website is outdated, the agent passes it on.
 - The menu names come from the English documentation. Your interface may name them differently.
 
-Sources: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/plugins/copilot-studio-experience)
+Sources: Microsoft Learn: Add knowledge sources to an agent in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge); Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience)
 
 ## No. 16 The Sparring Partner: Agent for conversation practice
 
@@ -4664,7 +4664,7 @@ Limits:
 - A practiced conversation is not a real one. The agent does not know your customer.
 - According to Microsoft, the agent stays free of additional cost as long as it only relies on instructions and public websites. Whether Agent Builder is available to you depends, according to the agents admin guide, on a Microsoft 365 Copilot license or on pay-as-you-go for Copilot Studio.
 
-Sources: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents)
+Sources: Microsoft Learn: Agents for Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/agents); Microsoft Learn: Build agents in Agent Builder (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents)
 
 ## No. 17 The Scroll Check: Check agent instructions before testing
 
@@ -4705,7 +4705,7 @@ Limits:
 - The check only reads text. Whether the agent then behaves correctly only shows in testing.
 - Only include internal names and contact details in the instructions if your internal rules allow it.
 
-Sources: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions)
+Sources: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
 ## Agent that sorts and hands over requests
 
@@ -4760,7 +4760,7 @@ Limits:
 - Check with unclear and incomplete requests, not only the ideal case.
 - In the trial, check in the test chat. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.
 
-Sources: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources: Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Test your agent (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## No. 18 The Belt Exam: 20 test questions for your agent
 
@@ -4901,7 +4901,7 @@ Limits:
 - Using the published agent consumes Copilot Credits (none for users with a Microsoft Copilot license in Microsoft 365, according to the rate table). According to Microsoft, a Generative Answer counts 2 Copilot Credits, Tenant Graph Grounding 10. The rates can change.
 - In the Copilot Studio trial you can build and check in the test chat, but not publish.
 
-Sources: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+Sources: Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions); Microsoft Learn: Billing rates and management (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management); Microsoft Learn: Get access to Copilot Studio Standard harness (https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 ## No. 21 The Interpreter: Power Automate expressions with explanations
 

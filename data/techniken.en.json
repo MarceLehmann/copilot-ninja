@@ -1172,11 +1172,11 @@
           "titel": "Microsoft Learn: Agents for Microsoft Copilot Chat"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents",
           "titel": "Microsoft Learn: Build agents in Agent Builder"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions",
           "titel": "Microsoft Learn: Write effective instructions for declarative agents"
         }
       ],
@@ -1239,7 +1239,7 @@
           "titel": "Microsoft Learn: Agents for Microsoft Copilot Chat"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/plugins/copilot-studio-experience",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/copilot-studio-experience",
           "titel": "Microsoft Learn: Choose between Agent Builder and Copilot Studio to build your agent"
         }
       ],
@@ -1297,7 +1297,7 @@
       "quelle_titel": "Microsoft Learn: Agents for Microsoft Copilot Chat",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/en-us/plugins/agent-builder-build-agents",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents",
           "titel": "Microsoft Learn: Build agents in Agent Builder"
         }
       ],
@@ -1356,7 +1356,7 @@
           "titel": "Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio)"
         },
         {
-          "url": "https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions",
           "titel": "Microsoft Learn: Write effective instructions for declarative agents"
         }
       ],
@@ -1533,7 +1533,7 @@
       "quelle_titel": "Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio)",
       "weitere_quellen": [
         {
-          "url": "https://learn.microsoft.com/en-us/plugins/declarative-agent-instructions",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions",
           "titel": "Microsoft Learn: Write effective instructions for declarative agents"
         },
         {
