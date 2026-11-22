@@ -17,7 +17,7 @@ Kurzfakten:
 
 # Deutsch
 
-## Notizen in ein Protokoll mit Aufgaben verwandeln: Notizen in ein Protokoll mit Aufgaben verwandeln
+## Notizen in ein Protokoll mit Aufgaben verwandeln
 
 URL: https://copilot.ninja/techniken/notizen-zu-protokoll/
 Gürtel: Weisser Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat. Stand 15.10.2026.
@@ -212,7 +212,7 @@ Grenzen:
 
 Quellen: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
-## Antwortentwurf auf eine schwierige Kundenmail: Antwortentwurf auf eine schwierige Kundenmail
+## Antwortentwurf auf eine schwierige Kundenmail
 
 URL: https://copilot.ninja/techniken/antwort-auf-kundenmail/
 Gürtel: Gelber Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat. Stand 15.10.2026.
@@ -407,7 +407,7 @@ Grenzen:
 
 Quellen: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
 
-## Eine Tabelle auf Auffälligkeiten prüfen: Eine Tabelle auf Auffälligkeiten prüfen
+## Eine Tabelle auf Auffälligkeiten prüfen
 
 URL: https://copilot.ninja/techniken/tabelle-pruefen/
 Gürtel: Oranger Gürtel. Zugang: Ohne Zusatzlizenz in Microsoft Copilot Chat, mit Datei-Upload. Stand 15.10.2026.
@@ -647,7 +647,7 @@ Grenzen:
 
 Quellen: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Write an effective prompt (Lerneinheit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agent für interne Anleitungen: Agent für interne Anleitungen
+## Agent für interne Anleitungen
 
 URL: https://copilot.ninja/techniken/agent-interne-anleitungen/
 Gürtel: Grüner Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
@@ -867,7 +867,7 @@ Grenzen:
 
 Quellen: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
-## Agent, der Anfragen sortiert und übergibt: Agent, der Anfragen sortiert und übergibt
+## Agent, der Anfragen sortiert und übergibt
 
 URL: https://copilot.ninja/techniken/agent-anfragen-sortieren/
 Gürtel: Blauer Gürtel. Zugang: Copilot Studio: in der Testversion bauen und prüfen. Veröffentlichen geht mit Kapazität (Credits oder Pay-as-you-go) und Autorenberechtigung.. Stand 15.10.2026.
@@ -1297,7 +1297,7 @@ Quellen: Microsoft Learn: Test your agent (Copilot Studio) (https://learn.micros
 
 # Français
 
-## Transformer des notes en procès-verbal avec des tâches : Transformer des notes en procès-verbal avec des tâches
+## Transformer des notes en procès-verbal avec des tâches
 
 URL : https://copilot.ninja/fr/techniken/notizen-zu-protokoll/
 Ceinture : Ceinture blanche. Accès : Sans licence supplémentaire dans Microsoft Copilot Chat. État au 15 octobre 2026.
@@ -1492,7 +1492,7 @@ Limites :
 
 Sources : Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview) ; Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview)
 
-## Brouillon de réponse à un e-mail client difficile : Brouillon de réponse à un e-mail client difficile
+## Brouillon de réponse à un e-mail client difficile
 
 URL : https://copilot.ninja/fr/techniken/antwort-auf-kundenmail/
 Ceinture : Ceinture jaune. Accès : Sans licence supplémentaire dans Microsoft Copilot Chat. État au 15 octobre 2026.
@@ -1687,7 +1687,7 @@ Limites :
 
 Sources : Microsoft Learn : Qu'est-ce que Microsoft 365 Copilot ? (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview) ; Microsoft Learn : Vue d'ensemble de Microsoft Copilot Chat (https://learn.microsoft.com/fr-fr/copilot/overview)
 
-## Vérifier un tableau pour repérer les anomalies : Vérifier un tableau pour repérer les anomalies
+## Vérifier un tableau pour repérer les anomalies
 
 URL : https://copilot.ninja/fr/techniken/tabelle-pruefen/
 Ceinture : Ceinture orange. Accès : Sans licence supplémentaire dans Microsoft Copilot Chat, avec import de fichier. État au 15 octobre 2026.
@@ -1927,7 +1927,7 @@ Limites :
 
 Sources : Microsoft Learn : Qu'est-ce que Microsoft Copilot ? (https://learn.microsoft.com/fr-fr/copilot/faq) ; Microsoft Learn : Écrire une invite efficace (unité de formation) (https://learn.microsoft.com/fr-fr/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agent pour les guides internes : Agent pour les guides internes
+## Agent pour les guides internes
 
 URL : https://copilot.ninja/fr/techniken/agent-interne-anleitungen/
 Ceinture : Ceinture verte. Accès : Copilot Studio : construction et vérification dans la version d'évaluation. La publication demande de la capacité (crédits Copilot ou paiement à l'usage) et les autorisations de création.. État au 15 octobre 2026.
@@ -2147,7 +2147,7 @@ Limites :
 
 Sources : Microsoft Learn : Écrire des instructions d'agent (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/authoring-instructions) ; Microsoft Learn : Configurez des instructions de haute qualité pour l'orchestration générative (Copilot Studio) (https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-mode-guidance) ; Microsoft Learn : Rédiger des instructions efficaces pour les agents déclaratifs (https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
-## Agent qui trie les demandes et les transmet : Agent qui trie les demandes et les transmet
+## Agent qui trie les demandes et les transmet
 
 URL : https://copilot.ninja/fr/techniken/agent-anfragen-sortieren/
 Ceinture : Ceinture bleue. Accès : Copilot Studio : construction et vérification dans la version d'évaluation. La publication demande de la capacité (crédits Copilot ou paiement à l'usage) et les autorisations de création.. État au 15 octobre 2026.
@@ -2577,7 +2577,7 @@ Sources : Microsoft Learn : Tester votre assistant (Copilot Studio) (https://l
 
 # Italiano
 
-## Trasformare gli appunti in un verbale con i compiti: Trasformare gli appunti in un verbale con i compiti
+## Trasformare gli appunti in un verbale con i compiti
 
 URL: https://copilot.ninja/it/techniken/notizen-zu-protokoll/
 Cintura: Cintura bianca. Accesso: Senza licenza aggiuntiva in Microsoft Copilot Chat. Aggiornato al 15 ottobre 2026.
@@ -2772,7 +2772,7 @@ Limiti:
 
 Fonti: Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview); Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/microsoft-365/copilot/microsoft-365-copilot-overview)
 
-## Bozza di risposta a una mail difficile di un cliente: Bozza di risposta a una mail difficile di un cliente
+## Bozza di risposta a una mail difficile di un cliente
 
 URL: https://copilot.ninja/it/techniken/antwort-auf-kundenmail/
 Cintura: Cintura gialla. Accesso: Senza licenza aggiuntiva in Microsoft Copilot Chat. Aggiornato al 15 ottobre 2026.
@@ -2967,7 +2967,7 @@ Limiti:
 
 Fonti: Microsoft Learn: Che cos'è Microsoft 365 Copilot? (https://learn.microsoft.com/it-it/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Panoramica di Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/overview)
 
-## Controllare una tabella alla ricerca di anomalie: Controllare una tabella alla ricerca di anomalie
+## Controllare una tabella alla ricerca di anomalie
 
 URL: https://copilot.ninja/it/techniken/tabelle-pruefen/
 Cintura: Cintura arancione. Accesso: Senza licenza aggiuntiva in Microsoft Copilot Chat, con caricamento di file. Aggiornato al 15 ottobre 2026.
@@ -3207,7 +3207,7 @@ Limiti:
 
 Fonti: Microsoft Learn: Domande frequenti su Microsoft Copilot Chat (https://learn.microsoft.com/it-it/copilot/faq); Microsoft Learn: Scrivi una richiesta efficace (unità di apprendimento) (https://learn.microsoft.com/it-it/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agente per le istruzioni interne: Agente per le istruzioni interne
+## Agente per le istruzioni interne
 
 URL: https://copilot.ninja/it/techniken/agent-interne-anleitungen/
 Cintura: Cintura verde. Accesso: Copilot Studio: crea e verifica nella versione di valutazione. La pubblicazione richiede capacità (crediti Copilot o pay-as-you-go) e autorizzazione di autore.. Aggiornato al 15 ottobre 2026.
@@ -3427,7 +3427,7 @@ Limiti:
 
 Fonti: Microsoft Learn: Scrivere istruzioni per l'agente (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configurare istruzioni di alta qualità per l'orchestrazione generativa (Copilot Studio) (https://learn.microsoft.com/it-it/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Scrivere istruzioni efficaci per gli agenti dichiarativi (https://learn.microsoft.com/it-it/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
-## Agente che smista le richieste e le passa a una persona: Agente che smista le richieste e le passa a una persona
+## Agente che smista le richieste e le passa a una persona
 
 URL: https://copilot.ninja/it/techniken/agent-anfragen-sortieren/
 Cintura: Cintura blu. Accesso: Copilot Studio: crea e verifica nella versione di valutazione. La pubblicazione richiede capacità (crediti Copilot o pay-as-you-go) e autorizzazione di autore.. Aggiornato al 15 ottobre 2026.
@@ -3857,7 +3857,7 @@ Fonti: Microsoft Learn: Testa il tuo agente (Copilot Studio) (https://learn.micr
 
 # English
 
-## Turn notes into minutes with action items: Turn notes into minutes with action items
+## Turn notes into minutes with action items
 
 URL: https://copilot.ninja/en/techniken/notizen-zu-protokoll/
 Belt: White belt. Access: No add-on license, in Microsoft Copilot Chat. As of October 15, 2026.
@@ -4052,7 +4052,7 @@ Limits:
 
 Sources: Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview); Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview)
 
-## Draft a reply to a difficult customer email: Draft a reply to a difficult customer email
+## Draft a reply to a difficult customer email
 
 URL: https://copilot.ninja/en/techniken/antwort-auf-kundenmail/
 Belt: Yellow belt. Access: No add-on license, in Microsoft Copilot Chat. As of October 15, 2026.
@@ -4247,7 +4247,7 @@ Limits:
 
 Sources: Microsoft Learn: What is Microsoft 365 Copilot? (https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview); Microsoft Learn: Overview of Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/overview)
 
-## Check a table for anomalies: Check a table for anomalies
+## Check a table for anomalies
 
 URL: https://copilot.ninja/en/techniken/tabelle-pruefen/
 Belt: Orange belt. Access: No add-on license, in Microsoft Copilot Chat with file upload. As of October 15, 2026.
@@ -4487,7 +4487,7 @@ Limits:
 
 Sources: Microsoft Learn: Frequently asked questions about Microsoft Copilot Chat (https://learn.microsoft.com/en-us/copilot/faq); Microsoft Learn: Write an effective prompt (training unit) (https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/2-write-effective-prompt)
 
-## Agent for internal guides: Agent for internal guides
+## Agent for internal guides
 
 URL: https://copilot.ninja/en/techniken/agent-interne-anleitungen/
 Belt: Green belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
@@ -4707,7 +4707,7 @@ Limits:
 
 Sources: Microsoft Learn: Write agent instructions (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-instructions); Microsoft Learn: Configure high-quality instructions for generative orchestration (Copilot Studio) (https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-mode-guidance); Microsoft Learn: Write effective instructions for declarative agents (https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions)
 
-## Agent that sorts and hands over requests: Agent that sorts and hands over requests
+## Agent that sorts and hands over requests
 
 URL: https://copilot.ninja/en/techniken/agent-anfragen-sortieren/
 Belt: Blue belt. Access: Copilot Studio: build and check in the trial. Publishing needs capacity (Copilot Credits or pay-as-you-go) and author permission.. As of October 15, 2026.
