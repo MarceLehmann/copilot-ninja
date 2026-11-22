@@ -493,6 +493,7 @@ a.chip { text-decoration: none; }
 @keyframes suche-auf { from { opacity: 0; transform: translateY(-8px); } }
 .suche__kopf { display: flex; gap: .5rem; align-items: center; padding: .75rem; border-bottom: 1px solid var(--line); }
 .suche__kopf label { flex: 1; }
+.suche__kopf [hidden] { display: none; }
 .suche__treffer { list-style: none; margin: 0; padding: .5rem; overflow-y: auto; max-height: 26rem; }
 .suche__treffer a { display: grid; grid-template-columns: 3ch 1fr; gap: .25rem .75rem; padding: .6rem .75rem; border-radius: var(--r-md); color: var(--ink); text-decoration: none; }
 .suche__treffer a small { grid-column: 2; color: var(--ink-muted); }

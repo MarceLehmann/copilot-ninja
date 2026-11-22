@@ -70,7 +70,7 @@
       "antworten": ["Ja, alles ist gleich geschützt.", "Nein, sie laufen separat über Bing mit eigenen Datenregeln.", "Websuche gibt es in Copilot Chat nicht."],
       "richtig": 1,
       "aufloesung": "Laut Microsoft gilt Enterprise Data Protection für Prompts und Antworten. Websuchanfragen gehen an den Bing-Dienst, laufen unter eigenen Datenregeln und sind laut Learn nicht vom Data Protection Addendum abgedeckt. Kundennamen und interne Zahlen gehören deshalb nicht in eine Recherchefrage.",
-      "quelle": { "url": "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection", "titel": "Microsoft Learn, Enterprise Data Protection" },
+      "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection", "titel": "Microsoft Learn, Enterprise Data Protection" },
       "technik": null
     },
     {
@@ -82,7 +82,7 @@
       "antworten": ["Ja, Datei-Upload ist enthalten, mit Limits ohne veröffentlichte Zahlen.", "Nein, nur mit Lizenz.", "Nur Bilder."],
       "richtig": 0,
       "aufloesung": "Laut Microsoft gehört «Dateien hochladen und analysieren» zu Copilot Chat ohne Zusatzlizenz. Für den Dateiupload gelten Limits, konkrete Zahlen nennt Learn auf dieser Seite nicht.",
-      "quelle": { "url": "https://learn.microsoft.com/en-us/copilot/plan/copilot-overview", "titel": "Microsoft Learn, Copilot Chat Overview" },
+      "quelle": { "url": "https://learn.microsoft.com/en-us/copilot/overview", "titel": "Microsoft Learn, Copilot Chat Overview" },
       "technik": null
     },
     {

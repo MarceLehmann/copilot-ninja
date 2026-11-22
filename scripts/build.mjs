@@ -148,18 +148,30 @@ function pad2(n) { return String(n).padStart(2, '0'); }
 function tageZwischen(a, b) { return Math.round((Date.parse(b + 'T00:00:00Z') - Date.parse(a + 'T00:00:00Z')) / 864e5); }
 // Sprache einer Ausgabedatei aus dem Pfad (fr/..., assets/data/fr/..., assets/img/karten/fr/...)
 function spracheVon(rel) { const m = rel.replace(/\\/g, '/').match(/^(?:assets\/(?:data|img\/karten)\/)?([a-z]{2})\//); return m && SP[m[1]] ? m[1] : 'de'; }
-// Seitentitel-Laenge fuer Suchmaschinen (30 bis 60 Zeichen): Das Suffix « | Copilot Dojo» entfaellt, wenn der Titel sonst
-// laenger als 60 Zeichen wird, und wird bei sehr kurzen Titeln (Rechtstexte) zum vollen Namen verlaengert.
-const TITEL_SUFFIX = ' | Copilot Dojo';
-const TITEL_SUFFIX_LANG = ' | Power Platform Dojo, Copilot';
+// Seitentitel-Laenge fuer Suchmaschinen (30 bis 60 Zeichen), gemessen am Text ohne HTML-Entitaeten: Das Suffix « | Copilot Dojo»
+// entfaellt, wenn der Titel sonst laenger als 60 Zeichen wird, und wird bei sehr kurzen Titeln (Rechtstexte) zum vollen Namen
+// verlaengert. og:title und twitter:title, die den Seitentitel unveraendert uebernehmen, bekommen denselben Wert.
+const entitaetenText = (t) => t.replace(/&(#x?[0-9a-f]+|amp|lt|gt|quot|apos);/gi, (m, e) => ({ amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" }[e.toLowerCase()] || (e[1] === 'x' || e[1] === 'X' ? String.fromCodePoint(parseInt(e.slice(2), 16)) : String.fromCodePoint(Number(e.slice(1))))));
 function titelLaenge(html) {
-  return html.replace(/<title>([^<]*)<\/title>/, (m, t) => {
-    if (!t.endsWith(TITEL_SUFFIX)) return m;
-    const basis = t.slice(0, -TITEL_SUFFIX.length);
-    if (t.length > 60 && basis.length >= 30 && basis.length <= 60) return `<title>${basis}</title>`;
-    if (t.length < 30 && (basis + TITEL_SUFFIX_LANG).length <= 60) return `<title>${basis}${TITEL_SUFFIX_LANG}</title>`;
-    return m;
-  });
+  const suffix = ' | Copilot Dojo';
+  const suffixLang = ' | Power Platform Dojo, Copilot';
+  const m = html.match(/<title>([^<]*)<\/title>/);
+  if (!m) return html;
+  const aktuell = m[1];
+  // Handseiten sind zugleich Quelle und Ausgabe: den Titel auf die Grundform mit Suffix zurueckfuehren, dann neu entscheiden
+  let basis = null;
+  if (aktuell.endsWith(suffix)) basis = aktuell.slice(0, -suffix.length);
+  else if (aktuell.endsWith(suffixLang)) basis = aktuell.slice(0, -suffixLang.length);
+  else if (html.includes(`content="${aktuell}${suffix}"`)) basis = aktuell;
+  if (basis === null) return html;
+  const gesamt = entitaetenText(basis + suffix).length, kurz = entitaetenText(basis).length;
+  let neu = basis + suffix;
+  if (gesamt > 60 && kurz >= 30 && kurz <= 60) neu = basis;
+  else if (gesamt < 30 && kurz + entitaetenText(suffixLang).length <= 60) neu = basis + suffixLang;
+  const alte = [aktuell, basis + suffix, basis + suffixLang];
+  let aus = html.replace(`<title>${aktuell}</title>`, `<title>${neu}</title>`);
+  for (const o of alte) aus = aus.split(`<meta property="og:title" content="${o}">`).join(`<meta property="og:title" content="${neu}">`).split(`<meta name="twitter:title" content="${o}">`).join(`<meta name="twitter:title" content="${neu}">`);
+  return aus;
 }
 function schreibe(rel, inhalt) {
   if (MODUS === 'pruefen') return;
@@ -659,12 +671,12 @@ function sprachKontext(rel, absolut, mitAlternates) {
     const href = `${ra}${SP[sp].pfad}${pfad}` || './';
     return `<li><a href="${href}" hreflang="${sp}" lang="${SP[sp].html_lang}" data-sprache-wahl="${sp}"${sp === L ? ' aria-current="true"' : ''}><span class="sprachen__kurz" aria-hidden="true">${SP[sp].kurz}</span> ${SP[sp].name}</a></li>`;
   }).join('');
-  const link = `<details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="${esc(T('Sprache wählen, aktuell: {0}', SP[L].name))}"><span aria-hidden="true">${SP[L].kurz}</span></summary><ul class="sprachen__liste">${eintraege}</ul></details>`;
+  const link = `<details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="${esc(SP[L].kurz + ', ' + T('Sprache wählen, aktuell: {0}', SP[L].name))}">${SP[L].kurz}</summary><ul class="sprachen__liste">${eintraege}</ul></details>`;
   const alternates = mitAlternates ? [...SPRACHEN.map(sp => `<link rel="alternate" hreflang="${sp}" href="${BASE_URL}${SP[sp].pfad}${pfad}">`), `<link rel="alternate" hreflang="x-default" href="${BASE_URL}${pfad}">`].join('\n') + '\n' : '';
   // Sichtbare Links auf die Entsprechung dieser Seite in den anderen Sprachen (Fusszeile, ohne JS und ohne aufgeklapptes Menue)
   const FUSS_LABEL = { de: 'Diese Seite in anderen Sprachen:', fr: "Cette page dans d'autres langues:", it: 'Questa pagina in altre lingue:', en: 'This page in other languages:' };
-  const fussLinks = ANZEIGE.filter(sp => sp !== L).map(sp => `<a href="${ra}${SP[sp].pfad}${pfad}" hreflang="${sp}" lang="${SP[sp].html_lang}" data-sprache-wahl="${sp}">${SP[sp].name}</a>`).join(', ');
-  const sprachen_fuss = `<div class="fuss__dojos fuss__sprachen">
+  const fussLinks = ANZEIGE.filter(sp => sp !== L).map(sp => `<a href="${ra}${SP[sp].pfad}${pfad}" hreflang="${sp}" lang="${SP[sp].html_lang}">${SP[sp].name}</a>`).join(', ');
+  const sprachen_fuss = !mitAlternates ? '' : `<div class="fuss__dojos fuss__sprachen">
       <p>${FUSS_LABEL[L] || FUSS_LABEL.de} ${fussLinks}</p>
     </div>`;
   return { sprachwahl: link, alternates, sprachen_fuss };

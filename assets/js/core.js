@@ -138,7 +138,7 @@
   function suche() {
     var dlg = d.getElementById('suche');
     if (!dlg || typeof dlg.showModal !== 'function') return;
-    var feld = dlg.querySelector('input'), liste = dlg.querySelector('[role="listbox"]'), leer = dlg.querySelector('.suche__leer');
+    var feld = dlg.querySelector('input'), leeren = dlg.querySelector('[data-suche-leeren]'), liste = dlg.querySelector('[role="listbox"]'), leer = dlg.querySelector('.suche__leer');
     var daten = null, aktiv = -1, zuletzt = null;
     function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
     function zeigen(q) {
@@ -159,6 +159,7 @@
         ti.textContent = t.titel; kl.textContent = t.klartitel;
         a.appendChild(nr); a.appendChild(ti); a.appendChild(kl); li.appendChild(a); liste.appendChild(li);
       });
+      if (leeren) leeren.hidden = !feld.value;
       leer.hidden = treffer.length > 0;
       feld.setAttribute('aria-expanded', String(treffer.length > 0));
     }
@@ -185,6 +186,7 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
     alle('[data-suche-zu]', dlg).forEach(function (k) { k.addEventListener('click', function () { dlg.close(); }); });
     feld.addEventListener('input', function () { zeigen(feld.value); });
+    if (leeren) leeren.addEventListener('click', function () { feld.value = ''; zeigen(''); feld.focus(); });
     feld.addEventListener('keydown', function (e) {
       var opt = alle('[role="option"]', liste);
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {

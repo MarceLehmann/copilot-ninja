@@ -57,8 +57,8 @@
       </ul>
     </nav>
     <div class="kopf__aktionen">
-      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Choisir la langue, actuelle : Français"><span aria-hidden="true">FR</span></summary><ul class="sprachen__liste"><li><a href="../../../../dojo/guertel/blau/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../../fr/dojo/guertel/blau/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../../it/dojo/guertel/blau/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../../en/dojo/guertel/blau/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
-      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="FR, Choisir la langue, actuelle : Français">FR</summary><ul class="sprachen__liste"><li><a href="../../../../dojo/guertel/blau/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../../fr/dojo/guertel/blau/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../../it/dojo/guertel/blau/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../../en/dojo/guertel/blau/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd aria-hidden="true">Ctrl K</kbd></button>
       <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Mode sombre" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
       <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
     </div>
@@ -91,7 +91,8 @@
   <div class="suche__kopf">
     <h2 id="suche-titel" class="sr-only">Rechercher des techniques</h2>
     <label for="suche-feld" class="sr-only">Terme de recherche</label>
-    <input id="suche-feld" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <input id="suche-feld" type="text" role="combobox" inputmode="search" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <button type="button" class="knopf-icon" data-suche-leeren aria-label="Effacer le terme de recherche" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     <button type="button" class="knopf-icon" data-suche-zu aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
   </div>
   <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Résultats"></ul>
@@ -164,7 +165,7 @@
       </nav>
     </div>
     <div class="fuss__dojos fuss__sprachen">
-      <p>Cette page dans d'autres langues : <a href="../../../../dojo/guertel/blau/" hreflang="de" lang="de-CH" data-sprache-wahl="de">Deutsch</a>, <a href="../../../../it/dojo/guertel/blau/" hreflang="it" lang="it" data-sprache-wahl="it">Italiano</a>, <a href="../../../../en/dojo/guertel/blau/" hreflang="en" lang="en" data-sprache-wahl="en">English</a></p>
+      <p>Cette page dans d'autres langues : <a href="../../../../dojo/guertel/blau/" hreflang="de" lang="de-CH">Deutsch</a>, <a href="../../../../it/dojo/guertel/blau/" hreflang="it" lang="it">Italiano</a>, <a href="../../../../en/dojo/guertel/blau/" hreflang="en" lang="en">English</a></p>
     </div>
     <div class="fuss__dojos">
       <p>Plus de disciplines : <a href="https://powerautomate.ninja/fr/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage</a>, <a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>

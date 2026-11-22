@@ -70,7 +70,7 @@
       "antworten": ["Yes, everything is protected the same way.", "No, they run separately through Bing with their own data rules.", "Copilot Chat has no web search."],
       "richtig": 1,
       "aufloesung": "According to Microsoft, Enterprise Data Protection applies to prompts and responses. Web search queries go to the Bing service, run under their own data rules and, according to Learn, are not covered by the Data Protection Addendum. That is why customer names and internal figures do not belong in a research question.",
-      "quelle": { "url": "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection", "titel": "Microsoft Learn, Enterprise Data Protection" },
+      "quelle": { "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection", "titel": "Microsoft Learn, Enterprise Data Protection" },
       "technik": null
     },
     {
@@ -82,7 +82,7 @@
       "antworten": ["Yes, file upload is included, with limits that have no published numbers.", "No, only with a license.", "Only images."],
       "richtig": 0,
       "aufloesung": "According to Microsoft, “upload and analyze files” is part of Copilot Chat without an add-on license. File uploads have limits, but Learn does not give specific numbers on this page.",
-      "quelle": { "url": "https://learn.microsoft.com/en-us/copilot/plan/copilot-overview", "titel": "Microsoft Learn, Copilot Chat Overview" },
+      "quelle": { "url": "https://learn.microsoft.com/en-us/copilot/overview", "titel": "Microsoft Learn, Copilot Chat Overview" },
       "technik": null
     },
     {

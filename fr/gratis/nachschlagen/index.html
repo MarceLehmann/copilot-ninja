@@ -70,10 +70,10 @@
       },
       "citation": [
         "https://learn.microsoft.com/fr-fr/copilot/manage",
-        "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
+        "https://learn.microsoft.com/fr-fr/copilot/overview",
         "https://learn.microsoft.com/fr-fr/copilot/faq",
-        "https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection",
-        "https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview",
+        "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection",
+        "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview",
         "https://learn.microsoft.com/fr-fr/copilot/agents",
         "https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience",
         "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-licensing-subscriptions",
@@ -254,8 +254,8 @@
       </ul>
     </nav>
     <div class="kopf__aktionen">
-      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="Choisir la langue, actuelle : Français"><span aria-hidden="true">FR</span></summary><ul class="sprachen__liste"><li><a href="../../../gratis/nachschlagen/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/gratis/nachschlagen/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/gratis/nachschlagen/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/gratis/nachschlagen/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
-      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd>Ctrl K</kbd></button>
+      <details class="sprachen" data-sprachen><summary class="sprachwahl" aria-label="FR, Choisir la langue, actuelle : Français">FR</summary><ul class="sprachen__liste"><li><a href="../../../gratis/nachschlagen/" hreflang="de" lang="de-CH" data-sprache-wahl="de"><span class="sprachen__kurz" aria-hidden="true">DE</span> Deutsch</a></li><li><a href="../../../fr/gratis/nachschlagen/" hreflang="fr" lang="fr" data-sprache-wahl="fr" aria-current="true"><span class="sprachen__kurz" aria-hidden="true">FR</span> Français</a></li><li><a href="../../../it/gratis/nachschlagen/" hreflang="it" lang="it" data-sprache-wahl="it"><span class="sprachen__kurz" aria-hidden="true">IT</span> Italiano</a></li><li><a href="../../../en/gratis/nachschlagen/" hreflang="en" lang="en" data-sprache-wahl="en"><span class="sprachen__kurz" aria-hidden="true">EN</span> English</a></li></ul></details>
+      <button type="button" class="knopf-icon kopf__suche" data-suche-auf aria-label="Rechercher des techniques" aria-keyshortcuts="Control+K Meta+K" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><kbd aria-hidden="true">Ctrl K</kbd></button>
       <button type="button" class="knopf-icon" data-theme-toggle aria-pressed="false" aria-label="Mode sombre" data-nur-js><svg class="icon-sonne" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><svg class="icon-mond" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button>
       <button type="button" class="knopf-icon kopf__menue" data-menue-knopf aria-expanded="false" aria-controls="menue" aria-label="Menu" data-nur-js><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h12"/></svg></button>
     </div>
@@ -288,7 +288,8 @@
   <div class="suche__kopf">
     <h2 id="suche-titel" class="sr-only">Rechercher des techniques</h2>
     <label for="suche-feld" class="sr-only">Terme de recherche</label>
-    <input id="suche-feld" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <input id="suche-feld" type="text" role="combobox" inputmode="search" enterkeyhint="search" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" placeholder="Compte rendu, contrat, agent">
+    <button type="button" class="knopf-icon" data-suche-leeren aria-label="Effacer le terme de recherche" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     <button type="button" class="knopf-icon" data-suche-zu aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
   </div>
   <ul class="suche__treffer" id="suche-liste" role="listbox" aria-label="Résultats"></ul>
@@ -339,7 +340,7 @@
           <h3 class="mythos__aussage" id="m-mails">«Sans licence, Copilot Chat lit automatiquement tous tes e-mails.»</h3>
           <span class="mythos__label mythos__label--belegt">Documenté</span>
           <p>Sans licence, Copilot Chat n'accède pas automatiquement à tes données via Microsoft Graph. Tu apportes toi-même le contenu, sous forme de texte ou par téléversement de fichier. Dans Outlook, Copilot Chat peut inclure, dans une mesure limitée, les e-mails, le calendrier, les réunions, les conversations et un nombre limité de fichiers.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">copilot/overview</a>, état au 13 octobre 2026. <a href="#mythos-mails">Lien direct<span class="sr-only"> vers le mythe des e-mails</span></a></p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">copilot/overview</a>, état au 13 octobre 2026. <a href="#mythos-mails">Lien direct<span class="sr-only"> vers le mythe des e-mails</span></a></p>
         </article>
         </li>
         <li>
@@ -348,7 +349,7 @@
           <h3 class="mythos__aussage" id="m-web">«Les requêtes de recherche web sont protégées comme tes prompts.»</h3>
           <span class="mythos__label mythos__label--belegt">Documenté</span>
           <p>L'engagement de protection des données d'entreprise vaut pour les prompts et les réponses. Les requêtes de recherche web vont au service Bing et suivent leurs propres règles de données. Selon Learn, l'addendum sur la protection des données (Data Protection Addendum) ne les couvre pas.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection" rel="noopener">Learn : enterprise-data-protection</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">copilot/faq</a>, état au 13 octobre 2026. <a href="#mythos-websuche">Lien direct<span class="sr-only"> vers le mythe de la recherche web</span></a></p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Learn : enterprise-data-protection</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">copilot/faq</a>, état au 13 octobre 2026. <a href="#mythos-websuche">Lien direct<span class="sr-only"> vers le mythe de la recherche web</span></a></p>
         </article>
         </li>
       </ul>
@@ -368,7 +369,7 @@
           <h3>Microsoft Copilot Chat sans licence supplémentaire</h3>
           <p>Écrit et reformule, recherche sur le web et analyse ce que tu colles ou téléverses.</p>
           <p><strong>Limite :</strong> Copilot Chat ne va pas chercher seul les données de ton entreprise via Microsoft Graph. Seul Outlook inclut, dans une mesure limitée, les e-mails, le calendrier et les réunions.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a>, <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">microsoft-365-copilot-overview</a>, état au 15 octobre 2026.</p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a>, <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">microsoft-365-copilot-overview</a>, état au 15 octobre 2026.</p>
         </li>
         <li class="stufe" id="stufe-2" data-geprueft="2026-10-15">
           <span class="zugang zugang--builder"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>Niveau 2</span>
@@ -382,7 +383,7 @@
           <h3>Microsoft 365 Copilot (Premium)</h3>
           <p>Microsoft 365 Copilot (Premium) ajoute un large accès aux données de l'organisation via Graph et Work IQ, ainsi que l'accès prioritaire dans les applications. La disponibilité dépend de la licence et de la configuration du tenant. Dans le produit ou dans les aperçus, tu peux aussi voir «(Pro)» au lieu de «(Premium)».</p>
           <p><strong>Limite :</strong> Selon Microsoft, Agent Builder convient quand des instructions et des sources de connaissances prises en charge suffisent, y compris pour plusieurs services grâce au partage et au catalogue de l'organisation. Microsoft cite Copilot Studio pour les canaux externes comme un site web client, les actions sur des services externes, les workflows et les environnements avec gestion des versions.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a>, <a href="https://learn.microsoft.com/fr-fr/copilot/agents" rel="noopener">copilot/agents</a>, <a href="https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience" rel="noopener">copilot-studio-experience</a>, état au 15 octobre 2026.</p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a>, <a href="https://learn.microsoft.com/fr-fr/copilot/agents" rel="noopener">copilot/agents</a>, <a href="https://learn.microsoft.com/fr-fr/plugins/copilot-studio-experience" rel="noopener">copilot-studio-experience</a>, état au 15 octobre 2026.</p>
         </li>
         <li class="stufe" id="stufe-4" data-geprueft="2026-10-15">
           <span class="zugang zugang--studio"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 3h12v10H2zM2 6h12"/></svg>Niveau 4</span>
@@ -413,12 +414,12 @@
         <li data-stufe="1"><details class="faq" id="stufe-bsp-kundenmail">
           <summary><span>Rédiger une réponse à un e-mail client furieux<span class="zugang zugang--frei">Niveau 1 : Copilot Chat</span></span></summary>
           <p>Suffisant, car selon Microsoft, Copilot Chat rédige et reformule des contenus. Tu colles l'e-mail du client sous forme de texte.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a>, état au 15 octobre 2026. Technique : <a href="../../techniken/antwort-auf-kundenmail/">Brouillon de réponse à un e-mail client difficile</a></p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a>, état au 15 octobre 2026. Technique : <a href="../../techniken/antwort-auf-kundenmail/">Brouillon de réponse à un e-mail client difficile</a></p>
         </details></li>
         <li data-stufe="1"><details class="faq" id="stufe-bsp-protokoll">
           <summary><span>Transformer des notes de réunion en procès-verbal avec des tâches<span class="zugang zugang--frei">Niveau 1 : Copilot Chat</span></span></summary>
           <p>Suffisant, car tu colles toi-même les notes. Copilot Chat traite ce que tu apportes, même sans licence.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a>, état au 15 octobre 2026. Technique : <a href="../../techniken/notizen-zu-protokoll/">Transformer des notes en procès-verbal avec des tâches</a></p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a>, état au 15 octobre 2026. Technique : <a href="../../techniken/notizen-zu-protokoll/">Transformer des notes en procès-verbal avec des tâches</a></p>
         </details></li>
         <li data-stufe="1"><details class="faq" id="stufe-bsp-webrecherche">
           <summary><span>Rechercher des fournisseurs sur le web, avec les sources<span class="zugang zugang--frei">Niveau 1 : Copilot Chat</span></span></summary>
@@ -428,12 +429,12 @@
         <li data-stufe="1"><details class="faq" id="stufe-bsp-offerten">
           <summary><span>Comparer trois offres au format PDF<span class="zugang zugang--frei">Niveau 1 : Copilot Chat</span></span></summary>
           <p>Suffisant, car le téléversement et l'analyse de fichiers sont inclus dans Copilot Chat. Le téléversement a des limites, Microsoft n'en donne pas les chiffres.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a>, état au 15 octobre 2026. Technique : <a href="../../techniken/offerten-vergleichen/">N° 9 Le duel des offres</a></p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a>, état au 15 octobre 2026. Technique : <a href="../../techniken/offerten-vergleichen/">N° 9 Le duel des offres</a></p>
         </details></li>
         <li data-stufe="1"><details class="faq" id="stufe-bsp-postfach">
           <summary><span>Résumer les e-mails de la semaine dernière sur un projet<span class="zugang zugang--frei">Niveau 1 : Copilot Chat dans Outlook</span></span></summary>
           <p>Suffisant, car selon Microsoft, Copilot Chat dans Outlook inclut tes e-mails, ton calendrier, tes réunions, tes conversations et un nombre limité de fichiers, même sans licence. En dehors d'Outlook, tu apportes toi-même l'e-mail.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/plan/privacy-and-protections" rel="noopener">copilot/privacy-and-protections</a>, état au 15 octobre 2026.</p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/plan/privacy-and-protections" rel="noopener">copilot/privacy-and-protections</a>, état au 15 octobre 2026.</p>
         </details></li>
         <li data-stufe="2"><details class="faq" id="stufe-bsp-website-faq">
           <summary><span>Un agent qui répond aux questions sur ton propre site web<span class="zugang zugang--builder">Niveau 2 : Agent Builder</span></span></summary>
@@ -448,7 +449,7 @@
         <li data-stufe="3"><details class="faq" id="stufe-bsp-word-excel">
           <summary><span>Utiliser Copilot directement dans Word ou Excel<span class="zugang zugang--lizenz">Accès aux applications</span></span></summary>
           <p>Copilot Chat (de base) n'a pas accès à Copilot dans Word, Excel, PowerPoint et OneNote sans module complémentaire. Microsoft 365 Copilot (de base) offre un accès standard dans ces applications sans module complémentaire, qui peut être limité en cas de forte demande. Microsoft 365 Copilot (Premium) offre l'accès prioritaire et toutes les fonctions avec une licence de module complémentaire, y compris un large accès aux données de l'organisation via Graph et Work IQ. L'étiquette dans le produit indique ton niveau ; la disponibilité dépend de ta licence et de la configuration du tenant.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">copilot/overview</a>, état au 15 octobre 2026. Détails : <a href="#word-excel-powerpoint">ligne Word, Excel, PowerPoint</a></p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">copilot/overview</a>, état au 15 octobre 2026. Détails : <a href="#word-excel-powerpoint">ligne Word, Excel, PowerPoint</a></p>
         </details></li>
         <li data-stufe="4"><details class="faq" id="stufe-bsp-kundenchat">
           <summary><span>Un agent qui répond aux clients sur ton site web<span class="zugang zugang--studio">Niveau 4 : Copilot Studio</span></span></summary>
@@ -513,7 +514,7 @@
             <th scope="row" role="rowheader" data-label="Fonction">Chat avec recherche web, téléversement de fichiers et génération d'images</th>
             <td role="cell" data-label="Statut"><span class="tag">Sans licence supplémentaire</span></td>
             <td role="cell" data-label="Condition">Connexion avec un compte professionnel, scolaire ou universitaire et un abonnement Microsoft 365 éligible. Un compte seul ne suffit pas. Également inclus : rédiger et reformuler des contenus et interagir avec des agents.</td>
-            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/manage" rel="noopener">Learn : copilot/manage</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a></li></ul></td>
+            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/manage" rel="noopener">Learn : copilot/manage</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a></li></ul></td>
             <td role="cell" data-label="État au"><time datetime="2026-10-13">13 octobre 2026</time></td>
           </tr>
           <tr role="row" id="qualifizierende-abos" data-geprueft="2026-10-15">
@@ -527,35 +528,35 @@
             <th scope="row" role="rowheader" data-label="Fonction">Accès aux données de ton tenant (Microsoft Graph, Work IQ, Semantic Indexing)</th>
             <td role="cell" data-label="Statut"><span class="tag">Limité sans licence</span></td>
             <td role="cell" data-label="Condition">Sans licence Microsoft Copilot, tu apportes toi-même le contenu, par exemple sous forme de texte ou par téléversement de fichier. Dans Outlook et Teams, Copilot Chat inclut le contenu que tu as ouvert. Dans Outlook, il peut en plus inclure sans licence les e-mails, le calendrier, les réunions, les conversations et un nombre limité de fichiers (Microsoft parle de «reduced graph grounding», un ancrage Graph réduit). L'accès automatique via Microsoft Graph, Work IQ et Semantic Indexing fait partie de l'expérience sous licence.</td>
-            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a></li></ul></td>
+            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a></li><li><a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">Learn : microsoft-365-copilot-overview</a></li></ul></td>
             <td role="cell" data-label="État au"><time datetime="2026-10-13">13 octobre 2026</time></td>
           </tr>
           <tr role="row" id="word-excel-powerpoint" data-geprueft="2026-10-15">
             <th scope="row" role="rowheader" data-label="Fonction">Copilot dans Word, Excel, PowerPoint et OneNote</th>
             <td role="cell" data-label="Statut"><span class="tag">Selon le niveau de l'application</span></td>
             <td role="cell" data-label="Condition">Copilot Chat (de base) n'a pas accès à Copilot dans Word, Excel, PowerPoint et OneNote sans module complémentaire. Microsoft 365 Copilot (de base) offre un accès standard dans ces applications sans module complémentaire, qui peut être limité en cas de forte demande. Microsoft 365 Copilot (Premium) offre l'accès prioritaire et toutes les fonctions avec une licence de module complémentaire, y compris un large accès aux données de l'organisation via Graph et Work IQ. L'étiquette dans le produit indique ton niveau ; la disponibilité dépend de ta licence et de la configuration du tenant.</td>
-            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/manage" rel="noopener">Learn : copilot/manage</a></li></ul></td>
+            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/manage" rel="noopener">Learn : copilot/manage</a></li></ul></td>
             <td role="cell" data-label="État au"><time datetime="2026-10-15">15 octobre 2026</time></td>
           </tr>
           <tr role="row" id="priority-sprache" data-geprueft="2026-10-13">
             <th scope="row" role="rowheader" data-label="Fonction">Accès prioritaire et conversation vocale en temps réel</th>
             <td role="cell" data-label="Statut"><span class="tag">Licence uniquement</span></td>
             <td role="cell" data-label="Condition">L'accès prioritaire n'est disponible qu'avec la licence Copilot. La conversation vocale en temps réel est réservée aux utilisateurs sous licence.</td>
-            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a></li></ul></td>
+            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a></li></ul></td>
             <td role="cell" data-label="État au"><time datetime="2026-10-13">13 octobre 2026</time></td>
           </tr>
           <tr role="row" id="datenschutz-edp" data-geprueft="2026-10-15">
             <th scope="row" role="rowheader" data-label="Fonction">Engagements de protection des données (Enterprise Data Protection)</th>
             <td role="cell" data-label="Statut"><span class="tag">Sans supplément</span></td>
             <td role="cell" data-label="Condition">S'applique aux prompts et aux réponses avec une connexion par compte Entra, selon Microsoft sans action de l'administrateur. Se reconnaît au bouclier vert à côté du bouton pour un nouveau chat. Selon Microsoft, les prompts et les réponses ne servent pas à entraîner les modèles de fondation. Les requêtes de recherche web passent séparément par Bing, avec leurs propres règles de données. C'est la déclaration de Microsoft, pas une évaluation de ton cas.</td>
-            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/privacy-and-protections" rel="noopener">Learn : copilot/privacy-and-protections</a> (bouclier vert)</li><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection" rel="noopener">Learn : enterprise-data-protection</a></li></ul></td>
+            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a></li><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/privacy-and-protections" rel="noopener">Learn : copilot/privacy-and-protections</a> (bouclier vert)</li><li><a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection" rel="noopener">Learn : enterprise-data-protection</a></li></ul></td>
             <td role="cell" data-label="État au"><time datetime="2026-10-15">15 octobre 2026</time></td>
           </tr>
           <tr role="row" id="standard-access" data-geprueft="2026-10-13">
             <th scope="row" role="rowheader" data-label="Fonction">Utilisation au quotidien</th>
             <td role="cell" data-label="Statut"><span class="tag">Selon la capacité</span></td>
             <td role="cell" data-label="Condition">L'accès fonctionne comme «accès standard». La qualité et les performances peuvent varier, le téléversement de fichiers et la génération d'images ont des limites. La page vérifiée ne donne aucun chiffre.</td>
-            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a></li></ul></td>
+            <td role="cell" data-label="Source"><ul class="srcs" role="list"><li><a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a></li></ul></td>
             <td role="cell" data-label="État au"><time datetime="2026-10-13">13 octobre 2026</time></td>
           </tr>
           <tr role="row" id="verfuegbarkeit" data-geprueft="2026-10-13">
@@ -739,13 +740,13 @@
         <details class="faq" id="faq-mails-dateien">
           <summary>Copilot Chat peut-il lire mes e-mails et mes fichiers sans licence ?</summary>
           <p data-faq-antwort>Pas automatiquement via Microsoft Graph. Tu apportes toi-même le contenu, sous forme de texte ou par téléversement de fichier. Selon Microsoft, Copilot Chat dans Outlook peut inclure sans licence les e-mails, le calendrier, les réunions, les conversations et un nombre limité de fichiers.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">microsoft-365-copilot-overview</a>, état au 13 octobre 2026. Détails : <a href="#organisationsdaten">accès aux données de ton tenant</a>.</p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a> et <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/microsoft-365-copilot-overview" rel="noopener">microsoft-365-copilot-overview</a>, état au 13 octobre 2026. Détails : <a href="#organisationsdaten">accès aux données de ton tenant</a>.</p>
         </details>
         <details class="faq" id="faq-word-excel">
           <summary>Copilot dans Word et Excel est-il gratuit ?</summary>
           <p data-faq-antwort>Copilot Chat (de base) n'a pas accès à Copilot dans Word, Excel, PowerPoint et OneNote sans module complémentaire. Microsoft 365 Copilot (de base) offre un accès standard dans ces applications sans module complémentaire, qui peut être limité en cas de forte demande. Microsoft 365 Copilot (Premium) offre l'accès prioritaire et toutes les fonctions avec une licence de module complémentaire, y compris un large accès aux données de l'organisation via Graph et Work IQ. L'étiquette dans le produit indique ton niveau ; la disponibilité dépend de ta licence et de la configuration du tenant.</p>
           <p>Selon Microsoft, Microsoft Copilot Chat propose lui-même des agents pour Word, Excel et PowerPoint qui créent des documents, des tableaux et des présentations directement dans le chat. Selon Microsoft, ce qui est disponible pour toi dépend des réglages et de la licence.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/plan/copilot-overview" rel="noopener">Learn : copilot/overview</a>, état au 13 octobre 2026. Agents dans le chat : <a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">copilot/faq</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/manage" rel="noopener">copilot/manage</a>, état au 15 octobre 2026.</p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/overview" rel="noopener">Learn : copilot/overview</a>, état au 13 octobre 2026. Agents dans le chat : <a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">copilot/faq</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/manage" rel="noopener">copilot/manage</a>, état au 15 octobre 2026.</p>
         </details>
         <details class="faq" id="faq-studio-testen">
           <summary>Puis-je essayer Copilot Studio gratuitement ?</summary>
@@ -770,7 +771,7 @@
         <details class="faq" id="faq-training">
           <summary>Mes prompts servent-ils à l'entraînement ?</summary>
           <p data-faq-antwort>Selon Microsoft, les prompts et les réponses ne servent pas à entraîner les modèles de fondation. Les requêtes de recherche web passent séparément par Bing, avec leurs propres règles de données. C'est la déclaration de Microsoft, pas une évaluation de ton cas.</p>
-          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a> et <a href="https://learn.microsoft.com/fr-fr/copilot/plan/enterprise-data-protection" rel="noopener">enterprise-data-protection</a>, état au 13 octobre 2026.</p>
+          <p class="klein">Source : <a href="https://learn.microsoft.com/fr-fr/copilot/faq" rel="noopener">Learn : copilot/faq</a> et <a href="https://learn.microsoft.com/fr-fr/microsoft-365/copilot/enterprise-data-protection" rel="noopener">enterprise-data-protection</a>, état au 13 octobre 2026.</p>
         </details>
         <details class="faq" id="faq-gruenes-schild">
           <summary>Comment reconnaître que la protection d'entreprise est active ?</summary>
@@ -860,7 +861,7 @@
       </nav>
     </div>
     <div class="fuss__dojos fuss__sprachen">
-      <p>Cette page dans d'autres langues : <a href="../../../gratis/nachschlagen/" hreflang="de" lang="de-CH" data-sprache-wahl="de">Deutsch</a>, <a href="../../../it/gratis/nachschlagen/" hreflang="it" lang="it" data-sprache-wahl="it">Italiano</a>, <a href="../../../en/gratis/nachschlagen/" hreflang="en" lang="en" data-sprache-wahl="en">English</a></p>
+      <p>Cette page dans d'autres langues : <a href="../../../gratis/nachschlagen/" hreflang="de" lang="de-CH">Deutsch</a>, <a href="../../../it/gratis/nachschlagen/" hreflang="it" lang="it">Italiano</a>, <a href="../../../en/gratis/nachschlagen/" hreflang="en" lang="en">English</a></p>
     </div>
     <div class="fuss__dojos">
       <p>Plus de disciplines : <a href="https://powerautomate.ninja/fr/" rel="noopener">Power Automate Ninja</a>, <a href="https://powerplatformdojo.com/fr/lernpfade/" rel="noopener">Parcours d’apprentissage</a>, <a href="https://powerplatformdojo.com/fr/mentoring/" rel="noopener">Dojo Mentoring</a>.</p>
